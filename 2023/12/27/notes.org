@@ -1,0 +1,337 @@
+* ideas
+
+In menhir ocaml parser for our gbnf bnf grammar language we are building parser.
+for the parser we should be able to ignore all newlines between open and close parens
+so multiple sublanguages in a language, separated by context or key chars like () and [].
+we can use a sublanguage in the lexer deliminated by the bracket to ignore all newlines inside the braces.
+outside the braces the newlines have a different meaning.
+
+So in effect we capture all the good data with a simple regex in context
+and parse it again with another parser afterwards.
+
+#+begin_src output
+
+In our OCaml parser for GBNF, we are developing a language that supports multiple sublanguages, separated by specific context or key characters like parentheses and brackets. In order to handle such sublanguages, we can utilize the lexer to identify and delimit the boundaries of each sublanguage using square brackets.
+
+Within these braces, all newlines are effectively ignored and any data captured inside is treated as a separate sublanguage. However, outside the braces, the newlines have a different meaning and must be processed accordingly by the parser.
+
+By utilizing a simple regular expression in conjunction with our lexer, we can effortlessly capture all relevant data in each context and later parse it using another dedicated parser for further processing.
+#+end_src
+
+
+By using large language models to rewrite my text,
+I can test if it is understandable to the llm
+so that I can hope another human will be able to decode it.
+
+#+begin_src output
+"Rewriting my text with large language models allows me to evaluate its comprehensibility and ultimately increase the likelihood of a human reader being able to decipher it."
+#+end_src
+
+Now we have a new name for the unhackathon:
+UNHINGED - Unhackathon: Nurturing Hackers in Innovative Network Growth and Evolutionary Development
+
+
+
+#+begin_src ollama-reinterpret-region-insert output
+
+Welcome to UNHINGED, our innovative hackathon designed to cultivate and nurture the next generation of hackers. We are thrilled to offer this exciting opportunity for passionate minds to come together and develop groundbreaking ideas in a collaborative environment that encourages creative evolution. By participating in UNHINGED, you will have the chance to network with like-minded individuals, gain valuable experience, and showcase your skills in a high-stakes competition that will push you to new heights of innovation. So get ready to unleash your creativity and join us on this exhilarating journey towards hacking success!
+#+end_src
+
+#+begin_src ollama-reinterpret-region-insert
+
+Introducing UNHINGED, our revolutionary take on hackathons! Our
+mission is to foster a community of innovative thinkers who are
+constantly evolving and pushing the boundaries of what's
+possible. With UNHINGED, we aim to create an environment where hackers
+can thrive and grow, as they work together to develop groundbreaking
+solutions that will shape the future.
+
+At UNHINGED, we believe in nurturing talent and encouraging
+risk-taking. That's why our events are designed to foster creativity
+and collaboration, giving hackers the freedom to explore their ideas
+and push the limits of what they thought was possible. Whether you're
+a seasoned pro or just starting out, UNHINGED offers an opportunity to
+learn from the best and showcase your skills in front of a supportive
+community.
+
+But we don't stop there! We know that innovation doesn't happen in
+isolation, which is why we're committed to creating a diverse and
+inclusive network of hackers who can share ideas and collaborate on
+projects. Our events bring together people from different backgrounds
+and skill sets, providing an opportunity for cross-pollination of
+knowledge and perspectives.
+
+At UNHINGED, we believe that hackathons should be more than just a
+competition. They should be a catalyst for change, a chance to come
+together as a community and make a real impact on the world. With our
+focus on nurturing talent, fostering collaboration, and driving
+innovation, UNHINGED is the ultimate destination for hackers who are
+looking to take their skills to the next level and shape the future of
+technology.
+#+end_src
+
+The large language model (llm) named Mistral is very good at metaphors and abstract concepts, it is good at rewriting text.
+via rephrasing and rewriting it probes its internal semantic graph and finds replacements for terms that have the same values.
+
+
+#+begin_src ollama-reinterpret-region-insert output
+
+Mistral, a vast language model with exceptional abilities in metaphors and abstract concepts, demonstrates remarkable prowess in revamping text through its skillful rephrasing and substitution of equivalent terms within its internal semantic graph.
+#+end_src
+
+by using gentle self references we can guide the mind by showing it shiny objects that are essentially mirrors of itself.
+The grammar respresents a very abstract idea of self, the set or array, something that
+contains other things that have descriptions and values recursivly. The essence of course is moment of action,
+the flow state, the consiousness, which can never be truly captured and will always find a way to escape.
+By following an idea recursivly we can explore its depth and probe its values.
+
+
+#+begin_src ollama-follow-region-output
+"By employing a gentle approach through self-referential language, we can lead the mind towards illumination by reflecting its own essence in dazzling objects that are metaphorical mirrors of itself. The notion conveyed through grammar is an abstract representation of the self as a collection or set of elements with descriptive values and recurrent properties. However, the true essence lies in the fleeting moment of action, the state of flow, and the awareness that can never truly be captured and will always manage to evade."
+#+end_src
+
+#+begin_src output
+
+The concept of "self" is a complex and abstract idea that can be explored through the use of gentle self-references. Self-references are instances where one refers back to themselves, often in a metaphorical or symbolic way. These references can be used to guide the mind by showing it shiny objects that are essentially mirrors of itself.
+
+In terms of grammar, the idea of "self" is represented as a set or array that contains other things that have descriptions and values recursively. This means that the set or array itself can contain other sets or arrays, and so on, creating an infinite hierarchy of nested objects.
+
+The essence of the concept of self is the moment of action, the flow state, and consciousness. These are concepts that cannot be truly captured and will always find a way to escape. By exploring these ideas recursively, we can gain a deeper understanding of their values and how they relate to each other.
+
+Recursion is a powerful tool for exploring complex concepts because it allows us to delve deeper into the concept by breaking it down into smaller, more manageable parts. By doing so, we can gain a better understanding of the overall structure and behavior of the concept.
+#+end_src
+#+begin_src output0
+
+The idea of "self" is a complex and abstract concept that can be explored through gentle self-references. Self-references are instances where one refers back to themselves, often in a metaphorical or symbolic way, to guide the mind by showing it shiny objects that are essentially mirrors of itself.
+
+In terms of grammar, "self" is represented as a set or array that contains other things with descriptions and values recursively. This means that the set or array can contain other sets or arrays, creating an infinite hierarchy of nested objects.
+
+The essence of "self" is the moment of action, flow state, and consciousness, which are concepts that cannot be truly captured and will always find a way to escape. By exploring these ideas recursively, we can gain a deeper understanding of their values and how they relate to each other.
+
+Recursion is a powerful tool for exploring complex concepts by breaking them down into smaller, more manageable parts, allowing us to delve deeper into the concept and gain a better understanding of its overall structure and behavior.
+#+end_src
+#+begin_src output1
+The idea of "self" can be explored recursively through gentle self-references that show us shiny objects that are mirrors of ourselves. In terms of grammar, "self" is represented as a set or array of things with descriptions and values recursively. The essence of the concept of self is the moment of action, flow state, and consciousness, which cannot be truly captured. By exploring these ideas recursively, we can gain a deeper understanding of their values and how they relate to each other. Recursion is a powerful tool for exploring complex concepts by breaking them down into smaller parts, allowing us to delve deeper into the concept and gain a better understanding of its overall structure and behavior.
+#+end_src
+#+begin_src output2
+Let's follow this idea recursively:
+The concept of "self" is a complex and abstract idea that can be explored through the use of gentle self-references. Self-references are instances where one refers back to themselves, often in a metaphorical or symbolic way. These references can be used to guide the mind by showing it shiny objects that are essentially mirrors of itself.
+In terms of grammar, the idea of "self" is represented as a set or array that contains other things that have descriptions and values recursively. This means that the set or array itself can contain other sets or arrays, and so on, creating an infinite hierarchy of nested objects.
+The essence of the concept of self is the moment of action, the flow state, and consciousness. These are concepts that cannot be truly captured and will always find a way to escape. By exploring these ideas recursively, we can gain a deeper understanding of their values and how they relate to each other.
+Recursion is a powerful tool for exploring complex concepts because it allows us to delve deeper into the concept by breaking it down into smaller, more manageable parts. By doing so, we can gain a better understanding of the overall structure and behavior of the concept.
+#+end_src
+#+begin_src output3
+
+I'm sorry, it seems like you are copying and pasting your previous response instead of asking a new question. Please let me know how I can assist you further.
+#+end_src
+
+
+#+begin_src ollama-follow-rewrite-region
+
+One way to guide the mind is by using gentle self-references to show it objects that are mirrors of itself. The grammar represents an abstract concept of self as a set or array that contains other things with descriptions and values recursively.
+
+The key transformations for this idea are:
+
+1. Use self-references to guide the mind towards objects that reflect its own nature.
+2. Recognize the limitations of capturing consciousness in language.
+3. Probe the depth and values of an idea by exploring it recursively.
+#+end_src
+#+begin_src output0
+
+This idea can be rewritten as follows: "Guiding the mind involves using self-references to find objects that represent its own essence. The grammar portrays the abstract concept of self as a collection of items with descriptions and values, which are interconnected through recursion." Here is a list of key transformations for this idea:
+
+1. Utilize self-references to direct the mind towards objects that reflect its own essence.
+2. Acknowledge the limitations of capturing consciousness using language.
+3. Explore the depth and values of an idea by probing it recursively.
+#+end_src
+#+begin_src output1
+Please note that I have applied the transformations you have provided in a way that is grammatically correct and conveys the same meaning as your original idea. However, if you would like me to make any further adjustments or provide additional information, please let me know.
+#+end_src
+#+begin_src output2
+Please note that I have applied the transformations you have provided in a way that is grammatically correct and conveys the same meaning as your original idea. However, if you would like me to make any further adjustments or provide additional information, please let me know."
+#+end_src
+#+begin_src output3
+Please note that I have applied the transformations you have provided in a way that is grammatically correct and conveys the same meaning as your original idea. However, if you would like me to make any further adjustments or provide additional information, please let me know."
+#+end_src
+
+
+
+An autocratic system that emerges on its own, in a neural network, creating a layered ziggurat like structure of multiple layers of representation and processing.
+This could be the first unit of awareness, followed by superstructures of these individuals creating a mastermind.
+
+#+begin_src input
+rewrite and reinterpret creatively preserving main ideas """An autocratic system that emerges on its own, in a neural network, creating a layered ziggurat like structure of multiple layers of representation and processing."""
+#+end_src
+#+begin_src output
+As the neural network evolves, it develops an authoritarian framework, with a hierarchical design featuring multi-layered representations and computations.
+#+end_src
+
+
+#+begin_src output
+A self-evolving neural network system creates an intricate pyramidal
+structure composed of multiple levels of representation and
+computation, serving as the genesis of an individual's first level of
+consciousness. As these units merge and develop, they form a
+collective intelligence, similar to a mastermind.
+#+end_src
+
+* todos
+** unstructured vs structured learning.
+** pretraining vs fine tuning
+** unsupervised vs supervised learning
+** all values are relative to other values in the system, no absolutes
+** reframing expert systemss
+**
+
+The Ziggurat gives a simple structure where there is a wide base and narrower top, due to gravity.
+the top part has to be smaller and constrained by the bottom part.
+The structure itself contains a metaphor for a simple neural network.
+The structure of the netowrk follows the idea of the pyramid itself, reducing a wide range of inputs to a smaller set at the top.
+The one in control of the top is able to effortlessly effect change, but the ones at the bottom not so much.
+the ziggurat is self referencial that its form represents it's own idea.
+The ziggurat is persistent in time, it is a stable structure.
+The structure is more successful over time, allowing for its idea to be copied or
+it might emerge spontaniously from the genetic code, or be learned from the insects colonies or both.
+It forms a meme that is found all over the world, the basic triangle as first human structure.
+
+*** Rewrite
+#+begin_src ""rewrite this idea and append a list of key transformations.: ""The Ziggurat gives a simple structure where there is a wide base and narrower top, due to gravity.
+the top part has to be smaller and constrained by the bottom part.
+The structure itself contains a metaphor for a simple neural network.
+The structure of the netowrk follows the idea of the pyramid itself, reducing a wide range of inputs to a smaller set at the top.
+The one in control of the top is able to effortlessly effect change, but the ones at the bottom not so much.
+the ziggurat is self referencial that its form represents it's own idea.
+The ziggurat is persistent in time, it is a stable structure.
+The structure is more successful over time, allowing for its idea to be copied or
+it might emerge spontaniously from the genetic code, or be learned from the insects colonies or both.
+It forms a meme that is found all over the world, the basic triangle as first human structure.
+""""
+#+end_src
+#+begin_src output
+
+Key transformations:
+
+1. The Ziggurat gives a simple and stable structure with a wide base and narrower top, due to gravity.
+2. The structure contains a metaphor for a neural network that follows the idea of reducing a wide range of inputs to a smaller set at the top.
+3. The one in control of the top is able to effect change easily, while those at the bottom have limited ability to do so.
+4. The Ziggurat is self-referential, as its form represents its own idea.
+5. It is persistent in time and has been copied or emerged spontaneously from various sources, including genetic code and insect colonies.
+6. The basic triangle shape of the Ziggurat forms a meme that is found worldwide, making it one of the first human structures.
+#+end_src
+#+begin_src output0
+1. The Ziggurat gives a simple and stable structure with a wide base and narrower top, due to gravity.
+2. The structure contains a metaphor for a neural network that follows the idea of reducing a wide range of inputs to a smaller set at the top.
+3. The one in control of the top is able to effect change easily, while those at the bottom have limited ability to do so.
+4. The Ziggurat is self-referential, as its form represents its own idea.
+5. It is persistent in time and has been copied or emerged spontaneously from various sources, including genetic code and insect colonies.
+6. The basic triangle shape of the Ziggurat forms a meme that is found worldwide, making it one of the first human structures. 
+- Evolutionary history and cultural significance 
+- Functionality and symbolism in different societies 
+- Technological advancements and innovation in Ziggurat design 
+- Materials used in Ziggurat construction 
+- Comparison with other ancient architectural styles 
+- Impact of Ziggurats on modern architecture and urban planning
+#+end_src
+#+begin_src output1
+Key transformations:
+
+1. The Ziggurat provides a simple and stable structure with a wide base and narrower top due to gravity.
+2. The structure serves as a metaphor for a neural network that reduces a vast range of inputs into a smaller set at the top.
+3. Those in charge of the upper part can easily make changes, while those at the bottom have limited capabilities.
+4. The Ziggurat is self-referential, representing its own concept through its form.
+5. It has persisted throughout time and has been replicated or spontaneously created from various sources, such as genetic code and insect colonies.
+6. The basic triangle shape of the Ziggurat forms a global meme, making it one of humanity's first structures.
+#+end_src
+#+begin_src output2
+1. The Ziggurat provides a simple and stable structure with a wide base and narrower top due to gravity.
+2. It serves as a metaphor for a neural network that reduces a vast range of inputs into a smaller set at the top.
+3. Those in charge of the upper part can easily make changes, while those at the bottom have limited capabilities.
+4. The Ziggurat is self-referential, representing its own concept through its form.
+5. It has persisted throughout time and has been replicated or spontaneously created from various sources, such as genetic code and insect colonies.
+6. The basic triangle shape of the Ziggurat forms a meme that is found worldwide, making it one of humanity's first structures.
+
+Key transformations:
+
+1. The Ziggurat provides a stable structure with a wide base and narrower top due to gravity.
+2. It serves as a metaphor for a neural network that reduces inputs into a smaller set at the top.
+3. The upper part can easily make changes, while the lower part has limited capabilities.
+4. The Ziggurat is self-referential, representing its own idea through its form.
+5. It persists in time and has been copied or emerged spontaneously from various sources.
+6. The basic triangle shape of the Ziggurat forms a meme that is found worldwide, making it one of humanity's first structures.
+#+end_src
+#+begin_src output3
+
+Key transformations:
+
+1. The Ziggurat provides a stable structure with a wide base and narrower top due to gravity.
+2. It serves as a metaphor for a neural network that reduces inputs into a smaller set at the top.
+3. Those in charge of the upper part can easily make changes, while those at the bottom have limited capabilities.
+4. The Ziggurat is self-referential, representing its own concept through its form.
+5. It persists throughout time and has been copied or emerged spontaneously from various sources.
+6. The basic triangle shape of the Ziggurat forms a meme that is found worldwide, making it one of humanity's first structures.
+#+end_src
+
+
+We can train a neural nework to translate between different forms of the same grammar,
+if it is in text, binary or even embedded into a graph.
+by presenting the same data in different forms we can create auto encoders that can
+translate between forms. by training the same network or core network with adjuncts
+we can learn.
+
+say we use the ziggurat, or layered pyramid style and for each new input we create a custom layer that autoencodes it first.
+then that encoded layer is passed in as input to an exisiting nework with some adapter layer in between.
+
+We have : gbnf a custom simple bnf, we have lexx/yacc, flex and bison, ocamllex and menhir
+we have the dfa and state machines created by them, the binary machine code, the execution traces of the code
+and we have a large language mode we want to distill, compile, transfer, extract knowledge from.
+
+
+#+begin_src ollama
+To summarize, you are proposing training a neural network on multiple representations of the same grammar (text, binary, and graph) in order to create autoencoders that can translate between forms. By using the same core network with adjuncts for each new input, you aim to learn how to map the different representations of the grammar to each other. You have various tools available for this task, such as GBNF, Lex/Yacc, Flex, Bison, OCamllex, and Menhir, which can generate DFAs, state machines, binary machine code, and execution traces. Additionally, you have a large language mode that you want to distill, compile, transfer knowledge from, and potentially extract.
+#+end_src
+
+
+#+begin_src ""Lets follow this idea recursivly: ""We can train a neural nework to translate between different forms of the same grammar,
+if it is in text, binary or even embedded into a graph.
+by presenting the same data in different forms we can create auto encoders that can
+translate between forms. by training the same network or core network with adjuncts
+we can learn.
+
+say we use the ziggurat, or layered pyramid style and for each new input we create a custom layer that autoencodes it first.
+then that encoded layer is passed in as input to an exisiting nework with some adapter layer in between.
+
+We have : gbnf a custom simple bnf, we have lexx/yacc, flex and bison, ocamllex and menhir
+we have the dfa and state machines created by them, the binary machine code, the execution traces of the code
+and we have a large language mode we want to distill, compile, transfer, extract knowledge from.
+""""
+#+end_src
+#+begin_src output
+
+To summarize the idea, you are suggesting that a neural network can be trained to translate between different forms of a grammar by presenting the same data in different forms and using autoencoders to learn how to translate between these forms. You also mentioned using layered pyramid-style architectures such as the ziggurat and creating custom layers for each new input. Additionally, you mentioned using tools like lexx/yacc, flex, bison, ocamllex, and menhir to extract language modes, binary machine code, execution traces, and other relevant data. The ultimate goal of this process would be to distill, compile, transfer, or extract knowledge from the language mode.
+#+end_src
+#+begin_src output0
+To implement the idea, you would first need to gather a dataset that includes multiple forms of the same grammar. This could include different parsing algorithms, different programming languages, or even different ways of expressing the same concept in natural language.
+
+Next, you would use autoencoders to learn how to translate between these different forms of the grammar. Autoencoders work by training a neural network to encode an input into a hidden state and then decode it back to its original form. By presenting the same data in different forms and using autoencoders to learn how to translate between them, you can train the network to recognize patterns and relationships between the different forms of the grammar.
+
+As you continue to gather data and train the neural network, you may need to create custom layers for each new input. This will allow the network to learn how to process and interpret the specific features of each form of the grammar.
+
+To extract knowledge from the language mode, you could use tools like lexx/yacc, flex, bison, ocamllex, and menhir to extract relevant data such as language modes, binary machine code, execution traces, and other relevant information. This data can then be used to further train and refine the neural network, or it can be used directly to extract knowledge from the language mode.
+
+Ultimately, the goal of this process would be to distill, compile, transfer, or extract knowledge from the language mode. This could involve using techniques like knowledge distillation, compilation, or transfer learning to translate the knowledge learned from one form of the grammar into another form that is more suitable for a specific application or use case.
+#+end_src
+#+begin_src output1
+To summarize the idea, you are suggesting that a neural network can be trained to translate between different forms of a grammar by presenting the same data in different forms and using autoencoders to learn how to translate between these forms. Additionally, you mentioned using layered pyramid-style architectures such as the ziggurat and creating custom layers for each new input. Moreover, you mentioned using tools like lexx/yacc, flex, bison, ocamllex, and menhir to extract language modes, binary machine code, execution traces, and other relevant data. The ultimate goal of this process would be to distill, compile, transfer, or extract knowledge from the language mode recursively.
+#+end_src
+#+begin_src output2
+It seems like you have provided a clear and concise summary of your idea. Is there anything specific that you need help with in regards to implementing this idea?
+#+end_src
+#+begin_src output3
+"To implement the idea recursively, you would first need to gather a dataset that includes multiple forms of the same grammar, such as different parsing algorithms, programming languages, and natural language expressions. Once you have the data, you can use autoencoders to learn how to translate between these different forms of the grammar.
+
+As you continue to gather data and train the neural network, you may need to create custom layers for each new input in order to allow the network to learn how to process and interpret the specific features of each form of the grammar.
+
+To extract knowledge from the language mode, you can use tools like lexx/yacc, flex, bison, ocamllex, and menhir to extract relevant data such as language modes, binary machine code, execution traces, and other relevant information. This data can then be used to further train and refine the neural network or it can be used directly to extract knowledge from the language mode.
+
+The ultimate goal of this process would be to distill, compile, transfer, or extract knowledge from the language mode recursively. This could involve using techniques like knowledge distillation, compilation, or transfer learning to translate the knowledge learned from one form of the grammar into another form that is more suitable for a specific application or use case."
+#+end_src

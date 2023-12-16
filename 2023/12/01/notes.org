@@ -1,0 +1,36 @@
+org-babel block script to execute python
+
+keras module to capture the results of matrix multiplications from another process
+and it trys to predict the next vector.
+the most common vector size is 4096 floats so we can start with that as our size and truncate or pad the other sized vectors into that .
+
+#+begin_src python
+  import keras
+  from keras.layers import Dense
+  from keras.models import Sequential
+  from keras.preprocessing.sequence import pad_sequences
+
+  # assume you have two matrices A and B of size 4096x1 and 1x4096 that are multiplied together
+  A = np.random.randn(4096, 1)
+  B = np.random.randn(1, 4096)
+  C = np.matmul(A, B)
+
+  # create a keras model to predict the next vector in the sequence
+  model = Sequential([
+      Dense(256, activation='relu', input_shape=(1,)),
+      Dense(256, activation='relu'),
+      Dense(4096, activation='linear')
+  ])
+  model.compile(optimizer='adam', loss='mean_squared_error')
+
+  # pad the matrices A and B to size 4096x1
+  A_padded = pad_sequences([A], maxlen=4096, padding='post')
+  B_padded = pad_sequences([B], maxlen=4096, padding='post')
+
+  # concatenate the padded matrices and create a numpy array to pass to the model
+  X = np.concatenate([A_padded, B_padded])
+  y = C[:, 0]
+
+  # predict the next vector in the sequence
+  prediction = model.predict(X)
+#+end_src

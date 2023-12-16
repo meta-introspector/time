@@ -1,0 +1,6 @@
+
+antlr4 -Xlog -Xexact-output-dir -o antlr_lexer ../14/grammars-v4/antlr/antlr4/ANTLRv4Lexer.g4  -Dlanguage=Cpp
+antlr4 -Xlog -Xexact-output-dir -o antlr_parser ../14/grammars-v4/antlr/antlr4/ANTLRv4Parser.g4  -Dlanguage=Cpp 
+
+antlr4 -Xlog -Xexact-output-dir -o antlr_lexer_python ../14/grammars-v4/antlr/antlr4/ANTLRv4Lexer.g4  -Dlanguage=Python3
+antlr4 -Xlog -Xexact-output-dir -o antlr_parser_python ../14/grammars-v4/antlr/antlr4/ANTLRv4Parser.g4  -Dlanguage=Python3

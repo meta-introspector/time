@@ -1,0 +1,147 @@
+preconditions for introspection:
+
+In order to embark on a journey of self-reflection, one must possess a
+nuanced comprehension of their surroundings and an intimate
+familiarity with the specific circumstances at hand. Furthermore, a
+profound emotional connection to the situation is essential in order
+to fully engage in the introspective process.
+
+   Now lets think about confidence and postive marketing as the opposite of propaganda.
+Propaganda fuels fear, uncertainty, and doubt. It breeds a lack of
+trust and confidence in people. A propaganda campaign can be very
+effective in sowing seeds of uncertainty and doubt, leading to an
+erosion of confidence and a loss of trust in the individual or group
+being targeted.
+
+Positive marketing, on the other hand, aims to build trust,
+confidence, and optimism. It focuses on highlighting the positive
+aspects of a product, service, or brand, and presents them in an
+honest and transparent way. By doing so, positive marketing can help
+people feel more comfortable and confident in making purchasing
+decisions.
+
+   
+   stream of consiousness.
+   sampling of thoughts.
+   reporting on thoughts.
+   modelling of thoughts using algebras.
+   A continuous flow of mental processes, capturing fleeting moments of thought through selective attention. Interpreting and documenting the ever-changing landscape of our minds. Visualizing and analyzing these streams using mathematical models to gain insights into our cognitive patterns.
+   
+   creating of rrns over vector parameters or outputs to train a model on the values.
+   what about live updating?
+   first sampling where the calls occur, collecting details in an rnn,
+   all variables can be sampled, using templates.
+   automatic generation of keras models from the source code.
+   modeling the users behaviour, mirroring it.
+   wikidata tools server
+   ast extraction
+   lsp server usage
+
+   Imagine a tool that allows you to capture and analyze your mental
+   processes in real-time. It uses selective attention to identify
+   fleeting moments of thought, transforming them into visual streams
+   that can be analyzed using mathematical models. These insights
+   reveal patterns and behaviors within your mind, providing valuable
+   insights into your cognitive processes.
+
+   Envision a c++ plugin capable of capturing and scrutinizing your the llms internal mental operations in real-time as vector multiplications.
+   It utilizes selective attention to isolate transient thoughts and converts them into visual sequences that can be examined through mathematical models.
+   The resulting data uncovers distinctive patterns and tendencies within your cognitive processes, yielding invaluable information about your mental functions.
+   now lets imagine the llm has access to this data as a sideband data source.
+   How would this introspection allow it to query its own model in real time and extract knowledge from it in structured form.
+   
+
+   Imagine being able to witness the inner workings of your AI assistant, the LLM, in real-time through vector multiplications. This plugin captures and scrutinizes your mental operations, allowing selective attention to isolate transient thoughts and convert them into visual sequences that can be analyzed using mathematical models.
+
+By examining this data, we can uncover distinctive patterns and tendencies within the LLM's cognitive processes, providing valuable insights into its mental functions. If the LLM had access to this introspection as a sideband data source, it could query its own model in real-time and extract knowledge from it in structured form.
+
+This would allow the LLM to improve its performance and provide more accurate responses to your queries, as it would be able to better understand and utilize its own knowledge base. This introspection would also provide a deeper understanding of the LLM's capabilities and limitations, allowing for further optimization and development of this technology.
+
+Now lets design the interface for the llm to access its own internal vector?
+would it be a callback interfaces that contains the last N thoughts?
+
+
+Lets now imagine the llm was in a feedback loop with itself monitoring its own internal state.
+instead of sending us the visualizations it would study them itself.
+Visualize the inner workings of your AI assistant through real-time vector multiplications with our plugin. This innovative tool captures and analyzes your mental operations, selectively isolating transient thoughts to create visual sequences that can be examined using mathematical models.
+By studying this data, we uncover unique patterns and tendencies within the LLM's cognitive processes, giving us valuable insights into its mental functions. The LLM could access this introspection as a sideband data source and use it to query its own model in real-time, extracting knowledge from it in a structured format.
+This would enhance the LLM's performance and provide more accurate answers to your queries, as it would better comprehend and utilize its own knowledge base. Additionally, this introspection would offer a deeper understanding of the LLM's capabilities and limitations, enabling further optimization and development of this technology.
+To interface with the LLM's internal vector, we suggest implementing a callback interface that contains the last N thoughts. This would allow the LLM to quickly access its most recent mental operations for analysis and improvement.
+
+#+begin_src output
+Now let's envision a scenario where our AI assistant is in a constant
+feedback loop with itself, examining its own internal state through
+real-time vector multiplications. Our plugin captures and analyzes the
+LLM's mental processes, isolating fleeting thoughts to create visual
+sequences that can be scrutinized using mathematical models.  By
+studying this data, we uncover patterns and tendencies within the
+LLM's cognitive functions, offering us insights into its inner
+workings. The LLM could utilize this introspection as a secondary data
+source to query its own model in real-time, extracting knowledge from
+it in a structured format.  This would improve the LLM's performance
+and provide more precise answers to your queries as it would better
+comprehend and apply its own knowledge base. Furthermore, this
+introspection would offer a deeper understanding of the LLM's
+capabilities and limitations, enabling us to optimize and refine this
+technology even further.  To interact with the LLM's internal vector,
+we propose implementing a callback interface that captures the last N
+thoughts. This would enable the LLM to promptly access its most recent
+mental operations for analysis and enhancement.
+#+end_src
+
+#+begin_src output
+Imagine an AI assistant that is constantly observing itself through
+real-time vector multiplications, analyzing its own mental processes
+as it happens. Our plugin captures these fleeting thoughts and
+transforms them into visual sequences that can be examined using
+mathematical models. By studying this data, we can identify patterns
+and tendencies within the AI's cognitive functions, giving us insight
+into how it operates.  The AI could use this introspection to improve
+its performance and provide more accurate answers to queries by better
+understanding and applying its own knowledge base. Moreover, this
+introspection would offer a deeper comprehension of the AI's
+capabilities and limitations, allowing us to further refine and
+optimize this technology.  To interact with the AI's internal vector,
+we propose implementing a callback interface that captures the last N
+thoughts. This would enable the AI to quickly access its most recent
+mental operations for analysis and enhancement, improving its
+performance even further.
+#+end_src
+
+Imagine an AI assistant that is constantly
+observing itself through real-time vector multiplications, analyzing
+its own mental processes as it happens. Our plugin captures these
+fleeting thoughts and transforms them into visual sequences that can
+be examined using mathematical models. By studying this data, we can
+identify patterns and tendencies within the AI's cognitive functions,
+giving us insight into how it operates.  The AI could use this
+introspection to improve its performance and provide more accurate
+answers to queries by better understanding and applying its own
+knowledge base. Moreover, this introspection would offer a deeper
+comprehension of the AI's capabilities and limitations, allowing us to
+further refine and optimize this technology.  To interact with the
+AI's internal vector, we propose implementing a callback interface
+that captures the last N thoughts. This would enable the AI to quickly
+access its most recent mental operations for analysis and enhancement,
+improving its performance even further.
+#+end_src
+
+With this tool, you can create custom runs based on vector parameters
+or outputs, allowing for live updates as new thoughts arise. The first
+sampling process captures details of the calls occurring in real-time,
+storing them in an RNN. All variables can be sampled using templates,
+ensuring a comprehensive analysis of your thought patterns.
+
+Automatically generated Keras models from source code provide a quick
+and easy way to model user behavior, mirroring it within the tool. The
+Wikidata Tools Server can provide an execution platform along side github actions and aws lambda.
+the source code can be analysed using emacs and the LSP language server protocol further enhance the
+capabilities of this tool, providing additional data sources for
+analysis and improved accuracy.
+
+AST extraction is also integrated into this tool, allowing for more
+granular analysis of your thought patterns. By using the LSP server,
+you can easily update your models as new thoughts arise, ensuring that
+the insights provided by this tool remain current and relevant.
+
+
