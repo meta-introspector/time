@@ -2404,3 +2404,6 @@
 [submodule "2023/12/03/Batman_AI"]
 	path = 2023/12/03/Batman_AI
 	url = https://huggingface.co/datasets/Deadsg/Batman_AI
+[submodule "2023/12/27/llama2.c"]
+	path = 2023/12/27/llama2.c
+	url = https://github.com/karpathy/llama2.c
