@@ -1,0 +1,16 @@
+git submodule add https://github.com/traefik/mesh.git ./15/mesh
+git submodule add https://github.com/pyg-team/pytorch_geometric.git ./03/pytorch_geometric
+git submodule add https://github.com/afiskon/simple-genetic-algorithm.git ./19/simple-genetic-algorithm
+git submodule add https://github.com/mhwombat/creatur.git ./19/creatur
+git submodule add https://github.com/haskell-suite/haskell-src-exts.git ./19/haskell-src-exts
+git submodule add https://github.com/haskell/vscode-haskell.git ./19/vscode-haskell
+git submodule add https://github.com/spinda/liquidhaskell-cabal.git ./19/liquidhaskell-cabal
+git submodule add https://github.com/austinvhuang/awesome-haskell-deep-learning.git ./19/awesome-haskell-deep-learning
+git submodule add https://github.com/HuwCampbell/grenade.git ./19/grenade
+git submodule add https://github.com/abarbu/haskell-torch.git ./19/haskell-torch
+git submodule add https://github.com/haskell-hint/hint.git ./19/hint
+git submodule add https://github.com/elm/compiler.git ./19/compiler
+git submodule add https://github.com/gibiansky/IHaskell ./19/IHaskell
+git submodule add https://github.com/ucsd-progsys/liquid-fixpoint.git ./19/liquidhaskell
+git submodule add https://github.com/thma/lispkit.git ./19/lispkit
+git submodule add https://github.com/Superstar64/sky.git ./19/sky

@@ -2386,3 +2386,21 @@
 [submodule "2023/04/27/introspector/src/torch-geometric"]
 	path = 2023/04/27/introspector/src/torch-geometric
 	url = https://github.com/pyg-team/pytorch_geometric
+[submodule "2023/12/17/sqlgg"]
+	path = 2023/12/17/sqlgg
+	url = https://repo.or.cz/sqlgg.git
+[submodule "2023/12/15/gsdl"]
+	path = 2023/12/15/gsdl
+	url = https://gitlab.com/gopiandcode/gsdl
+[submodule "2023/12/13/compcertssa"]
+	path = 2023/12/13/compcertssa
+	url = https://gitlab.inria.fr/compcertssa/compcertssa.git
+[submodule "2023/12/24/orsetto"]
+	path = 2023/12/24/orsetto
+	url = https://bitbucket.org/jhw/orsetto
+[submodule "2023/12/08/depot_tools"]
+	path = 2023/12/08/depot_tools
+	url = https://chromium.googlesource.com/chromium/tools/depot_tools.git
+[submodule "2023/12/03/Batman_AI"]
+	path = 2023/12/03/Batman_AI
+	url = https://huggingface.co/datasets/Deadsg/Batman_AI
