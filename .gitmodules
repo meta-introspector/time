@@ -2413,3 +2413,21 @@
 [submodule "2023/12/28/sail"]
 	path = 2023/12/28/sail
 	url = https://github.com/rems-project/sail
+[submodule "2023/12/28/semgrep"]
+	path = 2023/12/28/semgrep
+	url = https://github.com/semgrep/semgrep
+[submodule "2023/12/28/infer"]
+	path = 2023/12/28/infer
+	url = https://github.com/facebook/infer.git
+[submodule "2023/12/28/caramel"]
+	path = 2023/12/28/caramel
+	url = https://github.com/leostera/caramel.git
+[submodule "2023/12/28/FStar"]
+	path = 2023/12/28/FStar
+	url = https://github.com/FStarLang/FStar.git
+[submodule "2023/12/28/bincat"]
+	path = 2023/12/28/bincat
+	url = https://github.com/airbus-seclab/bincat.git
+[submodule "2023/12/28/eff"]
+	path = 2023/12/28/eff
+	url = https://github.com/matijapretnar/eff.git
