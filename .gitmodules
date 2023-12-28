@@ -2488,3 +2488,6 @@
 [submodule "2023/12/28/coq-of-ocaml"]
 	path = 2023/12/28/coq-of-ocaml
 	url = https://github.com/formal-land/coq-of-ocaml
+[submodule "2023/12/28/Batsh"]
+	path = 2023/12/28/Batsh
+	url = https://github.com/batsh-dev-team/Batsh.git
