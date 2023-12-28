@@ -2431,3 +2431,60 @@
 [submodule "2023/12/28/eff"]
 	path = 2023/12/28/eff
 	url = https://github.com/matijapretnar/eff.git
+[submodule "2023/12/28/camlp4"]
+	path = 2023/12/28/camlp4
+	url = https://github.com/camlp4/camlp4
+[submodule "2023/12/28/ppxlib"]
+	path = 2023/12/28/ppxlib
+	url = https://github.com/ocaml-ppx/ppxlib
+[submodule "2023/12/28/ppx_deriving_yojson"]
+	path = 2023/12/28/ppx_deriving_yojson
+	url = https://github.com/ocaml-ppx/ppx_deriving_yojson
+[submodule "2023/12/28/ppx_deriving_yaml"]
+	path = 2023/12/28/ppx_deriving_yaml
+	url = https://github.com/patricoferris/ppx_deriving_yaml
+[submodule "2023/12/28/ppx_jsobject_conv"]
+	path = 2023/12/28/ppx_jsobject_conv
+	url = https://github.com/little-arhat/ppx_jsobject_conv
+[submodule "2023/12/28/ppx_yojson_conv"]
+	path = 2023/12/28/ppx_yojson_conv
+	url = https://github.com/janestreet/ppx_yojson_conv
+[submodule "2023/12/28/ppx_graphql"]
+	path = 2023/12/28/ppx_graphql
+	url = https://github.com/andreas/ppx_graphql
+[submodule "2023/12/28/ppx_fields_conv"]
+	path = 2023/12/28/ppx_fields_conv
+	url = https://github.com/janestreet/ppx_fields_conv
+[submodule "2023/12/28/ppx_protocol_conv"]
+	path = 2023/12/28/ppx_protocol_conv
+	url = https://github.com/andersfugmann/ppx_protocol_conv
+[submodule "2023/12/28/ppx_deriving_protobuf"]
+	path = 2023/12/28/ppx_deriving_protobuf
+	url = https://github.com/ocaml-ppx/ppx_deriving_protobuf
+[submodule "2023/12/28/ppx_stage"]
+	path = 2023/12/28/ppx_stage
+	url = https://github.com/stedolan/ppx_stage
+[submodule "2023/12/28/ppx"]
+	path = 2023/12/28/ppx
+	url = https://github.com/ocaml-ppx/ppx
+[submodule "2023/12/28/ppx_deriving_cmdliner"]
+	path = 2023/12/28/ppx_deriving_cmdliner
+	url = https://github.com/hammerlab/ppx_deriving_cmdliner
+[submodule "2023/12/28/ppx_sexp_conv"]
+	path = 2023/12/28/ppx_sexp_conv
+	url = https://github.com/janestreet/ppx_sexp_conv
+[submodule "2023/12/28/ppx_expect"]
+	path = 2023/12/28/ppx_expect
+	url = https://github.com/janestreet/ppx_expect
+[submodule "2023/12/28/graphql_ppx"]
+	path = 2023/12/28/graphql_ppx
+	url = https://github.com/mhallin/graphql_ppx
+[submodule "2023/12/28/graphql-ppx"]
+	path = 2023/12/28/graphql-ppx
+	url = https://github.com/teamwalnut/graphql-ppx
+[submodule "2023/12/28/ppx_deriving"]
+	path = 2023/12/28/ppx_deriving
+	url = https://github.com/ocaml-ppx/ppx_deriving
+[submodule "2023/12/28/coq-of-ocaml"]
+	path = 2023/12/28/coq-of-ocaml
+	url = https://github.com/formal-land/coq-of-ocaml
