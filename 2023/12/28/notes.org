@@ -1,0 +1,245 @@
+* coq
+taken from /2023/07/26/notes.txt
+
+#+begin_src ""Lets follow this idea recursivly: ""pair = "DataConI Server.MetaCoq.TestMeta.Pair (ForallT [KindedTV a_7566047373982728046 SpecifiedSpec StarT,KindedTV b_7566047373982728047 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT a_7566047373982728046)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT b_7566047373982728047)) (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (VarT a_7566047373982728046)) (VarT b_7566047373982728047))))) Server.MetaCoq.TestMeta.Prod"
+""""
+#+end_src
+#+begin_src output
+The given string represents a Coq program that defines a pair of values of type "Pair". It is written in the style of Coq's dependency-directed syntax.
+
+The pair is defined as an instance of the "Pair" record, which takes two arguments of type "SpecifiedSpec StarT" and returns them wrapped in a tuple. The type "SpecifiedSpec StarT" represents a starred type that has been specified with the "SpecifiedSpec" constraint. "StarT" is a placeholder for an instance of the "StarT" type, which may have a more complex construction.
+
+The "Pair" record is defined recursively, using Coq's dependency-directed syntax. The first argument to the record is "ForallT [KindedTV a\_7566047373982728046 SpecifiedSpec StarT,KindedTV b\_7566047373982728047 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT a\_7566047373982728046)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT b\_7566047373982728047)) (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (VarT a\_7566047373982728046)) (VarT b\_7566047373982728047))))".
+
+This expression is a recursive type definition that specifies the dependencies and arguments for each instance of the "Pair" record. The type "ForallT" takes two types as arguments, which are used to constrain the types of the two elements in the tuple returned by the record. The type "[]" is an empty list, which represents a set of dependent definitions that must be defined before this definition can be compiled.
+
+The next argument to the "AppT" function is a recursive instance of itself, which defines the application of the "AppT" function to the two arguments in the first argument. The first argument is an "AppT" function applied to a "MulArrowT (PromotedT GHC.Types.One)" function and a "VarT a\_7566047373982728046" variable, which returns an instance of the "MulArrowT (PromotedT GHC.Types.One)" type with two arguments of type "a\_7566047373982728046". The second argument is an "AppT" function applied to a recursive instance of itself, which applies the "MulArrowT (PromotedT GHC.Types.One)" function to two variables of type "a\_7566047373982728046", and returns an instance of the "MulArrowT (PromotedT GHC.Types.One)" type with these two arguments.
+
+The last argument to the "AppT" function is a recursive instance of itself, which applies the "ConT Server.MetaCoq.TestMeta.Prod" constructor to the two values returned by the previous "AppT" function. The "ConT" constructor creates an instance of the type specified by its argument. In this case, it creates an instance of the "Server.MetaCoq.TestMeta.Prod" type, which is a product of two types of the same kind specified in the first argument to the "ForallT" type definition.
+
+Overall, the given Coq program defines a recursive type that specifies the dependencies and arguments for each instance of the
+#+end_src
+#+begin_src output0
+
+The given string represents a Coq program that defines a pair of values of type "Pair". The pair is defined as an instance of the "Pair" record, which takes two arguments of type "SpecifiedSpec StarT" and returns them wrapped in a tuple. The type "SpecifiedSpec StarT" represents a starred type that has been specified with the "SpecifiedSpec" constraint. "StarT" is a placeholder for an instance of the "StarT" type, which may have a more complex construction.
+
+The "Pair" record is defined recursively, using Coq's dependency-directed syntax. The first argument to the record is "ForallT [KindedTV a\_7566047373982728046 SpecifiedSpec StarT,KindedTV b\_7566047373982728047 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT a\_7566047373982728046)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT b\_7566047373982728047)) (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (VarT a\_7566047373982728046)) (VarT b\_7566047373982728047))))" is defining a Coq program that defines a pair of values of type "Pair". The pair is defined as an instance of the "Pair" record, which takes two arguments of type "SpecifiedSpec StarT" and returns them wrapped in a tuple. The type "SpecifiedSpec StarT" represents a starred type that has been specified with the "SpecifiedSpec" constraint. "StarT" is a placeholder for an instance of the "StarT" type, which may have a more complex construction.
+
+The "Pair" record is defined recursively, using Coq's dependency-directed syntax. The first argument to the record is "ForallT [KindedTV a\_7566047373982728046 SpecifiedSpec StarT,KindedTV b\_7566047373982728047 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT a\_7566047373982728046)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT b\_7566047373982728047)) (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (VarT a\_7566047373982728046)) (VarT b\_7566047373982728047))))".
+
+This expression is a recursive type definition that specifies the dependencies and arguments for each instance of the "Pair" record. The type "ForallT" takes two types as arguments, which are used to constrain the types of the two elements in the tuple returned by the record. The type "[]" is an empty list, which represents a set of dependent definitions that must be defined before this definition can be compiled.
+
+The next argument to the "AppT" function is a recursive instance of itself, which defines the application of the "AppT" function to the two arguments in the first argument. The first argument is an "AppT" function applied to a "MulArrowT (PromotedT GHC.Types.One)" function and a "VarT a\_7566047373982728046" variable, which returns an instance of the "MulArrowT (PromotedT GHC.Types.One)" type with two arguments of type "a\_7566047373982728046". The second argument is an "AppT" function applied to a recursive instance of itself, which applies the "MulArrowT (PromotedT GHC.Types.One)" function to two variables of type "a\_7566047373982728046", and returns an instance of the "MulArrowT (PromotedT GHC.Types.One)" type with these two arguments.
+
+The last argument to the "AppT" function is a recursive instance of itself, which applies the "ConT Server.MetaCoq.TestMeta.Prod" constructor to the two values returned by the previous "AppT" function. The "ConT" constructor creates an instance of the type specified by its argument. In this case, it creates an instance of the "Server.MetaCoq.TestMeta.Prod" type, which is a product of two types of the same kind specified in the first argument to the "ForallT" type definition.
+
+This Coq program defines a recursive pair of values with starred types specified using the "SpecifiedSpec StarT" constraint. The pair is defined as an instance of the "Pair" record, which takes two arguments of type "SpecifiedSpec StarT" and returns them wrapped in a tuple. The "Pair" record is defined recursively using Coq's dependency-directed syntax, with the first argument being a type definition that specifies the dependencies and arguments for each instance of the record.
+
+The pair of values is created by applying the "AppT" function to two recursive instances of itself, which apply the "MulArrowT (PromotedT GHC.Types.One)" function to two variables of the same type. The last argument to the "AppT" function creates an instance of the "Server.MetaCoq.TestMeta.Prod" type, which is a product of two types of the same kind specified in the first argument to the "ForallT" type definition.
+
+The given Coq program demonstrates how recursive functions can be defined using dependency-directed syntax and how they can specify the dependencies and arguments for each instance of the function.
+#+end_src
+
+
+* idea
+
+imagine a population of programmers creating documents, each of these artifacts are commited to a git repo to a specific path, written in a specific language,
+following a specific grammar. We assume that they are valid documents to start with.
+This forms the corpus of training data.
+Now we create a statistical model of the data how it fits the grammar
+and annotate each branch of the grammar with a function that describes or can predict the probability of
+that particular branch being taken or not based on the training data.
+Now we also have multiple implementations of that grammar that are executable,
+we run those executables on the documents and trace the execution.
+This tracing should align somehow with the trace of the grammar following the document.
+there will be a connection between the grammar, the processing of the language via a compiler program.
+
+Now we feed this same input into a multiple large language models,
+we trace the execution of those models on the input. Now we can look for connections between the grammar and the llm.
+The weights of the model should somehow connect to the grammar and the statistics of the corpus.
+
+We can also have the llm generate programs following the grammar given and compile those.
+The beamsearch of the llm should align with the execution of the binary.
+
+Now we have the stage set. We can now think about the parts contributing to this as well.
+We can take the same program written in many languages and architectures and compare them.
+
+The proof we can now construct will connect the grammar to the implementation.
+
+We can take a grammar structure and then find examples for it, collect statistics for it and
+then generate more examples, check them, anotate them and use for fine tuning the model on that data.
+This fine tuning can be done in batches. 
+
+
+
+#+begin_src ""Lets follow this idea recursivly: ""* idea
+
+imagine a population of programmers creating documents, each of these artifacts are commited to a git repo to a specific path, written in a specific language,
+following a specific grammar. We assume that they are valid documents to start with.
+This forms the corpus of training data.
+Now we create a statistical model of the data how it fits the grammar
+and annotate each branch of the grammar with a function that describes or can predict the probability of
+that particular branch being taken or not based on the training data.
+Now we also have multiple implementations of that grammar that are executable,
+we run those executables on the documents and trace the execution.
+This tracing should align somehow with the trace of the grammar following the document.
+there will be a connection between the grammar, the processing of the language via a compiler program.
+
+Now we feed this same input into a multiple large language models,
+we trace the execution of those models on the input. Now we can look for connections between the grammar and the llm.
+The weights of the model should somehow connect to the grammar and the statistics of the corpus.
+
+We can also have the llm generate programs following the grammar given and compile those.
+The beamsearch of the llm should align with the execution of the binary.
+
+Now we have the stage set. We can now think about the parts contributing to this as well.
+We can take the same program written in many languages and architectures and compare them.
+
+The proof we can now construct will connect the grammar to the implementation.
+
+We can take a grammar structure and then find examples for it, collect statistics for it and
+then generate more examples, check them, anotate them and use for fine tuning the model on that data.
+This fine tuning can be done in batches. """"
+#+end_src
+#+begin_src output
+I see where you are going with this idea. It seems like you are
+describing a process of building a model to understand and generate
+programs following a specific grammar, using statistical analysis and
+language models. The goal is to create a connection between the
+grammar, the processing of the language via a compiler program, and
+the language models.
+
+It's interesting how this process can be used to compare different
+implementations of the same program written in different languages and
+architectures. This could potentially lead to insights into how
+different programming paradigms and languages relate to each other,
+and how they are processed by compilers.
+
+Overall, it seems like a complex and innovative approach to
+understanding programming and language. It would be interesting to see
+more details about the specific techniques and tools that you plan to
+use in this process.
+#+end_src
+
+#+begin_src output0
+It sounds like you have a great idea for a research project on using
+statistical analysis and language models to understand and generate
+programs following a specific grammar. The ability to compare
+different implementations of the same program written in different
+languages and architectures is definitely a valuable aspect of this
+approach, as it could lead to insights into how different programming
+paradigms and languages relate to each other and how they are
+processed by compilers.
+
+To further explore this idea, you may want to consider using specific
+techniques and tools that are commonly used in natural language
+processing and machine learning, such as neural networks, deep
+learning, and recurrent neural networks. These tools can help you
+build a model that can understand the grammar of a programming
+language and generate programs based on that grammar.
+
+It's also important to consider the limitations of this approach, such
+as the fact that not all programming languages have clear grammars or
+may have multiple ways of expressing the same idea. However, with
+careful selection of programming languages and grammars, you can
+mitigate these limitations and focus on the strengths of your model.
+
+Overall, I think this is a fascinating and complex research project
+that has the potential to make significant contributions to our
+understanding of programming and language.
+#+end_src
+#+begin_src output1
+
+"It sounds like you have a great idea for a research project on using
+statistical analysis and language models to understand and generate
+programs following a specific grammar. The ability to compare
+different implementations of the same program written in different
+languages and architectures is definitely a valuable aspect of this
+approach, as it could lead to insights into how different programming
+paradigms and languages relate to each other and how they are
+processed by compilers.
+
+To further explore this idea, you may want to consider using specific
+techniques and tools that are commonly used in natural language
+processing and machine learning, such as neural networks, deep
+learning, and recurrent neural networks. These tools can help you
+build a model that can understand the grammar of a programming
+language and generate programs based on that grammar.
+
+It's also important to consider the limitations of this approach, such
+as the fact that not all programming languages have clear grammars or
+may have multiple ways of expressing the same idea. However, with
+careful selection of programming languages and grammars, you can
+mitigate these limitations and focus on the strengths of your model.
+
+Overall, I think this is a fascinating and complex research project
+that has the potential to make significant contributions to our
+understanding of programming and language."
+#+end_src
+#+begin_src output2
+
+"This is a great idea for a research project! Building a model that
+can understand and generate programs based on a specific grammar could
+lead to valuable insights into programming paradigms, languages, and
+their processing by compilers.
+
+Using statistical analysis and language models is a sound approach, as
+it allows the model to learn patterns in the data and make predictions
+about new inputs. Furthermore, comparing different implementations of
+the same program written in different languages and architectures can
+provide a unique perspective on how programming concepts are expressed
+and processed across different systems.
+
+To further explore this idea, you may want to consider using specific
+techniques and tools that are commonly used in natural language
+processing and machine learning, such as neural networks, deep
+learning, and recurrent neural networks. These tools can help you
+build a more powerful model that can understand the grammar of a
+programming language and generate programs based on that grammar.
+
+It's also important to carefully select programming languages and
+grammars for this project, as not all programming languages have clear
+grammars or may have multiple ways of expressing the same
+idea. However, with careful selection, you can mitigate these
+limitations and focus on the strengths of your model.
+
+Overall, I think this is a fascinating and complex research project
+that has the potential to make significant contributions to our
+understanding of programming and language."
+#+end_src
+#+begin_src output3
+"Apply the idea of building a model that can understand and generate
+programs based on a specific grammar recursively:
+
+Recursion is a powerful technique in programming and can be applied to
+various problem-solving strategies. It involves breaking down a
+problem into smaller sub-problems and solving them iteratively until a
+solution is found. In this context, we can use recursion to explore
+the idea of building a model that can understand and generate programs
+based on a specific grammar.
+
+One possible way to approach this recursively is to start with a
+simple programming language or grammar and build a model that can
+understand and generate programs following that grammar. For example,
+we could use a simple programming language like Lisp or Python and
+build a model using statistical analysis and language models. This
+would allow us to gain insights into how the grammar works and how it
+is processed by compilers.
+
+Once we have built a model for a simple programming language, we can
+then recursively apply this process to more complex languages or
+grammars. For example, we could build a model for a functional
+programming language like Haskell or OCaml, which has a more complex
+grammar and syntax than Lisp or Python. This would allow us to compare
+the processing of different programming paradigms and languages, and
+gain insights into how they relate to each other.
+
+Overall, recursion can be a powerful technique for exploring complex
+ideas like building a model that can understand and generate programs
+based on a specific grammar. By breaking down this problem into
+smaller sub-problems and iteratively solving them, we can gain a
+deeper understanding of programming and language."
+#+end_src
+
+
+* 
