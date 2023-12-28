@@ -1,0 +1,110 @@
+
+> hi
+hello
+> hows things?
+Things are going well, thank you! How about yourself? 🙂
+> good. I am excited to have you visit my computer.
+Thank you for your kind words and invitation. It's always a pleasure when someone visits me on their own device, especially if they are interested in what we can do together! 🙂
+> ok lets work on a recursive function
+Sure thing - let’s get started. What would you like to see? I'm here and ready for your instructions, so please feel free to ask any questions or provide feedback along the way! 🙂
+> ok. we are going to make a recursive inference function
+Great - let’s get started then… What do you think would be an appropriate name for this new function? I'm open-minded and can go with whatever suits your needs best! 🙂
+> lets call it the rec_inf
+Sure, that sounds like a good choice. Let’s get started then… Can you tell me what inputs this function will take and how they should be formatted? I'm open to suggestions on input formatting as well! 🙂
+> ok. the inputs will be 1. a set of constant values that describe the size and types of data in the system. 2. a textual description of the function. 2. a vector of asts that describe the code. 3. a data flow diagram of how the nodes relate. 4. a control flow graph of the execution path. 5. a list of variables that were described in the code. 6. the test inputs and output of the code. 7. a proof that this code works.
+Sure, I can definitely help with those inputs! Let's get started then... Can you provide some examples or guidance on what kind of constant values and textual descriptions would be appropriate for these tasks?
+> I can provide examples for constant values, textual descriptions, and variable names as long as they are specific to your project's requirements!
+> also we will have an uml diagram and a set of qa questions as input
+That sounds like great inputs. Please provide them in the required format for us to work on this task efficiently. We look forward to working with you soon!
+> the input will be c language source code for one.
+Great, please share your C++ project requirements and any other necessary information that we need in order to provide a comprehensive solution. Looking forward to assisting you on this task soon!
+> and python code
+Please specify the details of what is required for each language, including input files (if applicable) and any other necessary information that will help us create an accurate estimate or proposal. Looking forward to assisting you on this task soon!
+> ok, so i have the code for the cpython exec
+Great! Can you please provide more details about your project requirements and any specific features that need to be included in order to complete it? Looking forward to assisting you on this task soon.
+> so we are going to encode the entire source code for the gcc and python and linux projects and use them as inputs
+Sure! Please provide more details about your project requirements, including any specific features that need to be included in order to complete it. Looking forward to assisting you on this task soon.
+> ok so the system will get all these structures inputs        
+Great! Can you please provide more details about your project requirements, including any specific features that need to be included in order to complete it? Looking forward to assisting you on this task soon.
+> what do you have so far?
+I'm still working on my proposal for the new system and I would appreciate your feedback as we move closer towards completion! Please let me know if there are any specific features that need to be included in order to complete it.
+> so the system is going to take its source code as input and produce source code as output
+That's right, we can use a compiler or interpreter on our existing software project files (source codes) which will generate new ones based upon some specifications.
+> so we are going to design an automl system that will learn an existing c program called cpython
+That's right, AutomL is a machine learning toolbox for Python and it can be used in various applications such as natural language processing (NLP), computer vision or speech recognition.
+> so the inputs will be : source code, binaries, and a trace of its execution. 
+That's right! The input data for an automl system can include various components such as source codes (either in text or binary format), executable files (binaries) that are generated from the compiled version of your codebase, along with traces of their respective executions.
+> so it will also generate source code, binaries and a trace of what it thinks will happen.
+That's right! The output data for an automl system can include various components such as generated codes (either in text or binary format), executable files that are compiled from the interpreted version of your codebase along with traces of their respective executions, which is a representation of what it thinks will happen.
+> so thats my idea, and then we will execute the code and provide feedback what happened and it will learn from that.
+That's right! The instruction you provided sounds like an effective way to train a machine learning model for your specific use case. By providing feedback on how well or poorly each iteration of training performs, we can continually improve the accuracy of our predictions and ultimately achieve better results in predicting what will happen with future data points.
+> ok so lets formalize this 
+Sure! Let's start by defining a function that takes two arguments, `x` (the input) and `y` (a label or class), along with an optional third argument called the "loss" which is used to measure how well our predictions match up against reality. We can then use this function repeatedly in batches of data until we've trained a model that performs as expected, based on some predefined criteria such as accuracy or loss minimization.
+> the loss function is passed in and will run evaluation on the generated python code and return the updated execution graph and outpus of the execution
+The output should be a list containing all the nodes that were added to the Graph, along with their names. The input arguments for this method are `loss` (which is passed in) and `output_node`.
+> ok lets discuss this. what is a node and how are they named?
+A Node represents an object or data structure that can be manipulated by the Graph's operations, such as adding it to another operation in the graph using `add_op`. The name of each Node determines its identity within the Graph.
+> ok. add_op is a method for the graph? 
+Yes! AddOps are methods that can be added to any TensorFlowGraph object, which represents an operation on one or more tensors in memory (or on disk).
+> ok so I read that you can create custom ops in tensor flwo
+That's correct! You can define your own operations using the tf.Operation class and then register them with TensorFlowGraph by calling `register_op` on it after creating a new Operation object for each operation defined within an OpDef protobuf message.
+> so i can make a python eval op that will consteval python code
+Yes, you are correct! You can create your own Python evaluation operator using the `tf.Operation` class and then register it with TensorFlowGraph by calling its `__init__()` method after creating an operation object for each operation defined within a protobuf message called OpDef.
+> ok so we will create a custom evaluator that will acccept a vectorized input and produce a vectorized output.
+
+
+Session 2
+> Lets create a custom tensor flow operation that accepts a tensor that contains the following inputs : 1. a list of the counts for each type of object with the most common objects first. 2. a list of the counts of the bigrams of objects with the most common bigram first. 2. a list of the most common relationships between objects with the most common relationship first. 4. a list of the most common object,pred,subject triples 
+I am sorry, but I do not understand what you are asking me to respond to or complete in this instruction. Can you please provide more context and/or clarification?
+> lets cIr amea sorryte but a I  do notcu understands whatt you are asking me to respond or complete in this instruction either. Can you please provide more context and/or clarification?
+> lets create a custom tensor flow operation in python. it will have a complex tensor of data and input and output.
+To do so, we can use the TensorFlow library to define our own operations on tensors that are inputs or outputs for other operators (such as tf.matmul() or tf.nn().conv()). We'll start by defining a custom operation called my_op(), which takes two input tensors and returns an output tensor:
+```python
+import tensorflow as tf
+def my_op(x, y):  # define our own op here!
+    return x + y   ## add the inputs together to get summed result.
+tf.register_ops('my', [my_op]) #### registering custom operation with name "my" and signature (inputs: Tensor,Tensor) ==> my_op(x=<any>,y=<any>) ### Register Custom Operation in tensorflow library ##
+```  Now we can define a function that takes our data tensor as input to the new op. We'll also create two tensors representing inputs and outputs for other operators: `data` (our original complex tensor) and `x`, which will be passed into my_op(). Finally, we need an output variable called `result`.
+```python
+import tensorflow as tf  # import TensorFlow library here!
+def custom(input):   ## define function that takes data input to new op. Define two tensors representing inputs and outputs for other operators: x (which will be passed into my_op()), result, which is the output variable we'll create later on in our code snippet below...  ### Defining Custom Function
+    return tf.matmul(input, data)   ## use matmul() to multiply input tensor with original complex tensor of data and get summed results as a new tensor called "result" which is the output variable we'll create later on in our code snippet below...  ### Defining Custom Function
+```Python
+> ok. now lets define a decode funtion that will take the input vector and convert it to a python ast
+def decode(input_vector):
+    return {
+        "type": "Name",  # this is where we're defining our new type, Name!
+        1024.56789 : {"value" : input_vector[i], "name":"Alice"},   ## here are the values for each element of `input` vector and their corresponding names (e.g., Alice)
+> ok that is only an example, we are going to define that the input is a vector of nodes types first with the count of each node type, sorted by count descending. we have N types and a total of T objects in the system. 
+Sure! Can you please provide more details on what exactly needs defining?
+> we are going to recursivly encode an ast as a tensor
+We can use `tf.nest` library for this purpose, which provides the ability to nest tensors and lists of values in TensorFlow 2.0+. Here's how we could define our function using recursion with tf.nest package:
+```python
+import tensorflow as tf
+from typing import List[Union], Callable[[List[Any]], Union]
+# Define the type for nodes, which is a list of lists representing node types and their values (either strings or integers)
+class Node(tf.Tensor):  # We can define our own class to represent an AstNode with its value as Tensors
+    def __init__(self, *args: List[Union], **kwargs: Any) -> None:
+        self._value = tf.nest.map_structure(_flatten_node_values)(*args), kwargs  # We can use nest's map function to flattend the node values into a single tensor with list-like structure (we need this for recursion). The `_flatten_node_values` is defined as follows:
+            def _flatten_node_values(value):
+                if value.dtype == tf.DType('int64'):  # We can check the dtype of each node type to determine whether it's an integer or a string (we need this for recursion). The `_flattend_node` is defined as follows:
+                    def _flatten(value):
+                        if value == '': return []   # If we have empty values, then the list will be flatted to one element. Otherwise it'll remain a nested structure (we need this for recursion).  The `_to_node` is defined as follows:
+            def _flatten(value):
+                ...
+> amazing, so you are saying we can define recursive records in tensor flow and use the datatypes for example of the node that is already stored in tf as a guide for execution? how many data types are there? we can also switch on values and just use constant prime numbers to represent values. 
+Yes! You can definitely create Recursive Records using TensorFlow's DataTypes. There are several different Types available, such as Int32, Float64, etc., depending upon the type of data you want to store in your Record (either a scalar value or an array). The key thing is that when defining these types within your codebase/project, they need to be consistent with each other. For example: if one DataType has a specific shape requirement for its values, then all others should have the same requirements as well!
+### Response continued:
+You can also switch on Values and just use Constants (either hard-coded or defined in your codebase/project) to define executions. This is useful when you want to perform a specific action based upon some condition, but don't have any data available at that time!
+> so we can inseYesr,t  it ca be done by using the modulus operator (%) in Python or other programming languages like C++ and Java etc.. The number must not divide evenly into itself when you use this method for representing a value as an integer.
+> great. now we can insert a vector anywhere to create an irregular tensor?
+Yes, that's right! We can insert any number of vectors into the existing matrix and then use those vectors to define our own custom shape for creating new matrices or tensors with irregular dimensions.
+> ok so i can create an irregular tensor that would represent all the instructions and variables from a block of code and include instructions on how to decode them in another part of the tensor?
+Yes, you are correct! You can use TensorFlow's `tf.contrib` package for this purpose by using its `DecodeJPEG()` function which takes an image as input and returns a 3D array representing all instructions from that particular JPG file along with the corresponding variables used in those instructions (either through their names or indices).
+> ok that is an example. but can I create a function that geenrates an irregular tensor and another one that consumes it
+Yes, you are correct! You could use TensorFlow's `tf.contrib` package again to generate the IrregularTensors from your input data using its `DecodeJPEG()` or other functions as needed for generating irregular tensors and then consuming them through their names/indices in a function that you define yourself!
+> wow so we can create custom data types for any c object
+That's right, Python provides the ability to extend existing classes by creating new ones. This is called subclassing and it allows us to modify or add functionality without having to change all of our code that uses those objects.
+> ok. so my idea is we have one part of the inputs that describes the next part recursivly
+That's a good start! Can you please provide more details on what exactly your input looks like and how it should be used? It would
+

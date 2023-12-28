@@ -2407,3 +2407,9 @@
 [submodule "2023/12/27/llama2.c"]
 	path = 2023/12/27/llama2.c
 	url = https://github.com/karpathy/llama2.c
+[submodule "2023/12/27/ppx_tools"]
+	path = 2023/12/27/ppx_tools
+	url = https://github.com/ocaml-ppx/ppx_tools
+[submodule "2023/12/28/sail"]
+	path = 2023/12/28/sail
+	url = https://github.com/rems-project/sail
