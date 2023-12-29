@@ -2491,3 +2491,9 @@
 [submodule "2023/12/28/Batsh"]
 	path = 2023/12/28/Batsh
 	url = https://github.com/batsh-dev-team/Batsh.git
+[submodule "2023/12/28/js_of_ocaml"]
+	path = 2023/12/28/js_of_ocaml
+	url = https://github.com/ocsigen/js_of_ocaml/
+[submodule "2023/12/28/austral"]
+	path = 2023/12/28/austral
+	url = https://github.com/austral/austral
