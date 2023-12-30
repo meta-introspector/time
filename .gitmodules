@@ -2503,3 +2503,87 @@
 [submodule "2023/12/29/DRUGS"]
 	path = 2023/12/29/DRUGS
 	url = https://github.com/EGjoni/DRUGS
+[submodule "2023/12/30/landmarks"]
+	path = 2023/12/30/landmarks
+	url = https://github.com/LexiFi/landmarks
+[submodule "2023/12/30/prof_spacetime"]
+	path = 2023/12/30/prof_spacetime
+	url = https://github.com/lpw25/prof_spacetime
+[submodule "2023/12/30/bisect_ppx"]
+	path = 2023/12/30/bisect_ppx
+	url = https://github.com/aantron/bisect_ppx
+[submodule "2023/12/30/nanocaml"]
+	path = 2023/12/30/nanocaml
+	url = https://github.com/nanocaml/nanocaml
+[submodule "2023/12/30/ppx_fields_conv"]
+	path = 2023/12/30/ppx_fields_conv
+	url = https://github.com/janestreet/ppx_fields_conv
+[submodule "2023/12/30/tensority"]
+	path = 2023/12/30/tensority
+	url = https://github.com/Octachron/tensority
+[submodule "2023/12/30/ppx_debugger"]
+	path = 2023/12/30/ppx_debugger
+	url = https://github.com/xvw/ppx_debugger
+[submodule "2023/12/30/ppx_factory"]
+	path = 2023/12/30/ppx_factory
+	url = https://github.com/cryptosense/ppx_factory
+[submodule "2023/12/30/ppx_deriving_cad"]
+	path = 2023/12/30/ppx_deriving_cad
+	url = https://github.com/OCADml/ppx_deriving_cad
+[submodule "2023/12/30/ppx_show"]
+	path = 2023/12/30/ppx_show
+	url = https://github.com/thierry-martinez/ppx_show
+[submodule "2023/12/30/awesome-ppx-reasonml"]
+	path = 2023/12/30/awesome-ppx-reasonml
+	url = https://github.com/shrynx/awesome-ppx-reasonml
+[submodule "2023/12/30/awesome-ppx-deriving"]
+	path = 2023/12/30/awesome-ppx-deriving
+	url = https://github.com/davesnx/awesome-ppx-deriving
+[submodule "2023/12/30/awesome-ppx"]
+	path = 2023/12/30/awesome-ppx
+	url = https://github.com/davesnx/awesome-ppx
+[submodule "2023/12/30/awesome-ppx-ocaml"]
+	path = 2023/12/30/awesome-ppx-ocaml
+	url = https://github.com/haskellcamargo/awesome-ppx-ocaml
+[submodule "2023/12/30/awesome-ocaml"]
+	path = 2023/12/30/awesome-ocaml
+	url = https://github.com/ocaml-community/awesome-ocaml
+[submodule "2023/12/30/libmonda"]
+	path = 2023/12/30/libmonda
+	url = https://github.com/mshinwell/libmonda
+[submodule "2023/12/30/ppx_monad"]
+	path = 2023/12/30/ppx_monad
+	url = https://github.com/rizo/ppx_monad
+[submodule "2023/12/30/refl"]
+	path = 2023/12/30/refl
+	url = https://github.com/thierry-martinez/refl
+[submodule "2023/12/30/lrt"]
+	path = 2023/12/30/lrt
+	url = https://github.com/LexiFi/lrt
+[submodule "2023/12/30/tpf"]
+	path = 2023/12/30/tpf
+	url = https://github.com/pqwy/tpf
+[submodule "2023/12/30/ppx_deriving_hardcaml"]
+	path = 2023/12/30/ppx_deriving_hardcaml
+	url = https://github.com/janestreet/ppx_deriving_hardcaml
+[submodule "2023/12/30/ppx_deriving_morphism"]
+	path = 2023/12/30/ppx_deriving_morphism
+	url = https://github.com/choeger/ppx_deriving_morphism
+[submodule "2023/12/30/ppx_accessor"]
+	path = 2023/12/30/ppx_accessor
+	url = https://github.com/janestreet/ppx_accessor
+[submodule "2023/12/30/sedlex"]
+	path = 2023/12/30/sedlex
+	url = https://github.com/ocaml-community/sedlex
+[submodule "2023/12/30/algaett"]
+	path = 2023/12/30/algaett
+	url = https://github.com/RedPRL/algaett
+[submodule "2023/12/30/dolmen"]
+	path = 2023/12/30/dolmen
+	url = https://github.com/Gbury/dolmen
+[submodule "2023/12/30/archsat"]
+	path = 2023/12/30/archsat
+	url = https://github.com/Gbury/archsat
+[submodule "2023/12/30/hol-light"]
+	path = 2023/12/30/hol-light
+	url = https://github.com/jrh13/hol-light
