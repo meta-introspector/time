@@ -2608,3 +2608,6 @@
 [submodule "2023/12/30/bigcode-evaluation-harness"]
 	path = 2023/12/30/bigcode-evaluation-harness
 	url = https://github.com/bigcode-project/bigcode-evaluation-harness
+[submodule "2023/12/30/ppx_hardcaml"]
+	path = 2023/12/30/ppx_hardcaml
+	url = https://github.com/janestreet/ppx_hardcaml
