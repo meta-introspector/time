@@ -2587,3 +2587,24 @@
 [submodule "2023/12/30/hol-light"]
 	path = 2023/12/30/hol-light
 	url = https://github.com/jrh13/hol-light
+[submodule "2023/12/30/encore"]
+	path = 2023/12/30/encore
+	url = https://github.com/mirage/encore
+[submodule "2023/12/30/ocaml-git"]
+	path = 2023/12/30/ocaml-git
+	url = https://github.com/mirage/ocaml-git
+[submodule "2023/12/30/angstrom"]
+	path = 2023/12/30/angstrom
+	url = https://github.com/inhabitedtype/angstrom
+[submodule "2023/12/30/janestreet-ocaml-torch"]
+	path = 2023/12/30/janestreet-ocaml-torch
+	url = https://github.com/janestreet/torch
+[submodule "2023/12/30/owl"]
+	path = 2023/12/30/owl
+	url = https://github.com/owlbarn/owl
+[submodule "2023/12/30/ocaml_autoencoder"]
+	path = 2023/12/30/ocaml_autoencoder
+	url = https://github.com/mossbanay/ocaml_autoencoder
+[submodule "2023/12/30/bigcode-evaluation-harness"]
+	path = 2023/12/30/bigcode-evaluation-harness
+	url = https://github.com/bigcode-project/bigcode-evaluation-harness
