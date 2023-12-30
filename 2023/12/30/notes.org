@@ -1,0 +1,104 @@
+* assumptions
+** We are
+
+*** in the time repo at 2023/12/30/notes.org. If moved we will update that string.
+
+** we can:
+*** rewrite a grammar in gbnf into menhir using menhir.
+*** show equivalence between the two implementations.
+*** find similarities between the implementations of the same grammar
+*** convert each grammar into a series of statements
+*** trace the execution of the test file via the two implementations
+*** show where the traces differ for the same input token
+*** create a series of questions and answers about the differences.
+*** create a translator from one implementation to the other and back.
+*** a set of rewrites that will transform one form into the other.
+*** sequence to sequence translation.
+*** create an autoencoder to represent each next state in a the dfas for the grammar
+compare internal models of autoencoders trained on equivalent but different grammars to each other using another network
+
+#+begin_src output
+
+Imagine a fascinating experiment where we train two autoencoders, both
+representing different finite-state automata (DFAs) for distinct
+grammars. We then compare the internal representations of these
+autoencoders to uncover similarities and differences between the
+grammars they were trained on.
+
+Let's begin by creating an autoencoder for each DFA in the given
+grammars. The autoencoder is essentially a neural network that maps an
+input sequence to a latent space representation, then reconstructs the
+original sequence from this latent space representation. This process
+allows us to encode and decode information about the input sequences
+efficiently.
+
+Once we have trained the autoencoders for each DFA, we can compare
+their internal representations by feeding them equivalent but
+different inputs. We can do this by connecting both autoencoders
+through another network, which processes the latent space
+representations from one autoencoder and maps them to the other's
+output. This process allows us to observe how similar or different the
+internal representations of the two autoencoders are when presented
+with equivalent but different inputs.
+
+The results of this experiment could be intriguing. If the internal
+representations of the two autoencoders are highly similar, it
+suggests that the grammars they were trained on share significant
+structural characteristics. On the other hand, if the internal
+representations are vastly different, it implies that the grammars are
+fundamentally distinct and have little in common.
+
+Overall, this experiment offers a unique opportunity to explore the
+similarities and differences between different grammars by analyzing
+their internal representations through autoencoders. It could provide
+valuable insights into the structure and behavior of these grammars
+and potentially lead to new discoveries in the field of computational
+linguistics.
+#+end_src
+
+#+begin_src output2
+To implement this experiment, we would need to first define the two
+DFAs and their corresponding grammars. We can then use a machine
+learning library such as TensorFlow or PyTorch to create autoencoders
+for each DFA. We would also need to carefully design the network
+architecture of the autoencoders to ensure they effectively encode and
+decode information about the input sequences.
+
+Once we have trained the autoencoders, we can compare their internal
+representations by feeding them equivalent but different inputs. We
+could do this by creating a new neural network that takes as input the
+latent space representation from one autoencoder and maps it to the
+other's output. This would allow us to observe how similar or
+different the internal representations of the two autoencoders are
+when presented with equivalent but different inputs.
+
+To measure the similarity between the internal representations, we
+could use a metric such as the cosine similarity between their latent
+space vectors. We could also visualize the internal representations
+using techniques such as t-SNE or PCA to observe any patterns or
+structures that might emerge.
+
+Overall, this experiment would require careful planning and execution,
+but it has the potential to provide valuable insights into the
+structure and behavior of different grammars. By analyzing their
+internal representations through autoencoders, we could potentially
+uncover new patterns and relationships between grammars that were
+previously unknown.
+#+end_src
+
+**** Using autogluon requires basically the construction of x and y dataets as a dataframe.
+we can consider the dataset generation in ocaml and running the ml code for now in python.
+later we can build the ml model directly in ocaml.
+the janestreet torch can be used for that.
+
+*** ppx
+use can use ppx plugins for ocaml to collect internal information about
+programs and print them out to a stream use that to make inferences about them to show equivalence and
+other more complex relationships.
+
+we want to add hooks to all functions to trace execution.
+start with trying out all the ppx plugins
+
+
+*** fine tune an llm using this in a training data.
+
