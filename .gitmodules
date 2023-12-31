@@ -2617,3 +2617,18 @@
 [submodule "2023/12/31/metaquot"]
 	path = 2023/12/31/metaquot
 	url = https://github.com/thierry-martinez/metaquot
+[submodule "2023/12/31/ppx_log"]
+	path = 2023/12/31/ppx_log
+	url = https://github.com/janestreet/ppx_log
+[submodule "2023/12/31/ppx_bench"]
+	path = 2023/12/31/ppx_bench
+	url = https://github.com/janestreet/ppx_bench
+[submodule "2023/12/31/ppx_jane"]
+	path = 2023/12/31/ppx_jane
+	url = https://github.com/janestreet/ppx_jane
+[submodule "2023/12/31/ppx_ignore_instrumentation"]
+	path = 2023/12/31/ppx_ignore_instrumentation
+	url = https://github.com/janestreet/ppx_ignore_instrumentation
+[submodule "2023/12/31/ppx_variants_conv"]
+	path = 2023/12/31/ppx_variants_conv
+	url = https://github.com/janestreet/ppx_variants_conv
