@@ -1,0 +1,223 @@
+Happy New Year 2024.
+
+* On the 7th day of christmas,my true love gave to me
+Seven swans a-swimming.
+
+lets now think of these 7 levels.
+* ELF Executable
+** segments 
+*** Labeled Entry Point
+**** Basic Block
+***** Instruction
+****** Operation
+******* Operand
+
+ELF (Executable and Linkable Format) is a common file format for executable programs and libraries on Unix-like operating systems. It consists of several parts, including the header, sections, symbols, and strings.
+
+The "seven levels" you are referring to likely represent the different components of an ELF file:
+
+1. ELF Executable - This is the main part of the file that contains instructions for the computer to execute. It includes information such as the entry point, segments, and symbols.
+2. Segments - These are logical groupings of memory within the ELF file that contain different types of data. Common segment names include .text (code), .data, and .bss.
+3. Labeled Entry Point - This is the starting point of program execution. It contains a reference to the first instruction in the code segment.
+4. Basic Block - A basic block is a unit of instructions that can be executed as a single operation. It typically consists of multiple instructions that perform a specific task, such as reading data from memory or performing arithmetic operations.
+5. Instruction - An instruction is a single operation that performs a specific task, such as moving data between registers or jumping to another location in the program.
+6. Operation - An operation is the basic unit of an instruction and represents the action performed by the instruction. Examples of operations include addition, subtraction, and branching.
+7. Operand - An operand is the data used as input to an operation. It can be a register, memory location, or constant value.
+
+
+* partial application
+** Grammar Syntax
+
+
+*** Types
+
+**** Operations
+***** Semantics
+
+****** Reflection
+******* Self awareness
+
+On the 7th day of Christmas,
+My true love gave to me
+Seven swans a-swimming.
+
+Let's now think of these seven levels:
+
+1. Partial application:
+The concept of partial application refers to breaking down complex problems into smaller and more manageable parts. This involves identifying the key components of a problem and focusing on solving them one at a time, rather than trying to tackle everything at once.
+2. Grammar syntax:
+Grammar syntax refers to the rules that govern how words are used in a sentence or phrase. Understanding these rules is crucial for effective communication, as it allows you to express yourself clearly and accurately.
+3. Types:
+In computer science, types refer to the basic units of data that can be manipulated by a programming language. There are various types of data, such as integers, floating-point numbers, characters, strings, and more. Understanding the different types of data is important for writing efficient and effective code.
+4. Operations:
+Operations in computer science refer to the actions that can be performed on data. These operations include arithmetic operations (such as addition, subtraction, multiplication, and division), logical operations (such as AND, OR, and NOT), and input/output operations (such as reading from a file or displaying data on the screen).
+5. Semantics:
+Semantics in computer science refer to the meaning of the code that is written. Understanding the semantics of a program is important for ensuring that it behaves as intended and produces the desired output.
+6. Reflection:
+Reflection refers to the act of thinking about one's own thoughts, feelings, and experiences. In computer science, reflection can involve examining the code that has been written and considering how it could be improved or optimized.
+7. Self-awareness:
+Self-awareness is the ability to recognize oneself as an individual separate from others. In computer science, self-awareness can refer to a program's ability to recognize its own limitations and adapt its behavior accordingly. For example, a program might be able to detect when it is running out of memory or processing power and take corrective action to prevent crashes or errors.
+
+Now lets think of the 7 levels of OSI model and rework this rhyme.
+
+On the 7th day of Christmas,
+My true love gave to me
+Seven swans a-swimming,
+And a model so sleek.
+
+The first level was Physical,
+Where data is transmitted,
+
+The second level was Data Link,
+With error checking and framing.
+
+The third level was Network,
+Where routing occurs,
+
+The fourth level was Transport,
+With flow control and congestion avoidance.
+
+The fifth level was Session,
+Where communication takes place,
+
+The sixth level was Presentation,
+With encryption and decryption.
+
+And finally the seventh level was Application,
+Where programs run with ease,
+And with these gifts, my true love has shown,
+That their network is truly the best.
+
+
+* Time
+
+The time repo is a self referential artifact that contains all the other repositories
+we need to know about. Each day creates a new day directory.
+Projects are put into the day directory where they were created.
+Files go into those projects.
+Our notes go into the main directory but we can imagine each person
+putting notes into a different file or folder for separation. So notes.org is just what I started to use.
+
+
+* Grammar
+
+* Worlds
+** Continents
+*** Countries
+**** Subdivisions
+***** DataCenters
+
+* SourceControl Forge Hosting
+** Organization
+*** Repository
+**** Branch
+***** Object
+****** Commit 
+
+* grammars and documents
+
+We have a marketplace of repos to sample from, starting with the time
+repo.  we expand those repos, filling them in with git submodule init
+and update.  but for those project themselves, each has a different
+way to build it, we can consult the .github/ directory for workflows
+and I am sure we can expand on that idea as well.  Lets say we can
+create an .introspector directory in each project root to store extra
+information.
+
+We can group documents as examples of grammars together into groups
+for batching exercizes or by domains.
+
+We can fine tune a grammar to match only those documents exactly by adding
+in more rules that are domain specific.
+
+We can allow for variations according to rules,
+so users can then generalize that we can allow statements from one document
+to be mixed with other documents. So we would then merge the different parts of the grammar.
+
+The user will be involved in all these parts and have ai assistance.
+
+The plan is to use internals of the language compiler and runtime in general.
+Lets go over a general language:
+
+1. Assemblers : Native assembly to produce level 1. 
+   This requires another binary the assembler, linker and loader.
+   You can include all of that into one binary of course.
+   This can run locally or be cross compiled from another system to build. 
+   If the package contains native assembly,
+   it will be assembled with a compiler or assembler. 
+   The problem is that it hard to read and understand.
+   We want to minimize that code and contain it in strictly controlled
+   safe sections. This is due to the archtecture of the chips themselves.
+   Normally we use a compiler bootstrap to manage this part.
+   So lets just call this phase the gcc or llvm or native compilation.
+
+2. Compilers : Level 1 assembly code is compiled and linked and executed and used by level 2 code.
+   Compilers and libs are written in higher level like c that can be compiled to assembly.
+   Even forth falls into this part, it has a higher level language that runs on assembly.
+
+3. Higher Level Compilers and Interpreters: Level 3 like python and ocaml
+   These are written in C and dont need to contain any assembly unless they are generating compiled or jit code.
+
+4. Other languages written using in those languages we have listed.
+   we have a graph of packages needed and dependancies.
+   We can derive an order of building so that we build all the needed packages only once.
+
+* languages
+** Machine
+   
+*** Machine Assembly
+**** C
+***** Python
+***** Ocaml
+
+**** Forth
+
+* partial application
+** Grammar Syntax
+
+
+*** Types
+
+**** Operations
+***** Semantics
+
+****** Reflection
+******* Self awareness
+Paths and proofs.
+
+
+* data collection
+
+** Runtime
+*** Cloud Model
+**** Provider
+
+***** RegionalDataCenter
+
+****** Building
+******* Floor in building
+******** Rack in floor
+********* Slot in rack
+********** Host in slot connected to internet
+*********** OS Kernel Root 0
+
+************ OS User Process 
+
+* ELF Executable
+** segments 
+*** Labeled Entry Point
+**** Basic Block
+***** Instruction
+****** Operation
+******* Operand
+
+*** kernel level perf
+*** Userland profiling
+**** User Print statements
+**** Using MetaProgramming augmentation insert smart probes.
+
+* ocaml
+*** formats
+**** cmt
+** dune 
+*** ppx
