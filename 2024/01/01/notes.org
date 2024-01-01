@@ -221,3 +221,15 @@ Paths and proofs.
 **** cmt
 ** dune 
 *** ppx
+
+
+* idea of computational graph.
+A concrete computational proof can be evaluated to a bit to be true or false.
+Incomplete graphs need more input and cannot be evaluated.
+Even if it is complete, the process or path might not be clear
+or understandable or even correct.
+So building models of each part of the computation and record keeping is needed.
+Grammars represent just the syntax of a language and do not contain the entire execution.
+The syntax should be understandable to a language model when looked at in chunks.
+So for languages we build on top of gbnf we will want to be able to capture them.
+
