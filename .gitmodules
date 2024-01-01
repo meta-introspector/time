@@ -2632,3 +2632,12 @@
 [submodule "2023/12/31/ppx_variants_conv"]
 	path = 2023/12/31/ppx_variants_conv
 	url = https://github.com/janestreet/ppx_variants_conv
+[submodule "2024/01/01/override"]
+	path = 2024/01/01/override
+	url = https://github.com/thierry-martinez/override
+[submodule "2024/01/01/pa_ppx_parsetree"]
+	path = 2024/01/01/pa_ppx_parsetree
+	url = https://github.com/camlp5/pa_ppx_parsetree.git
+[submodule "2024/01/01/ocaml-print-intf"]
+	path = 2024/01/01/ocaml-print-intf
+	url = https://github.com/avsm/ocaml-print-intf
