@@ -2641,3 +2641,18 @@
 [submodule "2024/01/01/ocaml-print-intf"]
 	path = 2024/01/01/ocaml-print-intf
 	url = https://github.com/meta-introspector/ocaml-print-intf
+[submodule "2024/01/01/DQNAgent"]
+	path = 2024/01/01/DQNAgent
+	url = https://github.com/Deadsg/DQNAgent
+[submodule "2024/01/01/ocamloscope.2"]
+	path = 2024/01/01/ocamloscope.2
+	url = https://github.com/camlspotter/ocamloscope.2
+[submodule "2024/01/01/ocaml-merlin"]
+	path = 2024/01/01/ocaml-merlin
+	url = https://github.com/ocaml/merlin
+[submodule "2024/01/01/ocaml-lsp"]
+	path = 2024/01/01/ocaml-lsp
+	url = https://github.com/ocaml/ocaml-lsp
+[submodule "2024/01/01/Llama-2-Onnx"]
+	path = 2024/01/01/Llama-2-Onnx
+	url = https://github.com/microsoft/Llama-2-Onnx
