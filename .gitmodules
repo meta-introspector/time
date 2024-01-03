@@ -2656,3 +2656,21 @@
 [submodule "2024/01/01/Llama-2-Onnx"]
 	path = 2024/01/01/Llama-2-Onnx
 	url = https://github.com/microsoft/Llama-2-Onnx
+[submodule "2024/01/01/opam"]
+	path = 2024/01/01/opam
+	url = https://github.com/ocaml/opam
+[submodule "2024/01/02/ecaml"]
+	path = 2024/01/02/ecaml
+	url = https://github.com/janestreet/ecaml
+[submodule "2024/01/03/semgrep.el"]
+	path = 2024/01/03/semgrep.el
+	url = https://github.com/Ruin0x11/semgrep.el
+[submodule "2024/01/03/ber-metaocaml"]
+	path = 2024/01/03/ber-metaocaml
+	url = https://github.com/metaocaml/ber-metaocaml.git
+[submodule "2024/01/03/ocaml-ir-zoo"]
+	path = 2024/01/03/ocaml-ir-zoo
+	url = https://github.com/arbipher/ocaml-ir-zoo.git
+[submodule "2024/01/03/melange"]
+	path = 2024/01/03/melange
+	url = https://github.com/tmcgilchrist/melange
