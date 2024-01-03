@@ -2674,3 +2674,6 @@
 [submodule "2024/01/03/melange"]
 	path = 2024/01/03/melange
 	url = https://github.com/tmcgilchrist/melange
+[submodule "2024/01/03/ocaml-compiler-libs"]
+	path = 2024/01/03/ocaml-compiler-libs
+	url = https://github.com/meta-introspector/ocaml-compiler-libs.git
