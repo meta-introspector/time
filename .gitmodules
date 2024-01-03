@@ -61,9 +61,6 @@
 [submodule "2023/12/15/exercism-coq"]
 	path = 2023/12/15/exercism-coq
 	url = https://github.com/exercism/coq
-[submodule "2023/12/13/unlimited-context-prompt-system"]
-	path = 2023/12/13/unlimited-context-prompt-system
-	url = https://github.com/jmikedupont2/unlimited-context-prompt-system.git
 [submodule "2023/12/13/ggml"]
 	path = 2023/12/13/ggml
 	url = https://github.com/ggerganov/ggml
@@ -961,9 +958,6 @@
 [submodule "2023/10/10/cirrus-cli"]
 	path = 2023/10/10/cirrus-cli
 	url = https://github.com/cirruslabs/cirrus-cli
-[submodule "2023/10/02/autogen"]
-	path = 2023/10/02/autogen
-	url = https://github.com/team-tonic-arena-hacks/autogen
 [submodule "2023/10/02/uvicorn-poetry"]
 	path = 2023/10/02/uvicorn-poetry
 	url = https://github.com/max-pfeiffer/uvicorn-poetry
