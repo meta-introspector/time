@@ -2671,3 +2671,6 @@
 [submodule "2024/01/03/ocaml-compiler-libs"]
 	path = 2024/01/03/ocaml-compiler-libs
 	url = https://github.com/meta-introspector/ocaml-compiler-libs.git
+[submodule "2024/01/03/ocaml_ocaml_types"]
+	path = 2024/01/03/ocaml_ocaml_types
+	url = https://github.com/meta-introspector/ocaml-ocaml-types
