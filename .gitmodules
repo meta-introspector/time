@@ -2403,7 +2403,8 @@
 	url = https://github.com/karpathy/llama2.c
 [submodule "2023/12/27/ppx_tools"]
 	path = 2023/12/27/ppx_tools
-	url = https://github.com/ocaml-ppx/ppx_tools
+	url = https://github.com/meta-introspector/ppx_tools
+
 [submodule "2023/12/28/sail"]
 	path = 2023/12/28/sail
 	url = https://github.com/rems-project/sail
@@ -2674,3 +2675,18 @@
 [submodule "2024/01/03/ocaml_ocaml_types"]
 	path = 2024/01/03/ocaml_ocaml_types
 	url = https://github.com/meta-introspector/ocaml-ocaml-types
+[submodule "2024/01/04/g511"]
+	path = 2024/01/04/g511
+	url = https://github.com/epicdragon44/g511.git
+[submodule "2024/01/04/openai-gym-ocaml"]
+	path = 2024/01/04/openai-gym-ocaml
+	url = https://github.com/IBM/openai-gym-ocaml
+[submodule "2024/01/04/openai-ocaml"]
+	path = 2024/01/04/openai-ocaml
+	url = https://github.com/Nymphium/openai-ocaml
+[submodule "2024/01/04/llama-cpp-ocaml"]
+	path = 2024/01/04/llama-cpp-ocaml
+	url = https://github.com/atacama-dev/llama-cpp-ocaml
+[submodule "2024/01/04/llama2.ml"]
+	path = 2024/01/04/llama2.ml
+	url = https://github.com/jackpeck/llama2.ml
