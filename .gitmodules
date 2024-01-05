@@ -2689,4 +2689,13 @@
 	url = https://github.com/atacama-dev/llama-cpp-ocaml
 [submodule "2024/01/04/llama2.ml"]
 	path = 2024/01/04/llama2.ml
-	url = https://github.com/jackpeck/llama2.ml
+	url = https://github.com/meta-introspector/llama2.ml.git
+[submodule "2024/01/05/Foundations"]
+	path = 2024/01/05/Foundations
+	url = https://github.com/vladimirias/Foundations
+[submodule "2024/01/05/PG"]
+	path = 2024/01/05/PG
+	url = https://github.com/ProofGeneral/PG
+[submodule "2024/01/05/UniMath"]
+	path = 2024/01/05/UniMath
+	url = https://github.com/UniMath/UniMath
