@@ -12,17 +12,18 @@ N10 seconds spent on execution for test cases, N11 instructions
 executed, N12 libraries used, N13 git repos, N14 authors, N15
 countries where authors reside, N16 urls referenceed, N17 collections
 of data, N18 steps in the path of the proof, N19 levels of homotopy,
-N20 prime numbers used, N21 lemmas, all of those are variables that we could make propositions about and
-then proof them correct, buy inspecting the metacoq data, the ocaml
+N20 prime numbers used, N21 lemmas,
+all of those are variables that we could make propositions about and
+then prove them correct, by inspecting the metacoq data, the ocaml
 asts, the gcc asts of ocaml compilation and the linux kernel perf tool
 we can extract out this information and feed it back into this
 statement so we effectivly expand and contract the statement according
 to rules, it should be possible to construct a series of rewrite rules
-to accomplish this task, we should imagine the statement is
+to accomplish this task, we should imagine that the statement is
 interpreted recursivly in a continuation over and over again, also we
 will use homotopy type theory to hide the details of the
-implementation, and also the univalent foundations of math coq library
-to construct our representations of the statement using HOTT.
+implementation, and also the univalent foundations of math library unimath written in coq
+to construct our representations of the statement using HOTT.`
 
 #+begin_src output
 🎨🔍📝
