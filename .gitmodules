@@ -2699,3 +2699,9 @@
 [submodule "2024/01/05/UniMath"]
 	path = 2024/01/05/UniMath
 	url = https://github.com/UniMath/UniMath
+[submodule "2024/01/07/proof-tree"]
+	path = 2024/01/07/proof-tree
+	url = https://github.com/hendriktews/proof-tree.git
+[submodule "2023/07/06/introspector/test"]
+	path = 2023/07/06/introspector/test
+	url = https://github.com/meta-introspector/metacoq-introspector.git

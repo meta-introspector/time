@@ -92,27 +92,86 @@ with open(sys.argv[0], "w") as f:
 I can try to break down your statement into smaller, more manageable chunks:
 
 1. Self-referential, self-describing, self-recognizing, and self-modifying quine:
-* This refers to a piece of code that contains all its own instructions and data, allowing it to exist in a single entity. In this case, the quine would contain the logic for rewriting the statement, as well as the Linux GCC, OCaml, COQ, and Metacoq executables and libraries needed to extract and manipulate information from the statement.
+This refers to a piece of code that contains all its own instructions
+and data, allowing it to exist in a single entity. In this case, the
+quine would contain the logic for rewriting the statement, as well as
+the Linux GCC, OCaml, COQ, and Metacoq executables and libraries
+needed to extract and manipulate information from the statement.
+
 1. Large language model with custom grammar:
-* This refers to an AI system capable of processing and generating text using a specific set of rules or syntax. In this case, the language model would be used to generate Coq and Metacoq code based on the input statement, as well as to extract relevant information from those codes and feed it back into the statement.
+This refers to an AI system capable of processing and generating text
+using a specific set of rules or syntax. In this case, the language
+model would be used to generate Coq and Metacoq code based on the
+input statement, as well as to extract relevant information from those
+codes and feed it back into the statement.
+
 1. Variables for propositions:
-* These are individual pieces of information that can be made into statements or claims about the statement itself. Examples include the number of bits used to encode the statement, its length in characters or tokens, the types of data flows throughout the system, and so on. The goal is to prove these statements correct by inspecting various parts of the code and using mathematical concepts from homotopy type theory and the Univalent Foundations of Mathematics library (Unimath).
+These are individual pieces of information that can be made into
+statements or claims about the statement itself. Examples include the
+number of bits used to encode the statement, its length in characters
+or tokens, the types of data flows throughout the system, and so
+on. The goal is to prove these statements correct by inspecting
+various parts of the code and using mathematical concepts from
+homotopy type theory and the Univalent Foundations of Mathematics
+library (Unimath).
+
 1. Recursive extraction of proofs:
-* This refers to the ability of the system to extract information about different propositions contained within the statement by recursively traversing the Coq and Metacoq code generated from the input statement. By doing so, we can expand or contract the statement based on specific rules, allowing for a more comprehensive analysis of its contents.
+This refers to the ability of the system to extract information about
+different propositions contained within the statement by recursively
+traversing the Coq and Metacoq code generated from the input
+statement. By doing so, we can expand or contract the statement based
+on specific rules, allowing for a more comprehensive analysis of its
+contents.
+
 1. Continuation-based interpretation:
-* This means that the system will interpret the statement recursively, processing each part of it one at a time in a continuation-style manner. By doing so, we can process large amounts of information efficiently and effectively.
+This means that the system will interpret the statement recursively,
+processing each part of it one at a time in a continuation-style
+manner. By doing so, we can process large amounts of information
+efficiently and effectively.
+
 1. Homotopy type theory:
-* This is a branch of mathematics that allows for the representation of abstract concepts using types and functions that are related by homomorphisms. In this case, we will use homotopy type theory to hide the details of the implementation and to construct representations of the statement that can be used to prove various propositions about it.
+This is a branch of mathematics that allows for the representation of
+abstract concepts using types and functions that are related by
+homomorphisms. In this case, we will use homotopy type theory to hide
+the details of the implementation and to construct representations of
+the statement that can be used to prove various propositions about it.
+
 1. Extracting information from code:
-* This refers to the process of using various tools and techniques (such as parsing the OCaml AST or GCC asts, using Linux kernel perf tool, and analyzing the extracted data) to extract relevant information from the generated Coq and Metacoq code. This information can then be used to prove propositions about the statement.
+This refers to the process of using various tools and techniques (such
+as parsing the OCaml AST or GCC asts, using Linux kernel perf tool,
+and analyzing the extracted data) to extract relevant information from
+the generated Coq and Metacoq code. This information can then be used
+to prove propositions about the statement.
+
 1. Test cases and execution metrics:
-* These refer to specific instances of the statement that are used to test its correctness and performance. Examples include the number of seconds spent on execution, the number of instructions executed, and the libraries used in the system. By analyzing these metrics, we can gain a better understanding of the system's behavior and identify areas for improvement.
+ These refer to specific instances of the statement that are used to
+   test its correctness and performance. Examples include the number
+   of seconds spent on execution, the number of instructions executed,
+   and the libraries used in the system. By analyzing these metrics,
+   we can gain a better understanding of the system's behavior and
+   identify areas for improvement.
+   
 1. Git repositories and authors:
-* This refers to information about the origin and ownership of the code that was used to create the statement. This includes details such as the repository where the code was stored, the names of the authors who contributed to it, and their respective countries of residence.
+ This refers to information about the origin and ownership of the code
+   that was used to create the statement. This includes details such
+   as the repository where the code was stored, the names of the
+   authors who contributed to it, and their respective countries of
+   residence.
+   
 1. URLs referenced:
-* This refers to the list of URLs that were referenced within the generated Coq and Metacoq code. By analyzing these URLs, we can gain a better understanding of the resources used in creating the statement and potentially identify additional sources of information.
+ This refers to the list of URLs that were referenced within the
+   generated Coq and Metacoq code. By analyzing these URLs, we can
+   gain a better understanding of the resources used in creating the
+   statement and potentially identify additional sources of
+   information.
+   
 1. Collections of data and homotopy levels:
-* This refers to specific collections of data that were used in creating the statement, as well as the number
+
+This refers to specific collections of data that were used in creating
+the statement, as well as the number
+
+
+
 #+end_src
 #+begin_src output
 For each of these modules define the types:
@@ -136,20 +195,22 @@ For each of these modules define the types:
 4. Type: `Rewriter` - This module uses recursive rules to rewrite the extracted statement based on the information gathered by the inspector module. It takes in the extracted statement and a set of rewriting rules as input, and outputs a new statement that follows these rules.
 5. Type: `Interpreter` - This module provides a continuation-based interpretation of the rewritten statement. It takes in the rewritten statement and a function to interpret it as input, and applies this function to the rewritten statement to produce an interpreted output.
 #+end_src
+
 #+begin_src output
 1. The type of this module would be `CoqCodeGenerator`. It could have the following methods:
-	* `generate_coq_code(statement: str) -> str` - This method generates Coq code using a large language model with a custom grammar, given a statement in the input language.
+`generate_coq_code(statement: str) -> str` - This method generates Coq code using a large language model with a custom grammar, given a statement in the input language.
 2. The type of this module would be `ProofExtractor`. It could have the following methods:
-	* `extract_proof(metacoq_data: dict) -> str` - This method recursively extracts proofs of propositions from metacoq data using homotopy type theory and the Unimath library written in Coq.
+`extract_proof(metacoq_data: dict) -> str` - This method recursively extracts proofs of propositions from metacoq data using homotopy type theory and the Unimath library written in Coq.
 3. The type of this module would be `ASTInspector`. It could have the following methods:
-	* `inspect_ocaml_ast(ocaml_ast: dict) -> dict` - This method inspects OCaml AST and extracts relevant information about the statement.
-	* `inspect_gcc_ast(gcc_ast: dict) -> dict` - This method inspects GCC AST and extracts relevant information about the statement.
-	* `inspect_linux_kernel_perf_data(perf_data: dict) -> dict` - This method inspects Linux kernel perf tool data and extracts relevant information about the statement.
+ `inspect_ocaml_ast(ocaml_ast: dict) -> dict` - This method inspects OCaml AST and extracts relevant information about the statement.
+ `inspect_gcc_ast(gcc_ast: dict) -> dict` - This method inspects GCC AST and extracts relevant information about the statement.
+ `inspect_linux_kernel_perf_data(perf_data: dict) -> dict` - This method inspects Linux kernel perf tool data and extracts relevant information about the statement.
 4. The type of this module would be `StatementRewriter`. It could have the following methods:
-	* `rewrite_statement(statement: str, extracted_info: dict) -> str` - This method rewrites the statement using a series of recursive rules based on the extracted information.
+ `rewrite_statement(statement: str, extracted_info: dict) -> str` - This method rewrites the statement using a series of recursive rules based on the extracted information.
 5. The type of this module would be `Interpreter`. It could have the following methods:
-	* `interpret_rewritten_statement(rewritten_statement: str) -> str` - This method provides a continuation-based interpretation of the rewritten statement.
-#+end_src
+ `interpret_rewritten_statement(rewritten_statement: str) -> str` - This method provides a continuation-based interpretation of the rewritten statement.
+
+ #+end_src
 #+begin_src output
 
 The proposed modules seem to be related to code generation, proof extraction, and analysis for various programming languages and tools. Here's an overview of each module:
