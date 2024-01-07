@@ -1,0 +1,87 @@
+import Language.Haskell.TH
+$(stringE . show =<< Language.Haskell.TH.Syntax.reifyType 'Language.Haskell.TH.LamE )
+
+"AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (AppT ListT (ConT Language.Haskell.TH.Syntax.Pat))) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT Language.Haskell.TH.Syntax.Exp)) (ConT Language.Haskell.TH.Syntax.Exp))"
+
+"AppT (AppT ArrowT (AppT ListT (ConT Language.Haskell.TH.Syntax.Pat))) (AppT (AppT ArrowT (ConT Language.Haskell.TH.Syntax.Exp)) (ConT Language.Haskell.TH.Syntax.Exp))"
+
+
+$(stringE . show =<< reify (mkName $ "Language.Haskell.TH.Name" ))
+
+"TyConI (DataD [] Language.Haskell.TH.Syntax.Name [] Nothing [NormalC Language.Haskell.TH.Syntax.Name [(Bang NoSourceUnpackedness NoSourceStrictness,ConT Language.Haskell.TH.Syntax.OccName),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Language.Haskell.TH.Syntax.NameFlavour)]] [])"
+
+
+
+typeOf Build_one_inductive_body 
+MyString -> List (Context_decl Term) -> T_2 -> Term -> Allowed_eliminations -> List Constructor_body -> List Projection_body -> Relevance -> One_inductive_body
+
+
+derivePersistField "Server.MetaCoq.TestMeta.Byte"
+derivePersistField "Server.MetaCoq.TestMeta.Byte"
+  :: Language.Haskell.TH.Syntax.Q [Language.Haskell.TH.Syntax.Dec]
+
+
+$(stringE . show =<< (dsReifyType $ mkName  "NormalC"))
+
+
+
+
+$(stringE . show =<< Language.Haskell.TH.Syntax.reifyType ''Language.Haskell.TH.Syntax.Exp)
+"StarT"
+
+
+$(stringE . show =<< reify 'rec_def_term)
+"VarI Server.MetaCoq.TestMeta2.rec_def_term (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (ConT Server.MetaCoq.TestMeta.Global_env)) (ConT Server.MetaCoq.TestMeta.Term)) Nothing"
+
+
+$(stringE . show =<< reify ''Server.MetaCoq.TestMeta.Global_env)
+"TyConI (DataD [] Server.MetaCoq.TestMeta.Global_env [] Nothing [NormalC Server.MetaCoq.TestMeta.Mk_global_env [(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.T35),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.Global_declarations),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.T37)]] [])"
+
+
+$(stringE . show =<< runQ(reify ''Server.MetaCoq.TestMeta.Global_env))
+"TyConI (DataD [] Server.MetaCoq.TestMeta.Global_env [] Nothing [NormalC Server.MetaCoq.TestMeta.Mk_global_env [(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.T35),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.Global_declarations),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Server.MetaCoq.TestMeta.T37)]] [])"
+
+$(stringE . show =<< runQ(reify 'Server.MetaCoq.TestMeta.Mk_global_env))
+"DataConI Server.MetaCoq.TestMeta.Mk_global_env (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT )) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT Server.MetaCoq.TestMeta.Global_declarations)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT Server.MetaCoq.TestMeta.T37)) (ConT Server.MetaCoq.TestMeta.Global_env)))) Server.MetaCoq.TestMeta.Global_env"
+
+
+$(stringE . show =<< runQ(reify ''Server.MetaCoq.TestMeta.T35))
+"TyConI (TySynD Server.MetaCoq.TestMeta.T35 [] (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (ConT Server.MetaCoq.TestMeta.T10)) (ConT Server.MetaCoq.TestMeta.T32)))"
+
+"TyConI (DataD [] Server.MetaCoq.TestMeta.Prod [KindedTV a_7566047373982728046 () StarT,KindedTV b_7566047373982728047 () StarT] Nothing [NormalC Server.MetaCoq.TestMeta.Pair [(Bang NoSourceUnpackedness NoSourceStrictness,VarT a_7566047373982728046),(Bang NoSourceUnpackedness NoSourceStrictness,VarT b_7566047373982728047)]] [])"
+
+
+pair = "DataConI Server.MetaCoq.TestMeta.Pair (ForallT [KindedTV a_7566047373982728046 SpecifiedSpec StarT,KindedTV b_7566047373982728047 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT a_7566047373982728046)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT b_7566047373982728047)) (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (VarT a_7566047373982728046)) (VarT b_7566047373982728047))))) Server.MetaCoq.TestMeta.Prod"
+
+
+
+kinded_tv = "DataConI Language.Haskell.TH.Syntax.KindedTV (ForallT [KindedTV flag_6989586621679041784 SpecifiedSpec StarT] [] (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT Language.Haskell.TH.Syntax.Name)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (VarT flag_6989586621679041784)) (AppT (AppT (AppT MulArrowT (PromotedT GHC.Types.One)) (ConT Language.Haskell.TH.Syntax.Kind)) (AppT (ConT 
+
+
+$(stringE . show =<< runQ(reify ''Language.Haskell.TH.Syntax.TyVarBndr))
+"TyConI (DataD [] Language.Haskell.TH.Syntax.TyVarBndr [KindedTV flag_6989586621679041784 () StarT] Nothing [NormalC Language.Haskell.TH.Syntax.PlainTV [(Bang NoSourceUnpackedness NoSourceStrictness,ConT Language.Haskell.TH.Syntax.Name),(Bang NoSourceUnpackedness NoSourceStrictness,VarT flag_6989586621679041784)],NormalC Language.Haskell.TH.Syntax.KindedTV [(Bang NoSourceUnpackedness NoSourceStrictness,ConT Language.Haskell.TH.Syntax.Name),(Bang NoSourceUnpackedness NoSourceStrictness,VarT flag_6989586621679041784),(Bang NoSourceUnpackedness NoSourceStrictness,ConT Language.Haskell.TH.Syntax.Kind)]] [])"
+
+
+
+ghci> $(stringE . show =<< Language.Haskell.TH.Syntax.reify ''Server.MetaCoq.TestMeta.Byte)
+>"TyConI (DataD [] Server.MetaCoq.TestMeta.Byte [] Nothing [NormalC Server.MetaCoq.TestMeta.X00 [],NormalC Server.MetaCoq.TestMeta.X01 [],NormalC Server.MetaCoq.TestMeta.X02 [],NormalC Server.MetaCoq.TestMeta.X03 [],NormalC Server.MetaCoq.TestMeta.X04 [],NormalC Server.MetaCoq.TestMeta.X05 [],NormalC Server.MetaCoq.TestMeta.X06 [],NormalC Server.MetaCoq.TestMeta.X07 [],NormalC Server.MetaCoq.TestMeta.X08 [],NormalC Server.MetaCoq.TestMeta.X09 [],NormalC Server.MetaCoq.TestMeta.X0a [],NormalC Server.MetaCoq.TestMeta.X0b [],NormalC Server.MetaCoq.TestMeta.X0c [],NormalC Server.MetaCoq.TestMeta.X0d [],NormalC Server.MetaCoq.TestMeta.X0e [],NormalC Server.MetaCoq.TestMeta.X0f [],NormalC Server.MetaCoq.TestMeta.X10 [],NormalC Server.MetaCoq.TestMeta.X11 [],NormalC Server.MetaCoq.TestMeta.X12 [],NormalC Server.MetaCoq.TestMeta.X13 [],NormalC Server.MetaCoq.TestMeta.X14 [],NormalC Server.MetaCoq.TestMeta.X15 [],NormalC Server.MetaCoq.TestMeta.X16 [],NormalC Server.MetaCoq.TestMeta.X17 [],NormalC Server.MetaCoq.TestMeta.X18 [],NormalC Server.MetaCoq.TestMeta.X19 [],NormalC Server.MetaCoq.TestMeta.X1a [],NormalC Server.MetaCoq.TestMeta.X1b [],NormalC Server.MetaCoq.TestMeta.X1c [],NormalC Server.MetaCoq.TestMeta.X1d [],NormalC Server.MetaCoq.TestMeta.X1e [],NormalC Server.MetaCoq.TestMeta.X1f [],NormalC Server.MetaCoq.TestMeta.X20 [],NormalC Server.MetaCoq.TestMeta.X21 [],NormalC Server.MetaCoq.TestMeta.X22 [],NormalC Server.MetaCoq.TestMeta.X23 [],NormalC Server.MetaCoq.TestMeta.X24 [],NormalC Server.MetaCoq.TestMeta.X25 [],NormalC Server.MetaCoq.TestMeta.X26 [],NormalC Server.MetaCoq.TestMeta.X27 [],NormalC Server.MetaCoq.TestMeta.X28 [],NormalC Server.MetaCoq.TestMeta.X29 [],NormalC Server.MetaCoq.TestMeta.X2a [],NormalC Server.MetaCoq.TestMeta.X2b [],NormalC Server.MetaCoq.TestMeta.X2c [],NormalC Server.MetaCoq.TestMeta.X2d [],NormalC Server.MetaCoq.TestMeta.X2e [],NormalC Server.MetaCoq.TestMeta.X2f [],NormalC Server.MetaCoq.TestMeta.X30 [],NormalC Server.MetaCoq.TestMeta.X31 [],NormalC Server.MetaCoq.TestMeta.X32 [],NormalC Server.MetaCoq.TestMeta.X33 [],NormalC Server.MetaCoq.TestMeta.X34 [],NormalC Server.MetaCoq.TestMeta.X35 [],NormalC Server.MetaCoq.TestMeta.X36 [],NormalC Server.MetaCoq.TestMeta.X37 [],NormalC Server.MetaCoq.TestMeta.X38 [],NormalC Server.MetaCoq.TestMeta.X39 [],NormalC Server.MetaCoq.TestMeta.X3a [],NormalC Server.MetaCoq.TestMeta.X3b [],NormalC Server.MetaCoq.TestMeta.X3c [],NormalC Server.MetaCoq.TestMeta.X3d [],NormalC Server.MetaCoq.TestMeta.X3e [],NormalC Server.MetaCoq.TestMeta.X3f [],NormalC Server.MetaCoq.TestMeta.X40 [],NormalC Server.MetaCoq.TestMeta.X41 [],NormalC Server.MetaCoq.TestMeta.X42 [],NormalC Server.MetaCoq.TestMeta.X43 [],NormalC Server.MetaCoq.TestMeta.X44 [],NormalC Server.MetaCoq.TestMeta.X45 [],NormalC Server.MetaCoq.TestMeta.X46 [],NormalC Server.MetaCoq.TestMeta.X47 [],NormalC Server.MetaCoq.TestMeta.X48 [],NormalC Server.MetaCoq.TestMeta.X49 [],NormalC Server.MetaCoq.TestMeta.X4a [],NormalC Server.MetaCoq.TestMeta.X4b [],NormalC Server.MetaCoq.TestMeta.X4c [],NormalC Server.MetaCoq.TestMeta.X4d [],NormalC Server.MetaCoq.TestMeta.X4e [],NormalC Server.MetaCoq.TestMeta.X4f [],NormalC Server.MetaCoq.TestMeta.X50 [],NormalC Server.MetaCoq.TestMeta.X51 [],NormalC Server.MetaCoq.TestMeta.X52 [],NormalC Server.MetaCoq.TestMeta.X53 [],NormalC Server.MetaCoq.TestMeta.X54 [],NormalC Server.MetaCoq.TestMeta.X55 [],NormalC Server.MetaCoq.TestMeta.X56 [],NormalC Server.MetaCoq.TestMeta.X57 [],NormalC Server.MetaCoq.TestMeta.X58 [],NormalC Server.MetaCoq.TestMeta.X59 [],NormalC Server.MetaCoq.TestMeta.X5a [],NormalC Server.MetaCoq.TestMeta.X5b [],NormalC Server.MetaCoq.TestMeta.X5c [],NormalC Server.MetaCoq.TestMeta.X5d [],NormalC Server.MetaCoq.TestMeta.X5e [],NormalC Server.MetaCoq.TestMeta.X5f [],NormalC Server.MetaCoq.TestMeta.X60 [],NormalC Server.MetaCoq.TestMeta.X61 [],NormalC Server.MetaCoq.TestMeta.X62 [],NormalC Server.MetaCoq.TestMeta.X63 [],NormalC Server.MetaCoq.TestMeta.X64 [],NormalC Server.MetaCoq.TestMeta.X65 [],NormalC Server.MetaCoq.TestMeta.X66 [],NormalC Server.MetaCoq.TestMeta.X67 [],NormalC Server.MetaCoq.TestMeta.X68 [],NormalC Server.MetaCoq.TestMeta.X69 [],NormalC Server.MetaCoq.TestMeta.X6a [],NormalC Server.MetaCoq.TestMeta.X6b [],NormalC Server.MetaCoq.TestMeta.X6c [],NormalC Server.MetaCoq.TestMeta.X6d [],NormalC Server.MetaCoq.TestMeta.X6e [],NormalC Server.MetaCoq.TestMeta.X6f [],NormalC Server.MetaCoq.TestMeta.X70 [],NormalC Server.MetaCoq.TestMeta.X71 [],NormalC Server.MetaCoq.TestMeta.X72 [],NormalC Server.MetaCoq.TestMeta.X73 [],NormalC Server.MetaCoq.TestMeta.X74 [],NormalC Server.MetaCoq.TestMeta.X75 [],NormalC Server.MetaCoq.TestMeta.X76 [],NormalC Server.MetaCoq.TestMeta.X77 [],NormalC Server.MetaCoq.TestMeta.X78 [],NormalC Server.MetaCoq.TestMeta.X79 [],NormalC Server.MetaCoq.TestMeta.X7a [],NormalC Server.MetaCoq.TestMeta.X7b [],NormalC Server.MetaCoq.TestMeta.X7c [],NormalC Server.MetaCoq.TestMeta.X7d [],NormalC Server.MetaCoq.TestMeta.X7e [],NormalC Server.MetaCoq.TestMeta.X7f [],NormalC Server.MetaCoq.TestMeta.X80 [],NormalC Server.MetaCoq.TestMeta.X81 [],NormalC Server.MetaCoq.TestMeta.X82 [],NormalC Server.MetaCoq.TestMeta.X83 [],NormalC Server.MetaCoq.TestMeta.X84 [],NormalC Server.MetaCoq.TestMeta.X85 [],NormalC Server.MetaCoq.TestMeta.X86 [],NormalC Server.MetaCoq.TestMeta.X87 [],NormalC Server.MetaCoq.TestMeta.X88 [],NormalC Server.MetaCoq.TestMeta.X89 [],NormalC Server.MetaCoq.TestMeta.X8a [],NormalC Server.MetaCoq.TestMeta.X8b [],NormalC Server.MetaCoq.TestMeta.X8c [],NormalC Server.MetaCoq.TestMeta.X8d [],NormalC Server.MetaCoq.TestMeta.X8e [],NormalC Server.MetaCoq.TestMeta.X8f [],NormalC Server.MetaCoq.TestMeta.X90 [],NormalC Server.MetaCoq.TestMeta.X91 [],NormalC Server.MetaCoq.TestMeta.X92 [],NormalC Server.MetaCoq.TestMeta.X93 [],NormalC Server.MetaCoq.TestMeta.X94 [],NormalC Server.MetaCoq.TestMeta.X95 [],NormalC Server.MetaCoq.TestMeta.X96 [],NormalC Server.MetaCoq.TestMeta.X97 [],NormalC Server.MetaCoq.TestMeta.X98 [],NormalC Server.MetaCoq.TestMeta.X99 [],NormalC Server.MetaCoq.TestMeta.X9a [],NormalC Server.MetaCoq.TestMeta.X9b [],NormalC Server.MetaCoq.TestMeta.X9c [],NormalC Server.MetaCoq.TestMeta.X9d [],NormalC Server.MetaCoq.TestMeta.X9e [],NormalC Server.MetaCoq.TestMeta.X9f [],NormalC Server.MetaCoq.TestMeta.Xa0 [],NormalC Server.MetaCoq.TestMeta.Xa1 [],NormalC Server.MetaCoq.TestMeta.Xa2 [],NormalC Server.MetaCoq.TestMeta.Xa3 [],NormalC Server.MetaCoq.TestMeta.Xa4 [],NormalC Server.MetaCoq.TestMeta.Xa5 [],NormalC Server.MetaCoq.TestMeta.Xa6 [],NormalC Server.MetaCoq.TestMeta.Xa7 [],NormalC Server.MetaCoq.TestMeta.Xa8 [],NormalC Server.MetaCoq.TestMeta.Xa9 [],NormalC Server.MetaCoq.TestMeta.Xaa [],NormalC Server.MetaCoq.TestMeta.Xab [],NormalC Server.MetaCoq.TestMeta.Xac [],NormalC Server.MetaCoq.TestMeta.Xad [],NormalC Server.MetaCoq.TestMeta.Xae [],NormalC Server.MetaCoq.TestMeta.Xaf [],NormalC Server.MetaCoq.TestMeta.Xb0 [],NormalC Server.MetaCoq.TestMeta.Xb1 [],NormalC Server.MetaCoq.TestMeta.Xb2 [],NormalC Server.MetaCoq.TestMeta.Xb3 [],NormalC Server.MetaCoq.TestMeta.Xb4 [],NormalC Server.MetaCoq.TestMeta.Xb5 [],NormalC Server.MetaCoq.TestMeta.Xb6 [],NormalC Server.MetaCoq.TestMeta.Xb7 [],NormalC Server.MetaCoq.TestMeta.Xb8 [],NormalC Server.MetaCoq.TestMeta.Xb9 [],NormalC Server.MetaCoq.TestMeta.Xba [],NormalC Server.MetaCoq.TestMeta.Xbb [],NormalC Server.MetaCoq.TestMeta.Xbc [],NormalC Server.MetaCoq.TestMeta.Xbd [],NormalC Server.MetaCoq.TestMeta.Xbe [],NormalC Server.MetaCoq.TestMeta.Xbf [],NormalC Server.MetaCoq.TestMeta.Xc0 [],NormalC Server.MetaCoq.TestMeta.Xc1 [],NormalC Server.MetaCoq.TestMeta.Xc2 [],NormalC Server.MetaCoq.TestMeta.Xc3 [],NormalC Server.MetaCoq.TestMeta.Xc4 [],NormalC Server.MetaCoq.TestMeta.Xc5 [],NormalC Server.MetaCoq.TestMeta.Xc6 [],NormalC Server.MetaCoq.TestMeta.Xc7 [],NormalC Server.MetaCoq.TestMeta.Xc8 [],NormalC Server.MetaCoq.TestMeta.Xc9 [],NormalC Server.MetaCoq.TestMeta.Xca [],NormalC Server.MetaCoq.TestMeta.Xcb [],NormalC Server.MetaCoq.TestMeta.Xcc [],NormalC Server.MetaCoq.TestMeta.Xcd [],NormalC Server.MetaCoq.TestMeta.Xce [],NormalC Server.MetaCoq.TestMeta.Xcf [],NormalC Server.MetaCoq.TestMeta.Xd0 [],NormalC Server.MetaCoq.TestMeta.Xd1 [],NormalC Server.MetaCoq.TestMeta.Xd2 [],NormalC Server.MetaCoq.TestMeta.Xd3 [],NormalC Server.MetaCoq.TestMeta.Xd4 [],NormalC Server.MetaCoq.TestMeta.Xd5 [],NormalC Server.MetaCoq.TestMeta.Xd6 [],NormalC Server.MetaCoq.TestMeta.Xd7 [],NormalC Server.MetaCoq.TestMeta.Xd8 [],NormalC Server.MetaCoq.TestMeta.Xd9 [],NormalC Server.MetaCoq.TestMeta.Xda [],NormalC Server.MetaCoq.TestMeta.Xdb [],NormalC Server.MetaCoq.TestMeta.Xdc [],NormalC Server.MetaCoq.TestMeta.Xdd [],NormalC Server.MetaCoq.TestMeta.Xde [],NormalC Server.MetaCoq.TestMeta.Xdf [],NormalC Server.MetaCoq.TestMeta.Xe0 [],NormalC Server.MetaCoq.TestMeta.Xe1 [],NormalC Server.MetaCoq.TestMeta.Xe2 [],NormalC Server.MetaCoq.TestMeta.Xe3 [],NormalC Server.MetaCoq.TestMeta.Xe4 [],NormalC Server.MetaCoq.TestMeta.Xe5 [],NormalC Server.MetaCoq.TestMeta.Xe6 [],NormalC Server.MetaCoq.TestMeta.Xe7 [],NormalC Server.MetaCoq.TestMeta.Xe8 [],NormalC Server.MetaCoq.TestMeta.Xe9 [],NormalC Server.MetaCoq.TestMeta.Xea [],NormalC Server.MetaCoq.TestMeta.Xeb [],NormalC Server.MetaCoq.TestMeta.Xec [],NormalC Server.MetaCoq.TestMeta.Xed [],NormalC Server.MetaCoq.TestMeta.Xee [],NormalC Server.MetaCoq.TestMeta.Xef [],NormalC Server.MetaCoq.TestMeta.Xf0 [],NormalC Server.MetaCoq.TestMeta.Xf1 [],NormalC Server.MetaCoq.TestMeta.Xf2 [],NormalC Server.MetaCoq.TestMeta.Xf3 [],NormalC Server.MetaCoq.TestMeta.Xf4 [],NormalC Server.MetaCoq.TestMeta.Xf5 [],NormalC Server.MetaCoq.TestMeta.Xf6 [],NormalC Server.MetaCoq.TestMeta.Xf7 [],NormalC Server.MetaCoq.TestMeta.Xf8 [],NormalC Server.MetaCoq.TestMeta.Xf9 [],NormalC Server.MetaCoq.TestMeta.Xfa [],NormalC Server.MetaCoq.TestMeta.Xfb [],NormalC Server.MetaCoq.TestMeta.Xfc [],NormalC Server.MetaCoq.TestMeta.Xfd [],NormalC Server.MetaCoq.TestMeta.Xfe [],NormalC Server.MetaCoq.TestMeta.Xff []] [])"
+
+
+
+$(stringE . show =<< Language.Haskell.TH.Syntax.reify ''Server.MetaCoq.TestMeta.Aname)
+<interactive>:8:2-86: Splicing expression
+    stringE . show =<< reify ''Aname
+  ======>
+    "TyConI (TySynD Server.MetaCoq.TestMeta.Aname [] (AppT (ConT Server.MetaCoq.TestMeta.Binder_annot) (ConT Server.MetaCoq.TestMeta.Name)))"
+"TyConI (TySynD Server.MetaCoq.TestMeta.Aname [] (AppT (ConT Server.MetaCoq.TestMeta.Binder_annot) (ConT Server.MetaCoq.TestMeta.Name)))"
+ghci>
+
+
+$(stringE . show =<< runQ(do mapM dsReify [       ''Server.MetaCoq.TestMeta.Aname  ,''Server.MetaCoq.TestMeta.BigMama ]))
+"[Just (DTyConI (DTySynD Server.MetaCoq.TestMeta.Aname [] (DAppT (DConT Server.MetaCoq.TestMeta.Binder_annot) (DConT Server.MetaCoq.TestMeta.Name))) Nothing),Just (DTyConI (DTySynD Server.MetaCoq.TestMeta.BigMama [] (DAppT (DAppT (DConT Server.MetaCoq.TestMeta.Prod) (DConT Server.MetaCoq.TestMeta.Global_env)) (DConT Server.MetaCoq.TestMeta.Term))) Nothing)]"
+ghci> 
+
+
+$(stringE . show =<< mapM runQ (foo1))
+"[TyConI (TySynD Server.MetaCoq.TestMeta.Aname [] (AppT (ConT Server.MetaCoq.TestMeta.Binder_annot) (ConT Server.MetaCoq.TestMeta.Name))),TyConI (TySynD Server.MetaCoq.TestMeta.BigMama [] (AppT (AppT (ConT Server.MetaCoq.TestMeta.Prod) (ConT Server.MetaCoq.TestMeta.Global_env)) (ConT Server.MetaCoq.TestMeta.Term)))]"
+ghci> 

@@ -1,0 +1,28 @@
+* prereqs
+We are collecting internal data about the ocaml code.
+* status
+
+Yesterdays exploration of the compiler led to getting the ast dump of
+the type_declarations.
+
+The asts can be dumped with other tools, and we found ppxlib contains
+the same type_declaration for many versions of the compiler but they
+are slightly out of date.
+
+Also we found ppx_tools astdump that also lets you dump but it even
+needs an older version.
+
+
+
+from ppx_tools
+./default/src/dumpast.exe
+~/experiments/gbnf_parser/lib/sentenceParser_describe.ml >
+~/experiments/gbnf_parser/lib/sentenceParser_describe_ast.ml
+
+this works but truncates the ast with ...
+
+/home/mdupont/time/2023/12/27/ppx_tools/_build/default/src/dumpast.exe
+~/experiments/gbnf_parser/lib/sentenceParser_describe_ast.ml
+>~/experiments/gbnf_parser/lib/sentenceParser_describe_ast2.ml
+
+/home/mdupont/time/2023/12/27/ppx_tools/_build/default/src/dumpast.exe ~/experiments/gbnf_parser/lib/sentenceParser_describe_ast.ml >~/experiments/gbnf_parser/lib/sentenceParser_describe_ast2.ml
