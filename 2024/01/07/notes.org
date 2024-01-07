@@ -31,7 +31,7 @@ Eventually we should be able to express this graph in
 homotopy type theory and treat haskell and ocaml as instances
 of the type class of high level languages.
 
-** COmmon modle
+** Common model
 To create a common model of Haskell and OCaml from their respective
 proofs, we could potentially use a functor that takes the code
 extraction functions from Metacoq and applies them to both languages

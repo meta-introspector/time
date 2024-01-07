@@ -2705,3 +2705,6 @@
 [submodule "2023/07/06/introspector/test"]
 	path = 2023/07/06/introspector/test
 	url = https://github.com/meta-introspector/metacoq-introspector.git
+[submodule "2024/01/07/batteries-included"]
+	path = 2024/01/07/batteries-included
+	url = https://github.com/ocaml-batteries-team/batteries-included
