@@ -701,3 +701,100 @@ Overall, this approach to creating instances of OCaml type theory in PPX from ab
 
 
 *** mobile friendly
+
+*** recap
+
+use ppx to extract hott from existing code,
+so ocaml -> unimath expr.
+unimath -> merge -> chunks ->llm .
+merge mutitple run into one graph.
+chunks will be layers or levels of hott.
+graph partitiong algorithms, metis etc.
+
+thinker ->prover.
+bisimulation/coinduction.
+proof system/code generator
+reducing/expanding
+anaylsis/synthesis
+alpha renumbering/beta reduction
+
+What the main routine, what is user facing, what is the web server,
+
+contrast and compare the implementations of llama llm 
+using hott to consume the asts extracted from source code using  gcc/llvm,
+and ocaml.
+consider the same model of mistral to be embedded in the onnx/gguf,
+computation graph + data.
+the mistral model is our source, and the different implementations interpret that model
+using different versions of code,
+we can predict/observe and theorize/capture the execution/interpretation of the model
+in different implementations using unimath/hott.
+we start with the model and then start to capture the data.
+
+take the 2024/01/04/llama-cpp-ocaml as interface. llama2.ml as implementation.
+
+label the different steps of the interpreters with the single input model.
+
+*game engine.
+
+minecraft table : N*N square, 9x9. eg.
+
+world model will be a computational graph built on a group of tensors, using emojis to represent game state
+and the topology of the graph can be complex. We say we have N emojis and each emoji is mapped into a higher dimensional space.
+
+nodes:
+projected emoji = emoji + vector
+each cell of the tensor has a vector.
+positions vector = vector of vectors * muliplied by the vector of emojis
+
+construct multipler tables to say how many times to duplicate another item as weight.
+put 3 gold here to multiply input A by 3. 
+
+edges:
+each cell of the rel tensor has a vector for relationships,
+that says how each cell is related like a grammar. 
+
+crafting table -> math generate asts, hott, llm -> images, narratives.
+
+stable diffusion +llm item generator.
+
+create a smaller represention of your building in crafting table, and project it into larger block.
+
+graph of crafting dependancies a network who nodes are crafting table instances.
+
+use this system to describe other games or construct scenarios.
+
+create art installation with crafting table, players can construct new programs and run them,
+defining them with new pictures or text they prompt.
+create grammars based on the layout of the 2d blocks, serialize the block according to rules and use bnf/menhir.
+
+with this engine we create a tower defence game where existing projects are castles.
+
+ocaml would be a huge block in the hyperspace,
+the hyperdimensional fortress and subdivided and structured according
+to metadata (asts, tokens, bits, types, functions, interfaces, (all just bytecode)).
+
+we have sequence of nested type instances that represent the metadata. (the tape)
+we place the blob of nodes into the sphere of the castle, and lay them out with algorithms respecting the rules,
+(we can a SAT solver, like dune does, to resolve dependencies)
+this will construct a huge dungeon of ocaml.
+this is in HOTT.
+
+code :ocaml,ppx,opam,dune
+data: github,timerepo
+code is in data, data is in code.
+
+each day we re intrepret the time repo to construct the next day.
+
+ppxlib
+~/time/
+
+2023/12/28/ppxlib/
+
+2024/01/03/ocaml_ocaml_types contains the types
+needed for defining the core types. meta level 1.
+
+type_declarations
+
+patterns (matching pattern in ocaml)
+constructors creating new objects
