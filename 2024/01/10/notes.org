@@ -1,0 +1,29 @@
+
+* idea for app
+drop images into app
+recognize images
+graph sort and layout the
+images according to meaning
+
+* idea reading Kant
+reading of large text. eg kant
+ordering of dependencies.
+using multiple muse and other people to react and comment.
+
+* autocomplete task.
+
+create program that can rewrite itself with ai,
+complete the uncompleted sections,
+and regenerate the old ones exactly, unless agreed upon.
+
+We have test cases, because we have a running program, we can extract the structure.
+
+ppx reflection runs at compile time,
+to inspect the bytecodes of the modules compiled,
+
+inside of the running program, at runtime we can use ppx reflection indirectly
+so, at compile time, use ppx to produce functions that are called
+and used at runtime to collect data.
+
+
+
