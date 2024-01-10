@@ -2708,3 +2708,6 @@
 [submodule "2024/01/07/batteries-included"]
 	path = 2024/01/07/batteries-included
 	url = https://github.com/ocaml-batteries-team/batteries-included
+[submodule "2024/01/07/ppx-introspector"]
+	path = 2024/01/07/ppx-introspector
+	url = https://github.com/meta-introspector/ppxlib-simple-example.git
