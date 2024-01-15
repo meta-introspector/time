@@ -2711,3 +2711,6 @@
 [submodule "2024/01/07/ppx-introspector"]
 	path = 2024/01/07/ppx-introspector
 	url = https://github.com/meta-introspector/ppxlib-simple-example.git
+[submodule "2024/01/15/lang_agent"]
+	path = 2024/01/15/lang_agent
+	url = https://github.com/meta-introspector/lang_agent

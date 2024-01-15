@@ -18,6 +18,9 @@ and regenerate the old ones exactly, unless agreed upon.
 
 We have test cases, because we have a running program, we can extract the structure.
 
+Compile list of handled types, and the ones needed to be done
+subtracted from the whole set.
+
 ppx reflection runs at compile time,
 to inspect the bytecodes of the modules compiled,
 
