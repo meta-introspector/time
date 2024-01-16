@@ -1,0 +1,38 @@
+* tensor of emojis
+each emoji is an eigenvector actor
+each round of execution the actor emoji gets time to think or interact with its environmet
+for each example we can think about rewrite rules on the emojis using grammars to match patterns and replace the match with the result of the function.
+mathematically it does not matter the order of execution,
+we say left to right, outside to inside for the notation.
+
+https://github.com/meta-introspector/meta-meme/wiki/eigenvector-of-Athena
+
+
+** using the knowledge from the built in combinatorics, apply that to our program.
+compare structure of the graphs of unimath combinatortorics
+to the structure  of the graph of the ppx data extracted.
+find the most similar graphs or key connections.
+establish a equilvalence relationship. that is one module of combinatorics.
+consider an equilvalence relationship between all types, T * T/2.
+hlevel will the hierarchy level for the first comparison.
+hlevel is the depth of the type graph.
+
+** ocaml extraction of the unimath ocaml
+** compile unimath ocaml with ppx introspector
+
+** use the chunker tool to split the output and call
+ollama mistral on chunks using a prompt model.
+
+*** translate this to dot graphviz visualization.
+*** summarize this ppx ast data
+*** translate to python,c++,forth
+*** 
+
+** recursive page update
+the page generator generates url.
+persistant storage on git for example to start with.
+(Create cache in git repo).
+read in existing tickets in git.
+Org mode files in directory on git as central storage.
+user initiates page ticket, reference to url. (ai ticket)
+ai requests user help in new ticket. (ai ticket)
