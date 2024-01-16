@@ -2714,3 +2714,9 @@
 [submodule "2024/01/15/lang_agent"]
 	path = 2024/01/15/lang_agent
 	url = https://github.com/meta-introspector/lang_agent
+[submodule "2024/01/15/mongo"]
+	path = 2024/01/15/mongo
+	url = https://github.com/MassD/mongo.git
+[submodule "2024/01/15/ezcurl"]
+	path = 2024/01/15/ezcurl
+	url = https://github.com/c-cube/ezcurl
