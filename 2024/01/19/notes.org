@@ -1,0 +1,68 @@
+* plan
+
+** grammar based generation gbnf
+** menhir -> gbnf
+** gbnf -> ast structure 1, using ppx-introspector
+** menhir -> ast_structure 2, using ppx-introspector
+** unite ast structures 1,2 with unimath
+*** graph morphism, function from menhir -> gbnf and back
+**** each production rule is a type, a (X=ProductionRuleType isofhlevel) =( __ the data anything) in unimath
+**** each rule depends on ther rules and terminals are the H level 0, the base sets, numbers or seq, enum or emojis, or named descriptions of objects in a concept graph.
+**** we can index subtypes, fields of record kind, or field of a tuple, we can select the subset of values inside a structure
+*** type view : all programs as modules with type declarations of records and constructors and basic types (bool,int)
+ignore all functions.
+types include functions or functors
+
+** unimath to emoji and back grammar/rule
+** apply unimath functions to any data via the UU object and mappings
+** load in dungeon design as a graph and the apply unimath to the walls
+** agent bot running around in dungeon doing quests, which are function call.
+** create world : dungeon master user creates dungeon and populates it for quests
+to supply agents, trading.  generate complex dungeons with style.
+world is updating over time.
+
+*** versioning
+cloning, evolving, passage of time.
+
+*** create a new theory in unimath coq to handle dungeons.
+create new structures leaning on unimath.
+
+given these structures in unimath/coq create a dungeon 
+master code that will
+create walls and stairs and block to create dungeon in unimath.
+dungeon algebra topology.
+steps and the tactiqs.
+look for structure in unimath.
+
+
+
+topology, algebraic geometry
+
+algebraic geometry for game engine, 
+array of nodes, edges. -> array of columns/rows intersects a room.
+room -> block , block -> (room, door, monster, player)
+read json into ocaml, using ppx yojson (see lang_agent json example)
+menhir grammar for the dungeon, ast structure.
+translate that grammar to gbnf, and llm generate,
+or use ocaml to generate following the rules.
+
+door = x,y + w +h (triagles)
+construct triangles.
+
+
+#+begin_src output
+Topology and Algebraic Geometry meet in a thrilling game engine collaboration. Imagine an intricate array of intersecting columns and rows that together form a room within the dungeon. Each room can be transformed into a block, which contains various elements such as doors, monsters, and players.
+
+To bring this vision to life, we'll use OCaml and ppx yojson to read JSON data and convert it into an array of columns/rows. These arrays will intersect in the form of rooms, forming blocks that can be further customized with doors, monsters, and players.
+
+Using Menhir, we'll create a grammar for our dungeon layout, followed by LLM generation or OCaml implementation to generate the desired block structures. We'll start by defining door shapes using triangles in GBNF, allowing us to construct them efficiently.
+
+With this creative combination of topology and algebraic geometry, we can create captivating game environments with ease, transforming our imagination into reality through code.
+#+end_src
+
+*** quine
+the ppx introspector should be able to bootstrap/generate itself from the
+test/test2.ml that is the definition of the ast of ppx.
+
+run the ppx to produce an sexpr, which when executed generates itself.
+that can translate itself into another language, like ebnf, emojis and back.
