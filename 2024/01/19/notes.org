@@ -49,6 +49,9 @@ or use ocaml to generate following the rules.
 door = x,y + w +h (triagles)
 construct triangles.
 
+*** bots will be npcs in the dungeon.
+as a player you can trade and interact with them.
+like villagers in minecraft.
 
 #+begin_src output
 Topology and Algebraic Geometry meet in a thrilling game engine collaboration. Imagine an intricate array of intersecting columns and rows that together form a room within the dungeon. Each room can be transformed into a block, which contains various elements such as doors, monsters, and players.
