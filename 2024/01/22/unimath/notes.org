@@ -1,0 +1,149 @@
+* status
+
+** libs
+
+run ppx introspector on these modules
+
+*** menhir
+*** gbnf parser
+*** ppxlib
+*** ocaml_ocaml_types - types.ml extracted from ocaml into standalone module
+
+make sure it works and covers all the cases, 
+
+** unimath
+later the target will be to unite unimath with the other modules.
+
+* capture the log
+
+#+begin_src shell
+dune build > log.txt 2>&1she
+#+end_src
+
+* new try
+
+  (print_endline ("DEBUG2AA:" ^ "open Ppxlib"));
+  
+grep ^DEBUG2AA: log.txt |cut -d: -f2- |sort -u   > src/gen2.ml
+
+that starts the header
+
+grep ^DEBUG2A: log.txt |cut -d: -f2- |sort -u    >> src/gen2.ml
+
+now for this one we need to remove sort
+grep ^DEBUG2B: log.txt |cut -d: -f2-     >> src/gen2.ml
+
+
+* cleanup scripts.
+in test.sh is a horrible monster we found in the sed dungeon.
+this removes some known errors.
+
+the next big fix will be to move the case statements inside the proper functions
+"DEBUG2C: let process_"
+in this function.
+process_type_variant_constructor_declaration_list(a:string*constructor_declaration list*string_list):string =
+
+the ordering of the subobject the constructors are wrong.
+
+
+*
+#+begin_src shell
+grep DEBUG2E:constructor_declaration_new log.txt |cut "-d|" -f1 | cut -d: -f4- |sort |uniq -c| sort -r
+#+end_src
+
+#+RESULTS:
+| 1 | "Virtual"{        |
+| 1 | "Upto"{           |
+| 1 | "Unit"{           |
+| 1 | "Rtag"{           |
+| 1 | "Pwith_type"{     |
+| 1 | "Ptype_abstract"{ |
+| 1 | "Ptyp_any"{       |
+| 1 | "Ptop_def"{       |
+| 1 | "Pstr_eval"{      |
+| 1 | "PStr"{           |
+| 1 | "Psig_value"{     |
+| 1 | "Private"{        |
+| 1 | "Ppat_any"{       |
+| 1 | "Pmty_ident"{     |
+| 1 | "Pmod_ident"{     |
+| 1 | "Pext_decl"{      |
+| 1 | "Pexp_ident"{     |
+| 1 | "Pdir_string"{    |
+| 1 | "Pcty_constr"{    |
+| 1 | "Pctf_inherit"{   |
+| 1 | "Pcstr_tuple"{    |
+| 1 | "Pconst_integer"{ |
+| 1 | "Pcl_constr"{     |
+| 1 | "Pcf_inherit"{    |
+| 1 | "Override"{       |
+| 1 | "Otag"{           |
+| 1 | "O"{              |
+| 1 | "Nonrecursive"{   |
+| 1 | "Nolabel"{        |
+| 1 | "Lident"{         |
+| 1 | "Injective"{      |
+| 1 | "Immutable"{      |
+| 1 | "Covariant"{      |
+| 1 | "Coq_tt"{         |
+| 1 | "Coq_true"{       |
+| 1 | "Coq_paths_refl"{ |
+| 1 | "Coq_ii1"{        |
+| 1 | "Closed"{         |
+| 1 | "Cfk_virtual"{    |
+
+#+begin_src output
+The code declares various types related to a graph structure. Here's a creative reinterpretation while preserving the main ideas:
+
+Imagine an artist painting a beautiful landscape on a large canvas. The canvas is divided into smaller squares, each representing a different part of the scene. Each square can contain multiple colors and shapes, which represent the objects in the landscape. The connections between these squares are drawn with lines, representing the relationships between the objects.
+
+The `type` keyword in Coq is used to define new types, just as the artist creates new shapes and colors on their canvas. In this case, we're defining several types related to a graph structure:
+
+* `coq_UU`: This type represents a unique identifier for each object (or square) in the landscape.
+* `node`: This type represents a single object (or square) in the landscape. Each object can have multiple colors and shapes, represented by other types.
+* `arc`: This type represents a connection between two objects (or squares). The connection can be drawn with lines of different shapes and thicknesses.
+* `'x isofhlevel`: This type represents a hierarchy of objects in the landscape, with each level having a unique identifier (`coq_UU`). The higher the level, the more abstract or general the object becomes.
+* `(t, p) total2`: This type represents a tuple containing two elements of types `t` and `p`. It is used to represent the connections between objects in the landscape, where each connection can have two different shapes and colors (`t` and `p`).
+* `dirprod`: This type represents a directed product of two tuples, which means that the order of the elements matters. In this case, it is used to represent the connections between objects with two different shapes and colors.
+* `precgraph`: This type represents a graph structure where each object (or square) has a unique identifier (`coq_UU`) and can be connected to other objects with lines of different shapes and thicknesses. The hierarchy of objects is represented by the `isofhlevel` type.
+* `'x isaprop`: This type represents an object (or square) that belongs to a specific level in the hierarchy (`isofhlevel`).
+* `'a paths`: This type represents all possible paths between two objects (or squares) in the graph structure, including direct and indirect connections. The paths can have different shapes and thicknesses, represented by other types.
+* `coq_paths_refl`: This type represents a single path that starts and ends at the same object (or square). It is used as a base case for all possible paths in the graph structure.
+* `'x isaset`: This type represents an assignment of paths between two objects (or squares), where each object can have multiple paths connecting to it. The paths are represented by other types, and the object belongs to a specific level in the hierarchy (`isofhlevel`).
+* `cgraph`: This type represents a graph structure where each object (or square) has a unique identifier (`coq_UU`) and can be connected to other objects with lines of different shapes and thicknesses. The hierarchy of objects is represented by the `isofhlevel` type, and the paths between objects are represented by the `'a paths` type.
+* `arc -> node paths`: This type represents a function that takes an arc (or connection) and returns a path between two objects connected by that arc. The path can have different shapes and thicknesses, represented by other types.
+* `arc -> node paths`: This type represents a function that takes an arc (or connection) and returns a path between two objects connected by that arc. The path can have different shapes and thicknesses, represented by other types.
+#+end_src
+
+
+*
+*shell*<2>
+
+test2.ml:91:and rec_flag = Asttypes.rec_flag = Nonrecursive | Recursive
+*
+let process_rec_flag ( x:rec_flag):string="process_rec_flag" ^
+                                          match x with 
+                                          | Nonrecursive -> "plain"
+                                          | Recursive -> "rec"
+
+[print_type_decl:"rec_flag" = type variant:constructor:"Nonrecursive"{Pcstr_tuple:my_process_core_type_list:}	|constructor:"Recursive"{Pcstr_tuple:my_process_core_type_list:}	|VARIANT(rec_flag)
+
+*** fixmes:
+
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+
+DBG22E:constructor_declaration_new: constructor:"Pstr_type"{| Pstr_type (rec_flag"->0,list"->type_declaration"->00) -> (process_types_structure_item_desc__Pstr_type((process_rec_flag"-> rec_flag"->0),(process_list"->type_declaration"->0 list"->type_declaration"->01)))}
+
+let process_types_rec_flag__Nonrecursive(():()):string = (process_types ^ ("rec_flag","Nonrecursive") ^)
+let process_types_rec_flag__Recursive(():()):string = (process_types ^ ("rec_flag","Recursive") ^)
+
+let process_rec_flag__Recursive x :string =match x with
+| Recursive () -> (process_types_rec_flag__Recursive())
+| Nonrecursive () -> (process_types_rec_flag__Nonrecursive())
+
+
+*** handle a list of items
+
+*** generate v7
+grep -e "DBG221EC" -e "DBG222EC" test/test2.txt  |cut -d: -f2- > ./src/gen7.ml
+

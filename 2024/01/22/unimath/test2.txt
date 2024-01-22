@@ -1,0 +1,1719 @@
+Done: 37% (3/8, 5 left) (jobs: 0)                                 Done: 87% (74/85, 11 left) (jobs: 1)                                    File "src/emitthecode.ml", line 25, characters 15-18:
+25 |       let {txt;loc} = a in
+                    ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/emitthecode.ml", line 34, characters 6-11:
+34 |     | other -> "FIXME"
+           ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 41, characters 6-18:
+41 |       ptype_params (* : (core_type * (variance * injectivity)) list *);
+           ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_params.
+File "src/emitthecode.ml", line 42, characters 6-17:
+42 |       ptype_cstrs (*: (core_type * core_type * location) list*) ;   
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_cstrs.
+File "src/emitthecode.ml", line 44, characters 6-19:
+44 |       ptype_private (*: private_flag*); 
+           ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_private.
+File "src/emitthecode.ml", line 45, characters 6-20:
+45 |       ptype_manifest (* : core_type option *);
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_manifest.
+File "src/emitthecode.ml", line 46, characters 6-22:
+46 |       ptype_attributes (*: attributes*);
+           ^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_attributes.
+File "src/emitthecode.ml", line 47, characters 6-15:
+47 |       ptype_loc (*: location*)
+           ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_loc.
+File "src/emitthecode.ml", line 60, characters 6-14:
+60 |       ptyp_loc(* : Location.t *);
+           ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/emitthecode.ml", line 61, characters 6-20:
+61 |       ptyp_loc_stack(* : location_stack *);
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/emitthecode.ml", line 62, characters 6-21:
+62 |       ptyp_attributes(* : attributes; *)
+           ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/emitthecode.ml", line 81, characters 7-13:
+81 |   let (parent, parent2, atype, s, n) = a in
+            ^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent.
+File "src/emitthecode.ml", line 81, characters 15-22:
+81 |   let (parent, parent2, atype, s, n) = a in
+                    ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent2.
+File "src/emitthecode.ml", line 126, characters 143-148:
+126 |                                                                                                                                              | other  -> "other"
+                                                                                                                                                     ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 159, characters 4-9:
+159 |   | other  -> "other"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 165, characters 4-12:
+165 |     pcd_vars(* : string loc list *);
+          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_vars.
+File "src/emitthecode.ml", line 167, characters 4-11:
+167 |     pcd_res(* : core_type option *);
+          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_res.
+File "src/emitthecode.ml", line 168, characters 4-11:
+168 |     pcd_loc(* : Location.t *);
+          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_loc.
+File "src/emitthecode.ml", line 169, characters 4-18:
+169 |     pcd_attributes(* : attributes *); 
+          ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_attributes.
+File "src/emitthecode.ml", line 226, characters 5-16:
+226 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 228, characters 5-12:
+228 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 229, characters 5-19:
+229 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/emitthecode.ml", line 239, characters 4-9:
+239 |   | other -> "SKIP"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 254, characters 5-16:
+254 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 256, characters 5-12:
+256 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 257, characters 5-19:
+257 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/emitthecode.ml", line 264, characters 9-10:
+264 |   | (x,s,n) ->
+               ^
+Warning 27 [unused-var-strict]: unused variable n.
+File "src/emitthecode.ml", line 268, characters 8-16:
+268 |         ptyp_loc(* : Location.t *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/emitthecode.ml", line 269, characters 8-22:
+269 |         ptyp_loc_stack(* : location_stack *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/emitthecode.ml", line 270, characters 8-23:
+270 |         ptyp_attributes(* : attributes; *)
+              ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/emitthecode.ml", line 279, characters 4-9:
+279 |   | other -> "SKIP"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 294, characters 5-16:
+294 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 296, characters 5-12:
+296 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 297, characters 5-19:
+297 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+Done: 87% (74/85, 11 left) (jobs: 1)                                    Done: 88% (75/85, 10 left) (jobs: 2)                                    File "src/emitthecode.ml", line 25, characters 15-18:
+25 |       let {txt;loc} = a in
+                    ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/emitthecode.ml", line 34, characters 6-11:
+34 |     | other -> "FIXME"
+           ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 41, characters 6-18:
+41 |       ptype_params (* : (core_type * (variance * injectivity)) list *);
+           ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_params.
+File "src/emitthecode.ml", line 42, characters 6-17:
+42 |       ptype_cstrs (*: (core_type * core_type * location) list*) ;   
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_cstrs.
+File "src/emitthecode.ml", line 44, characters 6-19:
+44 |       ptype_private (*: private_flag*); 
+           ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_private.
+File "src/emitthecode.ml", line 45, characters 6-20:
+45 |       ptype_manifest (* : core_type option *);
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_manifest.
+File "src/emitthecode.ml", line 46, characters 6-22:
+46 |       ptype_attributes (*: attributes*);
+           ^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_attributes.
+File "src/emitthecode.ml", line 47, characters 6-15:
+47 |       ptype_loc (*: location*)
+           ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_loc.
+File "src/emitthecode.ml", line 60, characters 6-14:
+60 |       ptyp_loc(* : Location.t *);
+           ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/emitthecode.ml", line 61, characters 6-20:
+61 |       ptyp_loc_stack(* : location_stack *);
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/emitthecode.ml", line 62, characters 6-21:
+62 |       ptyp_attributes(* : attributes; *)
+           ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/emitthecode.ml", line 81, characters 7-13:
+81 |   let (parent, parent2, atype, s, n) = a in
+            ^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent.
+File "src/emitthecode.ml", line 81, characters 15-22:
+81 |   let (parent, parent2, atype, s, n) = a in
+                    ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent2.
+File "src/emitthecode.ml", line 126, characters 143-148:
+126 |                                                                                                                                              | other  -> "other"
+                                                                                                                                                     ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 159, characters 4-9:
+159 |   | other  -> "other"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 165, characters 4-12:
+165 |     pcd_vars(* : string loc list *);
+          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_vars.
+File "src/emitthecode.ml", line 167, characters 4-11:
+167 |     pcd_res(* : core_type option *);
+          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_res.
+File "src/emitthecode.ml", line 168, characters 4-11:
+168 |     pcd_loc(* : Location.t *);
+          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_loc.
+File "src/emitthecode.ml", line 169, characters 4-18:
+169 |     pcd_attributes(* : attributes *); 
+          ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_attributes.
+File "src/emitthecode.ml", line 226, characters 5-16:
+226 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 228, characters 5-12:
+228 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 229, characters 5-19:
+229 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/emitthecode.ml", line 239, characters 4-9:
+239 |   | other -> "SKIP"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 254, characters 5-16:
+254 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 256, characters 5-12:
+256 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 257, characters 5-19:
+257 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/emitthecode.ml", line 264, characters 9-10:
+264 |   | (x,s,n) ->
+               ^
+Warning 27 [unused-var-strict]: unused variable n.
+File "src/emitthecode.ml", line 268, characters 8-16:
+268 |         ptyp_loc(* : Location.t *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/emitthecode.ml", line 269, characters 8-22:
+269 |         ptyp_loc_stack(* : location_stack *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/emitthecode.ml", line 270, characters 8-23:
+270 |         ptyp_attributes(* : attributes; *)
+              ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/emitthecode.ml", line 279, characters 4-9:
+279 |   | other -> "SKIP"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/emitthecode.ml", line 294, characters 5-16:
+294 |      pld_mutable(* : mutable_flag *);
+           ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_mutable.
+File "src/emitthecode.ml", line 296, characters 5-12:
+296 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/emitthecode.ml", line 297, characters 5-19:
+297 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+Done: 88% (75/85, 10 left) (jobs: 2)                                    Done: 89% (76/85, 9 left) (jobs: 1)                                   File "src/ppx.ml", line 14, characters 12-13:
+14 | let ppddump x = () (*stub to hide batteries dump*)
+                 ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 18, characters 19-20:
+18 | let process_coerce a = "FIXME122"
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 22, characters 16-17:
+22 | let process_for a = "FIXME126"
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 27, characters 22-23:
+27 | let process_letmodule a = "FIXME131"
+                           ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 29, characters 20-21:
+29 | let process_newtype a = "FIXME1334"
+                         ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 30, characters 17-18:
+30 | let process_open a = "FIXME1337"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 31, characters 17-18:
+31 | let process_poly a = "FIXME1338"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 33, characters 17-18:
+33 | let process_send a = "FIXME1340"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 35, characters 21-22:
+35 | let process_setfield a = "FIXME1352"
+                          ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 36, characters 23-24:
+36 | let process_setinstvar a = "FIXME1362"
+                            ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 37, characters 16-17:
+37 | let process_try a = "FIXME1343"
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 38, characters 20-21:
+38 | let process_variant a = "FIXME1355"
+                         ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 39, characters 19-20:
+39 | let process_while  a = "FIXME1378"
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 63, characters 27-36:
+63 | let process_direction_flag ( alist0):string =  "FIXME4"
+                                ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable alist0.
+File "src/ppx.ml", line 72, characters 30-47:
+72 | let process_class_structure ( aclass_structure0:class_structure):string=  "FIXME7"
+                                   ^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aclass_structure0.
+File "src/ppx.ml", line 76, characters 22-23:
+76 |   | Pconst_integer (a,b) -> "int" ^a
+                           ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 78, characters 26-34:
+78 |   | Pconst_string (string,location,stringoption) -> "Pconst_string(\"" ^ string ^ "\")"
+                               ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable location.
+File "src/ppx.ml", line 78, characters 35-47:
+78 |   | Pconst_string (string,location,stringoption) -> "Pconst_string(\"" ^ string ^ "\")"
+                                        ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable stringoption.
+File "src/ppx.ml", line 79, characters 27-38:
+79 |   | Pconst_float (string , char_option) -> "float" ^ string
+                                ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable char_option.
+File "src/ppx.ml", line 82, characters 24-35:
+82 | let process_extension ( aextension0:extension):string= "FIXME9"
+                             ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aextension0.
+File "src/ppx.ml", line 83, characters 36-59:
+83 | let process_extension_constructor ( aextension_constructor0:extension_constructor):string= "FIXME10"
+                                         ^^^^^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aextension_constructor0.
+File "src/ppx.ml", line 85, characters 20-27:
+85 | let process_letop ( aletop0:letop):string="FIXME12"
+                         ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aletop0.
+File "src/ppx.ml", line 92, characters 16-24:
+92 | let process_loc ( aloc0):string="FIXME14"
+                     ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aloc0.
+File "src/ppx.ml", line 104, characters 26-39:
+104 | let process_module_expr ( amodule_expr0:module_expr):string="FIXME16"
+                                ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable amodule_expr0.
+File "src/ppx.ml", line 105, characters 31-49:
+105 | let process_open_declaration ( aopen_declaration0:open_declaration):string="FIXME17"
+                                     ^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aopen_declaration0.
+File "src/ppx.ml", line 129, characters 39-40:
+129 | and process_string_loc_expression_list x = "process_string_loc_expression_list"
+                                             ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 162, characters 4-12:
+162 |     pexp_loc (* : location  *);
+          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_loc.
+File "src/ppx.ml", line 163, characters 4-18:
+163 |     pexp_loc_stack (* : location_stack *);
+          ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_loc_stack.
+File "src/ppx.ml", line 164, characters 4-19:
+164 |     pexp_attributes (* : attributes *); (* [... \[@id1\] \[@id2\]] *)
+          ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_attributes.
+File "src/ppx.ml", line 214, characters 17-24:
+214 |     |Ppat_alias (pattern ,loc_string) -> "patterna3"
+                       ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 214, characters 26-36:
+214 |     |Ppat_alias (pattern ,loc_string) -> "patterna3"
+                                ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable loc_string.
+File "src/ppx.ml", line 215, characters 19-27:
+215 |     |Ppat_constant constant  -> "patterna4"
+                         ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant.
+File "src/ppx.ml", line 216, characters 20-28:
+216 |     |Ppat_interval (constant ,constant2)  -> "patterna5"
+                          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant.
+File "src/ppx.ml", line 216, characters 30-39:
+216 |     |Ppat_interval (constant ,constant2)  -> "patterna5"
+                                    ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant2.
+File "src/ppx.ml", line 217, characters 16-28:
+217 |     |Ppat_tuple pattern_list   -> "patterna6"
+                      ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern_list.
+File "src/ppx.ml", line 218, characters 21-22:
+218 |     |Ppat_construct (a, b)  -> "patterna7"
+                           ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 218, characters 24-25:
+218 |     |Ppat_construct (a, b)  -> "patterna7"
+                              ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 219, characters 19-26:
+219 |     |Ppat_variant (pattern, labeloptional ) -> "patterna8"
+                         ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 219, characters 28-41:
+219 |     |Ppat_variant (pattern, labeloptional ) -> "patterna8"
+                                  ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable labeloptional.
+File "src/ppx.ml", line 220, characters 18-43:
+220 |     |Ppat_record (list_longident_locpattern, closed_flag) -> "patterna9"
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable list_longident_locpattern.
+File "src/ppx.ml", line 220, characters 45-56:
+220 |     |Ppat_record (list_longident_locpattern, closed_flag) -> "patterna9"
+                                                   ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable closed_flag.
+File "src/ppx.ml", line 221, characters 16-26:
+221 |     |Ppat_array (pattern_) -> "patterna10 "
+                      ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern_.
+File "src/ppx.ml", line 222, characters 14-21:
+222 |     |Ppat_or (pattern, pattern2)  -> "patterna12"
+                    ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 222, characters 23-31:
+222 |     |Ppat_or (pattern, pattern2)  -> "patterna12"
+                             ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern2.
+File "src/ppx.ml", line 224, characters 15-28:
+224 |     |Ppat_type longident_loc  -> "patterna14"
+                     ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable longident_loc.
+File "src/ppx.ml", line 225, characters 15-22:
+225 |     |Ppat_lazy pattern  -> "patterna15"
+                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 226, characters 17-36:
+226 |     |Ppat_unpack (loc_option_string) -> "patterna16"
+                       ^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable loc_option_string.
+File "src/ppx.ml", line 227, characters 20-27:
+227 |     |Ppat_exception pattern  -> "patterna17"
+                          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 228, characters 20-29:
+228 |     |Ppat_extension extension  -> "patterna19"
+                          ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable extension.
+File "src/ppx.ml", line 229, characters 16-29:
+229 |     |Ppat_open (longident_loc, pattern) -> "patterna30"
+                      ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable longident_loc.
+File "src/ppx.ml", line 229, characters 31-38:
+229 |     |Ppat_open (longident_loc, pattern) -> "patterna30"
+                                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 230, characters 39-40:
+230 | and process_long_ident_expression_list x = "process_long_ident_expression_list"
+                                             ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 233, characters 75-76:
+233 | and process_record_kind4 :label_declaration -> string_list -> string = fun x s -> ""
+                                                                                 ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 233, characters 77-78:
+233 | and process_record_kind4 :label_declaration -> string_list -> string = fun x s -> ""
+                                                                                   ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 234, characters 26-27:
+234 | and  process_record_kind2(x :label_declaration)(s:string_list) = ""
+                                ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 234, characters 48-49:
+234 | and  process_record_kind2(x :label_declaration)(s:string_list) = ""
+                                                      ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 235, characters 28-29:
+235 | and    process_record_kind3 x s = ""
+                                  ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 235, characters 30-31:
+235 | and    process_record_kind3 x s = ""
+                                    ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 243, characters 25-26:
+243 |   process_record_kind((x,s):label_declaration *string_list):string =
+                               ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 249, characters 5-12:
+249 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/ppx.ml", line 250, characters 5-19:
+250 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/ppx.ml", line 270, characters 15-18:
+270 |       let {txt;loc} = a in
+                     ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 273, characters 10-14:
+273 |       let edge = create_edge ("Ptyp_constr", id1) in
+                ^^^^
+Warning 26 [unused-var]: unused variable edge.
+File "src/ppx.ml", line 295, characters 16-25:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                      ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable arg_label.
+File "src/ppx.ml", line 295, characters 28-37:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                  ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type.
+File "src/ppx.ml", line 295, characters 40-50:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                              ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type2.
+File "src/ppx.ml", line 299, characters 17-18:
+299 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 299, characters 19-20:
+299 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                         ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 302, characters 18-19:
+302 |   | Ptyp_class (a,b) (* of Longident.t loc * core_type list *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 304, characters 8-12:
+304 |     let myid = (process_id1 a.txt) in
+              ^^^^
+Warning 26 [unused-var]: unused variable myid.
+File "src/ppx.ml", line 307, characters 16-17:
+307 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 307, characters 18-19:
+307 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 311, characters 18-19:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 311, characters 20-21:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                          ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 311, characters 22-23:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                            ^
+Warning 27 [unused-var-strict]: unused variable c.
+File "src/ppx.ml", line 314, characters 15-16:
+314 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 314, characters 17-18:
+314 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 336, characters 6-14:
+336 |       ptyp_loc(* : Location.t *);
+            ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 337, characters 6-20:
+337 |       ptyp_loc_stack(* : location_stack *);
+            ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 338, characters 6-21:
+338 |       ptyp_attributes(* : attributes; *)
+            ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 402, characters 11-14:
+402 |     { txt; loc }  ->
+                 ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 440, characters 21-22:
+440 |     | Ptyp_constr (a,b) (* of Longident.t loc * core_type list *)
+                           ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 442, characters 15-18:
+442 |       let {txt;loc} = a in
+                     ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 455, characters 16-25:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                      ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable arg_label.
+File "src/ppx.ml", line 455, characters 28-37:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                  ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type.
+File "src/ppx.ml", line 455, characters 40-50:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                              ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type2.
+File "src/ppx.ml", line 460, characters 17-18:
+460 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 460, characters 19-20:
+460 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                         ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 463, characters 18-19:
+463 |   | Ptyp_class (a,b) (* of Longident.t loc * core_type list *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 465, characters 8-12:
+465 |     let myid = (process_id1 a.txt ) in
+              ^^^^
+Warning 26 [unused-var]: unused variable myid.
+File "src/ppx.ml", line 468, characters 16-17:
+468 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 468, characters 18-19:
+468 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 472, characters 18-19:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 472, characters 20-21:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                          ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 472, characters 22-23:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                            ^
+Warning 27 [unused-var-strict]: unused variable c.
+File "src/ppx.ml", line 478, characters 15-16:
+478 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 478, characters 17-18:
+478 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 497, characters 6-14:
+497 |       ptyp_loc(* : Location.t *);
+            ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 498, characters 6-20:
+498 |       ptyp_loc_stack(* : location_stack *);
+            ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 499, characters 6-21:
+499 |       ptyp_attributes(* : attributes; *)
+            ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 506, characters 9-10:
+506 |   | (x,s,n) ->
+               ^
+Warning 27 [unused-var-strict]: unused variable n.
+File "src/ppx.ml", line 510, characters 8-16:
+510 |         ptyp_loc(* : Location.t *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 511, characters 8-22:
+511 |         ptyp_loc_stack(* : location_stack *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 512, characters 8-23:
+512 |         ptyp_attributes(* : attributes; *)
+              ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 567, characters 142-147:
+567 |                                                                                                                                             | other  -> "other"
+                                                                                                                                                    ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/ppx.ml", line 570, characters 7-13:
+570 |   let (parent, parent2, atype, s, n) = a in
+             ^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent.
+File "src/ppx.ml", line 570, characters 15-22:
+570 |   let (parent, parent2, atype, s, n) = a in
+                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent2.
+File "src/ppx.ml", line 625, characters 4-9:
+625 |   | other  -> "other"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/ppx.ml", line 660, characters 8-16:
+660 |         pcd_vars(* : string loc list *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_vars.
+File "src/ppx.ml", line 662, characters 8-15:
+662 |         pcd_res(* : core_type option *);
+              ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_res.
+File "src/ppx.ml", line 663, characters 8-15:
+663 |         pcd_loc(* : Location.t *);
+              ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_loc.
+File "src/ppx.ml", line 664, characters 8-22:
+664 |         pcd_attributes(* : attributes *); 
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_attributes.
+File "src/ppx.ml", line 724, characters 8-20:
+724 |         ptype_params (* : (core_type * (variance * injectivity)) list *);
+              ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_params.
+File "src/ppx.ml", line 725, characters 8-19:
+725 |         ptype_cstrs (*: (core_type * core_type * location) list*) ;   
+              ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_cstrs.
+File "src/ppx.ml", line 727, characters 8-21:
+727 |         ptype_private (*: private_flag*); 
+              ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_private.
+File "src/ppx.ml", line 728, characters 8-22:
+728 |         ptype_manifest (* : core_type option *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_manifest.
+File "src/ppx.ml", line 729, characters 8-24:
+729 |         ptype_attributes (*: attributes*);
+              ^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_attributes.
+File "src/ppx.ml", line 730, characters 8-17:
+730 |         ptype_loc (*: location*)
+              ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_loc.
+File "src/ppx.ml", line 789, characters 20-28:
+789 |       | Pstr_value (rec_flag, value_binding_list) ->
+                          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable rec_flag.
+File "src/ppx.ml", line 792, characters 17-25:
+792 |     | Pstr_type (rec_flag, type_declaration_list) ->      
+                       ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable rec_flag.
+File "src/ppx.ml", line 796, characters 19-33:
+796 |     | Pstr_module  module_binding ->
+                         ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable module_binding.
+File "src/ppx.ml", line 834, characters 6-9:
+834 |   let foo = (process_all_structure_items print_one_structure_item x) in
+            ^^^
+Warning 26 [unused-var]: unused variable foo.
+File "src/ppx.ml", line 837, characters 17-18:
+837 | let process_bool x = "bool"
+                       ^
+Warning 27 [unused-var-strict]: unused variable x.
+Done: 89% (76/85, 9 left) (jobs: 1)                                   Done: 91% (78/85, 7 left) (jobs: 1)                                   File "src/ppx.ml", line 14, characters 12-13:
+14 | let ppddump x = () (*stub to hide batteries dump*)
+                 ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 18, characters 19-20:
+18 | let process_coerce a = "FIXME122"
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 22, characters 16-17:
+22 | let process_for a = "FIXME126"
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 27, characters 22-23:
+27 | let process_letmodule a = "FIXME131"
+                           ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 29, characters 20-21:
+29 | let process_newtype a = "FIXME1334"
+                         ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 30, characters 17-18:
+30 | let process_open a = "FIXME1337"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 31, characters 17-18:
+31 | let process_poly a = "FIXME1338"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 33, characters 17-18:
+33 | let process_send a = "FIXME1340"
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 35, characters 21-22:
+35 | let process_setfield a = "FIXME1352"
+                          ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 36, characters 23-24:
+36 | let process_setinstvar a = "FIXME1362"
+                            ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 37, characters 16-17:
+37 | let process_try a = "FIXME1343"
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 38, characters 20-21:
+38 | let process_variant a = "FIXME1355"
+                         ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 39, characters 19-20:
+39 | let process_while  a = "FIXME1378"
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 63, characters 27-36:
+63 | let process_direction_flag ( alist0):string =  "FIXME4"
+                                ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable alist0.
+File "src/ppx.ml", line 72, characters 30-47:
+72 | let process_class_structure ( aclass_structure0:class_structure):string=  "FIXME7"
+                                   ^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aclass_structure0.
+File "src/ppx.ml", line 76, characters 22-23:
+76 |   | Pconst_integer (a,b) -> "int" ^a
+                           ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 78, characters 26-34:
+78 |   | Pconst_string (string,location,stringoption) -> "Pconst_string(\"" ^ string ^ "\")"
+                               ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable location.
+File "src/ppx.ml", line 78, characters 35-47:
+78 |   | Pconst_string (string,location,stringoption) -> "Pconst_string(\"" ^ string ^ "\")"
+                                        ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable stringoption.
+File "src/ppx.ml", line 79, characters 27-38:
+79 |   | Pconst_float (string , char_option) -> "float" ^ string
+                                ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable char_option.
+File "src/ppx.ml", line 82, characters 24-35:
+82 | let process_extension ( aextension0:extension):string= "FIXME9"
+                             ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aextension0.
+File "src/ppx.ml", line 83, characters 36-59:
+83 | let process_extension_constructor ( aextension_constructor0:extension_constructor):string= "FIXME10"
+                                         ^^^^^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aextension_constructor0.
+File "src/ppx.ml", line 85, characters 20-27:
+85 | let process_letop ( aletop0:letop):string="FIXME12"
+                         ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aletop0.
+File "src/ppx.ml", line 92, characters 16-24:
+92 | let process_loc ( aloc0):string="FIXME14"
+                     ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aloc0.
+File "src/ppx.ml", line 104, characters 26-39:
+104 | let process_module_expr ( amodule_expr0:module_expr):string="FIXME16"
+                                ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable amodule_expr0.
+File "src/ppx.ml", line 105, characters 31-49:
+105 | let process_open_declaration ( aopen_declaration0:open_declaration):string="FIXME17"
+                                     ^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable aopen_declaration0.
+File "src/ppx.ml", line 129, characters 39-40:
+129 | and process_string_loc_expression_list x = "process_string_loc_expression_list"
+                                             ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 162, characters 4-12:
+162 |     pexp_loc (* : location  *);
+          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_loc.
+File "src/ppx.ml", line 163, characters 4-18:
+163 |     pexp_loc_stack (* : location_stack *);
+          ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_loc_stack.
+File "src/ppx.ml", line 164, characters 4-19:
+164 |     pexp_attributes (* : attributes *); (* [... \[@id1\] \[@id2\]] *)
+          ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pexp_attributes.
+File "src/ppx.ml", line 214, characters 17-24:
+214 |     |Ppat_alias (pattern ,loc_string) -> "patterna3"
+                       ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 214, characters 26-36:
+214 |     |Ppat_alias (pattern ,loc_string) -> "patterna3"
+                                ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable loc_string.
+File "src/ppx.ml", line 215, characters 19-27:
+215 |     |Ppat_constant constant  -> "patterna4"
+                         ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant.
+File "src/ppx.ml", line 216, characters 20-28:
+216 |     |Ppat_interval (constant ,constant2)  -> "patterna5"
+                          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant.
+File "src/ppx.ml", line 216, characters 30-39:
+216 |     |Ppat_interval (constant ,constant2)  -> "patterna5"
+                                    ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable constant2.
+File "src/ppx.ml", line 217, characters 16-28:
+217 |     |Ppat_tuple pattern_list   -> "patterna6"
+                      ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern_list.
+File "src/ppx.ml", line 218, characters 21-22:
+218 |     |Ppat_construct (a, b)  -> "patterna7"
+                           ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 218, characters 24-25:
+218 |     |Ppat_construct (a, b)  -> "patterna7"
+                              ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 219, characters 19-26:
+219 |     |Ppat_variant (pattern, labeloptional ) -> "patterna8"
+                         ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 219, characters 28-41:
+219 |     |Ppat_variant (pattern, labeloptional ) -> "patterna8"
+                                  ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable labeloptional.
+File "src/ppx.ml", line 220, characters 18-43:
+220 |     |Ppat_record (list_longident_locpattern, closed_flag) -> "patterna9"
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable list_longident_locpattern.
+File "src/ppx.ml", line 220, characters 45-56:
+220 |     |Ppat_record (list_longident_locpattern, closed_flag) -> "patterna9"
+                                                   ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable closed_flag.
+File "src/ppx.ml", line 221, characters 16-26:
+221 |     |Ppat_array (pattern_) -> "patterna10 "
+                      ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern_.
+File "src/ppx.ml", line 222, characters 14-21:
+222 |     |Ppat_or (pattern, pattern2)  -> "patterna12"
+                    ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 222, characters 23-31:
+222 |     |Ppat_or (pattern, pattern2)  -> "patterna12"
+                             ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern2.
+File "src/ppx.ml", line 224, characters 15-28:
+224 |     |Ppat_type longident_loc  -> "patterna14"
+                     ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable longident_loc.
+File "src/ppx.ml", line 225, characters 15-22:
+225 |     |Ppat_lazy pattern  -> "patterna15"
+                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 226, characters 17-36:
+226 |     |Ppat_unpack (loc_option_string) -> "patterna16"
+                       ^^^^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable loc_option_string.
+File "src/ppx.ml", line 227, characters 20-27:
+227 |     |Ppat_exception pattern  -> "patterna17"
+                          ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 228, characters 20-29:
+228 |     |Ppat_extension extension  -> "patterna19"
+                          ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable extension.
+File "src/ppx.ml", line 229, characters 16-29:
+229 |     |Ppat_open (longident_loc, pattern) -> "patterna30"
+                      ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable longident_loc.
+File "src/ppx.ml", line 229, characters 31-38:
+229 |     |Ppat_open (longident_loc, pattern) -> "patterna30"
+                                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pattern.
+File "src/ppx.ml", line 230, characters 39-40:
+230 | and process_long_ident_expression_list x = "process_long_ident_expression_list"
+                                             ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 233, characters 75-76:
+233 | and process_record_kind4 :label_declaration -> string_list -> string = fun x s -> ""
+                                                                                 ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 233, characters 77-78:
+233 | and process_record_kind4 :label_declaration -> string_list -> string = fun x s -> ""
+                                                                                   ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 234, characters 26-27:
+234 | and  process_record_kind2(x :label_declaration)(s:string_list) = ""
+                                ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 234, characters 48-49:
+234 | and  process_record_kind2(x :label_declaration)(s:string_list) = ""
+                                                      ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 235, characters 28-29:
+235 | and    process_record_kind3 x s = ""
+                                  ^
+Warning 27 [unused-var-strict]: unused variable x.
+File "src/ppx.ml", line 235, characters 30-31:
+235 | and    process_record_kind3 x s = ""
+                                    ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 243, characters 25-26:
+243 |   process_record_kind((x,s):label_declaration *string_list):string =
+                               ^
+Warning 27 [unused-var-strict]: unused variable s.
+File "src/ppx.ml", line 249, characters 5-12:
+249 |      pld_loc(* : Location.t *);
+           ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_loc.
+File "src/ppx.ml", line 250, characters 5-19:
+250 |      pld_attributes(* : attributes *); 
+           ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pld_attributes.
+File "src/ppx.ml", line 270, characters 15-18:
+270 |       let {txt;loc} = a in
+                     ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 273, characters 10-14:
+273 |       let edge = create_edge ("Ptyp_constr", id1) in
+                ^^^^
+Warning 26 [unused-var]: unused variable edge.
+File "src/ppx.ml", line 295, characters 16-25:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                      ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable arg_label.
+File "src/ppx.ml", line 295, characters 28-37:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                  ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type.
+File "src/ppx.ml", line 295, characters 40-50:
+295 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                              ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type2.
+File "src/ppx.ml", line 299, characters 17-18:
+299 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 299, characters 19-20:
+299 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                         ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 302, characters 18-19:
+302 |   | Ptyp_class (a,b) (* of Longident.t loc * core_type list *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 304, characters 8-12:
+304 |     let myid = (process_id1 a.txt) in
+              ^^^^
+Warning 26 [unused-var]: unused variable myid.
+File "src/ppx.ml", line 307, characters 16-17:
+307 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 307, characters 18-19:
+307 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 311, characters 18-19:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 311, characters 20-21:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                          ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 311, characters 22-23:
+311 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                            ^
+Warning 27 [unused-var-strict]: unused variable c.
+File "src/ppx.ml", line 314, characters 15-16:
+314 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 314, characters 17-18:
+314 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 336, characters 6-14:
+336 |       ptyp_loc(* : Location.t *);
+            ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 337, characters 6-20:
+337 |       ptyp_loc_stack(* : location_stack *);
+            ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 338, characters 6-21:
+338 |       ptyp_attributes(* : attributes; *)
+            ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 402, characters 11-14:
+402 |     { txt; loc }  ->
+                 ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 440, characters 21-22:
+440 |     | Ptyp_constr (a,b) (* of Longident.t loc * core_type list *)
+                           ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 442, characters 15-18:
+442 |       let {txt;loc} = a in
+                     ^^^
+Warning 27 [unused-var-strict]: unused variable loc.
+File "src/ppx.ml", line 455, characters 16-25:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                      ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable arg_label.
+File "src/ppx.ml", line 455, characters 28-37:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                  ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type.
+File "src/ppx.ml", line 455, characters 40-50:
+455 |   | Ptyp_arrow (arg_label , core_type , core_type2) ->
+                                              ^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable core_type2.
+File "src/ppx.ml", line 460, characters 17-18:
+460 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 460, characters 19-20:
+460 |   | Ptyp_object (a,b)(* of object_field list * closed_flag *)
+                         ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 463, characters 18-19:
+463 |   | Ptyp_class (a,b) (* of Longident.t loc * core_type list *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 465, characters 8-12:
+465 |     let myid = (process_id1 a.txt ) in
+              ^^^^
+Warning 26 [unused-var]: unused variable myid.
+File "src/ppx.ml", line 468, characters 16-17:
+468 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                      ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 468, characters 18-19:
+468 |   | Ptyp_alias (a,b) (* of core_type * string loc  *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 472, characters 18-19:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                        ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 472, characters 20-21:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                          ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 472, characters 22-23:
+472 |   | Ptyp_variant (a,b,c) (* of row_field list * closed_flag * label list option *)
+                            ^
+Warning 27 [unused-var-strict]: unused variable c.
+File "src/ppx.ml", line 478, characters 15-16:
+478 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                     ^
+Warning 27 [unused-var-strict]: unused variable a.
+File "src/ppx.ml", line 478, characters 17-18:
+478 |   | Ptyp_poly (a,b) (* of string loc list * core_type *)
+                       ^
+Warning 27 [unused-var-strict]: unused variable b.
+File "src/ppx.ml", line 497, characters 6-14:
+497 |       ptyp_loc(* : Location.t *);
+            ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 498, characters 6-20:
+498 |       ptyp_loc_stack(* : location_stack *);
+            ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 499, characters 6-21:
+499 |       ptyp_attributes(* : attributes; *)
+            ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 506, characters 9-10:
+506 |   | (x,s,n) ->
+               ^
+Warning 27 [unused-var-strict]: unused variable n.
+File "src/ppx.ml", line 510, characters 8-16:
+510 |         ptyp_loc(* : Location.t *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc.
+File "src/ppx.ml", line 511, characters 8-22:
+511 |         ptyp_loc_stack(* : location_stack *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_loc_stack.
+File "src/ppx.ml", line 512, characters 8-23:
+512 |         ptyp_attributes(* : attributes; *)
+              ^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptyp_attributes.
+File "src/ppx.ml", line 567, characters 142-147:
+567 |                                                                                                                                             | other  -> "other"
+                                                                                                                                                    ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/ppx.ml", line 570, characters 7-13:
+570 |   let (parent, parent2, atype, s, n) = a in
+             ^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent.
+File "src/ppx.ml", line 570, characters 15-22:
+570 |   let (parent, parent2, atype, s, n) = a in
+                     ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable parent2.
+File "src/ppx.ml", line 625, characters 4-9:
+625 |   | other  -> "other"
+          ^^^^^
+Warning 27 [unused-var-strict]: unused variable other.
+File "src/ppx.ml", line 660, characters 8-16:
+660 |         pcd_vars(* : string loc list *);
+              ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_vars.
+File "src/ppx.ml", line 662, characters 8-15:
+662 |         pcd_res(* : core_type option *);
+              ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_res.
+File "src/ppx.ml", line 663, characters 8-15:
+663 |         pcd_loc(* : Location.t *);
+              ^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_loc.
+File "src/ppx.ml", line 664, characters 8-22:
+664 |         pcd_attributes(* : attributes *); 
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable pcd_attributes.
+File "src/ppx.ml", line 724, characters 8-20:
+724 |         ptype_params (* : (core_type * (variance * injectivity)) list *);
+              ^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_params.
+File "src/ppx.ml", line 725, characters 8-19:
+725 |         ptype_cstrs (*: (core_type * core_type * location) list*) ;   
+              ^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_cstrs.
+File "src/ppx.ml", line 727, characters 8-21:
+727 |         ptype_private (*: private_flag*); 
+              ^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_private.
+File "src/ppx.ml", line 728, characters 8-22:
+728 |         ptype_manifest (* : core_type option *);
+              ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_manifest.
+File "src/ppx.ml", line 729, characters 8-24:
+729 |         ptype_attributes (*: attributes*);
+              ^^^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_attributes.
+File "src/ppx.ml", line 730, characters 8-17:
+730 |         ptype_loc (*: location*)
+              ^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable ptype_loc.
+File "src/ppx.ml", line 789, characters 20-28:
+789 |       | Pstr_value (rec_flag, value_binding_list) ->
+                          ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable rec_flag.
+File "src/ppx.ml", line 792, characters 17-25:
+792 |     | Pstr_type (rec_flag, type_declaration_list) ->      
+                       ^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable rec_flag.
+File "src/ppx.ml", line 796, characters 19-33:
+796 |     | Pstr_module  module_binding ->
+                         ^^^^^^^^^^^^^^
+Warning 27 [unused-var-strict]: unused variable module_binding.
+File "src/ppx.ml", line 834, characters 6-9:
+834 |   let foo = (process_all_structure_items print_one_structure_item x) in
+            ^^^
+Warning 26 [unused-var]: unused variable foo.
+File "src/ppx.ml", line 837, characters 17-18:
+837 | let process_bool x = "bool"
+                       ^
+Warning 27 [unused-var-strict]: unused variable x.
+Done: 91% (78/85, 7 left) (jobs: 1)                                   Done: 92% (79/85, 6 left) (jobs: 2)                                   Done: 95% (81/85, 4 left) (jobs: 1)                                   Done: 96% (82/85, 3 left) (jobs: 1)                                   DBG12AA:open Ppxlib
+DBG221EC: let process_directive_argument_desc__Pdir_bool x :string =match x with 
+DBG22A:let process_bool"-> x : bool"->= x
+DBG22A:let process_bool"-> x : bool"->= x
+DBG22EB:let process_types_directive_argument_desc__Pdir_bool((abool"->0):(bool"->)):string = (process_types ^ ("directive_argument_desc","Pdir_bool") ^(core_type "abool"->0"))
+DBG222EC:| Pdir_bool (bool"->0) -> (process_types_directive_argument_desc__Pdir_bool((process_bool"-> bool"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pdir_bool"{| Pdir_bool (bool"->0) -> (process_types_directive_argument_desc__Pdir_bool((process_bool"-> bool"->0)))}
+DBG221EC: let process_directive_argument_desc__Pdir_ident x :string =match x with 
+DBG22A:let process_longident"-> x : longident"->= x
+DBG22A:let process_longident"-> x : longident"->= x
+DBG22EB:let process_types_directive_argument_desc__Pdir_ident((alongident"->0):(longident"->)):string = (process_types ^ ("directive_argument_desc","Pdir_ident") ^(core_type "alongident"->0"))
+DBG222EC:| Pdir_ident (longident"->0) -> (process_types_directive_argument_desc__Pdir_ident((process_longident"-> longident"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pdir_ident"{| Pdir_ident (longident"->0) -> (process_types_directive_argument_desc__Pdir_ident((process_longident"-> longident"->0)))}
+DBG221EC: let process_directive_argument_desc__Pdir_int x :string =match x with 
+DBG22A:let process_string"-> x : string"->= x
+DBG22A:let process_option"->char"->0 x : option"->char"->0= x
+DBG22A:let process_string"-> x : string"->= x
+DBG22A:let process_option"->char"->0 x : option"->char"->0= x
+DBG22EB:let process_types_directive_argument_desc__Pdir_int((astring"->0,aoption"->char"->01):(string"->*option"->char"->0)):string = (process_types ^ ("directive_argument_desc","Pdir_int") ^(core_type "astring"->0")^(core_type "aoption"->char"->01"))
+DBG222EC:| Pdir_int (string"->0,option"->char"->00) -> (process_types_directive_argument_desc__Pdir_int((process_string"-> string"->0),(process_option"->char"->0 option"->char"->01)))
+DBG22E:constructor_declaration_new: constructor:"Pdir_int"{| Pdir_int (string"->0,option"->char"->00) -> (process_types_directive_argument_desc__Pdir_int((process_string"-> string"->0),(process_option"->char"->0 option"->char"->01)))}
+DBG221EC: let process_directive_argument_desc__Pdir_string x :string =match x with 
+DBG22A:let process_string"-> x : string"->= x
+DBG22A:let process_string"-> x : string"->= x
+DBG22EB:let process_types_directive_argument_desc__Pdir_string((astring"->0):(string"->)):string = (process_types ^ ("directive_argument_desc","Pdir_string") ^(core_type "astring"->0"))
+DBG222EC:| Pdir_string (string"->0) -> (process_types_directive_argument_desc__Pdir_string((process_string"-> string"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pdir_string"{| Pdir_string (string"->0) -> (process_types_directive_argument_desc__Pdir_string((process_string"-> string"->0)))}
+DBG221EC: let process_toplevel_phrase__Ptop_dir x :string =match x with 
+DBG22A:let process_toplevel_directive"-> x : toplevel_directive"->= x
+DBG22A:let process_toplevel_directive"-> x : toplevel_directive"->= x
+DBG22EB:let process_types_toplevel_phrase__Ptop_dir((atoplevel_directive"->0):(toplevel_directive"->)):string = (process_types ^ ("toplevel_phrase","Ptop_dir") ^(core_type "atoplevel_directive"->0"))
+DBG222EC:| Ptop_dir (toplevel_directive"->0) -> (process_types_toplevel_phrase__Ptop_dir((process_toplevel_directive"-> toplevel_directive"->0)))
+DBG22E:constructor_declaration_new: constructor:"Ptop_dir"{| Ptop_dir (toplevel_directive"->0) -> (process_types_toplevel_phrase__Ptop_dir((process_toplevel_directive"-> toplevel_directive"->0)))}
+DBG221EC: let process_toplevel_phrase__Ptop_def x :string =match x with 
+DBG22A:let process_structure"-> x : structure"->= x
+DBG22A:let process_structure"-> x : structure"->= x
+DBG22EB:let process_types_toplevel_phrase__Ptop_def((astructure"->0):(structure"->)):string = (process_types ^ ("toplevel_phrase","Ptop_def") ^(core_type "astructure"->0"))
+DBG222EC:| Ptop_def (structure"->0) -> (process_types_toplevel_phrase__Ptop_def((process_structure"-> structure"->0)))
+DBG22E:constructor_declaration_new: constructor:"Ptop_def"{| Ptop_def (structure"->0) -> (process_types_toplevel_phrase__Ptop_def((process_structure"-> structure"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_extension x :string =match x with 
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_extension((aextension"->0,aattributes"->1):(extension"->*attributes"->)):string = (process_types ^ ("structure_item_desc","Pstr_extension") ^(core_type "aextension"->0")^(core_type "aattributes"->1"))
+DBG222EC:| Pstr_extension (extension"->0,attributes"->0) -> (process_types_structure_item_desc__Pstr_extension((process_extension"-> extension"->0),(process_attributes"-> attributes"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_extension"{| Pstr_extension (extension"->0,attributes"->0) -> (process_types_structure_item_desc__Pstr_extension((process_extension"-> extension"->0),(process_attributes"-> attributes"->1)))}
+DBG221EC: let process_structure_item_desc__Pstr_attribute x :string =match x with 
+DBG22A:let process_attribute"-> x : attribute"->= x
+DBG22A:let process_attribute"-> x : attribute"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_attribute((aattribute"->0):(attribute"->)):string = (process_types ^ ("structure_item_desc","Pstr_attribute") ^(core_type "aattribute"->0"))
+DBG222EC:| Pstr_attribute (attribute"->0) -> (process_types_structure_item_desc__Pstr_attribute((process_attribute"-> attribute"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_attribute"{| Pstr_attribute (attribute"->0) -> (process_types_structure_item_desc__Pstr_attribute((process_attribute"-> attribute"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_include x :string =match x with 
+DBG22A:let process_include_declaration"-> x : include_declaration"->= x
+DBG22A:let process_include_declaration"-> x : include_declaration"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_include((ainclude_declaration"->0):(include_declaration"->)):string = (process_types ^ ("structure_item_desc","Pstr_include") ^(core_type "ainclude_declaration"->0"))
+DBG222EC:| Pstr_include (include_declaration"->0) -> (process_types_structure_item_desc__Pstr_include((process_include_declaration"-> include_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_include"{| Pstr_include (include_declaration"->0) -> (process_types_structure_item_desc__Pstr_include((process_include_declaration"-> include_declaration"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_class_type x :string =match x with 
+DBG22A:let process_list"->class_type_declaration"->0 x : list"->class_type_declaration"->0= x
+DBG22A:let process_list"->class_type_declaration"->0 x : list"->class_type_declaration"->0= x
+DBG22EB:let process_types_structure_item_desc__Pstr_class_type((alist"->class_type_declaration"->00):(list"->class_type_declaration"->0)):string = (process_types ^ ("structure_item_desc","Pstr_class_type") ^(core_type "alist"->class_type_declaration"->00"))
+DBG222EC:| Pstr_class_type (list"->class_type_declaration"->00) -> (process_types_structure_item_desc__Pstr_class_type((process_list"->class_type_declaration"->0 list"->class_type_declaration"->00)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_class_type"{| Pstr_class_type (list"->class_type_declaration"->00) -> (process_types_structure_item_desc__Pstr_class_type((process_list"->class_type_declaration"->0 list"->class_type_declaration"->00)))}
+DBG221EC: let process_structure_item_desc__Pstr_class x :string =match x with 
+DBG22A:let process_list"->class_declaration"->0 x : list"->class_declaration"->0= x
+DBG22A:let process_list"->class_declaration"->0 x : list"->class_declaration"->0= x
+DBG22EB:let process_types_structure_item_desc__Pstr_class((alist"->class_declaration"->00):(list"->class_declaration"->0)):string = (process_types ^ ("structure_item_desc","Pstr_class") ^(core_type "alist"->class_declaration"->00"))
+DBG222EC:| Pstr_class (list"->class_declaration"->00) -> (process_types_structure_item_desc__Pstr_class((process_list"->class_declaration"->0 list"->class_declaration"->00)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_class"{| Pstr_class (list"->class_declaration"->00) -> (process_types_structure_item_desc__Pstr_class((process_list"->class_declaration"->0 list"->class_declaration"->00)))}
+DBG221EC: let process_structure_item_desc__Pstr_open x :string =match x with 
+DBG22A:let process_open_declaration"-> x : open_declaration"->= x
+DBG22A:let process_open_declaration"-> x : open_declaration"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_open((aopen_declaration"->0):(open_declaration"->)):string = (process_types ^ ("structure_item_desc","Pstr_open") ^(core_type "aopen_declaration"->0"))
+DBG222EC:| Pstr_open (open_declaration"->0) -> (process_types_structure_item_desc__Pstr_open((process_open_declaration"-> open_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_open"{| Pstr_open (open_declaration"->0) -> (process_types_structure_item_desc__Pstr_open((process_open_declaration"-> open_declaration"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_modtype x :string =match x with 
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_modtype((amodule_type_declaration"->0):(module_type_declaration"->)):string = (process_types ^ ("structure_item_desc","Pstr_modtype") ^(core_type "amodule_type_declaration"->0"))
+DBG222EC:| Pstr_modtype (module_type_declaration"->0) -> (process_types_structure_item_desc__Pstr_modtype((process_module_type_declaration"-> module_type_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_modtype"{| Pstr_modtype (module_type_declaration"->0) -> (process_types_structure_item_desc__Pstr_modtype((process_module_type_declaration"-> module_type_declaration"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_recmodule x :string =match x with 
+DBG22A:let process_list"->module_binding"->0 x : list"->module_binding"->0= x
+DBG22A:let process_list"->module_binding"->0 x : list"->module_binding"->0= x
+DBG22EB:let process_types_structure_item_desc__Pstr_recmodule((alist"->module_binding"->00):(list"->module_binding"->0)):string = (process_types ^ ("structure_item_desc","Pstr_recmodule") ^(core_type "alist"->module_binding"->00"))
+DBG222EC:| Pstr_recmodule (list"->module_binding"->00) -> (process_types_structure_item_desc__Pstr_recmodule((process_list"->module_binding"->0 list"->module_binding"->00)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_recmodule"{| Pstr_recmodule (list"->module_binding"->00) -> (process_types_structure_item_desc__Pstr_recmodule((process_list"->module_binding"->0 list"->module_binding"->00)))}
+DBG221EC: let process_structure_item_desc__Pstr_module x :string =match x with 
+DBG22A:let process_module_binding"-> x : module_binding"->= x
+DBG22A:let process_module_binding"-> x : module_binding"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_module((amodule_binding"->0):(module_binding"->)):string = (process_types ^ ("structure_item_desc","Pstr_module") ^(core_type "amodule_binding"->0"))
+DBG222EC:| Pstr_module (module_binding"->0) -> (process_types_structure_item_desc__Pstr_module((process_module_binding"-> module_binding"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_module"{| Pstr_module (module_binding"->0) -> (process_types_structure_item_desc__Pstr_module((process_module_binding"-> module_binding"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_exception x :string =match x with 
+DBG22A:let process_type_exception"-> x : type_exception"->= x
+DBG22A:let process_type_exception"-> x : type_exception"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_exception((atype_exception"->0):(type_exception"->)):string = (process_types ^ ("structure_item_desc","Pstr_exception") ^(core_type "atype_exception"->0"))
+DBG222EC:| Pstr_exception (type_exception"->0) -> (process_types_structure_item_desc__Pstr_exception((process_type_exception"-> type_exception"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_exception"{| Pstr_exception (type_exception"->0) -> (process_types_structure_item_desc__Pstr_exception((process_type_exception"-> type_exception"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_typext x :string =match x with 
+DBG22A:let process_type_extension"-> x : type_extension"->= x
+DBG22A:let process_type_extension"-> x : type_extension"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_typext((atype_extension"->0):(type_extension"->)):string = (process_types ^ ("structure_item_desc","Pstr_typext") ^(core_type "atype_extension"->0"))
+DBG222EC:| Pstr_typext (type_extension"->0) -> (process_types_structure_item_desc__Pstr_typext((process_type_extension"-> type_extension"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_typext"{| Pstr_typext (type_extension"->0) -> (process_types_structure_item_desc__Pstr_typext((process_type_extension"-> type_extension"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_type x :string =match x with 
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22EB:let process_types_structure_item_desc__Pstr_type((arec_flag"->0,alist"->type_declaration"->01):(rec_flag"->*list"->type_declaration"->0)):string = (process_types ^ ("structure_item_desc","Pstr_type") ^(core_type "arec_flag"->0")^(core_type "alist"->type_declaration"->01"))
+DBG222EC:| Pstr_type (rec_flag"->0,list"->type_declaration"->00) -> (process_types_structure_item_desc__Pstr_type((process_rec_flag"-> rec_flag"->0),(process_list"->type_declaration"->0 list"->type_declaration"->01)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_type"{| Pstr_type (rec_flag"->0,list"->type_declaration"->00) -> (process_types_structure_item_desc__Pstr_type((process_rec_flag"-> rec_flag"->0),(process_list"->type_declaration"->0 list"->type_declaration"->01)))}
+DBG221EC: let process_structure_item_desc__Pstr_primitive x :string =match x with 
+DBG22A:let process_value_description"-> x : value_description"->= x
+DBG22A:let process_value_description"-> x : value_description"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_primitive((avalue_description"->0):(value_description"->)):string = (process_types ^ ("structure_item_desc","Pstr_primitive") ^(core_type "avalue_description"->0"))
+DBG222EC:| Pstr_primitive (value_description"->0) -> (process_types_structure_item_desc__Pstr_primitive((process_value_description"-> value_description"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_primitive"{| Pstr_primitive (value_description"->0) -> (process_types_structure_item_desc__Pstr_primitive((process_value_description"-> value_description"->0)))}
+DBG221EC: let process_structure_item_desc__Pstr_value x :string =match x with 
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->value_binding"->0 x : list"->value_binding"->0= x
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->value_binding"->0 x : list"->value_binding"->0= x
+DBG22EB:let process_types_structure_item_desc__Pstr_value((arec_flag"->0,alist"->value_binding"->01):(rec_flag"->*list"->value_binding"->0)):string = (process_types ^ ("structure_item_desc","Pstr_value") ^(core_type "arec_flag"->0")^(core_type "alist"->value_binding"->01"))
+DBG222EC:| Pstr_value (rec_flag"->0,list"->value_binding"->00) -> (process_types_structure_item_desc__Pstr_value((process_rec_flag"-> rec_flag"->0),(process_list"->value_binding"->0 list"->value_binding"->01)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_value"{| Pstr_value (rec_flag"->0,list"->value_binding"->00) -> (process_types_structure_item_desc__Pstr_value((process_rec_flag"-> rec_flag"->0),(process_list"->value_binding"->0 list"->value_binding"->01)))}
+DBG221EC: let process_structure_item_desc__Pstr_eval x :string =match x with 
+DBG22A:let process_expression"-> x : expression"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22A:let process_expression"-> x : expression"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22EB:let process_types_structure_item_desc__Pstr_eval((aexpression"->0,aattributes"->1):(expression"->*attributes"->)):string = (process_types ^ ("structure_item_desc","Pstr_eval") ^(core_type "aexpression"->0")^(core_type "aattributes"->1"))
+DBG222EC:| Pstr_eval (expression"->0,attributes"->0) -> (process_types_structure_item_desc__Pstr_eval((process_expression"-> expression"->0),(process_attributes"-> attributes"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pstr_eval"{| Pstr_eval (expression"->0,attributes"->0) -> (process_types_structure_item_desc__Pstr_eval((process_expression"-> expression"->0),(process_attributes"-> attributes"->1)))}
+DBG221EC: let process_module_expr_desc__Pmod_extension x :string =match x with 
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_extension((aextension"->0):(extension"->)):string = (process_types ^ ("module_expr_desc","Pmod_extension") ^(core_type "aextension"->0"))
+DBG222EC:| Pmod_extension (extension"->0) -> (process_types_module_expr_desc__Pmod_extension((process_extension"-> extension"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_extension"{| Pmod_extension (extension"->0) -> (process_types_module_expr_desc__Pmod_extension((process_extension"-> extension"->0)))}
+DBG221EC: let process_module_expr_desc__Pmod_unpack x :string =match x with 
+DBG22A:let process_expression"-> x : expression"->= x
+DBG22A:let process_expression"-> x : expression"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_unpack((aexpression"->0):(expression"->)):string = (process_types ^ ("module_expr_desc","Pmod_unpack") ^(core_type "aexpression"->0"))
+DBG222EC:| Pmod_unpack (expression"->0) -> (process_types_module_expr_desc__Pmod_unpack((process_expression"-> expression"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_unpack"{| Pmod_unpack (expression"->0) -> (process_types_module_expr_desc__Pmod_unpack((process_expression"-> expression"->0)))}
+DBG221EC: let process_module_expr_desc__Pmod_constraint x :string =match x with 
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_constraint((amodule_expr"->0,amodule_type"->1):(module_expr"->*module_type"->)):string = (process_types ^ ("module_expr_desc","Pmod_constraint") ^(core_type "amodule_expr"->0")^(core_type "amodule_type"->1"))
+DBG222EC:| Pmod_constraint (module_expr"->0,module_type"->0) -> (process_types_module_expr_desc__Pmod_constraint((process_module_expr"-> module_expr"->0),(process_module_type"-> module_type"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_constraint"{| Pmod_constraint (module_expr"->0,module_type"->0) -> (process_types_module_expr_desc__Pmod_constraint((process_module_expr"-> module_expr"->0),(process_module_type"-> module_type"->1)))}
+DBG221EC: let process_module_expr_desc__Pmod_apply x :string =match x with 
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_apply((amodule_expr"->0,amodule_expr"->1):(module_expr"->*module_expr"->)):string = (process_types ^ ("module_expr_desc","Pmod_apply") ^(core_type "amodule_expr"->0")^(core_type "amodule_expr"->1"))
+DBG222EC:| Pmod_apply (module_expr"->0,module_expr"->0) -> (process_types_module_expr_desc__Pmod_apply((process_module_expr"-> module_expr"->0),(process_module_expr"-> module_expr"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_apply"{| Pmod_apply (module_expr"->0,module_expr"->0) -> (process_types_module_expr_desc__Pmod_apply((process_module_expr"-> module_expr"->0),(process_module_expr"-> module_expr"->1)))}
+DBG221EC: let process_module_expr_desc__Pmod_functor x :string =match x with 
+DBG22A:let process_functor_parameter"-> x : functor_parameter"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_functor_parameter"-> x : functor_parameter"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_functor((afunctor_parameter"->0,amodule_expr"->1):(functor_parameter"->*module_expr"->)):string = (process_types ^ ("module_expr_desc","Pmod_functor") ^(core_type "afunctor_parameter"->0")^(core_type "amodule_expr"->1"))
+DBG222EC:| Pmod_functor (functor_parameter"->0,module_expr"->0) -> (process_types_module_expr_desc__Pmod_functor((process_functor_parameter"-> functor_parameter"->0),(process_module_expr"-> module_expr"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_functor"{| Pmod_functor (functor_parameter"->0,module_expr"->0) -> (process_types_module_expr_desc__Pmod_functor((process_functor_parameter"-> functor_parameter"->0),(process_module_expr"-> module_expr"->1)))}
+DBG221EC: let process_module_expr_desc__Pmod_structure x :string =match x with 
+DBG22A:let process_structure"-> x : structure"->= x
+DBG22A:let process_structure"-> x : structure"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_structure((astructure"->0):(structure"->)):string = (process_types ^ ("module_expr_desc","Pmod_structure") ^(core_type "astructure"->0"))
+DBG222EC:| Pmod_structure (structure"->0) -> (process_types_module_expr_desc__Pmod_structure((process_structure"-> structure"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_structure"{| Pmod_structure (structure"->0) -> (process_types_module_expr_desc__Pmod_structure((process_structure"-> structure"->0)))}
+DBG221EC: let process_module_expr_desc__Pmod_ident x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22EB:let process_types_module_expr_desc__Pmod_ident((alongident_loc"->0):(longident_loc"->)):string = (process_types ^ ("module_expr_desc","Pmod_ident") ^(core_type "alongident_loc"->0"))
+DBG222EC:| Pmod_ident (longident_loc"->0) -> (process_types_module_expr_desc__Pmod_ident((process_longident_loc"-> longident_loc"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmod_ident"{| Pmod_ident (longident_loc"->0) -> (process_types_module_expr_desc__Pmod_ident((process_longident_loc"-> longident_loc"->0)))}
+DBG221EC: let process_with_constraint__Pwith_modsubst x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22EB:let process_types_with_constraint__Pwith_modsubst((alongident_loc"->0,alongident_loc"->1):(longident_loc"->*longident_loc"->)):string = (process_types ^ ("with_constraint","Pwith_modsubst") ^(core_type "alongident_loc"->0")^(core_type "alongident_loc"->1"))
+DBG222EC:| Pwith_modsubst (longident_loc"->0,longident_loc"->0) -> (process_types_with_constraint__Pwith_modsubst((process_longident_loc"-> longident_loc"->0),(process_longident_loc"-> longident_loc"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_modsubst"{| Pwith_modsubst (longident_loc"->0,longident_loc"->0) -> (process_types_with_constraint__Pwith_modsubst((process_longident_loc"-> longident_loc"->0),(process_longident_loc"-> longident_loc"->1)))}
+DBG221EC: let process_with_constraint__Pwith_typesubst x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_type_declaration"-> x : type_declaration"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_type_declaration"-> x : type_declaration"->= x
+DBG22EB:let process_types_with_constraint__Pwith_typesubst((alongident_loc"->0,atype_declaration"->1):(longident_loc"->*type_declaration"->)):string = (process_types ^ ("with_constraint","Pwith_typesubst") ^(core_type "alongident_loc"->0")^(core_type "atype_declaration"->1"))
+DBG222EC:| Pwith_typesubst (longident_loc"->0,type_declaration"->0) -> (process_types_with_constraint__Pwith_typesubst((process_longident_loc"-> longident_loc"->0),(process_type_declaration"-> type_declaration"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_typesubst"{| Pwith_typesubst (longident_loc"->0,type_declaration"->0) -> (process_types_with_constraint__Pwith_typesubst((process_longident_loc"-> longident_loc"->0),(process_type_declaration"-> type_declaration"->1)))}
+DBG221EC: let process_with_constraint__Pwith_modtypesubst x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22EB:let process_types_with_constraint__Pwith_modtypesubst((alongident_loc"->0,amodule_type"->1):(longident_loc"->*module_type"->)):string = (process_types ^ ("with_constraint","Pwith_modtypesubst") ^(core_type "alongident_loc"->0")^(core_type "amodule_type"->1"))
+DBG222EC:| Pwith_modtypesubst (longident_loc"->0,module_type"->0) -> (process_types_with_constraint__Pwith_modtypesubst((process_longident_loc"-> longident_loc"->0),(process_module_type"-> module_type"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_modtypesubst"{| Pwith_modtypesubst (longident_loc"->0,module_type"->0) -> (process_types_with_constraint__Pwith_modtypesubst((process_longident_loc"-> longident_loc"->0),(process_module_type"-> module_type"->1)))}
+DBG221EC: let process_with_constraint__Pwith_modtype x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22EB:let process_types_with_constraint__Pwith_modtype((alongident_loc"->0,amodule_type"->1):(longident_loc"->*module_type"->)):string = (process_types ^ ("with_constraint","Pwith_modtype") ^(core_type "alongident_loc"->0")^(core_type "amodule_type"->1"))
+DBG222EC:| Pwith_modtype (longident_loc"->0,module_type"->0) -> (process_types_with_constraint__Pwith_modtype((process_longident_loc"-> longident_loc"->0),(process_module_type"-> module_type"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_modtype"{| Pwith_modtype (longident_loc"->0,module_type"->0) -> (process_types_with_constraint__Pwith_modtype((process_longident_loc"-> longident_loc"->0),(process_module_type"-> module_type"->1)))}
+DBG221EC: let process_with_constraint__Pwith_module x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22EB:let process_types_with_constraint__Pwith_module((alongident_loc"->0,alongident_loc"->1):(longident_loc"->*longident_loc"->)):string = (process_types ^ ("with_constraint","Pwith_module") ^(core_type "alongident_loc"->0")^(core_type "alongident_loc"->1"))
+DBG222EC:| Pwith_module (longident_loc"->0,longident_loc"->0) -> (process_types_with_constraint__Pwith_module((process_longident_loc"-> longident_loc"->0),(process_longident_loc"-> longident_loc"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_module"{| Pwith_module (longident_loc"->0,longident_loc"->0) -> (process_types_with_constraint__Pwith_module((process_longident_loc"-> longident_loc"->0),(process_longident_loc"-> longident_loc"->1)))}
+DBG221EC: let process_with_constraint__Pwith_type x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_type_declaration"-> x : type_declaration"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_type_declaration"-> x : type_declaration"->= x
+DBG22EB:let process_types_with_constraint__Pwith_type((alongident_loc"->0,atype_declaration"->1):(longident_loc"->*type_declaration"->)):string = (process_types ^ ("with_constraint","Pwith_type") ^(core_type "alongident_loc"->0")^(core_type "atype_declaration"->1"))
+DBG222EC:| Pwith_type (longident_loc"->0,type_declaration"->0) -> (process_types_with_constraint__Pwith_type((process_longident_loc"-> longident_loc"->0),(process_type_declaration"-> type_declaration"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pwith_type"{| Pwith_type (longident_loc"->0,type_declaration"->0) -> (process_types_with_constraint__Pwith_type((process_longident_loc"-> longident_loc"->0),(process_type_declaration"-> type_declaration"->1)))}
+DBG221EC: let process_signature_item_desc__Psig_extension x :string =match x with 
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_attributes"-> x : attributes"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_extension((aextension"->0,aattributes"->1):(extension"->*attributes"->)):string = (process_types ^ ("signature_item_desc","Psig_extension") ^(core_type "aextension"->0")^(core_type "aattributes"->1"))
+DBG222EC:| Psig_extension (extension"->0,attributes"->0) -> (process_types_signature_item_desc__Psig_extension((process_extension"-> extension"->0),(process_attributes"-> attributes"->1)))
+DBG22E:constructor_declaration_new: constructor:"Psig_extension"{| Psig_extension (extension"->0,attributes"->0) -> (process_types_signature_item_desc__Psig_extension((process_extension"-> extension"->0),(process_attributes"-> attributes"->1)))}
+DBG221EC: let process_signature_item_desc__Psig_attribute x :string =match x with 
+DBG22A:let process_attribute"-> x : attribute"->= x
+DBG22A:let process_attribute"-> x : attribute"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_attribute((aattribute"->0):(attribute"->)):string = (process_types ^ ("signature_item_desc","Psig_attribute") ^(core_type "aattribute"->0"))
+DBG222EC:| Psig_attribute (attribute"->0) -> (process_types_signature_item_desc__Psig_attribute((process_attribute"-> attribute"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_attribute"{| Psig_attribute (attribute"->0) -> (process_types_signature_item_desc__Psig_attribute((process_attribute"-> attribute"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_class_type x :string =match x with 
+DBG22A:let process_list"->class_type_declaration"->0 x : list"->class_type_declaration"->0= x
+DBG22A:let process_list"->class_type_declaration"->0 x : list"->class_type_declaration"->0= x
+DBG22EB:let process_types_signature_item_desc__Psig_class_type((alist"->class_type_declaration"->00):(list"->class_type_declaration"->0)):string = (process_types ^ ("signature_item_desc","Psig_class_type") ^(core_type "alist"->class_type_declaration"->00"))
+DBG222EC:| Psig_class_type (list"->class_type_declaration"->00) -> (process_types_signature_item_desc__Psig_class_type((process_list"->class_type_declaration"->0 list"->class_type_declaration"->00)))
+DBG22E:constructor_declaration_new: constructor:"Psig_class_type"{| Psig_class_type (list"->class_type_declaration"->00) -> (process_types_signature_item_desc__Psig_class_type((process_list"->class_type_declaration"->0 list"->class_type_declaration"->00)))}
+DBG221EC: let process_signature_item_desc__Psig_class x :string =match x with 
+DBG22A:let process_list"->class_description"->0 x : list"->class_description"->0= x
+DBG22A:let process_list"->class_description"->0 x : list"->class_description"->0= x
+DBG22EB:let process_types_signature_item_desc__Psig_class((alist"->class_description"->00):(list"->class_description"->0)):string = (process_types ^ ("signature_item_desc","Psig_class") ^(core_type "alist"->class_description"->00"))
+DBG222EC:| Psig_class (list"->class_description"->00) -> (process_types_signature_item_desc__Psig_class((process_list"->class_description"->0 list"->class_description"->00)))
+DBG22E:constructor_declaration_new: constructor:"Psig_class"{| Psig_class (list"->class_description"->00) -> (process_types_signature_item_desc__Psig_class((process_list"->class_description"->0 list"->class_description"->00)))}
+DBG221EC: let process_signature_item_desc__Psig_include x :string =match x with 
+DBG22A:let process_include_description"-> x : include_description"->= x
+DBG22A:let process_include_description"-> x : include_description"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_include((ainclude_description"->0):(include_description"->)):string = (process_types ^ ("signature_item_desc","Psig_include") ^(core_type "ainclude_description"->0"))
+DBG222EC:| Psig_include (include_description"->0) -> (process_types_signature_item_desc__Psig_include((process_include_description"-> include_description"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_include"{| Psig_include (include_description"->0) -> (process_types_signature_item_desc__Psig_include((process_include_description"-> include_description"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_open x :string =match x with 
+DBG22A:let process_open_description"-> x : open_description"->= x
+DBG22A:let process_open_description"-> x : open_description"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_open((aopen_description"->0):(open_description"->)):string = (process_types ^ ("signature_item_desc","Psig_open") ^(core_type "aopen_description"->0"))
+DBG222EC:| Psig_open (open_description"->0) -> (process_types_signature_item_desc__Psig_open((process_open_description"-> open_description"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_open"{| Psig_open (open_description"->0) -> (process_types_signature_item_desc__Psig_open((process_open_description"-> open_description"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_modtypesubst x :string =match x with 
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_modtypesubst((amodule_type_declaration"->0):(module_type_declaration"->)):string = (process_types ^ ("signature_item_desc","Psig_modtypesubst") ^(core_type "amodule_type_declaration"->0"))
+DBG222EC:| Psig_modtypesubst (module_type_declaration"->0) -> (process_types_signature_item_desc__Psig_modtypesubst((process_module_type_declaration"-> module_type_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_modtypesubst"{| Psig_modtypesubst (module_type_declaration"->0) -> (process_types_signature_item_desc__Psig_modtypesubst((process_module_type_declaration"-> module_type_declaration"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_modtype x :string =match x with 
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22A:let process_module_type_declaration"-> x : module_type_declaration"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_modtype((amodule_type_declaration"->0):(module_type_declaration"->)):string = (process_types ^ ("signature_item_desc","Psig_modtype") ^(core_type "amodule_type_declaration"->0"))
+DBG222EC:| Psig_modtype (module_type_declaration"->0) -> (process_types_signature_item_desc__Psig_modtype((process_module_type_declaration"-> module_type_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_modtype"{| Psig_modtype (module_type_declaration"->0) -> (process_types_signature_item_desc__Psig_modtype((process_module_type_declaration"-> module_type_declaration"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_recmodule x :string =match x with 
+DBG22A:let process_list"->module_declaration"->0 x : list"->module_declaration"->0= x
+DBG22A:let process_list"->module_declaration"->0 x : list"->module_declaration"->0= x
+DBG22EB:let process_types_signature_item_desc__Psig_recmodule((alist"->module_declaration"->00):(list"->module_declaration"->0)):string = (process_types ^ ("signature_item_desc","Psig_recmodule") ^(core_type "alist"->module_declaration"->00"))
+DBG222EC:| Psig_recmodule (list"->module_declaration"->00) -> (process_types_signature_item_desc__Psig_recmodule((process_list"->module_declaration"->0 list"->module_declaration"->00)))
+DBG22E:constructor_declaration_new: constructor:"Psig_recmodule"{| Psig_recmodule (list"->module_declaration"->00) -> (process_types_signature_item_desc__Psig_recmodule((process_list"->module_declaration"->0 list"->module_declaration"->00)))}
+DBG221EC: let process_signature_item_desc__Psig_modsubst x :string =match x with 
+DBG22A:let process_module_substitution"-> x : module_substitution"->= x
+DBG22A:let process_module_substitution"-> x : module_substitution"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_modsubst((amodule_substitution"->0):(module_substitution"->)):string = (process_types ^ ("signature_item_desc","Psig_modsubst") ^(core_type "amodule_substitution"->0"))
+DBG222EC:| Psig_modsubst (module_substitution"->0) -> (process_types_signature_item_desc__Psig_modsubst((process_module_substitution"-> module_substitution"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_modsubst"{| Psig_modsubst (module_substitution"->0) -> (process_types_signature_item_desc__Psig_modsubst((process_module_substitution"-> module_substitution"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_module x :string =match x with 
+DBG22A:let process_module_declaration"-> x : module_declaration"->= x
+DBG22A:let process_module_declaration"-> x : module_declaration"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_module((amodule_declaration"->0):(module_declaration"->)):string = (process_types ^ ("signature_item_desc","Psig_module") ^(core_type "amodule_declaration"->0"))
+DBG222EC:| Psig_module (module_declaration"->0) -> (process_types_signature_item_desc__Psig_module((process_module_declaration"-> module_declaration"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_module"{| Psig_module (module_declaration"->0) -> (process_types_signature_item_desc__Psig_module((process_module_declaration"-> module_declaration"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_exception x :string =match x with 
+DBG22A:let process_type_exception"-> x : type_exception"->= x
+DBG22A:let process_type_exception"-> x : type_exception"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_exception((atype_exception"->0):(type_exception"->)):string = (process_types ^ ("signature_item_desc","Psig_exception") ^(core_type "atype_exception"->0"))
+DBG222EC:| Psig_exception (type_exception"->0) -> (process_types_signature_item_desc__Psig_exception((process_type_exception"-> type_exception"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_exception"{| Psig_exception (type_exception"->0) -> (process_types_signature_item_desc__Psig_exception((process_type_exception"-> type_exception"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_typext x :string =match x with 
+DBG22A:let process_type_extension"-> x : type_extension"->= x
+DBG22A:let process_type_extension"-> x : type_extension"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_typext((atype_extension"->0):(type_extension"->)):string = (process_types ^ ("signature_item_desc","Psig_typext") ^(core_type "atype_extension"->0"))
+DBG222EC:| Psig_typext (type_extension"->0) -> (process_types_signature_item_desc__Psig_typext((process_type_extension"-> type_extension"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_typext"{| Psig_typext (type_extension"->0) -> (process_types_signature_item_desc__Psig_typext((process_type_extension"-> type_extension"->0)))}
+DBG221EC: let process_signature_item_desc__Psig_typesubst x :string =match x with 
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22EB:let process_types_signature_item_desc__Psig_typesubst((alist"->type_declaration"->00):(list"->type_declaration"->0)):string = (process_types ^ ("signature_item_desc","Psig_typesubst") ^(core_type "alist"->type_declaration"->00"))
+DBG222EC:| Psig_typesubst (list"->type_declaration"->00) -> (process_types_signature_item_desc__Psig_typesubst((process_list"->type_declaration"->0 list"->type_declaration"->00)))
+DBG22E:constructor_declaration_new: constructor:"Psig_typesubst"{| Psig_typesubst (list"->type_declaration"->00) -> (process_types_signature_item_desc__Psig_typesubst((process_list"->type_declaration"->0 list"->type_declaration"->00)))}
+DBG221EC: let process_signature_item_desc__Psig_type x :string =match x with 
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22A:let process_rec_flag"-> x : rec_flag"->= x
+DBG22A:let process_list"->type_declaration"->0 x : list"->type_declaration"->0= x
+DBG22EB:let process_types_signature_item_desc__Psig_type((arec_flag"->0,alist"->type_declaration"->01):(rec_flag"->*list"->type_declaration"->0)):string = (process_types ^ ("signature_item_desc","Psig_type") ^(core_type "arec_flag"->0")^(core_type "alist"->type_declaration"->01"))
+DBG222EC:| Psig_type (rec_flag"->0,list"->type_declaration"->00) -> (process_types_signature_item_desc__Psig_type((process_rec_flag"-> rec_flag"->0),(process_list"->type_declaration"->0 list"->type_declaration"->01)))
+DBG22E:constructor_declaration_new: constructor:"Psig_type"{| Psig_type (rec_flag"->0,list"->type_declaration"->00) -> (process_types_signature_item_desc__Psig_type((process_rec_flag"-> rec_flag"->0),(process_list"->type_declaration"->0 list"->type_declaration"->01)))}
+DBG221EC: let process_signature_item_desc__Psig_value x :string =match x with 
+DBG22A:let process_value_description"-> x : value_description"->= x
+DBG22A:let process_value_description"-> x : value_description"->= x
+DBG22EB:let process_types_signature_item_desc__Psig_value((avalue_description"->0):(value_description"->)):string = (process_types ^ ("signature_item_desc","Psig_value") ^(core_type "avalue_description"->0"))
+DBG222EC:| Psig_value (value_description"->0) -> (process_types_signature_item_desc__Psig_value((process_value_description"-> value_description"->0)))
+DBG22E:constructor_declaration_new: constructor:"Psig_value"{| Psig_value (value_description"->0) -> (process_types_signature_item_desc__Psig_value((process_value_description"-> value_description"->0)))}
+DBG221EC: let process_functor_parameter__Named x :string =match x with 
+DBG22A:let process_loc"->option"->string"->00 x : loc"->option"->string"->00= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_loc"->option"->string"->00 x : loc"->option"->string"->00= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22EB:let process_types_functor_parameter__Named((aloc"->option"->string"->000,amodule_type"->1):(loc"->option"->string"->00*module_type"->)):string = (process_types ^ ("functor_parameter","Named") ^(core_type "aloc"->option"->string"->000")^(core_type "amodule_type"->1"))
+DBG222EC:| Named (loc"->option"->string"->000,module_type"->0) -> (process_types_functor_parameter__Named((process_loc"->option"->string"->00 loc"->option"->string"->000),(process_module_type"-> module_type"->1)))
+DBG22E:constructor_declaration_new: constructor:"Named"{| Named (loc"->option"->string"->000,module_type"->0) -> (process_types_functor_parameter__Named((process_loc"->option"->string"->00 loc"->option"->string"->000),(process_module_type"-> module_type"->1)))}
+DBG221EC: let process_functor_parameter__Unit x :string =match x with 
+DBG22EB:let process_types_functor_parameter__Unit(():()):string = (process_types ^ ("functor_parameter","Unit") ^)
+DBG222EC:| Unit () -> (process_types_functor_parameter__Unit())
+DBG22E:constructor_declaration_new: constructor:"Unit"{| Unit () -> (process_types_functor_parameter__Unit())}
+DBG221EC: let process_module_type_desc__Pmty_alias x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+DBG22EB:let process_types_module_type_desc__Pmty_alias((alongident_loc"->0):(longident_loc"->)):string = (process_types ^ ("module_type_desc","Pmty_alias") ^(core_type "alongident_loc"->0"))
+DBG222EC:| Pmty_alias (longident_loc"->0) -> (process_types_module_type_desc__Pmty_alias((process_longident_loc"-> longident_loc"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_alias"{| Pmty_alias (longident_loc"->0) -> (process_types_module_type_desc__Pmty_alias((process_longident_loc"-> longident_loc"->0)))}
+DBG221EC: let process_module_type_desc__Pmty_extension x :string =match x with 
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22A:let process_extension"-> x : extension"->= x
+DBG22EB:let process_types_module_type_desc__Pmty_extension((aextension"->0):(extension"->)):string = (process_types ^ ("module_type_desc","Pmty_extension") ^(core_type "aextension"->0"))
+DBG222EC:| Pmty_extension (extension"->0) -> (process_types_module_type_desc__Pmty_extension((process_extension"-> extension"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_extension"{| Pmty_extension (extension"->0) -> (process_types_module_type_desc__Pmty_extension((process_extension"-> extension"->0)))}
+DBG221EC: let process_module_type_desc__Pmty_typeof x :string =match x with 
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22A:let process_module_expr"-> x : module_expr"->= x
+DBG22EB:let process_types_module_type_desc__Pmty_typeof((amodule_expr"->0):(module_expr"->)):string = (process_types ^ ("module_type_desc","Pmty_typeof") ^(core_type "amodule_expr"->0"))
+DBG222EC:| Pmty_typeof (module_expr"->0) -> (process_types_module_type_desc__Pmty_typeof((process_module_expr"-> module_expr"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_typeof"{| Pmty_typeof (module_expr"->0) -> (process_types_module_type_desc__Pmty_typeof((process_module_expr"-> module_expr"->0)))}
+DBG221EC: let process_module_type_desc__Pmty_with x :string =match x with 
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_list"->with_constraint"->0 x : list"->with_constraint"->0= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_list"->with_constraint"->0 x : list"->with_constraint"->0= x
+DBG22EB:let process_types_module_type_desc__Pmty_with((amodule_type"->0,alist"->with_constraint"->01):(module_type"->*list"->with_constraint"->0)):string = (process_types ^ ("module_type_desc","Pmty_with") ^(core_type "amodule_type"->0")^(core_type "alist"->with_constraint"->01"))
+DBG222EC:| Pmty_with (module_type"->0,list"->with_constraint"->00) -> (process_types_module_type_desc__Pmty_with((process_module_type"-> module_type"->0),(process_list"->with_constraint"->0 list"->with_constraint"->01)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_with"{| Pmty_with (module_type"->0,list"->with_constraint"->00) -> (process_types_module_type_desc__Pmty_with((process_module_type"-> module_type"->0),(process_list"->with_constraint"->0 list"->with_constraint"->01)))}
+DBG221EC: let process_module_type_desc__Pmty_functor x :string =match x with 
+DBG22A:let process_functor_parameter"-> x : functor_parameter"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22A:let process_functor_parameter"-> x : functor_parameter"->= x
+DBG22A:let process_module_type"-> x : module_type"->= x
+DBG22EB:let process_types_module_type_desc__Pmty_functor((afunctor_parameter"->0,amodule_type"->1):(functor_parameter"->*module_type"->)):string = (process_types ^ ("module_type_desc","Pmty_functor") ^(core_type "afunctor_parameter"->0")^(core_type "amodule_type"->1"))
+DBG222EC:| Pmty_functor (functor_parameter"->0,module_type"->0) -> (process_types_module_type_desc__Pmty_functor((process_functor_parameter"-> functor_parameter"->0),(process_module_type"-> module_type"->1)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_functor"{| Pmty_functor (functor_parameter"->0,module_type"->0) -> (process_types_module_type_desc__Pmty_functor((process_functor_parameter"-> functor_parameter"->0),(process_module_type"-> module_type"->1)))}
+DBG221EC: let process_module_type_desc__Pmty_signature x :string =match x with 
+DBG22A:let process_signature"-> x : signature"->= x
+DBG22A:let process_signature"-> x : signature"->= x
+DBG22EB:let process_types_module_type_desc__Pmty_signature((asignature"->0):(signature"->)):string = (process_types ^ ("module_type_desc","Pmty_signature") ^(core_type "asignature"->0"))
+DBG222EC:| Pmty_signature (signature"->0) -> (process_types_module_type_desc__Pmty_signature((process_signature"-> signature"->0)))
+DBG22E:constructor_declaration_new: constructor:"Pmty_signature"{| Pmty_signature (signature"->0) -> (process_types_module_type_desc__Pmty_signature((process_signature"-> signature"->0)))}
+DBG221EC: let process_module_type_desc__Pmty_ident x :string =match x with 
+DBG22A:let process_longident_loc"-> x : longident_loc"->= x
+...TRUNCATED BY DUNE...
+)[print_type_decl:"pattern" = process_record_kind:"ppat_desc|" body:ptyp_desc:Ptyp_constr:"pattern_desc|"->my_process_core_type_list:/process_record_kind:"ppat_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"ppat_loc_stack|" body:ptyp_desc:Ptyp_constr:"location_stack|"->my_process_core_type_list:/process_record_kind:"ppat_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"pattern_desc" = (Ptype_variant (constructor "Ppat_any" {Pcstr_tuple:my_process_core_type_list:})(constructor "Ppat_var" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_alias" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_constant" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"constant|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_interval" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"constant|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"constant|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_tuple" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_construct" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_variant" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_record" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"closed_flag|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_array" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_or" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_lazy" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_unpack" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_exception" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ppat_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_pattern_desc(x:pattern_desc)=
+match x with
+)[print_type_decl:"expression" = process_record_kind:"pexp_desc|" body:ptyp_desc:Ptyp_constr:"expression_desc|"->my_process_core_type_list:/process_record_kind:"pexp_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pexp_loc_stack|" body:ptyp_desc:Ptyp_constr:"location_stack|"->my_process_core_type_list:/process_record_kind:"pexp_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"expression_desc" = (Ptype_variant (constructor "Pexp_ident" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_constant" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"constant|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_let" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"rec_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"value_binding|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_function" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"cases|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_fun" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"arg_label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_apply" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"arg_label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_match" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"cases|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_try" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"cases|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_tuple" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_construct" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_variant" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_record" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_field" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_setfield" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_array" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_ifthenelse" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_sequence" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_while" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_for" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"direction_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_coerce" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_send" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_new" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_setinstvar" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_override" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_letmodule" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_letexception" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension_constructor|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_assert" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_lazy" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_poly" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_object" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_structure|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_newtype" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_pack" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"open_declaration|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_letop" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"letop|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pexp_unreachable" {Pcstr_tuple:my_process_core_type_list:})
+DEBUG3A: let process_variant_expression_desc(x:expression_desc)=
+match x with
+)[print_type_decl:"case" = process_record_kind:"pc_lhs|" body:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:/process_record_kind:"pc_guard|" body:ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pc_rhs|" body:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"letop" = process_record_kind:"let_|" body:ptyp_desc:Ptyp_constr:"binding_op|"->my_process_core_type_list:/process_record_kind:"ands|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"binding_op|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"body|" body:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"binding_op" = process_record_kind:"pbop_op|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pbop_pat|" body:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:/process_record_kind:"pbop_exp|" body:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:/process_record_kind:"pbop_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"value_description" = process_record_kind:"pval_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pval_type|" body:ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:/process_record_kind:"pval_prim|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pval_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pval_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"type_declaration" = process_record_kind:"ptype_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptype_params|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"variance|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"injectivity|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptype_cstrs|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptype_kind|" body:ptyp_desc:Ptyp_constr:"type_kind|"->my_process_core_type_list:/process_record_kind:"ptype_private|" body:ptyp_desc:Ptyp_constr:"private_flag|"->my_process_core_type_list:/process_record_kind:"ptype_manifest|" body:ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptype_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"ptype_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"type_kind" = (Ptype_variant (constructor "Ptype_abstract" {Pcstr_tuple:my_process_core_type_list:})(constructor "Ptype_variant" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"constructor_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ptype_record" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"label_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Ptype_open" {Pcstr_tuple:my_process_core_type_list:})
+DEBUG3A: let process_variant_type_kind(x:type_kind)=
+match x with
+)[print_type_decl:"label_declaration" = process_record_kind:"pld_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pld_mutable|" body:ptyp_desc:Ptyp_constr:"mutable_flag|"->my_process_core_type_list:/process_record_kind:"pld_type|" body:ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:/process_record_kind:"pld_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pld_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"constructor_declaration" = process_record_kind:"pcd_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pcd_vars|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pcd_args|" body:ptyp_desc:Ptyp_constr:"constructor_arguments|"->my_process_core_type_list:/process_record_kind:"pcd_res|" body:ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pcd_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pcd_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"constructor_arguments" = (Ptype_variant (constructor "Pcstr_tuple" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcstr_record" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"label_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_constructor_arguments(x:constructor_arguments)=
+match x with
+)[print_type_decl:"type_extension" = process_record_kind:"ptyext_path|" body:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:/process_record_kind:"ptyext_params|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"variance|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"injectivity|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptyext_constructors|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"extension_constructor|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"ptyext_private|" body:ptyp_desc:Ptyp_constr:"private_flag|"->my_process_core_type_list:/process_record_kind:"ptyext_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"ptyext_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"extension_constructor" = process_record_kind:"pext_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pext_kind|" body:ptyp_desc:Ptyp_constr:"extension_constructor_kind|"->my_process_core_type_list:/process_record_kind:"pext_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pext_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"type_exception" = process_record_kind:"ptyexn_constructor|" body:ptyp_desc:Ptyp_constr:"extension_constructor|"->my_process_core_type_list:/process_record_kind:"ptyexn_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"ptyexn_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"extension_constructor_kind" = (Ptype_variant (constructor "Pext_decl" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"constructor_arguments|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pext_rebind" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_extension_constructor_kind(x:extension_constructor_kind)=
+match x with
+)[print_type_decl:"class_type" = process_record_kind:"pcty_desc|" body:ptyp_desc:Ptyp_constr:"class_type_desc|"->my_process_core_type_list:/process_record_kind:"pcty_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pcty_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_type_desc" = (Ptype_variant (constructor "Pcty_constr" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcty_signature" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_signature|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcty_arrow" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"arg_label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcty_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcty_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"open_description|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_type|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_class_type_desc(x:class_type_desc)=
+match x with
+)[print_type_decl:"class_signature" = process_record_kind:"pcsig_self|" body:ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:/process_record_kind:"pcsig_fields|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_type_field|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_type_field" = process_record_kind:"pctf_desc|" body:ptyp_desc:Ptyp_constr:"class_type_field_desc|"->my_process_core_type_list:/process_record_kind:"pctf_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pctf_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_type_field_desc" = (Ptype_variant (constructor "Pctf_inherit" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pctf_val" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"mutable_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"virtual_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pctf_method" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"private_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"virtual_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pctf_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pctf_attribute" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"attribute|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pctf_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_class_type_field_desc(x:class_type_field_desc)=
+match x with
+)[print_type_decl:"class_infos" = process_record_kind:"pci_virt|" body:ptyp_desc:Ptyp_constr:"virtual_flag|"->my_process_core_type_list:/process_record_kind:"pci_params|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"variance|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"injectivity|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pci_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pci_expr|" body:ptyp_desc:var-name/process_record_kind:"pci_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pci_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_description" = DBG1:Ptype_abstract[print_type_decl:"class_type_declaration" = DBG1:Ptype_abstract[print_type_decl:"class_expr" = process_record_kind:"pcl_desc|" body:ptyp_desc:Ptyp_constr:"class_expr_desc|"->my_process_core_type_list:/process_record_kind:"pcl_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pcl_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_expr_desc" = (Ptype_variant (constructor "Pcl_constr" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_structure" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_structure|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_fun" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"arg_label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_apply" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"arg_label|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_let" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"rec_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"value_binding|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcl_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"open_description|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_class_expr_desc(x:class_expr_desc)=
+match x with
+)[print_type_decl:"class_structure" = process_record_kind:"pcstr_self|" body:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:/process_record_kind:"pcstr_fields|" body:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_field|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_field" = process_record_kind:"pcf_desc|" body:ptyp_desc:Ptyp_constr:"class_field_desc|"->my_process_core_type_list:/process_record_kind:"pcf_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pcf_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"class_field_desc" = (Ptype_variant (constructor "Pcf_inherit" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"override_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_val" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"mutable_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_field_kind|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_method" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"label|"->my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"private_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"class_field_kind|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_tupleptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_initializer" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_attribute" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"attribute|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pcf_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_class_field_desc(x:class_field_desc)=
+match x with
+)[print_type_decl:"class_field_kind" = (Ptype_variant (constructor "Cfk_virtual" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"core_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Cfk_concrete" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"override_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_class_field_kind(x:class_field_kind)=
+match x with
+)[print_type_decl:"class_declaration" = DBG1:Ptype_abstract[print_type_decl:"module_type" = process_record_kind:"pmty_desc|" body:ptyp_desc:Ptyp_constr:"module_type_desc|"->my_process_core_type_list:/process_record_kind:"pmty_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pmty_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"module_type_desc" = (Ptype_variant (constructor "Pmty_ident" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_signature" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"signature|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_functor" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"functor_parameter|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_with" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"with_constraint|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_typeof" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmty_alias" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_module_type_desc(x:module_type_desc)=
+match x with
+)[print_type_decl:"functor_parameter" = (Ptype_variant (constructor "Unit" {Pcstr_tuple:my_process_core_type_list:})(constructor "Named" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_functor_parameter(x:functor_parameter)=
+match x with
+)[print_type_decl:"signature" = DBG1:Ptype_abstract[print_type_decl:"signature_item" = process_record_kind:"psig_desc|" body:ptyp_desc:Ptyp_constr:"signature_item_desc|"->my_process_core_type_list:/process_record_kind:"psig_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"signature_item_desc" = (Ptype_variant (constructor "Psig_value" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"value_description|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"rec_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"type_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_typesubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"type_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_typext" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"type_extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_exception" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"type_exception|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_module" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_modsubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_substitution|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_recmodule" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"module_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_modtype" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_type_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_modtypesubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_type_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"open_description|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_include" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"include_description|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_class" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_description|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_class_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_type_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_attribute" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"attribute|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Psig_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_signature_item_desc(x:signature_item_desc)=
+match x with
+)[print_type_decl:"module_declaration" = process_record_kind:"pmd_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pmd_type|" body:ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:/process_record_kind:"pmd_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pmd_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"module_substitution" = process_record_kind:"pms_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pms_manifest|" body:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:/process_record_kind:"pms_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pms_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"module_type_declaration" = process_record_kind:"pmtd_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pmtd_type|" body:ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pmtd_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pmtd_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"open_infos" = process_record_kind:"popen_expr|" body:ptyp_desc:var-name/process_record_kind:"popen_override|" body:ptyp_desc:Ptyp_constr:"override_flag|"->my_process_core_type_list:/process_record_kind:"popen_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"popen_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"open_description" = DBG1:Ptype_abstract[print_type_decl:"open_declaration" = DBG1:Ptype_abstract[print_type_decl:"include_infos" = process_record_kind:"pincl_mod|" body:ptyp_desc:var-name/process_record_kind:"pincl_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pincl_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"include_description" = DBG1:Ptype_abstract[print_type_decl:"include_declaration" = DBG1:Ptype_abstract[print_type_decl:"with_constraint" = (Ptype_variant (constructor "Pwith_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"type_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pwith_module" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pwith_modtype" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pwith_modtypesubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pwith_typesubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"type_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pwith_modsubst" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_with_constraint(x:with_constraint)=
+match x with
+)[print_type_decl:"module_expr" = process_record_kind:"pmod_desc|" body:ptyp_desc:Ptyp_constr:"module_expr_desc|"->my_process_core_type_list:/process_record_kind:"pmod_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind:"pmod_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"module_expr_desc" = (Ptype_variant (constructor "Pmod_ident" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident_loc|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_structure" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"structure|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_functor" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"functor_parameter|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_apply" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_constraint" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"module_type|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_unpack" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pmod_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_module_expr_desc(x:module_expr_desc)=
+match x with
+)[print_type_decl:"structure" = DBG1:Ptype_abstract[print_type_decl:"structure_item" = process_record_kind:"pstr_desc|" body:ptyp_desc:Ptyp_constr:"structure_item_desc|"->my_process_core_type_list:/process_record_kind:"pstr_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"structure_item_desc" = (Ptype_variant (constructor "Pstr_eval" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_value" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"rec_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"value_binding|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_primitive" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"value_description|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"rec_flag|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"type_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_typext" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"type_extension|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_exception" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"type_exception|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_module" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_binding|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_recmodule" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"module_binding|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_modtype" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"module_type_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_open" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"open_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_class" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_class_type" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"list|"->ptyp_desc:Ptyp_constr:"class_type_declaration|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_include" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"include_declaration|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_attribute" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"attribute|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pstr_extension" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"extension|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_structure_item_desc(x:structure_item_desc)=
+match x with
+)[print_type_decl:"value_binding" = process_record_kind:"pvb_pat|" body:ptyp_desc:Ptyp_constr:"pattern|"->my_process_core_type_list:/process_record_kind:"pvb_expr|" body:ptyp_desc:Ptyp_constr:"expression|"->my_process_core_type_list:/process_record_kind:"pvb_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pvb_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"module_binding" = process_record_kind:"pmb_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pmb_expr|" body:ptyp_desc:Ptyp_constr:"module_expr|"->my_process_core_type_list:/process_record_kind:"pmb_attributes|" body:ptyp_desc:Ptyp_constr:"attributes|"->my_process_core_type_list:/process_record_kind:"pmb_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"toplevel_phrase" = (Ptype_variant (constructor "Ptop_def" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"structure|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Ptop_dir" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"toplevel_directive|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_toplevel_phrase(x:toplevel_phrase)=
+match x with
+)[print_type_decl:"toplevel_directive" = process_record_kind:"pdir_name|" body:ptyp_desc:Ptyp_constr:"loc|"->ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pdir_arg|" body:ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"directive_argument|"->my_process_core_type_list:,my_process_core_type_list:/process_record_kind:"pdir_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"directive_argument" = process_record_kind:"pdira_desc|" body:ptyp_desc:Ptyp_constr:"directive_argument_desc|"->my_process_core_type_list:/process_record_kind:"pdira_loc|" body:ptyp_desc:Ptyp_constr:"location|"->my_process_core_type_list:/process_record_kind_list[print_type_decl:"directive_argument_desc" = (Ptype_variant (constructor "Pdir_string" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pdir_int" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"string|"->my_process_core_type_list:,ptyp_desc:Ptyp_constr:"option|"->ptyp_desc:Ptyp_constr:"char|"->my_process_core_type_list:,my_process_core_type_list:,my_process_core_type_list:})(constructor "Pdir_ident" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"longident|"->my_process_core_type_list:,my_process_core_type_list:})(constructor "Pdir_bool" {Pcstr_tuple:ptyp_desc:Ptyp_constr:"bool|"->my_process_core_type_list:,my_process_core_type_list:})
+DEBUG3A: let process_variant_directive_argument_desc(x:directive_argument_desc)=
+match x with
+)[print_type_decl:"cases" = DBG1:Ptype_abstract[process_type_decl_list]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]])
+TOPstructure_item_desc2:structure_item_desc__Pstr_type_rec_flagarec_flag0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc class)
+TOPstructure_item_desc2:structure_item_desc__Pstr_class_listalist0
+TOPstructure_item_desc:(print_structure_item_desc _attribute)
+TOPstructure_item_desc2:structure_item_desc__Pstr_attribute_attributeaattribute0
+TOPstructure_item_desc:(print_structure_item_desc _attribute)
+TOPstructure_item_desc2:structure_item_desc__Pstr_attribute_attributeaattribute0
+Done: 96% (82/85, 3 left) (jobs: 1)                                   

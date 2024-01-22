@@ -1,0 +1,39 @@
+DBG221EC: let process_newrec_flag4__Recursive1 x :string =match x with 
+DBG22EB:let process_types_newrec_flag4__Recursive1(():()):string = (process_types ^ ("newrec_flag4","Recursive1") ^)
+DBG222EC:| Recursive1 () -> (process_types_newrec_flag4__Recursive1())
+DBG22E:constructor_declaration_new: constructor:"Recursive1"{| Recursive1 () -> (process_types_newrec_flag4__Recursive1())}
+DBG221EC: let process_newrec_flag3__Recursive2 x :string =match x with 
+DBG22EB:let process_types_newrec_flag3__Recursive2(():()):string = (process_types ^ ("newrec_flag3","Recursive2") ^)
+DBG222EC:| Recursive2 () -> (process_types_newrec_flag3__Recursive2())
+DBG22E:constructor_declaration_new: constructor:"Recursive2"{| Recursive2 () -> (process_types_newrec_flag3__Recursive2())}
+DBG221EC: let process_newrec_flag2__Recursive x :string =match x with 
+DBG22EB:let process_types_newrec_flag2__Recursive(():()):string = (process_types ^ ("newrec_flag2","Recursive") ^)
+DBG222EC:| Recursive () -> (process_types_newrec_flag2__Recursive())
+DBG22E:constructor_declaration_new: constructor:"Recursive"{| Recursive () -> (process_types_newrec_flag2__Recursive())}
+DEBUG:(emit_type_variant_constructor_declaration_list constructor:"Recursive"{| Recursive () -> (process_types_newrec_flag2__Recursive())}
+DEBUG:(emit_type_variant_constructor_declaration_list constructor:"Recursive2"{| Recursive2 () -> (process_types_newrec_flag3__Recursive2())}
+DEBUG:(emit_type_variant_constructor_declaration_list constructor:"Recursive1"{| Recursive1 () -> (process_types_newrec_flag4__Recursive1())}
+DBG12C: let process_newrec_flag4__Recursive1 x :string =match x with 
+DBG12B:let process_types_newrec_flag4__Recursive1(():()):string = (process_types ^ ("newrec_flag4","Recursive1") ^)
+DBG12C:| Recursive1 (emit_core_type_list ) -> (process_types_newrec_flag4__Recursive1())
+DBG1:constructor_declaration_new: (constructor "Recursive1" {Pcstr_tuple:my_process_core_type_list:})
+DBG12C: let process_newrec_flag3__Recursive2 x :string =match x with 
+DBG12B:let process_types_newrec_flag3__Recursive2(():()):string = (process_types ^ ("newrec_flag3","Recursive2") ^)
+DBG12C:| Recursive2 (emit_core_type_list ) -> (process_types_newrec_flag3__Recursive2())
+DBG1:constructor_declaration_new: (constructor "Recursive2" {Pcstr_tuple:my_process_core_type_list:})
+DBG12C: let process_newrec_flag2__Recursive x :string =match x with 
+DBG12B:let process_types_newrec_flag2__Recursive(():()):string = (process_types ^ ("newrec_flag2","Recursive") ^)
+DBG12C:| Recursive (emit_core_type_list ) -> (process_types_newrec_flag2__Recursive())
+DBG1:constructor_declaration_new: (constructor "Recursive" {Pcstr_tuple:my_process_core_type_list:})
+TOPstructure_item_desc:(print_structure_item_desc (emit_pstr_type)print_type_decl:"newrec_flag2" = (Ptype_variant (constructor "Nonrecursive" {Pcstr_tuple:my_process_core_type_list:})(constructor "Recursive" {Pcstr_tuple:my_process_core_type_list:})
+)[print_type_decl:"newrec_flag3" = (Ptype_variant (constructor "Nonrecursive2" {Pcstr_tuple:my_process_core_type_list:})(constructor "Recursive2" {Pcstr_tuple:my_process_core_type_list:})
+)[print_type_decl:"newrec_flag4" = (Ptype_variant (constructor "Nonrecursive1" {Pcstr_tuple:my_process_core_type_list:})(constructor "Recursive1" {Pcstr_tuple:my_process_core_type_list:})
+19 | type newrec_flag2 = Asttypes.rec_flag = Nonrecursive | Recursive
+22 |   newrec_flag3 = Nonrecursive2 | Recursive2
+25 |   newrec_flag4 = Nonrecursive1 | Recursive1
+25 |   newrec_flag4 = Nonrecursive1 | Recursive1
+25 |   newrec_flag4 = Nonrecursive1 | Recursive1
+Warning 37 [unused-constructor]: unused constructor Recursive1.
+22 |   newrec_flag3 = Nonrecursive2 | Recursive2
+22 |   newrec_flag3 = Nonrecursive2 | Recursive2
+Warning 37 [unused-constructor]: unused constructor Recursive2.

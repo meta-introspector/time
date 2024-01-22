@@ -1,0 +1,118 @@
+
+#+begin_src input
+Using the muses for inspiration and athena for wisdom, Using in emacs org babel code block demarcations, Please complete the following ocaml PPX ast introspector code that processes one data structure, goal is to write ocaml code that will emit new ocaml code with emojis added from this example structure.
+#+begin_src ocaml
+23 |     | Ptyp_constr (a,b) (* of Longident.t loc * core_type list *)
+#+end_src input
+Your response:
+
+#+end_src input
+
+
+#+begin_src input
+Using the muses for inspiration and athena for wisdom, Using in emacs org babel code block demarcations, Please complete the following ocaml PPX ast introspector code that processes one data structure, goal is to write ocaml code that will emit new ocaml code with emojis added from this example structure.
+#+begin_src ocaml
+40 |       ptype_params (* : (core_type * (variance * injectivity)) list *);
+#+end_src input
+Your response:
+
+#+end_src input
+
+
+#+begin_src output
+```ocaml
+#lang ocaml
+module Introspector =
+  open AST_Utils
+
+(* Define a function to extract the types and patterns from a Ptyp_constr node *)
+let rec extract_types_and_patterns (node: Ptyp_constr) : String.t list * (type t) list =
+  match node with
+  | Ptyp_constr (a,b) =>
+    let (_, types) = extract_types_and_patterns a in
+    let patterns = [(Longident.t loc); b] in
+    (String.concat "; " (List.map String.capitalize (types :: patterns))), types
+  | _ => (* TODO: add more cases *) raise NotImplementedError
+
+(* Define a function to generate a new piece of code with emojis added based on the extracted information *)
+let rec generate_code (types: type t list) : String.t =
+  match types with
+  | [] => ""
+  | [(Longident.t loc); a] :: rest ->
+    let code = "let " ^ String.capitalize (String.lower loc) ^ " = " in
+    case a of
+      Ptyp_arrow (_,b) => generate_code (List.tail types) (* add emojis *)
+    | _ => (* TODO: add more cases *) raise NotImplementedError
+  | _ => (* TODO: add more cases *) raise NotImplementedError
+
+(* Example usage *)
+let input = "Ptyp_constr (a,b) (* of Longident.t loc * core_type list *)" in
+let types_and_patterns, types = extract_types_and_patterns (parse_ast input) in
+let code = generate_code types in
+Printf.printf "%s\n" code
+```
+#+end_src output
+
+#+begin_src input
+Using the muses for inspiration and athena for wisdom, Using in emacs org babel code block demarcations, Please complete the following ocaml PPX ast introspector code that processes one data structure, goal is to write ocaml code that will emit new ocaml code with emojis added from this example structure.
+#+begin_src ocaml
+41 |       ptype_cstrs (*: (core_type * core_type * location) list*) ;   
+#+end_src input
+Your response:
+
+#+end_src input
+
+
+#+begin_src output
+Here is the OCaml PPX ast introspector code that processes the given data structure and emits new OCaml code with emojis added from an example structure:
+```
+(* #lang ocaml
+#+ocaml_dependencies ("ppx")
+#+require "emacs.el"
+*)
+
+module Introspector = struct
+  open Expr_utils
+  
+  (* Recursively traverse the AST and print out the relevant information with emojis *)
+  let rec traverse exr =
+    match exr with
+    | Ppx_expr_attribute (_, AttrDecl { name; attribute_type }) ->
+      (* Add emojis to attribute name *)
+      match name with
+      | "ptype_params" -> `[#emoji "💻"#]
+      | _            -> traverse exr
+    | Ppx_expr_attribute (_, AttrDecl { default = Default { value; is_default = true }) ->
+      (* Add emojis to default value *)
+      match value with
+      | Ppx_expr_constant (_, Constant.Const (_, VarName "core_type")) ->
+        `[#emoji "👨‍💻"#]
+      | Ppx_expr_constant (_, Constant.Const (_, VarName "variance")) ->
+        `[#emoji "🔍"#]
+      | Ppx_expr_constant (_, Constant.Const (_, VarName "injectivity")) ->
+        `[#emoji "🤝"#]
+      | _                                                             -> traverse exr
+    | _                                                               -> traverse exr
+end
+
+(* Test the introspector *)
+let example_ast =
+  Expr_utils.parse (
+    "#lang ocaml
+#+ocaml_dependencies ("ppx")
+#+require "emacs.el"
+
+#define(p, args) ptype_params (* : #emoji "💻"#"core_type"#"(variance"#emoji "🔍"#"injectivity"))"
+
+let ptype_params = `[
+  ptype_params (* : (core_type * (variance * injectivity)) list *)
+]
+")
+
+let () =
+  let ast = Expr_utils.parse example_ast in
+  let output = Introspector.traverse ast in
+  Printf.printf "%s\n" output ;;
+```
+In this code, we define an `Introspector` module that contains a recursive function `traverse` that takes an OCaml expression and prints out the relevant information with emojis added to attribute names and default values. We then test the introspector by parsing the example AST and calling the `traverse` function on it, printing out the resulting code with emojis added.
+#+end_src output

@@ -1,0 +1,463 @@
+  ('a1 -> 'a2 hsubtype) -> 'a1 kfinstruct -> ('a1 -> 'a2 carrier kfinstruct)
+  ('a1 -> 'a2 hsubtype) -> hProptoType -> ('a1 -> 'a2 carrier iskfinite) ->
+  ('a1, 'a2) weq -> 'a1 hsubtype -> 'a2 hsubtype -> ('a1 -> (hProptoType,
+  ('a1, 'a3) hsubtype_preserving
+  'a1 coq_DecidableSubtype -> ('a1 decidableSubtypeCarrier', 'a1
+  'a1 coq_DecidableSubtype -> 'a1 hsubtype
+  'a1 eqrel -> 'a1 setquot hsubtype -> 'a1 carrier setquot -> 'a1 setquot
+  'a1 eqrel -> 'a1 setquot hsubtype -> 'a1 setquot carrier -> 'a1 carrier
+  'a1 eqrel -> 'a1 setquot hsubtype -> ('a1 setquot carrier, 'a1 carrier
+  'a1 hrel -> 'a1 hsubtype -> 'a1 hsubtype -> 'a1 iseqclass -> ('a1 ->
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isantisymm -> 'a1 carrier isantisymm
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isantisymmneg -> 'a1 carrier isantisymmneg
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isasymm -> 'a1 carrier isasymm
+  'a1 hrel -> 'a1 hsubtype -> 'a1 iscoantisymm -> 'a1 carrier iscoantisymm
+  'a1 hrel -> 'a1 hsubtype -> 'a1 iscoasymm -> 'a1 carrier iscoasymm
+  'a1 hrel -> 'a1 hsubtype -> 'a1 iscotrans -> 'a1 carrier iscotrans
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isdecrel -> 'a1 carrier isdecrel
+  'a1 hrel -> 'a1 hsubtype -> 'a1 iseqclass -> 'a1 -> 'a1 -> hProptoType ->
+  'a1 hrel -> 'a1 hsubtype -> 'a1 iseqrel -> 'a1 carrier iseqrel
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isirrefl -> 'a1 carrier isirrefl
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isnegrel -> 'a1 carrier isnegrel
+  'a1 hrel -> 'a1 hsubtype -> 'a1 ispreorder -> 'a1 carrier ispreorder
+  'a1 hrel -> 'a1 hsubtype -> 'a1 isrefl -> 'a1 carrier isrefl
+  'a1 hrel -> 'a1 hsubtype -> 'a1 issymm -> 'a1 carrier issymm
+  'a1 hrel -> 'a1 hsubtype -> 'a1 istotal -> 'a1 carrier istotal
+  'a1 hrel -> 'a1 hsubtype -> 'a1 istrans -> 'a1 carrier istrans
+  'a1 hrel -> 'a1 hsubtype -> 'a1 neqchoice -> 'a1 carrier neqchoice
+  'a1 hrel -> 'a1 hsubtype -> hProptoType -> ('a1 -> 'a1 -> hProptoType ->
+  'a1 hrel -> 'a2 hrel -> 'a1 hsubtype -> 'a2 hsubtype -> 'a1 iseqclass ->
+  'a1 hsubtype -> ('a1 -> 'a1 -> hProptoType -> hProptoType -> 'a1 paths) ->
+  'a1 hsubtype -> 'a1 -> 'a1 hsubtype -> hProptoType -> hProptoType ->
+  'a1 hsubtype -> ('a1 -> 'a2) -> ('a2 -> 'a3) -> 'a3 hsubtype paths
+  'a1 hsubtype -> 'a1 carrier iskfinite -> 'a1 kfinite_subtype
+  'a1 hsubtype -> 'a1 -> hProptoType -> ('a1, hProptoType) total2
+  'a1 hsubtype -> 'a1 -> hProptoType -> hProptoType -> empty
+  'a1 hsubtype -> 'a1 hsubtype -> ('a1 carrier, 'a1 carrier) coprod -> 'a1
+  'a1 hsubtype -> 'a1 hsubtype -> (('a1 carrier, 'a1 carrier) coprod, 'a1
+  'a1 hsubtype -> 'a1 hsubtype -> 'a1 carrier iskfinite -> 'a1 carrier
+  'a1 hsubtype -> 'a1 hsubtype -> 'a1 -> hProptoType -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype -> hProptoType -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> ('a1 hsubtype paths -> 'a2, hProptoType ->
+  'a1 hsubtype -> 'a1 hsubtype -> ('a1 hsubtype paths, hProptoType) weq
+  'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> hProptoType -> 'a1 carrier -> 'a1 carrier
+  'a1 hsubtype -> 'a1 hsubtype -> hProptoType -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> hProptoType -> hProptoType -> hProptoType
+  'a1 hsubtype -> 'a1 hsubtype -> hProptoType isaprop
+  'a1 hsubtype -> ('a2 -> 'a1 hsubtype) -> ('a2, 'a1 hsubtype paths) total2
+  'a1 hsubtype -> 'a2 hsubtype -> ('a1 -> 'a2) -> ('a1, 'a2)
+  'a1 hsubtype -> 'a2 hsubtype -> ('a1, 'a2) dirprod carrier -> ('a1 carrier,
+  'a1 hsubtype -> 'a2 hsubtype -> (('a1, 'a2) dirprod carrier, ('a1 carrier,
+  'a1 hsubtype -> 'a2 hsubtype -> ('a1, 'a2) dirprod hsubtype
+  'a1 hsubtype -> 'a2 hsubtype -> ('a1 carrier, 'a2 carrier) dirprod -> ('a1,
+  'a1 hsubtype -> 'a2 hsubtype -> 'a3 hsubtype -> ('a1 -> 'a2) -> ('a2 ->
+  'a1 hsubtype -> 'a2 hsubtype -> hProptoType -> hProptoType -> hProptoType
+  'a1 hsubtype -> hProptoType -> ('a2 -> 'a1 hsubtype) -> ('a2, 'a1 hsubtype
+  ('a2 -> 'a1 hsubtype) -> ('a2, 'a1 carrier) total2 -> 'a1 carrier
+  ('a2 -> 'a1 hsubtype) -> (('a2, 'a1 carrier) total2, 'a1 carrier)
+  ('a2 -> 'a1 hsubtype) -> ('a3 -> 'a2) -> 'a1 carrier -> 'a1 carrier
+  ('a2 -> 'a1 hsubtype) -> ('a3 -> 'a2) -> ('a3, 'a2) issurjective -> ('a1
+  -> ('a2, 'a1 hsubtype paths) total2 -> hProptoType
+  ('a2 -> 'a1 kfinite_subtype) -> hProptoType -> 'a1 carrier iskfinite
+  ('a2 -> 'a1 kfinite_subtype) -> hProptoType -> 'a1 kfinite_subtype
+  'a3) -> ('a1, 'a2) hsubtype_preserving -> ('a2, 'a3) hsubtype_preserving ->
+  coq_FiniteSet -> pr1hSet coq_DecidableSubtype -> coq_FiniteSet
+  coq_WellOrderedSet -> pr1hSet hsubtype -> hProptoType
+  decidableSubtypeCarrier) weq
+  hProptoType -> hProptoType -> pr1hSet hsubtype paths
+  hSet -> ('a1 -> pr1hSet hsubtype) -> 'a1 -> hProptoType
+  hSet -> coq_TOSubset -> coq_TOSubset -> pr1hSet hsubtype
+  hSet -> coq_TOSubset -> coq_TOSubset -> pr1hSet hsubtype -> hProptoType ->
+  hSet -> pr1hSet hrel -> hProptoType -> pr1hSet hsubtype -> pr1hSet isaprop
+  hSet -> pr1hSet hsubtype -> coq_TOSubset -> coq_TOSubset -> hProp
+  hSet -> pr1hSet hsubtype -> coq_TOSubset -> hProptoType -> hProp
+  hSet -> pr1hSet hsubtype -> coq_WOSubset -> hProptoType -> hProptoType ->
+  hSet -> pr1hSet hsubtype -> hProptoType -> finite_subset
+  hSet -> pr1hSet hsubtype -> pr1hSet carrier -> hProptoType
+  hSet -> pr1hSet hsubtype -> (pr1hSet, hProptoType) total2 isaset
+  hsubtype_preserving isaprop
+  nat -> 'a1 isofhlevel -> 'a1 hsubtype -> 'a1 carrier isofhlevel
+open Subtypes
+  paths) total2 -> ('a2, 'a1 hsubtype paths) total2 -> hProptoType
+  preZFS -> pr1hSet -> pr1hSet hsubtype -> pr1hSet -> hProptoType ->
+  preZFS -> pr1hSet -> pr1hSet hsubtype -> pr1hSet hsubtype
+  preZFS -> pr1hSet -> pr1hSet hsubtype -> pr1hSet hsubtype paths
+type ('a, 'b) coprod =
+type ('a, 'b) coq_PathPair = ('a paths, 'b paths) total2
+type 'a display = (__, 'a) hfiber
+type 'a list = (nat, 'a vec) total2
+type 'a maybe = ('a, coq_unit) coprod
+type antisymmetric = (hProptoType, hProptoType) dirprod -> pr1hSet paths
+type 'a paths =
+type arc = __
+type 'a vec = __
+type bool =
+type bool_to_type = __
+type cgraph_mor = (node -> node, (arc -> arc, is_cgraph_mor) total2) total2
+type cgraph = (precgraph, (node isaset, arc isaset) dirprod) total2
+type consecutive =
+type coq_ComplementaryPair =
+type coq_DecidableProposition = (coq_UU, __ isdecprop) total2
+type coq_DownwardClosure = (pr1hSet, hProptoType) total2
+type coq_FiniteOrderedSet = (coq_OrderedSet, hProptoType) total2
+type coq_FiniteSet = (coq_UU, hProptoType) total2
+type coq_FiniteStructure = (nat, coq_PosetEquivalence) total2
+type coq_Guided_WOSubset = (coq_WOSubset, hProptoType) total2
+type coq_HLevel = (coq_UU, __ isofhlevel) total2
+type coq_OrderedSet = (coq_Poset, pr1hSet istotal) total2
+type coq_Part1 = __
+type coq_Part2 = __
+type coq_PartialOrder = (pr1hSet hrel, pr1hSet isPartialOrder) total2
+type coq_PointedGraph = (hSet, (pr1hSet hrel, pr1hSet) total2) total2
+type coq_PointedType = (coq_UU, __) total2
+type coq_PosetEquivalence =
+type coq_Poset = (hSet, coq_PartialOrder) total2
+type coq_PreorderedSet = (hSet, pr1hSet po) total2
+type coq_Subposet' =
+type coq_Subposet = pr1hSet hsubtype
+type coq_TOSubset = pr1hSet
+type coq_Tree =
+type coq_Tree = (coq_TRRGraph, isatree) total2
+type coq_Tree_iso = coq_TRRGraphiso
+type coq_Tree_isWellFounded = (hProptoType, hProptoType) dirprod
+type coq_TRRGraphData = (pr1hSet hrel, (pr1hSet, isTRR) total2) total2
+type coq_TRRGraph = (hSet, coq_TRRGraphData) total2
+type coq_TRRGraphiso = ((pr1hSet, pr1hSet) weq, isTRRGhomo) total2
+type coq_unit =
+type coq_Upw_underlying = (pr1hSet, hProptoType) total2
+type coq_UU = __
+type coq_WellOrderedSet = (hSet, pr1hSet) total2
+type coq_WOSubset = pr1hSet
+type coq_ZFS_elementof =
+type coq_ZFS_iso = preZFS_iso
+type coq_ZFS = (preZFS, hasuniquerepbranch) total2
+type decSet = (coq_UU, __ isdeceq) total2
+type edge = __
+type empty = |
+type finite_subset = (pr1hSet hsubtype, hProptoType) total2
+type 'f natdecleast = (nat, ('f, nat -> 'f -> hProptoType) dirprod) total2
+type funcontrStatement = __ -> __ -> (__ -> __ iscontr) -> (__ -> __) iscontr
+type funextcontrStatement =
+type funextemptyStatement =
+type funextfunStatement =
+type funextsecStatement =
+type graph_mor = (vertex -> vertex, vertex -> vertex -> edge -> edge) total2
+type graph = (pregraph, (has_vertexset, has_edgesets) dirprod) total2
+type has_arcset = arc isaset
+type has_edgesets = vertex -> vertex -> edge isaset
+type has_nodeset = node isaset
+type hasuniquerepbranch = pr1hSet -> pr1hSet -> preZFS paths -> pr1hSet paths
+type has_vertexset = vertex isaset
+type hProp = (coq_UU, __ isaprop) total2
+type hProptoType = __
+type hSet = (coq_UU, __ isaset) total2
+type isaposetmorphism = pr1hSet -> pr1hSet -> hProptoType -> hProptoType
+type isaroot = pr1hSet -> hProptoType
+type isatree =
+type isBiggest = pr1hSet -> hProptoType
+type is_cgraph_mor = (arc -> node paths, arc -> node paths) dirprod
+type isComputablyOrdered =
+type isdec_ordering = pr1hSet -> pr1hSet -> hProptoType decidable
+type isFalse = (coq_Part2, (coq_Part1, coq_Part2) coprod) hfiber
+type isLattice =
+type isMaximal = pr1hSet -> hProptoType
+type isMaximal = pr1hSet -> hProptoType -> pr1hSet paths
+type isMinimal = pr1hSet -> hProptoType
+type isMinimal = pr1hSet -> hProptoType -> pr1hSet paths
+type isPosetEquivalence = (isaposetmorphism, isaposetmorphism) dirprod
+type isprefix = pr1decSet list maybe paths neg
+type ispreZFS = (coq_Tree_isWellFounded, issuperrigid) dirprod
+type isrigid = coq_Tree paths iscontr
+type isSmallest = pr1hSet -> hProptoType
+type is_stn_increasing = stn -> stn -> hProptoType -> hProptoType
+type is_stn_strictly_increasing = stn -> stn -> hProptoType -> hProptoType
+type issuperrigid = (isrigid, pr1hSet -> isrigid) dirprod
+type istrans2 =
+type isTRRGhomo =
+type isTRR = (pr1hSet isrefl, (pr1hSet istrans, isaroot) dirprod) dirprod
+type isTrue = (coq_Part1, (coq_Part1, coq_Part2) coprod) hfiber
+type isweqtoforallpathsStatement =
+type iswofun =
+type minimal = nat -> hProptoType -> hProptoType
+type min_n_UUU = (nat, (hProptoType, minimal) dirprod) total2
+type mt_set = __
+type nat =
+type nat_compl = nat compl_ne
+  type nat_discern = __
+type node = __
+type __ = Obj.t
+type 'p isdecprop = (('p, 'p neg) coprod, 'p isaprop) dirprod
+type 'p negProp = (coq_UU, (__ isaprop, ('p neg, __) logeq) dirprod) total2
+type posetmorphism = (pr1hSet -> pr1hSet, isaposetmorphism) total2
+type ('p, 'q) complementary = ('p -> 'q -> empty, ('p, 'q) coprod) dirprod
+type ('p, 'q) equality_cases = __
+type pr1decSet = __
+type pr1hSet = __
+type precgraph =
+type pregraph = (coq_UU, __) total2
+type preZFS = (coq_Tree, ispreZFS) total2
+type preZFS_iso = coq_Tree_iso
+type propositionalUnivalenceStatement =
+type smaller =
+type stn_compl = stn compl_ne
+type stn = (nat, hProptoType) total2
+type 't coconusfromt = ('t, 't paths) total2
+type 't coconustot = ('t, 't paths) total2
+type three = stn
+type tildehProp = (hProp, hProptoType) total2
+type 't iscontr = ('t, 't -> 't paths) total2
+type 't isolated_ne = ('t, 't isisolated_ne) total2
+type 't isolated = ('t, 't isisolated) total2
+type 't pathsspace = ('t, 't coconusfromt) total2
+type 't pathsspace' = (('t, 't) dirprod, 't paths) total2
+type ('t, 'p) total2 = { pr1 : 't; pr2 : 'p }
+type two = stn
+type underlyingType = __
+type univalenceStatement = __ -> __ -> (coq_UU paths, (__, __) weq) isweq
+type _UU2115_ = nat
+type ('v, 'e) gpaths = (nat, ('v, 'e) gpaths_of_length) total2
+type ('v, 'e) gpaths_of_length = __
+type ('v, 'e) issymmetric = 'v -> 'v -> ('e, 'e) weq
+type vertex = __
+type ('v, 'e) symmetric_closure = ('e, 'e) coprod
+type weqpathsweqStatement = __ -> __ -> (__, __) weq -> (__, __) weq paths
+type weqtoforallpathsStatement =
+type weqtopathsStatement = __ -> __ -> (__, __) weq -> coq_UU paths
+type wofun = (pr1hSet -> pr1hSet, iswofun) total2
+type 'x binop = 'x -> 'x -> 'x
+type 'x brel = 'x -> 'x -> bool
+type 'x carrier = ('x, hProptoType) total2
+type 'x compl_ne = ('x, hProptoType) total2
+type 'x compl = ('x, 'x paths neg) total2
+type 'x coq_DecidableRelation = 'x -> 'x -> coq_DecidableProposition
+type 'x coq_DecidableSubtype = 'x -> coq_DecidableProposition
+type 'x coq_Matrix = 'x coq_Vector coq_Vector
+type 'x coq_NonemptySequence = (nat, stn -> 'x) total2
+type 'x coq_Sequence = (nat, 'x coq_Vector) total2
+type 'x coq_UnorderedSequence = (coq_FiniteSet, pr1hSet -> 'x) total2
+type 'x coq_Vector = stn -> 'x
+type 'x decidableSubtypeCarrier' = ('x, bool) hfiber
+type 'x decidableSubtypeCarrier = ('x, hProptoType) total2
+type 'x decidable = ('x, 'x neg) coprod
+type 'x decrel = ('x hrel, 'x isdecrel) total2
+type 'x dneg = 'x neg neg
+type 'x eqrel = ('x hrel, 'x iseqrel) total2
+type 'x finstruct = (nat, 'x nelstruct) total2
+type 'x fromUUtoType = 'x
+type 'x hrellogeq = 'x -> 'x -> (hProptoType, hProptoType) logeq
+type 'x hrel = 'x -> 'x -> hProp
+type 'x hsubtype = 'x -> hProp
+type 'x isaninvprop = ('x, 'x dneg) isweq
+type 'x isantisymmneg =
+type 'x isantisymm = 'x -> 'x -> hProptoType -> hProptoType -> 'x paths
+type 'x isaprop = 'x isofhlevel
+type 'x isaset = 'x -> 'x -> 'x paths isaprop
+type 'x isasymm = 'x -> 'x -> hProptoType -> hProptoType -> empty
+type 'x ischoicebase_uu1 = __ -> ('x -> hProptoType) -> hProptoType
+type 'x iscoantisymm =
+type 'x iscoasymm = 'x -> 'x -> hProptoType neg -> hProptoType
+type 'x iscomprelrel = ('x, hProp) iscomprelfun2
+type 'x iscotrans = 'x -> 'x -> 'x -> hProptoType -> hProptoType
+type 'x isdeccotrans =
+type 'x isdeceq = 'x -> 'x -> 'x paths decidable
+type 'x isDecidablePredicate = 'x -> hProptoType decidable
+type 'x isdecrel = 'x -> 'x -> (hProptoType, hProptoType neg) coprod
+type 'x isdectotal = 'x -> 'x -> (hProptoType, hProptoType) coprod
+type 'x iseqclass =
+type 'x iseqrel = ('x ispreorder, 'x issymm) dirprod
+type 'x ishinh_UUU = hProp -> ('x -> hProptoType) -> hProptoType
+type 'x isirrefl = 'x -> hProptoType neg
+type 'x isisolated_ne = 'x -> ('x paths, hProptoType) coprod
+type 'x isisolated = 'x -> ('x paths, 'x paths neg) coprod
+type 'x iskfinite = hProptoType
+type 'x isnegrel = 'x -> 'x -> hProptoType neg neg -> hProptoType
+type 'x isofhlevel = __
+type 'x isolation = isFalse
+type 'x isPartialOrder = ('x ispreorder, 'x isantisymm) dirprod
+type 'x ispreorder = ('x istrans, 'x isrefl) dirprod
+type 'x isProofIrrelevant = 'x -> 'x -> 'x paths
+type 'x isrefl = 'x -> hProptoType
+type 'x issymm = 'x -> 'x -> hProptoType -> hProptoType
+type 'x istotal = 'x -> 'x -> hProptoType
+type 'x istrans = 'x -> 'x -> 'x -> hProptoType -> hProptoType -> hProptoType
+type 'x iswklin = 'x -> 'x -> 'x -> hProptoType -> hProptoType
+type 'x kfinite_subtype = ('x hsubtype, 'x carrier iskfinite) total2
+type 'x kfinstruct = (nat, (stn -> 'x, (stn, 'x) issurjective) total2) total2
+type ('x, 'lt) chain = __
+type ('x, 'lt) le = (nat, ('x, 'lt) chain) total2
+type ('x, 'lt, 'p) attempt =
+type ('x, 'lt, 'p) guided_by = 'x -> ('x, 'lt) le -> 'p paths
+type ('x, 'lt, 'p) hereditary = 'x -> ('x -> 'lt -> 'p) -> 'p
+type ('x, 'lt) strongly_well_founded =
+type ('x, 'lt) weakly_well_founded =
+type 'x neg = 'x -> empty
+type 'x nelstruct = (stn, 'x) weq
+type 'x neqchoice =
+type 'x neqPred = 'x -> 'x paths negProp
+type 'x neqProp = 'x paths negProp
+type 'x neqReln = 'x -> 'x -> 'x paths negProp
+type 'x paths_from = 'x coconusfromt
+type 'x paths_to = 'x coconustot
+type 'x paths' = 'x paths
+type 'x path_type = 'x
+type ('x, 'p) homot = 'x -> 'p paths
+type 'x pi0 = 'x setquot
+type ('x, 'p) negPred = 'x -> 'p negProp
+type ('x, 'p) negReln = 'x -> 'x -> 'p negProp
+type 'x po = ('x hrel, 'x ispreorder) total2
+type ('x, 's) compfun = ('x -> 's, ('x, 's) iscomprelfun) total2
+type 'x setquot2 = ('x, hSet -> ('x, pr1hSet) compfun -> pr1hSet) image
+type 'x setquot = ('x hsubtype, 'x iseqclass) total2
+type ('x, 'x0, 'y) hfpoverX' = ('x0, ('x, 'y) hfiber) total2
+type ('x, 'x0, 'y) hfpoverX = ('x, ('x0, 'y) hfiber) total2
+type ('x, 'x0, 'y) hfp = (('x, 'x0) dirprod, 'y paths) total2
+type ('x, 'x0, 'y) pullBackFamily = 'y
+type ('x, 'x0, 'y, 'z) commsqstr = 'z -> 'y paths
+type ('x, 'x0, 'y, 'z) hfsqstr =
+type ('x, 'x0, 'y, 'z) ishfsq = ('z, ('x, 'x0, 'y) hfp) isweq
+type ('x, 'y) bhfiber = ('x, bool) hfiber
+type ('x, 'y) boolsumfun = __
+type ('x, 'y) coconusf = ('y, ('x, 'y) hfiber) total2
+type ('x, 'y) coq_NullHomotopyFrom = ('y, ('x, 'y) nullHomotopyFrom) total2
+type ('x, 'y) coq_NullHomotopyTo = ('y, ('x, 'y) nullHomotopyTo) total2
+type ('x, 'y) coq_PathOver = __
+type ('x, 'y) coq_UniqueConstruction =
+type ('x, 'y) dirprod = ('x, 'y) total2
+type ('x, 'y) hfiber = ('x, 'y paths) total2
+type ('x, 'y) hsubtype_preserving = hProptoType
+type ('x, 'y) image = ('y, hProptoType) total2
+type ('x, 'y) incl = ('x -> 'y, ('x, 'y) isincl) total2
+type ('x, 'y) iscomprelfun2 =
+type ('x, 'y) iscomprelfun = 'x -> 'x -> hProptoType -> 'y paths
+type ('x, 'y) iscomprelrelfun2 =
+type ('x, 'y) iscomprelrelfun = 'x -> 'x -> hProptoType -> hProptoType
+type ('x, 'y) iscoproj =
+type ('x, 'y) isdecincl = 'y -> ('x, 'y) hfiber isdecprop
+type ('x, 'y) isincl = ('x, 'y) isofhlevelf
+type ('x, 'y) isInjective = 'x -> 'x -> ('x paths, 'y paths) isweq
+type ('x, 'y) isofhlevelf = 'y -> ('x, 'y) hfiber isofhlevel
+type ('x, 'y) isPredicate = 'x -> 'y isaprop
+type ('x, 'y) issurjective = 'y -> hProptoType
+type ('x, 'y) isweq = 'y -> ('x, 'y) hfiber iscontr
+type ('x, 'y) logeq = ('x -> 'y, 'y -> 'x) dirprod
+type ('x, 'y) negimage = ('y, ('x, 'y) hfiber neg) total2
+type ('x, 'y) nullHomotopyFrom = 'x -> 'y paths
+type ('x, 'y) nullHomotopyTo = 'x -> 'y paths
+type ('x, 'y) weq = ('x -> 'y, ('x, 'y) isweq) total2
+type ('x, 'y, 'z) complxstr = 'x -> 'z paths
+type ('x, 'y, 'z) fibseqstr =
+type ('x, 'y, 'z) isfibseq = ('x, ('y, 'z) hfiber) isweq
+val binary_intersection : 'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype
+val binary_intersection' : 'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype
+val carrier_subset : hSet -> pr1hSet hsubtype -> hSet
+val comp_hsubtype_preserving :
+val coq_Branch_to_subtype :
+val coq_DecidableSubtype_to_hsubtype :
+val coq_TOSubset_to_subtype : hSet -> coq_TOSubset -> pr1hSet hsubtype
+val coq_WOSubset_to_subtype : hSet -> coq_WOSubset -> pr1hSet hsubtype
+val coq_WO_theSmallest : coq_WellOrderedSet -> pr1hSet hsubtype -> hProptoType
+val decidableSubtypeCarrier_weq :
+val empty_hsubtype_preserving : ('a1 -> 'a2) -> ('a1, 'a2) hsubtype_preserving
+val emptysubtype : 'a1 hsubtype
+val eqax0 : 'a1 hrel -> 'a1 hsubtype -> 'a1 iseqclass -> hProptoType
+val fincard_standardSubset : nat -> stn coq_DecidableSubtype -> nat
+val fincard_subset : hProptoType -> 'a1 coq_DecidableSubtype -> nat
+val fromBranch_hsubtype :
+val fromdsubtypesdirprodcarrier :
+val homot_hfp_one_type :
+val hsubtype_rect :
+val hsubtype_to_preZFS_Branch_hsubtype :
+val hsubtype_univalence :
+val id_hsubtype : 'a1 hsubtype -> 'a1 -> hProp
+val id_hsubtype_preserving : 'a1 hsubtype -> ('a1, 'a1) hsubtype_preserving
+val image_hsubtype : 'a1 hsubtype -> ('a1 -> 'a2) -> 'a2 hsubtype
+val image_hsubtype_comp :
+val image_hsubtype_emptyhsubtype : ('a1 -> 'a2) -> 'a2 hsubtype paths
+val image_hsubtype_id : 'a1 hsubtype -> 'a1 hsubtype paths
+val intersection_contained_l : 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+val intersection_contained_r : 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+val isaprop_hsubtype_preserving :
+val isapropiseqclass : 'a1 hrel -> 'a1 hsubtype -> 'a1 iseqclass isaprop
+val isapropsubtype :
+val isaprop_subtype_containedIn :
+val isasethsubtype : 'a1 hsubtype isaset
+val ishinhsubtypedirprod :
+val isinclpr1carrier : 'a1 hsubtype -> ('a1 carrier, 'a1) isincl
+val isinclpr1setquot : 'a1 hrel -> ('a1 setquot, 'a1 hsubtype) isincl
+val isofhlevel_hsubtype :
+val kfinite_subtype_property : 'a1 kfinite_subtype -> 'a1 carrier iskfinite
+val kfinite_subtype_singleton : 'a1 -> 'a1 kfinite_subtype
+val kfinite_subtype_union :
+val kfinite_subtype_union_subproof :
+val make_kfinite_subtype :
+val make_setquot : 'a1 hrel -> 'a1 hsubtype -> 'a1 iseqclass -> 'a1 setquot
+val not_in_subtype_and_complement :
+val pr1carrier : 'a1 hsubtype -> 'a1 carrier -> 'a1
+val pr1setquot : 'a1 hrel -> 'a1 setquot -> 'a1 hsubtype
+val preZFS_Branch_hsubtype_tohsubtype :
+val proper_subtypes_set : hSet
+val reseqrel : 'a1 eqrel -> 'a1 hsubtype -> 'a1 carrier eqrel
+val resrel : 'a1 hrel -> 'a1 hsubtype -> 'a1 carrier hrel
+val singleton : 'a1 -> 'a1 hsubtype
+val singleton_is_in : 'a1 hsubtype -> 'a1 carrier -> hProptoType
+val subsetFiniteness : hProptoType -> 'a1 coq_DecidableSubtype -> hProptoType
+val subtype_binaryunion : 'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype
+val subtype_binaryunion_leq1 : 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+val subtype_binaryunion_leq2 : 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+val subtype_complement : 'a1 hsubtype -> 'a1 hsubtype
+val subtype_complement_intersection_empty :
+val subtype_complement_union :
+val subtype_containedIn : pr1hSet hrel
+val subtype_containment_isantisymm : pr1hSet isantisymm
+val subtype_containment_isPartialOrder : pr1hSet isPartialOrder
+val subtype_containment_ispreorder : pr1hSet ispreorder
+val subtype_containment_isrefl : pr1hSet isrefl
+val subtype_containment_istrans : pr1hSet istrans
+val subtype_deceq : 'a1 hsubtype -> 'a1 isdeceq -> 'a1 carrier isdeceq
+val subtype_difference : 'a1 hsubtype -> 'a1 hsubtype -> 'a1 hsubtype
+val subtype_difference_containedIn :
+val subtype_equal : 'a1 hsubtype -> 'a1 hsubtype -> hProp
+val subtype_equal_cond : 'a1 hsubtype -> 'a1 hsubtype -> hProptoType
+val subtype_from_finite_subset : hSet -> finite_subset -> pr1hSet hsubtype
+val subtype_from_kfinite_subtype : 'a1 kfinite_subtype -> 'a1 hsubtype
+val subtype_inc :
+val subtype_inc_comp :
+val subtypeInjectivity :
+val subtypeInjectivity_prop :
+val subtype_intersection : ('a2 -> 'a1 hsubtype) -> 'a1 hsubtype
+val subtype_isIn : 'a1 hsubtype -> 'a1 carrier -> 'a1 hsubtype -> hProp
+val subtype_notContainedIn : 'a1 hsubtype -> 'a1 hsubtype -> hProp
+val subtype_notEqual : 'a1 hsubtype -> 'a1 hsubtype -> hProp
+val subtype_notEqual_containedIn :
+val subtype_notEqual_from_negEqual :
+val subtype_notEqual_to_negEqual :
+val subtypePairEquality :
+val subtypePairEquality' :
+val subtypePath :
+val subtypePath' :
+val subtypePath_prop :
+val subtype_plus : 'a1 hsubtype -> 'a1 -> 'a1 hsubtype
+val subtype_plus_has_point : 'a1 hsubtype -> 'a1 -> hProptoType
+val subtype_plus_in :
+val subtype_plus_incl : 'a1 hsubtype -> 'a1 -> hProptoType
+val subtypesdirprod :
+val subtype_set : hSet
+val subtype_smallerThan : 'a1 hsubtype -> 'a1 hsubtype -> hProp
+val subtype_union : ('a2 -> 'a1 hsubtype) -> 'a1 hsubtype
+val subtype_union_containedIn :
+val tallyStandardSubset : nat -> stn coq_DecidableSubtype -> stn
+val tallyStandardSubsetSegment : nat -> stn coq_DecidableSubtype -> stn -> stn
+val theSmallest : coq_WellOrderedSet -> pr1hSet hsubtype -> hProp
+val toBranch_hsubtype :
+val tosubtypesdirprodcarrier :
+val total_hsubtype_preserving : ('a1 -> 'a2) -> ('a1, 'a2) hsubtype_preserving
+val totalsubtype : 'a1 hsubtype
+val transport_type_path : __ paths -> 'a1 -> 'a2 paths
+val upto : hSet -> coq_WOSubset -> pr1hSet carrier -> pr1hSet hsubtype
+val weq_subtypes :
+val weq_subtypes' :
+val weqsubtypesdirprod :
+val weq_subtypes_iff :
+val weqtotalsubtype : ('a1 carrier, 'a1) weq
