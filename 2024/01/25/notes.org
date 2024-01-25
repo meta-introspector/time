@@ -1,0 +1,391 @@
+* ideas
+
+First we take Univalent Mathematics 
+@Misc{UniMath,
+    author = {Voevodsky, Vladimir and Ahrens, Benedikt and Grayson, Daniel and others},
+    title = {UniMath --- a computer-checked library of univalent mathematics},
+    url = {https://github.com/UniMath/UniMath},
+    howpublished = {available at \url{http://unimath.org}},
+    doi          = {10.5281/zenodo.8427604},
+    url          = {https://doi.org/10.5281/zenodo.8427604}
+ }
+Unimath [Coq](https://coq.inria.fr/) library aims to formalize a substantial body of mathematics using the
+[univalent point of view](https://en.wikipedia.org/wiki/Univalent_foundations).
+
+And we take a series of lectures from Vladimir
+on the subjects.
+We take unimath itself and reflect it into metaocq, ocaml and coq of ocaml and then lift those structures back into unimath
+as a strange loop.
+
+`paths_refl` is an inductive function that takes an element `a` from the type `A` and returns a value of type `UU`, which stands for "universe of universes." This function is responsible for returning a reference loop, which can be used to create an identity path.
+
+First we extract unimath into ocaml using metacoq,
+   then we extract the core types into ocaml.
+
+create a universe of universes model that models the following as a hierarchy
+of types being multiplied against each other recursively:
+design a proof system for the following
+write a specification for the following
+create an AI system that can do the following
+take a set of papers in latex sources
+and look at video lectures
+and reference the parts of the
+papers mentioned
+and then create visualizations of
+the instructions with
+characters singing, actors acting,
+mathematical visualizations,
+graphs and charts
+in different arrangements
+for different groups of actors,artists and programmers.
+
+generate instructions for the artists
+from the source text and from the video lectures
+and then merge the two into a
+visual representation.
+create 3 key frames from the screenplay
+and describe them in detail.
+
+we can construct a complex self referential system using unimath
+to construct levels of the universe each one referring to the previous.
+we can number these levels.
+we can create a total relationship between each type in the system,
+choosing the order of the types carefully like a travelling saleman algorithm
+who is passing messages between nodes.
+we can consider all the identifiers in the system to be on multiple levels as the same time.
+
+We can map our knowledge about Unimath expressions and their
+relationships to a single number in Unimath using polynomial
+representations. Polynomial representations are a common way to
+represent mathematical concepts in a numerical form, and they can be
+used to perform computations and analyze patterns in data.
+
+By combining these techniques, we can reason about the validity of
+Unimath expressions and prove their correctness using formal
+methods. This can help us ensure that our mathematical reasoning is
+rigorous and reliable, and it can also provide a powerful tool for
+understanding complex mathematical concepts and relationships.
+
+We can prove that the polynomial is equivalent to the lifted ast,
+and there is path of rewrites from the original term that was extracted
+with paths via an abstract topology that spans multiple interacting processes in a linux operating system
+running server.
+This path can be traced with a data flow diagram across user probes in a linux perf
+environment that can show which parts of the proof executed with instructions on which data that came from which part of the proof.
+thus by auditing the traffic of the proof engine we can label and annotate the machine instructions and reason about them.
+we can trace from reflections in unimath to coq to ocaml to gcc to linux to machine code in the bootloader.
+
+
+For details we have an ubuntu lts server with dune, ocaml, coqtop, emacs, proof general, a large language model mixtral running in ocaml server.
+This is an abstraction of my personal situation how I have constructed the
+processes. 
+
+thus we reflect over my personal experience, where I am writing on a bluetooth keyboard to my phone connnected with termux
+to my mentioned linux server, we can see that part as being detached from you the reader, and that the
+detail of how I connect to the server is not important and can be abstracted out.
+thus we eliminate details from our proof.
+Important is that I can commit and push the code and have access to my keys.
+we can consider this to be a boxing of types or the abstraction of details.
+
+So we can consider this as a morphism, a way that changes are commited.
+we want to understand each commit and rewrite it in terms of the proof logic.
+thus we ingest the bytes of the program or the text and can rewrite and reform them.
+
+*** loop
+unimath is a coq library with the univalent universal universe of universes type system
+->
+metacoq is a coq library to formalize coq in coq
+->
+ocaml functional extraction from unimath via metacoq allows for a flattening
+of the types of unimath coq into ocaml
+->
+coq of ocaml then extracts the simplified ocaml descriptions of unimath as asts
+and lifts those asts back into coq
+-> functional programming in coq with those lifted asts allows us to transform the asts that carry unimath in them them in coq
+-> and finally we can then lift those structures on top of the unimath library
+and show a path of tranformations from the original unimath types into reflections over them
+using many steps and finally back into unimath using unimath.
+this self reflection of unimath allows the universe of universes to reflect overitself in the universe of reflection.
+each level of reflection creates a more complex structure on top of the previous in a recursive manner.
+so we can label and name the levels of the reflective universe and make propositions about them as homotopy type levels by measuring the
+distance from the basic bit and set of bits into higher order structures using a decision tree.
+we can number the paths of that tree to go from bits to prime numbers. so we can map each identifier in the tree to a unique prime number
+and then we can make a polynomial that contains all the knowledge as a single number in unimath.
+
+
+#+begin_src output
+
+The project idea involves several components, including:
+
+1. Utilizing UniMath, a computer-checked library of univalent
+mathematics using Coq, to formalize a substantial body of mathematics.
+2. Taking a series of lectures from Vladimir on the subjects of
+unimath and reflecting it into metaocq, ocaml, and coq of ocaml.
+3. Creating a universe of universes model that models a hierarchy of
+types being multiplied against each other recursively.  4. Designing a
+proof system for this universe of universes model.  5. Writing a
+specification for the proposed AI system.  6. Developing an AI system
+that can extract information from latex sources and video lectures,
+reference parts of the papers mentioned, create visualizations,
+generate instructions for artists, and merge the two into a visual
+representation.  7. Creating 3 key frames from the screenplay and
+describing them in detail.
+
+This project requires expertise in mathematical formalization,
+computer science, AI, and multimedia production. The development of
+the AI system will likely involve natural language processing (NLP),
+computer vision, and machine learning techniques.
+#+end_src
+
+#+begin_src output
+
+This is a very ambitious and interesting project! Here are some
+possible steps you could take to get started:
+
+1. Familiarize yourself with UniMath, Coq, and the univalent point of
+view. You'll need to understand how these tools work and what their
+capabilities are in order to effectively use them for your project.
+2. Look up the lectures by Vladimir on the subjects you
+mentioned. These will provide a good starting point for learning about
+the specific concepts and techniques you'll need to implement your
+project.  3. Set up your development environment. You'll need to
+install Coq, OCaml, and any other necessary tools on your computer, as
+well as create a new repository for your project and set up version
+control using Git or another tool.  4. Extract UniMath into OCaml
+using Metacoq. This will allow you to work with the core types of
+UniMath in an OCaml context, which will make it easier to integrate
+them with other parts of your project.  5. Create a universe of
+universes model that models the hierarchy of types being multiplied
+against each other recursively. This will involve defining the
+necessary types and constructing a proof system that can handle the
+operations you need to perform on these types.  6. Write
+specifications for the tasks you mentioned, such as creating
+visualizations and generating instructions for artists. These
+specifications should be detailed enough to provide clear guidelines
+for implementing the required functionality.  7. Develop an AI system
+that can extract information from latex sources and video lectures,
+reference the parts of the papers mentioned, and create visualizations
+of the instructions. This will involve writing code in OCaml or
+another language that uses the tools you've set up to perform the
+necessary tasks.  8. Test your AI system thoroughly to ensure it's
+working correctly and producing the desired results. You may also want
+to solicit feedback from other experts in the field to help improve
+the system's performance and usability.  9. Create key frames from the
+screenplay and describe them in detail. These should provide a clear
+visual representation of the instructions generated by your AI system,
+and should be easy for artists, actors, and programmers to understand
+and follow.  10. Iterate on your project as needed, making
+improvements and adjustments based on feedback and testing
+results. With careful planning and execution, you can create a
+powerful and innovative tool that combines the power of formal
+mathematics with the creativity of artistic expression.
+
+#+end_src
+
+#+begin_src output
+
+The idea is to use UniMath, a computer-checked library of univalent
+mathematics, as a foundation for the creation of a multi-disciplinary
+AI system. The system will be designed to take in latex sources and
+video lectures, identify references to these resources within each
+other, and create visualizations of the instructions using characters
+singing, actors acting, mathematical visualizations, graphs and
+charts, and different arrangements.
+
+The AI system will generate instructions for artists from both the
+source text and the video lectures, and then merge the two into a
+visual representation. The resulting visualization will be divided
+into three key frames, which will be described in detail.
+
+#+end_src
+
+#+begin_src output
+
+This project aims to create an AI system that can analyze a set of
+papers in LaTeX sources and reference the parts of the papers
+mentioned in video lectures. The resulting visualizations will be
+created using characters singing, actors acting, mathematical
+visualizations, graphs and charts arranged differently for different
+groups of actors, artists, and programmers. The goal is to generate
+instructions for the artists from both the source text and the video
+lectures and then merge the two into a visual representation.
+
+Here are three key frames that could be used in the visualization:
+
+1. Introduction: This frame would introduce the project's main goal,
+which is to create an AI system that can analyze a set of papers in
+LaTeX sources and reference the parts of the papers mentioned in video
+lectures. The frame would also introduce the different types of people
+involved in the project, such as actors, artists, and programmers, and
+explain how they will be used to create the visualizations.
+2. Research phase: In this phase, the AI system would analyze the
+LaTeX sources and extract the relevant information about the
+papers. This could include identifying key concepts and formulas, as
+well as understanding the overall structure of the papers. The video
+lectures would also be analyzed to identify which parts of the papers
+are being referenced.  3. Visualization phase: In this final phase,
+the AI system would use the extracted information to generate a set of
+visualizations that incorporate characters singing, actors acting,
+mathematical visualizations, graphs and charts arranged differently
+for different groups of people involved in the project. These
+visualizations would be designed to help people understand the key
+concepts and formulas from the papers more easily and to make it
+easier to remember important details.
+
+Overall, this project aims to create an AI system that can help people
+better understand complex mathematical concepts by combining textual
+and visual elements into a single, engaging experience.
+
+#+end_src
+
+** second
+
+#+begin_src output
+
+It sounds like you are describing a complex mathematical system that
+involves using the univalent point of view and the UniMath library in
+Coq, along with a series of lectures from Vladimir on this
+subject. You have also mentioned your plan to extract the core types
+into ocaml and then reflect them back into UniMath as a strange loop,
+and use this process to create an AI system that can analyze latex
+sources and video lectures, generate instructions for artists, and
+merge these instructions with visual representations.
+
+It's great that you are using formal methods and proof systems to
+ensure the correctness of your mathematical reasoning, and it's
+interesting to see how you plan to use unimath to construct a
+self-referential system and model mathematical concepts in a numerical
+form. It's also impressive that you have an Ubuntu LTS server with
+Dune, ocaml, Coqtop, Emacs, Proof General, and Mixtral running.
+
+It's not entirely clear how the details of your personal experience,
+such as writing on a bluetooth keyboard to a phone connected with
+Termux, are relevant to the larger project you are describing, but it
+does seem that you are trying to abstract away certain aspects of your
+process in order to focus on the core concepts and logic behind your
+work.
+
+Overall, it sounds like you have a very ambitious and interesting
+project planned, and I wish you the best of luck with it!
+#+end_src
+
+#+begin_src output
+
+Your ideas are quite innovative and involve a lot of interesting
+concepts in mathematics, computer science, and artificial
+intelligence. Here's a brief summary of your main points:
+
+1. Univalent Mathematics (UniMath) is a Coq library that formalizes a
+substantial body of mathematics using the univalent point of view. You
+plan to reflect UniMath into MetaCoq, OCaml, and then lift those
+structures back into UniMath as a strange loop.
+
+2. Paths\_refl is an
+inductive function that returns a reference loop, which can be used to
+create an identity path. You plan to extract the core types of UniMath
+into OCaml using MetaCoq.
+3. To model the hierarchy of types being
+multiplied against each other recursively, you propose creating a
+universe of universes model with a proof system for it. You also
+suggest generating instructions for artists based on the source text
+and video lectures.
+4. To merge the two sources into a visual
+representation, you plan to create three key frames from the
+screenplay, describing them in detail.
+
+5. You propose using
+polynomial representations in UniMath to represent mathematical
+concepts numerically, which can be used for computations and data
+analysis. By combining these techniques, you aim to prove the
+correctness of UniMath expressions and ensure that your mathematical
+reasoning is rigorous and reliable.
+
+6. To trace the path of rewrites
+from the original term in UniMath to a lifted ast using an abstract
+topology that spans multiple interacting processes in a Linux
+operating system running server, you suggest auditing the traffic of
+the proof engine with data flow diagrams across user probes in a Linux
+perf environment.
+
+7. You plan to reflect over your personal
+experience and eliminate unnecessary details from your proof,
+considering it as a morphism that changes commits. You want to
+understand each commit and rewrite it in terms of the proof logic.
+
+8. By ingesting the bytes of the program or text, you aim to reform
+them into UniMath using many steps and finally back into UniMath using
+UniMath itself. This self-reflection allows the universe of universes
+to reflect over itself in the universe of reflection, creating more
+complex structures on top of the previous in a recursive manner.
+
+Overall, your ideas have the potential to significantly contribute to
+the field of mathematics and computer science by combining various
+innovative concepts and techniques. Good luck with your
+implementation!
+#+end_src
+#+begin_src output
+
+This seems like a very interesting project! It involves using formal
+verification and AI techniques to reason about and visualize
+mathematical concepts, and to develop an AI system that can create
+instructions for artists based on source texts and video lectures.
+
+One of the main challenges will be designing a proof system that can
+handle the complexities of the univalent universe of universes
+model. It may also be challenging to extract the core types of Unimath
+into OCaml and then lift those structures back into Unimath in a way
+that is both efficient and precise.
+
+It's also worth considering how you will measure the distance from
+basic bits and sets of bits into higher-order structures, and how you
+will use this information to map each identifier in the reflective
+universe to a unique prime number. This may involve developing a
+decision tree or other kind of mathematical model to represent the
+relationships between different types.
+
+Overall, it sounds like this project has the potential to make
+significant contributions to both formal verification and AI
+research. Good luck!
+#+end_src
+#+begin_src output
+
+This idea presents a plan to formalize mathematics using the univalent
+point of view, which involves treating mathematical objects and
+relationships as functions between universes. To achieve this, the
+author plans to reflect the UniMath library into meta-Coq, OCaml, and
+Coq, creating an identity path using a function called `paths_refl`.
+
+The author proposes a hierarchy of types that can be multiplied
+against each other recursively, with each type on a higher level being
+a product of lower-level types. They will use a proof system to
+formalize this hierarchy and create an AI system that can reference
+parts of papers in LaTeX sources and video lectures, creating
+visualizations of instructions using characters singing, actors
+acting, mathematical visualizations, graphs, and charts.
+
+The author also suggests generating instructions for artists from the
+source text and video lectures, merging them into a visual
+representation, and creating three key frames from the
+screenplay. They propose constructing a complex self-referential
+system using UniMath to create levels of the universe that refer to
+each other recursively, with each level containing more complex
+structures than the previous one.
+
+The author suggests mapping knowledge about UniMath expressions and
+their relationships to a single number in UniMath using polynomial
+representations. They propose proving that the polynomial is
+equivalent to the lifted AST, showing a path of rewrites from the
+original term using an abstract topology that spans multiple processes
+in a Linux operating system running servers. The author also suggests
+tracing this path with a data flow diagram across user probes in a
+Linux perf environment and labeling and annotating machine
+instructions for auditing purposes.
+
+Overall, this idea presents a comprehensive plan to formalize
+mathematics using the univalent point of view and incorporating
+artificial intelligence and visualization techniques. The author
+suggests a series of steps to achieve this goal, including reflecting
+UniMath into meta-Coq and OCaml, creating an identity path using
+`paths_refl`, and constructing a hierarchy of types that can be
+multiplied against each other recursively.
+#+end_src
