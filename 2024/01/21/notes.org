@@ -4,7 +4,7 @@ it is a code generator written in ocaml that creates code from the
 ppx asts extracted.
 we want to modify this generator to visit the asts and generate custom code.
 we first start by manually modifying examples of the code and then
-presenting those changes to the output as a specificiation.
+presenting those changes to the output as a specification.
 we require that all of the code is compilable and that we can compare the asts to get a detailed view of the differences
 for the code and the ast and the execution path.
 to accomplish this task, the super uses uses an AI LLM named mistral to

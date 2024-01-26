@@ -362,3 +362,84 @@ It also seems like you are describing a process of creating a DFA from an LR gra
 
 Overall, while your idea is intriguing, it seems like it needs more development and explanation in order to be fully understood.
 #+end_src
+
+
+** summary
+
+so here is an overview :  unimath gives you the ultimate mathematic proof of all things, it is built on coq and ocaml on top of gcc/linux
+with unimath we can reason about all the other parts and lift them into mathematics
+the total2 relationships conect all ideas.
+we can treat it as the attention arrow.
+
+#+begin_src output
+
+UniMath is a tool for using formal mathematics to reason about and
+prove the correctness of other parts of software, specifically built
+on top of Coq and OCaml. It uses GCC/Linux as its backend. With
+UniMath, one can treat it as an "attention arrow" to connect all ideas
+related to a software system.
+#+end_src
+#+begin_src output
+UniMath is a mathematical proof assistant built on Coq and OCaml, and
+utilizing GCC/Linux as its underlying platform. It allows users to
+reason about all mathematical concepts and lift them into formal
+mathematics. The Total2 relationship serves as the attention arrow
+that connects all ideas within UniMath.
+#+end_src
+#+begin_src output
+
+Unimath is a mathematical proof system that utilizes Coq and OCaml
+programming languages, along with GCC/Linux, to provide a
+comprehensive proof of all mathematical concepts. It allows for the
+integration of all ideas into mathematics through the use of "total2"
+relationships, which can be thought of as attention arrows. This
+enables users to reason about various parts of mathematics and lift
+them into a more formal context. Overall, Unimath provides a powerful
+tool for mathematicians to work with complex mathematical concepts in
+a rigorous and systematic manner.
+#+end_src
+#+begin_src output
+
+Unimath is a mathematical proof assistant that uses the Coq and OCaml
+programming languages, with GCC/Linux as its foundation. It allows
+users to reason about various concepts and lift them into mathematics
+using the "total2" relationships. Unimath can be treated as an
+attention arrow that connects all ideas in mathematical reasoning.
+#+end_src
+#+begin_src output
+
+Unimath is a mathematical proof assistant that uses the Coq and OCaml
+programming languages, with GCC/Linux as its foundation. It allows
+users to reason about various concepts and lift them into mathematics
+using the "total2" relationships. Unimath can be treated as an
+attention arrow that connects all ideas in mathematical reasoning.
+#+end_src
+#+begin_src output
+
+UniMath is a mathematical proof assistant that uses Coq and OCaml on
+top of GCC/Linux. It aims to provide the ultimate mathematic proof for
+all things, allowing users to reason about other parts of mathematics
+and lift them into a mathematical context. The total2 relationships
+are used as a way to connect all ideas and can be thought of as an
+"attention arrow" that guides reasoning.
+#+end_src
+#+begin_src output
+
+UniMath is a mathematical proof assistant that utilizes Coq, OCaml,
+and GCC/Linux to reason about various concepts. It allows for the
+treatment of all ideas as part of a larger mathematical framework,
+with total2 relationships serving as an "attention arrow" connecting
+them. This approach enables users to reason about the underlying
+mathematical structure of other parts and lift them into the realm of
+mathematics.
+#+end_src
+#+begin_src output
+
+UniMath is a mathematical proof assistant that utilizes Coq and OCaml
+to provide a comprehensive understanding of all mathematical
+concepts. It is built on top of GCC/Linux and allows for the
+integration of various mathematical libraries and tools. By using
+UniMath, one can reason about all aspects of mathematics and lift
+other mathematical concepts into it. Total2 relationships serve as the
+attention arrow that connects all ideas in UniMath.
+#+end_src
