@@ -2723,3 +2723,15 @@
 [submodule "2024/01/18/CertiGraph"]
 	path = 2024/01/18/CertiGraph
 	url = https://github.com/meta-introspector/CertiGraph
+[submodule "2024/01/24/universe"]
+	path = 2024/01/24/universe
+	url = https://github.com/janestreet/universe
+[submodule "2024/01/26/math-comp-corpus"]
+	path = 2024/01/26/math-comp-corpus
+	url = https://github.com/EngineeringSoftware/math-comp-corpus
+[submodule "2024/01/26/roosterize"]
+	path = 2024/01/26/roosterize
+	url = https://github.com/EngineeringSoftware/roosterize
+[submodule "2024/01/27/jscoq"]
+	path = 2024/01/27/jscoq
+	url = https://github.com/jscoq/jscoq
