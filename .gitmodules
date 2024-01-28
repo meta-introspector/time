@@ -2735,3 +2735,12 @@
 [submodule "2024/01/27/jscoq"]
 	path = 2024/01/27/jscoq
 	url = https://github.com/jscoq/jscoq
+[submodule "2024/01/27/coq-introspector-plugin"]
+	path = 2024/01/27/coq-introspector-plugin
+	url = https://github.com/meta-introspector/coq-introspector-plugin
+[submodule "2024/01/27/assistants"]
+	path = 2024/01/27/assistants
+	url = https://github.com/stellar-amenities/assistants
+[submodule "2024/01/27/coq-of-rust"]
+	path = 2024/01/27/coq-of-rust
+	url = https://github.com/formal-land/coq-of-rust
