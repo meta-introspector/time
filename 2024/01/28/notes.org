@@ -1846,3 +1846,55 @@ The coprod function is used to create the coproduct of two types A and B. It tak
 
 The negb function is used to negate boolean values. It takes a boolean value b as input and returns true if b is false, or false if b is true.
 #+end_src
+
+** discussion
+
+layers of the dungeon,
+bottom layer is unmath.
+1. machine layer,
+2. gcc
+3. assembley
+4. linux
+5. ocaml
+6. coq
+7. unimath
+dragon of complexity in the dungeon whos design is a univalent/equilvaent to the data
+structures of the unimath reflections in coq, ocaml, and gcc and linux.
+and
+the unimath paths are the trails that lead to spaces
+inhabited by witnesses of the truth.
+those are the npcs you need visit in you quest for the goal.
+the heros journey.
+   
+The openai assistent api is an open swagger openapi specification it contains
+a set url bindings to functions with parameters and returns
+and has been translated into rust and the lifted into coq with the coq-of-rust.
+the coq references the json serde api in rust, we now have to lift json serde into coq
+and then we can make a universal json to univalence lifting tool.
+any json -> unimath -> encoding -> style -> provable -> equivalent.
+we can map json to unimath with many different styles, we can generate permutations
+of those encodings and enumerate them and prove they are equivalent.
+we have a generic unimath function that can take a token and turn it into new unimath code or reverse.
+the fundamental meta operations are
+quote and unquote (splice) and lift and shift.
+
+Define reflection_uu (x : UU) -> AstStructure := quote x
+
+unify unimath with metacoq.
+
+lift any data structures into unimath via json. prove that the json is equivalent with unimath
+creation a canonical multi dimensionsal template json representation with transformation between them.
+
+its grammar for unimath in json with many different styles that all
+can translate to unimath again.
+
+json 1 -> unimath -> json 2 -> unimath = equivalent.
+
+assitent api -> 
+
+
+
+* git
+
+git submodule add https://github.com/serde-rs/json
+git clone https://github.com/serde-rs/json

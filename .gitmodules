@@ -2744,3 +2744,15 @@
 [submodule "2024/01/27/coq-of-rust"]
 	path = 2024/01/27/coq-of-rust
 	url = https://github.com/formal-land/coq-of-rust
+[submodule "2024/01/28/json"]
+	path = 2024/01/28/json
+	url = https://github.com/serde-rs/json
+[submodule "2024/01/28/axum"]
+	path = 2024/01/28/axum
+	url = https://github.com/tokio-rs/axum
+[submodule "2024/01/29/coqhammer"]
+	path = 2024/01/29/coqhammer
+	url = https://github.com/lukaszcz/coqhammer
+[submodule "2024/01/29/FreeSpec"]
+	path = 2024/01/29/FreeSpec
+	url = https://github.com/lthms/FreeSpec
