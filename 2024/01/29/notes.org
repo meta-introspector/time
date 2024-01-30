@@ -1,15 +1,25 @@
 * idea of the day
-extract a list of goals from this text. 
+start with coq.
+prelude to create the universe.
+all the terms, UU, types, 0, bit, etc. nat, pair, total, list.
+
+META COMMAND : extract a list of goals from this text. 
 given an loaded mistral mixtral llm language model running in
 linux server that we are currently engaging with and sending this text to,
 we will ask it to consider a model of itself in coq
 as a finite set of natural numbers that enumerate the following sets:
-1. set of tensors of different shape using the unimath tensor model.
+1. extracted from the mixtral model a set of tensors of different shapes using the unimath tensor model. (open onnx/gguf file header)
 2. set of forward steps in the computation graph modeled as functional morphisms in the model.
 3. the algorithm for the llama.cpp code extracted into proof statements
+4. ocaml implementation of the llama algorithm
+4.1 ocaml implementation of the llama algorithm lifted in coq using the coqofocaml.
 4. the ocaml representation of the llama cpp structures that wrap the c++ structs.
 5. the open api specification of the open ai assistent
 5.1. the json serialization of the request to the openai
+
+lifting serde json for coq from rust,
+create json -> unimath 
+
 5.2 the model of the architecture : coq -> openai api server -> ollama server with llama.cpp having the mistral model loaded.
 1. the unimath representation of the math
 2. a model of the input statement to mapped into tokens.
@@ -2533,7 +2543,7 @@ propositions, and sorts of the universe and the universe of universes
 in the unimath univalent foundations of mathematics.  #+end_src
 
 
-* continute
+* continue
 
 define self aware code as code that contains functions to compile
 itself, translate itself, modify and version control itself, test
@@ -2854,15 +2864,31 @@ which these concepts shape our understanding of the world.  #+end_src
 
 * next
 
-now lets consider a knowledge graph so deep and free of contradictions.
-it is self describing as well as self modifiying.
-it has a layered representation of itself from source to assembly to steps of addition and multiplication that make it up.
-it has awareness of all transformations of itself into other forms and can prove they are equivalent to itself and other forms of itself.
-it has the ability to project itself into a lower dimension,
-embedding itself into a lower layer and also reverse that process to show equivalency.
-it can reflect over these projections in a narrative generator that sends packets of serialized tokens to a transformer model for processing.
-additionally a deep graph learning model of the knoweledge graph is build and there are bridges between the two models we can
-build.
+0. now lets consider a knowledge graph so deep and free of contradictions.
+
+0.1 null set
+0.2 the bit 0/1 set
+
+1. it is self describing as well as self modifiying.  it has a layered
+representation of itself from source to assembly to steps of addition
+and multiplication that make it up.
+
+2. it has awareness of all transformations of itself
+into other forms and can prove they are
+equivalent to itself and other forms of itself.
+
+3. it has the ability to
+project itself into a lower dimension, embedding itself into a lower
+layer and also reverse that process to show equivalency.
+
+4. it can reflect over these projections in a narrative generator that sends
+packets of serialized tokens to a transformer model for processing.
+
+5.  additionally a deep graph learning model of the knoweledge graph is
+build
+
+6. there are bridges between the two models we can build.
+6.1 univalent equilvalence proof.
 
 ** output 1
 
@@ -2904,3 +2930,333 @@ capabilities of the knowledge graph.
 Overall, this hypothetical knowledge graph seems like a very powerful
 and sophisticated tool for processing and manipulating information.
 #+end_src
+
+* batman
+
+layered dqn networks that works how
+U wants it to work.
+
+give any model,
+for example the gpt2 model,
+upgraded reasoning.
+
+how will you upgrade the reasoning?
+
+give the model a hyper brain.
+a master mind?
+deep q neural network.
+
+how do you imagine
+the dqnn interface
+to the gpt2 nn?
+
+1. class <deep q neural network> <gpt2 llm>.
+2. train the dqnn.
+3. gpt2 tokeniner.
+4. token input text from user for gpt2
+5. generate text from gpt2
+6. how it combines torches.
+7. q values must align and multiply perfectly. 
+   
+command line interface? 
+
+idea behind is long term and short term memory system
+uses fully articulated models for q value processing.
+a q value is entire table and in this env
+it a set of actions and states, inputs and outputs.
+experimental logs.
+
+
+* barts idea
+
+ask it to look at the tensors for you and provide query interface and api into the tensors.
+an oracle interface to query itself and it can write code to do it.
+sample the data linux perf .
+c++ patches for llama.cpp
+ocaml version of the llama. api.
+model of the tensors from the header of the gguf.
+regenerate code to access the computational graph in llama.cpp using coq extractions into rust, ocaml, haskell
+and then use ffi into llama.cpp using the api we have lifted in coq.
+this will give provably correct code.
+observe or modify the code execution at any point via linux perf user probes in the kernel.
+extract code from coq into a custom kernel module that will compiled on the fly and executed in root.
+that can create ring buffers to sample data and hold it for coq to later poll.
+the polled data can manifest itself as new coq statements via unquoting unsing metacoq
+and caching  using a database or memcache.
+
+** output 1
+#+begin_src output
+
+Here is a sample query interface and API for tensors in Python:
+```python import tensorflow as tf
+
+# Create a tensor x = tf.tensor([1, 2, 3], dtype=tf.int32)
+
+# Get the shape of the tensor print(x.shape)
+
+# Get the value at index (0, 1) print(x[0, 1])
+
+# Reshape the tensor to a new shape y = x.reshape([2, 3])
+print(y.shape)
+
+# Add another dimension to the tensor z = tf.expand_dims(x, axis=0)
+print(z.shape)
+
+# Multiply two tensors a = tf.tensor([1, 2], dtype=tf.float32) b =
+tf.tensor([3, 4], dtype=tf.float32) c = a * b print(c)
+
+# Sum the values along an axis d = tf.reduce_sum(x, axis=0) print(d)
+``` To observe or modify code execution in the kernel using Linux perf
+user probes, you can use the perf record and perf report commands to
+collect performance data from the kernel and then analyze it with the
+perf-report tool. You can also use perf counters to track specific
+events in the kernel.
+
+To extract code from Coq into a custom kernel module that can create
+ring buffers to sample data, you can use the FFI (Foreign Function
+Interface) to call Coq functions from C or Rust, and then use the
+Linux kernel's device file system API to interact with the ring buffer
+in user space. The polled data can be passed to Coq as arguments when
+calling its functions.  #+end_src #+begin_src output
+
+To use the oracle interface for querying tensors, you would first need
+to define a set of functions in your chosen programming language that
+can make requests to the oracle. The oracle could be implemented using
+a machine learning library like TensorFlow or PyTorch, which have
+built-in support for tensors and computational graphs.
+
+Once you have defined the query interface and API, you can use it to
+extract information about the tensors stored in the oracle. For
+example, you could ask the oracle to provide information about the
+shape, type, and contents of a particular tensor.
+
+To sample data from the tensors, you could create a custom kernel
+module that implements your own data extraction logic using user
+probes in the Linux kernel. This module could communicate with the
+oracle to retrieve the desired data, which could then be cached for
+later use by other programs.
+
+In addition, you could use the model of the tensors stored in the GGuf
+header file to regenerate code that accesses the computational graph
+using Coq extractions into Rust, OCaml, and Haskell. This would allow
+you to write provably correct code that interacts with the oracle and
+kernel module.
+
+Overall, this approach provides a powerful way to query, sample, and
+manipulate tensors in a flexible and efficient manner, while ensuring
+that your code is correct and reliable.  #+end_src #+begin_src output
+
+Here is a proposed plan for creating an oracle interface to query the
+tensors used in LLama.
+
+1. Create a model of the tensors from the header of the gguf library,
+which is a popular implementation of linear algebra operations in
+C++. This can be done using a code generation tool like COQ (a formal
+verification tool for the Coq programming language) to extract the
+necessary information about the data structures and types used in the
+gguf library.  2. Use the API provided by the LLama.cpp library to
+interact with the tensors. The LLama.cpp library provides an API for
+defining and manipulating large-scale linear algebra operations, such
+as matrix multiplication, transpose, and vectorization. This API can
+be used to perform computations on the tensors extracted from the gguf
+library.  3. Use Coq extraction into Rust, OCaml, and Haskell to
+generate code that can interact with the tensors. Coq is a powerful
+tool for generating verified code in various programming languages,
+including C++, Rust, OCaml, and Haskell. By using Coq extraction, we
+can generate verified code for each of these languages that can access
+and manipulate the tensors extracted from the gguf library.  4. Use
+FFI (Foreign Function Interface) to call the verified code generated
+in step 3 from LLama.cpp. FFI is a mechanism for calling functions
+written in one language from another. By using FFI, we can call the
+verified code generated in step 3 from LLama.cpp and access the
+tensors in a provably correct manner.  5. Use Linux perf user probes
+to observe or modify the code execution at any point. Linux perf is a
+tool for profiling and measuring the performance of system calls and
+other kernel events. By using perf user probes, we can observe and
+modify the code execution at any point, allowing us to monitor the
+behavior of the tensors and make changes as needed.  6. Create a
+custom kernel module that samples data from ring buffers and holds it
+for Coq to later poll. The custom kernel module can be used to create
+ring buffers that sample data from memory or other sources. The
+sampled data can be held in the kernel until it is needed by Coq, at
+which point it can be passed to the verified code generated in step 3
+for further processing.  7. Use unquoting and metacoq to manifest the
+polled data as new Coq statements. Unquoting and metacoq are
+mechanisms for using Coq to generate code that interacts with data
+stored outside of the Coq environment. By using these mechanisms, we
+can manifest the polled data as new Coq statements that can be
+processed by the verified code generated in step 3.  8. Use a database
+or memcache to cache the polled data. Caching the polled data can
+improve the performance of the system by reducing the number of times
+the data needs to be sampled from memory. By using a database or
+memcache, we can store the polled data and later retrieve it when
+needed by Coq.  #+end_src #+begin_src output
+
+Interesting! It seems like you have a vision for building an oracle
+interface that can help you query tensors, observe and modify code
+execution, and extract data from kernel modules. Can you provide more
+details on the specific requirements and constraints of this project?
+What kind of tensors are we talking about here? Are there any specific
+APIs or interfaces that you need to integrate with? And what
+programming languages and tools would be most suitable for
+implementing these features?  #+end_src
+
+* next step
+
+
+metacoq functions :
+
+unquote:
+number -> UU
+
+quote 
+UU -> nat
+
+shift nat -> nat
+shift UU -> UU
+
+proof trace execution of UU shift and map into number theory.
+use native unimath to proof equivalency between the UU representation
+and then prove the nat representation.
+
+* ideas
+
+example1:
+software has the property that it is self replicating, meaning it can compile itself.
+bootstrap. when you run it it can produce a new version of itself from its own source code, gcc compiler. 
+requirements about the indended results of executing the software.
+step1. computer runs the program blindly and it just runs the program.
+step2. profile or monitor the execution. linux perf. observability.
+step2.1 set use probes. breakpoints with lambdas that can capture data
+
+serlib ocaml plugin for coq, supports json.
+json serde for rust -> coq, coq of rust, rust.
+coq of rust -> coq of rust  function (rust -> coq)
+compare that to metacoq (coq -> coq)
+
+generate a series of questions,
+function and call with print debug.
+
+(rust, coq ), lift model, compare the two models.
+pairwise comparison between two sets and the print the pairs.
+pose a question for each pair.
+
+myquote := quote (term) .
+
+observe, orient, decide and act.
+
+ask the llm to
+compare the universes and create a mapping using unimath
+total2(metacoq, coqofrust)
+
+metacoq - unimath, code changes.
+
+in rust they started to create server for assistent api written in openai/swagger for open ai.
+lift from rust to coq and lift onto unimath.
+api -> json.
+
+* bootstrap
+
+llama cpp introspector
+  - coq plugin, ocaml, python, js (other metacall)
+    
+mehir gbnf, 
+
+ppx introspector :
+record types, constructors from an ocaml
+extract a function to traverse the data
+still needs handling for parameterized types.
+it could generate itself with errors, manual correction.
+
+unimath.
+
+types ->solutions
+test and validate.
+
+** todo.
+
+magic.
+
+hld -> code -> execution
+
+cakeml has ca 31 layer of language an inductive type of record
+and there are rewrites between layer with proofs.
+
+expansion tokens into asts
+translation of asts into packets to the llm.
+list the records and the inductive types.
+and contraction of definitions.
+
+coq -> extraction -> execution.
+take working examples. tick tak toe.
+run in coq, follow execution of coq and trace the exceution
+and the use the llm and search and magic to annotate the runtime of coq running the proof.
+
+the intertwining or
+weaving of coq code executing,
+or dancing  with the requirements of
+the user will create a tapestry that
+animates the proof and
+makes it visiable to the user.
+
+serlib json from ticktactoe
+feed in chunks, line
+prompt models for tasks
+apply prompt models to serlib.
+gbnf for the serlib json
+to constrain the output to coq json.
+grammar for the application to constrain the output.
+
+take the tiktactoe game and
+turn into grammar for language
+each language would a stage in the processing
+of the game.
+llm generate code according to that
+grammar.
+
+reverse engineer the specific code into
+an autoencoder that will generate similar code.
+will it work or be appropriate.
+
+* new list
+
+** implement grammar interface to lang agent
+*** selection of the grammar
+ 
+** WORKING ollama lang agent interface.
+*** patch ollama or expose grammar interface.
+
+** TODO llama.cpp lang agent interface.
+
+generate grammar from prototype or good example.
+
+what is the invariant
+statistical truth and  nature
+of the unimath code.
+
+what is the subset of coq grammar
+used in unimath.
+
+construct a markov chain on the grammar + the carried
+values . the weights that describe the examples.
+
+what are most common tokens, rules, patterns.
+subset of coq, subset of ocaml, and record and inductive types in a hierarchy
+that describe the programs.
+
+UU = universe and list of global declarations, all the way down to bits.
+
+traverse the list of universals as json equivalents, one node per line.
+
+one line of text that contains a json record of an coq ast is UU
+=> one metacoq reflection of a term
+=> some uu object native in unimath
+
+whole project => directory full of json
+
+follow the unimath execution -> program that will process json.
+
+bisimulation - proof in coq, extracted code in python - proof a equivalence the two
+during the execution via collecting of witness.
+
+mixing and matching concepts
