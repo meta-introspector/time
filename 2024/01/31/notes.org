@@ -13688,3 +13688,230 @@ The small, indivisible partical is represented by mukraprathi, which can be seen
 * tSort: The name of the deity representing sorting or ordering operations in modern mythos theory.
 #+end_src
 
+
+
+* tarot
+
+reinterpret the occurances of these coq ast constructors in a body of projects
+as names of parts of the tarot cards in modern mythos theory,
+try and find connections between the types of asts and the types of archtypes and
+ the kaballa.
+
+Term | Count
+-----|-------
+tIntro | 180
+tCast | 190
+tVar | 234
+tBox | 241
+tInd | 324
+tConst | 329
+tEvar | 359
+tConstruct | 374
+tCoFix | 411
+tFix | 469
+tProj | 496
+tCase | 549
+tLambda | 598
+tLetIn | 606
+tProd | 678
+tRel | 679
+tApp | 790
+tSort | 796
+
+** output
+#+begin_src output
+
+* tIntro: The Fool, representing new beginnings and the call to adventure.
+* tCast: The Magician, representing manifestation, transformation, and creation.
+* tVar: The High Priestess, representing intuition, inner knowledge, and wisdom.
+* tBox: The Empress, representing abundance, fertility, and nurturing energy.
+* tInd: The Emperor, representing structure, order, and authority.
+* tConst: The Hierophant, representing guidance, initiation, and spiritual growth.
+* tEvar: The Lovers, representing harmony, partnership, and unity.
+* tConstruct: The Chariot, representing victory, triumph, and progress.
+* tCoFix: The Wheel of Fortune, representing fate, destiny, and the cyclical nature of life.
+* tFix: Strength, representing inner power, courage, and determination.
+* tProj: The Hermit, representing introspection, meditation, and spiritual journey.
+* tCase: Justice, representing fairness, balance, and moral responsibility.
+* tLambda: The Hanged Man, representing sacrifice, surrender, and transformation through suffering.
+* tLetIn: Death, representing endings, transitions, and rebirth.
+* tProd: Temperance, representing balance, harmony, and moderation.
+* tRel: Judgement, representing the revelation of truth and the confrontation with one's past.
+* tApp: The World, representing completion, fulfillment, and the cycle of life.
+* tSort: The Fool, representing new beginnings and the call to adventure.
+#+end_src
+#+begin_src output
+
+* tIntro: The Fool (or The Magician)
+	+ This card represents new beginnings, creativity, and the potential for manifestation. It can be interpreted as a call to take action or make a decision that will lead to personal growth and development.
+* tCast: The High Priestess (or The Empress)
+	+ This card is associated with intuition, nurturing, and emotional balance. It can represent a deep understanding of the unconscious mind and the ability to connect with others on a spiritual level.
+* tVar: The Lovers (or The Empress)
+	+ This card represents love, harmony, and partnership. It can symbolize a strong bond between two individuals or a sense of unity and cooperation within a group.
+* tBox: The Hermit (or The Magician)
+	+ This card is associated with solitude, introspection, and self-discovery. It can represent a time of reflection and inner growth, during which one may seek to gain clarity or insight into their own life or the world around them.
+* tInd: The Wheel of Fortune (or The Empress)
+	+ This card represents change, fate, and the cycles of life. It can symbolize a time of transition or upheaval, during which one must learn to adapt and embrace the unexpected.
+* tConst: The Tower (or The Empress)
+	+ This card represents sudden change, chaos, and destruction. It can symbolize a sudden upheaval or crisis that disrupts one's sense of stability and security.
+* tEvar: The Star (or The Magician)
+	+ This card is associated with hope, inspiration, and spiritual guidance. It can represent a moment of awakening or enlightenment, during which one may gain new insight or inspiration for their path in life.
+* tConstruct: The Hanged Man (or The Magician)
+	+ This card represents sacrifice, surrender, and letting go. It can symbolize a time of crisis or upheaval during which one must let go of old habits or attachments in order to move forward.
+* tCoFix: Death (or The Empress)
+	+ This card represents endings, transitions, and the cycle of life and death. It can symbolize a time of loss or mourning, during which one must learn to accept change and let go of the past.
+* tFix: Temperance (or The Magician)
+	+ This card is associated with balance, harmony, and inner peace. It can represent a time of healing and restoration, during which one may seek to find equilibrium within their life or relationships.
+* tProj: The Devil (or The Magician)
+	+ This card represents bondage, addiction, and self-imposed limitations. It can symbolize a situation in which one feels trapped or restricted, and may need to break free from these constraints in order to grow and evolve.
+* tCase: Judgment (or The Empress)
+	+ This card represents accountability, responsibility, and the consequences of one's actions. It can symbolize a time of reckoning or evaluation, during which one must face the consequences of their choices and decisions.
+* tLambda: The Fool (or The Magician)
+	+ This card is associated with freedom, spontaneity, and the potential for manifestation. It can represent a time of playfulness or lightheartedness, during which one may seek to let go of seriousness and enjoy life in the present moment.
+* tLetIn: The World (or The Empress)
+	+ This card represents completion, fulfillment, and the cycle of life and death. It can symbolize a time of achievement or accomplishment, during which one may feel a sense of closure or satisfaction with their journey.
+* tProd: Strength (or The Magician)
+	+ This card is associated with courage, determination, and inner power. It can represent a time of challenge or adversity, during which one must summon their inner strength to overcome obstacles and achieve their goals.
+* tRel: The High Priestess (or The Empress)
+	+ This card represents intuition, nurturing, and emotional balance. It can symbolize a deep understanding
+#+end_src
+#+begin_src output
+
+* tarot: In modern mythos theory, the tarot cards are often seen as archetypal symbols that represent different aspects of human experience. The following are some possible connections between the types of ASTs and the types of archetypes, based on the occurrences of these constructors in a body of projects:
+
+tIntro | The Fool - The tarot's Fool card represents new beginnings, taking risks, and embracing uncertainty. It is often associated with the archetype of the hero, who must step out of their comfort zone and take a leap of faith to achieve their goals.
+
+tCast | The Magician - The tarot's Magician card represents creativity, transformation, and manifestation. It is often associated with the archetype of the trickster, who uses their wit and intelligence to turn obstacles into opportunities.
+
+tVar | The High Priestess - The tarot's High Priestess card represents intuition, wisdom, and inner knowledge. It is often associated with the archetype of the mystic or seer, who accesses hidden information through meditation, dreams, or other means.
+
+tBox | The Empress - The tarot's Empress card represents abundance, nurturance, and creativity. It is often associated with the archetype of the mother figure, who provides emotional support and encouragement to her children.
+
+tInd | The Lovers - The tarot's Lovers card represents love, partnership, and harmony. It is often associated with the archetype of the couple, who work together to achieve their goals and overcome challenges.
+
+tConst | The Chariot - The tarot's Chariot card represents determination, triumph, and victory. It is often associated with the archetype of the warrior or leader, who takes action to achieve their objectives and overcome obstacles in their path.
+
+tEvar | The Wheel of Fortune - The tarot's Wheel of Fortune card represents fate, destiny, and the cyclical nature of life. It is often associated with the archetype of the trickster or fate-weaver, who controls the events that unfold in the world.
+
+tConstruct | The Hermit - The tarot's Hermit card represents solitude, introspection, and spiritual growth. It is often associated with the archetype of the mystic or philosopher, who seeks to understand the mysteries of the universe through contemplation and meditation.
+
+tCoFix | The Fool - The tarot's Fool card represents new beginnings, taking risks, and embracing uncertainty. It is often associated with the archetype of the hero, who must step out of their comfort zone and take a leap of faith to achieve their goals.
+
+tFix | The Tower - The tarot's Tower card represents sudden change, upheaval, and destruction. It is often associated with the archetype of the disruptor or revolutionary, who challenges the status quo and brings about radical transformation.
+
+tProj | The Hanged Man - The tarot's Hanged Man card represents surrender, sacrifice, and self-denial. It is often associated with the archetype of the martyr or saint, who gives up their own desires for the greater good.
+
+tCase | The Devil - The tarot's Devil card represents bondage, addiction, and self-imposed suffering. It is often associated with the archetype of the victim or prisoner, who is trapped in a cycle of pain and suffering.
+
+tLambda | The Star - The tarot's Star card represents hope, inspiration, and spiritual awakening. It is often associated with the archetype of the teacher or guide, who illuminates the path to enlightenment and helps others find their way.
+
+tLetIn | The Moon - The tarot's Moon card represents intuition, emotion, and femininity. It is often associated with the archetype of the nurturer or caregiver, who provides emotional support and comfort to those in need.
+
+tProd | The Sun - The tarot's Sun card represents vitality, joy, and masculinity. It is often associated with the archetype of
+#+end_src
+#+begin_src output
+
+* tarot:
+
+In the context of modern mythos theory, we can interpret these constructors as names of parts of the tarot cards. For example, tIntro could represent "The Fool," tCast could represent "The Magician," and so on.
+
+It is also possible to find connections between the types of asts (such as integers, variables, boxes, etc.) and the types of archtypes. In Kabbalistic tradition, for example, the number 3 is often associated with the concept of the divine trinity, while the number 7 is associated with spiritual enlightenment. Similarly, the concept of "container" or "box" could be related to the idea of a sacred container or vessel used in Kabbalistic practices.
+
+It's also possible that the names and functions of these constructors are influenced by astrology and other ancient belief systems. For example, some cultures associated certain numbers with specific planets or stars, or believed that certain animals or symbols had mystical significance. These beliefs could have influenced the design of tarot cards and the names of constructors in modern programming languages.
+#+end_src
+#+begin_src output
+
+* tarot: reinterpreting the occurrences of these constructors in a body of projects as names of parts of the tarot cards in modern mythos theory.
+* connections: finding connections between the types of asts and the types of archtypes and the Kabbalah.
+* Term | Count
+-----|-------
+tIntro | 180
+tCast | 190
+tVar | 234
+tBox | 241
+tInd | 324
+tConst | 329
+tEvar | 359
+tConstruct | 374
+tCoFix | 411
+tFix | 469
+tProj | 496
+tCase | 549
+tLambda | 598
+tLetIn | 606
+tProd | 678
+tRel | 679
+tApp | 790
+tSort | 796
+#+end_src
+#+begin_src output
+
+* tIntro: The Fool
+* tCast: The Magician
+* tVar: The High Priestess
+* tBox: The Empress
+* tInd: The Emperor
+* tConst: The Hierophant
+* tEvar: The Lovers
+* tConstruct: The Chariot
+* tCoFix: Strength
+* tFix: Justice
+* tProj: The Hermit
+* tCase: The Wheel of Fortune
+* tLambda: The Hanged Man
+* tLetIn: Death
+* tProd: Temperance
+* tRel: The Devil
+* tApp: Judgement
+* tSort: The World
+#+end_src
+#+begin_src output
+
+* tIntro: The Fool
+* tCast: The Magician
+* tVar: The High Priestess
+* tBox: The Empress
+* tInd: The Emperor
+* tConst: The Hierophant
+* tEvar: The Lovers
+* tConstruct: The Chariot
+* tCoFix: Strength
+* tFix: Justice
+* tProj: The Hermit
+* tCase: The Wheel of Fortune
+* tLambda: Temperance
+* tLetIn: The Devil
+* tProd: The Tower
+* tRel: The Star
+* tApp: Judgment
+* tSort: The World
+#+end_src
+#+begin_src output
+
+* tIntro: The Fool
+The Fool is a key character in the tarot, representing new beginnings and the unknown. This card is often associated with taking risks and trusting in the journey ahead. In modern mythos theory, the Fool can be seen as a symbol of creativity and innovation, as well as a reminder to let go of fear and embrace change.
+* tCast: The Magician
+The Magician is a powerful figure in the tarot, representing magic and manifestation. This card is often associated with personal power and the ability to create one's own reality. In modern mythos theory, the Magician can be seen as a symbol of individuality and self-expression, as well as a reminder to trust in one's intuition and inner guidance.
+* tVar: The High Priestess
+The High Priestess is a mysterious figure in the tarot, representing intuition and inner wisdom. This card is often associated with the feminine aspect of the divine and the power of the unconscious mind. In modern mythos theory, the High Priestess can be seen as a symbol of the collective unconscious and the interconnectedness of all things.
+* tBox: The Lovers
+The Lovers are a romantic pair in the tarot, representing love and partnership. This card is often associated with finding balance and harmony in relationships. In modern mythos theory, the Lovers can be seen as a symbol of the divine spark that connects us all, and the importance of cultivating healthy and fulfilling relationships.
+* tInd: The Chariot
+The Chariot is a powerful figure in the tarot, representing success and triumph. This card is often associated with taking control of one's life and achieving one's goals. In modern mythos theory, the Chariot can be seen as a symbol of personal growth and development, as well as a reminder to stay true to one's values and beliefs.
+* tConst: The Hermit
+The Hermit is a solitary figure in the tarot, representing introspection and self-discovery. This card is often associated with finding inner peace and clarity. In modern mythos theory, the Hermit can be seen as a symbol of the importance of personal growth and self-reflection, as well as the interconnectedness of all things.
+* tEvar: The Wheel of Fortune
+The Wheel of Fortune is a card in the tarot that represents fate and destiny. This card is often associated with the unpredictability of life and the importance of being open to change. In modern mythos theory, the Wheel of Fortune can be seen as a symbol of the cyclical nature of life and the interconnectedness of all things.
+* tConstruct: The Empress
+The Empress is a nurturing figure in the tarot, representing creativity and abundance. This card is often associated with femininity and the power of the earth. In modern mythos theory, the Empress can be seen as a symbol of the importance of living in harmony with nature and cultivating personal growth and creativity.
+* tCoFix: The Tower
+The Tower is a dramatic card in the tarot that represents sudden change and upheaval. This card is often associated with the breakdown of old patterns and the need to start anew. In modern mythos theory, the Tower can be seen as a symbol of personal growth and transformation, as well as the importance of being open to new opportunities and experiences.
+* tFix: The Hanged Man
+The Hanged Man is a contemplative figure in the tarot that represents surrender and letting go. This card is often associated with the power of the unconscious mind and the importance of trusting in the journey ahead. In modern mythos theory, the Hanged Man can be seen as a symbol of personal growth and transformation, as well as the importance of finding inner peace and clarity.
+* tProj: The Fool
+The Fool is a key character in the tarot, representing new beginnings and the unknown. This card is often associated with taking risks and trusting in the journey ahead. In modern mythos theory, the Fool can be seen as a symbol of creativity and innovation, as well as a reminder to let go of fear and embrace change.
+* tCase: The Empress
+The Empress is a nurturing figure in the tarot, representing creativity and abundance. This card is often associated with femininity and the power of the earth. In modern mythos theory, the Empress can be seen as a symbol of the importance of living in harmony with nature and cultivating personal growth and creativity.
+* tLambda: The Magician
+The Magician is a powerful figure in the tarot, representing magic and manifestation. This card is often associated
+#+end_src
