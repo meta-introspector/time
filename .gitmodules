@@ -2858,3 +2858,27 @@
 [submodule "2024/01/31/ett-to-itt"]
 	path = 2024/01/31/ett-to-itt
 	url = https://github.com/TheoWinterhalter/ett-to-itt
+[submodule "2024/01/31/helix"]
+	path = 2024/01/31/helix
+	url = https://github.com/vzaliva/helix
+[submodule "2024/01/31/category-theory"]
+	path = 2024/01/31/category-theory
+	url = https://github.com/jwiegley/category-theory
+[submodule "2024/01/31/candid"]
+	path = 2024/01/31/candid
+	url = https://github.com/dfinity/candid
+[submodule "2024/01/31/coq-tricks"]
+	path = 2024/01/31/coq-tricks
+	url = https://github.com/tchajed/coq-tricks
+[submodule "2024/01/31/fscq"]
+	path = 2024/01/31/fscq
+	url = https://github.com/mit-pdos/fscq
+[submodule "2024/01/31/WasmCert-Coq"]
+	path = 2024/01/31/WasmCert-Coq
+	url = https://github.com/WasmCert/WasmCert-Coq
+[submodule "2024/01/31/InteractionTrees"]
+	path = 2024/01/31/InteractionTrees
+	url = https://github.com/DeepSpec/InteractionTrees
+[submodule "2024/01/31/saw-script"]
+	path = 2024/01/31/saw-script
+	url = https://github.com/GaloisInc/saw-script
