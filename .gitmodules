@@ -2882,3 +2882,9 @@
 [submodule "2024/01/31/saw-script"]
 	path = 2024/01/31/saw-script
 	url = https://github.com/GaloisInc/saw-script
+[submodule "2024/01/31/bedrock2"]
+	path = 2024/01/31/bedrock2
+	url = https://github.com/mit-plv/bedrock2
+[submodule "2024/01/31/coq-ltac2-experiments"]
+	path = 2024/01/31/coq-ltac2-experiments
+	url = https://github.com/tchajed/coq-ltac2-experiments
