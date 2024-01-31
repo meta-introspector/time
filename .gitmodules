@@ -2756,3 +2756,105 @@
 [submodule "2024/01/29/FreeSpec"]
 	path = 2024/01/29/FreeSpec
 	url = https://github.com/lthms/FreeSpec
+[submodule "2024/01/29/uttsolver"]
+	path = 2024/01/29/uttsolver
+	url = https://github.com/samchrisinger/uttsolver
+[submodule "2024/01/30/doctoral-thesis"]
+	path = 2024/01/30/doctoral-thesis
+	url = https://github.com/JasonGross/doctoral-thesis.git
+[submodule "2024/01/30/bedrock"]
+	path = 2024/01/30/bedrock
+	url = https://github.com/mit-plv/bedrock.git
+[submodule "2024/01/30/coq-tools"]
+	path = 2024/01/30/coq-tools
+	url = https://github.com/JasonGross/coq-tools
+[submodule "2024/01/30/lob"]
+	path = 2024/01/30/lob
+	url = https://github.com/JasonGross/lob
+[submodule "2024/01/30/coq-tactics"]
+	path = 2024/01/30/coq-tactics
+	url = https://github.com/JasonGross/coq-tactics
+[submodule "2024/01/30/coq-scripts"]
+	path = 2024/01/30/coq-scripts
+	url = https://github.com/JasonGross/coq-scripts
+[submodule "2024/01/30/slow-coq-examples"]
+	path = 2024/01/30/slow-coq-examples
+	url = https://github.com/JasonGross/slow-coq-examples
+[submodule "2024/01/30/lob-paper"]
+	path = 2024/01/30/lob-paper
+	url = https://github.com/JasonGross/lob-paper
+[submodule "2024/01/30/proviola-source"]
+	path = 2024/01/30/proviola-source
+	url = https://github.com/JasonGross/proviola-source
+[submodule "2024/01/30/18.721"]
+	path = 2024/01/30/18.721
+	url = https://github.com/JasonGross/18.721
+[submodule "2024/01/30/ct4s"]
+	path = 2024/01/30/ct4s
+	url = https://github.com/JasonGross/ct4s
+[submodule "2024/01/30/neural-net-coq-interp"]
+	path = 2024/01/30/neural-net-coq-interp
+	url = https://github.com/JasonGross/neural-net-coq-interp
+[submodule "2024/01/30/parsing-parses"]
+	path = 2024/01/30/parsing-parses
+	url = https://github.com/JasonGross/parsing-parses
+[submodule "2024/01/30/adt-synthesis"]
+	path = 2024/01/30/adt-synthesis
+	url = https://github.com/JasonGross/adt-synthesis
+[submodule "2024/01/30/ClosestPoints"]
+	path = 2024/01/30/ClosestPoints
+	url = https://github.com/JasonGross/ClosestPoints
+[submodule "2024/01/30/variegated-reading-lists"]
+	path = 2024/01/30/variegated-reading-lists
+	url = https://github.com/danidiaz/variegated-reading-lists
+[submodule "2024/01/30/Coda"]
+	path = 2024/01/30/Coda
+	url = https://github.com/Veridise/Coda
+[submodule "2024/01/30/theory-pl-refinement-coq"]
+	path = 2024/01/30/theory-pl-refinement-coq
+	url = https://github.com/spgroup/theory-pl-refinement-coq
+[submodule "2024/01/30/coq-ltac2-experiments"]
+	path = 2024/01/30/coq-ltac2-experiments
+	url = https://github.com/tchajed/coq-ltac2-experiments
+[submodule "2024/01/30/coq-ltac-iter"]
+	path = 2024/01/30/coq-ltac-iter
+	url = https://github.com/gmalecha/coq-ltac-iter
+[submodule "2024/01/30/ltac2-tutorial"]
+	path = 2024/01/30/ltac2-tutorial
+	url = https://github.com/tchajed/ltac2-tutorial
+[submodule "2024/01/30/VplTactic"]
+	path = 2024/01/30/VplTactic
+	url = https://github.com/VERIMAG-Polyhedra/VplTactic
+[submodule "2024/01/30/PolTac"]
+	path = 2024/01/30/PolTac
+	url = https://github.com/thery/PolTac
+[submodule "2024/01/31/coq-library-complexity"]
+	path = 2024/01/31/coq-library-complexity
+	url = https://github.com/uds-psl/coq-library-complexity
+[submodule "2024/01/31/coq-library-undecidability"]
+	path = 2024/01/31/coq-library-undecidability
+	url = https://github.com/uds-psl/coq-library-undecidability
+[submodule "2024/01/31/bedrock"]
+	path = 2024/01/31/bedrock
+	url = https://github.com/mit-plv/bedrock/
+[submodule "2024/01/31/frap"]
+	path = 2024/01/31/frap
+	url = https://github.com/achlipala/frap
+[submodule "2024/01/31/reification-by-parametricity"]
+	path = 2024/01/31/reification-by-parametricity
+	url = https://github.com/mit-plv/reification-by-parametricity
+[submodule "2024/01/31/coq-elpi"]
+	path = 2024/01/31/coq-elpi
+	url = https://github.com/LPCIC/coq-elpi
+[submodule "2024/01/31/coq-a-la-carte-cpp20"]
+	path = 2024/01/31/coq-a-la-carte-cpp20
+	url = https://github.com/uds-psl/coq-a-la-carte-cpp20
+[submodule "2024/01/31/template-coq"]
+	path = 2024/01/31/template-coq
+	url = https://github.com/TheoWinterhalter/template-coq
+[submodule "2024/01/31/SepLogicTypeclasses"]
+	path = 2024/01/31/SepLogicTypeclasses
+	url = https://github.com/normanrink/SepLogicTypeclasses
+[submodule "2024/01/31/ett-to-itt"]
+	path = 2024/01/31/ett-to-itt
+	url = https://github.com/TheoWinterhalter/ett-to-itt
