@@ -1,0 +1,6 @@
+create an ocaml function that takes a string and converts it into a one way function checksum shorter string by hashing or other summarization techniques.
+it should create a content address that includes projects,lanuage,syntax,semantics,and pointers for more information.
+it can be structured or an autoencoder. It can be lossy up to the parameter specified so we can generate a range of functions with different attributes.
+it has the ability to emit itself as a new function so it can rewrite itself.
+it can reflect over its own source code.
+it can write itself into existance.
