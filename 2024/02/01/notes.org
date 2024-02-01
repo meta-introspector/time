@@ -6,3 +6,116 @@ it expects ~/experiments/lang_agent/_build/default/bin/worker.exe to be where yo
 https://github.com/meta-introspector/lang_agent and
 ~/experiments/lang_agent/huggingface/ to be where we write the data
 https://huggingface.co/datasets/introspector/unimath/
+
+
+** interesting outputs
+
+The text you provided is a proof trace file from Unimath, a modern homotopy type theory system. It describes a proof that an object of type unit\_category is terminal, meaning it cannot be refined further.
+
+To create workflows for an AI agent using this proof trace, we can break down the proof into smaller chunks and use them as tasks for the agent to complete. Here are some examples:
+
+1. Define the goal of the proof: x : ob unit\_category
+2. Identify the dependencies of the goal: (isTerminal unit\_category x)
+3. Break down the dependency into smaller sub-goals:
+	* simple refine p
+	* simple refine (p _)
+	* simple refine (p _ _)
+	* ...
+	* simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+4. Define the input and output types for each sub-goal:
+	* p := make\_isTerminal of type uconstr of type tacvalue
+	* x : unit\_category
+5. Use the proof traces to create workflows for the AI agent to follow, with each sub-goal representing a task that the agent must complete in order to successfully prove the goal.
+
+Overall, by breaking down the proof into smaller chunks and creating workflows based on the dependencies between them, we can use this proof trace to teach an AI agent how to prove properties of objects of type unit\_category in Unimath.
+
+*** output 2
+
+Hello, I am an AI assistant that can help you with your journey to convert Unimath into zero-knowledge proof snarks. Let's start by breaking down the math code you provided and transforming it into a series of logical chunks for each snark.
+
+Snark 1: Understanding the Category Theory Concept
+--------------------------------------------------
+
+* Introduce the concept of category theory in Unimath and explain its significance in homotopy type theory.
+* Discuss how category theory allows for more flexible and expressive mathematical reasoning.
+
+Snark 2: Defining the Unit Category Limits
+---------------------------------------------
+
+* Define the unit category limits in Unimath and explain their purpose.
+* Show the code snippet you provided as an example of defining these limits.
+
+Snark 3: Implementing the Simple Rapply Function
+------------------------------------------------
+
+* Explain the simple\_rapply function in Unimath and its role in refining the proof trace.
+* Demonstrate how this function is used to refine the proof traces for the unit category limits example.
+
+Snark 4: Refining the Proof Trace with Simple Refinements
+----------------------------------------------------------
+
+* Introduce simple refinements as a way to improve the efficiency of the proof trace refinement process.
+* Show how simple refinements are used in the unit category limits example to further refine the proof traces.
+
+Snark 5: Handling Type Mismatches in Proof Trace Refinements
+------------------------------------------------------------
+
+* Discuss the challenges that can arise when type mismatches occur during proof trace refinements.
+* Explain how these issues are resolved in the unit category limits example.
+
+Snark 6: Transforming the Unit Category Limits Example into a Zero-Knowledge Proof Snark
+--------------------------------------------------------------------------------------
+
+* Introduce zero-knowledge proof snarks as a way to verify mathematical statements without revealing any sensitive information.
+* Explain how the unit category limits example can be transformed into a zero-knowledge proof snark.
+* Provide an example of how this transformation could be done using popular zero-knowledge proof libraries like zk-SNARKs or libsnark.
+
+Throughout these snarks, you'll need to incorporate elements of storytelling and visualization to make the concepts more engaging and accessible for your audience. Use analogies, metaphors, and vivid imagery to help people understand complex mathematical ideas. Additionally, consider incorporating interactive elements like quizzes or exercises to reinforce the learning experience.
+#+end_src output
+
+
+
+
+** example 3
+
+Welcome to the journey of converting UniMath into a series of zero-knowledge proof snarks that extract interesting properties about the system. Let's begin by breaking down the math code into logical chunks.
+
+Snark 1: Understanding the problem
+------------------------------
+
+The given Coq proof trace file describes an example of proving that a function is terminal in the category of units. The goal is to prove that a given object x belongs to the unit category.
+
+Snark 2: Analyzing the code structure
+-----------------------------------
+
+We see that the code consists of several simple refinements, each iteratively adding more constraints on the function p until it becomes trivial to evaluate. Let's analyze the refinements step by step:
+
+1. `simple refine p || simple refine (p _)` - This first refinement splits the function p into two parts, p and p \_ (with an extra underscore), and applies a simple refinement to each part.
+2. `simple refine (p _) || simple refine (p _ _)` - The second refinement further splits each part of p into two sub-parts and applies another simple refinement.
+3. `...` - This pattern continues until we have split p into multiple parts and applied a simple refinement to each part.
+
+Snark 3: Understanding the function make\_isTerminal
+-----------------------------------------------
+
+The function `make_isTerminal` is used throughout the code to create a trivial proof that a given object x belongs to the unit category. It takes a type C and two objects a and b as inputs and returns an object that depends on both a and b. This function is expected to have the following property:
+```scss
+(∏ a : C, iscontr (C ⟦ a, b ⟧)) → isTerminal C b
+```
+This means that for any two objects a and b of type C, if they are incompatible (i.e., the iscontr function returns true), then the object returned by make\_isTerminal belongs to the unit category.
+
+Snark 4: Visualizing the proof structure
+---------------------------------------
+
+To understand the proof structure better, let's visualize it as a tree. Each node in the tree represents a refinement step, and the edges connect nodes based on their dependencies. The root of the tree is the original goal of proving that x belongs to the unit category.
+
+1. The first refinement splits p into two parts and applies simple refinements to each part, forming two new nodes.
+2. The second refinement further splits each part of p into two sub-parts and applies another simple refinement, forming four new nodes.
+3. This pattern continues until we have split p into multiple parts and applied a simple refinement to each part, forming a large number of nodes.
+4. Finally, we use the make\_isTerminal function to create a trivial proof that a given object x belongs to the unit category, which forms the leaf node of the tree.
+
+Snark 5: Creating the zero-knowledge proof snarks
+-----------------------------------------------
+
+Using the information gathered from the previous snarks, we can now create a series of zero-knowledge proof snarks that extract interesting properties about the system. These snarks will help you understand UniMath better and provide insights into its design and implementation.
+
+Stay tuned for more snark-based content!
