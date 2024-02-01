@@ -1,0 +1,168 @@
+ ulimit -v unlimited ; make -f build/CoqMakefile.make all
+make[1]: Entering directory '/mnt/data1/2024/01/05/UniMath'
+COQDEP VFILES
+COQC UniMath/CategoryTheory/limits/Examples/UnitCategoryLimits.v
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+...
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+...
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := make_isTerminal
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+  ...
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+x : unit_category
+The term "make_isTerminal" has type
+ "∏ b : unit_category,
+  (∏ a : unit_category, iscontr (unit_category ⟦ a, b ⟧))
+  → isTerminal unit_category b" while it is expected to have type
+ "isTerminal unit_category x"
+(cannot unify "(∏ a : unit_category, iscontr (unit_category ⟦ a, b ⟧))
+               → isTerminal unit_category b" and
+"iscontr (unit_category ⟦ b, x ⟧)").
+Level 0: In environment
+x : unit_category
+The term "make_isTerminal" has type
+ "∏ b : unit_category,
+  (∏ a : unit_category, iscontr (unit_category ⟦ a, b ⟧))
+  → isTerminal unit_category b" while it is expected to have type
+ "isTerminal unit_category x"
+(cannot unify "(∏ a : unit_category, iscontr (unit_category ⟦ a, b ⟧))
+               → isTerminal unit_category b" and
+"iscontr (unit_category ⟦ b, x ⟧)").
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+...
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+x : unit_category
+The term "make_isTerminal ?b" has type
+ "(∏ a : ?C, iscontr (?C ⟦ a, ?b ⟧)) → isTerminal ?C ?b"
+while it is expected to have type "isTerminal unit_category x".
+Level 0: In environment
+x : unit_category
+The term "make_isTerminal ?b" has type
+ "(∏ a : ?C, iscontr (?C ⟦ a, ?b ⟧)) → isTerminal ?C ?b"
+while it is expected to have type "isTerminal unit_category x".
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+    x : ob unit_category
+  ============================
+   (isTerminal unit_category x)
+

@@ -1,0 +1,8 @@
+
+*  run the script
+run20.sh to run 20 iterations over the task.
+
+it expects ~/experiments/lang_agent/_build/default/bin/worker.exe to be where you built the
+https://github.com/meta-introspector/lang_agent and
+~/experiments/lang_agent/huggingface/ to be where we write the data
+https://huggingface.co/datasets/introspector/unimath/
