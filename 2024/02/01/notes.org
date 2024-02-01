@@ -119,3 +119,30 @@ Snark 5: Creating the zero-knowledge proof snarks
 Using the information gathered from the previous snarks, we can now create a series of zero-knowledge proof snarks that extract interesting properties about the system. These snarks will help you understand UniMath better and provide insights into its design and implementation.
 
 Stay tuned for more snark-based content!
+
+* updated idea.
+
+1. create high hevel english text
+2. extract the list of sets,types,kinds,sorts,categories,and universes in the text.
+3. create a definitions in coq that represent the basic ideas from the text, the dsl.
+4. add in decriptions of coq, the os, the languages around it and in it.
+5. now write basic theories and proofs about the dsl, even trival ones.
+6. now look in unimath for what parts could apply to this DSL
+7. connect the proof of the application DSL to unimath
+8. show how unimath applys to the application of the user
+9. extract a workflow from the unimath proof to apply to the user data.
+10. use the llm to interpret the applied proof of the unimath to the domain specific language
+
+* extract chunks out of org mode file and feed them to the llm.
+keep track of each chunk as a goal to be followed in the proof engine.
+use hashs and content addressable lookup and canonical form to break up the data.
+
+
+* orfeus as actor/demigod
+
+the orfeus character acts as a god and human, as composor and actor in his own art.
+he represents the story teller who writes himself into the story.
+
+so the idea of the introspector as the bard warrior that explains what
+we are seeing in an easier to consume manner,
+singing a tale of the data but also being an actor in it.
