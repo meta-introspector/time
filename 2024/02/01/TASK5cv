@@ -1,0 +1,1000 @@
+ "(∏ x : ?X₁, ?f x = ?g x) → ?f = ?g" while it is expected to have type
+ "φ₁ = φ₂".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+The term "eq_monotone_function ?f ?g" has type
+ "(∏ x : ?X₁, ?f x = ?g x) → ?f = ?g" while it is expected to have type
+ "φ₁ = φ₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  ============================
+   (∏ x : pr1 P, φ₁ x = φ₂ x)
+
+
+Going to execute:
+intro w
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  ============================
+   (∏ x : pr1 P, φ₁ x = φ₂ x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::intro@1> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+use poset_enrichment_coprod_arr_eq
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := poset_enrichment_coprod_arr_eq
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "poset_enrichment_coprod_arr_eq" has type
+ "∏ (EC : poset_enrichment_coprod) (x : C) (ys : J → C)
+  (f g : C ⟦ poset_enrichment_obj_coprod EC ys, x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in EC ys j · f =
+   poset_enrichment_obj_coprod_in EC ys j · g) → f = g"
+while it is expected to have type "φ₁ w = φ₂ w".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "poset_enrichment_coprod_arr_eq" has type
+ "∏ (EC : poset_enrichment_coprod) (x : C) (ys : J → C)
+  (f g : C ⟦ poset_enrichment_obj_coprod EC ys, x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in EC ys j · f =
+   poset_enrichment_obj_coprod_in EC ys j · g) → f = g"
+while it is expected to have type "φ₁ w = φ₂ w".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "@poset_enrichment_coprod_arr_eq ?EC" has type
+ "∏ (x : C) (ys0 : J → C)
+  (f g : C ⟦ poset_enrichment_obj_coprod ?EC ys0, x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in ?EC ys0 j · f =
+   poset_enrichment_obj_coprod_in ?EC ys0 j · g) → 
+  f = g" while it is expected to have type "φ₁ w = φ₂ w".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "@poset_enrichment_coprod_arr_eq ?EC" has type
+ "∏ (x : C) (ys0 : J → C)
+  (f g : C ⟦ poset_enrichment_obj_coprod ?EC ys0, x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in ?EC ys0 j · f =
+   poset_enrichment_obj_coprod_in ?EC ys0 j · g) → 
+  f = g" while it is expected to have type "φ₁ w = φ₂ w".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "@poset_enrichment_coprod_arr_eq ?EC ?x" has type
+ "∏ (ys0 : J → C) (f g : C ⟦ poset_enrichment_obj_coprod ?EC ys0, ?x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in ?EC ys0 j · f =
+   poset_enrichment_obj_coprod_in ?EC ys0 j · g) → 
+  f = g" while it is expected to have type "φ₁ w = φ₂ w".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)
+w : pr1 P
+The term "@poset_enrichment_coprod_arr_eq ?EC ?x" has type
+ "∏ (ys0 : J → C) (f g : C ⟦ poset_enrichment_obj_coprod ?EC ys0, ?x ⟧),
+  (∏ j : J,
+   poset_enrichment_obj_coprod_in ?EC ys0 j · f =
+   poset_enrichment_obj_coprod_in ?EC ys0 j · g) → 
+  f = g" while it is expected to have type "φ₁ w = φ₂ w".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  ys : J → C
+  z : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+  q : ∏ j : J,
+      φ₁
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j) =
+      φ₂
+      · precomp_arr E' z
+          (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone
+             j)
+  w : pr1hSet
+        ?X596@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0}
+  ============================
+   (φ₁ w = φ₂ w)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+ys : J → C
+z : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enriched_coprod_cocone, z ⦄ ⟧
+q : ∏ j : J,
+    φ₁
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j) =
+    φ₂
+    · precomp_arr E' z
+        (enriched_coprod_cocone_in E' ys make_poset_enriched_coprod_cocone j)

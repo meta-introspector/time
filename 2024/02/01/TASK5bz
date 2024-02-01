@@ -1,0 +1,1000 @@
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x" has type
+ "∏ (y0 z0 : C) (f0 g0 : C ⟦ ?x, y0 ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, z0 ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x" has type
+ "∏ (y0 z0 : C) (f0 g0 : C ⟦ ?x, y0 ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, z0 ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y" has type
+ "∏ (z0 : C) (f0 g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, z0 ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y" has type
+ "∏ (z0 : C) (f0 g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, z0 ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z" has type
+ "∏ (f0 g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, ?z ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z" has type
+ "∏ (f0 g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC f0 g0, ?z ⟧),
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC f0 g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z ?f" has type
+ "∏ (g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC ?f g0, ?z ⟧),
+  poset_enrichment_obj_coeq_in ?EEC ?f g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC ?f g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z ?f" has type
+ "∏ (g0 : C ⟦ ?x, ?y ⟧)
+  (h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC ?f g0, ?z ⟧),
+  poset_enrichment_obj_coeq_in ?EEC ?f g0 · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC ?f g0 · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z ?f ?g" has type
+ "∏ h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC ?f ?g, ?z ⟧,
+  poset_enrichment_obj_coeq_in ?EEC ?f ?g · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC ?f ?g · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,
+φ₂ : poset_sym_mon_closed_cat ⟦ P,
+     E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+q : φ₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone) =
+    φ₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_poset_enrichment_coequalizer_cocone)
+z : pr1 P
+The term "@poset_enrichment_coequalizer_arr_eq ?EEC ?x ?y ?z ?f ?g" has type
+ "∏ h₁ h₂ : C ⟦ poset_enrichment_obj_coequalizer ?EEC ?f ?g, ?z ⟧,
+  poset_enrichment_obj_coeq_in ?EEC ?f ?g · h₁ =
+  poset_enrichment_obj_coeq_in ?EEC ?f ?g · h₂ → h₁ = h₂"
+while it is expected to have type "φ₁ z = φ₂ z".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  P : ob poset_sym_mon_closed_cat
+  φ₁ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : poset_sym_mon_closed_cat ⟦ P,
+       E' ⦃ make_poset_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_poset_enrichment_coequalizer_cocone)
+  z : pr1hSet
+        ?X451@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+               ?M0}
+  ============================
+   (φ₁ z = φ₂ z)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+w : C
+P : poset_sym_mon_closed_cat
+φ₁,

@@ -1,0 +1,1000 @@
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+     (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+   (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+ (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X293@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X295@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X628@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X660@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X692@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X724@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t3 : ?X756@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t4 : ?X788@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  t5 : ?X820@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t6 : ?X852@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t7 : ?X884@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t8 : ?X916@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : E t0 t1 t4 t5,
+        E (h t t0 t2 t3) t1 (CoequalizerOut (h t t0 t2 t3) t1 t4 t6)
+          (CoequalizerOut (h t t0 t2 t3) t1 t5 t7)) t8))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple_rapply p
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 1: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 1: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t9 : ?T, ?P t9)"
+cannot be applied to the term
+ "?y" : "?T0"
+Evaluated term: propproperty
+Evaluated term: CoequalizerEqAr
+Evaluated term: CoequalizerCommutes
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := CoequalizerOutsEq
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+h₁, h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+q : poset_enrichment_obj_coeq_in f g · h₁ =
+    poset_enrichment_obj_coeq_in f g · h₂
+The term "CoequalizerOutsEq" has type
+ "∏ (E0 : Coequalizer ?f ?g) (w : ?C) (φ1 φ2 : ?C ⟦ E0, w ⟧),
+  CoequalizerArrow E0 · φ1 = CoequalizerArrow E0 · φ2 → φ1 = φ2"
+while it is expected to have type "h₁ = h₂".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+h₁, h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+q : poset_enrichment_obj_coeq_in f g · h₁ =
+    poset_enrichment_obj_coeq_in f g · h₂
+The term "CoequalizerOutsEq" has type
+ "∏ (E0 : Coequalizer ?f ?g) (w : ?C) (φ1 φ2 : ?C ⟦ E0, w ⟧),
+  CoequalizerArrow E0 · φ1 = CoequalizerArrow E0 · φ2 → φ1 = φ2"
+while it is expected to have type "h₁ = h₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+h₁, h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+q : poset_enrichment_obj_coeq_in f g · h₁ =
+    poset_enrichment_obj_coeq_in f g · h₂
+The term "@CoequalizerOutsEq ?C ?y ?z ?f ?g ?E" has type
+ "∏ (w : ?C) (φ1 φ2 : ?C ⟦ ?E, w ⟧),
+  CoequalizerArrow ?E · φ1 = CoequalizerArrow ?E · φ2 → φ1 = φ2"
+while it is expected to have type "h₁ = h₂".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : poset_enrichment_coequalizers
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+h₁, h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+q : poset_enrichment_obj_coeq_in f g · h₁ =
+    poset_enrichment_obj_coeq_in f g · h₂
+The term "@CoequalizerOutsEq ?C ?y ?z ?f ?g ?E" has type
+ "∏ (w : ?C) (φ1 φ2 : ?C ⟦ ?E, w ⟧),
+  CoequalizerArrow ?E · φ1 = CoequalizerArrow ?E · φ2 → φ1 = φ2"
+while it is expected to have type "h₁ = h₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : poset_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  h₁ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  h₂ : C ⟦ poset_enrichment_obj_coequalizer f g, z ⟧
+  q : poset_enrichment_obj_coeq_in f g · h₁ =
+      poset_enrichment_obj_coeq_in f g · h₂
+  ============================
+   (h₁ = h₂)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||

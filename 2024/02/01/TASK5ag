@@ -1,0 +1,1000 @@
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "total2_paths_f" has type
+ "∏ p : pr1 ?s = pr1 ?s', transportf ?B p (pr2 ?s) = pr2 ?s' → ?s = ?s'"
+while it is expected to have type "pr1 φ₁ = pr1 φ₂".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "total2_paths_f" has type
+ "∏ p : pr1 ?s = pr1 ?s', transportf ?B p (pr2 ?s) = pr2 ?s' → ?s = ?s'"
+while it is expected to have type "pr1 φ₁ = pr1 φ₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr1 φ₁ = pr1 φ₂)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr1 φ₁ = pr1 φ₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr1 φ₁ = pr1 φ₂)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "total2_paths_f ?p" has type
+ "transportf ?B ?p (pr2 ?s) = pr2 ?s' → ?s = ?s'"
+while it is expected to have type "pr1 φ₁ = pr1 φ₂".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "total2_paths_f ?p" has type
+ "transportf ?B ?p (pr2 ?s) = pr2 ?s' → ?s = ?s'"
+while it is expected to have type "pr1 φ₁ = pr1 φ₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr1 φ₁ = pr1 φ₂)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr1 φ₁ = pr1 φ₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := isotoid _ HC
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "isotoid C HC" has type "z_iso ?a ?b → ?a = ?b"
+while it is expected to have type "pr11 φ₁ = pr11 φ₂".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+The term "isotoid C HC" has type "z_iso ?a ?b → ?a = ?b"
+while it is expected to have type "pr11 φ₁ = pr11 φ₂".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr11 φ₁ = pr11 φ₂)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (z_iso (pr11 φ₁) (pr11 φ₂))
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (transportf (precategory_morphisms y)
+      (isotoid C HC (z_iso_between_Coequalizer φ₁ φ₂)) 
+      (pr21 φ₁) = pr21 φ₂)
+
+
+Going to execute:
+rewrite transportf_isotoid'
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  ============================
+   (pr21 φ₁ · z_iso_between_Coequalizer φ₁ φ₂ = pr21 φ₂)
+
+
+Going to execute:
+cbn
+Evaluated term: transportf_isotoid'
+Evaluated term: transportf_isotoid'
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple_rapply p
+Evaluated term: CoequalizerCommutes
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := make_is_initial_enriched
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 : ?C),
+  (∏ (w : ?V) (y : ?C), ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched E0 x0" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 : ?C),
+  (∏ (w : ?V) (y : ?C), ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched E0 x0" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E" has type
+ "∏ x0 : C,
+  (∏ (w : ?V) (y : C), ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : C) (f g : ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E x0" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E" has type
+ "∏ x0 : C,
+  (∏ (w : ?V) (y : C), ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : C) (f g : ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E x0" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x" has type
+ "(∏ (w : ?V) (y : ?C), ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x" has type
+ "(∏ (w : ?V) (y : ?C), ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x ?f" has type
+ "(∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+  → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+x : C
+Hx : isInitial C x
+I := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x ?f" has type
+ "(∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+  → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  P : ob ?X179@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  y : ob ?X180@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (poset_sym_mon_closed_cat ⟦ P, E' ⦃ x, y ⦄ ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  P : ob ?X179@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  y : ob ?X180@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (Core.hset_category ⟦ pr1 P, pr1 (E' ⦃ x, y ⦄) ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  P : ob poset_sym_mon_closed_cat
+  y : ob C
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 P, pr1 (E' ⦃ x, y ⦄) ⟧,
+     Core.mor_disp (pr2 P) (pr2 (E' ⦃ x, y ⦄)) f)
+      (λ _ : pr1 P, InitialArrow I y))
+
+
+Going to execute:
+intros x₁ x₂ p; apply refl_PartialOrder
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  P : ob poset_sym_mon_closed_cat
+  y : ob C
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 P, pr1 (E' ⦃ x, y ⦄) ⟧,
+     Core.mor_disp (pr2 P) (pr2 (E' ⦃ x, y ⦄)) f)
+      (λ _ : pr1 P, InitialArrow I y))
+
+
+Going to execute:
+intros x₁ x₂ p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  x : ob C
+  Hx : isInitial C x
+  I := make_Initial x Hx : Initial C
+  P : ob poset_sym_mon_closed_cat
+  y : ob C
+  x₁ : pr1hSet (pr1 P)
+  x₂ : pr1hSet (pr1 P)
+  p : hProptoType (pr2 P x₁ x₂)

@@ -1,0 +1,1000 @@
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha ?w ?f"
+has type
+ "∏ g0 : ?C ⟦ ?a, ?w ⟧,
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g0
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g0 → 
+    ?f = g0" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha ?w ?f"
+has type
+ "∏ g0 : ?C ⟦ ?a, ?w ⟧,
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g0
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g0 → 
+    ?f = g0" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+           (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y ?Ha" has type
+ "enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?g → 
+    ?f = ?g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y ?Ha" has type
+ "enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?g → 
+    ?f = ?g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+         (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y ?Ha ?q₁" has type
+ "enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?g → ?f = ?g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EP : enrichment_binary_coprod E'
+x₁, x₂, y : C
+prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : poset_sym_mon_closed_cat
+prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+ : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+f : C ⟦ x₁, y ⟧
+g : C ⟦ x₂, y ⟧
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y ?Ha ?q₁" has type
+ "enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?g → ?f = ?g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+  poset_to_underlying_binary_coprod_map f g".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f g =
+    poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (is_binary_coprod_enriched E' x₁ x₂ (pr1 (EP x₁ x₂)))
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (enriched_coprod_cocone_in1 E' x₁ x₂ (pr1 (EP x₁ x₂))
+    · BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f
+        g =
+    enriched_coprod_cocone_in1 E' x₁ x₂ (pr1 (EP x₁ x₂))
+    · poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x₁ : ob C
+  x₂ : ob C
+  y : ob C
+  prod := (E' ⦃ x₁, y ⦄) ⊗ (E' ⦃ x₂, y ⦄) : ob poset_sym_mon_closed_cat
+  prod_pr1 := pr1,, dirprod_pr1_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₁, y ⦄ ⟧
+  prod_pr2 := pr2,, dirprod_pr2_is_monotone (E x₁ y) (E x₂ y)
+           : poset_sym_mon_closed_cat ⟦ prod, E' ⦃ x₂, y ⦄ ⟧
+  f : C ⟦ x₁, y ⟧
+  g : C ⟦ x₂, y ⟧
+  ============================
+   (enriched_coprod_cocone_in2 E' x₁ x₂ (pr1 (EP x₁ x₂))
+    · BinCoproductArrow (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) f
+        g =
+    enriched_coprod_cocone_in2 E' x₁ x₂ (pr1 (EP x₁ x₂))
+    · poset_to_underlying_binary_coprod_map f g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::refine@0> $1
+Evaluated term: (BinCoproductIn1Commutes C x₁ x₂
+                   (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) y f g)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  ============================
+   poset_enrichment_binary_coprod
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+Evaluated term: (BinCoproductIn2Commutes C x₁ x₂
+                   (underlying_BinCoproduct E' x₁ x₂ (pr2 (EP x₁ x₂))) y f g)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  ============================
+   (BinCoproducts C)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  ============================
+   ((λ BC : BinCoproducts C,
+     ∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (BC x₁ x₂) y (BinCoproductArrow (BC x₁ x₂) f g)
+           (BinCoproductArrow (BC x₁ x₂) f' g'))
+      (λ x y : C, underlying_BinCoproduct E' x y (pr2 (EP x y))))
+
+
+Going to execute:
+intros x y₁ y₂ f f' p g g' q;
+ rewrite !poset_to_underlying_binary_coprod_map_eq;
+ apply (poset_to_underlying_binary_coprod_map_monotone EP p q)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  ============================
+   ((λ BC : BinCoproducts C,
+     ∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (BC x₁ x₂) y (BinCoproductArrow (BC x₁ x₂) f g)
+           (BinCoproductArrow (BC x₁ x₂) f' g'))
+      (λ x y : C, underlying_BinCoproduct E' x y (pr2 (EP x y))))
+
+
+Going to execute:
+intros x y₁ y₂ f f' p g g' q;
+ rewrite !poset_to_underlying_binary_coprod_map_eq
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  ============================
+   ((λ BC : BinCoproducts C,
+     ∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (BC x₁ x₂) y (BinCoproductArrow (BC x₁ x₂) f g)
+           (BinCoproductArrow (BC x₁ x₂) f' g'))
+      (λ x y : C, underlying_BinCoproduct E' x y (pr2 (EP x y))))
+
+
+Going to execute:
+intros x y₁ y₂ f f' p g g' q
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y₁ : ob C
+  y₂ : ob C
+  f : C ⟦ x, y₂ ⟧
+  f' : C ⟦ x, y₂ ⟧
+  p : hProptoType (E x y₂ f f')
+  g : C ⟦ y₁, y₂ ⟧
+  g' : C ⟦ y₁, y₂ ⟧
+  q : hProptoType (E y₁ y₂ g g')
+  ============================
+   (hProptoType
+      (E (underlying_BinCoproduct E' x y₁ (pr2 (EP x y₁))) y₂
+         (BinCoproductArrow (underlying_BinCoproduct E' x y₁ (pr2 (EP x y₁)))
+            f g)
+         (BinCoproductArrow (underlying_BinCoproduct E' x y₁ (pr2 (EP x y₁)))
+            f' g')))
+
+
+Going to execute:
+rewrite !poset_to_underlying_binary_coprod_map_eq
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y₁ : ob C
+  y₂ : ob C
+  f : C ⟦ x, y₂ ⟧
+  f' : C ⟦ x, y₂ ⟧
+  p : hProptoType (E x y₂ f f')
+  g : C ⟦ y₁, y₂ ⟧
+  g' : C ⟦ y₁, y₂ ⟧
+  q : hProptoType (E y₁ y₂ g g')
+  ============================
+   (hProptoType
+      (E (underlying_BinCoproduct E' x y₁ (pr2 (EP x y₁))) y₂
+         (poset_to_underlying_binary_coprod_map EP f g)
+         (poset_to_underlying_binary_coprod_map EP f' g')))
+
+
+Going to execute:
+apply (poset_to_underlying_binary_coprod_map_monotone EP p q)
+Evaluated term: poset_to_underlying_binary_coprod_map_eq
+Evaluated term: poset_to_underlying_binary_coprod_map_eq
+Evaluated term: poset_to_underlying_binary_coprod_map_eq
+Evaluated term: poset_to_underlying_binary_coprod_map_eq
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple_rapply p
+Evaluated term: (poset_to_underlying_binary_coprod_map_monotone EP p q)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := weqimplimpl
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl" has type
+ "(?X → ?Y) → (?Y → ?X) → isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl" has type
+ "(?X → ?Y) → (?Y → ?X) → isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f" has type
+ "(?Y → ?X) → isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f" has type
+ "(?Y → ?X) → isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g" has type "isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g" has type "isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g ?isx" has type "isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g ?isx" has type "isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_binary_coprod E' ≃ poset_enrichment_binary_coprod".
+

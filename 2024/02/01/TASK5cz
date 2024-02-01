@@ -1,0 +1,1000 @@
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 : ?C),
+  (∏ (w : ?V) (y : ?C), ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched E0 x0" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 : ?C),
+  (∏ (w : ?V) (y : ?C), ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, E0 ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched E0 x0" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E" has type
+ "∏ x0 : C,
+  (∏ (w : ?V) (y : C), ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : C) (f g : ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E x0" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E" has type
+ "∏ x0 : C,
+  (∏ (w : ?V) (y : C), ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : C) (f g : ?V ⟦ w, ?E ⦃ x0, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E x0" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x" has type
+ "(∏ (w : ?V) (y : ?C), ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x" has type
+ "(∏ (w : ?V) (y : ?C), ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧)
+  → (∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+    → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x ?f" has type
+ "(∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+  → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+The term "make_is_initial_enriched ?E ?x ?f" has type
+ "(∏ (w : ?V) (y : ?C) (f g : ?V ⟦ w, ?E ⦃ ?x, y ⦄ ⟧), f = g)
+  → is_initial_enriched ?E ?x" while it is expected to have type
+ "is_initial_enriched E' x".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (is_initial_enriched E' x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob
+        ?X167@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  y : ob
+        ?X168@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob
+        ?X167@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  y : ob
+        ?X168@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (Core.hset_category ⟦ pr1 X, pr1 (E' ⦃ x, y ⦄) ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 X, pr1 (E' ⦃ x, y ⦄) ⟧,
+     Core.mor_disp (pr2 X) (pr2 (E' ⦃ x, y ⦄)) f)
+      (λ _ : pr1 X, InitialArrow T y))
+
+
+Going to execute:
+cbn; apply hset_struct_const
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 X, pr1 (E' ⦃ x, y ⦄) ⟧,
+     Core.mor_disp (pr2 X) (pr2 (E' ⦃ x, y ⦄)) f)
+      (λ _ : pr1 X, InitialArrow T y))
+
+
+Going to execute:
+cbn
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  ============================
+   (mor_hset_struct P (pr2 X) (E x y) (λ _ : pr1 X, InitialArrow T y))
+
+
+Going to execute:
+apply hset_struct_const
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (∏ (w : sym_mon_closed_cat_of_hset_struct P) (y : C)
+    (f g : sym_mon_closed_cat_of_hset_struct P ⟦ w, E' ⦃ x, y ⦄ ⟧), 
+    f = g)
+
+
+Going to execute:
+intros X y f g; use eq_mor_hset_struct; intros z; apply (@InitialArrowEq _ T)
+Evaluated term: hset_struct_const
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (∏ (w : sym_mon_closed_cat_of_hset_struct P) (y : C)
+    (f g : sym_mon_closed_cat_of_hset_struct P ⟦ w, E' ⦃ x, y ⦄ ⟧), 
+    f = g)
+
+
+Going to execute:
+intros X y f g; use eq_mor_hset_struct; intros z
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (∏ (w : sym_mon_closed_cat_of_hset_struct P) (y : C)
+    (f g : sym_mon_closed_cat_of_hset_struct P ⟦ w, E' ⦃ x, y ⦄ ⟧), 
+    f = g)
+
+
+Going to execute:
+intros X y f g; use eq_mor_hset_struct
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  ============================
+   (∏ (w : sym_mon_closed_cat_of_hset_struct P) (y : C)
+    (f g : sym_mon_closed_cat_of_hset_struct P ⟦ w, E' ⦃ x, y ⦄ ⟧), 
+    f = g)
+
+
+Going to execute:
+intros X y f g
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+use eq_mor_hset_struct
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := eq_mor_hset_struct
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+X : sym_mon_closed_cat_of_hset_struct P
+y : C
+f, g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+The term "eq_mor_hset_struct" has type
+ "∏ (P : hset_struct) (X Y : category_of_hset_struct P)
+  (f g : category_of_hset_struct P ⟦ X, Y ⟧),
+  (∏ x : pr11 X, pr1 f x = pr1 g x) → f = g"
+while it is expected to have type "f = g".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+X : sym_mon_closed_cat_of_hset_struct P
+y : C
+f, g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+The term "eq_mor_hset_struct" has type
+ "∏ (P : hset_struct) (X Y : category_of_hset_struct P)
+  (f g : category_of_hset_struct P ⟦ X, Y ⟧),
+  (∏ x : pr11 X, pr1 f x = pr1 g x) → f = g"
+while it is expected to have type "f = g".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+X : sym_mon_closed_cat_of_hset_struct P
+y : C
+f, g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+The term "@eq_mor_hset_struct ?P" has type
+ "∏ (X0 Y : category_of_hset_struct ?P)
+  (f0 g0 : category_of_hset_struct ?P ⟦ X0, Y ⟧),
+  (∏ x : pr11 X0, pr1 f0 x = pr1 g0 x) → f0 = g0"
+while it is expected to have type "f = g".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+x : C
+Hx : isInitial C x
+T := make_Initial x Hx : Initial C
+X : sym_mon_closed_cat_of_hset_struct P
+y : C
+f, g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+The term "@eq_mor_hset_struct ?P" has type
+ "∏ (X0 Y : category_of_hset_struct ?P)
+  (f0 g0 : category_of_hset_struct ?P ⟦ X0, Y ⟧),
+  (∏ x : pr11 X0, pr1 f0 x = pr1 g0 x) → f0 = g0"
+while it is expected to have type "f = g".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  x : ob C
+  Hx : isInitial C x
+  T := make_Initial x Hx : Initial C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  y : ob C
+  f : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  g : sym_mon_closed_cat_of_hset_struct P ⟦ X, E' ⦃ x, y ⦄ ⟧
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||

@@ -1,0 +1,1000 @@
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x : C) (ys : J → C),
+       mor_hset_struct P
+         (HP (λ j : J, pr1 (E' ⦃ ys j, x ⦄)) (λ j : J, pr2 (E' ⦃ ys j, x ⦄)))
+         (E (h ys) x)
+         (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, x ⦄))%set,
+          CoproductArrow J C (h ys) (λ i : J, h0 i))))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   (∏ t : C,
+    isofhlevel 1
+      ((λ t0 : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t0 ⦄))
+             (λ j : J, pr2 (E' ⦃ ys j, t0 ⦄))) (E (h ys) t0)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t0 ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+intro
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   (∏ t : C,
+    isofhlevel 1
+      ((λ t0 : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t0 ⦄))
+             (λ j : J, pr2 (E' ⦃ ys j, t0 ⦄))) (E (h ys) t0)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t0 ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::intro@0>
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+use impred; intro
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+use impred
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := impred
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred" has type
+ "∏ (n : nat) (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel n (P t)) → isofhlevel n (∏ t : T, P t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "∏ ys : J → C,
+               mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"nat").
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred" has type
+ "∏ (n : nat) (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel n (P t)) → isofhlevel n (∏ t : T, P t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "∏ ys : J → C,
+               mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"nat").
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "@impred ?n" has type
+ "∏ (T : UU) (P0 : T → UU),
+  (∏ t0 : T, isofhlevel ?n (P0 t0)) → isofhlevel ?n (∏ t : T, P0 t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "∏ ys : J → C,
+               mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"UU").
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "@impred ?n" has type
+ "∏ (T : UU) (P0 : T → UU),
+  (∏ t0 : T, isofhlevel ?n (P0 t0)) → isofhlevel ?n (∏ t : T, P0 t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "∏ ys : J → C,
+               mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"UU").
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred ?n" has type
+ "∏ P0 : (J → C) → UU,
+  (∏ t0 : J → C, isofhlevel ?n (P0 t0)) → isofhlevel ?n (∏ t : J → C, P0 t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"UU").
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred ?n" has type
+ "∏ P0 : (J → C) → UU,
+  (∏ t0 : J → C, isofhlevel ?n (P0 t0)) → isofhlevel ?n (∏ t : J → C, P0 t)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))"
+(cannot unify "mor_hset_struct P
+                 (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄))
+                    (λ j : J, pr2 (E' ⦃ ys j, t ⦄))) 
+                 (E (h ys) t)
+                 (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+                  CoproductArrow J C (h ys) (λ i : J, h0 i))" and 
+"UU").
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred ?n ?P" has type
+ "(∏ t0 : J → C, isofhlevel ?n (?P t0)) → isofhlevel ?n (∏ t0 : J → C, ?P t0)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+J : UU
+HP : hset_struct_type_prod P J
+HC : is_univalent C
+h : (∏ a : J → C, Coproduct J C a),,
+    impred 1 (Coproduct J C) (λ t : J → C, isaprop_Coproduct HC J t)
+t : C
+The term "impred ?n ?P" has type
+ "(∏ t0 : J → C, isofhlevel ?n (?P t0)) → isofhlevel ?n (∏ t0 : J → C, ?P t0)"
+while it is expected to have type
+ "isofhlevel 1
+    (∏ ys : J → C,
+     mor_hset_struct P
+       (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+       (E (h ys) t)
+       (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+        CoproductArrow J C (h ys) (λ i : J, h0 i)))".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ ys : J → C,
+        mor_hset_struct P
+          (HP (λ j : J, pr1 (E' ⦃ ys j, t ⦄)) (λ j : J, pr2 (E' ⦃ ys j, t ⦄)))
+          (E (h ys) t)
+          (λ h0 : (∏ j : J, pr1 (E' ⦃ ys j, t ⦄))%set,
+           CoproductArrow J C (h ys) (λ i : J, h0 i))) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  J : UU
+  HP : hset_struct_type_prod P J
+  HC : is_univalent C
+  h : hProptoType
+        (?X240@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X242@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X479@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (∏ t0 : J → C,
+    isofhlevel 1
+      ((λ t1 : J → C,
+        mor_hset_struct P

@@ -1,0 +1,1000 @@
+  HC : is_univalent C
+  t : ?X255@{__:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1 ((λ t : C, ∏ b : C, BinCoproduct t b) t))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  t : ?X255@{__:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1 ((λ t : C, ∏ b : C, BinCoproduct t b) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  t : ?X255@{__:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (∏ t0 : C, isofhlevel 1 (BinCoproduct t t0))
+
+
+Going to execute:
+intro
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  t : ?X255@{__:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (∏ t0 : C, isofhlevel 1 (BinCoproduct t t0))
+
+
+Going to execute:
+<coq-core.plugins.ltac::intro@0>
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+use impred; intro
+Evaluated term: (isaprop_BinCoproduct C HC)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+use impred
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := impred
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred" has type
+ "∏ (n : nat) (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel n (P t)) → isofhlevel n (∏ t : T, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"nat").
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred" has type
+ "∏ (n : nat) (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel n (P t)) → isofhlevel n (∏ t : T, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"nat").
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "@impred ?n" has type
+ "∏ (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel ?n (P t)) → isofhlevel ?n (∏ t : T, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"UU").
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "@impred ?n" has type
+ "∏ (T : UU) (P : T → UU),
+  (∏ t : T, isofhlevel ?n (P t)) → isofhlevel ?n (∏ t : T, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"UU").
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred ?n" has type
+ "∏ P : C → UU, (∏ t : C, isofhlevel ?n (P t)) → isofhlevel ?n (∏ t : C, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"UU").
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred ?n" has type
+ "∏ P : C → UU, (∏ t : C, isofhlevel ?n (P t)) → isofhlevel ?n (∏ t : C, P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))"
+(cannot unify "∏ (x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+               E x₁ y f f'
+               → ∏ g g' : C ⟦ x₂, y ⟧,
+                 E x₂ y g g'
+                 → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+                     (BinCoproductArrow (h x₁ x₂) f' g')" and 
+"UU").
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred ?n ?P" has type
+ "(∏ t : C, isofhlevel ?n (?P t)) → isofhlevel ?n (∏ t : C, ?P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+h : (∏ a b : C, BinCoproduct a b),,
+    impred 1 (λ t : C, ∏ b : C, BinCoproduct t b)
+      (λ t : C,
+       impred 1 (BinCoproduct t) (λ t0 : C, isaprop_BinCoproduct C HC t t0))
+The term "impred ?n ?P" has type
+ "(∏ t : C, isofhlevel ?n (?P t)) → isofhlevel ?n (∏ t : C, ?P t)"
+while it is expected to have type
+ "isaprop
+    (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+     E x₁ y f f'
+     → ∏ g g' : C ⟦ x₂, y ⟧,
+       E x₂ y g g'
+       → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+           (BinCoproductArrow (h x₁ x₂) f' g'))".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   ((λ X : UU, isaprop X)
+      (∏ (x₁ x₂ y : C) (f f' : C ⟦ x₁, y ⟧),
+       E x₁ y f f'
+       → ∏ g g' : C ⟦ x₂, y ⟧,
+         E x₂ y g g'
+         → E (h x₁ x₂) y (BinCoproductArrow (h x₁ x₂) f g)
+             (BinCoproductArrow (h x₁ x₂) f' g')))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   (∏ t : C,
+    isofhlevel 1
+      ((λ t0 : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t0, y ⟧),
+        E t0 y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t0 x₂) y (BinCoproductArrow (h t0 x₂) f g)
+              (BinCoproductArrow (h t0 x₂) f' g')) t))
+
+
+Going to execute:
+intro
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  ============================
+   (∏ t : C,
+    isofhlevel 1
+      ((λ t0 : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t0, y ⟧),
+        E t0 y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t0 x₂) y (BinCoproductArrow (h t0 x₂) f g)
+              (BinCoproductArrow (h t0 x₂) f' g')) t))
+
+
+Going to execute:
+<coq-core.plugins.ltac::intro@0>
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X317@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t, y ⟧),
+        E t y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t x₂) y (BinCoproductArrow (h t x₂) f g)
+              (BinCoproductArrow (h t x₂) f' g')) t))
+
+
+Going to execute:
+use impred; intro
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X317@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t, y ⟧),
+        E t y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t x₂) y (BinCoproductArrow (h t x₂) f g)
+              (BinCoproductArrow (h t x₂) f' g')) t))
+
+
+Going to execute:
+use impred
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X317@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t, y ⟧),
+        E t y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t x₂) y (BinCoproductArrow (h t x₂) f g)
+              (BinCoproductArrow (h t x₂) f' g')) t))
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X317@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t, y ⟧),
+        E t y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t x₂) y (BinCoproductArrow (h t x₂) f g)
+              (BinCoproductArrow (h t x₂) f' g')) t))
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  h : hProptoType
+        (?X221@{__:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X223@{__:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X317@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ t : C,
+        ∏ (x₂ y : C) (f f' : C ⟦ t, y ⟧),
+        E t y f f'
+        → ∏ g g' : C ⟦ x₂, y ⟧,
+          E x₂ y g g'
+          → E (h t x₂) y (BinCoproductArrow (h t x₂) f g)
+              (BinCoproductArrow (h t x₂) f' g')) t))
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||

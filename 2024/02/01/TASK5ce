@@ -1,0 +1,1000 @@
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g" has type "isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_coequalizers E' ≃ poset_enrichment_coequalizers".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g" has type "isaprop ?X → isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_coequalizers E' ≃ poset_enrichment_coequalizers".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_coequalizers E' ≃ poset_enrichment_coequalizers)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_coequalizers E' ≃ poset_enrichment_coequalizers)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_coequalizers E' ≃ poset_enrichment_coequalizers)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g ?isx" has type "isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_coequalizers E' ≃ poset_enrichment_coequalizers".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HC : is_univalent C
+The term "weqimplimpl ?f ?g ?isx" has type "isaprop ?Y → ?X ≃ ?Y"
+while it is expected to have type
+ "enrichment_coequalizers E' ≃ poset_enrichment_coequalizers".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_coequalizers E' ≃ poset_enrichment_coequalizers)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HC : is_univalent C
+  ============================
+   (enrichment_coequalizers E' ≃ poset_enrichment_coequalizers)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  ============================
+   (is_monotone (pr2 P) (E x (poset_copows_coprod P x)) poset_copows_in)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+Evaluated term: to_poset_enrichment_coequalizer
+Evaluated term: make_poset_enrichment_coequalizers
+Evaluated term: (isaprop_enrichment_coequalizers HC)
+Evaluated term: (isaprop_poset_enrichment_coequalizers HC)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  y : ob C
+  ============================
+   (is_monotone (monotone_function_PartialOrder (pr2 P) (E x y))
+      (E (poset_copows_coprod P x) y)
+      (λ f : monotone_function_hSet (pr2 P) (E x y),
+       CoproductArrow (pr11 P) C (poset_copows_coprod P x) (pr1 f)))
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (copower_cocone E' P x)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (ob C)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   ((λ a : C, poset_sym_mon_closed_cat ⟦ P, E' ⦃ x, a ⦄ ⟧) copow)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (Core.hset_category ⟦ pr1 P, pr1 (E' ⦃ x, copow ⦄) ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 P, pr1 (E' ⦃ x, copow ⦄) ⟧,
+     Core.mor_disp (pr2 P) (pr2 (E' ⦃ x, copow ⦄)) f) copow_in)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  y : ob C
+  ============================
+   (poset_sym_mon_closed_cat ⟦ P ⊸ (E' ⦃ x, y ⦄),
+    E' ⦃ poset_copower_cocone, y ⦄ ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  y : ob C
+  ============================
+   (Core.hset_category ⟦ pr1 (P ⊸ (E' ⦃ x, y ⦄)),
+    pr1 (E' ⦃ poset_copower_cocone, y ⦄) ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::intro@1> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  y : ob C
+  f : pr1hSet (pr1 (P ⊸ (E' ⦃ x, y ⦄)))
+  ============================
+   (pr1hSet (pr1 (E' ⦃ poset_copower_cocone, y ⦄)))
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  y : ob C
+  ============================
+   ((λ f : Core.hset_category ⟦ pr1 (P ⊸ (E' ⦃ x, y ⦄)),
+           pr1 (E' ⦃ poset_copower_cocone, y ⦄) ⟧,
+     Core.mor_disp (pr2 (P ⊸ (E' ⦃ x, y ⦄)))
+       (pr2 (E' ⦃ poset_copower_cocone, y ⦄)) f)
+      ((λ f : pr1 (P ⊸ (E' ⦃ x, y ⦄)),
+        CoproductArrow (pr11 P) C copow (pr1 f))
+       :
+       Core.hset_category ⟦ pr1 (P ⊸ (E' ⦃ x, y ⦄)),
+       pr1 (E' ⦃ poset_copower_cocone, y ⦄) ⟧))
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := make_is_copower_enriched
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (v : ?V) (x0 : ?C) (a : copower_cocone E0 v x0)
+  (p_map : ∏ w : ?C, ?V ⟦ v ⊸ (E0 ⦃ x0, w ⦄), E0 ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map E0 v x0 a w · p_map w = identity (E0 ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map E0 v x0 a w =
+     identity (v ⊸ (E0 ⦃ x0, w ⦄))) → is_copower_enriched E0 v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (v : ?V) (x0 : ?C) (a : copower_cocone E0 v x0)
+  (p_map : ∏ w : ?C, ?V ⟦ v ⊸ (E0 ⦃ x0, w ⦄), E0 ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map E0 v x0 a w · p_map w = identity (E0 ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map E0 v x0 a w =
+     identity (v ⊸ (E0 ⦃ x0, w ⦄))) → is_copower_enriched E0 v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E" has type
+ "∏ (v : ?V) (x0 : ?C) (a : copower_cocone ?E v x0)
+  (p_map : ∏ w : ?C, ?V ⟦ v ⊸ (?E ⦃ x0, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map ?E v x0 a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map ?E v x0 a w =
+     identity (v ⊸ (?E ⦃ x0, w ⦄))) → is_copower_enriched ?E v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E" has type
+ "∏ (v : ?V) (x0 : ?C) (a : copower_cocone ?E v x0)
+  (p_map : ∏ w : ?C, ?V ⟦ v ⊸ (?E ⦃ x0, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map ?E v x0 a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map ?E v x0 a w =
+     identity (v ⊸ (?E ⦃ x0, w ⦄))) → is_copower_enriched ?E v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E ?v" has type
+ "∏ (x0 : C) (a : copower_cocone ?E ?v x0)
+  (p_map : ∏ w : C, ?V ⟦ ?v ⊸ (?E ⦃ x0, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : C,
+   is_copower_enriched_map ?E ?v x0 a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : C,
+     p_map w · is_copower_enriched_map ?E ?v x0 a w =
+     identity (?v ⊸ (?E ⦃ x0, w ⦄))) → is_copower_enriched ?E ?v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E ?v" has type
+ "∏ (x0 : C) (a : copower_cocone ?E ?v x0)
+  (p_map : ∏ w : C, ?V ⟦ ?v ⊸ (?E ⦃ x0, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : C,
+   is_copower_enriched_map ?E ?v x0 a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : C,
+     p_map w · is_copower_enriched_map ?E ?v x0 a w =
+     identity (?v ⊸ (?E ⦃ x0, w ⦄))) → is_copower_enriched ?E ?v x0 a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E ?v ?x" has type
+ "∏ (a : copower_cocone ?E ?v ?x)
+  (p_map : ∏ w : ?C, ?V ⟦ ?v ⊸ (?E ⦃ ?x, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map ?E ?v ?x a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map ?E ?v ?x a w =
+     identity (?v ⊸ (?E ⦃ ?x, w ⦄))) → is_copower_enriched ?E ?v ?x a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E ?v ?x" has type
+ "∏ (a : copower_cocone ?E ?v ?x)
+  (p_map : ∏ w : ?C, ?V ⟦ ?v ⊸ (?E ⦃ ?x, w ⦄), ?E ⦃ a, w ⦄ ⟧),
+  (∏ w : ?C,
+   is_copower_enriched_map ?E ?v ?x a w · p_map w = identity (?E ⦃ a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map ?E ?v ?x a w =
+     identity (?v ⊸ (?E ⦃ ?x, w ⦄))) → is_copower_enriched ?E ?v ?x a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  HE : poset_enrichment_copows
+  P : ob poset_sym_mon_closed_cat
+  x : ob C
+  copow := poset_copows_coprod HE P x
+        : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+  copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+  ============================
+   (is_copower_enriched E' P x poset_copower_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+HE : poset_enrichment_copows
+P : poset_sym_mon_closed_cat
+x : C
+copow := poset_copows_coprod HE P x : Coproduct (pr11 P) C (λ _ : pr11 P, x)
+copow_in := λ i : pr11 P, poset_copows_in HE i : pr11 P → C ⟦ x, copow ⟧
+The term "make_is_copower_enriched ?E ?v ?x ?a" has type
+ "∏ p_map : ∏ w : ?C, ?V ⟦ ?v ⊸ (?E ⦃ ?x, w ⦄), ?E ⦃ ?a, w ⦄ ⟧,
+  (∏ w : ?C,
+   is_copower_enriched_map ?E ?v ?x ?a w · p_map w = identity (?E ⦃ ?a, w ⦄))
+  → (∏ w : ?C,
+     p_map w · is_copower_enriched_map ?E ?v ?x ?a w =
+     identity (?v ⊸ (?E ⦃ ?x, w ⦄))) → is_copower_enriched ?E ?v ?x ?a"
+while it is expected to have type
+ "is_copower_enriched E' P x poset_copower_cocone".
+Level 0: In environment

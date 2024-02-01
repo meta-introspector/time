@@ -1,0 +1,1000 @@
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "@impred ?n" has type
+ "∏ (T : UU) (P : T → UU),
+  (∏ t2 : T, isofhlevel ?n (P t2)) → isofhlevel ?n (∏ t : T, P t)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)"
+(cannot unify "∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0" and 
+"UU").
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "@impred ?n" has type
+ "∏ (T : UU) (P : T → UU),
+  (∏ t2 : T, isofhlevel ?n (P t2)) → isofhlevel ?n (∏ t : T, P t)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)"
+(cannot unify "∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0" and 
+"UU").
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n" has type
+ "∏ P : ?T → UU,
+  (∏ t2 : ?T, isofhlevel ?n (P t2)) → isofhlevel ?n (∏ t : ?T, P t)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n" has type
+ "∏ P : ?T → UU,
+  (∏ t2 : ?T, isofhlevel ?n (P t2)) → isofhlevel ?n (∏ t : ?T, P t)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n ?P" has type
+ "(∏ t2 : ?T, isofhlevel ?n (?P t2)) → isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n ?P" has type
+ "(∏ t2 : ?T, isofhlevel ?n (?P t2)) → isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n ?P ?i" has type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+Level 0: In environment
+C : category
+HC : is_univalent C
+x, y : C
+f, g : C ⟦ x, y ⟧
+φ₁, φ₂ : Coequalizer f g
+x0 : ∑ w : C, C ⟦ y, w ⟧
+h : (f · pr2 x0 = g · pr2 x0),, C x (pr1 x0) (f · pr2 x0) (g · pr2 x0)
+t : C
+t0 : C ⟦ y, t ⟧
+t1 : f · t0 = g · t0
+The term "impred ?n ?P ?i" has type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+while it is expected to have type
+ "isofhlevel 1 (∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0)".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t2 : ?T, ?P t2)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  HC : is_univalent C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  φ₁ : Coequalizer f g
+  φ₂ : Coequalizer f g
+  x0 : ∑ w : C, C ⟦ y, w ⟧
+  h : hProptoType
+        (?X202@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0},,
+         ?X204@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+                ?M0})
+  t : ?X237@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+             ?M0}
+  t0 : ?X269@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0}
+  t1 : ?X301@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : f · t0 = g · t0, ∃! φ : C ⟦ pr1 x0, t ⟧, pr2 x0 · φ = t0) t1))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||

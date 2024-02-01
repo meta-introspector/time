@@ -1,0 +1,1000 @@
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E" has type
+ "∏ (x0 y0 : ?C) (f0 g0 : ?C ⟦ x0, y0 ⟧)
+  (a : enriched_coequalizer_cocone ?E f0 g0),
+  is_coequalizer_enriched ?E f0 g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x" has type
+ "∏ (y0 : ?C) (f0 g0 : ?C ⟦ ?x, y0 ⟧)
+  (a : enriched_coequalizer_cocone ?E f0 g0),
+  is_coequalizer_enriched ?E f0 g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x" has type
+ "∏ (y0 : ?C) (f0 g0 : ?C ⟦ ?x, y0 ⟧)
+  (a : enriched_coequalizer_cocone ?E f0 g0),
+  is_coequalizer_enriched ?E f0 g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E" has type
+ "∏ (f0 g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E f0 g0),
+  is_coequalizer_enriched ?E f0 g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E" has type
+ "∏ (f0 g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E f0 g0),
+  is_coequalizer_enriched ?E f0 g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E f0 g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E ?f" has type
+ "∏ (g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E ?f g0),
+  is_coequalizer_enriched ?E ?f g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E ?f" has type
+ "∏ (g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E ?f g0),
+  is_coequalizer_enriched ?E ?f g0 a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f g0 a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f g0 a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x ?y ?f ?g" has type
+ "∏ a : enriched_coequalizer_cocone ?E ?f ?g,
+  is_coequalizer_enriched ?E ?f ?g a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f ?g a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f ?g a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x ?y ?f ?g" has type
+ "∏ a : enriched_coequalizer_cocone ?E ?f ?g,
+  is_coequalizer_enriched ?E ?f ?g a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f ?g a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f ?g a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E ?f ?g" has type
+ "is_coequalizer_enriched ?E ?f ?g ?a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ ?a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "underlying_Coequalizer_arr_eq ?E ?f ?g" has type
+ "is_coequalizer_enriched ?E ?f ?g ?a
+  → ∏ (w : ?C) (h₁ h₂ : ?C ⟦ ?a, w ⟧),
+    enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₁ =
+    enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₂ → 
+    h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x ?y ?f ?g ?a ?Ha"
+has type
+ "∏ (w : ?C) (h₁ h₂ : ?C ⟦ ?a, w ⟧),
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₁ =
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₂ → 
+  h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x ?y ?f ?g ?a ?Ha"
+has type
+ "∏ (w : ?C) (h₁ h₂ : ?C ⟦ ?a, w ⟧),
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₁ =
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₂ → 
+  h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  EEC : enrichment_coequalizers E'
+  x : ob C
+  y : ob C
+  z : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+          (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+     : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+  Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+  h : C ⟦ y, z ⟧
+  q : f · h = g · h
+  ============================
+   (CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+    poset_to_underlying_coequalizer_map h q)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+           (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+EEC : enrichment_coequalizers E'
+x, y, z : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_posets (E' ⦃ y, z ⦄) 
+        (E' ⦃ x, z ⦄) (precomp_arr E' z f) (precomp_arr E' z g)
+ : Equalizer (precomp_arr E' z f) (precomp_arr E' z g)
+Eq_pr := EqualizerArrow Eq : category_of_posets ⟦ Eq, E' ⦃ y, z ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' z f = Eq_pr · precomp_arr E' z g
+h : C ⟦ y, z ⟧
+q : f · h = g · h
+The term "@underlying_Coequalizer_arr_eq ?V ?C ?E ?x ?y ?f ?g ?a ?Ha ?w"
+has type
+ "∏ h₁ h₂ : ?C ⟦ ?a, ?w ⟧,
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₁ =
+  enriched_coequalizer_cocone_in ?E ?f ?g ?a · h₂ → 
+  h₁ = h₂" while it is expected to have type
+ "CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) z h q =
+  poset_to_underlying_coequalizer_map h q".
+Level 0: In environment
+C : category

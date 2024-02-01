@@ -1,0 +1,1000 @@
+t1, t2 : C ⟦ t, t0 ⟧
+The term "impred ?n" has type
+ "∏ P0 : ?T → UU,
+  (∏ t3 : ?T, isofhlevel ?n (P0 t3)) → isofhlevel ?n (∏ t : ?T, P0 t)"
+while it is expected to have type "isofhlevel 1 (Coequalizer t1 t2)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+HC : is_univalent C
+t, t0 : C
+t1, t2 : C ⟦ t, t0 ⟧
+The term "impred ?n ?P" has type
+ "(∏ t3 : ?T, isofhlevel ?n (?P t3)) → isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+while it is expected to have type "isofhlevel 1 (Coequalizer t1 t2)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+HC : is_univalent C
+t, t0 : C
+t1, t2 : C ⟦ t, t0 ⟧
+The term "impred ?n ?P" has type
+ "(∏ t3 : ?T, isofhlevel ?n (?P t3)) → isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+while it is expected to have type "isofhlevel 1 (Coequalizer t1 t2)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+HC : is_univalent C
+t, t0 : C
+t1, t2 : C ⟦ t, t0 ⟧
+The term "impred ?n ?P ?i" has type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+while it is expected to have type "isofhlevel 1 (Coequalizer t1 t2)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+HC : is_univalent C
+t, t0 : C
+t1, t2 : C ⟦ t, t0 ⟧
+The term "impred ?n ?P ?i" has type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+while it is expected to have type "isofhlevel 1 (Coequalizer t1 t2)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+           (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+         (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+       (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+     (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+   (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X383@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  ============================
+   (isofhlevel 1 (Coequalizer t1 t2))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+ (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t3 : ?T, ?P t3)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  HC : is_univalent C
+  t : ?X287@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X319@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X351@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}

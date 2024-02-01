@@ -1,0 +1,1000 @@
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (enriched_binary_coprod_cocone E' x y)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (ob C)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (sym_mon_closed_cat_of_hset_struct P
+    ⟦ I_{ sym_mon_closed_cat_of_hset_struct P},
+    E' ⦃ x, structure_enrichment_obj_binary_coprod EBC x y ⦄ ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (sym_mon_closed_cat_of_hset_struct P
+    ⟦ I_{ sym_mon_closed_cat_of_hset_struct P},
+    E' ⦃ y, structure_enrichment_obj_binary_coprod EBC x y ⦄ ⟧)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := make_is_binary_coprod_enriched
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 y0 : ?C)
+  (a : enriched_binary_coprod_cocone E0 x0 y0)
+  (sum : ∏ (w : ?C) (v : ?V),
+         ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧
+         → ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, E0 ⦃ a, w ⦄ ⟧),
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧)
+   (g : ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a) = f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧)
+     (g : ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, E0 ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a) =
+       φ₂ · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a)
+       → φ₁ · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a) =
+         φ₂ · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched E0 x0 y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched" has type
+ "∏ (E0 : enrichment ?C ?V) (x0 y0 : ?C)
+  (a : enriched_binary_coprod_cocone E0 x0 y0)
+  (sum : ∏ (w : ?C) (v : ?V),
+         ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧
+         → ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, E0 ⦃ a, w ⦄ ⟧),
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧)
+   (g : ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a) = f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, E0 ⦃ x0, w ⦄ ⟧)
+     (g : ?V ⟦ v, E0 ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, E0 ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a) =
+       φ₂ · precomp_arr E0 w (enriched_coprod_cocone_in1 E0 x0 y0 a)
+       → φ₁ · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a) =
+         φ₂ · precomp_arr E0 w (enriched_coprod_cocone_in2 E0 x0 y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched E0 x0 y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E" has type
+ "∏ (x0 y0 : C) (a : enriched_binary_coprod_cocone ?E x0 y0)
+  (sum : ∏ (w : C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a) = f)
+  → (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a) =
+     g)
+    → (∏ (w : C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E x0 y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone"
+(cannot unify "ob (sym_mon_closed_cat_of_hset_struct P)" and 
+"ob C").
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E" has type
+ "∏ (x0 y0 : C) (a : enriched_binary_coprod_cocone ?E x0 y0)
+  (sum : ∏ (w : C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a) = f)
+  → (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ x0, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a) =
+     g)
+    → (∏ (w : C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E x0 y0 a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E x0 y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E x0 y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone"
+(cannot unify "ob (sym_mon_closed_cat_of_hset_struct P)" and 
+"ob C").
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x" has type
+ "∏ (y0 : C) (a : enriched_binary_coprod_cocone ?E ?x y0)
+  (sum : ∏ (w : C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a) = f)
+  → (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a) =
+     g)
+    → (∏ (w : C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone"
+(cannot unify "ob Core.hset_category" and "ob C").
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x" has type
+ "∏ (y0 : C) (a : enriched_binary_coprod_cocone ?E ?x y0)
+  (sum : ∏ (w : C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a) = f)
+  → (∏ (w : C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ y0, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a) =
+     g)
+    → (∏ (w : C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x y0 a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x y0 a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x y0 a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone"
+(cannot unify "ob Core.hset_category" and "ob C").
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y" has type
+ "∏ (a : enriched_binary_coprod_cocone ?E ?x ?y)
+  (sum : ∏ (w : ?C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a) = f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y" has type
+ "∏ (a : enriched_binary_coprod_cocone ?E ?x ?y)
+  (sum : ∏ (w : ?C) (v : ?V),
+         ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+         → ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a) = f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y ?a" has type
+ "∏
+  sum : ∏ (w : ?C) (v : ?V),
+        ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+        → ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+   f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y ?a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y ?a" has type
+ "∏
+  sum : ∏ (w : ?C) (v : ?V),
+        ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧
+        → ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧ → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+  (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+   f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y ?a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y ?a ?sum" has type
+ "(∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   ?sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+   f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     ?sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y ?a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EBC : structure_enrichment_binary_coprod
+x, y : C
+The term "make_is_binary_coprod_enriched ?E ?x ?y ?a ?sum" has type
+ "(∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+   (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+   ?sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+   f)
+  → (∏ (w : ?C) (v : ?V) (f : ?V ⟦ v, ?E ⦃ ?x, w ⦄ ⟧)
+     (g : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+     ?sum w v f g · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+     g)
+    → (∏ (w : ?C) (v : ?V) (φ₁ φ₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+       φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a) =
+       φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in1 ?E ?x ?y ?a)
+       → φ₁ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a) =
+         φ₂ · precomp_arr ?E w (enriched_coprod_cocone_in2 ?E ?x ?y ?a)
+         → φ₁ = φ₂) → is_binary_coprod_enriched ?E ?x ?y ?a"
+while it is expected to have type
+ "is_binary_coprod_enriched E' x y
+    make_structure_enriched_binary_coprod_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EBC : structure_enrichment_binary_coprod
+  x : ob C
+  y : ob C
+  ============================
+   (is_binary_coprod_enriched E' x y
+      make_structure_enriched_binary_coprod_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||

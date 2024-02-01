@@ -1,0 +1,1000 @@
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E" has type
+ "∏ (x0 y0 : ?C) (a : enriched_binary_coprod_cocone ?E x0 y0),
+  is_binary_coprod_enriched ?E x0 y0 a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E x0 y0 a · f =
+    enriched_coprod_cocone_in1 ?E x0 y0 a · g
+    → enriched_coprod_cocone_in2 ?E x0 y0 a · f =
+      enriched_coprod_cocone_in2 ?E x0 y0 a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E" has type
+ "∏ (x0 y0 : ?C) (a : enriched_binary_coprod_cocone ?E x0 y0),
+  is_binary_coprod_enriched ?E x0 y0 a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E x0 y0 a · f =
+    enriched_coprod_cocone_in1 ?E x0 y0 a · g
+    → enriched_coprod_cocone_in2 ?E x0 y0 a · f =
+      enriched_coprod_cocone_in2 ?E x0 y0 a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _) ||
+  simple refine (p _ _ _ _) ||
+    simple refine (p _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                       refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x" has type
+ "∏ (y0 : ?C) (a : enriched_binary_coprod_cocone ?E ?x y0),
+  is_binary_coprod_enriched ?E ?x y0 a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x y0 a · f =
+    enriched_coprod_cocone_in1 ?E ?x y0 a · g
+    → enriched_coprod_cocone_in2 ?E ?x y0 a · f =
+      enriched_coprod_cocone_in2 ?E ?x y0 a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x" has type
+ "∏ (y0 : ?C) (a : enriched_binary_coprod_cocone ?E ?x y0),
+  is_binary_coprod_enriched ?E ?x y0 a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x y0 a · f =
+    enriched_coprod_cocone_in1 ?E ?x y0 a · g
+    → enriched_coprod_cocone_in2 ?E ?x y0 a · f =
+      enriched_coprod_cocone_in2 ?E ?x y0 a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _) ||
+  simple refine (p _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                     refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y" has type
+ "∏ a : enriched_binary_coprod_cocone ?E ?x ?y,
+  is_binary_coprod_enriched ?E ?x ?y a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x ?y a · f =
+    enriched_coprod_cocone_in1 ?E ?x ?y a · g
+    → enriched_coprod_cocone_in2 ?E ?x ?y a · f =
+      enriched_coprod_cocone_in2 ?E ?x ?y a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y" has type
+ "∏ a : enriched_binary_coprod_cocone ?E ?x ?y,
+  is_binary_coprod_enriched ?E ?x ?y a
+  → ∏ (w : ?C) (f g : ?C ⟦ a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x ?y a · f =
+    enriched_coprod_cocone_in1 ?E ?x ?y a · g
+    → enriched_coprod_cocone_in2 ?E ?x ?y a · f =
+      enriched_coprod_cocone_in2 ?E ?x ?y a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y" has type
+ "is_binary_coprod_enriched ?E ?x ?y ?a
+  → ∏ (w : ?C) (f g : ?C ⟦ ?a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+    → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+      enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "is_binary_coprod_enriched_arrow_eq ?E ?x ?y" has type
+ "is_binary_coprod_enriched ?E ?x ?y ?a
+  → ∏ (w : ?C) (f g : ?C ⟦ ?a, w ⟧),
+    enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+    → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+      enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → 
+      f = g" while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha" has type
+ "∏ (w : ?C) (f g : ?C ⟦ ?a, w ⟧),
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → f = g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha" has type
+ "∏ (w : ?C) (f g : ?C ⟦ ?a, w ⟧),
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → f = g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha ?w"
+has type
+ "∏ f g : ?C ⟦ ?a, ?w ⟧,
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → f = g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha ?w"
+has type
+ "∏ f g : ?C ⟦ ?a, ?w ⟧,
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → f = g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  EP : enrichment_binary_coprod E'
+  x : ob C
+  y : ob C
+  z : ob C
+  prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄)
+       : ob (sym_monoidal_cat_of_hset_struct P)
+  prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+  prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+           : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+  fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+  ============================
+   (BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z)))
+      (pr1 fg) (pr2 fg) =
+    structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧
+prod_pr2 := dirprod_pr2,, hset_struct_pr2 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ z, x ⦄ ⟧
+fg : ∑ _ : C ⟦ y, x ⟧, pr2 C z x
+The term "@is_binary_coprod_enriched_arrow_eq ?V ?C ?E ?x ?y ?a ?Ha ?w ?f"
+has type
+ "∏ g : ?C ⟦ ?a, ?w ⟧,
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · ?f =
+  enriched_coprod_cocone_in1 ?E ?x ?y ?a · g
+  → enriched_coprod_cocone_in2 ?E ?x ?y ?a · ?f =
+    enriched_coprod_cocone_in2 ?E ?x ?y ?a · g → ?f = g"
+while it is expected to have type
+ "BinCoproductArrow (underlying_BinCoproduct E' y z (pr2 (EP y z))) 
+    (pr1 fg) (pr2 fg) =
+  structure_to_underlying_binary_coprod_map (pr1 fg) (dirprod_pr2 fg)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+EP : enrichment_binary_coprod E'
+x, y, z : C
+prod := (E' ⦃ y, x ⦄) ⊗ (E' ⦃ z, x ⦄) : sym_monoidal_cat_of_hset_struct P
+prod_pr1 := dirprod_pr1,, hset_struct_pr1 P (E y x) (E z x)
+ : sym_monoidal_cat_of_hset_struct P ⟦ prod, E' ⦃ y, x ⦄ ⟧

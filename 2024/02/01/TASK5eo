@@ -1,0 +1,1000 @@
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) f)))))
+                     (struct_enrichment_comp P E x y w))
+                  (Core.comp_disp
+                     (Core.comp_disp
+                        (hset_struct_pair P (Core.id_disp (E y w))
+                           (hset_struct_to_unit P (E y w)))
+                        (Core.comp_disp
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) g)))))
+                     (struct_enrichment_comp P E x y w)))
+               ((λ x : ∑ x0 : C ⟦ y, w ⟧, f · x0 = g · x0, pr1 x),,
+                hset_equalizer_pr_struct HP
+                  (Core.comp_disp
+                     (Core.comp_disp
+                        (hset_struct_pair P (Core.id_disp (E y w))
+                           (hset_struct_to_unit P (E y w)))
+                        (Core.comp_disp
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) f)))))
+                     (struct_enrichment_comp P E x y w))
+                  (Core.comp_disp
+                     (Core.comp_disp
+                        (hset_struct_pair P (Core.id_disp (E y w))
+                           (hset_struct_to_unit P (E y w)))
+                        (Core.comp_disp
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) g)))))
+                     (struct_enrichment_comp P E x y w)))
+               (Binproducts.total_Equalizer_path (hset_struct_disp_cat P)
+                  (Core.comp_disp
+                     (Core.comp_disp
+                        (hset_struct_pair P (Core.id_disp (E y w))
+                           (hset_struct_to_unit P (E y w)))
+                        (Core.comp_disp
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) f)))))
+                     (struct_enrichment_comp P E x y w))
+                  (Core.comp_disp
+                     (Core.comp_disp
+                        (hset_struct_pair P (Core.id_disp (E y w))
+                           (hset_struct_to_unit P (E y w)))
+                        (Core.comp_disp
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (hset_struct_unit P))))
+                           (hset_struct_pair P
+                              (Core.comp_disp
+                                 (hset_struct_pr1 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (Core.id_disp (E y w)))
+                              (Core.comp_disp
+                                 (hset_struct_pr2 P 
+                                    (E y w) (hset_struct_unit P))
+                                 (hset_struct_const P 
+                                    (hset_struct_unit P) 
+                                    (E x y) g)))))
+                     (struct_enrichment_comp P E x y w))
+                  (Limits.Equalizers_in_HSET (homset y w) 
+                     (homset x w) (λ x0 : C ⟦ y, w ⟧, f · x0)
+                     (λ x0 : C ⟦ y, w ⟧, g · x0))
+                  (disp_Equalizers_hset_disp_struct HP 
+                     (homset y w) (homset x w) (λ x0 : C ⟦ y, w ⟧, f · x0)
+                     (λ x0 : C ⟦ y, w ⟧, g · x0) (E y w) 
+                     (E x w)
+                     (Core.comp_disp
+                        (Core.comp_disp
+                           (hset_struct_pair P (Core.id_disp (E y w))
+                              (hset_struct_to_unit P (E y w)))
+                           (Core.comp_disp
+                              (hset_struct_pair P
+                                 (Core.comp_disp
+                                    (hset_struct_pr1 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (E y w)))
+                                 (Core.comp_disp
+                                    (hset_struct_pr2 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (hset_struct_unit P))))
+                              (hset_struct_pair P
+                                 (Core.comp_disp
+                                    (hset_struct_pr1 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (E y w)))
+                                 (Core.comp_disp
+                                    (hset_struct_pr2 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (hset_struct_const P 
+                                       (hset_struct_unit P) 
+                                       (E x y) f)))))
+                        (struct_enrichment_comp P E x y w))
+                     (Core.comp_disp
+                        (Core.comp_disp
+                           (hset_struct_pair P (Core.id_disp (E y w))
+                              (hset_struct_to_unit P (E y w)))
+                           (Core.comp_disp
+                              (hset_struct_pair P
+                                 (Core.comp_disp
+                                    (hset_struct_pr1 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (E y w)))
+                                 (Core.comp_disp
+                                    (hset_struct_pr2 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (hset_struct_unit P))))
+                              (hset_struct_pair P
+                                 (Core.comp_disp
+                                    (hset_struct_pr1 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (Core.id_disp (E y w)))
+                                 (Core.comp_disp
+                                    (hset_struct_pr2 P 
+                                       (E y w) (hset_struct_unit P))
+                                    (hset_struct_const P 
+                                       (hset_struct_unit P) 
+                                       (E x y) g)))))
+                        (struct_enrichment_comp P E x y w)))))) 
+         (h,, q)
+    : (pr112 (pr1 (EEC x y f g))) tt
+      · pr1
+          (EqualizerIn
+             (is_coequalizer_enriched_to_Equalizer E' f g 
+                (pr2 (EEC x y f g)) w)
+             ((∑ x0 : C ⟦ y, w ⟧, hProp_to_hSet (f · x0 = g · x0)%logic)%set,,
+              hset_struct_equalizer HP
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) f)))))
+                   (struct_enrichment_comp P E x y w))
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) g)))))
+                   (struct_enrichment_comp P E x y w)))
+             ((λ x : ∑ x0 : C ⟦ y, w ⟧, f · x0 = g · x0, pr1 x),,
+              hset_equalizer_pr_struct HP
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) f)))))
+                   (struct_enrichment_comp P E x y w))
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) g)))))
+                   (struct_enrichment_comp P E x y w)))
+             (Binproducts.total_Equalizer_path (hset_struct_disp_cat P)
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) f)))))
+                   (struct_enrichment_comp P E x y w))
+                (Core.comp_disp
+                   (Core.comp_disp
+                      (hset_struct_pair P (Core.id_disp (E y w))
+                         (hset_struct_to_unit P (E y w)))
+                      (Core.comp_disp
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (hset_struct_unit P))))
+                         (hset_struct_pair P
+                            (Core.comp_disp
+                               (hset_struct_pr1 P 
+                                  (E y w) (hset_struct_unit P))
+                               (Core.id_disp (E y w)))
+                            (Core.comp_disp
+                               (hset_struct_pr2 P 
+                                  (E y w) (hset_struct_unit P))
+                               (hset_struct_const P 
+                                  (hset_struct_unit P) 
+                                  (E x y) g)))))
+                   (struct_enrichment_comp P E x y w))
+                (Limits.Equalizers_in_HSET (homset y w) 
+                   (homset x w) (λ x0 : C ⟦ y, w ⟧, f · x0)
+                   (λ x0 : C ⟦ y, w ⟧, g · x0))
+                (disp_Equalizers_hset_disp_struct HP 
+                   (homset y w) (homset x w) (λ x0 : C ⟦ y, w ⟧, f · x0)
+                   (λ x0 : C ⟦ y, w ⟧, g · x0) (E y w) 
+                   (E x w)
+                   (Core.comp_disp
+                      (Core.comp_disp
+                         (hset_struct_pair P (Core.id_disp (E y w))
+                            (hset_struct_to_unit P (E y w)))
+                         (Core.comp_disp
+                            (hset_struct_pair P
+                               (Core.comp_disp
+                                  (hset_struct_pr1 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (E y w)))
+                               (Core.comp_disp
+                                  (hset_struct_pr2 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (hset_struct_unit P))))
+                            (hset_struct_pair P
+                               (Core.comp_disp
+                                  (hset_struct_pr1 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (E y w)))
+                               (Core.comp_disp
+                                  (hset_struct_pr2 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (hset_struct_const P 
+                                     (hset_struct_unit P) 
+                                     (E x y) f)))))
+                      (struct_enrichment_comp P E x y w))
+                   (Core.comp_disp
+                      (Core.comp_disp
+                         (hset_struct_pair P (Core.id_disp (E y w))
+                            (hset_struct_to_unit P (E y w)))
+                         (Core.comp_disp
+                            (hset_struct_pair P
+                               (Core.comp_disp
+                                  (hset_struct_pr1 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (E y w)))
+                               (Core.comp_disp
+                                  (hset_struct_pr2 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (hset_struct_unit P))))
+                            (hset_struct_pair P
+                               (Core.comp_disp
+                                  (hset_struct_pr1 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (Core.id_disp (E y w)))
+                               (Core.comp_disp
+                                  (hset_struct_pr2 P 
+                                     (E y w) (hset_struct_unit P))
+                                  (hset_struct_const P 
+                                     (hset_struct_unit P) 
+                                     (E x y) g)))))
+                      (struct_enrichment_comp P E x y w))))) 
+          (h,, q) = h
+  ============================
+   (enriched_coequalizer_cocone_in E' f g (pr1 (EEC x y f g))
+    · structure_to_underlying_coequalizer_map h q = h)
+
+
+Going to execute:
+<coq-core.plugins.ltac::exact@0> $1
+Evaluated term: (eqtohomot
+                   (maponpaths pr1
+                      (EqualizerCommutes
+                         (is_coequalizer_enriched_to_Equalizer E' f g
+                            (pr2 (EEC x y f g)) w) Eq Eq_pr Eq_path)) 
+                   (h,, q))
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   (mor_hset_struct P
+      (hset_struct_equalizer HP (pr2 (precomp_arr E' w f))
+         (pr2 (precomp_arr E' w g)))
+      (E (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w)
+      (λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+              hProp_to_hSet
+                (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+       CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+         (pr1 h) (pr2 h)))
+
+
+Going to execute:
+<coq-core.plugins.ltac::refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := funextsec
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : enrichment_coequalizers E'
+w, x, y : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+        (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+ : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+The term "funextsec" has type
+ "∏ (P0 : ?T → UU) (f0 g0 : ∏ t : ?T, P0 t), f0 ~ g0 → f0 = g0"
+while it is expected to have type
+ "(λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+          hProp_to_hSet
+            (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+   CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+     (pr1 h) (pr2 h)) =
+  pr1
+    (EqualizerIn
+       (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w) Eq
+       Eq_pr Eq_path)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : enrichment_coequalizers E'
+w, x, y : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+        (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+ : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+The term "funextsec" has type
+ "∏ (P0 : ?T → UU) (f0 g0 : ∏ t : ?T, P0 t), f0 ~ g0 → f0 = g0"
+while it is expected to have type
+ "(λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+          hProp_to_hSet
+            (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+   CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+     (pr1 h) (pr2 h)) =
+  pr1
+    (EqualizerIn
+       (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w) Eq
+       Eq_pr Eq_path)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple refine (p _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : enrichment_coequalizers E'
+  w : ob C
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+          (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+     : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+  Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+  Eq_path := EqualizerEqAr Eq
+          : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+  ============================
+   ((λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+            hProp_to_hSet
+              (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+     CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+       (pr1 h) (pr2 h)) =
+    pr1
+      (EqualizerIn
+         (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w)
+         Eq Eq_pr Eq_path))
+
+
+Going to execute:
+simple refine (p _ _) ||
+  simple refine (p _ _ _) ||
+    simple refine (p _ _ _ _) ||
+      simple refine (p _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : enrichment_coequalizers E'
+w, x, y : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+        (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+ : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+The term "funextsec ?P" has type
+ "∏ f0 g0 : ∏ t : ?T, ?P t, f0 ~ g0 → f0 = g0"
+while it is expected to have type
+ "(λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+          hProp_to_hSet
+            (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+   CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+     (pr1 h) (pr2 h)) =
+  pr1
+    (EqualizerIn
+       (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w) Eq
+       Eq_pr Eq_path)".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : enrichment_coequalizers E'
+w, x, y : C
+f, g : C ⟦ x, y ⟧
+Eq := Equalizers_category_of_hset_struct HP (E' ⦃ y, w ⦄) 
+        (E' ⦃ x, w ⦄) (precomp_arr E' w f) (precomp_arr E' w g)
+ : Equalizer (precomp_arr E' w f) (precomp_arr E' w g)
+Eq_pr := EqualizerArrow Eq : category_of_hset_struct P ⟦ Eq, E' ⦃ y, w ⦄ ⟧
+Eq_path := EqualizerEqAr Eq
+ : Eq_pr · precomp_arr E' w f = Eq_pr · precomp_arr E' w g
+The term "funextsec ?P" has type
+ "∏ f0 g0 : ∏ t : ?T, ?P t, f0 ~ g0 → f0 = g0"
+while it is expected to have type
+ "(λ h : (∑ x0 : pr1 (E' ⦃ y, w ⦄),
+          hProp_to_hSet
+            (pr1 (precomp_arr E' w f) x0 = pr1 (precomp_arr E' w g) x0)%logic)%set,
+   CoequalizerOut (underlying_Coequalizer E' f g (pr2 (EEC x y f g))) w
+     (pr1 h) (pr2 h)) =
+  pr1
+    (EqualizerIn
+       (is_coequalizer_enriched_to_Equalizer E' f g (pr2 (EEC x y f g)) w) Eq
+       Eq_pr Eq_path)".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct

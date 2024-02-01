@@ -1,0 +1,1000 @@
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+           (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+         (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+       (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+     (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+   (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+ (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  HC : is_univalent C
+  h : hProptoType
+        (?X396@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0},,
+         ?X398@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0})
+  t : ?X635@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t0 : ?X667@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=?M0}
+  t1 : ?X699@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0}
+  t2 : ?X731@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0}
+  t3 : ?X763@{__:=?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0; __:=?M0; __:=?M0; __:=
+              ?M0; __:=?M0}
+  ============================
+   (isofhlevel 1
+      ((λ _ : ∏ j : J, E (t0 j) t (t1 j) (t2 j),
+        E (h t0) t (CoproductArrow J C (h t0) t1)
+          (CoproductArrow J C (h t0) t2)) t3))
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple_rapply p
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 1: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 1: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Level 0: Illegal application (Non-functional construction): 
+The expression "impred ?n ?P ?i" of type "isofhlevel ?n (∏ t4 : ?T, ?P t4)"
+cannot be applied to the term
+ "?y" : "?T0"
+Evaluated term: propproperty
+Evaluated term: CoproductInCommutes
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := CoproductArrow_eq _ _ _ (pr1 EC ys)
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  C : category
+  E : poset_enrichment C
+  E' := make_enrichment_over_poset C E
+     : enrichment C poset_sym_mon_closed_cat
+  J : UU
+  EC : poset_enrichment_coprod
+  x : ob C
+  ys : J → C
+  f : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧
+  p : ∏ j : J,
+      poset_enrichment_obj_coprod_in ys j · f =
+      poset_enrichment_obj_coprod_in ys j · g
+  ============================
+   (f = g)
+
+
+Going to execute:
+simple refine (p _) ||
+  simple refine (p _ _) ||
+    simple refine (p _ _ _) ||
+      simple refine (p _ _ _ _) ||
+        simple refine (p _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+C : category
+E : poset_enrichment C
+E' := make_enrichment_over_poset C E : enrichment C poset_sym_mon_closed_cat
+J : UU
+EC : poset_enrichment_coprod
+x : C
+ys : J → C
+f, g : C ⟦ poset_enrichment_obj_coprod ys, x ⟧

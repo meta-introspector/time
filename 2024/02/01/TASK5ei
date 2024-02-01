@@ -1,0 +1,1000 @@
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                   refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f" has type
+ "∏ (g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E ?f g0),
+  (∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w g0
+            → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w g0),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a) = h)
+    → is_coequalizer_enriched ?E ?f g0 a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f" has type
+ "∏ (g0 : ?C ⟦ ?x, ?y ⟧) (a : enriched_coequalizer_cocone ?E ?f g0),
+  (∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w g0
+            → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w g0),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f g0 a) = h)
+    → is_coequalizer_enriched ?E ?f g0 a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple
+                 refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g" has type
+ "∏ a : enriched_coequalizer_cocone ?E ?f ?g,
+  (∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+            → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a) = h)
+    → is_coequalizer_enriched ?E ?f ?g a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g" has type
+ "∏ a : enriched_coequalizer_cocone ?E ?f ?g,
+  (∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+            → ?V ⟦ v, ?E ⦃ a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g a) = h)
+    → is_coequalizer_enriched ?E ?f ?g a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a" has type
+ "(∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+            → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+    → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a" has type
+ "(∏ (w : ?C) (v : ?V) (h₁ h₂ : ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧),
+   h₁ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) =
+   h₂ · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a)
+   → h₁ = h₂)
+  → ∏
+    eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+            h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+            → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+    (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+     (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+     eq_in w v h q
+     · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+    → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+             (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a ?eq_arr_eq" has type
+ "∏
+  eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+          h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+          → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+  (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+   (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+   eq_in w v h q
+   · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+  → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a ?eq_arr_eq" has type
+ "∏
+  eq_in : ∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧),
+          h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g
+          → ?V ⟦ v, ?E ⦃ ?a, w ⦄ ⟧,
+  (∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+   (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+   eq_in w v h q
+   · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+  → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _) ||
+  simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+    simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+      simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) || simple refine
+           (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a ?eq_arr_eq ?eq_in"
+has type
+ "(∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+   (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+   ?eq_in w v h q
+   · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+  → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+Level 0: In environment
+P : hset_cartesian_closed_struct
+C : category
+E : struct_enrichment P C
+E' := make_enrichment_over_struct P C E
+ : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+HP : hset_equalizer_struct P
+EEC : structure_enrichment_coequalizers
+x, y : C
+f, g : C ⟦ x, y ⟧
+The term "make_is_coequalizer_enriched ?E ?f ?g ?a ?eq_arr_eq ?eq_in"
+has type
+ "(∏ (w : ?C) (v : ?V) (h : ?V ⟦ v, ?E ⦃ ?y, w ⦄ ⟧)
+   (q : h · precomp_arr ?E w ?f = h · precomp_arr ?E w ?g),
+   ?eq_in w v h q
+   · precomp_arr ?E w (enriched_coequalizer_cocone_in ?E ?f ?g ?a) = h)
+  → is_coequalizer_enriched ?E ?f ?g ?a" while it is expected to have type
+ "is_coequalizer_enriched E' f g make_structure_enrichment_coequalizer_cocone".
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+simple refine (p _ _ _ _ _ _ _ _ _)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (is_coequalizer_enriched E' f g
+      make_structure_enrichment_coequalizer_cocone)
+
+
+Going to execute:
+<coq-core.plugins.ltac::simple_refine@0> $1
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (∏ (w : C) (v : sym_mon_closed_cat_of_hset_struct P)
+    (h₁
+     h₂ : sym_mon_closed_cat_of_hset_struct P ⟦ v,
+          E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧),
+    h₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) =
+    h₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) → 
+    h₁ = h₂)
+
+
+Going to execute:
+intros w X φ₁ φ₂ q; use eq_mor_hset_struct; intro z; use
+ structure_enrichment_coequalizer_arr_eq; exact
+ (eqtohomot (maponpaths pr1 q) z)
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (∏ (w : C) (v : sym_mon_closed_cat_of_hset_struct P)
+    (h₁
+     h₂ : sym_mon_closed_cat_of_hset_struct P ⟦ v,
+          E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧),
+    h₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) =
+    h₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) → 
+    h₁ = h₂)
+
+
+Going to execute:
+intros w X φ₁ φ₂ q; use eq_mor_hset_struct; intro z; use
+ structure_enrichment_coequalizer_arr_eq
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (∏ (w : C) (v : sym_mon_closed_cat_of_hset_struct P)
+    (h₁
+     h₂ : sym_mon_closed_cat_of_hset_struct P ⟦ v,
+          E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧),
+    h₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) =
+    h₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) → 
+    h₁ = h₂)
+
+
+Going to execute:
+intros w X φ₁ φ₂ q; use eq_mor_hset_struct; intro z
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (∏ (w : C) (v : sym_mon_closed_cat_of_hset_struct P)
+    (h₁
+     h₂ : sym_mon_closed_cat_of_hset_struct P ⟦ v,
+          E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧),
+    h₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) =
+    h₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) → 
+    h₁ = h₂)
+
+
+Going to execute:
+intros w X φ₁ φ₂ q; use eq_mor_hset_struct
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  ============================
+   (∏ (w : C) (v : sym_mon_closed_cat_of_hset_struct P)
+    (h₁
+     h₂ : sym_mon_closed_cat_of_hset_struct P ⟦ v,
+          E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧),
+    h₁
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) =
+    h₂
+    · precomp_arr E' w
+        (enriched_coequalizer_cocone_in E' f g
+           make_structure_enrichment_coequalizer_cocone) → 
+    h₁ = h₂)
+
+
+Going to execute:
+intros w X φ₁ φ₂ q
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  φ₁ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+use eq_mor_hset_struct
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  φ₁ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+simple_rapply p
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  φ₁ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+fun p =>
+  simple refine p ||
+    simple refine (p _) ||
+      simple refine (p _ _) ||
+...                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+                               || simple refine
+                               (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  φ₁ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+
+TcDebug (1) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
+  X : ob (sym_mon_closed_cat_of_hset_struct P)
+  φ₁ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  φ₂ : sym_mon_closed_cat_of_hset_struct P ⟦ X,
+       E' ⦃ make_structure_enrichment_coequalizer_cocone, w ⦄ ⟧
+  q : φ₁
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone) =
+      φ₂
+      · precomp_arr E' w
+          (enriched_coequalizer_cocone_in E' f g
+             make_structure_enrichment_coequalizer_cocone)
+  ============================
+   (φ₁ = φ₂)
+
+
+Going to execute:
+simple refine p
+Level 1: evaluation returns
+simple refine p ||
+  simple refine (p _) ||
+    simple refine (p _ _) ||
+      simple refine (p _ _ _) ||
+        simple refine (p _ _ _ _) ||
+          simple refine (p _ _ _ _ _) ||
+            simple refine (p _ _ _ _ _ _) ||
+              simple refine (p _ _ _ _ _ _ _) ||
+                simple refine (p _ _ _ _ _ _ _ _) ||
+                  simple refine (p _ _ _ _ _ _ _ _ _) ||
+                    simple refine (p _ _ _ _ _ _ _ _ _ _) ||
+                      simple refine (p _ _ _ _ _ _ _ _ _ _ _) ||
+                        simple refine (p _ _ _ _ _ _ _ _ _ _ _ _) ||
+                          simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                            simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _) ||
+                              simple refine (p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)
+where
+p := eq_mor_hset_struct
+of type
+uconstr of type tacvalue
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : hset_cartesian_closed_struct
+  C : category
+  E : struct_enrichment P C
+  E' := make_enrichment_over_struct P C E
+     : enrichment C (sym_mon_closed_cat_of_hset_struct P)
+  HP : hset_equalizer_struct P
+  EEC : structure_enrichment_coequalizers
+  x : ob C
+  y : ob C
+  f : C ⟦ x, y ⟧
+  g : C ⟦ x, y ⟧
+  w : ob C
