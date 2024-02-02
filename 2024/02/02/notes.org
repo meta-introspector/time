@@ -464,8 +464,12 @@ Now we define each of those terms
 * now lets take the terms and look them up in batches
 
 #+BEGIN_SRC shell
-  cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r  >terms.txt
-  split -l 20 terms.txt TERMS
+    cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r | cut -b9- >terms.txt
+    split -l 20 terms.txt TERMS
+    for x in TERMS*;do cat $x | xargs echo; done | sed -e 's; ;,;g' > merged.txt
+    echo "The please define each of following words (which are sorted by frequency descending order) in the context of you being a self improving AI quine bootstrap process that is reviewing itself.: BEGINLIST " > prompt.txt
+    echo " ENDLIST. That is the end of the list. Your definitions: " > sep.txt
+
 #+END_SRC
 
 #+RESULTS:
@@ -485,7 +489,7 @@ for x in TERMS*;do cat $x | xargs echo; done  > merged.txt
 
 Now we can run the chunker 
 #+BEGIN_SRC shell
-echo "The please define the following pairs of count and words in the context of a self improving AI bootstrap process: " > prompt.txt
+echo "The please define each of following words (which are sorted by frequency descending order) in the context of you being a self improving AI quine bootstrap process that is reviewing itself.: " > prompt.txt
 echo "your response: " > sep.txt
 #+END_SRC
 
