@@ -118,392 +118,11 @@ ispell: Ispell, an open-source spell-checking utility for Unix-like operating sy
 **collect the words
 
 #+BEGIN_SRC shell
-  cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r 
+  cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r  > words.txt
 #+END_SRC
 
 
 #+RESULTS:
-| 65 | the              |
-| 49 | a                |
-| 48 | and              |
-| 45 | to               |
-| 31 | in               |
-| 24 | of               |
-| 22 | for              |
-| 22 | can              |
-| 21 | that             |
-| 17 | language         |
-| 16 | LLM              |
-| 15 | we               |
-| 14 | with             |
-| 14 | Coq              |
-| 14 | code             |
-| 12 | this             |
-| 11 | each             |
-| 11 | coq              |
-| 11 | commands         |
-| 10 | used             |
-| 10 | is               |
-| 10 | debugger         |
-| 10 | by               |
-| 10 | an               |
-|  9 | programming      |
-|  9 | or               |
-|  9 | ocaml            |
-|  9 | model            |
-|  9 | as               |
-|  8 | text             |
-|  8 | other            |
-|  8 | large            |
-|  8 | into             |
-|  8 | document         |
-|  7 | which            |
-|  7 | via              |
-|  7 | OpenAI           |
-|  7 | OCaml            |
-|  7 | LTAC             |
-|  7 | ltac             |
-|  7 | llm              |
-|  7 | languages        |
-|  7 | create           |
-|  6 | software         |
-|  6 | set              |
-|  6 | s                |
-|  6 | programs         |
-|  6 | on               |
-|  6 | it               |
-|  6 | generate         |
-|  6 | formal           |
-|  6 | environment      |
-|  6 | developed        |
-|  6 | breakpoints      |
-|  6 | between          |
-|  6 | based            |
-|  6 | at               |
-|  6 | applications     |
-|  6 | A                |
-|  5 | writing          |
-|  5 | using            |
-|  5 | users            |
-|  5 | type             |
-|  5 | topfind          |
-|  5 | theory           |
-|  5 | them             |
-|  5 | systems          |
-|  5 | system           |
-|  5 | specific         |
-|  5 | so               |
-|  5 | see              |
-|  5 | Owl              |
-|  5 | org              |
-|  5 | mode             |
-|  5 | map              |
-|  5 | list             |
-|  5 | LaTeX            |
-|  5 | first            |
-|  5 | file             |
-|  5 | extract          |
-|  5 | expose           |
-|  5 | END_SRC          |
-|  5 | development      |
-|  5 | custom           |
-|  5 | CoqIDE           |
-|  5 | context          |
-|  5 | C                |
-|  5 | BEGIN_SRC        |
-|  5 | api              |
-|  5 | above            |
-|  4 | words            |
-|  4 | utility          |
-|  4 | uses             |
-|  4 | use              |
-|  4 | uniq             |
-|  4 | two              |
-|  4 | then             |
-|  4 | syntax           |
-|  4 | size             |
-|  4 | separator        |
-|  4 | run              |
-|  4 | rewrite          |
-|  4 | RESULTS          |
-|  4 | respond          |
-|  4 | programmers      |
-|  4 | programmatically |
-|  4 | point            |
-|  4 | path             |
-|  4 | out              |
-|  4 | open             |
-|  4 | opam             |
-|  4 | ollama           |
-|  4 | Naur             |
-|  4 | morphisms        |
-|  4 | models           |
-|  4 | Model            |
-|  4 | mixtral          |
-|  4 | Mistral          |
-|  4 | make             |
-|  4 | lsp              |
-|  4 | line             |
-|  4 | lets             |
-|  4 | homotopy         |
-|  4 | homomorphisms    |
-|  4 | grammar          |
-|  4 | functions        |
-|  4 | function         |
-|  4 | Form             |
-|  4 | execute          |
-|  4 | EBNF             |
-|  4 | describe         |
-|  4 | coqide           |
-|  4 | call             |
-|  4 | breakpoint       |
-|  4 | be               |
-|  4 | any              |
-|  4 | add              |
-|  3 | word             |
-|  3 | well             |
-|  3 | want             |
-|  3 | valid            |
-|  3 | user             |
-|  3 | training         |
-|  3 | through          |
-|  3 | those            |
-|  3 | Telegram         |
-|  3 | tasks            |
-|  3 | take             |
-|  3 | statements       |
-|  3 | start            |
-|  3 | src              |
-|  3 | specification    |
-|  3 | sort             |
-|  3 | similar          |
-|  3 | show             |
-|  3 | shell            |
-|  3 | server           |
-|  3 | second           |
-|  3 | require          |
-|  3 | reduce           |
-|  3 | read             |
-|  3 | provides         |
-|  3 | prompt           |
-|  3 | probabilities    |
-|  3 | perform          |
-|  3 | owl              |
-|  3 | our              |
-|  3 | orgmode          |
-|  3 | order            |
-|  3 | openai           |
-|  3 | often            |
-|  3 | objects          |
-|  3 | Now              |
-|  3 | notes            |
-|  3 | needed           |
-|  3 | mathematical     |
-|  3 | lift             |
-|  3 | level            |
-|  3 | Language         |
-|  3 | Laboratory       |
-|  3 | its              |
-|  3 | ispell           |
-|  3 | interface        |
-|  3 | interact         |
-|  3 | intelligence     |
-|  3 | integration      |
-|  3 | install          |
-|  3 | information      |
-|  3 | ide              |
-|  3 | human            |
-|  3 | how              |
-|  3 | hints            |
-|  3 | given            |
-|  3 | functional       |
-|  3 | France           |
-|  3 | format           |
-|  3 | following        |
-|  3 | extended         |
-|  3 | executable       |
-|  3 | emacs            |
-|  3 | DSLs             |
-|  3 | define           |
-|  3 | data             |
-|  3 | concept          |
-|  3 | communication    |
-|  3 | category         |
-|  3 | build            |
-|  3 | B                |
-|  3 | artificial       |
-|  3 | are              |
-|  3 | API              |
-|  3 | amounts          |
-|  3 | allowing         |
-|  3 | all              |
-|  3 | AI               |
-|  3 | actions          |
-|  3 | -                |
-|  2 | Your             |
-|  2 | written          |
-|  2 | write            |
-|  2 | worker           |
-|  2 | will             |
-|  2 | widely           |
-|  2 | where            |
-|  2 | whatever         |
-|  2 | We               |
-|  2 | way              |
-|  2 | was              |
-|  2 | w                |
-|  2 | voice            |
-|  2 | variety          |
-|  2 | variables        |
-|  2 | Using            |
-|  2 | us               |
-|  2 | unite            |
-|  2 | unique           |
-|  2 | understand       |
-|  2 | Unbound          |
-|  2 | types            |
-|  2 | translate        |
-|  2 | tools            |
-|  2 | tool             |
-|  2 | To               |
-|  2 | three            |
-|  2 | This             |
-|  2 | These            |
-|  2 | these            |
-|  2 | there            |
-|  2 | theorem          |
-|  2 | their            |
-|  2 | terms            |
-|  2 | term             |
-|  2 | tell             |
-|  2 | team             |
-|  2 | supports         |
-|  2 | summary          |
-|  2 | suite            |
-|  2 | such             |
-|  2 | structures       |
-|  2 | step             |
-|  2 | standard         |
-|  2 | specified        |
-|  2 | specialized      |
-|  2 | special          |
-|  2 | source           |
-|  2 | sophisticated    |
-|  2 | Show             |
-|  2 | set_trace        |
-|  2 | sets             |
-|  2 | service          |
-|  2 | section          |
-|  2 | searches         |
-|  2 | seamless         |
-|  2 | responses        |
-|  2 | Response         |
-|  2 | research         |
-|  2 | represent        |
-|  2 | repeat           |
-|  2 | removes          |
-|  2 | relevant         |
-|  2 | related          |
-|  2 | python           |
-|  2 | proving          |
-|  2 | provided         |
-|  2 | provide          |
-|  2 | protocols        |
-|  2 | protocol         |
-|  2 | propose          |
-|  2 | proofs           |
-|  2 | proof            |
-|  2 | prompts          |
-|  2 | programmer       |
-|  2 | processes        |
-|  2 | possible         |
-|  2 | plan             |
-|  2 | pick             |
-|  2 | personal         |
-|  2 | Pavel            |
-|  2 | pause            |
-|  2 | parser           |
-|  2 | packages         |
-|  2 | package          |
-|  2 | own              |
-|  2 | over             |
-|  2 | outputs          |
-|  2 | Our              |
-|  2 | original         |
-|  2 | organizing       |
-|  2 | operating        |
-|  2 | open-source      |
-|  2 | only             |
-|  2 | one              |
-|  2 | occurrence       |
-|  2 | none             |
-|  2 | Nikolai          |
-|  2 | named            |
-|  2 | modules          |
-|  2 | module           |
-|  2 | Models           |
-|  2 | messaging        |
-|  2 | merge            |
-|  2 | meaningful       |
-|  2 | meaning          |
-|  2 | mapping          |
-|  2 | managing         |
-|  2 | manager          |
-|  2 | manage           |
-|  2 | making           |
-|  2 | major            |
-|  2 | LSP              |
-|  2 | look             |
-|  2 | literate         |
-|  2 | lines            |
-|  2 | Line             |
-|  2 | like             |
-|  2 | lib              |
-|  2 | let              |
-|  2 | Large            |
-|  2 | key              |
-|  2 | It               |
-|  2 | IP               |
-|  2 | interactive      |
-|  2 | Integration      |
-|  2 | integrated       |
-|  2 | instant          |
-|  2 | inspect          |
-|  2 | inserting        |
-|  2 | insert           |
-|  2 | input            |
-|  2 | including        |
-|  2 | In               |
-|  2 | if               |
-|  2 | ideas            |
-|  2 | high             |
-|  2 | have             |
-|  2 | has              |
-|  2 | GUI              |
-|  2 | grep             |
-|  2 | graphical        |
-|  2 | grammars         |
-|  2 | GPT              |
-|  2 | goal             |
-|  2 | give             |
-|  2 | geometric        |
-|  2 | generating       |
-|  2 | further          |
-|  2 | functionality    |
-|  2 | from             |
-|  2 | found            |
-|  2 | formatting       |
-|  2 | Find             |
-|  2 | find             |
-|  2 | files            |
-|  2 | features         |
-|  2 | facilities       |
-|  2 | facilitate       |
-|  2 | extracting       |
-|  2 | Extensible       |
-|  2 | execution        |
-|  2 | Error            |
-|  2 | entire           |
 
 Define the following list of terms 
 |  2 | enhance          |
@@ -849,6 +468,8 @@ Now we define each of those terms
   split -l 20 terms.txt TERMS
 #+END_SRC
 
+#+RESULTS:
+
 **
 now a create a generic dirs wildcard gnu make file rule that takes a
 file in form TERMxx and produces TERMxx.out
@@ -857,13 +478,23 @@ or we just use chunker and add in a line count option
 
 or we just cat the file lines into one one
 #+BEGIN_SRC shell
-for x in TERMS*;do echo $x; cat $x | xargs echo; done  > merged.txt
+for x in TERMS*;do cat $x | xargs echo; done  > merged.txt
 #+END_SRC
+
+#+RESULTS:
 
 Now we can run the chunker 
 #+BEGIN_SRC shell
-echo "The please define the following words in the context of a self improving AI bootstrap process: " > promp.txt
+echo "The please define the following pairs of count and words in the context of a self improving AI bootstrap process: " > prompt.txt
 echo "your response: " > sep.txt
+#+END_SRC
+
+#+RESULTS:
+
+Bootstrap itself.
+
+#+BEGIN_SRC shell
+~/experiments/lang_agent/_build/default/bin/chunker.exe  prompt.txt sep.txt merged.txt
 #+END_SRC
 
 #+RESULTS:
