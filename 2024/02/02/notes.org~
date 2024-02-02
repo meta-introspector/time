@@ -1,0 +1,79 @@
+* ideas
+
+** coq debugger
+we want to set breakpoints via ltac commands in the coq like
+python set_trace. then the llm can respond to the breakpoint with a coqide api or lsp api.
+
+create coq model of the coq-ide and debugger and expose it as commands via ltac2 and expose them to the llm.
+so whatever actions a user can take via the debugger we can expose them via commands in ltac.
+
+and we want to insert breakpoints into the code that call the LLM and let it pick
+the commands to run via a grammar.
+
+so we can generate a custom grammar with all valid statements the llm can make at
+any given point with probabilties for each path as well.
+we can give those hints in context as well.
+we can reduce the context size to a key size.
+
+** out1
+
+**Coq Debugger Integration with LLM**
+
+Our aim is to create a seamless integration between the Coq debugger
+and a Language Model (LLM) using a combination of LTAC commands,
+CoqIDE API or LSP API, and custom LTAC commands. This will enable us
+to set breakpoints in Coq code via LTAC, and have the LLM respond
+with relevant information or perform specific actions.
+
+We plan to create a Coq model of the debugger and expose it as LTAC
+commands, allowing users to execute any action available through the
+debugger using these commands. By doing so, we can effectively
+translate the functionality of the debugger into LTAC commands,
+making it easy for users to interact with the debugger
+programmatically.
+
+To further enhance the integration between Coq and the LLM, we propose
+inserting breakpoints into Coq code that call the LLM. Using a custom
+grammar, we can generate a set of valid statements that the LLM can
+make at any given point in the code, along with associated
+probabilities for each possible path. These hints can be provided in
+context to reduce the size of the context needed to understand the
+LLM's responses.
+
+In summary, our goal is to create a bridge between Coq and the LLM,
+allowing users to interact with the debugger using LTAC commands, set
+breakpoints in Coq code that call the LLM, and generate custom
+grammars to facilitate communication between the two systems.
+
+
+* execute this code
+in the org mode file lets add the following functions
+** extract the prompt
+read this file in ocaml
+#+BEGIN_SRC shell
+  opam 
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC coq
+    #use "topfind" ;;
+    #require "owl";;
+    open Owl
+#+END_SRC
+
+#+BEGIN_SRC ocaml
+    #use "topfind" ;;
+    #require "owl";;
+    open Owl
+#+END_SRC
+
+#+RESULTS:
+: Line 1, characters 5-8:
+: 1 | open Owl;;
+:          ^^^
+: Error: Unbound module Owl
+
+** extract the separator
+** find and build the ocaml, worker, ollama and the mixtral model.
+

@@ -1,0 +1,863 @@
+* ideas
+
+** coq debugger
+we want to set breakpoints via ltac commands in the coq like
+python set_trace. then the llm can respond to the breakpoint with a coqide api or lsp api.
+
+create coq model of the coq-ide and debugger and expose it as commands via ltac2 and expose them to the llm.
+so whatever actions a user can take via the debugger we can expose them via commands in ltac.
+
+and we want to insert breakpoints into the code that call the LLM and let it pick
+the commands to run via a grammar.
+
+so we can generate a custom grammar with all valid statements the llm can make at
+any given point with probabilities for each path as well.
+we can give those hints in context as well.
+we can reduce the context size to a key size.
+
+** out1
+
+**Coq Debugger Integration with LLM**
+
+Our aim is to create a seamless integration between the Coq debugger
+and a Language Model (LLM) using a combination of LTAC commands,
+CoqIDE API or LSP API, and custom LTAC commands. This will enable us
+to set breakpoints in Coq code via LTAC, and have the LLM respond
+with relevant information or perform specific actions.
+
+We plan to create a Coq model of the debugger and expose it as LTAC
+commands, allowing users to execute any action available through the
+debugger using these commands. By doing so, we can effectively
+translate the functionality of the debugger into LTAC commands,
+making it easy for users to interact with the debugger
+programmatically.
+
+To further enhance the integration between Coq and the LLM, we propose
+inserting breakpoints into Coq code that call the LLM. Using a custom
+grammar, we can generate a set of valid statements that the LLM can
+make at any given point in the code, along with associated
+probabilities for each possible path. These hints can be provided in
+context to reduce the size of the context needed to understand the
+LLM's responses.
+
+In summary, our goal is to create a bridge between Coq and the LLM,
+allowing users to interact with the debugger using LTAC commands, set
+breakpoints in Coq code that call the LLM, and generate custom
+grammars to facilitate communication between the two systems.
+
+
+* execute this code
+in the org mode file lets add the following functions
+** extract the prompt
+read this file in ocaml
+#+BEGIN_SRC shell
+  opam 
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC coq
+    #use "topfind" ;;
+    #require "owl";;
+    open Owl
+#+END_SRC
+
+#+BEGIN_SRC ocaml
+    #use "topfind" ;;
+    #require "owl";;
+    open Owl
+#+END_SRC
+
+#+RESULTS:
+: Line 1, characters 5-8:
+: 1 | open Owl;;
+:          ^^^
+: Error: Unbound module Owl
+
+* execute this code
+in the org mode file lets add the following functions
+
+** extract the prompt function
+read this file in ocaml and extract out a second named.
+
+** extract the separator function
+look for a separator section and if none is found use "Your Response:" as the separator to append to the document to tell the llm to respond there.
+
+** find and build the ocaml, worker, ollama and the mixtral model.
+Find and install all the modules needed to run this. 
+
+* rewrite
+rewrite this document into ocaml types and lift them to coq.
+show that we can write this entire document as meaningful coq
+where each term has its own special meaning.
+make this document executable and literate.
+create a list of categories and morphisms:
+start with a list of sets.
+then with a list of functions.
+then determine the type level of each one.
+
+* Now we define the new words used in those defintions
+
+GPT: Generative Pre-Trained Transformer, a large language model developed by OpenAI that can generate text similar to human writing based on large amounts of training data.
+
+LaTeX: LaTeX, a document preparation system that is widely used for typesetting technical and scientific documents. It uses a markup language called LaTeX to format text and produce high-quality typesets.
+
+Naur: Naur Form, a formal specification language used to describe the syntax of programming languages and other formal languages. Naur Form was first proposed by John von Neumann in 1956 as an alternative to EBNF.
+
+OCaml: OCaml, a functional programming language developed at the OCaml Laboratory in France. OCaml is known for its fast performance and strong type system, which makes it well-suited for developing large-scale systems and applications.
+
+OpenAI: see OpenAI above.
+
+emacs: Emacs, an extensible text editor and operating system that was first developed in the 1970s. Emacs is widely used by programmers, writers, and other users who need a powerful and customizable text editor.
+
+homomorphisms: see homomorphisms above.
+
+ispell: Ispell, an open-source spell-checking utility for Unix-like operating systems. It uses various dictionaries and language models to check the spelling of words in real-time and suggest corrections.
+
+
+**collect the words
+
+#+BEGIN_SRC shell
+  cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r 
+#+END_SRC
+
+
+#+RESULTS:
+| 65 | the              |
+| 49 | a                |
+| 48 | and              |
+| 45 | to               |
+| 31 | in               |
+| 24 | of               |
+| 22 | for              |
+| 22 | can              |
+| 21 | that             |
+| 17 | language         |
+| 16 | LLM              |
+| 15 | we               |
+| 14 | with             |
+| 14 | Coq              |
+| 14 | code             |
+| 12 | this             |
+| 11 | each             |
+| 11 | coq              |
+| 11 | commands         |
+| 10 | used             |
+| 10 | is               |
+| 10 | debugger         |
+| 10 | by               |
+| 10 | an               |
+|  9 | programming      |
+|  9 | or               |
+|  9 | ocaml            |
+|  9 | model            |
+|  9 | as               |
+|  8 | text             |
+|  8 | other            |
+|  8 | large            |
+|  8 | into             |
+|  8 | document         |
+|  7 | which            |
+|  7 | via              |
+|  7 | OpenAI           |
+|  7 | OCaml            |
+|  7 | LTAC             |
+|  7 | ltac             |
+|  7 | llm              |
+|  7 | languages        |
+|  7 | create           |
+|  6 | software         |
+|  6 | set              |
+|  6 | s                |
+|  6 | programs         |
+|  6 | on               |
+|  6 | it               |
+|  6 | generate         |
+|  6 | formal           |
+|  6 | environment      |
+|  6 | developed        |
+|  6 | breakpoints      |
+|  6 | between          |
+|  6 | based            |
+|  6 | at               |
+|  6 | applications     |
+|  6 | A                |
+|  5 | writing          |
+|  5 | using            |
+|  5 | users            |
+|  5 | type             |
+|  5 | topfind          |
+|  5 | theory           |
+|  5 | them             |
+|  5 | systems          |
+|  5 | system           |
+|  5 | specific         |
+|  5 | so               |
+|  5 | see              |
+|  5 | Owl              |
+|  5 | org              |
+|  5 | mode             |
+|  5 | map              |
+|  5 | list             |
+|  5 | LaTeX            |
+|  5 | first            |
+|  5 | file             |
+|  5 | extract          |
+|  5 | expose           |
+|  5 | END_SRC          |
+|  5 | development      |
+|  5 | custom           |
+|  5 | CoqIDE           |
+|  5 | context          |
+|  5 | C                |
+|  5 | BEGIN_SRC        |
+|  5 | api              |
+|  5 | above            |
+|  4 | words            |
+|  4 | utility          |
+|  4 | uses             |
+|  4 | use              |
+|  4 | uniq             |
+|  4 | two              |
+|  4 | then             |
+|  4 | syntax           |
+|  4 | size             |
+|  4 | separator        |
+|  4 | run              |
+|  4 | rewrite          |
+|  4 | RESULTS          |
+|  4 | respond          |
+|  4 | programmers      |
+|  4 | programmatically |
+|  4 | point            |
+|  4 | path             |
+|  4 | out              |
+|  4 | open             |
+|  4 | opam             |
+|  4 | ollama           |
+|  4 | Naur             |
+|  4 | morphisms        |
+|  4 | models           |
+|  4 | Model            |
+|  4 | mixtral          |
+|  4 | Mistral          |
+|  4 | make             |
+|  4 | lsp              |
+|  4 | line             |
+|  4 | lets             |
+|  4 | homotopy         |
+|  4 | homomorphisms    |
+|  4 | grammar          |
+|  4 | functions        |
+|  4 | function         |
+|  4 | Form             |
+|  4 | execute          |
+|  4 | EBNF             |
+|  4 | describe         |
+|  4 | coqide           |
+|  4 | call             |
+|  4 | breakpoint       |
+|  4 | be               |
+|  4 | any              |
+|  4 | add              |
+|  3 | word             |
+|  3 | well             |
+|  3 | want             |
+|  3 | valid            |
+|  3 | user             |
+|  3 | training         |
+|  3 | through          |
+|  3 | those            |
+|  3 | Telegram         |
+|  3 | tasks            |
+|  3 | take             |
+|  3 | statements       |
+|  3 | start            |
+|  3 | src              |
+|  3 | specification    |
+|  3 | sort             |
+|  3 | similar          |
+|  3 | show             |
+|  3 | shell            |
+|  3 | server           |
+|  3 | second           |
+|  3 | require          |
+|  3 | reduce           |
+|  3 | read             |
+|  3 | provides         |
+|  3 | prompt           |
+|  3 | probabilities    |
+|  3 | perform          |
+|  3 | owl              |
+|  3 | our              |
+|  3 | orgmode          |
+|  3 | order            |
+|  3 | openai           |
+|  3 | often            |
+|  3 | objects          |
+|  3 | Now              |
+|  3 | notes            |
+|  3 | needed           |
+|  3 | mathematical     |
+|  3 | lift             |
+|  3 | level            |
+|  3 | Language         |
+|  3 | Laboratory       |
+|  3 | its              |
+|  3 | ispell           |
+|  3 | interface        |
+|  3 | interact         |
+|  3 | intelligence     |
+|  3 | integration      |
+|  3 | install          |
+|  3 | information      |
+|  3 | ide              |
+|  3 | human            |
+|  3 | how              |
+|  3 | hints            |
+|  3 | given            |
+|  3 | functional       |
+|  3 | France           |
+|  3 | format           |
+|  3 | following        |
+|  3 | extended         |
+|  3 | executable       |
+|  3 | emacs            |
+|  3 | DSLs             |
+|  3 | define           |
+|  3 | data             |
+|  3 | concept          |
+|  3 | communication    |
+|  3 | category         |
+|  3 | build            |
+|  3 | B                |
+|  3 | artificial       |
+|  3 | are              |
+|  3 | API              |
+|  3 | amounts          |
+|  3 | allowing         |
+|  3 | all              |
+|  3 | AI               |
+|  3 | actions          |
+|  3 | -                |
+|  2 | Your             |
+|  2 | written          |
+|  2 | write            |
+|  2 | worker           |
+|  2 | will             |
+|  2 | widely           |
+|  2 | where            |
+|  2 | whatever         |
+|  2 | We               |
+|  2 | way              |
+|  2 | was              |
+|  2 | w                |
+|  2 | voice            |
+|  2 | variety          |
+|  2 | variables        |
+|  2 | Using            |
+|  2 | us               |
+|  2 | unite            |
+|  2 | unique           |
+|  2 | understand       |
+|  2 | Unbound          |
+|  2 | types            |
+|  2 | translate        |
+|  2 | tools            |
+|  2 | tool             |
+|  2 | To               |
+|  2 | three            |
+|  2 | This             |
+|  2 | These            |
+|  2 | these            |
+|  2 | there            |
+|  2 | theorem          |
+|  2 | their            |
+|  2 | terms            |
+|  2 | term             |
+|  2 | tell             |
+|  2 | team             |
+|  2 | supports         |
+|  2 | summary          |
+|  2 | suite            |
+|  2 | such             |
+|  2 | structures       |
+|  2 | step             |
+|  2 | standard         |
+|  2 | specified        |
+|  2 | specialized      |
+|  2 | special          |
+|  2 | source           |
+|  2 | sophisticated    |
+|  2 | Show             |
+|  2 | set_trace        |
+|  2 | sets             |
+|  2 | service          |
+|  2 | section          |
+|  2 | searches         |
+|  2 | seamless         |
+|  2 | responses        |
+|  2 | Response         |
+|  2 | research         |
+|  2 | represent        |
+|  2 | repeat           |
+|  2 | removes          |
+|  2 | relevant         |
+|  2 | related          |
+|  2 | python           |
+|  2 | proving          |
+|  2 | provided         |
+|  2 | provide          |
+|  2 | protocols        |
+|  2 | protocol         |
+|  2 | propose          |
+|  2 | proofs           |
+|  2 | proof            |
+|  2 | prompts          |
+|  2 | programmer       |
+|  2 | processes        |
+|  2 | possible         |
+|  2 | plan             |
+|  2 | pick             |
+|  2 | personal         |
+|  2 | Pavel            |
+|  2 | pause            |
+|  2 | parser           |
+|  2 | packages         |
+|  2 | package          |
+|  2 | own              |
+|  2 | over             |
+|  2 | outputs          |
+|  2 | Our              |
+|  2 | original         |
+|  2 | organizing       |
+|  2 | operating        |
+|  2 | open-source      |
+|  2 | only             |
+|  2 | one              |
+|  2 | occurrence       |
+|  2 | none             |
+|  2 | Nikolai          |
+|  2 | named            |
+|  2 | modules          |
+|  2 | module           |
+|  2 | Models           |
+|  2 | messaging        |
+|  2 | merge            |
+|  2 | meaningful       |
+|  2 | meaning          |
+|  2 | mapping          |
+|  2 | managing         |
+|  2 | manager          |
+|  2 | manage           |
+|  2 | making           |
+|  2 | major            |
+|  2 | LSP              |
+|  2 | look             |
+|  2 | literate         |
+|  2 | lines            |
+|  2 | Line             |
+|  2 | like             |
+|  2 | lib              |
+|  2 | let              |
+|  2 | Large            |
+|  2 | key              |
+|  2 | It               |
+|  2 | IP               |
+|  2 | interactive      |
+|  2 | Integration      |
+|  2 | integrated       |
+|  2 | instant          |
+|  2 | inspect          |
+|  2 | inserting        |
+|  2 | insert           |
+|  2 | input            |
+|  2 | including        |
+|  2 | In               |
+|  2 | if               |
+|  2 | ideas            |
+|  2 | high             |
+|  2 | have             |
+|  2 | has              |
+|  2 | GUI              |
+|  2 | grep             |
+|  2 | graphical        |
+|  2 | grammars         |
+|  2 | GPT              |
+|  2 | goal             |
+|  2 | give             |
+|  2 | geometric        |
+|  2 | generating       |
+|  2 | further          |
+|  2 | functionality    |
+|  2 | from             |
+|  2 | found            |
+|  2 | formatting       |
+|  2 | Find             |
+|  2 | find             |
+|  2 | files            |
+|  2 | features         |
+|  2 | facilities       |
+|  2 | facilitate       |
+|  2 | extracting       |
+|  2 | Extensible       |
+|  2 | execution        |
+|  2 | Error            |
+|  2 | entire           |
+
+Define the following list of terms 
+|  2 | enhance          |
+|  2 | enable           |
+|  2 | Emacs            |
+|  2 | effectively      |
+|  2 | editor           |
+|  2 | easy             |
+|  2 | Durov            |
+|  2 | duplicate        |
+|  2 | Dudkino          |
+|  2 | domains          |
+|  2 | doing            |
+|  2 | directories      |
+|  2 | develops         |
+|  2 | determine        |
+|  2 | designed         |
+|  2 | describes        |
+|  2 | deploys          |
+|  2 | debugging        |
+|  2 | Debugger         |
+
+define the following terms
+|  2 | created          |
+|  2 | contexts         |
+|  2 | computer         |
+|  2 | comprehensive    |
+|  2 | completion       |
+|  2 | compiler         |
+|  2 | compiled         |
+|  2 | company          |
+|  2 | communicate      |
+|  2 | combination      |
+|  2 | client           |
+|  2 | characters       |
+|  2 | categories       |
+|  2 | cat              |
+|  2 | capable          |
+|  2 | By               |
+|  2 | bridge           |
+|  2 | back             |
+|  2 | available        |
+|  2 | automate         |
+|  2 | associated       |
+|  2 | assistance       |
+|  2 | assigning        |
+|  2 | application      |
+|  2 | append           |
+|  2 | along            |
+|  2 | allows           |
+|  2 | aim              |
+|  2 | action           |
+
+
+1. contexts: Contexts refer to the environment or surroundings in which something happens, often related to a particular topic or subject. In computer science, context refers to the current state of execution or scope of a program.
+2. computer: A computer is an electronic device that is designed to process information and automate tasks through the use of software programs. Computers can be used for a wide range of purposes, such as communication, education, entertainment, and business.
+3. comprehensive: Comprehensive refers to something that includes all relevant or necessary parts, or that covers the entire subject or topic in detail. In computer science, comprehensive means that a program or solution addresses all aspects of a problem and provides a complete solution.
+4. completion: Completion refers to the end or finish of a task or process. In computer science, completion means that a program or solution has been fully executed and is no longer running.
+5. compiler: A compiler is a software tool that converts source code written in a programming language into machine code that can be executed by a computer. Compilers are essential for translating high-level languages like Python and Java into low-level languages like C and assembly that the computer's CPU can understand.
+6. compiled: Compiled refers to a program or code that has been converted from source code to machine code. In computer science, compiled means that a program is ready to be executed by the computer's CPU.
+7. company: A company is an organization that is formed to carry out a specific business activity or purpose. Companies can range in size from small family-owned businesses to large corporations with thousands of employees and operations all over the world.
+8. communicate: Communication refers to the exchange of information between individuals, groups, or organizations. In computer science, communication involves using technology to transmit data and information between devices or systems.
+9. combination: Combination refers to a group of elements that are put together in a particular order or arrangement. In computer science, combinations can be used in algorithms and formulas to solve problems and create solutions.
+10. client: A client is a user or application that requests services from another system, such as a web server. In computer science, clients often refer to software programs or applications that are designed to interact with other systems or networks.
+11. characters: Characters are the basic building blocks of text in computer science. They can be letters, numbers, symbols, and other forms of data that are used to create messages and information.
+12. categories: Categories refer to groups or classes of objects or concepts that share similar characteristics or attributes. In computer science, categories can be used to organize and classify data, algorithms, and programming languages.
+13. cat: Cat is a command in Unix-based operating systems that is used to display the contents of a file.
+14. capable: Capable refers to something that has the ability or potential to do something effectively or efficiently. In computer science, capable means that a program or solution is well-designed and optimized for its intended purpose.
+15. By: By is a preposition that indicates the cause or reason of an action. In computer science, by refers to the source of data or information that is being used in a program or application.
+16. bridge: A bridge is a structure that spans a physical obstacle, such as a river or valley, to connect two points or areas. In computer science, bridges refer to systems or networks that connect multiple devices or systems together.
+17. back: Back refers to the opposite or reverse direction of an action or process. In computer science, back can be used in various contexts, such as undoing a previous action or returning to a previous state.
+18. available: Available refers to something that is accessible or ready for use. In computer science, availability means that a resource or system is ready to be accessed or used by a user or application.
+19. automate: Automate refers to the process of using technology to perform tasks without human intervention. In computer science, automation is used to improve efficiency and productivity in various industries and applications.
+20. associated: Associated refers to something that is related or connected to another thing
+
+
+Here is the list of terms and their definitions:
+
+1. enhance - to improve or make better
+2. enable - to allow or provide the ability for something to happen or be done
+3. Emacs - a text editor for Unix-like operating systems
+4. effectively - in an effective way
+5. editor - a software application used to create and edit written content
+6. easy - simple and effortless to do
+7. Durov - a Russian author and journalist
+8. duplicate - to make a copy of something
+9. Dudkino - a Russian filmmaker and writer
+10. domains - the areas of knowledge or expertise in which someone is proficient
+11. doing - currently engaged in an action
+12. directories - a collection of files and folders organized into a hierarchical structure on a computer's file system
+13. develops - undergoes growth or development
+14. determine - to decide on something based on certain criteria
+15. designed - planned or intended for a particular purpose
+16. describes - gives a detailed account of something
+17. deploys - puts into action or makes available
+18. debugging - the process of identifying and fixing errors in computer programs
+19. Debugger - a software tool used to identify and fix errors in computer programs
+20. created - brought something into existence
+21. contexts - the surrounding conditions or environment in which something occurs
+22. computer - an electronic device designed for processing data and performing tasks
+23. comprehensive - covering all aspects of something
+24. completion - the state of being finished
+25. compiler - a software program that translates source code written in one programming language into machine code that can be executed by a computer
+26. compiled - converted from source code to machine code
+27. company - an organization formed for business purposes
+28. communicate - to exchange information or ideas with someone else
+29. combination - the act of combining two or more things to create something new
+30. client - a person, organization, or computer program that uses the services of another program or system
+31. characters - the basic units of written language
+32. categories - groups of similar things
+33. cat - a command in Unix-like operating systems used to display the contents of a file
+34. capable - able to do something effectively or efficiently
+35. By - short for "by which" or "because of"
+36. bridge - a structure built across a physical obstacle, such as a river or valley
+37. back - opposite or in the direction of the rear end
+38. available - accessible or ready to be used
+39. automate - to perform tasks using machines or computer programs instead of humans
+40. associated - connected or related to something else
+41. assistance - help or support provided by someone or something
+42. assigning - the act of giving something to a person or place for a particular purpose
+43. application - a software program designed to perform specific tasks or functions
+44. append - to add something to the end of an existing text or document
+45. along - in addition to or together with
+
+Define the following list of terms 
+|  1 | writers          |
+|  1 | who              |
+|  1 | well-suited      |
+|  1 | von              |
+|  1 | various          |
+|  1 | Unix-like        |
+|  1 | typesetting      |
+|  1 | typesets         |
+|  1 | Transformer      |
+|  1 | technical        |
+|  1 | suggest          |
+|  1 | strong           |
+|  1 | spelling         |
+|  1 | spell-checking   |
+|  1 | scientific       |
+|  1 | real-time        |
+|  1 | readable         |
+|  1 | proposed         |
+|  1 | produce          |
+
+1. writers: People who create written works, such as novels, articles, or screenplays.
+2. well-suited: Suitable for a particular purpose or task.
+3. von: A prefix used in some German and English surnames, such as von Schiller or von Goethe.
+4. various: Of many different kinds or types.
+5. Unix-like: Similar in design or functionality to the Unix operating system.
+6. typesetting: The process of formatting text for printing or display on a computer screen.
+7. typesets: A document that has been formatted using a type-setting program.
+8. Transformer: A device used to change electrical current from one form to another, such as alternating current (AC) to direct current (DC).
+9. technical: Related to or involving technology or technical skills.
+10. suggest: To give advice or recommendations about something.
+11. strong: Having a lot of physical or mental strength.
+12. spelling: The way in which words are written using letters of the alphabet.
+13. spell-checking: The process of automatically checking for spelling errors in text.
+14. scientific: Relating to or involving science, particularly the natural sciences.
+15. real-time: Refers to actions that occur as they happen, rather than being recorded and played back later.
+16. readable: Easy to understand or decipher.
+17. proposed: A plan or suggestion for something that has been offered but not yet approved or accepted.
+18. produce: To create or make something, such as a product or piece of art.
+
+
+Define the following terms formally
+|  1 | Pre-Trained      |
+|  1 | preparation      |
+|  1 | powerful         |
+|  1 | performance      |
+|  1 | -P               |
+|  1 | P                |
+|  1 | org-             |
+|  1 | ocaml-orgmode    |
+|  1 | -o               |
+|  1 | o                |
+|  1 | new              |
+|  1 | Neumann          |
+|  1 | need             |
+|  1 | -n               |
+|  1 | n                |
+|  1 | markup           |
+|  1 | makes            |
+|  1 | large-scale      |
+|  1 | known            |
+|  1 | John             |
+|  1 | Ispell           |
+|  1 | human-readable   |
+|  1 | high-quality     |
+|  1 | GPT-             |
+|  1 | Generative       |
+|  1 | fast             |
+|  1 | extensible       |
+|  1 | -e               |
+|  1 | e                |
+|  1 | domain-specific  |
+|  1 | domain           |
+|  1 | documents        |
+|  1 | dictionaries     |
+|  1 | developing       |
+|  1 | customizable     |
+|  1 | corrections      |
+|  1 | coq-of-ocaml     |
+|  1 | coq-ide          |
+|  1 | command-line     |
+|  1 | command          |
+|  1 | cloud-based      |
+|  1 | cloud            |
+|  1 | check            |
+|  1 | called           |
+|  1 | -c               |
+|  1 | c                |
+|  1 | Backus-Naur      |
+|  1 | Backus           |
+|  1 | alternative      |
+
+Term | Definition
+---|---
+Pre-Trained | Already trained on a large dataset and can be fine-tuned for a specific task.
+preparation | The process of getting ready for something, such as preparing a meal or preparing for an exam.
+powerful | Having great strength or ability.
+performance | How well someone or something does a task or activity.
+-P | - Previous training
+P | Pre-trained model
+org- | Organizational
+ocaml-orgmode | OCaml programming language integrated with Emacs text editor
+-o | - Output file
+o | Output
+new | Recently created or recently experienced
+Neumann | A type of computer architecture named after John von Neumann.
+need | Requirement or essential element
+-n | - Needed
+n | Required
+markup | Formatting used to indicate the structure and content of a text document, such as HTML.
+makes | Creates
+large-scale | On a large scale or in a big way
+known | Familiar with
+John | A person named John
+Ispell | Open Source spell checker for English and other languages
+human-readable | Easily understandable by humans
+high-quality | Of high standard or excellent quality
+GPT- | Generative Pre-Trained Transformer model
+Generative | Creating new content based on existing data
+fast | Quickly
+extensible | Easily extended or expanded
+-e | - Extendable
+e | Extend
+domain-specific | Specific to a particular field or area of knowledge
+domain | Field or area of knowledge
+documents | Written records or pieces of writing
+dictionaries | A collection of words and phrases and their meanings, arranged in alphabetical order.
+developing | In the process of being developed or created.
+customizable | Ability to be modified or adapted to individual needs or preferences.
+corrections | Making changes or rectifications to something that is wrong or incorrect.
+coq-of-ocaml | Coq proof assistant integrated with OCaml programming language
+coq-ide | Coq interactive development environment
+command-line | Using a computer's command-line interface to execute commands and perform tasks.
+command | A specific instruction given to a computer or device.
+cloud-based | Stored and processed data on remote servers accessed through the internet.
+cloud | Remote server accessed through the internet.
+check | To verify or inspect something for accuracy or completeness.
+called | Named or designated as.
+
+* high level merge
+rewrite this in coq.
+take org mode parser `ocaml-orgmode` in ocaml.
+lift into coq with coq-of-ocaml.
+
+repeat for second lib `org-1`.
+
+add in our model of this document.
+
+unite the three model A,B,C in homotopy type theory.
+Show that A can map to B. C can map to A. A can map to C. C can map to A.
+
+so we can show for each word and concept in this document a mapping into type theory with a proof and back.
+
+lets start by extracting the words and assigning a language to them.
+
+
+** first we run ispell and create a personal word list
+
+CoqIDE
+DSLs
+EBNF
+LLM's
+OpenAI
+Telegram
+api
+breakpoint
+coq
+coqide
+homotopy
+ide
+llm
+lsp
+ltac
+mixtral - an extended LLM Model based on Mistral
+morphisms
+ocaml
+ollama
+opam
+openai
+orgmode
+programmatically
+src
+topfind
+uniq
+
+Now we define each of those terms
+
+***  CoqIDE: a software development environment for writing programs in the Coq programming language, which supports interactive theorem proving.
+***  DSLs: domain-specific languages, which are specialized languages designed for specific applications or domains.
+***  EBNF: Extensible Backus-Naur Form, a formal specification language used to describe the syntax of programming languages and other formal languages.
+***  LLM's: Large Language Models, which are sophisticated artificial intelligence systems capable of generating text that is similar to human writing, often based on large amounts of training data.
+***  OpenAI: an AI research company that develops and deploys large language models, including GPT-3, for a variety of applications.
+***  Telegram: a cloud-based instant messaging and voice over IP service created by Pavel Durov and Nikolai Dudkino.
+***  api: application programming interface, a set of protocols and tools used to build software applications that can communicate with each other.
+***  breakpoint: a debugging tool that allows programmers to pause the execution of their code at a specific point in order to inspect variables or step through the code line by line.
+***  coq: a programming language for writing formal proofs and programs in the Coq environment.
+***  coqide: the graphical user interface (GUI) for the CoqIDE development environment.
+***  homotopy: a mathematical concept used in category theory, which describes how two objects can be "homomorphisms" of each other.
+***  ide: integrated development environment, a software suite that provides comprehensive facilities to programmers for software development.
+***  llm: large language models, see LLM's above.
+***  lsp: language server protocol, a standard for communication between client and server applications in order to provide features such as code completion and formatting assistance.
+***  ltac: LaTeX syntax for Coq programs, which is used to represent Coq programs in a human-readable format.
+***  mixtral - an extended LLM Model based on Mistral: an artificial intelligence system that uses a large language model to generate text based on specific prompts or contexts.
+***  morphisms: mathematical objects that describe how two geometric structures can be related to each other, often used in category theory.
+***  ocaml: a functional programming language developed at the OCaml Laboratory in France.
+***  ollama: an open-source large language model developed by the Mistral AI team.
+***  opam: a package manager for the OCaml programming language that provides a way to install and manage software packages.
+***  openai: see OpenAI above.
+***  orgmode: an emacs major mode used for organizing and managing tasks, notes, and other information.
+***  programmatically: using code or computer programs to perform tasks or automate processes.
+***  src: source code, the original text written by a programmer that is compiled into executable code by a compiler.
+***  topfind: a utility function in the Coq environment that searches for files and directories in a specified path.
+***  uniq: a command-line utility that removes duplicate lines from input and outputs only the first occurrence of each unique line.
+
+* now lets take the terms and look them up in batches
+
+#+BEGIN_SRC shell
+  cat notes.org | grep -o -P -e'([a-zA-Z\-\_]+)' |sort |uniq -c | sort -n -r  >terms.txt
+  split -l 20 terms.txt TERMS
+#+END_SRC
+
+**
+now a create a generic dirs wildcard gnu make file rule that takes a
+file in form TERMxx and produces TERMxx.out
+
+or we just use chunker and add in a line count option
+
+or we just cat the file lines into one one
+#+BEGIN_SRC shell
+for x in TERMS*;do echo $x; cat $x | xargs echo; done  > merged.txt
+#+END_SRC
+
+Now we can run the chunker 
