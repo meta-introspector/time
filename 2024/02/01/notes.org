@@ -159,3 +159,23 @@ a multi layered encoding of colors and symmetries and eigenvalues and eigenvecto
 and directions and morphisms between the math and the art that it is embedded into.
 we can then later embed the art back into unimath and show that there are layered representations
 of the same thing. 
+
+* query the user
+user interface
+goal
+requirements
+specifications
+design
+
+look up formal description of user interfaces.
+
+displayed categories
+
+* Ideas
+can we use the proof engine to describe
+abstract processes on inputs to the llm?
+can we translate proofs into workflows
+that run llms on batches and check the results.
+extract a proof into ocaml or execute http requests
+or write out batch files.
+

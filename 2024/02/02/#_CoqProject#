@@ -1,6 +1,0 @@
--I ../template-coq/build
--Q ../template-coq/theories MetaCoq.Template
--Q ../checker/theories MetaCoq.Checker
--R . MetaCoq.Examples
-
-note.v

@@ -3,6 +3,4 @@
 -Q ../checker/theories MetaCoq.Checker
 -R . MetaCoq.Examples
 
-demo.v
-add_constructor.v
-tauto.v
+note.v
