@@ -1,0 +1,7 @@
+consider this as a template.
+
+Definition is_algebraic_theory (T : algebraic_theory_data) : UU :=
+  comp_is_assoc T ×
+  comp_is_unital T ×
+  comp_identity_projections T ×
+  comp_is_natural_l T.

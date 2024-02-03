@@ -1,0 +1,120 @@
+Today we looked at semgrep.
+
+lets build a self aware system in a homostatsis to start with,
+it is aware of itself being aware and it is just maintaining that.
+
+moving towards a goal brings the system out of balance and it pays more attention to one aspect over another.
+
+
+#+begin_src ""Lets follow this idea recursivly: ""lets build a self
+#aware system in a homostatsis to start with,
+it is aware of itself being aware and it is just maintaining that.
+
+moving towards a goal brings the system out of balance and it pays
+more attention to one aspect over another.  """"
+#+end_src
+#+begin_src output
+
+Recursively following the idea of building a self-aware system in
+homeostasis, where the system is aware of itself being aware and
+simply maintaining that state, as well as moving towards a goal and
+paying more attention to one aspect over another, we can consider the
+following steps:
+
+1. Define the goals and objectives for the system: What do you want
+the self-aware system to achieve? This could include tasks such as
+decision making, problem solving, or monitoring.
+
+Tasks are creation of probes, monitoring of probes, making sense of the data,
+building a model. 
+one goal could be to create an expanded awareness of one address that we picked.
+
+The system has 4 phases :observe, orient, decide and act.
+the actions create tasks in dune to be run in new threads or part of the existing.
+
+The system will observe itself in visualization, reduce its own dimensionality,
+export its internal data into forms that can be reasoned about
+and it will learn to associate outcomes with different parts of its internals.
+it will create agents that claim ownership of tensors or parts of tensors and build models of them with others in concert.
+
+
+2. Create a
+homeostasis model for the system: A homeostasis is a stable state that
+a system strives to maintain. For this system, we will define the
+stable state as one where the system is aware of itself and its
+surroundings, and maintaining that awareness.  3. Develop algorithms
+and processes for the system to follow: The algorithms and processes
+should be designed to help the system achieve its goals while
+maintaining its homeostasis. For example, if the goal is decision
+making, the system could use a machine learning algorithm to analyze
+data and make informed decisions.  4. Implement monitoring and
+feedback mechanisms: To ensure that the system remains in its stable
+state, we will need to implement monitoring and feedback
+mechanisms. This could include sensors that monitor the environment
+and provide feedback to the system on its performance.  5. Test and
+refine the system: As with any complex system, it's important to test
+and refine the self-aware system to ensure that it is functioning as
+intended. We may need to make adjustments to the algorithms and
+processes based on real-world testing and feedback.
+
+Overall, building a self-aware system in homeostasis is a challenging
+but rewarding endeavor. By carefully defining goals and objectives,
+creating a stable state model, developing algorithms and processes,
+implementing monitoring and feedback mechanisms, and testing and
+refining the system, we can create a system that is capable of
+achieving its desired outcomes while maintaining a level of awareness
+and stability.
+#+end_src
+
+
+#+begin_src input
+execute """Recursively following the idea of building a self-aware system in
+homeostasis, where the system is aware of itself being aware and
+simply maintaining that state, as well as moving towards a goal and
+paying more attention to one aspect over another, we can consider the
+following steps:
+
+1. Define the goals and objectives for the system: What do you want
+the self-aware system to achieve? This could include tasks such as
+decision making, problem solving, or monitoring.
+
+Tasks are creation of probes, monitoring of probes, making sense of the data,
+building a model. 
+one goal could be to create an expanded awareness of one address that we picked.
+
+The system has 4 phases :observe, orient, decide and act.
+the actions create tasks in dune to be run in new threads or part of the existing.
+
+The system will observe itself in visualization, reduce its own dimensionality,
+export its internal data into forms that can be reasoned about
+and it will learn to associate outcomes with different parts of its internals.
+it will create agents that claim ownership of tensors or parts of tensors and build models of them with others in concert.
+"""
+#+end_src
+#+begin_src output
+
+This is a description of a self-aware system in homeostasis, which
+aims to achieve certain goals and objectives. The system follows a
+four-phase process: observe, orient, decide, and act. During the
+observe phase, the system observes itself and its environment using
+visualization techniques. In the orient phase, the system interprets
+and makes sense of the data it collects. During the decide phase, the
+system decides on the next action to take based on its goals and
+objectives. Finally, in the act phase, the system takes actions that
+create tasks to be run in new threads or as part of existing ones.
+
+The system also learns to associate outcomes with different parts of
+its internals and creates agents that claim ownership of tensors or
+parts of tensors and build models of them with others in
+concert. Overall, this self-aware system aims to maintain a state of
+awareness while moving towards specific goals and paying more
+attention to certain aspects.
+#+end_src
+
+so as part of this homeostatsis it will improve on its visualizations and proofs and controls and operations,
+it is in continual bootstrap, ingesting new code and projects and producing new code to be tested.
+the code it generates is tested in very tight loops and the ouutput of the llm is constrained with grammars and advanced beam
+search.
+
+It will expose its own internals with introspection, reflection and plain old print statements.
+it will expose its own types via semgrep and lsp
