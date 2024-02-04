@@ -2894,3 +2894,18 @@
 [submodule "2024/02/02/org-1"]
 	path = 2024/02/02/org-1
 	url = https://github.com/tiensonqin/org-1
+[submodule "2024/02/03/llama-cpp-agent"]
+	path = 2024/02/03/llama-cpp-agent
+	url = https://github.com/Maximilian-Winter/llama-cpp-agent
+[submodule "2024/02/03/gbnfgen"]
+	path = 2024/02/03/gbnfgen
+	url = https://github.com/IntrinsicLabsAI/gbnfgen
+[submodule "2024/02/03/plutus2coq"]
+	path = 2024/02/03/plutus2coq
+	url = https://github.com/aionescu/plutus2coq
+[submodule "2024/02/03/gbnf"]
+	path = 2024/02/03/gbnf
+	url = https://github.com/richardanaya/gbnf
+[submodule "2024/02/03/dream"]
+	path = 2024/02/03/dream
+	url = https://github.com/aantron/dream
