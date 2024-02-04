@@ -1,0 +1,475 @@
+* plan
+ocaml iterface to llama.cpp
+server rest json api in lang agent
+abstract class to switch between backends.
+pass in grammar to rest api for each request.
+use grammar to constrain output.
+generate boolean true false outputs for predicates.
+we can then ask the llm for true false and reasoning using forms.
+this can be driven by a proof.
+write proofs that will translate to workflows that call the llm.
+use the llm in the proof as an unsafe free type .
+convert each term into some form of type in coq.
+
+be able to translate this sentence word for word into coq.
+
+translate this sentence, word for word, into coq by creating supporting defintions to allow this sentence to be interpreted with little or no change. 
+
+* bing 
+I can try to help you with that. Coq is a proof assistant that uses a functional programming language called Gallina¹. NLP stands for natural language processing, which is the field of computer science that deals with analyzing and generating natural languages². To convert a sentence into NP, VP, and S in Coq, you need to define the types and constructors for each syntactic category, and then use pattern matching to extract the components of the sentence. Here is an example of how you can do that:
+
+```coq
+(* Define the types for NP, VP, and S *)
+Inductive NP : Type :=
+  | Noun : string -> NP
+  | Pronoun : string -> NP
+  | Det_NP : string -> NP -> NP.
+
+Inductive VP : Type :=
+  | Verb : string -> VP
+  | VP_NP : VP -> NP -> VP
+  | VP_PP : VP -> string -> NP -> VP.
+
+Inductive S : Prop :=
+  | Sentence : NP -> VP -> S.
+
+(* Define a sample sentence *)
+Definition my_sentence : S :=
+  Sentence (Det_NP "the" (Noun "cat")) (VP_PP (Verb "chased") "after" (Det_NP "a" (Noun "mouse"))).
+
+(* Extract the NP, VP, and S from the sentence *)
+Definition get_NP (s : S) : NP :=
+  match s with
+  | Sentence np vp => np
+  end.
+
+Definition get_VP (s : S) : VP :=
+  match s with
+  | Sentence np vp => vp
+  end.
+
+Definition get_S (s : S) : S := s.
+
+(* Print the results *)
+Eval compute in (get_NP my_sentence).
+Eval compute in (get_VP my_sentence).
+Eval compute in (get_S my_sentence).
+```
+
+The output of this code is:
+
+```coq
+= Det_NP "the" (Noun "cat")
+: NP
+= VP_PP (Verb "chased") "after" (Det_NP "a" (Noun "mouse"))
+: VP
+= Sentence (Det_NP "the" (Noun "cat"))
+    (VP_PP (Verb "chased") "after" (Det_NP "a" (Noun "mouse")))
+: S
+```
+
+I hope this helps you understand how to use NLP to convert a sentence into NP, VP, and S in Coq. 😊
+
+¹: [Coq - Wikipedia](^1^)
+²: [Natural language processing - Wikipedia](^2^)
+
+Source: Conversation with Bing, 2/4/2024
+(1) S -> NP VP, do these sentences follow this format?. https://stackoverflow.com/questions/4706683/s-np-vp-do-these-sentences-follow-this-format.
+(2) stanford nlp - How to extract NP (Noun phrases) and VP (Verb Phrases .... https://stackoverflow.com/questions/43581644/how-to-extract-np-noun-phrases-and-vp-verb-phrases-by-using-library-of-pytho.
+(3) S -> NP VP, do these sentences follow this format?. https://stackoverflow.com/questions/4706683/s-np-vp-do-these-sentences-follow-this-format.
+(4) stanford nlp - How to extract NP (Noun phrases) and VP (Verb Phrases .... https://stackoverflow.com/questions/43581644/how-to-extract-np-noun-phrases-and-vp-verb-phrases-by-using-library-of-pytho.
+(5) Stanford NLP - VP vs NP - Stack Overflow. https://stackoverflow.com/questions/35872324/stanford-nlp-vp-vs-np.
+(6) nlp - Reversing a dependency tree into the original sentence - Data .... https://datascience.stackexchange.com/questions/107495/reversing-a-dependency-tree-into-the-original-sentence.
+(7) nlp - Decompose compound sentence to simple sentences - Stack Overflow. https://stackoverflow.com/questions/27695995/decompose-compound-sentence-to-simple-sentences.
+(8) undefined. http://stanza.readthedocs.io/en/latest/example.text_classification.html.
+
+Okay, let's do that. To write a notation for "the" in Coq that would produce a Det_NP with the next term, you need to use the **Notation** keyword and specify the syntax and the meaning of the notation. Here is an example of how you can do that:
+
+```coq
+(* Define the notation for "the" *)
+Notation "'the' x" := (Det_NP "the" x) (at level 10).
+
+(* Test the notation with a sample NP *)
+Definition my_NP : NP := the (Noun "dog").
+
+(* Print the result *)
+Eval compute in my_NP.
+```
+
+The output of this code is:
+
+```coq
+= Det_NP "the" (Noun "dog")
+: NP
+```
+
+As you can see, the notation for "the" works as expected and produces a Det_NP with the next term. You can use this notation to write more complex NPs, such as `the (Noun "cat")` or `the (Det_NP "big" (Noun "mouse"))`. I hope this helps you understand how to write a notation for "the" in Coq. 😊
+
+Sure, let's do that. To make a notation for "cat" that produces the (Noun "cat"), you need to use the **Notation** keyword and specify the syntax and the meaning of the notation. Here is an example of how you can do that:
+
+```coq
+(* Define the notation for "cat" *)
+Notation "'cat'" := (Noun "cat").
+
+(* Test the notation with a sample NP *)
+Definition my_NP : NP := the cat.
+
+(* Print the result *)
+Eval compute in my_NP.
+```
+
+The output of this code is:
+
+```coq
+= Det_NP "the" (Noun "cat")
+: NP
+```
+
+As you can see, the notation for "cat" works as expected and produces the (Noun "cat"). You can use this notation to write more complex NPs, such as `cat` or `the (Det_NP "big" cat)`. I hope this helps you understand how to make a notation for "cat" in Coq. 😊
+
+
+
+* self compressing
+we can think of code that is self compressing
+that it can rewrite itself into a smaller version of itself
+that only contains the needed features.
+like a linker that strips uneeded symbols we can think
+of a self compressing code as one that rewrite itself after linking
+into something that tracks which parts
+are used and not and can minimize itself.
+
+So now we can think of the quine as self expanding and reducing
+it can rewrite itself with more information or
+less information in it.
+
+* fun
+lets be a little silly.
+
+consider coq as a proof engine that wants to reach goals.
+it wants to want to want
+it desires to desire to desire
+
+#+begin_src output
+
+In essence, COQ can be viewed as a goal-oriented proof engine that seeks to achieve its objectives by wanting and desiring for them. It is like an entity with a deep yearning to accomplish its tasks and an unwavering determination to fulfill its desires. The main idea here is that COQ operates with a strong desire to achieve its goals, which drives it to take the necessary actions to reach them.
+#+end_src
+
+** astrology
+describe in detail.
+A picture of the god of war, Mars, as a man in a suit of armor and tie, and a mythical beast that has the head, horns, and front legs of a goat, and the tail and back fins of a fish. The beast is jumping across a stream. The man is holding a briefcase in one hand and a shield in the other, where the symbol of Mars is engraved. The caption is “Mars in Capricorn: Adventure and Achievement”.
+
+
+#+begin_src output
+
+In the realm of mythology, Mars, the god of war, is often depicted as a man in a suit of armor and tie. But in this particular depiction, he carries a briefcase in one hand, and a shield in the other, where the symbol of Mars is engraved. The beast that accompanies him has the head, horns, and front legs of a goat, and the tail and back fins of a fish, jumping across a stream.
+
+This image captures the essence of Mars' association with Capricorn - a sign known for its drive towards achievement and success. As the god of war, Mars is often seen as the embodiment of strength and determination in the face of adversity. With his armor and shield, he represents the need to be prepared for any challenge that comes your way.
+
+But at the same time, the mythical beast jumping across the stream adds a touch of adventure to the image. Mars is not just about brute force - he also brings a sense of excitement and thrill to life. Whether it's taking on a new project or embarking on a journey, Mars encourages us to take risks and push ourselves beyond our limits.
+
+So, this image of Mars in Capricorn can be interpreted as a call to action. It reminds us that with determination and strength, we can achieve anything we set our minds to. But at the same time, it invites us to embrace the excitement and adventure that life has to offer. Whether you're looking for a new job or starting a family, this image encourages you to go after what you want and never give up.
+#+end_src
+
+now merge the last two ideas consider mars as the user and capricorn as coq proof engine.
+
+*** output 
+
+#+begin_src output
+
+Consider Mars as the user who desires to achieve his goals and CoQ as
+the proof engine that helps him attain those objectives. Mars, the god
+of war, represents determination and strength in the face of
+adversity, while Capricorn, the astrological sign associated with CoQ,
+embodies the drive towards achievement and success.
+
+In this context, Mars is the one who wants to achieve his goals, while
+CoQ serves as a tool to help him do so. The mythical beast jumping
+across the stream adds an element of adventure to the image, reminding
+us that with determination and strength, we can achieve anything we
+set our minds to.
+
+As Mars takes risks and pushes himself beyond his limits, CoQ provides
+him with the necessary proofs and reasoning to ensure that he attains
+his goals. This image can be interpreted as a call to action for those
+seeking to achieve their objectives. Whether it's embarking on a new
+project or starting a family, this image encourages us to take risks,
+embrace the thrill of adventure, and never give up in pursuit of our
+goals.
+
+#+end_src
+
+* idea
+
+When we print out data from coq we are effectivly creating a continuation of
+the proof engine.
+We can trace to the source code of code that created those types.
+we can apply the ppx introspector to them.
+we can create better serializations.
+
+read the source,
+understand term.
+follow the coq engine.
+
+now for coq traces we want to get the source files.
+and many trace files, and many source files.
+multiplication
+one source line -> many traces.
+
+build function resolve_trace that takes one trace line
+-- join with -> many source files and returns the relevant lines
+for the llm to understand the proof.
+
+the proofs came from unimath, using the new modified coq,
+to trace and print the filename and line numbers of the proof.
+
+** example
+
+DEBUG4:TcDebug (0) > /mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Tactics.vmaponpaths_pre_post_cat:44, Tactics  (UniMath.MoreFoundations),/mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Equivalences.v:250
+
+/home/mdupont/experiments/unimath-data-hg/unimath/batch2/data_55/BATCH15544
+Goal:
+  
+  X : Type
+  Y : Type
+  f : X → Y
+  g : Y → X
+  p : ∏ y : Y, f (g y) = y
+  q : ∏ x : X, g (f x) = x
+  h : ∏ x : X, maponpaths f (q x) = p (f x)
+  y : Y
+  ============================
+   ((((! maponpaths g (p y) @ ! maponpaths g (maponpaths f (q (g y)))) @
+      maponpaths g (p (f (g y)))) @ ! q (g (f (g y)))) @
+    maponpaths g (p (f (g y))) =
+    (((! maponpaths g (p y) @ ! maponpaths g (maponpaths f (q (g y)))) @
+      ! q (g (f (g (f (g y)))))) @
+     maponpaths (g ∘ f) (maponpaths g (p (f (g y))))) @
+    maponpaths g (p (f (g y))))
+
+
+DEBUG:Going to execute:
+PTRDEBUGTACapply (maponpaths Tactics.post_cat)
+DEBUG LTAC Evaluated term: (maponpaths Tactics.post_cat)
+
+TcDebug (0) > /mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Tactics.vmaponpaths_pre_post_cat:44, Tactics  (UniMath.MoreFoundations),/mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Equivalences.v:250
+
+
+Ltac maponpaths_pre_post_cat :=
+  repeat rewrite path_assoc; repeat apply (maponpaths post_cat); repeat rewrite <- path_assoc;
+  repeat apply (maponpaths pre_cat); repeat rewrite path_assoc; repeat rewrite maponpathsinv0;
+  try reflexivity.
+
+/mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Tactics.v
+maponpaths_pre_post_cat:44
+
+Tactics  (UniMath.MoreFoundations),
+/mnt/data1/2024/01/05/UniMath/UniMath/MoreFoundations/Equivalences.v:250
+
+Lemma other_adjoint {X Y} (f : X -> Y) (g : Y -> X)
+      (p : ∏ y : Y, f (g y) = y)
+      (q : ∏ x : X, g (f x) = x)
+      (h : ∏ x : X, maponpaths f (q x) = p (f x)) :
+ ∏ y : Y, maponpaths g (p y) = q (g y).
+Proof.
+  intros. apply pathsinv0.
+  intermediate_path (
+       !(maponpaths g (p (f (g y))))
+       @' maponpaths g (p (f (g y)))
+       @' q (g y)).
+  { rewrite pathsinv0l. reflexivity. }
+  intermediate_path (
+       !(maponpaths g (maponpaths f (q (g y))))
+       @' maponpaths g (p (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. apply (maponpaths pathsinv0). apply (maponpaths (maponpaths g)).
+    set (y' := g y). apply pathsinv0. exact (h y'). }
+  intermediate_path (
+       !(maponpaths g (maponpaths f (q (g y))))
+       @' maponpaths g (p (f (g y)))
+       @' ((!q (g (f (g y))))
+           @' q (g (f (g y)))
+           @' q (g y))).
+  { rewrite pathsinv0l. reflexivity. }
+  intermediate_path (
+       !(maponpaths g (maponpaths f (q (g y))))
+       @' maponpaths g (p (f (g y)))
+       @' ((!q (g (f (g y))))
+           @' (maponpaths g (p (f (g y)))
+               @' !(maponpaths g (p (f (g y))))
+               @' q (g (f (g y))))
+           @' q (g y))).
+  { maponpaths_pre_post_cat. apply path_inv_rotate_rr. reflexivity. }
+  apply path_inverse_from_right.
+  repeat rewrite path_assoc.
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths (funcomp f g) (maponpaths g (p (f (g y))))
+       @' maponpaths g (p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat.
+    apply path_inv_rotate_lr. rewrite <- path_assoc.
+    apply path_inv_rotate_rl. apply pathsinv0.
+    rewrite <- (maponpathscomp f g). set (y' := f (g y)).
+    assert (r := maponpaths_fun_fun_fun_natl p g q y'). simpl in r.
+    rewrite (maponpathscomp f). rewrite (maponpathscomp g).
+    rewrite (maponpathscomp g (λ x : X, g (f x))) in r.
+    rewrite maponpathsidfun in r. exact r. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (maponpaths f (maponpaths g (p (f (g y)))))
+       @' maponpaths g (p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp f g). reflexivity. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (maponpaths f (maponpaths g (p (f (g y)))) @' p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp0 g).  reflexivity. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (maponpaths (funcomp g f) (p (f (g y))) @' p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp g f). reflexivity. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (p (f (g (f (g y)))) @' p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp g f).
+    apply (maponpaths (maponpaths g)). generalize (f (g y)); clear y; intro y.
+    assert (r := maponpaths_fun_fun_natl p p y); simpl in r.
+    assert (s := maponpathsidfun (p y)); unfold idfun in s.
+    rewrite s in r; clear s. rewrite (maponpathscomp g). exact r. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (p (f (g (f (g y)))))
+       @' maponpaths g (p (f (g y)))
+       @' !(maponpaths g (p (f (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp0 g). reflexivity. }
+  intermediate_path (
+       !(maponpaths g (p y))
+       @' !(maponpaths g (maponpaths f (q (g y))))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (p (f (g (f (g y)))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. repeat rewrite <- path_assoc.
+    rewrite pathsinv0r. rewrite pathscomp0rid. reflexivity. }
+  intermediate_path (
+       maponpaths g ((!p y) @' maponpaths f (!q (g y)))
+       @' !(q (g (f (g (f (g y))))))
+       @' maponpaths g (p (f (g (f (g y)))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. repeat rewrite <- maponpathsinv0.
+    rewrite <- (maponpathscomp0 g). reflexivity. }
+  intermediate_path (
+       !(q (g y))
+       @' maponpaths (funcomp f g) (maponpaths g ((!p y) @' maponpaths f (!q (g y))))
+       @' maponpaths g (p (f (g (f (g y)))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. repeat rewrite maponpathscomp0.
+    repeat rewrite <- (maponpathscomp f g).
+    repeat rewrite maponpathsinv0. repeat rewrite path_comp_inv_inv.
+    apply (maponpaths pathsinv0).
+    assert (r := ! maponpaths_fun_fun_fun_natl q (funcomp f g) q (g y)); simpl in r.
+    rewrite maponpathsidfun in r. repeat rewrite <- (maponpathscomp f g) in r.
+    simpl in r. repeat rewrite path_assoc.
+    rewrite r. maponpaths_pre_post_cat. clear r.
+    assert (r := ! maponpaths_fun_fun_fun_natl p g q y); simpl in r.
+    rewrite maponpathsidfun in r. rewrite (maponpathscomp f).
+    rewrite (maponpathscomp g). rewrite (maponpathscomp g) in r.
+    exact r. }
+  intermediate_path (
+       !(q (g y))
+       @' maponpaths g (maponpaths (funcomp g f) ((!p y) @' maponpaths f (!q (g y))))
+       @' maponpaths g (p (f (g (f (g y)))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp g f).
+    rewrite <- (maponpathscomp f g). reflexivity. }
+  intermediate_path (
+       !(q (g y))
+       @' maponpaths g (maponpaths (funcomp g f) ((!p y) @' maponpaths f (!q (g y)))
+             @' p (f (g (f (g y)))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- maponpathscomp0. apply (maponpaths (maponpaths g)).
+    reflexivity. }
+  intermediate_path (
+       !(q (g y))
+       @' maponpaths g (p y @' ((!p y) @' maponpaths f (!q (g y))))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp g f).
+    repeat rewrite maponpathscomp0. repeat rewrite maponpathsinv0.
+    repeat rewrite <- path_assoc. repeat apply path_inv_rotate_ll.
+    repeat rewrite path_assoc. repeat apply path_inv_rotate_rr.
+    apply pathsinv0. repeat rewrite <- (maponpathscomp0 g).
+    apply (maponpaths (maponpaths g)). rewrite h.
+    assert (r := ! maponpaths_fun_fun_natl p p (f (g y))); simpl in r.
+    rewrite maponpathsidfun in r. simpl in *.
+    repeat rewrite <- (maponpathscomp g f) in r.
+    repeat rewrite (path_assoc _ _ (p y)). rewrite r.
+    repeat rewrite <- (path_assoc _ _ (p y)). apply (maponpaths pre_cat). clear r.
+    assert (r := maponpaths_fun_fun_natl p p y); simpl in r.
+    rewrite maponpathsidfun in r.
+    repeat rewrite <- (maponpathscomp g f) in r. exact r. }
+  intermediate_path (
+       (!q (g y))
+       @' maponpaths g (maponpaths f (!q (g y)))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. repeat rewrite <- maponpathsinv0.
+    apply (maponpaths (maponpaths g)). rewrite pathsinv0r. reflexivity. }
+  intermediate_path (
+       (!q (g y))
+       @' maponpaths (funcomp f g) (!q (g y))
+       @' q (g (f (g y)))
+       @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp f g).
+    reflexivity. }
+  intermediate_path ((!q (g y)) @' q (g y) @' (!q (g y)) @' q (g y)).
+  { maponpaths_pre_post_cat. rewrite <- (maponpathscomp f g).
+    apply path_inv_rotate_ll. repeat rewrite path_assoc.
+    apply path_inv_rotate_rr.
+    assert (r := ! maponpaths_fun_fun_natl q q (g y)); simpl in r.
+    rewrite maponpathsidfun in r. rewrite (maponpathscomp f g).
+    exact r. }
+  rewrite pathsinv0l. simpl. rewrite pathsinv0l. reflexivity.
+Qed.
+
+
+** compile a kv map
+for each term a blob of data about it.
+memcache/redis server.
+search and replace the terms with blobs in the proofs.
+sed script that contains the knowledge of unimath.
+order the search and replace to be logical.
+replace this reference to line of source with summary.
+inject the context into the blobs.
+ltac rewrite is essential equivalent sed.
