@@ -802,6 +802,40 @@
 [submodule "2023/10/13/pdpcli"]
 	path = 2023/10/13/pdpcli
 	url = . #url = https://github.com/altescy/pdpcli.git
+
+[submodule "2023/10/02/autogen"]
+	   path = 2023/10/02/autogen
+	   url = .
+[submodule "2023/12/13/unlimited-context-prompt-system"]
+path=2023/12/13/unlimited-context-prompt-system
+url=.
+
+[submodule "2024/01/07/ppxlib-simple-example"]
+path=2024/01/07/ppxlib-simple-example
+url=.
+
+[submodule "2024/02/05/LLMGA"]
+path=2024/02/05/LLMGA
+url=.
+
+[submodule "2024/02/05/PVS"]
+path=2024/02/05/PVS
+url=.
+[submodule "2024/02/05/diffusers"]
+path=2024/02/05/diffusers
+url=.
+[submodule "2024/02/05/git-subtrac"]
+path=2024/02/05/git-subtrac
+url=.
+[submodule "2024/02/05/SoPaper"]
+path=2024/02/05/SoPaper
+url=.
+
+[submodule "2023/12/15/nice-parser"]
+path=2023/12/15/nice-parser
+url=.
+
+
 [submodule "2023/10/13/AutoGPT"]
 	path = 2023/10/13/AutoGPT
 	url = . #url = https://github.com/smaxaddington/AutoGPT
