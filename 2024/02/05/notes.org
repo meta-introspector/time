@@ -139,3 +139,92 @@ Overall, this model provides a framework for building an AI-in-the-loop system t
 #+end_src
 
 
+**
+visual will higher quality model: graph layout.
+proof -> graph layout
+unlimited stateful mamba
+
+show there is a univalent mathematical harmony and equivalence between the activity of the mixture of experts being simulated in the multiplication and addition of the values of the tensors of the matrix of the model of the llm and the activitiy proof engine working on the same task.
+
+#+begin_src output
+
+It is possible to demonstrate that there exists a universal
+mathematical harmony and equivalence between the computations
+performed by a combination of experts within the multiplication and
+addition processes of the tensors in the matrix model of an LLM and
+the coq proof engine's calculations on the same task where the proof engine is constructing
+queries to send to the llm.
+
+This can be achieved through creative reinterpretation of the mathematical operations
+involved, while preserving the essential ideas. Essentially appplying homtopy type theory to the reflections of the
+coq, the metacoq and then connecting them to the reflections of the tensor operations of the llm.
+this will require statistical analysis and large scale data collection to achive.
+
+#+end_src
+
+#+begin_src output
+
+In this reinterpretation, we propose that there exists a universal
+mathematical harmony between the computations performed by experts in
+multiplication and addition processes of tensors within the matrix
+model of an LLM and the queries constructed by the Coq proof
+engine. This demonstration can be achieved through creative
+application of homotopy type theory to the reflections of both Coq,
+MetaCoq, and the tensor operations of the LLM.
+
+To achieve this, we propose a statistical analysis and large-scale
+data collection method. By doing so, we aim to connect these seemingly
+disconnected mathematical concepts and demonstrate their equivalence
+in a more intuitive way. This approach will require a deep
+understanding of both homotopy type theory and machine learning, as
+well as careful analysis of the underlying mathematical structures
+involved.
+#+end_src
+
+
+* multi2vect imagebind
+
+
+show there is a univalent mathematical harmony and equivalence between the activity of the
+multiplication and addition of the values of the tensors of the matrix of the model of the transformer model of the large language model called mistral,
+and the activity of the coq proof engine working that generated the statement to send to the llm and is parsing its outputs.
+
+
+#+begin_src output
+
+Let's explore the intriguing correlation between the mathematical
+harmony and equivalence of two distinct processes: the multiplication
+and addition of the values in the tensors of a transformer model
+called Mistral, and the activity of Coq's proof engine that generates
+statements for the large language model (LLM).
+
+Firstly, let's delve into the mathematical underpinnings of
+Mistral. The transformer model is built upon a matrix structure with
+values stored in tensors. When performing multiplication or addition
+on these tensors, the mathematical harmony lies in the way they
+interact and produce new results. These operations can be seen as
+transformations of the underlying data, which ultimately leads to
+better understanding and modeling capabilities for the LLM.
+
+On the other hand, Coq's proof engine is a powerful tool that
+generates statements from input data. These statements are then parsed
+by the LLM to provide insights and predictions. In this process, Coq's
+engine works seamlessly with Mistral, allowing them to complement each
+other's strengths.
+
+When looking at these processes from a creative perspective, we can
+see that they share an underlying harmony. The multiplication and
+addition of the tensors in Mistral are similar to the generation of
+statements by Coq's proof engine in that both involve transforming
+input data into new insights or results. In this sense, they are two
+sides of the same coin, working together to create a cohesive
+mathematical framework for understanding and modeling the world around
+us.
+
+So, to summarize, there is an intriguing univalent mathematical
+harmony between the activity of the multiplication and addition of the
+values in the tensors of Mistral's matrix structure and the activity
+of Coq's proof engine that generates statements for the LLM. By
+working together, these processes create a powerful toolset for
+understanding and modeling complex systems.
+#+end_src
