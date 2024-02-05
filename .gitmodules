@@ -2909,3 +2909,12 @@
 [submodule "2024/02/03/dream"]
 	path = 2024/02/03/dream
 	url = https://github.com/aantron/dream
+[submodule "2023/10/02/autogen"]
+	path = 2023/10/02/autogen
+	url = https://github.com/microsoft/autogen
+[submodule "2024/02/05/LLMGA"]
+	path = 2024/02/05/LLMGA
+	url = https://github.com/dvlab-research/LLMGA
+[submodule "2024/02/05/diffusers"]
+	path = 2024/02/05/diffusers
+	url = https://github.com/huggingface/diffusers
