@@ -1,0 +1,141 @@
+* idea of the day.
+When we explore our mind we might find data that is appearing to us backwards,
+we might find ourselves writing backwards for certain mathematical ideas.
+this could be an indication that we need to translate this in our mind
+using reflections and symmetries and group theory.
+that would indicate that group theory is fundamental
+to consiousness.
+
+** workflows in coq
+
+work focused on creating the
+tooling to run these ai workflows,
+the comic book is an example of what we
+can create from the unimath coq repo.
+
+now imagine that the workflows
+for the ai are writting in coq
+and translated to proofs
+and we can take these proof traces
+and convert them to
+clarifai workflows.
+our workflow language is then coq.
+
+the datatypes processed by the llm will have types.
+we can create functions and ask it to run a
+batch process on some data that has some type and we can construct
+grammars for each step to constrain  the output and
+descriptions of the types and background information needed
+so we can in detail describe the workflow.
+
+
+** discussion with @tonic_1
+convert block to python latex and more
+expand to multiple forms.
+start with common proofs (pythogoras, eucild , mutl)
+
+starting with mult
+
+compose splits
+create diverse dataset (generate 100000 examples)
+test data sets (compile)
+extract proofs from the data set (pyre,coqofrust,coqofhaskell )
+eg has datatype foo, has function Y
+
+extract some kind of doc structure from latex,org,html
+eg has heading , has section
+
+now we can prove the generated code meets the specifications
+of the original coq requirement is extracted from unimath.
+
+programmatic specification of unimath and generation of
+implemention in python.
+
+for example
+
+
+#+begin_src shell
+grep Preamble.v index.org 
+# :TcDebug (0) > NONE??? LtacNotationCall (no location),/mnt/data1/2024/01/05/UniMath/UniMath/Foundations/Preamble.v:101
+#+end_src
+
+
+#+begin_src coq-proof
+Goal:
+    p : nat  m : nat  pm : nat
+  ============================
+   nat
+
+
+DEBUG:Going to execute:
+PTRDEBUGTAC<coq-core.plugins.ltac::exact@0> $1
+
+TcDebug (0) > NONE??? LtacNotationCall (no location),/mnt/data1/2024/01/05/UniMath/UniMath/Foundations/Preamble.v:101
+COQC UniMath/Foundations/PartA.v
+#+end_src
+
+We can Show that it creates a multiplication code that has the same type signature
+at least.
+
+Another example would be to show that the code contains a recursive functions over natural numbers.
+so we can imagine that given the types of the proof we can limit the output.
+
+then that code generated can be used to process the llm data itself and
+make calls to the llm.
+then that code can process the coq proof itself and knows
+the structure of coq proofs.
+then that code can interactivly interact with coq proof top shell and ocaml top shell and debug
+the system in a repl with the ai.
+
+define an ai-in-the-loop-repl.
+list of symbols in the environment.
+type of the symbols. dependant types.
+using the model of coq/metacoq.
+
+#+begin_src output
+
+"Create a Coq/MetaCoq model for an AI-in-the-loop system that incorporates a list of symbols in the environment, their dependent types, and utilizes the capabilities of an AI assistant to provide helpful suggestions and insights."
+#+end_src
+
+Create a Coq/MetaCoq model for an AI-in-the-loop system that incorporates a list of symbols in the environment, their dependent types, and utilizes the capabilities of an AI assistant to provide helpful suggestions and insights.
+
+
+#+begin_src output
+
+Here is a high-level overview of the Coq/MetaCoq model for an AI-in-the-loop system that incorporates a list of symbols in the environment, their dependent types, and utilizes the capabilities of an AI assistant to provide helpful suggestions and insights:
+
+1. Define the necessary data structures for representing the symbols and their dependent types in the environment.
+2. Implement the AI assistant's algorithms for analyzing the input and generating suggestions or insights based on the available data.
+3. Integrate the AI assistant with the rest of the system, allowing it to receive input from the user and provide feedback through the console or other output channels.
+4. Use Coq/MetaCoq type-checking and proofs to ensure that the system behaves correctly and meets its requirements.
+
+Here are some more detailed steps for implementing each of these steps:
+
+1. Define data structures:
+
+   - For each symbol in the environment, define a record type with fields for the symbol name, dependent types, and any other relevant information.
+   
+   - Define a list type to represent the set of symbols in the environment.
+
+2. Implement AI assistant algorithms:
+
+   - Use Coq/MetaCoq functions and modules to implement the AI assistant's algorithms for analyzing input and generating suggestions or insights.
+   
+   - For example, you might define a function that takes as input a list of symbols and returns a sorted list of suggestions based on their dependent types or other relevant criteria.
+
+3. Integrate with system:
+
+   - Use Coq/MetaCoq functions and modules to integrate the AI assistant with the rest of the system, allowing it to receive input from the user and provide feedback through the console or other output channels.
+   
+   - For example, you might define a function that takes as input a user query and uses the AI assistant's algorithms to generate a list of suggestions or insights, which are then displayed in the console.
+
+4. Use Coq/MetaCoq type-checking and proofs:
+
+   - Use Coq/MetaCoq type-checking and proofs to ensure that the system behaves correctly and meets its requirements.
+   
+   - For example, you might use Coq/MetaCoq's dependent types feature to define the expected types of input and output for each function or module in the system, and then use Coq/MetaCoq's type-checking and proofing capabilities to verify that these types are correct.
+
+Overall, this model provides a framework for building an AI-in-the-loop system that incorporates symbols and their dependent types, and uses an AI assistant to provide helpful suggestions and insights based on the available data. By using Coq/MetaCoq's type-checking and proofing capabilities, you can ensure that the system behaves correctly and meets its requirements.
+#+end_src
+
+
