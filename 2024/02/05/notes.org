@@ -228,3 +228,36 @@ of Coq's proof engine that generates statements for the LLM. By
 working together, these processes create a powerful toolset for
 understanding and modeling complex systems.
 #+end_src
+
+the data flow is from tracing enabled in coq proof engine,
+to send queries to the language model and evalute the output
+inside the proof engine.
+this is related to dependant types.
+
+create a relationship between the (
+description of what you want,
+description of what you got)
+
+(label,contents)
+
+vec<n>
+(vec<5> ,low level type [0,1,2,3,4])
+
+* idea for physics
+
+take isabelle proof for smooth manifolds in github
+https://www.isa-afp.org/entries/Smooth_Manifolds.html
+create trace of proof, annotate, chunk, turn into story, coq, unimath.
+show your work.
+1. turn on all tracing from isabell.
+   profiling.
+   debugging
+   proof traces.
+   review. enhance.
+   chunk feed to llm. lang_agent worker will apply line by line.
+   csplit and split in unix to create chunk files.
+   scanner that i am working on will search subdir.
+   in each chunk you write at the end a comma separated list of call stacks
+   (filename:linenum) to annotate the sources.
+   
+
