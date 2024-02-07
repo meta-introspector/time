@@ -1,0 +1,204 @@
+* idea about carrying information
+
+Proof Equivalence of data structures.
+
+if we have a data structure that contains
+data and we want to translate it to another
+we need to show that all the fields are
+transfered safely preserving meaning.
+we can create proof to show that the results can be
+translated back to the origin in reverse.
+
+Now we can think about each field that could be
+its own data structure or any permutation
+of the fields.
+We can think of the group of the data structures
+created as subsets of the original data.
+
+We can think of this as mapping into unimath.
+
+At some level a dependent type system
+would say give me the type in this system for the
+type in this other system.
+We can make a set of templates to translate
+each type and result in the other type.
+
+Finally we can think of the pairs of types.
+so we can look at the traversal of the data structures
+and pair each type with each other,
+then we can say the sequence all the the pairs of these two types
+considering the data structures between them.
+
+then we can consider 2 pairs of them and merge into a
+larger quad, the the path from one pair to the other, the pairs of pairs.
+
+we can use this to consider the data in a larger structure.
+each struct can be mapped into unimath like total2 does.
+
+so basically decompose to total2 relationships.
+we can think of this as prime number 2.
+
+so pairs and pairs of pairs being multiples of two.
+
+so for each record type we create a funciton to extract one or more fields into UU.
+
+we can then show the systems as objects.
+maybe use algebras.
+
+start with simple indutive sets of level 0
+
+and start to create equivalences between them.
+
+#+begin_src output
+
+Imagine a data structure that holds information, and you need to
+translate it into another data structure while preserving its
+meaning. To achieve this, you must show that all fields are
+transferred safely. You can create a proof that the translated result
+can be reversed back to the original data structure.
+
+Now, let's think about each field as its own data structure or any
+permutation of the fields. The group of these data structures can be
+seen as subsets of the original data structure. We can map these data
+structures into unimath and think of this process as a mapping
+function that takes one type and produces another in the unimath
+system.
+
+At some level, a dependent type system would ask us to define the
+types in one system and translate them into the other system. We can
+create templates for each type and produce the corresponding result in
+the other system.
+
+We can represent pairs of types by looking at the traversal of data
+structures and pairing each type with another. Then, we can consider
+two pairs and merge them into a larger quad, where the path from one
+pair to the other is considered. We can use this process to consider
+data in a larger structure and map each struct into unimath like
+total2 does.
+
+So, we decompose the relationships between the data structures into
+total2 relationships or pairs and pairs of pairs being multiples of
+two. For each record type, we create a function that extracts one or
+more fields into UU, and we can show the systems as objects using
+algebras.
+
+We start with simple inductive sets at level 0 and create equivalences
+between them to achieve data structure equivalence.
+#+end_src
+
+* lang agent
+lets design a series of ocaml classes for a rewrite of langchain in ocaml
+
+reviewing the classes we found many different copies of the same ast structures.
+the same proof structures copied again and again.
+we can think of these are permutations in a galois group.
+
+#+begin_src output
+Upon examining the various classes we encountered, it became apparent
+that numerous instances of identical ast (abstract syntax tree)
+structures were present. Furthermore, these structures appeared to be
+derived from a series of repetitive proof techniques. In other words,
+they can be considered as permutations in a Galois group.
+#+end_src
+
+* intuition.
+
+lets just follow our intuition.
+design an abstract ocaml class to connect to language model server
+hosted on a url with a port and an authentication scheme using a rest api and
+a retry function with error handling and a validator to validate output in a stream
+as well as the total result providing feedback along the way. each token return is processesed by another monad and we retain the previous calls in a comonad as the environment.
+so we have a long and short term memory system and a task goal system modeled after coq.
+
+
+In order to connect to a language model server hosted on a URL
+with a port and authentication scheme using a REST API,
+we can design an abstract OCaml class that incorporates error handling,
+a retry function, and a validator to validate output in a stream.
+Additionally, the class will include a task goal system modeled
+after Coq and retain previous calls in a comonad as the environment,
+creating both short-term and long-term memory systems.
+This allows for a more efficient and effective connection to the language model server.
+
+* Connection: represents the connection to the language model server. It should have methods for establishing a connection, sending requests, and receiving responses.
+* ErrorHandler: handles errors that may occur during the connection process. It should have methods for logging errors, retrying failed requests, and raising exceptions.
+* RetryFunction: provides a mechanism for automatically retrying failed requests. It should have methods for setting the number of retries, the delay between retries, and the maximum number of retries allowed.
+* Validator: validates output from the language model server to ensure that it conforms to certain standards or requirements. It should have methods for defining validation rules and checking if responses meet those rules.
+* TaskGoalSystem: models a task-oriented goal system inspired by Coq. It should have methods for defining tasks, setting goals, and tracking progress towards achieving those goals.
+* EnvironmentComonad: represents the environment in which tasks are executed. It should have methods for storing previous calls made to the language model server and using that information to inform future requests.
+* ShortTermMemorySystem: models a short-term memory system that can store information temporarily while a task is being executed.
+* LongTermMemorySystem: models a long-term memory system that stores information persistently across multiple tasks or sessions.
+
+Lets now list the methods of the classes
+
+
+Here are the methods that can be included in each class:
+
+0. Url
+   host
+   port
+   path
+   
+1. Connection
+
+* establish\_connection endpoint:url  authentication 
+* send\_request 
+* receive\_partial_response_stream
+* receive\_final_response
+
+2. ErrorHandler
+* log\_error
+* retry\_failed\_request
+* raise\_exception
+
+3. RetryFunction
+* set\_number\_of\_retries
+* set\_delay\_between\_retries
+* set\_maximum\_number\_of\_retries
+
+4. Validator
+* define\_validation\_rules
+* check\_if\_response\_meets\_rules
+
+5. TaskGoalSystem
+* define\_task
+* set\_goal
+* track\_progress
+
+6. EnvironmentComonad
+* store\_previous\_call
+* use\_information\_to\_inform\_future\_requests
+
+7. ShortTermMemorySystem
+* store\_temporary\_information
+
+8. LongTermMemorySystem
+* store\_persistent\_information
+
+class type [
+'connection,
+'auth,
+'prompt , 'model_params, 'model,
+'short_term_memory,
+'error_handler,
+'visitor,
+'introspection,
+'retry
+'long_term_memory,
+'goals, 'validators, 'grammars] ops =
+
+
+#+begin_src output
+
+This code defines a set of classes and their methods for managing connections and generating text using intuitional language models. The code is written in OCaml, a functional programming language that allows for the creation of objects with specific types and methods.
+
+The `protocol_type` class has a method called `state_machine`, which returns a state machine object. The `network_type` class has a method called `connect`, which takes an address and creates a connection object. The `auth_type` class has a method called `authenticate`, which takes a key and an auth object and returns the authenticated object.
+
+The `connection_type` class combines these classes by having methods for connecting, authenticating, generating text, and creating state machines. The `connection_type2` class is similar to `connection_type`, but it also includes a network object and a protocol object in addition to the authentication and connection objects.
+
+Finally, the `lang_model` class represents an intuitional language model and has a method called `generate_text` that takes a connection object, model parameters, style, prompt, and result type and returns the generated text.
+#+end_src
+
+* notes for comic book
+
+unimath is the killer joke.
