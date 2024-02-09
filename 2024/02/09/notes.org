@@ -1,0 +1,71 @@
+
+the factory pattern
+command line argument as string -> instance of a class to create a connection to llm.
+
+user specified string -> instance of an LLM connection we can generically use.
+
+
+module type LLMClientModule = sig
+  type t
+  val init : unit -> t openai_like_lang_model
+  end
+
+* call to adventure : can we extract classes out of gcc for a visualization tool. why develop our own parser, can we use thiers?
+* refusal : too hard
+* underground : lost in the details
+* disapart islands. cannot swim from one to other.
+* ressurection : unimath!
+
+* new approach, self contained, using own terms. alpha renumbering, eta renumbering. lang model.
+unimath to map my terms onto others.
+meeting of minds via symmetries and analogies and metaphors.
+mythos.
+math is mythos until proven.
+story -> math. calculate.
+
+** develop grammars and proofs to constrain the output of the llm
+check the outputs and prove them.
+which ones are congruant with others.
+high frequency/
+
+*** sketch of workflow to create comic book
+each step will have its own grammar.
+
+read unimath, extractgoals,
+extract archtypes,
+develop characters,
+
+*** develop picture of characters,
+***** grammar components for body: face, hair, skin, teeth etc.
+****** develop inductive types and record for the task, create coq module to hold the data.
+****** extract grammar from types into ebnf, launch llama.cpp
+****** langagent + lamacPP + grammar -> instances of object meeting specification.
+
+develop descriptions of  characters to use in scenes,
+develop constraints for characters to use in scenes to remain consistent. (jack sprat will eat no fat...)
+social networks.
+events
+key frames.
+styles.
+places. buildings.
+compose scenes.
+
+
+
+* take workflow
+
+** develop type system
+** develop grammar as llm input system
+** develop macros (character sheet)
+as llm input system (preludes and prompts and macro)
+** develop validation off llm output system
+
+* basic workflow
+ (map prompt dataset )
+ (map prompt2  (map prompt dataset ))
+
+ scan for suffix, create new suffix.
+ create temp suffix for each step of the workflow like registers.
+ suffix -> state.
+ use numbering 001,002, left padded numbers.
+ for now use scanner darkly invocations to achive results.
