@@ -1,5 +1,10 @@
-
-the factory pattern
+* ideas
+** execute unimath proof trace.
+** interpret goals of proof trace creativly 
+** connect the proof to the interpretation symbolically via
+reinterpretation.
+ 
+* the factory pattern
 command line argument as string -> instance of a class to create a connection to llm.
 
 user specified string -> instance of an LLM connection we can generically use.
@@ -64,8 +69,9 @@ as llm input system (preludes and prompts and macro)
  (map prompt dataset )
  (map prompt2  (map prompt dataset ))
 
- scan for suffix, create new suffix.
- create temp suffix for each step of the workflow like registers.
- suffix -> state.
+
+ * suffix -> state.
  use numbering 001,002, left padded numbers.
  for now use scanner darkly invocations to achive results.
+
+   
