@@ -1,0 +1,84 @@
+today task is the tracing of the metacoq proof
+
+consider future ideas:
+using ocaml as the thread safe programming language for emacs.
+lifting elisp functions into ocaml safely.
+lifting them into coq of ocaml.
+lifting emacs into proof, at least the part that is needed to run the code.
+we want to be able to execute a language task in parallel to emacs
+launched from emacs using ocaml and coq.
+we can use embedded ocaml and the lwt.
+we can use org bable ocaml to call coq and metacoq and mtac2 and mirrorsolve.
+we can scale out processes by snapshotting them and sharing them as a running context.
+we can generate new instances of the program to put on hugging face.
+we can make them literate emoji data packages in coq using notations.
+the ai can then generate emojis as a shorthand notation.
+we can use simple emojis grammars in gbnf that we generate from the coq.
+
+coq to ebnf to gbnf extraction.
+coqtl is what we can use for sql business logic.
+hottsql can be used to unify sql then to unimath.
+then we can lift the owl/rdf/rss and atom into unimath.
+we can show urls as structured data following certain rules.
+
+#+begin_src coq
+
+#+end_src
+
+#+begin_src ocaml
+  open Lwt
+open Cohttp
+open Cohttp_lwt_binding
+open Lwt_main
+
+let url = "https://example.com"
+
+let () =
+  let open Lwt.Infix in
+  let request = Client.create url in
+  let response, body = Lwt_io.of_channel Sys.stdin in
+  let%lwt () = Client.send request in
+  let%lwt () = Client.recv response body in
+  let data = Yojson.Safe.parse_from_string body in
+  Printf.printf "%s" (Yojson.Safe.pretty_to_string data) in
+  Lwt_main.run ()
+
+#+end_src
+
+#+RESULTS:
+: Line 15, characters 57-59:
+: 15 |   Printf.printf "%s" (Yojson.Safe.pretty_to_string data) in
+:                                                               ^^
+: Error: Syntax error
+
+#+begin_src elisp
+  write an emacs elisp snippet that uses ocaml somehow to call an ocaml lwt curl  function
+
+  (defun call-ocaml-curl ()
+  "Call OCaml script to execute a CURL request asynchronously."
+  (interactive)
+  (setq ocaml-exec-path "/path/to/your/opam/bin/ocaml") ; update with your OPAM path
+  (call-process "ocaml" (concat " -init my-init.ml" " -c" " curl.ml")))
+
+#+end_src
+
+#+RESULTS:
+
+ To explore an intriguing intersection of programming languages, let's envision using OCaml as a concurrent and thread-safe alternative for Emacs Lisp (Elisp) functions within Emacs. This could potentially yield enhanced performance and parallelism. Here are some creative ways to interpret the original text:
+
+1. **Embrace OCaml in Emacs:**
+   Instead of just using OCaml as the underlying thread-safe language for Emacs, we can actually integrate it with Elisp functions. By lifting certain Elisp functions into their OCaml equivalents, we can harness the power of both languages. This would require careful conversion, ensuring the safety of the lifted functions.
+
+2. **Migrate to Coq:**
+   We could take this integration a step further and lift entire parts of Emacs, specifically those that are necessary for executing code tasks, into Coq, an interactive theorem prover based on OCaml. This would allow us to prove the correctness of our Emacs components, as well as enjoy the benefits of parallelism.
+
+3. **Bring Proof to Life:**
+   The ultimate goal here is not only to bring OCaml and its proof capabilities to Emacs but also to make it an integral part of our language tasks. We want to be able to run these tasks in parallel with Emacs, enhancing productivity and efficiency. To achieve this, we could use embedded OCaml or Coq within Org Babel cells.
+
+4. **Leverage Lwt:**
+   Instead of trying to replace Elisp altogether, we can explore the possibility of using Lightweight Threading library (Lwt) in OCaml for handling concurrency and parallelism. This would allow us to preserve Emacs' core functionalities while improving the performance of selected tasks by executing them concurrently using OCaml and Lwt.
+
+5. **Embrace Concurrency with Org Babel:**
+   Another approach could be to use Org Babel, an extension for Emacs that allows you to write executable code snippets in a variety of languages (including OCaml) within Org mode files, and take advantage of its support for parallel and concurrent evaluation. By using this approach, we can keep our Elisp workflows intact while taking advantage of the power and flexibility of OCaml and Coq.
+
+In summary, these interpretations aim to preserve the main ideas of the original text but explore more creative ways to integrate OCaml, Elisp, and Emacs for enhanced performance, parallelism, and correctness in language tasks.
