@@ -1,0 +1,81 @@
+ideas on space partitioning for generating of images.
+consider that we can construct specifications for shapes that we want to
+generate in textual form that also constrain the actual output.
+for example we can say we want a red circle in the middle of the screen. and
+we can write code to detect that shape as well.
+each request for generation is paired with executable code to
+act as a loss function that includes the syntax, semantics etc of the code.
+it represents a dimensionality reduction of the original problem.
+we can think of the analogy of the logarithm function that reduces
+the size of the original but in a interesting form of reduction.
+for example the big O notation of code. log N.
+we can say the algorithm takes approximatly log n time of the code.
+so that would be an upper bound on the execution of the code.
+we can further constrain the code.
+we can consider generating more and more constraints approximating the world.
+this is a form of numerical modelling.
+even using coq formalization we are essentially constructing a complex
+number that contains our ideas encoded carefully as a proof.
+creating inductive and recursive inductive types is the first step.
+we can imagine them as the tree of life, different species as mutations of the type of the gene.
+the gene as a string of codons that represent the life form.
+
+each type can contain other types. what would that look like in life?
+lifeforms have relationships with other life forms, they have life contained in them microbes as well.
+
+we can build different models of the world, hypotheses.
+We can 
+we can think of the myriad of life as coming from the original life form.
+we can recall the legend of gaia as the mother of all the other gods.
+Lets think about the metaphor of gaia as some primitive life for that has no form,
+amporphus blob.
+then her offspring have more and more types, forming the tree of life, becoming more specialized until
+the god zeus shows up as the human facing modern god who one the battle.
+its a very interesting metaphor that this would be the god of this planet and human like
+my thoughts are we have to consider that gaia was off planet and there are many other worlds
+with life and gods who look much different.
+we can think of anthomorphic forms as toy or models to capture
+our attention or consiousness and to reflect part of it back to us
+as an archetype. These are spectrum of the mind.
+we can think of the muses as a rainbow where each one is focused on a different vibration.
+we can look at the layout of neurons in the mind in a similar way,
+there is a function that determines the location of the neuron and that is in a symmetric form related the body, but smaller
+like a logritm. we can then take another log of that and we would get a very simple numer indeed or a unit.
+so that gives us a simple model of three layers.
+we have external world, its log(n) and the log(log(n)) and log(log(log(n))),
+it gets simpler and simpler in its graph, it has a real and imaginary
+part.
+now we can imagine the logarithm of a data structure, that would be
+something like the hlevel number. or something like the binding level.
+how many bindings do we need to define it.
+do we need to have a binding for everything?
+do we have to define the thoery of everything?
+can we not limit ourselves to simpler structures?
+
+that is where I was thinking about the fast and slow thinking.
+simple structures are for fast thinking.
+complex structures for slow thinking.
+creating proofs is slow, like the tortise.
+the fungus is slow, 
+but the trees are slower, and erosion is slower or the tectonic plates.
+so we can think of life processes of life forms and natural processes of the world.
+brainstorming thoughts are fast like the hare.
+so the neurons are adapted to quickly respond to things.
+fast are the electrons.
+consiousness is like a very bright light
+and if you reflect it on itself it creates a huge blaze.
+when we look at the log function and the log of log
+you can see around zero there are big movements and then at 1 log is 0.
+
+we can think of those as being like the brightness of the
+consiousness looking at itself, at the area around zero.
+then things that are farther away go down.
+
+So we use this to reduce the strength of the self down. 1 goes to 0. e becomes 1.
+so its really counting in units of e. log(log(n)) is like counting e^e.
+e^n is the inverse of the log going upwards, log brings it back down.
+With this simple tool we can scale numbers down.
+We can think of this as a metaphor for reduction of the dimensionality.
+So we can think about narratives as metaphors and as a form
+of dimensionality reduction.
+
