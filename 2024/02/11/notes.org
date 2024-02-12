@@ -82,3 +82,14 @@ let () =
    Another approach could be to use Org Babel, an extension for Emacs that allows you to write executable code snippets in a variety of languages (including OCaml) within Org mode files, and take advantage of its support for parallel and concurrent evaluation. By using this approach, we can keep our Elisp workflows intact while taking advantage of the power and flexibility of OCaml and Coq.
 
 In summary, these interpretations aim to preserve the main ideas of the original text but explore more creative ways to integrate OCaml, Elisp, and Emacs for enhanced performance, parallelism, and correctness in language tasks.
+
+* theory of meaning.
+
+Simple model of semiosis.
+1. narrative as strings symbols are produced by entities in a cultural context.
+   narratives are basically memes.
+2. proofs are derived from those strings. Proofs are validated memes.
+
+** idea that genes store the archetypes. 
+   
+   
