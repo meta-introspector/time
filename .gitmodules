@@ -2918,3 +2918,96 @@
 [submodule "2024/02/05/diffusers"]
 	path = 2024/02/05/diffusers
 	url = https://github.com/huggingface/diffusers
+[submodule "2024/02/05/docker-time"]
+	path = 2024/02/05/docker-time
+	url = https://huggingface.co/spaces/introspector/docker-time
+[submodule "2024/02/06/docker-coq"]
+	path = 2024/02/06/docker-coq
+	url = https://github.com/coq-community/docker-coq
+[submodule "2024/02/06/Coq-Type-Classes"]
+	path = 2024/02/06/Coq-Type-Classes
+	url = https://github.com/rudynicolop/Coq-Type-Classes/
+[submodule "2024/02/06/mirrorsolve"]
+	path = 2024/02/06/mirrorsolve
+	url = https://github.com/jsarracino/mirrorsolve
+[submodule "2024/02/06/elpi-derive-mathcomp"]
+	path = 2024/02/06/elpi-derive-mathcomp
+	url = https://github.com/gares/elpi-derive-mathcomp/
+[submodule "2024/02/07/BRiCk"]
+	path = 2024/02/07/BRiCk
+	url = https://github.com/bedrocksystems/BRiCk
+[submodule "2024/02/08/mirage"]
+	path = 2024/02/08/mirage
+	url = https://github.com/mirage/mirage
+[submodule "2024/02/09/hmap"]
+	path = 2024/02/09/hmap
+	url = https://github.com/dbuenzli/hmap.git
+[submodule "2024/02/09/TypeTheory"]
+	path = 2024/02/09/TypeTheory
+	url = https://github.com/UniMath/TypeTheory
+[submodule "2024/02/09/SymmetryBook"]
+	path = 2024/02/09/SymmetryBook
+	url = https://github.com/UniMath/SymmetryBook
+[submodule "2024/02/09/agda-unimath"]
+	path = 2024/02/09/agda-unimath
+	url = https://github.com/UniMath/agda-unimath
+[submodule "2024/02/09/stable-diffusion-docker"]
+	path = 2024/02/09/stable-diffusion-docker
+	url = https://github.com/fboulnois/stable-diffusion-docker.git
+[submodule "2024/02/09/act"]
+	path = 2024/02/09/act
+	url = https://github.com/nektos/act
+[submodule "2024/02/10/ollama-helm"]
+	path = 2024/02/10/ollama-helm
+	url = https://github.com/otwld/ollama-helm
+[submodule "2024/02/10/helm"]
+	path = 2024/02/10/helm
+	url = https://github.com/helm/helm
+[submodule "2024/02/10/goenv"]
+	path = 2024/02/10/goenv
+	url = https://github.com/go-nv/goenv
+[submodule "2024/02/10/helm-controller"]
+	path = 2024/02/10/helm-controller
+	url = https://github.com/k3s-io/helm-controller
+[submodule "2024/02/10/kubernetes-yaml-templates"]
+	path = 2024/02/10/kubernetes-yaml-templates
+	url = https://github.com/dennyzhang/kubernetes-yaml-templates
+[submodule "2024/02/11/Cosette"]
+	path = 2024/02/11/Cosette
+	url = https://github.com/uwdb/Cosette
+[submodule "2024/02/11/lipsum"]
+	path = 2024/02/11/lipsum
+	url = https://github.com/lindig/lipsum
+[submodule "2024/02/11/org-mode"]
+	path = 2024/02/11/org-mode
+	url = https://github.com/tkf/org-mode
+[submodule "2024/02/11/literate-rtl"]
+	path = 2024/02/11/literate-rtl
+	url = https://github.com/vasil-sd/literate-rtl
+[submodule "2024/02/11/coqtl"]
+	path = 2024/02/11/coqtl
+	url = https://github.com/atlanmod/coqtl
+[submodule "2024/02/11/donjon"]
+	path = 2024/02/11/donjon
+	url = https://github.com/bartanderson/donjon
+[submodule "2024/02/11/rescript-compiler"]
+	path = 2024/02/11/rescript-compiler
+	url = https://github.com/rescript-lang/rescript-compiler
+[submodule "2024/02/12/reanalyze"]
+	path = 2024/02/12/reanalyze
+	url = https://github.com/rescript-association/reanalyze
+[submodule "2024/02/12/rescript-game-of-life"]
+	path = 2024/02/12/rescript-game-of-life
+	url = https://github.com/alanrsoares/rescript-game-of-life
+[submodule "2024/02/12/rescript-react"]
+	path = 2024/02/12/rescript-react
+	url = https://github.com/rescript-lang/rescript-react
+[submodule "2024/02/12/rescript-project-template"]
+	path = 2024/02/12/rescript-project-template
+	url = https://github.com/rescript-lang/rescript-project-template
+[submodule "2024/02/12/jeason"]
+	path = 2024/02/12/jeason
+	url = https://github.com/chenglou/jeason
+[submodule "2024/02/09/--help"]
+	path = 2024/02/09/--help
+	url = https://github.com/UniMath/TypeTheory
