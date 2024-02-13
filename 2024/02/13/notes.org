@@ -1,0 +1,17 @@
+* ideas of the day:
+
+python streamlit
+grpc
+ocaml
+coq
+
+take the model of coq and push it down into streamlit.
+
+fundamental operation of llm
+design(math,loss,flow) ->model_graph
+train(network,server,gpu,bindings,model_graph,data) ->model weights
+deploy(network,server,gpu,bindings,model) ->serverendpoint
+generate(serverendpoint,bindings,model,params,text)->text
+
+
+

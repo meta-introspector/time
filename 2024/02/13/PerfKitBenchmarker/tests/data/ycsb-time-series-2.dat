@@ -1,0 +1,48 @@
+2023-06-05 16:15:44:641 0 sec: 0 operations; est completion in 106751991167300 days 15 hours
+2023-06-05 16:15:44,655 WARN  [Thread-8] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2023-06-05 16:15:44,979 INFO  [Thread-8] hbase1_x.BigtableConnection: Using bigtable-hbase client from jar file:/opt/pkb/ycsb/hbase12-binding/lib/bigtable-hbase-1.x-2.5.0.jar. Version: 2.5.0
+2023-06-05 16:15:45:636 1 sec: 0 operations; est completion in 106751991167300 days 15 hours
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2023-06-05 16:15:46:636 2 sec: 18 operations; 18 current ops/sec; est completion in 128 days 15 hours [READ: Count=18, Max=239231, Min=34592, Avg=137007.11, 90=235903, 99=239231, 99.9=239231, 99.99=239231]
+2023-06-05 16:15:47:636 3 sec: 1200 operations; 1182 current ops/sec; est completion in 2 days 21 hours [READ: Count=1184, Max=76735, Min=2574, Avg=6996.8, 90=10471, 99=48767, 99.9=68863, 99.99=76735]
+2023-06-05 16:15:48:636 4 sec: 3045 operations; 1845 current ops/sec; est completion in 1 day 12 hours [READ: Count=1844, Max=14311, Min=2522, Avg=4327.71, 90=5723, 99=10023, 99.9=10967, 99.99=14311]
+2023-06-05 16:15:49:636 5 sec: 5029 operations; 1984 current ops/sec; est completion in 1 day 3 hours [READ: Count=1983, Max=16303, Min=2416, Avg=4013.38, 90=4871, 99=9623, 99.9=13543, 99.99=16303]
+2023-06-05 16:15:50:636 6 sec: 7068 operations; 2039 current ops/sec; est completion in 23 hours 34 minutes [READ: Count=2039, Max=12839, Min=2296, Avg=3923.2, 90=4887, 99=9087, 99.9=11575, 99.99=12839]
+2023-06-05 16:15:51:636 7 sec: 9133 operations; 2065 current ops/sec; est completion in 21 hours 17 minutes [READ: Count=2067, Max=32991, Min=2356, Avg=3866.79, 90=4643, 99=9295, 99.9=13887, 99.99=32991]
+2023-06-05 16:15:52:636 8 sec: 11157 operations; 2024 current ops/sec; est completion in 19 hours 55 minutes [READ: Count=2023, Max=45439, Min=2320, Avg=3946.67, 90=4731, 99=9295, 99.9=25439, 99.99=45439]
+2023-06-05 16:15:53:636 9 sec: 13279 operations; 2122 current ops/sec; est completion in 18 hours 49 minutes [READ: Count=2122, Max=16703, Min=2158, Avg=3765.34, 90=4607, 99=8623, 99.9=14175, 99.99=16703]
+Maximum time elapsed. Requesting stop for the workload.
+Stop requested for workload. Now Joining!
+2023-06-05 16:15:54:636 10 sec: 15395 operations; 2116 current ops/sec; est completion in 18 hours 2 minutes [READ: Count=2115, Max=52767, Min=2178, Avg=3776.73, 90=4563, 99=7619, 99.9=37087, 99.99=52767]
+2023-06-05 16:15:54:654 10 sec: 15407 operations; 666.67 current ops/sec; est completion in 18 hours 3 minutes [READ: Count=12, Max=5607, Min=2880, Avg=4079.83, 90=5291, 99=5607, 99.9=5607, 99.99=5607] [CLEANUP: Count=16, Max=12823, Min=0, Avg=987.19, 90=916, 99=12823, 99.9=12823, 99.99=12823]
+[OVERALL], RunTime(ms), 10018
+[OVERALL], Throughput(ops/sec), 1537.9317228987823
+[TOTAL_GCS_PS_Scavenge], Count, 4
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 33
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.329407067278898
+[TOTAL_GCS_PS_MarkSweep], Count, 2
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 48
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.4791375524056698
+[TOTAL_GCs], Count, 6
+[TOTAL_GC_TIME], Time(ms), 81
+[TOTAL_GC_TIME_%], Time(%), 0.8085446196845678
+[READ], Operations, 15407
+[READ], AverageLatency(us), 4328.689751411696
+[READ], MinLatency(us), 2158
+[READ], MaxLatency(us), 239231
+[READ], 95thPercentileLatency(us), 8375
+[READ], 99thPercentileLatency(us), 10927
+[READ], Return=OK, 15407
+[CLEANUP], Operations, 16
+[CLEANUP], AverageLatency(us), 987.1875
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 12823
+[CLEANUP], 95thPercentileLatency(us), 1410
+[CLEANUP], 99thPercentileLatency(us), 12823

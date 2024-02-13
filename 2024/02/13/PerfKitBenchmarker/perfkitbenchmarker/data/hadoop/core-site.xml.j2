@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>{{ scratch_dir }}</value>
+    </property>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://{{ master_ip }}/</value>
+    </property>
+    {% if aws_access_key %}
+    <!-- Configure S3A Hadoop's S3 filesystem -->
+    <!-- Use s3:// scheme to be consistent with EMR -->
+    <property>
+        <name>fs.s3.impl</name>
+        <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>{{ aws_access_key }}</value>
+    </property>
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>{{ aws_secret_key }}</value>
+    </property>
+    {% endif %}
+</configuration>

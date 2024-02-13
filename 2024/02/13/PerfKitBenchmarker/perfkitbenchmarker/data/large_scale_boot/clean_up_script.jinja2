@@ -1,0 +1,21 @@
+#! /bin/bash -xv
+
+# delete some VMs
+{% if cloud == 'GCP' %}
+for i in {1..{{vm_count}}}; do
+/usr/bin/gcloud --quiet compute instances delete booter-{{ launcher_vm_name }}-$i  \
+--format json  \
+--quiet  \
+--zone {{ zone }}  \
+--project {{ project }} &
+done
+{% elif cloud == 'AWS' %}
+INSTANCES="`aws ec2 describe-instances --region {{ region }}  \
+  --filter Name=tag:launcher_id,Values={{ launcher_vm_name }}  \
+  --query "Reservations[*].Instances[*].{Instance:InstanceId}"  \
+  --output text`"
+for i in ${INSTANCES}; do
+aws ec2 terminate-instances --region {{ region }} --instance-ids "${i}"
+done
+{% endif %}
+# Azure does not need cleanup as benchmark cleans up the resource group.

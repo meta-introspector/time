@@ -1,0 +1,23 @@
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 1073741824 step: 2(factor) warmup iters: 5 iters: 1 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#   Rank  0 Pid   9192 on pkb-2b6a393d-2 device  0 [0x00] Tesla K80
+#   Rank  1 Pid   9178 on pkb-2b6a393d-3 device  0 [0x00] Tesla K80
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+     1048576        262144     float     sum      -1   2410.0    0.44    0.44    N/A   2709.7    0.39    0.39    N/A
+     2097152        524288     float     sum      -1   4710.4    0.45    0.45    N/A   4587.9    0.46    0.46    N/A
+     4194304       1048576     float     sum      -1   8116.1    0.52    0.52    N/A   7552.3    0.56    0.56    N/A
+     8388608       2097152     float     sum      -1    14868    0.56    0.56    N/A    14825    0.57    0.57    N/A
+    16777216       4194304     float     sum      -1    28317    0.59    0.59    N/A    27090    0.62    0.62    N/A
+    33554432       8388608     float     sum      -1    55989    0.60    0.60    N/A    55665    0.60    0.60    N/A
+    67108864      16777216     float     sum      -1   111592    0.60    0.60    N/A   111041    0.60    0.60    N/A
+   134217728      33554432     float     sum      -1   220600    0.61    0.61    N/A   219261    0.61    0.61    N/A
+   268435456      67108864     float     sum      -1   428698    0.63    0.63    N/A   436706    0.61    0.61    N/A
+   536870912     134217728     float     sum      -1   885904    0.61    0.61    N/A   884664    0.61    0.61    N/A
+  1073741824     268435456     float     sum      -1  1752724    0.61    0.61    N/A  1763386    0.61    0.61    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.565546
+#

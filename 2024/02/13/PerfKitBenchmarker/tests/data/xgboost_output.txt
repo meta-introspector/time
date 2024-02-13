@@ -1,0 +1,22 @@
+UserWarning: The pandas version installed (2.0.1) does not match the supported pandas version in Modin (1.5.3). This may cause undesired side effects!
+2023-05-01 19:09:26,559 INFO worker.py:1625 -- Started a local Ray instance.
+UserWarning: `num_actors` in `ray_params` is smaller than 2 (1). XGBoost will NOT be distributed!
+2023-05-01 19:09:27,466 INFO main.py:1047 -- [RayXGBoost] Created 1 new actors (1 total actors). Waiting until actors are ready for training.
+(pid=100031) UserWarning: The pandas version installed (2.0.1) does not match the supported pandas version in Modin (1.5.3). This may cause undesired side effects!
+2023-05-01 19:09:29,072 INFO main.py:1092 -- [RayXGBoost] Starting XGBoost training.
+(_RemoteRayXGBoostActor pid=100071) [19:09:29] task [xgboost.ray]:140299296230512 got new rank 0
+[0]     train-logloss:0.69234   train-error:0.48707
+[1]     train-logloss:0.69147   train-error:0.47781
+[2]     train-logloss:0.69069   train-error:0.47103
+[3]     train-logloss:0.68992   train-error:0.46622
+[4]     train-logloss:0.68930   train-error:0.46307
+[5]     train-logloss:0.68879   train-error:0.46079
+[6]     train-logloss:0.68802   train-error:0.45671
+[7]     train-logloss:0.68732   train-error:0.45260
+[8]     train-logloss:0.68669   train-error:0.44983
+[9]     train-logloss:0.68609   train-error:0.44768
+2023-05-01 19:09:32,258 INFO main.py:1587 -- [RayXGBoost] Finished XGBoost training on training data with total N=200,000 in 4.90 seconds (3.18 pure XGBoost training time).
+TRAIN TIME TAKEN: 8.00 seconds
+Final training error: 0.4477
+TOTAL TIME TAKEN: 8.56 seconds (0.00 for init)
+(_QueueActor pid=100030) UserWarning: The pandas version installed (2.0.1) does not match the supported pandas version in Modin (1.5.3). This may cause undesired side effects! [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)
