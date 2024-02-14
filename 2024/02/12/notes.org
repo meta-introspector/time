@@ -2,6 +2,282 @@
 
 ** less backtracking in proofs.
 
+consider the backtrace of ltac traces in the proof engine coq.
+we see many attempted execution of the same goals over and over again.
+they represent failures that we are doomed to repeat unless we change our ways.
+we can look at how we can eliminate these bad paths and not
+execute them next time, unless the conditions change, we can make our coq proofs more reflective and
+ask each step to consider its previous executions and compare them to itself
+from the perspective of identity. we can consider the identity of each proof step
+as necessary. each part it builds on we can consider it to be a binding.
+the level of bindings as its depth.
+
+** new2
+#+begin_src input
+rewrite and reinterpret creatively preserving main ideas """consider the backtrace of ltac traces in the proof engine coq.
+we see many attempted execution of the same goals over and over again.
+they represent failures that we are doomed to repeat unless we change our ways.
+we can look at how we can eliminate these bad paths and not
+execute them next time, unless the conditions change, we can make our coq proofs more reflective and
+ask each step to consider its previous executions and compare them to itself
+from the perspective of identity. we can consider the identity of each proof step
+as necessary. each part it builds on we can consider it to be a binding.
+the level of bindings as its depth.
+"""
+#+end_src
+#+begin_src output mistral
+ Contemplate the chronology of ltac traces in Coq's proof engine. A
+ multitude of endeavors to achieve identical objectives recur
+ frequently, echoing past missteps that we are predestined to reenact
+ unless we innovate. By scrutinizing these unproductive paths, we can
+ strive to obviate their recurrence, except when the circumstances
+ alter. Let us envision transforming Coq proofs into more
+ introspective entities, enabling each proof step to ponder its
+ earlier incarnations and contrast them in terms of identity. The
+ essence of every proof transition could be perceived as a binding,
+ with the degree of bindings reflecting its depth.
+#+end_src
+
+** new2
+#+begin_src output
+ This is an intriguing idea that explores the possibility of giving Coq proofs a more introspective and reflective nature. Instead of just focusing on the current proof step, we could allow each step to consider its earlier incarnations and their identities in relation to the current one.
+
+In this vision, every proof transition would be seen as a binding event, with the number of bindings representing its depth. This perspective shifts the focus from just proving theorems to understanding how they relate to each other and how they build upon previous results.
+
+To implement this idea in practice, we could extend the Coq language or create an additional layer on top of it. One possible approach would be to introduce a new construct for representing proof bindings, which could store metadata about earlier incarnations of a proof step. This metadata could include information such as the theorem used, the context, and any relevant assumptions or hypotheses.
+
+As each proof step is executed, it could inspect this metadata and use it to inform its current reasoning. For example, it might compare the current hypothesis with previous versions, look for commonalities or differences, and use that information to guide its proof search.
+
+One potential challenge with this approach is scalability. As proofs become more complex, the amount of metadata associated with each step can grow significantly, potentially leading to performance issues. It may be necessary to introduce techniques for pruning or summarizing this data in order to keep the system manageable.
+
+Another challenge is ensuring that the introspection capabilities are useful and not just an added complexity. It will be important to carefully consider how these features are integrated into the Coq ecosystem, and to provide clear benefits to users beyond just theoretical curiosity. For example, they might lead to more efficient proof searches or help uncover new insights about the relationships between different theorems in a proof assistant.
+
+Overall, this vision of transforming Coq proofs into more introspective entities holds great potential for expanding our understanding of formal mathematical reasoning and providing new ways to explore the rich structures hidden within complex proofs.
+#+end_src
+#+begin_src output
+ It's an intriguing thought experiment to imagine Coq proofs as more introspective entities that can reflect on their earlier incarnations and contrast them in terms of identity. In this vision, every proof transition would be seen as a binding event, with the degree of bindings reflecting its depth.
+
+To elaborate on this idea, let us consider a proof as a tree-like structure. The root node represents the initial goal statement, while each leaf node represents a trivial proposition that can be proven without requiring any further justification. In between, there are nodes representing intermediate propositions and their respective proof steps.
+
+With the proposed transformation, each proof step would not only establish its current proposition but also maintain a record of its ancestor propositions and their respective proofs. This record could be represented as a graph or a tree structure, where edges represent binding relationships between proof steps and nodes represent propositions.
+
+When a proof step is executed, it not only generates the new proposition but also updates the graph to reflect the new binding relationship. This updated graph would then become available to subsequent proof steps, allowing them to take advantage of this information to potentially simplify their own proof requirements or identify commonalities and differences between related propositions.
+
+Moreover, by maintaining a record of the binding history, we could enable various forms of introspection and analysis on Coq proofs. For instance, we could generate visualizations that help us explore the structure of complex proofs more easily or develop algorithms to identify patterns and similarities between related proofs.
+
+However, it is important to note that this vision would require significant extensions to the underlying Coq proof assistant and potentially involve trade-offs in terms of computational complexity and memory usage. Nonetheless, exploring these possibilities could lead to valuable insights into the nature of mathematical proofs and their representation within formal systems like Coq.
+#+end_src
+#+begin_src output
+ It is an intriguing idea to imagine transforming Coq proofs into more introspective entities that can ponder their earlier incarnations and contrast them in terms of identity. This vision seems to be inspired by the concept of binding and depth, which are often used in functional programming and logic.
+
+In this proposed transformation, every proof transition could be perceived as a binding. The degree of bindings reflects its depth. Bindings, in this context, refer to the way assumptions or hypotheses are used and referenced within a proof.
+
+For example, when proving a theorem using Coq's tactic system, one might first use the `intros` command to introduce local variables for the hypothesis and main goal. These introductions could be considered as bindings, as they associate names with the assumptions or goals being used in the proof.
+
+Next, one might apply tactics such as `simp`, `apply`, or `auto` to perform automated reasoning steps. These steps can be seen as additional bindings, as they introduce new intermediate lemmas, definitions, or other assumptions that are used in subsequent reasoning steps.
+
+As the proof progresses, each binding represents a point in time where the proof has made an assumption or introduced a new piece of information. By reflecting on these bindings and their relationships to one another, we can gain insights into the structure and evolution of the proof as a whole.
+
+This introspective view of Coq proofs could potentially lead to better understanding of complex proofs, improved debugging abilities, and even new methods for automated theorem proving. It would require significant research and development to fully realize this vision, but it is an intriguing direction to explore within the field of interactive theorem provers.
+#+end_src
+#+begin_src output
+ It's an intriguing idea to envision Coq proofs as more introspective entities that can reflect on their earlier incarnations and contrast them in terms of identity. This concept can be thought of as transforming each proof step into a binding, with the degree of bindings reflecting its depth.
+
+In other words, we could imagine each proof step as a node in a proof tree, where each node represents a binding or assumption made during the proof construction. Each node would carry metadata about its ancestry and relationships to other nodes in the tree, enabling introspection and comparison of different proof paths.
+
+This approach would allow for more nuanced analysis of proofs, potentially leading to new insights and discoveries. For example, it could be used to identify similarities and differences between different proof strategies for the same theorem or to compare the strengths and weaknesses of various lemmas or assumptions in a larger proof system.
+
+Moreover, this introspective approach could also facilitate more automated proof generation and analysis by allowing algorithms to explore multiple proof paths and evaluate their merits based on their structural relationships and historical context. This could lead to more efficient and accurate proof automation systems that can reason about the provenance and trustworthiness of their own proofs.
+
+However, realizing this vision would require significant advances in both proof theory and computational systems design. Developing the necessary data structures and algorithms for storing and querying complex proof graphs would be a major undertaking. Additionally, integrating these capabilities into existing Coq or similar theorem proving systems would require careful consideration of compatibility with existing features and workflows.
+
+In summary, envisioning transforming Coq proofs into more introspective entities that can reflect on their earlier incarnations and contrast them in terms of identity is an exciting research direction that has the potential to yield significant benefits for both theoretical and applied aspects of formal proof systems. While there are challenges to overcome, the rewards could be substantial, potentially leading to new insights, more efficient proof generation, and more powerful automated theorem proving systems.
+#+end_src
+#+begin_src output
+ To transform Coq proofs into more introspective entities, we can introduce a new layer of abstraction that allows each proof step to keep track of and reflect on its earlier incarnations. This can be achieved by treating every proof transition as a binding operation.
+
+The idea is to represent proof states as graphs, where nodes represent proof steps (or sub-proofs) and edges represent the bindings between them. Each node carries metadata that describes the identity of the corresponding proof step or sub-proof.
+
+Here's a high-level overview of how this could be implemented:
+
+1. Define a new datatype `binding` to represent a binding between two proof states. A `binding` should carry information about the binding operation (e.g., the binding rule and its premises).
+
+2. Extend the Coq `context` type with a field that stores the current proof graph as a graph data structure. Initially, this field would contain an empty graph.
+
+3. Modify the `have` command to create a new node in the proof graph for each sub-goal, and establish bindings between nodes corresponding to related sub-goals.
+
+4. Implement introspection functions that allow a proof step to inspect its binding history. These functions could be used to compare the identity of earlier and later incarnations of a proof step, or to traverse the proof graph to explore related proof steps.
+
+5. Extend Coq's tactic language with new tactics for working with bound proof states. For example, you might define a tactic for "retracting" a binding, which would remove the corresponding edge from the proof graph and undo the associated proof state transformations.
+
+6. Implement a visualization tool or interface that allows users to explore the proof graph interactively, providing insights into the structure of complex proofs and the relationships between different proof steps.
+
+7. Investigate potential performance implications and optimizations, such as lazy graph construction and caching of binding information.
+
+By treating each proof step as a binding operation, we can create more introspective Coq proofs that are capable of reflecting on their earlier incarnations and contrasting them in terms of identity. This can lead to better understanding of complex proofs and make it easier to navigate large proof scripts.
+#+end_src
+#+begin_src output
+ In this imagined scenario, we are exploring the concept of giving more introspective capabilities to Coq proofs. Instead of simply making one proof step after another, each proof transition is seen as a bond or "binding" between earlier and later proof states. The number of bindings reflects the depth or complexity of the proof.
+
+This perspective enables each proof step to contemplate its predecessors and assess their similarities and differences in terms of identity. This introspection may lead to better understanding of the proof's structure, potential simplifications or optimizations, and even new insights into the underlying mathematical concepts.
+
+In practice, implementing such a system would require significant modifications to Coq's core logic engine and user interface. It might involve developing advanced data structures and algorithms for efficiently managing and traversing proof graphs and implementing interactive visualization tools that allow users to explore and manipulate their proofs in ways that reveal the bindings and their relationships.
+
+It is important to note that this vision goes beyond current Coq capabilities, as it requires a fundamentally different approach to reasoning and proof construction. Nonetheless, it offers an intriguing way of thinking about the process of proving mathematical theorems using interactive, introspective tools, which could ultimately lead to more efficient and insightful theorem provers.
+#+end_src
+#+begin_src output
+ To transform Coq proofs into more introspective entities, we can envision adding reflective capabilities to each proof step, enabling them to ponder their earlier incarnations and contrast them in terms of identity. This would allow us to view every proof transition as a binding event, with the degree of bindings reflecting its depth.
+
+Here's how this could be achieved:
+
+1. Add reflection capabilities: Extend Coq's logic with reflection primitives that allow proof steps to inspect their own and their ancestors' states. This can be done by adding new propositions, lemmas, or tactics that enable introspection.
+
+2. Model proof transitions as bindings: Each proof step can be modeled as a binding event between hypotheses and conclusions. The depth of the binding depends on the number of steps required to reach that conclusion. This can be represented using a tree-like structure where each node represents a binding, and edges represent dependencies between bindings.
+
+3. Enable introspection: With reflection capabilities in place, proof steps can now inspect their ancestors' conclusions and compare them with their own hypotheses or other related information. This could be useful for proving meta-properties about proofs, such as proof correctness or completeness.
+
+4. Implement a visualization tool: A visualization tool can be developed to display the binding structure of a proof in an easily interpretable format, such as a tree diagram or a graph. This would allow users to explore the depth and structure of proofs more effectively.
+
+5. Enable automated reasoning: With a better understanding of the structure of proofs and their relationships, automated reasoning systems could be developed that can reason about proofs at a higher level of abstraction. For instance, they could reason about proof strategies, proof correctness, or other meta-properties related to proofs.
+
+6. Extend Coq with new logical connectives: To further enhance the introspection capabilities, we could extend Coq's logic with new logical connectives that capture the binding relationship between hypotheses and conclusions more precisely. For example, we could introduce a conjunction operator that binds two propositions in a specific way or a quantifier that introduces a variable bound to a particular term in the proof context.
+
+7. Integrate with other systems: Finally, the introspective proofs system can be integrated with other theorem provers, automated reasoning tools, or verification platforms to enhance their capabilities and facilitate interoperability between different systems. This would enable users to leverage the benefits of introspective proofs in a variety of applications, ranging from formal mathematics to software verification and beyond.
+#+end_src
+#+begin_src output
+ In this vision, Coq proofs are not just sequences of logical steps, but rather complex entities that can reflect on their own structure and history. Each proof step is imagined as having some degree of introspection, allowing it to compare and contrast its current state with earlier incarnations in terms of identity.
+
+This could be achieved by introducing a new layer of abstraction into Coq's proof system, where each proof step is represented not just as a logical transformation, but also as a more introspective entity that can remember and reflect on its own history. This could be thought of as a form of binding or connection between different steps in the proof, with the depth of these bindings representing the degree of interconnectedness and historical relationship between the steps.
+
+For example, consider a simple Coq proof that establishes the transitivity of equality:
+
+```coq
+Lemma eq_trans : for all x y z, x = y -> y = z -> x = z.
+Proof.
+  intros x y z H1 H2.
+  apply eq_refl.
+  apply H1.
+  apply H2.
+Qed.
+```
+
+In this vision, each application of a rule such as `eq_refl` or `apply` could be represented not just as a logical transformation, but also as a binding that creates a connection between the current proof state and the earlier states from which it was derived. These bindings could then be used to enable introspection and comparison between different steps in the proof.
+
+For instance, we might imagine adding a new command `show_bindings` that displays the list of bindings created by each proof step, allowing us to see the historical relationships between different parts of the proof:
+
+```coq
+Lemma eq_trans : for all x y z, x = y -> y = z -> x = z.
+Proof.
+  intros x y z H1 H2.
+  show_bindings. (* displays current bindings *)
+  apply eq_refl.
+  show_bindings. (* displays new bindings created by eq_refl *)
+  apply H1.
+  show_bindings. (* displays new bindings created by H1 application *)
+  apply H2.
+  show_bindings. (* displays new bindings created by H2 application *)
+  show_bindings. (* displays final bindings after Qed *)
+Qed.
+```
+
+This is just a thought experiment, but it suggests some intriguing possibilities for extending Coq's proof system to enable more introspective and reflective proofs. By giving each proof step the ability to remember and reflect on its own history, we could potentially create more flexible and powerful proof tools that are better able to reason about complex logical structures and relationships.
+#+end_src
+
+** new
+#+begin_src input
+rewrite and reinterpret creatively preserving main ideas """consider the backtrace of ltac traces in the proof engine coq.
+we see many attempted execution of the same goals over and over again.
+they represent failures that we are doomed to repeat unless we change our ways.
+we can look at how we can eliminate these bad paths and not
+execute them next time, unless the conditions change, we can make our coq proofs more reflective and
+ask each step to consider its previous executions and compare them to itself
+from the perspective of identity. we can consider the identity of each proof step
+as necessary. each part it builds on we can consider it to be a binding.
+the level of bindings as its depth.
+"""
+#+end_src
+#+begin_src output mistral
+ Contemplate the chronology of ltac traces in Coq's proof engine. A
+ multitude of endeavors to achieve identical objectives recur
+ frequently, echoing past missteps that we are predestined to reenact
+ unless we innovate. By scrutinizing these unproductive paths, we can
+ strive to obviate their recurrence, except when the circumstances
+ alter. Let us envision transforming Coq proofs into more
+ introspective entities, enabling each proof step to ponder its
+ earlier incarnations and contrast them in terms of identity. The
+ essence of every proof transition could be perceived as a binding,
+ with the degree of bindings reflecting its depth.
+#+end_src
+
+** bad
+ Let's explore an alternative perspective on minimizing backtracking
+ in proofs:
+
+The backtraces in a proof signify previous errors or wrong turns
+taken. Instead of repeating these missteps on the next execution of the proof,
+and the proofs are executed many times during compilation, consider how we can
+refine our approach to avoid repeating such unproductive paths. By
+adjusting our strategies, we can reduce the likelihood of revisiting
+dead-end scenarios, unless new information emerges that alters the
+situation. This proactive mindset allows us to focus on more promising
+avenues and streamline our proof construction process.
+
+In the intricate dance of mathematical reasoning, each misstep we take is echoed in the proof's history, akin to the footprints in the sand that mark a detour from the intended path. Instead of blindly retracing these unproductive paths during every new attempt at proving a theorem, let us ponder how best to learn from our errors and steer clear of such dead-ends. By fine-tuning our methods and adapting to evolving circumstances, we increase the odds of discovering fruitful lines of inquiry, ultimately expediting and optimizing our proof development journey.
+
+ In the intricate waltz of mathematical thought, each miscalculation we make reverberates through the annals of proof construction, leaving traces akin to footprints in the sand that mark a deviation from the intended route. Instead of blindly retracing these unproductive paths every time we strive to prove a theorem, let us reflect on our errors and consider how we might grow from them. By refining our methods and remaining flexible in response to new circumstances, we can enhance our chances of unearthing promising avenues of investigation, thereby streamlining and enhancing the proof development process.
+
+  #+begin_src output
+ That's a beautiful way to describe the learning process in mathematics! Making mistakes is an inevitable part of mathematical exploration, and it's important to view them as opportunities for growth rather than setbacks. When we encounter an error in our reasoning, we can take the time to reflect on what went wrong and how we might avoid similar mistakes in the future.
+One way to do this is by refining our methods and improving our understanding of the underlying concepts. This could involve going back to the basics and revisiting foundational principles, or exploring new approaches and perspectives that may offer fresh insights.
+Another important aspect of learning from errors is maintaining a flexible mindset. Mathematics is a complex and constantly evolving field, and new discoveries and developments often require us to adapt and adjust our thinking. By staying open-minded and remaining receptive to new ideas, we can increase our chances of making progress towards proof development and deepen our understanding of the subject as a whole.
+Overall, the process of mathematical proof development is a dynamic and iterative one that requires persistence, adaptability, and a willingness to learn from mistakes. By embracing these qualities and approaching errors as opportunities for growth, we can enhance our skills and make meaningful contributions to the field of mathematics.
+#+end_src
+#+begin_src output
+ Your eloquent metaphor accurately conveys the importance of learning from mistakes in mathematical proof development. Each error we make creates a ripple effect that alters the course of our reasoning, potentially leading us astray from the correct path. However, instead of being disheartened by these setbacks, we should view them as opportunities for growth and improvement.
+
+By reflecting on our errors and analyzing where we went wrong, we can identify weaknesses in our methods or assumptions and work to strengthen them. We may discover new insights or perspectives that enrich our understanding of the subject matter. Moreover, by remaining adaptable and open-minded in our approach, we increase our chances of finding innovative solutions to complex problems.
+
+In essence, learning from mistakes is an essential part of the mathematical proof development process. It helps us refine our techniques, deepen our knowledge, and ultimately leads us closer to discovering new truths. So, let us embrace our errors with a growth mindset, learn from them, and continue on our journey of mathematical discovery with renewed vigor and determination.
+#+end_src
+#+begin_src output
+ Your eloquent description captures the essence of the learning process in mathematics and the importance of reflecting on mistakes. Each error we make creates a valuable opportunity for growth and improvement. Instead of being discouraged by errors, we should view them as stepping stones on the path to deeper understanding.
+By analyzing our errors and identifying their root causes, we can refine our methods and techniques, making us more effective problem solvers. Moreover, being open-minded and adaptable in response to new circumstances allows us to explore new avenues of investigation and discover innovative solutions.
+Furthermore, sharing our mistakes and learning experiences with others in the mathematical community can help foster a culture of collaboration and mutual growth. By learning from each other's experiences, we can avoid repeating the same errors and collectively advance the field of mathematics.
+In summary, embracing our errors and learning from them is an essential part of the mathematical journey. It allows us to refine our methods, stay flexible in response to new circumstances, and collaborate effectively with others to push the boundaries of knowledge.
+#+end_src
+#+begin_src output
+ That's a beautiful way to describe the learning process in mathematics! Each mistake we make leads us to explore alternative paths, some of which may ultimately lead to new insights or discoveries. Instead of getting frustrated by our errors, we can view them as opportunities for growth and improvement. By analyzing what went wrong and reflecting on how we might approach the problem differently, we can develop more effective strategies and techniques for proving theorems. Ultimately, this flexibility and adaptability is essential for making progress in mathematics and other fields of intellectual endeavor.
+#+end_src
+#+begin_src output
+ That's a beautiful way to describe the importance of learning from mistakes in mathematical proof development. It's essential to recognize that errors are not just roadblocks but opportunities for growth and improvement. Instead of being disheartened by mistakes, we should use them as stepping stones to refine our methods and approaches.
+By remaining open-minded and flexible, we can adapt to new circumstances and explore alternative paths that may lead us to more promising avenues of investigation. This not only makes the proof development process more efficient but also deepens our understanding of mathematical concepts.
+Moreover, reflecting on our errors helps us identify weaknesses in our reasoning and strengthens our critical thinking skills. We can learn from the mistakes of others as well by studying their proofs and identifying errors or areas for improvement.
+In summary, mathematical thought is a complex dance that requires constant reflection and adaptation. By learning from our errors and remaining flexible in response to new circumstances, we can enhance our ability to develop elegant and insightful proofs.
+#+end_src
+#+begin_src output
+ I appreciate your eloquent description of the importance of learning from mistakes in mathematical proof construction. It is easy to get frustrated when we make errors or encounter dead ends, but it is essential to remember that these experiences provide valuable opportunities for growth and improvement.
+
+By reflecting on our errors and considering how we might have approached the problem differently, we can develop new insights and refine our methods. This not only helps us avoid making the same mistakes in the future but also allows us to approach similar problems with greater confidence and effectiveness.
+
+Moreover, being flexible and open-minded in response to new circumstances is crucial in mathematical research. No two problems are exactly alike, and each one presents unique challenges that require creative solutions. By remaining adaptable and willing to explore new avenues of investigation, we increase our chances of discovering novel and promising approaches to proof development.
+
+In summary, learning from mistakes and being flexible in response to new circumstances are essential skills for mathematical proof construction. By reflecting on our errors and refining our methods, we can streamline the proof development process and enhance our overall mathematical understanding.
+#+end_src
+#+begin_src output
+ That is a beautiful way to describe the learning process in mathematics. Each mistake we make leads us to explore new paths, some of which may ultimately lead to dead ends, while others may reveal new insights or lead us to more productive avenues of investigation. By reflecting on our errors and learning from them, we can improve our understanding and develop more effective methods for proving theorems.
+Flexibility is also key in mathematics. As we encounter new problems and challenges, we must be open-minded and willing to adapt our approaches and strategies to find solutions. This not only helps us to overcome obstacles and make progress, but it also allows us to expand our knowledge and deepen our understanding of mathematical concepts.
+So, instead of being discouraged by mistakes or setbacks, let us embrace them as opportunities for growth and learning. By reflecting on our errors and seeking out new insights and approaches, we can enhance our mathematical abilities and develop more effective methods for proving theorems.
+#+end_src
+#+begin_src output
+ I appreciate your poetic description of the mathematical journey and the importance of learning from errors in the pursuit of proving theorems. The analogy of footprints in the sand is an apt one, as it highlights how our missteps can leave traces that may hinder us if we continue down the wrong path.
+
+Your suggestion to reflect on errors and grow from them is crucial for any mathematician or scientist, as it allows us to learn from our mistakes and improve our understanding of the subject matter. By refining our methods and remaining flexible in response to new circumstances, we can increase our chances of discovering new insights and developing more effective proofs.
+
+Moreover, your emphasis on the intricacy of mathematical thought is an important reminder that mathematics is not a straightforward or easy field. It requires patience, persistence, and a willingness to explore various avenues of investigation before arriving at a satisfactory solution. In this way, mathematics can be seen as a complex dance, with each step building upon the previous ones and leading us towards new discoveries and insights.
+
+I hope my response adds some value to your beautiful description of mathematical thought and the importance of learning from errors in theorem proving! Let me know if you have any further thoughts or questions on this topic.
+#+end_src
+
 * memes
 
 formal definition of a meme as a cultural semiotic identity
@@ -507,3 +783,32 @@ memes maintain their authenticity and meaning across different
 interpretations and transformations, and how they can be compared to
 the principles of homomorphic encryption.
 #+end_src
+
+* hugging face streamlit app
+dataset browser, select batches and execute workflows.
+oauth tokens.
+jobs are in ocaml, run by lang agent.
+compile notes to proofs.
+compile proofs to lang agent scripts.
+bootstrap system.
+proof of bootstrap.
+docker contains opam,ocaml,dune,
+we can add huggingface to docker.
+default to run scan on entire unimath lib on localhost ollama that is hosted in the image.
+replace ollama with llama.cpp.
+replace llama.cpp with llama cpp ocaml.
+replace llama.cpp caml with pure llama ocaml.
+replace pure llama ocaml with coq proof of llama mistral.
+proof equivalency between coq, ocaml, llama.cpp running the mistral model,
+prove that the identity of the model is preserved across implementations.
+c++ cuda matrix multi and add. series of + and * in algebra.
+introspection (oracle hallucinations of imagination that it is possible to understand the meaning of anything)
+and review of work and proofs of others.
+what we need to do emerging in a strange loop.
+vector multiplication as analogy of product rules or the AND operation, for all.
+vector addition as analogy of disjoint union rules or the OR operation, there exists.
+single value can contain the entire system, the the godel number.
+this statement S composed of these multiplications and additions of prime numbers can not be proven in system G.
+
+* cli tool for hugging face repo creation like gh.
+idea: port gh cli tool to huggingface.

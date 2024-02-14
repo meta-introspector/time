@@ -3035,3 +3035,21 @@
 [submodule "2024/02/14/datamodel-code-generator"]
 	path = 2024/02/14/datamodel-code-generator
 	url = https://github.com/koxudaxi/datamodel-code-generator
+[submodule "2024/02/12/lang-agent-streamlit-ui"]
+	path = 2024/02/12/lang-agent-streamlit-ui
+	url = https://github.com/meta-introspector/lang-agent-streamlit-ui
+[submodule "2024/02/12/meta-coq-utils"]
+	path = 2024/02/12/meta-coq-utils
+	url = https://huggingface.co/datasets/introspector/meta-coq-utils
+[submodule "2024/02/12/meta-coq-template-coq"]
+	path = 2024/02/12/meta-coq-template-coq
+	url = https://huggingface.co/datasets/introspector/meta-coq-template-coq
+[submodule "2024/02/12/meta-coq-common"]
+	path = 2024/02/12/meta-coq-common
+	url = https://huggingface.co/datasets/introspector/meta-coq-common
+[submodule "2024/02/12/streamlit-docker-lang-agent-introspector"]
+	path = 2024/02/12/streamlit-docker-lang-agent-introspector
+	url = https://huggingface.co/spaces/introspector/streamlit-docker-lang-agent-introspector
+[submodule "2024/02/13/PerfKitBenchmarker"]
+	path = 2024/02/13/PerfKitBenchmarker
+	url = https://github.com/meta-introspector/PerfKitBenchmarker
