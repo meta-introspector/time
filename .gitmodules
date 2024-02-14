@@ -3023,3 +3023,6 @@
 [submodule "2024/02/13/PerfKitBenchmarker"]
 	path = 2024/02/13/PerfKitBenchmarker
 	url = https://github.com/meta-introspector/PerfKitBenchmarker
+[submodule "2024/02/14/gptneox-chat"]
+	path = 2024/02/14/gptneox-chat
+	url = https://huggingface.co/spaces/dfalbel/gptneox-chat
