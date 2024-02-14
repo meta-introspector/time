@@ -18,7 +18,6 @@ we can think of the set of functions or types as such a set where we have
 different frequencies that carry other data. communication theory.
 
 
-
 convert coq to js in melange.
 load into streamlit via api.
 create streamlit gui from inductives and records.
@@ -32,3 +31,66 @@ decidable problems.
 generic structured data storage for domain specific data.
 incomplete descriptions and formalizations.
 usage of llms as workflows to consider things.
+
+* high to low level and back
+
+busy beaver algo
+set of programs of size N
+iterative proof.
+use asts.
+which programs represented by these asts terminate
+on which conditions.
+consider combinations.
+how can we evaluate them.
+using llms maybe?
+
+lets take the words from the text : 
+for x in set of terms,
+for y in set of terms
+if x != y, consider the relationship from x to y
+
+* idea of introspective data set.
+consider log files.
+shell commands.
+traces. debug files.
+all of these artifacts are more valuable in context.
+we dont want to mix them with git but keep them adjacent.
+
+* literate programming. introspective programming. emotional progamming.
+
+consider the following idea:
+
+each step is nessessary and proven correct.
+each step is a space time unit that contains a series of proof steps.
+each proof step  is a space time energy unit that is occupied by a basic unit
+of attention that we can consider to the be the basic unit of consiousness.
+the consiousness of the proof step is everything that is needed to show that it is correct
+but also the implications of this proof, and its conventional usage,
+we can think of consiousness as a radio dial that we can tune
+and that we can select one of the areas.
+insert picture of the matrix hallway.
+insert ref to kafkas books, endless hallways.
+each area or space is defined by whatever rules where used to create it.
+we can imagine the layout of the brain where different areas have different
+body parts. now we can imagine a part of the brain that has the logarithmic
+function and imagine a fractal that emerges from it.
+each function is a number, we have sequence of them, but also an ordering to them that is somewhat logical.
+we can exploit this to make relative functions so we can say
+the function that occurs next to me as a pointer to a function.
+so not only this function, but relative to this function we can relate.
+we can consider these to be faculties of a basic unit of consiousness
+the computer or the person or the llm in a context.
+constructing optimal contexts for llms is also constructing them for humans
+or for algorithms. We can think of epic stories as such structures that have the right blend of context and data to be memorable.
+so this brings us to the study of hymnals as sources of patterns for abstract story tellings,
+the attempt to bring abstract concepts to people with emotion.
+
+** openhymnal dataset
+http://openhymnal.org/
+
+
+* idea
+have ocaml code produce structured text output that is easy to parse
+json logging for example and use that in the python webpage.
+replace python streamlit with literal coq webpages.
+embed jscoq.
