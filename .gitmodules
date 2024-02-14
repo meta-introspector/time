@@ -3032,3 +3032,6 @@
 [submodule "2024/02/14/nearly-functional-python"]
 	path = 2024/02/14/nearly-functional-python
 	url = https://github.com/wware/nearly-functional-python
+[submodule "2024/02/14/datamodel-code-generator"]
+	path = 2024/02/14/datamodel-code-generator
+	url = https://github.com/koxudaxi/datamodel-code-generator

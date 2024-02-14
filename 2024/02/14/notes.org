@@ -1,0 +1,34 @@
+* ideas and plans
+** coq plugin for lang agent
+be able to call :
+
+ the llm from inside coq via lang agent.
+ coq from the inside the llm.
+ llm from from the inside the llm
+   creating continuations.
+ human from from the inside the llm
+   creating support situations.
+
+harmonic frequencies on sand create shapes, that contain bubbles or spheres.
+we can adjust the tuning knob of frequencies for the radio,
+but we will get a different results every time, so trying to model them is
+complex.
+
+we can think of the set of functions or types as such a set where we have
+different frequencies that carry other data. communication theory.
+
+
+
+convert coq to js in melange.
+load into streamlit via api.
+create streamlit gui from inductives and records.
+select box for inductives
+search box to search for tuple parameters
+variables you can store in your environment with
+a set types you can search
+and functions you can call.
+the boundry between provable and non provable.
+decidable problems.
+generic structured data storage for domain specific data.
+incomplete descriptions and formalizations.
+usage of llms as workflows to consider things.
