@@ -3026,3 +3026,9 @@
 [submodule "2024/02/14/gptneox-chat"]
 	path = 2024/02/14/gptneox-chat
 	url = https://huggingface.co/spaces/dfalbel/gptneox-chat
+[submodule "2024/02/14/melange"]
+	path = 2024/02/14/melange
+	url = https://github.com/melange-re/melange
+[submodule "2024/02/14/nearly-functional-python"]
+	path = 2024/02/14/nearly-functional-python
+	url = https://github.com/wware/nearly-functional-python
