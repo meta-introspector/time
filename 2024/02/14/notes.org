@@ -1,13 +1,10 @@
 * ideas and plans
 ** coq plugin for lang agent
 be able to call :
-
- the llm from inside coq via lang agent.
- coq from the inside the llm.
- llm from from the inside the llm
-   creating continuations.
- human from from the inside the llm
-   creating support situations.
+the llm from inside coq via lang agent.
+coq from the inside the llm via llama.cpp(later)
+llm from from the inside the llm creating continuations.
+llm can call the human from from the inside the llm via ai ticket creating support situations.
 
 harmonic frequencies on sand create shapes, that contain bubbles or spheres.
 we can adjust the tuning knob of frequencies for the radio,
@@ -94,3 +91,27 @@ have ocaml code produce structured text output that is easy to parse
 json logging for example and use that in the python webpage.
 replace python streamlit with literal coq webpages.
 embed jscoq.
+
+* enumerating permuations.
+
+consider enumerating the permutations of the asts as an index.
+the difference between any two could be enormous.
+then think of a sorting function for only gradual differences.
+
+we can construct a gradient to sort the types into a sensible
+order and give regions and boundries of the ordered set.
+
+quick chick.
+
+lets take lang agent and create a record type for its parameters.
+oh we have that already. lang model.
+
+lets create in coq a collector of data to send to the agent.
+
+we want to string togther the parts
+
+find . -name \*.txt -exec grep -P -e '(\w+)' -o {} \; | sort | uniq -c |sort -n > report
+
+proofs traces -> snark extraction.
+create prompt to translate : asts or proof into Q/A questions or ZK snarks about it.
+
