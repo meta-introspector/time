@@ -1,0 +1,30 @@
+{
+    "content":"\n\nTo answer your question, I'd like to provide a brief overview of the different levels or types of reality that have been proposed in various philosophical and scientific frameworks. This is by no means an exhaustive list, but it should give you an idea of some common ways to order these concepts.\n\n1. Physical Universe: This is the most basic level of reality, often described as the material world or the realm of matter and energy. It is characterized by spatial extension, temporal duration, causality, and physical laws such as those of physics.\n2. Living Universe: Beyond the physical universe lies the living",
+    "generation_settings":{
+	"dynatemp_exponent":1.0,
+	"dynatemp_range":0.0,
+	"frequency_penalty":0.0,
+	"grammar":"",
+	"ignore_eos":false,
+	"logit_bias":[],
+	"min_p":0.05000000074505806,
+	"mirostat":0,
+	"mirostat_eta":0.10000000149011612,
+	"mirostat_tau":5.0,
+	"model":"/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730",
+	"n_ctx":512,
+	"n_keep":0,
+	"penalize_nl":true,
+	"penalty_prompt_tokens":[],
+	"presence_penalty":0.0,
+	"repeat_last_n":64,
+	"repeat_penalty":1.100000023841858,"seed":4294967295,"stop":[],"stream":false,"temperature":0.800000011920929,"tfs_z":1.0,"top_k":40,"top_p":0.949999988079071,"typical_p":1.0,"use_penalty_prompt_tokens":false
+    },
+    "model":"/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730",
+    "prompt":"consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?",
+    "slot_id":0,
+    "stop":true,"stopped_eos":false,"stopped_limit":true,"stopped_word":false,"stopping_word":"",
+    "timings":{"predicted_ms":14511.037,"predicted_n":128,"predicted_per_second":8.820872002462677,"predicted_per_token_ms":113.3674765625,"prompt_ms":2092.612,"prompt_n":44,"prompt_per_second":21.026353667091655,"prompt_per_token_ms":47.559363636363635
+	      },
+    "tokens_cached":171,"tokens_evaluated":44,"tokens_predicted":128,"truncated":false
+}

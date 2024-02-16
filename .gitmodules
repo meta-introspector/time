@@ -3062,3 +3062,9 @@
 [submodule "2024/02/16/instructor_ex"]
 	path = 2024/02/16/instructor_ex
 	url = https://github.com/thmsmlr/instructor_ex
+[submodule "2024/02/16/erlang_ml"]
+	path = 2024/02/16/erlang_ml
+	url = https://github.com/okeuday/erlang_ml
+[submodule "2024/02/16/tree-sitter-menhir"]
+	path = 2024/02/16/tree-sitter-menhir
+	url = https://github.com/Kerl13/tree-sitter-menhir

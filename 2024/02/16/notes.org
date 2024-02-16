@@ -708,3 +708,180 @@ git submodule add https://github.com/thmsmlr/instructor_ex
 #+RESULTS:
 
 
+
+#+begin_src shell
+git submodule add https://github.com/okeuday/erlang_ml
+#+end_src
+
+#+RESULTS:
+
+
+* ppx coq introspector
+now take the ppx introspector and apply it to the coq plugin
+and wrap the coq types to serialize them to the llm.
+instead of grammar in the llm lets use a more generic one with inline grammars.
+
+* voting system for new terms
+paxos protocol
+consensus protocol to align model versions and weights
+so they can come to an agreement on what terms means.
+weak equivalency between model weight sections.
+bunch of sentences with same meaning -> weakly equilvalent weights.
+we can a a mapping from one to the other and back. 
+between different llm model versions like mistral and terms.
+
+X^2
+for n in all of X for m in all of X compare n and m.
+
+system A and B
+for all terms in A, look in b for something similar and
+reverse.
+
+searchspace = location^2*items^2*verbs1*verbs2
+
+codegen searchspace
+|filter for good stuff
+| convert to python
+| test code
+| aim for the good stuff
+ coq model
+ ocamsl types
+
+ modules.  dep. graphs. versions.
+ metis graph partitioning. tulip. graph clustering.
+
+** 
+ Error at  `Assoc (
+ [
+ ("content",
+ `String ("\n\nTo provide an answer, let's first define some terms and concepts:\n\n1. Universe: The totality of all existence, including all matter, energy, space, and time. It is the sum total of everything that exists or can be observed.\n2. Multiverse: A collection of multiple universes, each with its own set of fields and interactions. This concept arises in theoretical physics as a solution to certain problems, such as the fine-tuning problem or the cosmological constant problem.\n3. Meta-universe: The universe that contains all universes, including the multiverse.")
+ );
+ ("generation_settings",
+ `Assoc (
+ [
+ ("dynatemp_exponent", `Float (1.));
+ ("dynatemp_range", `Float (0.));
+ ("frequency_penalty", `Float (0.));
+ ("grammar", `String (""));
+ ("ignore_eos", `Bool (false));
+ ("logit_bias", `List ([]));
+ ("min_p", `Float (0.0500000007451));
+ ("mirostat", `Int (0));
+ ("mirostat_eta", `Float (0.10000000149));
+ ("mirostat_tau", `Float (5.));
+ ("model",
+ `String ("/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730"));
+ ("n_ctx", `Int (512));
+ ("n_keep", `Int (0));
+ ("n_predict", `Int (128));
+ ("n_probs", `Int (0));
+ ("penalize_nl", `Bool (true));
+ ("penalty_prompt_tokens", `List ([]));
+ ("presence_penalty", `Float (0.));
+ ("repeat_last_n", `Int (64));
+ ("repeat_penalty", `Float (1.10000002384));
+ ("seed", `Int (4294967295));
+ ("stop", `List ([]));
+ ("stream", `Bool (false));
+ ("temperature", `Float (0.800000011921));
+ ("tfs_z", `Float (1.));
+ ("top_k", `Int (40));
+ ("top_p", `Float (0.949999988079));
+ ("typical_p", `Float (1.));
+ ("use_penalty_prompt_tokens", `Bool (false))
+ ]));
+
+ ("model",
+ `String ("/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730"));
+ ("prompt",
+ `String ("consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?"));
+ ("slot_id", `Int (0));
+ ("stop", `Bool (true));
+ ("stopped_eos", `Bool (false));
+ ("stopped_limit", `Bool (true));
+ ("stopped_word", `Bool (false));
+ ("stopping_word", `String (""));
+ 
+ ("tokens_cached", `Int (171));
+ ("tokens_evaluated", `Int (44));
+ ("tokens_predicted", `Int (128));
+ ("truncated", `Bool (false))])
+	  
+
+ return json {
+            {"n_ctx",             slot.n_ctx},
+            {"model",             params.model_alias},
+            {"seed",              slot.params.seed},
+            {"temperature",       slot.sparams.temp},
+            {"dynatemp_range",    slot.sparams.dynatemp_range},
+            {"dynatemp_exponent", slot.sparams.dynatemp_exponent},
+            {"top_k",             slot.sparams.top_k},
+            {"top_p",             slot.sparams.top_p},
+            {"min_p",             slot.sparams.min_p},
+            {"tfs_z",             slot.sparams.tfs_z},
+            {"typical_p",         slot.sparams.typical_p},
+            {"repeat_last_n",     slot.sparams.penalty_last_n},
+            {"repeat_penalty",    slot.sparams.penalty_repeat},
+            {"presence_penalty",  slot.sparams.penalty_present},
+            {"frequency_penalty", slot.sparams.penalty_freq},
+            {"penalty_prompt_tokens", slot.sparams.penalty_prompt_tokens},
+            {"use_penalty_prompt_tokens", slot.sparams.use_penalty_prompt_tokens},
+            {"mirostat",          slot.sparams.mirostat},
+            {"mirostat_tau",      slot.sparams.mirostat_tau},
+            {"mirostat_eta",      slot.sparams.mirostat_eta},
+            {"penalize_nl",       slot.sparams.penalize_nl},
+            {"stop",              slot.params.antiprompt},
+            {"n_predict",         slot.params.n_predict},
+            {"n_keep",            params.n_keep},
+            {"ignore_eos",        ignore_eos},
+            {"stream",            slot.params.stream},
+            {"logit_bias",        slot.sparams.logit_bias},
+            {"n_probs",           slot.sparams.n_probs},
+            {"grammar",           slot.sparams.grammar},
+        };
+
+
+{"content":"\n\nTo answer your question, I'd like to provide a brief overview of the different levels or types of reality that have been proposed in various philosophical and scientific frameworks. This is by no means an exhaustive list, but it should give you an idea of some common ways to order these concepts.\n\n1. Physical Universe: This is the most basic level of reality, often described as the material world or the realm of matter and energy. It is characterized by spatial extension, temporal duration, causality, and physical laws such as those of physics.\n2. Living Universe: Beyond the physical universe lies the living",
+"generation_settings":{
+"dynatemp_exponent":1.0,"dynatemp_range":0.0,"frequency_penalty":0.0,"grammar":"","ignore_eos":false,"logit_bias":[],"min_p":0.05000000074505806,"mirostat":0,"mirostat_eta":0.10000000149011612,"mirostat_tau":5.0,"model":"/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730",
+"n_ctx":512,"n_keep":0,"n_predict":128,"n_probs":0,"penalize_nl":true,"penalty_prompt_tokens":[],"presence_penalty":0.0,"repeat_last_n":64,"repeat_penalty":1.100000023841858,"seed":4294967295,"stop":[],"stream":false,"temperature":0.800000011920929,"tfs_z":1.0,"top_k":40,"top_p":0.949999988079071,"typical_p":1.0,"use_penalty_prompt_tokens":false},
+"model":"/usr/share/ollama/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730","prompt":"consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?consider a consecutive series of types to describe the universe and universe of universes, what is your ordering?","slot_id":0,"stop":true,"stopped_eos":false,"stopped_limit":true,"stopped_word":false,"stopping_word":"",
+"timings":{"predicted_ms":14511.037,"predicted_n":128,"predicted_per_second":8.820872002462677,"predicted_per_token_ms":113.3674765625,"prompt_ms":2092.612,"prompt_n":44,"prompt_per_second":21.026353667091655,"prompt_per_token_ms":47.559363636363635},
+"tokens_cached":171,"tokens_evaluated":44,"tokens_predicted":128,"truncated":false
+}
+
+* tree sitter menhir
+
+ssee 2023/12/23/tree_sitter_grammar_to_gbnf
+
+#+begin_src shell
+git submodule add https://github.com/Kerl13/tree-sitter-menhir
+#+end_src
+
+#+RESULTS:
+
+menhir parser writen in treesitter lang
+-> tree_sitter_grammar_to_gbnf
+-> gbnf
+menhir parser in gbnf
+then llama cpp can now generate new menhir parsers
+new menhir parsers can be converted to gbnf
+then llama cpp can now generate new gbnf parsers
+then llama cpp can now extend itself.
+
+generate me a domain specific grammar for my particular needs,
+individual function calls.
+then use that grammar.
+
+each of the tools for the agents to use in the simulation has a grammar.
+each of the weapons in the game have an action or usage grammar,
+sequence of actions to use the weapon. jump , crouch. magic word.
+think zork. text based game.
+
+math proof to show validity of semantics.
+
+menhir -> treesitter  -> gbnf
+menhir -> LLM -> gbnf
+ppx introspector -> llm  in mehir/gbnf parser.
+
+cat: nodes, edges.
