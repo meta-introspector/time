@@ -1,0 +1,26 @@
+
+#+begin_src input
+We are building a proof and prompt software generator for ocaml with coq proofs with a large language model and a proof engine combined via adaptive language agent architecture. In that context we ask you to forgivingly and creativly use the following context: Verb : Launch doing introspect; Type Name: executable with a executable; Place: Ast connected with Bytecode . We want to generate and test and prove the results. Trace how the requirements are reflected in the prompt, the test and the proof. What is your response? Please generate prompt/proof/test variant array of size 6
+#+end_src
+#+begin_src output mixtral
+ Result: Sure! I understand that you want me to create a set of prompts, tests, and Coq proofs related to building a proof and prompt software generator for OCaml with a large language model and a proof engine combined via an adaptive language agent architecture. Here are six different variants, each reflecting the given context in a slightly different way:
+
+1. Prompt: "Launch introspection on the executable named 'ocaml\_prompt\_generator'. Verify that the AST is correctly connected to its bytecode representation."
+Test: Run the `ocaml_prompt_generator` and check its output against expected results. Ensure that the AST and bytecode are correctly linked by inspecting the generated files.
+Coq Proof: Formally prove that the introspection function correctly identifies the connection between the AST and bytecode for a given OCaml program.
+2. Prompt: "Generate 10 random OCaml programs and their corresponding Coq proofs using the language model and the adaptive language agent architecture."
+Test: Check that each generated OCaml program is correctly compiled to bytecode and that its Coq proof is valid. Measure the success rate of the generator and optimize it for better performance.
+Coq Proof: Formally prove that the language model and the adaptive language agent architecture can generate correct OCaml programs and their corresponding Coq proofs with high probability.
+3. Prompt: "Trace the execution of the 'verify\_ast\_bytecode' function on a sample OCaml program to ensure it correctly identifies any discrepancies between the AST and bytecode."
+Test: Create a set of test cases that include valid and invalid OCaml programs, run them through the `verify_ast_bytecode` function, and verify the correctness of its output.
+Coq Proof: Formally prove that the `verify_ast_bytecode` function is correct and complete, i.e., it always correctly identifies discrepancies between the AST and bytecode when they exist, and never reports any false positives or negatives.
+4. Prompt: "Launch introspection on the executable named 'coq\_proof\_generator' to ensure that it can generate valid Coq proofs for a given OCaml program."
+Test: Test the `coq_proof_generator` by generating random OCaml programs and their corresponding Coq proofs. Verify that each generated proof is correct and complete.
+Coq Proof: Formally prove that the `coq_proof_generator` can generate valid Coq proofs for a given OCaml program, using the Coq proof assistant.
+5. Prompt: "Generate a test suite to verify the correctness of the 'ocaml\_to\_ast' function by comparing its output against manually created ASTs."
+Test: Write a set of test cases that include valid and invalid OCaml programs, run them through the `ocaml_to_ast` function, and compare their output with manually created ASTs. Measure the success rate and optimize the generator for better performance.
+Coq Proof: Formally prove that the `ocaml_to_ast` function is correct and complete, i.e., it always correctly translates a valid OCaml program to its corresponding AST, and never produces any false positives or negatives.
+6. Prompt: "Launch introspection on the executable named 'bytecode\_verifier' to ensure that it can accurately determine whether an OCaml bytecode corresponds to its source code."
+Test: Test the `bytecode_verifier` by generating random OCaml programs and their corresponding bytecodes. Verify that the verifier correctly identifies any discrepancies between them.
+Coq Proof: Formally prove that the `bytecode_verifier` is correct and complete, i.e., it always correctly determines whether an OCaml bytecode corresponds to its source code when they exist, and never reports any false positives or negatives.
+#+end_src

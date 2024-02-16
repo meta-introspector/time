@@ -1,0 +1,50 @@
+
+#+begin_src input
+generate a very simple menhir grammar that can be used to describe more complex grammars.
+#+end_src
+#+begin_src output mixtral
+ Result: Here is a simple Menhir grammar for describing more complex grammars:
+```ocaml
+%token <string> SYMBOL
+
+%start Grammar
+
+Grammar:
+  Nonterminals ';' Productions '.' EOF
+
+Nonterminals:
+  /* empty */
+| Nonterminals SymbolDef
+
+SymbolDef:
+  SYMBOL ':' Type
+
+Type:
+  /* empty */
+| '{' Types '}'
+
+Types:
+  /* empty */
+| Types Type
+
+Productions:
+  /* empty */
+| Productions Production
+
+Production:
+  Nonterminal '::=' Expression
+
+Nonterminal:
+  SYMBOL
+
+Expression:
+  Alternatives
+
+Alternatives:
+  Expression
+| Alternatives '|' Expression
+```
+This grammar defines a simple context-free grammar (CFG) with nonterminals, productions, and expressions. Nonterminals are defined using the `SymbolDef` production, which consists of a symbol name followed by a colon and a type. The type can be either empty or a set of types enclosed in curly braces. Productions consist of a nonterminal followed by `::=` and an expression. Expressions can be a sequence of alternatives separated by `|`.
+
+This grammar is simple enough to be used as a starting point for describing more complex grammars, but it can also be extended with additional productions and rules to handle specific language features or constructs.
+#+end_src

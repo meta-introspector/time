@@ -3053,3 +3053,12 @@
 [submodule "2024/02/13/PerfKitBenchmarker"]
 	path = 2024/02/13/PerfKitBenchmarker
 	url = https://github.com/meta-introspector/PerfKitBenchmarker
+[submodule "2024/02/15/org-babel-eval-in-repl"]
+	path = 2024/02/15/org-babel-eval-in-repl
+	url = https://github.com/diadochos/org-babel-eval-in-repl
+[submodule "2024/02/15/flycheck-ocaml"]
+	path = 2024/02/15/flycheck-ocaml
+	url = https://github.com/flycheck/flycheck-ocaml
+[submodule "2024/02/16/instructor_ex"]
+	path = 2024/02/16/instructor_ex
+	url = https://github.com/thmsmlr/instructor_ex

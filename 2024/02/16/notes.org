@@ -1,0 +1,710 @@
+
+Now we have a complex way to call lang_agent in the background
+and want to make it simpler.
+
+* example mixing
+
+we want to create a emacs lisp code that will generate this internally and fill out the -p prompt section via the current selection
+and insert the org bable into the current doc but also give each one a unique name to each block.
+also move all the constants to emacs variables.
+so create the customizable variables for the parameters.
+pass those variables into the shell script.
+the babel section should be simple like language : mixtral
+
+#+begin_src shell :async :results verbatim
+    /mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe \
+        --openai -m mixtral \
+        -s example \
+        -x 1.txt \
+        -p "create combinations of terms to form structures. \
+  pairs\
+  triple\
+  n grams.\
+  "  \
+        -u https://dev-hub.agentartificial.com
+    cat example_11.txt
+#+end_src
+
+#+RESULTS:
+#+begin_example
+DEBUG3 path example
+DEBUG4 MODEL :mixtral
+Consider:mixtralexample
+SKIP existingexample_11.txt
+
+,#+begin_src input
+create combinations of terms to form structures. pairstriplen grams.
+,#+end_src
+,#+begin_src output mixtral
+ Result: Sure, I can help you with that! Here are some combinations of terms to form structures called pairs, triplets, and n-grams (where n is the number of terms in the combination).
+
+1. Pairs:
+,* Apple and Orange
+,* Dog and Cat
+,* Sun and Moon
+,* Happy and Sad
+,* Yes and No
+,* Buy and Sell
+,* Tea and Coffee
+,* Rice and Beans
+,* Hot and Cold
+,* In and Out
+2. Triplets:
+,* Red, Blue, and Green
+,* Mom, Dad, and Kid
+,* Big, Medium, and Small
+,* Fast, Slow, and Moderate
+,* Tall, Short, and Average
+,* Expensive, Cheap, and Affordable
+,* Near, Far, and In-between
+,* Strong, Weak, and Moderate
+,* Sweet, Sour, and Bitter
+,* Morning, Afternoon, and Evening
+3. N-grams (where n is the number of terms in the combination):
+,* One, Two, Three, Four, and Five
+,* Beginning, Middle, and End
+,* Left, Center, and Right
+,* Up, Down, Left, and Right
+,* North, South, East, and West
+,* Positive, Negative, and Neutral
+,* True, False, and Unknown
+,* Always, Sometimes, and Never
+,* Open, Closed, and In-between
+,* First, Second, Third, and Fourth
+
+I hope this helps! Let me know if you have any other questions.
+,#+end_src
+#+end_example
+
+
+#+begin_src shell :async
+  /mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe \
+      --openai -m mixtral -s generic_proof_executable_with_a_executableLaunch_doing_introspect \
+      -x _6Launch_doing_introspectexecutable_with_a_executableAst_connected_with_Bytecode.txt \
+      -p "We are building a proof and prompt software generator for ocaml with coq proofs with a large language model and a proof engine combined via adaptive language agent architecture. In that context we ask you to forgivingly and creativly use the following context: Verb : Launch doing introspect; Type Name: executable with a executable; Place: Ast connected with Bytecode . We want to generate and test and prove the results. Trace how the requirements are reflected in the prompt, the test and the proof. What is your response? Please generate prompt/proof/test variant array of size 6"  \
+      -u https://dev-hub.agentartificial.com 
+#+end_src
+
+#+RESULTS:
+| DEBUG3                                                                            | path                                                                                                                                                    | generic_proof_executable_with_a_executableLaunch_doing_introspect |
+| DEBUG4                                                                            | MODEL                                                                                                                                                   | :mixtral                                                          |
+| Consider:mixtralgeneric_proof_executable_with_a_executableLaunch_doing_introspect |                                                                                                                                                         |                                                                   |
+| OUTPUT:                                                                           | generic_proof_executable_with_a_executableLaunch_doing_introspect_1_6Launch_doing_introspectexecutable_with_a_executableAst_connected_with_Bytecode.txt |                                                                   |
+
+
+
+
+
+#+begin_src output
+ To create an Emacs Lisp code that generates the `org-mode` babel code as per your requirements, you can follow the steps below:
+
+First, let's define customizable variables for the parameters in a new file named `my-shell.el`:
+
+```emacs
+(defvar my-shell-exe "//path/to/simple.exe"
+  "Path to simple.exe")
+
+(defvar my-shell-openai "true"
+  "Use OpenAI flag")
+
+(defvar my-shell-model "mixtral"
+  "Bash script model")
+
+(defvar my-shell-input "example"
+  "Input file name")
+
+(defvar my-shell-output "example_%d.txt"
+  "Output file name template")
+
+(defvar my-shell-args
+  '("--openai"
+    "-m" my-shell-model
+    "-s" my-shell-input
+    "-p" "create combinations of terms to form structures.\n\
+pairs\ntriple\nn grams.\n")
+  "Arguments for simple.exe")
+
+(defvar my-shell-url "https://dev-hub.agentartificial.com"
+  "URL for the server")
+```
+
+Replace `//path/to/simple.exe` with the actual path to the `simple.exe` file.
+
+Next, create a function that generates the `org-mode` babel code:
+
+```emacs
+(defun my/generate-shell-babel ()
+  "Generate Org-Mode Babel code for running a shell command with customizable parameters."
+  (interactive)
+  (let ((code
+         (concat
+          "#+begin_src shell :async :results verbatim\n"
+          (format "\t%s %s\n" my-shell-exe my-shell-args)
+          (if my-shell-openai "\n--openai " "")
+          (concat my-shell-url "\n")
+          "#+end_src\n")))
+    (insert code)))
+```
+
+Now, call this function whenever you want to generate the `org-mode` babel code. For example, you can bind it to a key in your init file:
+
+```emacs
+(global-set-key "\C-cl" 'my/generate-shell-babel)
+```
+
+This will create an `org-mode` babel block with the given customizable variables every time you press Ctrl+l. The generated code will include a unique name for each block, and it will insert the Org table into the current doc.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that generates the `-p` prompt section based on the current selection and inserts an Org babel block with a unique name for each block, follow these steps:
+
+1. First, let's define some customizable variables for the parameters:
+
+```lisp
+(defvar my-shell-script "/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe"
+  "Path to the shell script.")
+
+(defvar my-openai-flag t
+  "Set this variable to 't' if you want to use OpenAI.")
+
+(defvar my-mixtral-language "mixtral"
+  "Language for Babel block.")
+
+(defvar my-input-file ""
+  "Input file path.")
+
+(defvar my-output-files '("example_1.txt" "example_2.txt" ...)
+  "List of output files with unique names.")
+
+(defvar my-prompt "create combinations of terms to form structures.\n\
+pairs\n\
+triple\n\
+n grams.\n\
+"
+  "Prompt text for the shell script.")
+
+(defvar my-url "https://dev-hub.agentartificial.com")
+  "URL for the shell script.")
+```
+
+You can customize these variables as needed.
+
+2. Next, create a function that generates the Org babel block:
+
+```lisp
+(defun my-insert-shell-babel ()
+  (interactive)
+  (let ((current-line (buffer-point)))
+    (if (re-search-forward "\\#\+begin_src" current-line t)
+        (progn
+          (goto-char (1+ (match-beginning 0))) ; move to the beginning of the babel block
+          (setq current-line (buffer-point))
+          (org-babel-do-load-babel-buffer) ; load the babel buffer if not already loaded
+          (insert (format "#+BEGIN_SRC %s :async :results verbatim\n" my-mixtral-language))
+          (insert (format "  %s --openai %s -m %s\n" my-shell-script my-openai-flag my-mixtral-language))
+          (mapconcat '(lambda (file) (concat "  -x " file "\n")) my-output-files " ")
+          (insert (format "%s --p \"%s\"\n" my-prompt my-prompt)) ; replace with the prompt from your selection
+          (insert (format "  -u %s\n" my-url))
+          (insert "\n") ; newline after arguments
+          (insert (format "#+END_SRC\n")))
+      (message "Error: No babel block found."))))
+```
+
+This function will search for a babel block starting with `#+begin_src` in the current line and insert a new shell babel block with the defined variables.
+
+3. Now, let's create an Emacs command to select text and generate the Org babel block:
+
+```lisp
+(defcommand my-insert-shell-block (nil)
+  "Generate a new Org babel shell block with selected text as the prompt."
+  (interactive)
+  (if (use-region-p) ; if region is active
+      (my-insert-shell-babel)
+    (beginning-of-line)
+    (my-insert-shell-babel)))
+```
+
+4. Finally, bind the command to a key combination:
+
+```lisp
+(define-key global-map "\C-c\C-s" 'my-insert-shell-block)
+```
+
+This will allow you to create new shell babel blocks by selecting text and pressing `Ctrl + S`.
+
+The above Emacs Lisp code should help you achieve your goal. Remember to customize the variables according to your specific use case.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that generates the `org-mode` babel code with a unique name for each block, customizable variables for parameters, and passes those variables into the shell script, follow these steps:
+
+1. Define a helper function to generate a unique name for each block.
+
+```emacs
+(defun my/generate-unique-name ()
+  "Generate a unique name based on the current time."
+  (format "block-%s" (current-time-string "%Y%m%d%H%M%S")))
+```
+
+2. Define a function to create and fill out the `org-mode` babel code block with the given shell script and variables.
+
+```emacs
+(defun my/create-shell-babel-block (&rest args)
+  "Create an org-mode babel shell block with customizable variables."
+  (interactive "e")
+  (let ((name (my/generate-unique-name))
+        (script (car args)))
+    (save-excursion
+      ;; Move to the beginning of the line before #+begin_src.
+      (goto-char (point-min))
+      (backward-sexp)
+      (when (equal (buffer-substring-no-properties (- point 3) point) "#+begin_src shell")
+        (setq begin-position (point)))
+      ;; Generate the block name.
+      (setq name (format "Bash-%s" name))
+      (goto-char (point-min))
+      (insert (concat "#+begin_src shell :async :results verbatim\n"))
+      (insert (format "\n  %s %s --%s -m mixtral \n    " script (- (point) 2) name))
+      (mapc (lambda (var-name var-value)
+             (with-current-buffer "*scratch*"
+               (let ((buf-name (format "%s_variables" name)))
+                 (if (not (boundp buf-name))
+                     (progn
+                       ;; Define a new variable.
+                       (defvar buf-name var-value)
+                       ;; Insert it into the shell command.
+                       (goto-char (point-min))
+                       (backward-sexp)
+                       (insert (format "  -%s %s \n    " var-name var-value))
+                       ))
+               (goto-char begin-position)
+             (setq args (cdr args))))
+      (insert "\n#+end_src\n")
+      (kill-buffer "*scratch*"))))
+```
+
+3. Customize the variables for the parameters and call `my/create-shell-babel-block` to generate the shell script block.
+
+```emacs
+(setq my-openai "true") ;; Set openai variable
+(setq my-m "mixtral") ;; Set mixtral variable
+(setq my-s "example") ;; Set example variable
+(setq my-x "1.txt") ;; Set x variable
+(setq my-p "create combinations of terms to form structures.\n  pairs\n  triple\n  n grams.\n  ") ;; Set p variable
+(setq my-u "https://dev-hub.agentartificial.com") ;; Set u variable
+
+(my/create-shell-babel-block "/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe" my-openai my-m my-s my-x my-p my-u)
+```
+
+This code will create a new Org-mode babel shell block with the given parameters and unique names for each block. Each variable can be customized to fit your specific use case.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that generates the `org-mode` babel code with customizable variables and unique names for each block, you can follow these steps:
+
+First, let's define some customizable variables for your use case. We will create variables to store the shell command, input files, output file, and prompt text.
+
+```emacs lisp
+(defvar my-shell-command ""
+  "Customizable variable for the shell command to be executed.")
+
+(defvar my-input-files '("1.txt")
+  "Customizable list of input files to be passed to the shell script.")
+
+(defvar my-output-file ""
+  "Customizable variable for the output file name.")
+
+(defvar my-prompt ""
+  "Customizable variable for the prompt text to be used in the shell script.")
+
+(defvar my-url ""
+  "Customizable variable for the URL to be passed to the shell script.")
+```
+
+Next, let's create a helper function that generates the babel code with unique names and custom variables:
+
+```emacs lisp
+(defun generate-shell-babel-code ()
+  "Generate an org-mode babel block for a given shell command."
+  (interactive)
+  (let ((unique-counter 0))
+    (mapcar (lambda (input-file)
+             (setq unique-counter (1+ unique-counter))
+             `(concat "(#+begin_src shell :async :results verbatim\n"
+                      (format "(/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe %s --openai -m mixtral -s example -x ,(shell-quote-arg input-file) -p \"%s\" -u %s\n" my-shell-command my-prompt my-url)
+                      (format "cat %s\n" (shell-quote-arg (concat "example_" unique-counter ".txt")))
+                      (format "%s\n" (concat "(#+end_src\n")))))
+             my-input-files)))
+```
+
+This helper function generates a list of babel blocks, where each block corresponds to an input file. The `unique-counter` is used to create unique names for each block.
+
+Finally, call the `generate-shell-babel-code` function to generate and insert the code into your current buffer:
+
+```emacs lisp
+(generate-shell-babel-code)
+```
+
+Now, you have an Emacs Lisp code that generates an `org-mode` babel block with a customizable shell command, input files, output file, and prompt text. The generated blocks also have unique names for each block. To modify the behavior of this code, simply update the customizable variables (`my-shell-command`, `my-input-files`, `my-output-file`, `my-prompt`, and `my-url`) to fit your use case.
+#+end_src
+#+begin_src output
+ To create the Emacs Lisp code you described, here's a starting point. Please note that this is a rough outline, and you may need to adjust it according to your specific use case.
+
+```lisp
+(defcustom my-shell-command-script "/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe"
+  "Path to the shell script.")
+
+(defcustom my-openai-flag "-m mixtral"
+  "OpenAI flag for the shell script.")
+
+(defcustom my-options-list '((("-s" . "example")
+                             ("-x" . "1.txt")
+                             ("-p" . "create combinations of terms to form structures.\n\
+                               pairs\n\ntriples\n\nn-grams.\n")))
+  "List of command line options and their values for the shell script.")
+
+(defcustom my-file-path (buffer-file-name)
+  "Current buffer file path.")
+
+(defcustom my-input-file (if (boundp 'my-file-path) (car (last my-file-path)) "")
+  "Input file name from the buffer file path.")
+
+(defun my-generate-shell-command ()
+  (interactive)
+  (let ((options-string (mapconcat (lambda (option) (format "-%s %s" (car option) (cadr option))) my-options-list))
+        (prompt-string (concat (nth 2 (last my-options-list)) "\n")))
+    (concat my-shell-command-script " " my-openai-flag " " options-string " " my-input-file " " prompt-string)))
+
+(defun my-insert-shell-command ()
+  (interactive)
+  (goto-char (point-min))
+  (delete-region (point) (point-max))
+  (let ((command (my-generate-shell-command)))
+    (insert (format "#+begin_src shell :async :results verbatim\n%s\n#+end_src" command)))
+
+(defun my-org-table ()
+  "Insert an Org table at point."
+  (interactive)
+  (if (use-region-p)
+      (insert (org-mode-table-at-point '((:rows 3 :cols 2))))
+    (org-insert-table)))
+
+(defun my-unique-name ()
+  "Generate a unique name for each block."
+  (let ((counter 0))
+    (dolist (block (split-string (buffer-name) "/"))
+      (setq counter (+ counter (length (car block))))
+      (return counter))
+    (format "block-%d" counter))
+
+(defun my-insert-org-table ()
+  (interactive)
+  (my-insert-shell-command)
+  (newline)
+  (my-org-table)
+  (newline)
+  (setq name (my-unique-name))
+  (concat "#+NAME:" name "\n" (org-insert-heading "Heading"))
+  (org-mode-table-at-point '((:rows 3 :cols 2)))
+  (insert "\n"))
+```
+
+This code defines several custom variables and a function `my-generate-shell-command` that creates the shell command string based on the custom variables. The `my-insert-shell-command` function generates the shell command string and inserts it into the current buffer as an org source block, followed by an Org table. Each time you call `my-insert-org-table`, a new unique name is generated for the Org heading.
+
+Keep in mind that this is just a starting point and you may need to adjust it according to your specific use case.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that generates the `org-mode` babel block with unique names and customizable variables, you can use the following code as a starting point:
+
+```lisp
+(defvar mixtral-command "/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe"
+  "Path to the simple.exe executable.")
+
+(defvar mixtral-openai t
+  "Flag for using OpenAI with simple.exe.")
+
+(defvar mixtral-args '("--openai" "-m" "mixtral")
+  "Arguments passed to simple.exe.")
+
+(defvar mixtral-input "example_%d.txt"
+  "Template for naming input files for simple.exe.")
+
+(defvar mixtral-url "https://dev-hub.agentartificial.com"
+  "URL to use with simple.exe.")
+
+(defun mixtral-shell ()
+  (interactive)
+  (let ((input-file (buffer-name))
+        (unique-id (gensym)))
+    (org-babel-do-source-block
+     (point)
+     '((org-babel-shell-command . mixtral-command)
+       (org-babel-shell-args . (cons '("--input") (cons input-file (append mixtral-args nil))) )
+       (org-babel-set-variable 'input unique-id)
+       (org-babel-set-variable 'output unique-id))
+     `(#+begin_src shell :async :results verbatim
+        ,(@mapconcat (lambda (arg) `(quoted ,arg)) mixtral-args " ")
+        ("--input" input-%s)
+        --openai
+        -m mixtral
+        -s %s
+        -x %s
+        -p "%s"
+        -u %s
+     #+end_src)))
+
+(defun mixtral-generate ()
+  (interactive)
+  (let ((selection (region-beginning-position) (region-end-position))
+        (input-file (buffer-name))
+        (unique-id1 (gensym))
+        (unique-id2 (gensym)))
+    (if selection
+        (progn
+          (org-babel-kill-src-block)
+          (save-excursion
+            (goto-char (point-at-bol))
+            (insert #+begin_src "shell :async :results verbatim\n")
+            (mixtral-shell)
+            (newline)
+            (insert "--cat ")
+            (insert (format input-%s "\n"))
+            (mixtral-shell)
+            (save-excursion
+              (goto-char (point))
+              (insert #+end_src ""))
+          (yank selection))
+        (message "No selection to generate code from.")))
+```
+
+This Lisp code defines several variables for the paths and arguments of the `simple.exe` command. It also includes a helper function `mixtral-shell` that generates the `org-mode` babel block with customizable arguments. The `mixtral-generate` function is used to insert a new shell block at point, with a unique name for each input file.
+
+You can customize these variables by setting their values in your Emacs configuration or using `M-x set-variable`. To use the code, call `mixtral-generate` from anywhere in an org buffer. If there's a selection when you call it, it will insert a new shell block with the selected text as input, and generate a unique name for each file. If there is no selection, it will just print a message.
+
+Keep in mind that this is just a starting point, and you may need to modify or expand the code based on your specific requirements.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that fulfills your requirements, you can make use of the `org-babel` library in Emacs to achieve most of what you've described. Here's a simple example to get you started:
+
+```emacslisp
+(require 'org) ;; Ensure org is loaded
+
+;; Customize these variables as needed
+(defvar mixtral-command "/mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe"
+  "Path to the simple.exe command.")
+
+(defvar openai-flag '("-o" "-openai")
+  "Flag for OpenAI integration.")
+
+(defvar mixtral-arguments '("--openai" "-m" "mixtral" "-s" "%" "-x" "%_input_file%" "-p" "%_prompt%" "-u" "https://dev-hub.agentartificial.com")
+  "List of arguments for the simple.exe command.")
+
+(defvar input-files '("1.txt" "example_11.txt")
+  "List of files to pass as arguments to the shell command.")
+
+;; Define a new org-babel source block type (shell with customizable variables)
+(org-babel-do-load-file (expand-file-name "~/.emacs.d/init.el") '((org-babel-sh :config (lambda ()
+                                            (setq org-babel-sh-command mixtral-command)
+                                            (setq org-babel-sh-args mixtral-arguments)))))
+
+;; Define a function to generate the shell block code with customizable variables
+(defun my/generate-shell-block (&optional args)
+  "Generate a shell block with customizable variables."
+  (interactive "B") ;; Make it interactively callable with M-x
+
+  ;; Set default arguments if not provided
+  (setq args (or args '()))
+
+  ;; Generate the shell block code with customizable variables
+  (let ((input-file (car args))
+        (prompt (cdr args)))
+    (concat
+     #+"#+begin_src shell :async :results verbatim" "\n"
+     (apply 'format "(%s %s)" org-babel-sh-command org-babel-sh-args) ;; Use the customizable variables
+     (mapconcat '(lambda (arg) (concat "-- " arg)) input-file " ")
+     " \"" prompt "\""
+     (mapconcat '(lambda (arg) (concat " " arg)) (append mixtral-arguments input-files) " ")
+     " &> /dev/null ;; Redirect stdout to /dev/null for verbatim results\n"
+     #+"#+end_src")))
+
+;; Example usage: Create a shell block with the first input file and the given prompt
+(my/generate-shell-block "1.txt" "create combinations of terms to form structures.\n  pairs\n  triple\n n grams.")
+```
+
+This code creates customizable variables for the command path, flags, arguments, and input files. It also defines a new `org-babel` source block type called `shell`, which uses these customizable variables when generating the shell commands. Finally, it defines a function called `my/generate-shell-block` that generates the code for a shell block given an optional list of arguments (the input file and the prompt in your case).
+
+You can modify the default values of the variables to suit your needs and use the `my/generate-shell-block` function to create new shell blocks with customizable variables. Additionally, you might want to add more error checking or validation depending on your specific use case.
+#+end_src
+#+begin_src output
+ To create an Emacs Lisp code that generates the `org-mode` babel code based on your selection and customizable variables, you can use the following steps:
+
+1. First, let's define some customizable variables for the parameters:
+
+```emacs
+(defvar my-bash-script "/path/to/your/shell/script.sh"
+  "Path to your shell script")
+
+(defvar my-input-file-prefix "example_"
+  "Prefix for the input files")
+
+(defvar my-output-suffix ""
+  "Suffix for the output files, leave empty if not needed")
+
+(defvar my-args-list '("--openai" "-m" "mixtral" "-s" "" "-x" "" "-p" "" "-u" "")
+  "List of arguments to pass to the shell script")
+```
+
+2. Create a function that generates the babel code based on the selection and variables:
+
+```emacs
+(defun my-generate-shell-code ()
+  "Generate org-mode babel code for a shell command"
+  (interactive)
+  (let ((selection (region-beginning-marker))
+        (args (mapcar (lambda (arg) (concat "--" arg)) my-args-list)))
+    (setq my-args-list (append my-args-list args))
+
+    (setq input-file-name (format "%s%s%d.txt" my-input-file-prefix "" (current-buffer-number))
+          output-file-name "output.txt")
+
+    (unless (string= (car my-args-list) "--m")
+      (setf (nth 0 my-args-list) "--m mixtral")) ; Set the language to 'mixtral'
+
+    (if (string-match-p "^#\\+begin_src shell :async :results verbatim" (buffer-substring-no-properties (point-min) (point-max)))
+        (progn
+          (goto-char (point-min))
+          (end-of-line)
+
+          ;; Replace the existing command with the new one
+          (replace-regexp-in-strings "^    /mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/(.*)$"
+                                   (format "%s/%s" my-bash-script (car my-args-list)))
+
+          ;; Add the custom variables and update the arguments
+          (insert "\n")
+          (dolist (arg my-args-list)
+            (if (string= arg "")
+                (setq arg "\"\"")
+              (insert (format "      --%s \"%s\"\n" arg arg))))
+
+          ;; Set the input file name and insert it into the command
+          (goto-char (point-min))
+          (end-of-line)
+          (replace-regexp-in-strings "\\(--x\\) \"(.*)\$" (concat "--x " input-file-name))
+          (insert "\n")
+          (insert (format "    cat %s\n" input-file-name))
+
+          ;; Set the output file name and update the command accordingly
+          (goto-char (point-min))
+          (end-of-line)
+          (replace-regexp-in-strings "--outfile\\s+--outfile\\s+" "--outfile")
+          (insert "\n")
+          (insert (format "    --outfile %s\n" output-file-name))
+
+          ;; Add the unique name for each block
+          (goto-char (point-min))
+          (end-of-line)
+          (replace-regexp-in-strings "^#\\+begin_src" (concat "#+begin_src shell :async :results verbatim\n#:kill-buffer my-block-\n"))
+          (goto-char (point-min))
+          (end-of-line)
+          (replace-regexp-in-strings "^#\\+end_src" (concat "#+end_src\n"))
+          (let ((counter 0))
+            (while (re-search-forward "^#:kill-buffer my-block-[0-9]+" nil t)
+              (setq counter (+ counter 1)))
+            (replace-regexp-in-strings "my-block-" (format "my-block-%d" counter)))
+          (message "Generated %d new blocks with unique names." counter))))))
+```
+
+3. Now you can use the `my-generate-shell-code` function to generate the `org-mode` babel code:
+
+```emacs
+(call-interactively 'my-generate-shell-code)
+```
+
+This code generates new shell blocks with unique names whenever you call the `my-generate-shell-code` function. It also sets the customizable variables and passes them to the shell script.
+#+end_src
+
+#+begin_src shell :async :results verbatim
+    /mnt/data1/time2/time/2024/01/15/lang_agent/_build/default/bin/simple.exe \
+        --openai -m mixtral \
+        -s grammar \
+        -x .txt \
+        -p "generate a very simple menhir grammar that can be used to describe more complex grammars."  \
+        -u https://dev-hub.agentartificial.com
+    cat grammar_*.txt
+#+end_src
+
+#+RESULTS:
+#+begin_example
+DEBUG3 path grammar
+DEBUG4 MODEL :mixtral
+Consider:mixtralgrammar
+OUTPUT: grammar_1.txt
+
+,#+begin_src input
+generate a very simple menhir grammar that can be used to describe more complex grammars.
+,#+end_src
+,#+begin_src output mixtral
+ Result: Here is a simple Menhir grammar for describing more complex grammars:
+```ocaml
+%token <string> SYMBOL
+
+%start Grammar
+
+Grammar:
+  Nonterminals ';' Productions '.' EOF
+
+Nonterminals:
+  /* empty */
+| Nonterminals SymbolDef
+
+SymbolDef:
+  SYMBOL ':' Type
+
+Type:
+  /* empty */
+| '{' Types '}'
+
+Types:
+  /* empty */
+| Types Type
+
+Productions:
+  /* empty */
+| Productions Production
+
+Production:
+  Nonterminal '::=' Expression
+
+Nonterminal:
+  SYMBOL
+
+Expression:
+  Alternatives
+
+Alternatives:
+  Expression
+| Alternatives '|' Expression
+```
+This grammar defines a simple context-free grammar (CFG) with nonterminals, productions, and expressions. Nonterminals are defined using the `SymbolDef` production, which consists of a symbol name followed by a colon and a type. The type can be either empty or a set of types enclosed in curly braces. Productions consist of a nonterminal followed by `::=` and an expression. Expressions can be a sequence of alternatives separated by `|`.
+
+This grammar is simple enough to be used as a starting point for describing more complex grammars, but it can also be extended with additional productions and rules to handle specific language features or constructs.
+,#+end_src
+#+end_example
+
+* ideas
+** read any program
+** read this program
+** generate a grammar
+** generate a simple grammar that can be used to describe more complex grammars
+
+** generate a for a grammar grammar
+** generate list of token types
+** generate list of data types
+** generate a regular expression to match tokens for the datatypes found in here.
+
+
+** generate list of token types
+#+begin_src shell
+git submodule add https://github.com/thmsmlr/instructor_ex
+#+end_src
+
+#+RESULTS:
+
+
