@@ -30,8 +30,12 @@ needs to be beautiful and relateable.
 c at time t in place <x,y,z> in the manifold of the universe,
 in the universe of universes.
 and the base case might start with a universe of universes that
-is a null set, a unit and a pair. then a triple or pairs of pairs. we can imagine using every prime number as a n gram product.
+is a null set, a unit and a pair.
+then a triple or pairs of pairs.
+we can imagine using every prime number as a n gram product.
 we can induce a type system T on the first N primes  to be T<N>.
+we can take any other sequence from OEIS as a input set besides primes.
+that would be T<OEISNUM,N>
 now we can show for each layer we can encode it in the previous layer
 with dimensionality reduction dimrec(n,n-1).
 we show that case 0 is the pure consiousness, it is the universe of universes reduced to the null point,
@@ -39,9 +43,31 @@ we can think of this as the center of the black hole at the center of our galaxy
 at the contestellation of saggatarius.
 we can consider that the ancients knew of the location but not the significance
 of that particular spot.
+so we imagine if 0 is the black hole, we are at some vector offset.
 so we have more complex topologies than just flat space in our universe.
+it is not a straight vector from us to the center of the black hole.
+its a vector through N dimensional space.
+this vector is like a string that describes consiousness.
+the pointer to ourselves is also not a flat vector.
+turn this into a video. series of pictures. tapestry.
+{ bartleeverse, bart prime. battle royale of bartlee.
+the can only be one. jet lee. the man in the high castle}
+{ batman prime. }
+{ emoji tapestry. spun by the three fates.
+zeus as the rapper, and the muses rake up the tokens,
+athena is the lead dancer.
+}
+
 we like to reduce things down to cartesian planes, or 2d graphs.
 we like to approximate them with kernel functions.
 we are the authors of our own story.
 this is my story, you have yours. we together tell our stories.
 
+* status
+grammars working, but slow.
+engine produces bad output or gets stuck.
+had introduce comments as universal introspection function
+for the llm to ask for help, like the ai ticket idea.
+
+* rake engine
+feed a url json.

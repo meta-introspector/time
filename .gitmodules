@@ -3068,3 +3068,6 @@
 [submodule "2024/02/16/tree-sitter-menhir"]
 	path = 2024/02/16/tree-sitter-menhir
 	url = https://github.com/Kerl13/tree-sitter-menhir
+[submodule "2024/02/17/cmake"]
+	path = 2024/02/17/cmake
+	url = https://gitlab.kitware.com/cmake/cmake
