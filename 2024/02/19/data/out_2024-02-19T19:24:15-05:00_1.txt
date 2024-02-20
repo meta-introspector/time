@@ -1,0 +1,28 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the "universe of universes" (UU) concept from uni-math to represent the generated code of a large language model (LLM). The idea is to leverage the expressive power of UU to handle the unconstrained output of an LLM, and then use grammars to constrain the output into decidable forms, such as empty sets, true/false values, or bits. This would enable the construction of other items and the implementation of various semantic checks, like referential integrity, spellchecking, type checking, and proof engineering. Ultimately, the plan is to extract rewritten code into a new system.
+
+The concept presented here combines ideas from type theory, formal methods, and large language models, aiming to create a more controlled and manageable output for generated code. However, it also introduces complexity in terms of integrating these different areas and ensuring the decidability and coherence of grammars used for constraining LLM output.
+
+To explore this idea further, one could consider:
+
+1. Investigating existing tools and frameworks that integrate type theory, formal methods, and language models to identify potential starting points and best practices.
+2. Designing a prototype implementation to test the feasibility and effectiveness of the proposed approach. This would involve selecting an appropriate LLM, implementing UU representation for generated code, and designing grammars to constrain the output.
+3. Evaluating the performance, reliability, and usability of the implemented prototype to identify potential improvements and areas of further research.
+4. Exploring applications in various domains that could benefit from this approach, such as software development, documentation generation, or education.
+#+end_src

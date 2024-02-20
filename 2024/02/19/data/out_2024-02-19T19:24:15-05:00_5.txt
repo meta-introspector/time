@@ -1,0 +1,23 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the "universe of universes" (UU) from Uni-Math to represent the generated code of a large language model (LLM), and using grammars to constrain the output and give it semantics beyond the rules.
+
+The idea is that by representing LLM output in UU, one can take advantage of the expressive power of UU to represent a wide range of possible outputs. Using grammars to constrain the output allows for decidability, as long as the grammar itself is decidable. The semantics beyond the rules would include referential integrity, spellchecking, semantics checking, type checking, and proof in a proof engine, with the possibility of extracting rewritten code into a new system.
+
+This idea has potential for applications in formal methods, programming languages, and natural language processing, by providing a way to give meaning and structure to the output of LLMs, and enabling further analysis and manipulation of that output. However, it also raises questions about the decidability and complexity of the grammars used, as well as the feasibility of implementing this approach in practice.
+#+end_src

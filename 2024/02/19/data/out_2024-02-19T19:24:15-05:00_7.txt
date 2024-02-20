@@ -1,0 +1,25 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the "universe of universes" (UU) concept from uni-math to represent the generated code of a large language model (LLM). The idea is that by representing LLM output in UU, the expressive power of UU can be applied to the unconstrained output of the LLM.
+
+The post then suggests using grammars to constrain the output of the LLM to specific sets of values, such as the empty set, true and false, or bits. By doing so, it becomes possible to construct other items from these basic building blocks. Without a grammar, the output of the LLM would be effectively undecidable, but with a grammar, it becomes decidable if the grammar itself is decidable.
+
+The post also notes that grammars themselves have semantics beyond just their rules. These semantics can include referential integrity, spellchecking, semantics checking, type checking, and proof in a proof engine. Additionally, rewritten code can be extracted into a new system based on the grammar and its associated semantics.
+
+Overall, this idea suggests using advanced mathematical concepts to represent and constrain the output of LLMs, allowing for more precise control over the generated code and enabling a range of additional semantic checks and transformations.
+#+end_src

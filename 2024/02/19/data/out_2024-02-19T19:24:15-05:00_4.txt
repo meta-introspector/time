@@ -1,0 +1,29 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the Univalent Foundations of Mathematics (UniMath) framework to represent the generated code of a large language model (LLM), such that the expressive power of UniMath also applies to the unconstrained output of the LLM. The idea suggests constraining the output to specific sets, like the empty set, true and false values, or bits, which can be used to construct other items.
+
+The key aspects of this idea include:
+
+1. Representing generated code as part of the UniMath universe hierarchy, leveraging its expressive power.
+2. Using grammars to constrain the LLM output, ensuring it adheres to specific rules and structures.
+3. Exploiting the decidability of the grammar-constrained LLM output for better control over generated code.
+4. Recognizing that grammars carry semantics beyond just their rules, such as referential integrity, spell checking, type checking, and proof engine integration.
+5. Extracting rewritten code into a new system after successful verification and type-checking.
+
+By combining the strengths of LLMs and formal systems like UniMath, this idea aims to create more reliable, accurate, and meaningful generated code by leveraging the expressive power and decidability properties offered by such frameworks.
+#+end_src

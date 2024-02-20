@@ -1,0 +1,29 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the "universe of universes" (UU) concept from uni-math to represent the generated code of a large language model (LLM). The idea is to take advantage of UU's expressive power and use grammars to constrain the output, making it decidable if the grammar itself is also decidable.
+
+Additionally, the author suggests that these grammars carry semantics beyond their rules, which can be used for various checks, such as referential integrity, spellchecking, semantics checking, type checking, and even extracting rewritten code into a new system.
+
+This concept attempts to merge the fields of formal methods, programming languages, and machine learning by utilizing a powerful mathematical foundation (uni-math) and language models' ability to generate code. By constraining LLM output with grammars that have well-defined semantics, this idea aims to improve the reliability and usefulness of generated code while also enabling further formal analysis and manipulation.
+
+However, it is important to note that this idea faces some challenges:
+
+1. The undecidability issue: Even if the grammar is decidable, the expressive power of UU might lead to generating code that cannot be formally decided due to its inherent complexity.
+2. Performance and scalability: Applying formal methods on large-scale systems can be computationally expensive and resource-intensive, potentially limiting their practical applicability.
+3. Language model limitations: Current LLMs may not always generate valid or meaningful code, requiring further refinements and improvements in language models' ability to produce correct and useful outputs.
+#+end_src

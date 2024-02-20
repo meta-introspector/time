@@ -1,0 +1,31 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes a way to use the Universe of Universes (UU) from uni-math to represent the generated code of a large language model (LLM), and constrain the output using grammars. By representing LLM output in UU, one could leverage its expressive power and use grammars to restrict the output to specific sets or values, such as the empty set, true/false, or bit. The idea also mentions that grammars have additional semantics for referential integrity, spell-checking, type-checking, proof in a proof engine, and extracting rewritten code into a new system.
+
+The proposed concept has several advantages:
+1. Using UU provides a powerful foundation for representing LLM output with a wide range of possible constraints.
+2. Grammars can effectively control the generated output's complexity and structure.
+3. Additional semantics in grammars enable better error detection and code optimization, improving overall output quality.
+
+However, there are also challenges to consider:
+1. Decidability might still be an issue, even with a decidable grammar, as the problem space remains large.
+2. Creating suitable grammars for various use cases could be time-consuming and require expertise.
+3. Integrating UU, LLM, and grammar systems may involve significant development efforts and potential compatibility issues.
+
+In summary, this idea presents an innovative approach to managing generated code from LLMs by combining UU, grammars, and additional semantics. While there are challenges and limitations, the proposed concept offers promising benefits in terms of control, expressiveness, and output quality. Further exploration could lead to valuable insights and practical applications for managing and leveraging LLM-generated code.
+#+end_src

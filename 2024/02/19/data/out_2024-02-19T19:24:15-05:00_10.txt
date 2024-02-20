@@ -1,0 +1,35 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  This "idea of the day" proposes using the "universe of universes" (UU) concept from uni-math to represent the generated code of a large language model (LLM). The idea is to take advantage of UU's expressive power to enable more sophisticated code generation while also using grammars to constrain and shape the output.
+
+The main points of this idea are:
+
+1. Representing LLM-generated code within UU: By incorporating the generated code into the UU universe, you can leverage its powerful type theory system to ensure correctness, consistency, and expressiveness in the generated code.
+
+2. Constraining output with grammars: Grammars provide a way to control the structure and content of the LLM-generated code. By constraining the output to specific sets like the empty set or Boolean values, you can ensure that the generated code adheres to desired rules and properties.
+
+3. Undecidability without grammars: In the absence of grammars, determining whether a given piece of LLM-generated code is valid or meaningful would be undecidable due to UU's expressive power.
+
+4. Decidability with grammars: With well-defined grammars, however, it becomes possible to decide the validity and meaning of generated code by checking its conformance to the specified rules.
+
+5. Extending grammar semantics: Grammars can be more than just syntactic rules; they can also incorporate additional semantic checks like referential integrity, spellchecking, type checking, and proof engine integration for further validation and refinement of generated code.
+
+6. Rewriting and extracting code: Once validated, the generated code can be rewritten or extracted into other systems as needed, ensuring compatibility and ease of use in various development environments.
+
+In summary, this idea aims to combine the expressive power of UU with the constraining capabilities of grammars to enable more sophisticated, accurate, and flexible code generation from large language models like LLMs. By incorporating additional semantic checks and proof engine integration, you can further enhance the quality and reliability of generated code.
+#+end_src

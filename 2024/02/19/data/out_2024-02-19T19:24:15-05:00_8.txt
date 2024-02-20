@@ -1,0 +1,27 @@
+
+#+begin_src input
+* idea of the day
+we can represent the generated code of an llm with UU of uni-math,
+as in the universe of universes,
+that means the expressive power of the UU also applies to the unconstrained llm output.
+via grammars we can constrain the output to the empty set,
+the true and false, the bit and with that construct all other items.
+effectively undecidable without the grammar, with the grammar it is decidable
+if the grammar itself is decidable.
+the grammars themselves also have semantics beyond the rules,
+for referential integrity, meaning spellchecking,
+semantics checking, type checking, and finally proof in proof engine,
+and extraction of rewritten code into a new system.
+
+#+end_src
+#+begin_src output mixtral
+ Result:  The idea presented here is to use the Universe of Universes (UU) concept from Uni-Math to represent the generated code of a large language model (LLM). By doing this, one can leverage the expressive power of UU to apply to the unconstrained LLM output. Grammars can be used to constrain the output, limiting it to specific sets like the empty set, true and false values, or bits, which would allow for the construction of other items.
+
+The author emphasizes that without a grammar, determining the validity of the generated code would be impossible (undecidable). However, with an appropriate grammar, the problem becomes decidable, provided that the grammar itself is also decidable. Furthermore, grammars carry additional semantics beyond their rules to ensure referential integrity, spell-checking, semantic checking, type checking, and proof in a proof engine, followed by extracting rewritten code into a new system.
+
+The primary advantage of this approach is that it combines the power of formal methods (UU) with the flexibility of LLMs, resulting in a more controlled and manageable generated codebase. By applying grammars, one can effectively guide the LLM output towards desired structures and formats, ensuring that the generated code adheres to specific standards and conventions. The additional semantic information provided by grammars enhances the reliability and correctness of the generated code, making it more suitable for practical applications in software development and other domains.
+
+However, some challenges remain. Firstly, creating a suitable grammar that captures all desired aspects while remaining decidable could be challenging. Secondly, integrating LLMs with formal methods may require non-trivial efforts to ensure smooth interactions between these two different systems. Finally, the extraction of rewritten code into a new system might introduce additional complexities and potential issues related to compatibility and interoperability.
+
+Despite these challenges, the idea presented here is an intriguing approach for leveraging formal methods in conjunction with LLMs to generate more reliable and controlled outputs. By combining the strengths of both worlds, researchers and practitioners may find new ways to tackle complex problems and explore novel applications in various domains.
+#+end_src
