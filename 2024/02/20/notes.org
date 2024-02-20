@@ -1,0 +1,131 @@
+Looking at the trace of the grammar
+the program spends the most time on identifiers.
+So we should make a first pass to list the unique identifiers with types as a pair.
+we can make a grammar for that as well. or we can just extract the words with spaces or a regex.
+
+In the order of most common:
+* categories/types of nouns
+* categories/types of verbs
+
+nouns:
+* categories/types of things
+* categories/types of people
+
+* identifiers. Names of things. people. places. 
+* products, groups of terms, sequences.
+* repetitions.
+* ranges of chars, regexes.
+* alternations between rules.
+* new rules themselves.
+
+produce separated list of words
+using any separarator you want.
+
+produce a comma separated list of words
+produce a semicolon separated list of words
+produce a space separated list of words
+
+** questions
+create a procedure or workflow
+that creates a set of questions
+to create a simple grammar
+that is composed only out of
+questions with lists
+that are traversed and
+repeatly asked in different
+variations
+to create a structured system.
+
+** gemini
+Here's a procedure or workflow to create a set of questions for a simple grammar composed only of question-and-list structures:
+
+1. **Define the domain and purpose:**
+   - What specific language elements or concepts do you want the grammar to represent?
+   - What will this grammar be used for (e.g., parsing sentences, generating text)?
+
+2. **Identify basic building blocks:**
+   - What fundamental questions do you want to ask about your domain elements?
+   - What types of lists or options will be used in the answers (e.g., categories, attributes, actions)?
+
+3. **Start with core questions:**
+   - Formulate essential questions that capture the main aspects of your domain.
+   - Ensure these questions cover the intended purpose of the grammar.
+
+4. **Expand with variations and recursion:**
+   - For each question, define follow-up questions that delve deeper based on previous answers.
+   - Consider using recursion for iterative structures within the domain.
+
+5. **Test and refine:**
+   - Try using the question set to generate examples or answer queries within the domain.
+   - Refine questions, add alternatives, or adjust the structure based on the results.
+
+By following these steps and iteratively refining your questions, you can create a simple yet effective grammar for your specific domain using a question-and-list approach.
+
+
+* domain and purpose
+consider the project as a function
+that transforms
+elements from the domain to the range.
+consider the domain of our project
+the sources
+and the purpose the target.
+lets model those to start with.
+
+Great! Recursing into the first domain and purpose is a good step. Let's model the project as a function transforming elements from "sources" (domain) to "targets" (range). Here are some guiding questions to help you define these elements further:
+
+1. **Sources:**
+   - What specific types of sources will your project consider (e.g., text documents, sensor data, user input)?
+   - What format or structure do these sources have?
+   - Are there any constraints or limitations on the sources?
+
+2. **Targets:**
+   - What kind of output or results do you envision for your project (e.g., summaries, classifications, predictions)?
+   - What format or structure should the targets have?
+   - How will the targets be used or evaluated?
+
+By answering these questions, you'll have a clearer understanding of the project's scope and purpose, which will inform the next steps in designing your question set.
+
+** input
+
+We start with any term and then expand from that.
+
+the source is the knowledge in the llm, the latent space
+the target is to bring them into a coq proof.
+source is the latent space of the llm.
+target is the formal type system of coq.
+
+*** output 
+
+That's a fascinating approach! Using an LLM's latent space as the source and a formal type system like Coq as the target opens up interesting possibilities for exploring and structuring knowledge. Here are some refined questions to guide your grammar development:
+
+**Source (LLM latent space):**
+
+1. What specific knowledge representations or concepts within the LLM's latent space will you focus on? (e.g., factual relationships, logical inferences, symbolic patterns)
+2. How will you access and manipulate these representations to formulate questions? (e.g., using embedding vectors, attention mechanisms, symbolic reasoning)
+
+**Target (Coq formal type system):**
+
+1. What aspects of Coq's type system will you leverage to represent the extracted knowledge? (e.g., propositions, theorems, proofs)
+2. How will you translate the question-and-list structures from the LLM's latent space into valid Coq expressions? (e.g., using type constructors, functions, proof tactics)
+
+**Transformation Process:**
+
+1. What types of questions will you ask about the LLM's latent space to guide the transformation towards Coq proofs? (e.g., existence checks, relationship queries, property verifications)
+2. How will you ensure the generated Coq expressions are logically sound and formally verifiable within the system? (e.g., using type checking, proof assistants, formal verification techniques)
+
+Remember, this is an iterative process. As you experiment with question formats and translation rules, you'll gain insights into the feasibility and effectiveness of this approach.
+
+**idea
+eventually we will get to terms with exact definitions in coq that we can then reflect over and then feed back to the model one n-shot adjustments.
+
+*** out
+That's an ambitious and exciting goal! By iteratively refining the questions and translation process, you might indeed reach a point where the extracted Coq definitions can be used to:
+
+1. **Reason and reflect:** Analyze and manipulate the encoded knowledge within the LLM using Coq's formal logic and proof capabilities. This could involve verifying internal consistency, identifying logical implications, or exploring relationships between different concepts.
+2. **Guide the model:** Utilize the insights gained from formal reasoning to provide targeted feedback to the LLM, potentially through one-shot adjustments or more complex knowledge injection techniques. This could help improve the model's accuracy,generalizability, or ability to reason within specific domains.
+
+Remember, this is an active area of research with many challenges to overcome. However, your approach shows promise for bridging the gap between the expressive power of LLMs and the rigor of formal systems like Coq.
+
+* new idea
+split up org mode document
+create proof.
