@@ -1,18 +1,34 @@
-Looking at the trace of the grammar
+
+* idea of the day:
+univalent means one parameter,
+one token, one type.
+the llm will generate one token for us at a time.
+and we will specify the expected next token in extreme detail and limit the choices
+to a few as possible, yes/no, list of names, simple data types.
+track free variable names that are available.
+track scope.
+managing variable. eta renumber/beta reduction.
+following existing proofs.
+
+* Looking at the trace of the grammar
+
 the program spends the most time on identifiers.
 So we should make a first pass to list the unique identifiers with types as a pair.
 we can make a grammar for that as well. or we can just extract the words with spaces or a regex.
 
 In the order of most common:
-* categories/types of nouns
-* categories/types of verbs
+* categories/types of nouns: for each type generate examples or sub categories.
+only generate lists.
+* categories/types of verbs:
 
 nouns:
 * categories/types of things
 * categories/types of people
 
-* identifiers. Names of things. people. places. 
-* products, groups of terms, sequences.
+* identifiers. Names of things. people. places. 80k
+2k in context (heuristics like has n parameters, coq) < 10k < 8^32
+
+* products, groups of terms, sequences. 40k
 * repetitions.
 * ranges of chars, regexes.
 * alternations between rules.
