@@ -1,0 +1,172 @@
+todays ideas:
+1. moon in leo, reflections, symmetries.
+   reflections as faithful representations.
+   dimensionality reductions.
+   serializations as univalent streams.
+   the stream as the univalent.
+   string theory.
+   vibrating string.
+   singing of the hymn.
+   metacoq stream.
+   max plank and schroedingers equations.
+
+what if the llm generated metacoq asts instead of syntax?
+if we tried to created simpler items than just strings.
+we can inductive types and product or record types as + and * of the algebra.
+the most common items are terminal values, or regexes we can think of them as units of bits "0/1".
+followed by product groups of them. we can think of them as multiplications or products "*"
+then we have optional values. we can think of them as plus or dijoint unions "+".
+
+so with 1/0 and * and + we can define the other types.
+emojis are another form.
+text as well.
+
+we can construct text one token at a time.
+the llm learns the tokens from training.
+so those are bigger than characters and offer a first vocabulary of numbers.
+the base token representation will be different for different models.
+
+so in our model we can have a bitstring to token tokenizer that will
+predict the tokens for many language models. that could be a first program.
+
+bits --> tokenizer -> tokens
+or tokens = tokenizer (bits)
+but the tokenizer consumes 1-n bits and produces tokens for models.
+it can produce a list of tokens for different models from a list of bits and we add a bit at a time.
+
+bits ->[ (model ,token)]
+
+over time it is 
+bits + bit ->[ (model ,token)]
+
+existing bits + new bits ->[ (model ,token)] ->filter model -> maybe token.
+we can filter the tokens by model to get maybe a token.
+
+Now we can tokenize, we can reverse the tokens into bits and chars.
+now we have chars for feeding the parser.
+
+now the parser can recognise tokens in its language.
+we can train the next model to go from bits to ai tokens to language tokens in a grammar.
+
+then we can predict the next state transition or shifting of the grammar.
+
+then we can predict the tokens for each grammar rule.
+we will see that some rules are used exponentially more than others.
+there will be different levels of numbers of occurences.
+
+now we can think of the asts generated in a stream from those tokens
+as a form of serialization, and then we can look at the asts statisically
+from the position in the file and relationship to each other.
+we can order they by order of how they activate and think of them as
+callbacks from the grammar after semantic evaluation.
+
+now we can start to model bits -> asts ->bits.
+we can create a more abstrace ast description.
+
+we can start with what we expect from the ast.
+
+0. inductive, disjoint union of types.  enum of types.
+1. sub types that compose those types in products.
+2. sub types that are new inductives.
+3. token rules for things. patterns and naming conventions.
+   society, project, language, meme, patterns.
+   universes/worlds/countries/organizations/project/directories/modules/files/declarations/asts.
+
+* semiosis
+
+now we can imagine that we can create a token to represent all other tokens.
+the unitoken can be all other things.
+it can also represent itself.
+there will be a hierarchy of unitokens, each more powerful than the next,
+but all collapsing into the one.
+we can look at our observation of the UU as relative.
+it is temporary, in time. The observation is fleeting. existential.
+everything is relative to the viewpoint.
+the viewpoint is behind the eyeball.
+the eyeball is curved so that the world appears curved.
+for the insect the world appears different.
+our perspectives are related to our mode of viewing the world.
+our thoughts are related to our mode of thinking about the world.
+
+function : think, input world, output thoughts.
+function : introspect, input thoughts, output pictures.
+function : contemplate, input pictures, output feelings.
+
+now this observation of the feelings
+and images then feeds into higher levels
+of introspection. We can think of these
+as recursive layers.
+
+eventually the introspection
+will go beyond the current ability
+to observe it in the current timeframe.
+this overflow can be considered
+as the fundamental awareness
+or consiousness, the unit of UU.
+
+It is up to us what parts of this
+gigantic dataset
+we sample, that is akin to the llm
+results being decoded after the tensor
+operations, matrix multiplications
+and additions
+of the llm.
+
+By tracing the llm execution
+and relating equivalent paths
+in the llm to the enums/token/ast/grammar elements
+we can reduce
+the dimensionality of the internal
+data and give some form to it.
+
+The form could be a faithful representation or reflection
+of the world or an abstraction or
+creative rewrite of it.
+
+* part 2
+
+The structure and form of the data is also its semantics.
+eventually we will get to the holofractal and
+find the universe of universes inside ourselves.
+
+* part 3
+
+now we have the outside and the inside and we can consider the path between them
+back and forth.
+
+we want to show each step or is needed and secure and correctly selected.
+
+we can trace deeper into a step. we can collect and sample different
+data.
+
+I think we should start with nix running in emacs in a docker container.
+that will give us a cleaner environment.
+the idea is that each instance of the system generates a new updated
+vesion of itself.
+
+like a wildflower growing from a seed.
+
+the introspection process is observability applied to the semantic
+graph of attributes extracted from the runtime of programs.
+
+how to lift up ideas into higher dimensions of abstractions.
+
+first abstraction is the removal of some details.
+second abstraction is removal of more details.
+each level of abstraction removes more and more details until
+there are none left.
+we can think of them as derivatives in math and the higher the order
+of the derivative the less information it delivers,
+it is a reduction to the instantaneous momemnt of dx/dt
+where dt gets smaller and smaller.
+
+the mindfulness of the universal context means
+that we are just one of many sparks in the universal mind.
+
+we can think of each tool as an agent we can talk to.
+we can create a sed,sort,grep,jq
+agent behind the openai assistant tool api.
+
+
+
+
