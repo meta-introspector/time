@@ -1,0 +1,79 @@
+* ideas of the day.
+people have fuzzy ideas.
+we can clarify them with llms.
+
+** brainstorm
+precipitation or raining of words.
+flashes of insight as lighting.
+rubbing of clouds against each other as friction.
+
+*** ideas
+**** generate ideas
+*** list the verbs
+
+*** limit the verbs.
+choose your domain.
+limit your scope.
+**** domains :
+***** unimath - mathematics
+****** category theory
+******* identities
+******* morphisms
+******** auto morphisms
+****** group theory
+
+******* symmetries
+***** coq proof assistent
+***** ocaml compiler 
+***** gcc compiler
+***** linux os
+***** assembly language
+***** machine language
+***** physics
+***** mathematics
+
+focus your attention.
+define your terms.
+
+**** each verb represents a typeclass of places you can use that verb.
+
+*** combinatatorics/permutations
+
+** define terms
+*** use, deploy, 
+*** represent, encode, stand in place of
+*** list, enumerate, visit
+*** combine
+
+*** limit/restrict
+*** focus/direct attention
+**** attach
+
+*** revisit
+**** detach
+**** contemplate
+
+** find opposites
+*** create eigenvectors.
+
+*** attach/detach
+*** ascend/decend
+
+** jacobs ladder
+up and down
+higher abstraction/lower abstraction
+more awareness/less awareness
+type/instance
+object/property
+
+** declare interface/typeclases
+** define/implement interfaces/instanciate classes
+
+** order terms.
+*** give depedendancies.
+
+* split out jobs from this text
+** list the verbs
+** define the verbs
+** define the domain and range of verb
+** think of each verb as a morphism
