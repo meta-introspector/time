@@ -3095,3 +3095,15 @@
 [submodule "2024/02/21/llmvwmcts"]
 	path = 2024/02/21/llmvwmcts
 	url = https://huggingface.co/datasets/introspector/llmvwmcts
+[submodule "2024/02/22/home-manager"]
+	path = 2024/02/22/home-manager
+	url = https://github.com/nix-community/home-manager
+[submodule "2024/02/22/nix"]
+	path = 2024/02/22/nix
+	url = https://github.com/NixOS/nix
+[submodule "2024/02/22/opam-nix"]
+	path = 2024/02/22/opam-nix
+	url = https://github.com/tweag/opam-nix
+[submodule "2024/02/22/nix-user-chroot"]
+	path = 2024/02/22/nix-user-chroot
+	url = https://github.com/lucabrunox/nix-user-chroot
