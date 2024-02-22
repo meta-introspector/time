@@ -1,0 +1,4 @@
+
+
+verbs:
+	bash ./verbs.sh

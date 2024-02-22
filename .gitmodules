@@ -3071,3 +3071,27 @@
 [submodule "2024/02/17/cmake"]
 	path = 2024/02/17/cmake
 	url = https://gitlab.kitware.com/cmake/cmake
+[submodule "2024/02/20/math-comp"]
+	path = 2024/02/20/math-comp
+	url = https://github.com/math-comp/math-comp
+[submodule "2024/02/20/coq-ai"]
+	path = 2024/02/20/coq-ai
+	url = https://github.com/romasoletskyi/coq-ai
+[submodule "2024/02/20/coq_llm_interaction"]
+	path = 2024/02/20/coq_llm_interaction
+	url = https://github.com/K-dizzled/coq_llm_interaction
+[submodule "2024/02/20/coq-llm-rl"]
+	path = 2024/02/20/coq-llm-rl
+	url = https://github.com/mtarunpr/coq-llm-rl
+[submodule "2024/02/20/llm-verified-with-monte-carlo-tree-search"]
+	path = 2024/02/20/llm-verified-with-monte-carlo-tree-search
+	url = https://github.com/namin/llm-verified-with-monte-carlo-tree-search
+[submodule "2024/02/21/emacs-head.nix"]
+	path = 2024/02/21/emacs-head.nix
+	url = https://github.com/HeinrichHartmann/emacs-head.nix
+[submodule "2024/02/21/emacs-overlay"]
+	path = 2024/02/21/emacs-overlay
+	url = https://github.com/nix-community/emacs-overlay
+[submodule "2024/02/21/llmvwmcts"]
+	path = 2024/02/21/llmvwmcts
+	url = https://huggingface.co/datasets/introspector/llmvwmcts

@@ -1,0 +1,83 @@
+* ideas
+** how to implement grammars in gbnf
+
+given a menhir parser of gbnf,
+which we have already built and tested in ocaml
+and we can parse all the gbnf examples.
+
+How to we make a gbnf of gbnf?
+
+1. treesitter to gbnf
+   https://github.com/jonastemplestein/tree_sitter_grammar_to_gbnf/
+   
+2. menhir to treesitter to gbnf
+    https://github.com/Kerl13/tree-sitter-menhir has a treesitter menhir grammar
+   
+3. gbnf parser in menhir to treesitter to gbnf of gbnf parser
+
+
+** another way of saying this is
+menhir parser writen in treesitter lang
+-> tree_sitter_grammar_to_gbnf
+-> gbnf
+menhir parser in gbnf
+then llama cpp can now generate new menhir parsers
+new menhir parsers can be converted to gbnf
+then llama cpp can now generate new gbnf parsers
+then llama cpp can now extend itself.
+
+we can create ocaml wrappers for systems with effects.
+
+(* Step 1: Create Menhir parser for gBNF *)
+let gbnf_parser = MenhirParser.menhir_parse (...)
+
+(* Step 2: Use Treesitter to convert AST to nested list *)
+let ast = Treesitter.parse_with_grammar gbnf_grammar input_code
+
+(* Step 3: Generate new gBNF string from AST *)
+let new_gbnf = generate_gbnf_from_ast ast
+
+let rec generate_gbnf (node : GbnfAst.node) =
+  match node with
+  | NonTerminal s -> s
+  | Terminal s -> s
+  | Rule (lhs, rhs) ->
+      let lhs_str = generate_gbnf lhs in
+      let rhs_str = String.concat " " (List.map generate_gbnf rhs) in
+      lhs_str ^ " -> " ^ rhs_str
+
+let new_gbnf = generate_gbnf ast
+
+
+(define-language gbnf
+  (pattern $production (prod_name arrow rhs) @production.node)
+  (pattern arrow ->)
+  (pattern prod_name (identifier))
+  (pattern rhs (seq+ term))
+  (pattern term (nonterm | terminal))
+  (pattern nonterm (identifier))
+  (pattern terminal #"[a-zA-Z0-9_]+"))
+
+
+3. Write a function that takes the syntax tree and generates a new gBNF string from it:
+```python
+def generate_gbnf(node):
+  if node.type == 'production':
+    lhs = node.children[0].text
+    rhs = ' '.join([generate_gbnf(child) for child in node.children[1].children])
+    return f'{lhs} -> {rhs}'
+  elif node.type == 'term':
+    if node.children[0].type == 'nonterm':
+      return node.children[0].text
+    else:
+      return node.children[0].text[1:-1] # strip quotes
+  else:
+    raise ValueError(f'Unsupported node type: {node.type}')
+
+new_gbnf = generate_gbnf(tree.root_node)
+  
+
+
+*
+now to test with the latest version of cmake
+git submodule add https://gitlab.kitware.com/cmake/cmake
