@@ -1,6 +1,22 @@
 * ideas of the day.
+
 people have fuzzy ideas.
 we can clarify them with llms.
+we can brainstorm with llms.
+we use focus points taken from those brainstorms.
+we can sample the internals of the network during those brainstorms
+to create intuitions. We can introspect over those intuitions.
+See them as the tactic of consulting the oracle,
+taken from the story of the oracle at Siwa in the story of Alexander.
+we apply points of focus to abstract functions.
+we apply abstract functions to points of focus.
+we apply steps of abstract functions to individual points.
+we can think of this as a multiplication of an object of type A to a schema B.
+for every point in A we apply it to a list of points in our schema B.
+this is a cartesian join with a simple schema.
+we can take the type hierarchy and multiply that by the population.
+we can view the population of an idea as the point in it, or the set of identities and other language structures.
+we can ask llms to split up and chunk and extract these tokens.
 
 ** brainstorm
 precipitation or raining of words.
@@ -77,3 +93,10 @@ object/property
 ** define the verbs
 ** define the domain and range of verb
 ** think of each verb as a morphism
+
+* ice game
+compile the code into ice block representations of temparature where each block of
+code is a different temparature of water, some is frozen and others is not
+there are also nested ice blocks in water in ice in water.
+entire topologies of ice that when time is allowed create interesting dynamics.
+we can use this to simulate computation.
