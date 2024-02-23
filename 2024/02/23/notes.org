@@ -1,6 +1,15 @@
 Weclome to my personal notes for today.
 Below you will find a self descriptive hierarchy of terms
 that attempts to capture itself.
+we consider the idea to be a point, a sphere, and we can add dimensions
+to that sphere until it is so complex like a manifold of 8 or 9 dimensions.
+we can think of the elements of the type of types to be points on the surface.
+we can come up with some formula to place them in the 9d space and then
+describe the point or vector back into description.
+so we can go from description to point and back.
+we want to develop with the help of AI a way to
+assign the dimensions and the positions and use coq to prove it consistent.
+
 the idea is that it would interpreted by a large language model.
 we would attempt to apply itself to itself repeatedly.
 we might have to break it up into chunks.
