@@ -1,0 +1,22 @@
+* notes for feb 24 2024
+
+** the unit (sphere) as a fundamental abstraction.
+we can imagine a sphere of one unit size
+or imagine a line of size one that we can subdivide into parts
+and place each type on.
+
+this is like the type of fractions or rational numbers.
+we can choose prime numbers to divide by to give meaning to each of them, and each prime
+would slice off a smaller and smaller part.
+we can then combine any two primes parts to create compounds so 1/2+1/3
+and we can also take 1/2 of /12 to get 1/4. all of these give unique positions
+on the unit. now we can add in more dimensions and for each dimension we can add in another unit.
+so we can have 1/2 x + 1/3 y +1/2 z for a 3d sphere. can we imageine a hypersphere of 4d with time so 1/2 the time before or after for example.
+now this sets the stage for a coordinate system.
+we can show that a 1d unit is the same as the 2d unit except that 2d gives you more beauty and varity but each point in the 2d can be mapped to the 1d.
+this allows for reduction of the dimensions.
+
+thus we can reduce the homotopy type theory to one dimension or the univalent UU.
+
+so then we can sort the types to fit and try and encode different aspects of them in the geometry.
+we can rewrite the types into the numbers and back with functions.

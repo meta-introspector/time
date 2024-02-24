@@ -3107,3 +3107,9 @@
 [submodule "2024/02/22/nix-user-chroot"]
 	path = 2024/02/22/nix-user-chroot
 	url = https://github.com/lucabrunox/nix-user-chroot
+[submodule "2024/02/23/nix-emacs-ci"]
+	path = 2024/02/23/nix-emacs-ci
+	url = https://github.com/purcell/nix-emacs-ci
+[submodule "2024/02/23/niv"]
+	path = 2024/02/23/niv
+	url = https://github.com/nmattia/niv
