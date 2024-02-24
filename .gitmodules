@@ -3113,3 +3113,16 @@
 [submodule "2024/02/23/niv"]
 	path = 2024/02/23/niv
 	url = https://github.com/nmattia/niv
+[submodule "2024/02/23/nix-straight.el"]
+	path = 2024/02/23/nix-straight.el
+	url = https://github.com/nix-community/nix-straight.el
+[submodule "2024/02/23/coq-nix-toolbox"]
+	path = 2024/02/23/coq-nix-toolbox
+	url = https://github.com/coq-community/coq-nix-toolbox
+[submodule "2024/02/23/blackbox"]
+	path = 2024/02/23/blackbox
+	url = https://github.com/brettgilio/blackbox
+[submodule "2024/02/23/nix-config"]
+	path = 2024/02/23/nix-config
+	url = https://github.com/jwiegley/nix-config
+
