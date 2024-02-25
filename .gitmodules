@@ -3135,3 +3135,21 @@
 	path = 2024/02/24/nix-docker
 	url = https://github.com/LnL7/nix-docker
 
+[submodule "2024/02/24/emacs-config"]
+	path = 2024/02/24/emacs-config
+	url = https://github.com/akirak/emacs-config.git
+[submodule "2024/02/24/docker-nixpkgs"]
+	path = 2024/02/24/docker-nixpkgs
+	url = https://github.com/nix-community/docker-nixpkgs
+[submodule "2024/02/24/flask-nix-example"]
+	path = 2024/02/24/flask-nix-example
+	url = https://github.com/mitchellh/flask-nix-example
+[submodule "2024/02/24/flake-registry"]
+	path = 2024/02/24/flake-registry
+	url = https://github.com/NixOS/flake-registry
+[submodule "2024/02/24/opam2nix"]
+	path = 2024/02/24/opam2nix
+	url = https://github.com/timbertson/opam2nix
+[submodule "2024/02/25/opam2nix"]
+	path = 2024/02/25/opam2nix
+	url = https://github.com/timbertson/opam2nix

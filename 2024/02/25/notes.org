@@ -1,0 +1,133 @@
+* recap
+My notes are extensive and free form.
+the idea is that one day an AI
+will be able to read all of them and make
+sense of it.
+
+* idea of the day.
+
+The univalent principle and
+intractability.
+
+
+We can imagine a spiral form that
+starts at a point in the mind
+and extends all the way out to the
+edge of the universe.
+
+this spiral we can think of as
+holding a nautilus shell to our ear
+and then how the ear is a spiral as well inside.
+we can see how our galaxy is a spiral.
+
+we know our planet is spinning,
+we have many rotations in rotations.
+
+We can think of the Foucault's pendulum
+we can see how the pendulum swings
+and the world moves underneath it.
+this also traces a spiral as it
+slows down over time  we can think
+of it as tracing a
+decaying orbit.
+
+so there are many things we can explore
+the point here is to imagine a spiral getting
+bigger and bigger till it reaches the extent of the galaxy and universe.
+
+when our spiral reaches the sun we can imagine restarting at the center of the sun,
+and when it reaches our galaxy, we restart the spiral there
+so every time it reaches a new center it would restart.
+
+this is a way to measure the offset or vector
+of each object with polar like coordinates.
+
+
+** contractibilty
+now when we think of contractible,
+contractibilty,
+we think of being able to
+reduce to a point
+a zero point and expand.
+the univalent idea is that
+we can do this continuously
+and inductively from zero and
+create paths
+to larger and larger equivalent
+objects.
+
+*** Gemini
+While any point within a contractible
+space can be continuously deformed
+to any other point,
+this doesn't imply that they
+are inherently equivalent
+in a broader sense.
+The choice of the specific point
+for contraction is often arbitrary
+and doesn't affect
+the fundamental contractible nature of
+the space.
+
+The key concept lies in the
+continuous deformation process itself,
+which demonstrates
+that all points within the space
+are topologically indistinguishable.
+They can be "seen" as equivalent
+from the perspective of
+the space's overall structure.
+
+
+** proof spirals
+we can think of the spriral
+nature of the proof system joined
+with a language model
+with loops and failures
+and backtracking
+and generating solutions
+and testing them
+and feedback
+as a form of cogition.
+ideally it would be able to create
+a spiral bootstrap
+that ever increases its size.
+
+*** gemini
+The concept of "proof spirals" you describe aligns with the iterative nature of problem-solving and learning, particularly in the context of machine learning and artificial intelligence. It shares similarities with techniques like:
+
+ **Iterative deepening search:** This algorithm progressively expands its search depth until a solution is found or a predefined limit is reached.
+
+ **Reinforcement learning:** The system learns through trial and error, receiving feedback on its actions and gradually refining its approach.
+
+The idea of combining a proof system with a language model introduces the potential for:
+
+ **Symbolic reasoning:** The system can leverage logical rules and knowledge to guide its exploration.
+
+ **Natural language processing:** The language model can interact with the environment and gather information through text-based inputs and outputs.
+
+While achieving a "spiral bootstrap" that continuously expands its capabilities remains an ongoing challenge in AI research, the integration of diverse techniques like proof systems, language models, and iterative learning approaches holds promise for advancing problem-solving abilities in AI systems.
+
+*** bing
+
+Thank you for your insightful comment. I'm glad you find the concept of proof spirals interesting and relevant to machine learning and artificial intelligence. 😊
+
+You have mentioned some of the techniques that are related to proof spirals, such as iterative deepening search and reinforcement learning. I would like to add some more examples of how proof spirals can be applied to different domains and tasks:
+
+ * **Mathematical proofs:** Proof spirals can help generate and verify mathematical proofs by using a language model to generate conjectures and a proof system to check their validity. For example, [GPT-f](^1^) is a system that combines GPT-3 with an automated theorem prover to produce human-readable proofs of mathematical statements.
+
+ * **Natural language generation:** Proof spirals can help improve the quality and diversity of natural language generation by using a proof system to ensure the coherence and consistency of the generated text. For example, [ProofWriter](^2^) is a system that uses a proof system to guide the generation of persuasive essays on various topics.
+
+ * **Code synthesis:** Proof spirals can help synthesize code from natural language specifications by using a language model to generate candidate programs and a proof system to verify their correctness and optimality. For example, [CoNaLa] is a dataset of natural language queries and corresponding code snippets that can be used to train and evaluate code synthesis systems.
+
+These are just some of the possible applications of proof spirals. I hope you find them inspiring and informative. If you have any questions or feedback, please feel free to ask. I'm always happy to chat with you. 😊
+
+¹: [GPT-f: A GPT-3-based Automated Theorem Prover](https://arxiv.org/abs/2010.16312)
+²: [ProofWriter: Generating Impressive and Persuasive Essays using Theorem Proving](https://arxiv.org/abs/2104.08281)
+: [CoNaLa: The Code/Natural Language Challenge](https://conala-corpus.github.io/)
+
+Source: Conversation with Bing, 2/25/2024
+(1) Golden spiral - Wikipedia. https://en.wikipedia.org/wiki/Golden_spiral.
+(2) Spirals and the Golden Ratio - The Golden Ratio: Phi, 1.618. https://www.goldennumber.net/spirals/.
+(3) Golden spiral - Wikipedia. https://en.wikipedia.org/wiki/Golden_spiral.
+(4) Spirals and the Golden Ratio - The Golden Ratio: Phi, 1.618. https://www.goldennumber.net/spirals/.
