@@ -3153,3 +3153,15 @@
 [submodule "2024/02/25/opam2nix"]
 	path = 2024/02/25/opam2nix
 	url = https://github.com/timbertson/opam2nix
+[submodule "2024/02/25/nixbyexample"]
+	path = 2024/02/25/nixbyexample
+	url = https://github.com/mimoo/nixbyexample
+[submodule "2024/02/25/fh"]
+	path = 2024/02/25/fh
+	url = https://github.com/DeterminateSystems/fh
+[submodule "2024/02/25/awesome-nix"]
+	path = 2024/02/25/awesome-nix
+	url = https://github.com/nix-community/awesome-nix
+[submodule "2024/02/25/nix-for-numbskulls"]
+	path = 2024/02/25/nix-for-numbskulls
+	url = https://github.com/mhwombat/nix-for-numbskulls
