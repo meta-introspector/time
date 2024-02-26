@@ -3165,3 +3165,27 @@
 [submodule "2024/02/25/nix-for-numbskulls"]
 	path = 2024/02/25/nix-for-numbskulls
 	url = https://github.com/mhwombat/nix-for-numbskulls
+[submodule "2024/02/26/atd"]
+	path = 2024/02/26/atd
+	url = https://github.com/ahrefs/atd
+[submodule "2024/02/26/akvorado"]
+	path = 2024/02/26/akvorado
+	url = https://github.com/akvorado/akvorado
+[submodule "2024/02/26/leptos"]
+	path = 2024/02/26/leptos
+	url = https://github.com/leptos-rs/leptos
+[submodule "2024/02/26/panel"]
+	path = 2024/02/26/panel
+	url = http://github.com/pterodactyl/panel
+[submodule "2024/02/26/dream2nix"]
+	path = 2024/02/26/dream2nix
+	url = https://github.com/nix-community/dream2nix
+[submodule "2024/02/26/0install"]
+	path = 2024/02/26/0install
+	url = https://github.com/0install/0install
+[submodule "2024/02/26/ocurl"]
+	path = 2024/02/26/ocurl
+	url = https://github.com/ygrek/ocurl
+[submodule "2024/02/26/flake-templates"]
+	path = 2024/02/26/flake-templates
+	url = https://github.com/akirak/flake-templates
