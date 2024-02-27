@@ -3189,3 +3189,9 @@
 [submodule "2024/02/26/flake-templates"]
 	path = 2024/02/26/flake-templates
 	url = https://github.com/akirak/flake-templates
+[submodule "2024/02/22/nix-ffi-rs"]
+	path = 2024/02/22/nix-ffi-rs
+	url = https://github.com/zmitchell/nix-ffi-rs.git
+[submodule "2024/02/26/nix-rust"]
+	path = 2024/02/26/nix-rust
+	url = https://github.com/nix-rust/nix
