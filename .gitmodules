@@ -3195,3 +3195,18 @@
 [submodule "2024/02/26/nix-rust"]
 	path = 2024/02/26/nix-rust
 	url = https://github.com/nix-rust/nix
+[submodule "2024/02/27/purenix"]
+	path = 2024/02/27/purenix
+	url = https://github.com/purenix-org/purenix
+[submodule "2024/02/27/purescript-prelude"]
+	path = 2024/02/27/purescript-prelude
+	url = https://github.com/purenix-org/purescript-prelude
+[submodule "2024/02/27/purescript-symbiote"]
+	path = 2024/02/27/purescript-symbiote
+	url = https://github.com/athanclark/purescript-symbiote
+[submodule "2024/02/27/doml-mc"]
+	path = 2024/02/27/doml-mc
+	url = https://github.com/mikidep/doml-mc
+[submodule "2024/02/27/CompilerGym"]
+	path = 2024/02/27/CompilerGym
+	url = https://github.com/facebookresearch/CompilerGym
