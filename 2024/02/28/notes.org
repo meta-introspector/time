@@ -80,6 +80,8 @@ to lower artiy ones.
 we can think of applications as have large N values in arity
 and axioms having very few.
 
+** Meta Introspector
+
 we can imagine that
 there is an meta protocol
 or meta pattern of introspection
@@ -100,6 +102,38 @@ which comprises of the following :
 13. llms, open models
 14. unimath
 15. comic books as epic tapestries
+16. goedel numbering or quasi quotations as emojis or other languages
+17. creation of ebnf grammars
+18. training of models and ml ops
+19. creation of reproducible builds
+
+All of these things together give you some ideas about points to consider
+for introspection and then we
+can think of applying this
+to an individual problem that
+is expressed in this system.
+we can look at an error as a point that we can expand
+greatly.
+
+* compiler error fixer
+create a compiler error fixer
+that lives in coq and ocaml and gcc
+and python etc as plugin
+that generically passes the error context
+to the llm for fixing.
+us introspection
+and the univalent point of
+view that all bugs are instances
+of human invention,
+aka techincal debt.
+
+If we are able to rewrite some text using
+computers preserving the meaning
+then we can see it as understandable.
+even if it is not understandable to
+other people immediatly.
+we can think of the llm as kind of
+a proof assistant.    
     
 * license
 
@@ -122,8 +156,3 @@ here are some commands i ran:
   find -name \*.v >vfiles.txt
   for x in `cat vfiles.txt`; do grep file -H -n $x; done
 #+end_src
-
-
-  
-
-  
