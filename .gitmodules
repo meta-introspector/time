@@ -3125,7 +3125,7 @@
 	url = https://github.com/brettgilio/blackbox
 [submodule "2024/02/23/nix-config"]
 	path = 2024/02/23/nix-config
-	url = https://github.com/jwiegley/nix-config
+	url = https://github.com/meta-introspector/nix-config
 
 
 [submodule "2024/02/24/dotfiles"]
