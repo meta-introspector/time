@@ -200,3 +200,10 @@ with root access and save this data.
 each memory address is related to the chain of causation that created it.
 we can create a functional map and show how it relates.
 
+** create closed loops
+where we generate code with one system
+coq-of-rust and compile with coq and eventually those systems
+are rewritten into a new system that combines and improves them both.
+divide and conquer to break up the loops.
+
+** bach : prelude and fuge 
