@@ -1,0 +1,129 @@
+* idea of the day
+
+introspection is a meta operation that
+is defined in ourselves intiutivly
+and we spontaneously and willingfullly
+engage in it.
+
+It represents a higher order
+neural inprint or signpost if you will,
+icon or symbol that you
+have achieved a certain level of
+enlightenment or self awareness
+that builds upon other levels of
+awareness.
+
+It represents a composition
+or decomposition of ideas into larger ones.
+we can think of it as semioisis.
+
+lexical introspection
+is a process of expanding the
+tokens in a sentence one by one
+and contemplating them individually
+and in groups, we can think of it
+as a meme even, a token associated
+with beahaviour that is abstract and
+has many different embodiments
+or deployments or isntances.
+
+We can think of introspection
+as a meta meme,
+a meme that carrys itself as payload,
+like a certified functional
+extraction from a proof in a
+proof system that can reference itself
+and make statements about itself
+like an oracle we will have to evaluate them
+creating a feedback loop
+or some kind of exponential expansion,
+polynomial function
+some thing that will be too extensive
+to evaluate in finite time or not.
+we can then sample this like a fractal
+and look at different threads of it.
+
+so now finally we can think
+of a universal base conciousness
+a substract of awareness
+and consider that to be a function with a single
+value, a single parameter,
+the UU the universe of universes,
+that can go from the empty
+set to the natural numbers
+to any other type you can declare.
+
+we can now think of ordering
+these types with some loss function
+that would be derived from some statistical
+modeling of data types we extracted
+from other programs and ourselves.
+
+the computer might not care about the ordering
+except that some orderings would be slower,
+but the computer would not care about that
+unless we asked it to contemplate
+that.
+
+so we can conceive of an AI that
+would try and order and name
+the types to match
+the biases of humans and use emojis
+to represent the types and  using the
+mathematics of groupoids expressed
+using unimath univalent foundations
+to define them.
+
+We can consider a system
+to break down higher arity functions
+to lower artiy ones.
+we can think of applications as have large N values in arity
+and axioms having very few.
+
+we can imagine that
+there is an meta protocol
+or meta pattern of introspection
+which comprises of the following :
+
+1. open source core
+2. introspective builds
+3. reproducible builds
+4. observability
+5. closed world model
+6. semantic integration
+7. functional model
+8. proof system
+9. compiler introspection
+10. mega quine
+11. wikidata, openstreetmap, wikpedia, archive.org
+12. semantic web, sparql, owl, linke data, large ontolgies
+13. llms, open models
+14. unimath
+15. comic books as epic tapestries
+    
+* license
+
+for the record here, my engagement on discord is only for open source software and my future software will be AGPL or stronger and any software generated using my stuff will have watermarks that cannot be removed.
+that is my plan.
+
+
+
+* commands
+here are some commands i ran:
+
+#+begin_src shell
+  today
+  git submodule add https://github.com/lastland/WebSpec
+  git submodule add https://github.com/eLyKseeR/elykseer-ml
+  git submodule add https://github.com/lthms/coq-MiniHTTPServer.git
+  git submodule add https://github.com/shwetasshinde24/BesFS.git
+  git submodule add https://github.com/io7m/jvvfs.git
+  git submodule add https://github.com/rahlk/ConEX.git
+  find -name \*.v >vfiles.txt
+  for x in `cat vfiles.txt`; do grep file -H -n $x; done
+#+end_src
+
+
+  
+
+  
