@@ -3235,3 +3235,6 @@
 [submodule "2024/02/29/bitsandbytes"]
 	path = 2024/02/29/bitsandbytes
 	url = https://github.com/TimDettmers/bitsandbytes.git
+[submodule "2024/02/29/huggingface-notebooks"]
+	path = 2024/02/29/huggingface-notebooks
+	url = https://github.com/huggingface/notebooks
