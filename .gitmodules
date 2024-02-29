@@ -3044,9 +3044,7 @@
 [submodule "2024/02/12/meta-coq-common"]
 	path = 2024/02/12/meta-coq-common
 	url = https://huggingface.co/datasets/introspector/meta-coq-common
-[submodule "2024/02/12/streamlit-docker-lang-agent-introspector"]
-	path = 2024/02/12/streamlit-docker-lang-agent-introspector
-	url = https://huggingface.co/spaces/introspector/streamlit-docker-lang-agent-introspector
+
 [submodule "2024/02/13/PerfKitBenchmarker"]
 	path = 2024/02/13/PerfKitBenchmarker
 	url = https://github.com/meta-introspector/PerfKitBenchmarker
