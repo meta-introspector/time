@@ -3232,3 +3232,6 @@
 [submodule "2024/02/29/accelerate"]
 	path = 2024/02/29/accelerate
 	url = https://github.com/huggingface/accelerate
+[submodule "2024/02/29/bitsandbytes"]
+	path = 2024/02/29/bitsandbytes
+	url = https://github.com/TimDettmers/bitsandbytes.git
