@@ -2918,9 +2918,6 @@
 [submodule "2024/02/05/diffusers"]
 	path = 2024/02/05/diffusers
 	url = https://github.com/huggingface/diffusers
-[submodule "2024/02/05/docker-time"]
-	path = 2024/02/05/docker-time
-	url = https://huggingface.co/spaces/introspector/docker-time
 [submodule "2024/02/06/docker-coq"]
 	path = 2024/02/06/docker-coq
 	url = https://github.com/coq-community/docker-coq
