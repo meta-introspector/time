@@ -3244,3 +3244,6 @@
 [submodule "2024/02/29/trl"]
 	path = 2024/02/29/trl
 	url = https://github.com/huggingface/trl
+[submodule "2024/02/29/tyro"]
+	path = 2024/02/29/tyro
+	url = https://github.com/brentyi/tyro.git
