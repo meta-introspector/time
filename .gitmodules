@@ -3229,3 +3229,6 @@
 [submodule "2024/02/28/llmvwmcts"]
 	path = 2024/02/28/llmvwmcts
 	url = https://github.com/meta-introspector/llmvwmcts
+[submodule "2024/02/29/accelerate"]
+	path = 2024/02/29/accelerate
+	url = https://github.com/huggingface/accelerate
