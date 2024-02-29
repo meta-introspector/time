@@ -3238,3 +3238,6 @@
 [submodule "2024/02/29/huggingface-notebooks"]
 	path = 2024/02/29/huggingface-notebooks
 	url = https://github.com/huggingface/notebooks
+[submodule "2024/02/29/nbconvert"]
+	path = 2024/02/29/nbconvert
+	url = https://github.com/jupyter/nbconvert
