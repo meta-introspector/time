@@ -3241,3 +3241,6 @@
 [submodule "2024/02/29/nbconvert"]
 	path = 2024/02/29/nbconvert
 	url = https://github.com/jupyter/nbconvert
+[submodule "2024/02/29/trl"]
+	path = 2024/02/29/trl
+	url = https://github.com/huggingface/trl
