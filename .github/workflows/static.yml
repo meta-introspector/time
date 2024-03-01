@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: meta-introspector
+        uses: meta-introspector/checkout
       - name: Setup Pages
         uses: meta-introspector/configure-pages
       - name: Upload artifact
