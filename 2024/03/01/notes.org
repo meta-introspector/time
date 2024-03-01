@@ -1,0 +1,43 @@
+* thoughts of the day
+
+1. we can synthesize reproducible datasets based on versions
+   of software.
+2. we can save them to hugging face as instances or generate them on the fly.
+3. the patterns captured are basically the functions used
+4. the first programs were free form and did not have the same declarative.
+   so we will expect metadata, convention and consistent usage.
+5. continuing on this train we can now take well known functions
+   to the llm, like strcpy and then look at the assembly of them and present those to the llm with
+   the hope it can remember the pattern that
+   it expects from strcpy. we can then look for instances of it in other languages.
+6. we can then go from this idea to the next, saying we train a model on each term
+   and then once it understands the base terms we can then reevaluate the model
+   at a higher level with those newly defined terms. this would the repeat recursivly.
+7. Now we can use this to think about bias and weights and prejudice.
+   so that we can ground the human behaviour in enigmatic behaviour as to
+   why things are the way they are.
+8. finally we can look at the bootstrap of the compiler as a well defined
+   process where the compiler is compiled for the first time.
+   we can see this pattern repeating. first the creation of a pattern and then the usage of the pattern.
+   we can see that as just the usage or application of a base pattern.
+   that is the base pattern of conciousness or the UU the universe of universes model.
+   so in the beginning we just have a string or sequences of those.
+   that is the basic idea of the sequence of tensors or sequence embedding.
+   so we can train a model on different parts of the compiler.
+   we can monitor its execution.
+9. finally for a simple model we can take the megaquine. the function is to generate a function for the next system.
+   each system generates the next. so that we have the output that matches the input of the other.
+   this simple model can be applied to give a target for the system.
+   create a function in language A that produces a function in language B
+   that produces an equivalent function in languge A again. we use just language a.
+   and then we can expand that function, we can think of the machine language.
+   
+   create a function in language a that creates a program in the language B that can translate a function from A to B.
+   an interpreter would execute that function A in B.
+   so like the first lisp as a stack of cards.
+   different versions of lisp are evolutions of that card deck.
+
+   finally we get to nix and we cannot even find where it builds the binary.
+   more later.
+   
+   
