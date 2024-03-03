@@ -3247,3 +3247,18 @@
 [submodule "2024/02/29/tyro"]
 	path = 2024/02/29/tyro
 	url = https://github.com/brentyi/tyro.git
+[submodule "2024/03/02/aqt"]
+	path = 2024/03/02/aqt
+	url = https://github.com/google/aqt
+[submodule "2024/03/02/maxtext"]
+	path = 2024/03/02/maxtext
+	url = https://github.com/google/maxtext
+[submodule "2024/03/02/xla"]
+	path = 2024/03/02/xla
+	url = https://github.com/pytorch/xla.git
+[submodule "2024/03/02/tpuserve"]
+	path = 2024/03/02/tpuserve
+	url = https://github.com/seanmor5/tpuserve.git
+[submodule "2024/03/02/pytorch-xla-transformer-language-model"]
+	path = 2024/03/02/pytorch-xla-transformer-language-model
+	url = https://github.com/bmccann/pytorch-xla-transformer-language-model
