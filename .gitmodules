@@ -3262,3 +3262,6 @@
 [submodule "2024/03/02/pytorch-xla-transformer-language-model"]
 	path = 2024/03/02/pytorch-xla-transformer-language-model
 	url = https://github.com/bmccann/pytorch-xla-transformer-language-model
+[submodule "2024/03/04/xla"]
+	path = 2024/03/04/xla
+	url = https://github.com/elixir-nx/xla

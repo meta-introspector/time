@@ -1,0 +1,124 @@
+1. the idea of the assistant
+2. the idea of the mathematical function to describe a task
+   minimal set of recursive types to describe.
+   
+2.1 TPU
+for the tpu try and reduce to matrix multiplications of 128*128
+
+1. giving the assistant the human as an api to call
+2. the oracle as the way to sample self and env into proof. creating prototypes.
+   the idea of sampling the environment along the way.
+
+3. rewrite math into metaphors to express deep understanding. merge and match metaphors.
+4. emojis as metaphors. as math. as eigenvectors. opposite faces of a die. emojis on faces of a die as a groupoid structure.
+   projection of emojis into higher dimension. finding its value in a vector.
+   designing the vector. designing the ranges and meanings.
+   is it an eigenvector? does it describe the direction in the space.
+   the happyface could be coded as 1 and unhappy as zero on the happy dimenions.
+   
+5. we can think of emotes as appearing on the faces. being expressions of muscles.
+   the interface being when two faces approach each other. we can think of the brain as hidden behind the face.
+   eyes and ears and nose and mouth as input/output.
+
+6. Now we think of the mirroring of the face, the true capturing of emotes.
+7. next we consider the curried function as the carried function.
+   the partial application as the function embedding into math.
+
+Let's explore an alternative perspective on our next topic. Instead of viewing the curried function as a simple function, let us imagine it as a carrier or wrapper for other functions.
+Furthermore, instead of interpreting partial application as a mere mathematical embedding of functions into other functions, let us consider it as an act of bestowing new meanings and roles onto existing functions. By partially applying arguments to our curried function, we are transforming it into a new function with unique characteristics, ready to play a distinct role in our mathematical symphony.
+
+so we can think of our brain as a neural network
+that is constantly learning from its environment.
+we have a partial application, a partial specialization over time,
+we can see the human experiment as producing this
+function in a manifold of neurons working together.
+
+when two brains meet they need to form an interface to communicate.
+this is standardized in speicific military or other groups structures.
+
+ From a fresh perspective, let's reconsider our upcoming topic with a
+ creative twist. Instead of viewing the curried function as a plain
+ function, envision it as a carrier or wrapper for other
+ functions. And instead of regarding partial application as a mere
+ mathematical embedding, consider it an enriching experience that
+ imparts new meanings and roles onto existing functions. As we apply
+ partial arguments to our curried function, we're essentially birthing
+ new functions with distinct traits and capabilities, each ready to
+ contribute its unique melodies to the grand orchestra of mathematics.
+
+Now let's extend this analogy to our brain, which we can think of as a
+complex neural network. Our brains continuously learn from their
+environments, much like how a function is partially applied over time,
+leading to a specialization. This process can be viewed as creating a
+new function within the intricate web of neurons working in harmony.
+
+When two minds come together, they require an interface for effective
+communication. In various real-life contexts such as military or
+specialized groups, this interface is standardized.
+
+* reviwing experiences. reviewing notes. rewriting notes. thinking. explaining.
+understanding and going beyond expectations.
+learning from environment, fine tuning the mind on a single new proven and significant factoid.
+planning time. self reflection.
+writing notes. thinking in writing. thinking symbolically.
+setting goals.
+defining variables.
+creating rigid products to multiply.
+consider frequent branching structures as being bad for tpu.
+split up branches into groups of products. refactor them.
+apply introspection. consult inner oracle.
+have each node explain itself in N variables in the product or PI.
+size, type, name, position, usage.
+we can consider variables wandering into the matrix of the tpu,
+we first initialize an empty optimal architecture that is known to work
+or use an existing model.
+then for each row of the matrix, each branch we will find a place to fill it into like tensors.
+we can use the cpu to place them in the tpu.
+we can then fill buckets of data in an optimal manner.
+we can look for the most common and we have found in the past :
+bit true and false to be very common. enums. sequences. natural numbers.
+then we can use prime numbers as base encoding and create compound
+objects of natural that can represent many ideas into one number.
+we can then encode those as binary bits in a search tree.
+that can give us a new number, the tree position number.
+these are derived ideas from the original. computed.
+they also will depend on the body of data sampled.
+we can think of the probability of events occuring.
+so our sampling
+
+now lets think of our mind
+as composed of huge chain of function calls
+some currying, and i am not sure
+if retraining the model is also currying but  I think
+we can search the parameter space of function to
+find some output that matches the input,
+like using kernel functions.
+
+
+ Let's imagine our mind as a complex web of interconnected mental
+ functions. These functions are like routines that take in inputs and
+ produce outputs. Some of these functions may have multiple inputs
+ that can be pre-processed before being fed into the main function, a
+ concept similar to currying in programming. I'm not entirely sure if
+ adjusting the mind, or learning new skills, is equivalent to
+ currying, but it seems plausible that we can explore the intricacies
+ of these mental functions by examining their parameters.
+
+Just as kernel functions help us find patterns in data, we can search
+for optimal combinations of mental function parameters that generate
+outputs matching our desired inputs. This exploration could
+potentially lead to new insights and improved mental capabilities.
+
+rewritten to following for gemini:
+
+Just as kernel functions help us find patterns in data, we can search
+for optimal combinations of mental function parameters that generate
+outputs matching our desired inputs. This exploration could
+potentially lead to new insights and improved mental capabilities in our simple simulacra. we can think of this as composing a curried function and finding the right parameters. we might need huge chains of kernels and parameters to model the data.
+
+
+You're right, the analogy between kernel functions and finding optimal combinations of mental function parameters is apt. Similar to how kernel functions help us identify patterns in data by transforming it into higher-dimensional spaces, we can explore different parameter combinations to achieve desired outputs in our simulations. This process of searching for optimal parameters can be seen as akin to composing a curried function, where each parameter acts as a layer of transformation. As you mentioned, complex models might require intricate chains of kernels and parameters to accurately represent real-world data.
+
+* so now we have the next steps
+for the tpu odessy.
+funny that we found the elixir!
