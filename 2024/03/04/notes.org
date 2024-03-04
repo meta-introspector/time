@@ -124,18 +124,66 @@ for the tpu odessy.
 funny that we found the elixir!
 
 
+* setup of a git remote
 
- 1001  git init --bare /mnt/data1/gittime
- 1002  git remote add local /mnt/data1/gittime
- 1003  git push local
- 1004  git branch
- 1005  git checkout -b 'jax'
- 1006  git push local
- 1007  git log -2
- 1008  git log -2 --all --patch
- 1009  git status
- 1010  git add 2024
- 1011  git commit -m 'addding' -a
- 1012  git push
- 1013  git push local
- 1014  history
+often we dont want to expose our keys to a external environment
+using ssh agents on remote hosts opens you up to having those keys stolen
+by anyone with root permissions on the host. better is to pull data via ssh back into your home back via ssh.
+in this example we will create a bare git repo on a remote server that
+we can access via a jump host, we will push to it and then pull back into our
+ home server.
+
+setup my .ssh/config
+  
+#+begin_src .ssh/config
+host aaj2
+  HostName 123.45.78.90
+  User ubuntu
+  
+Host aav3-4
+  HostName 10.164.0.21
+  User ubuntu	
+  ProxyJump  aaj2
+
+Host aav3-3
+  HostName 10.164.0.20
+  User ubuntu	
+  ProxyJump  aaj2
+
+Host aav3-2
+  HostName 10.164.0.19
+  User ubuntu	
+  ProxyJump  aaj2
+
+Host aav3-1
+  HostName 10.164.0.18
+  User ubuntu	
+  ProxyJump  aaj2
+#+end_src
+
+on the remote server construct a git time.
+
+#+begin_src shell
+ssh aav3-4
+#+end_src
+
+#+begin_src shell
+  git init --bare /mnt/data1/gittime
+  git remote add local /mnt/data1/gittime
+  git checkout -b 'example'
+  git push local
+#+end_src
+
+The contents of my git config in 
+/mnt/data1/nix/.git/modules/time/
+
+#+begin_src .git/config
+[remote "aav3-4"]
+	url = ssh://aav3-4:/mnt/data1/gittime
+	fetch = +refs/heads/*:refs/remotes/aav3-4/*
+#+end_src
+
+#+begin_src shell-history
+  git remote add aav3-4 ssh://aav3-4:/mnt/data1/gittime
+  git pull aav3-4 example
+#+end_src
