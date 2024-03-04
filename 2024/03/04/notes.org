@@ -122,3 +122,20 @@ You're right, the analogy between kernel functions and finding optimal combinati
 * so now we have the next steps
 for the tpu odessy.
 funny that we found the elixir!
+
+
+
+ 1001  git init --bare /mnt/data1/gittime
+ 1002  git remote add local /mnt/data1/gittime
+ 1003  git push local
+ 1004  git branch
+ 1005  git checkout -b 'jax'
+ 1006  git push local
+ 1007  git log -2
+ 1008  git log -2 --all --patch
+ 1009  git status
+ 1010  git add 2024
+ 1011  git commit -m 'addding' -a
+ 1012  git push
+ 1013  git push local
+ 1014  history
