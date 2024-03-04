@@ -1,0 +1,276 @@
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test4.py
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+Traceback (most recent call last):
+  File "/mnt/data1/nix/time/./test4.py", line 13, in <module>
+    outputs = model.generate(inputs, max_new_tokens=100)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/generation/utils.py", line 1549, in generate
+    result = self.greedy_search(
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/generation/utils.py", line 2418, in greedy_search
+    outputs = self(
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/models/llama/modeling_llama.py", line 1192, in forward
+    outputs = self.model(
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/models/llama/modeling_llama.py", line 1001, in forward
+    causal_mask = self._update_causal_mask(attention_mask, inputs_embeds)
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/models/llama/modeling_llama.py", line 1080, in _update_causal_mask
+    if seq_length > self.causal_mask.shape[-1]:
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DeciCoderModel' object has no attribute 'causal_mask'
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+tokenizer_config.json: 100%|███████████████| 237/237 [00:00<00:00, 1.06MB/s]
+vocab.json: 100%|████████████████████████| 798k/798k [00:00<00:00, 2.44MB/s]
+merges.txt: 100%|████████████████████████| 456k/456k [00:00<00:00, 1.85MB/s]
+tokenizer.json: 100%|██████████████████| 2.11M/2.11M [00:00<00:00, 8.42MB/s]
+added_tokens.json: 100%|███████████████| 1.08k/1.08k [00:00<00:00, 6.30MB/s]
+special_tokens_map.json: 100%|████████████| 99.0/99.0 [00:00<00:00, 522kB/s]
+config.json: 100%|█████████████████████████| 864/864 [00:00<00:00, 4.31MB/s]
+configuration_phi.py: 100%|████████████| 9.26k/9.26k [00:00<00:00, 34.0MB/s]
+A new version of the following files was downloaded from https://huggingface.co/microsoft/phi-1_5:
+- configuration_phi.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+modeling_phi.py: 100%|██████████████████| 62.7k/62.7k [00:00<00:00, 759kB/s]
+A new version of the following files was downloaded from https://huggingface.co/microsoft/phi-1_5:
+- modeling_phi.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+pytorch_model.bin: 100%|████████████████| 2.84G/2.84G [00:08<00:00, 325MB/s]
+generation_config.json: 100%|█████████████| 74.0/74.0 [00:00<00:00, 338kB/s]
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Traceback (most recent call last):
+  File "/mnt/data1/nix/time/./test5.py", line 6, in <module>
+    inputs = tokenizer.encode("def print_hello_world():", return_tensors="pt").to(device)
+NameError: name 'device' is not defined
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/generation/utils.py:1482: UserWarning: You are calling .generate() with the `input_ids` being on a device type different than your model's device. `input_ids` is on xla, whereas the model is on cpu. You may experience unexpected behaviors or slower generation. Please make sure that you have put `input_ids` to the correct device by calling for example input_ids = input_ids.to('cpu') before running `.generate()`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/mnt/data1/nix/time/./test5.py", line 9, in <module>
+    outputs = model.generate(inputs, max_new_tokens=100)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/generation/utils.py", line 1549, in generate
+    result = self.greedy_search(
+  File "/mnt/data1/nix/time/2023/07/17/experiments/transformers/src/transformers/generation/utils.py", line 2418, in greedy_search
+    outputs = self(
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu/.cache/huggingface/modules/transformers_modules/microsoft/phi-1_5/bffd3b29c4741576a3a97656bcb74956cffaeccf/modeling_phi.py", line 1049, in forward
+    outputs = self.model(
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu/.cache/huggingface/modules/transformers_modules/microsoft/phi-1_5/bffd3b29c4741576a3a97656bcb74956cffaeccf/modeling_phi.py", line 893, in forward
+    inputs_embeds = self.embed_tokens(input_ids)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 163, in forward
+    return F.embedding(
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/nn/functional.py", line 2237, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/_prims_common/wrappers.py", line 250, in _fn
+    result = fn(*args, **kwargs)
+  File "/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/_decomp/decompositions.py", line 1184, in embedding
+    return weight[indices]
+RuntimeError: torch_xla/csrc/aten_xla_type.cpp:1414 : Check failed: bridge::IsXlaTensor(self) && indices_on_cpu_or_xla 
+*** Begin stack trace ***
+	tsl::CurrentStackTrace()
+	torch_xla::XLANativeFunctions::index(at::Tensor const&, c10::List<std::optional<at::Tensor> > const&)
+	
+	c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const
+	
+	at::_ops::index_Tensor::call(at::Tensor const&, c10::List<std::optional<at::Tensor> > const&)
+	torch::autograd::THPVariable_getitem(_object*, _object*)
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	
+	at::functionalization::functionalize_op_helper(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*)
+	at::functionalization::_functionalize_aten_op<at::_ops::embedding, true, at::Tensor (at::Tensor const&, at::Tensor const&, c10::SymInt, bool, bool)>::call(at::Tensor const&, at::Tensor const&, c10::SymInt, bool, bool)
+	torch_xla::XLANativeFunctions::embedding_symint(at::Tensor const&, at::Tensor const&, c10::SymInt, bool, bool)
+	
+	c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const
+	
+	
+	at::_ops::embedding::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, c10::SymInt, bool, bool)
+	
+	
+	at::_ops::embedding::call(at::Tensor const&, at::Tensor const&, c10::SymInt, bool, bool)
+	
+	
+	_PyObject_MakeTpCall
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	_PyEval_EvalFrameDefault
+	
+	_PyEval_EvalFrameDefault
+	
+	_PyEval_EvalFrameDefault
+	_PyObject_FastCallDictTstate
+	_PyObject_Call_Prepend
+	
+	_PyObject_MakeTpCall
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	_PyObject_FastCallDictTstate
+	_PyObject_Call_Prepend
+	
+	_PyObject_MakeTpCall
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	_PyObject_FastCallDictTstate
+	_PyObject_Call_Prepend
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	_PyEval_EvalFrameDefault
+	
+	PyEval_EvalCode
+	
+	
+	
+	_PyRun_SimpleFileObject
+	_PyRun_AnyFileObject
+	Py_RunMain
+	Py_BytesMain
+	
+	__libc_start_main
+	_start
+*** End stack trace ***
+indices should be either on cpu or on the same device as the indexed tensor (XLA). When using XLA, the indexed tensor must be an XLA tensor.
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+Traceback (most recent call last):
+  File "/mnt/data1/nix/time/./test5.py", line 6, in <module>
+    tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-1_5", trust_remote_code=True).to(device)
+AttributeError: 'CodeGenTokenizerFast' object has no attribute 'to'
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python ./test5.py 
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2024-03-02 21:02:17.115016: F ./torch_xla/csrc/runtime/debug_macros.h:20] Non-OK-status: status.status() status: INVALID_ARGUMENT: Expected pred or integral type in argument to and/or operation; got F32.
+*** Begin stack trace ***
+	tsl::CurrentStackTrace()
+	xla::Shape const* ConsumeValue<xla::Shape const*>(absl::lts_20230802::StatusOr<xla::Shape const*>&&)
+	torch_xla::ShapeHelper::ShapeOfXlaOp(xla::XlaOp)
+	torch_xla::XlaHelpers::TypeOfXlaOp(xla::XlaOp)
+	torch_xla::XlaHelpers::PromotedBinaryOp(xla::XlaOp, xla::XlaOp, std::function<xla::XlaOp (xla::XlaOp, xla::XlaOp)> const&)
+	
+	torch_xla::InferOutputShape(absl::lts_20230802::Span<xla::Shape const>, std::function<xla::XlaOp (absl::lts_20230802::Span<xla::XlaOp const>)> const&)
+	
+	torch_xla::BitwiseOrTensorOutputShape(torch::lazy::Value const&, torch::lazy::Value const&)
+	std::_Function_handler<xla::Shape (), torch_xla::BitwiseOrTensor::BitwiseOrTensor(torch::lazy::Value const&, torch::lazy::Value const&)::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+	torch_xla::XlaNode::GetOpShape(std::function<xla::Shape ()> const&) const
+	torch_xla::XlaNode::XlaNode(torch::lazy::OpKind, c10::ArrayRef<torch::lazy::Value>, std::function<xla::Shape ()> const&, unsigned long, torch::lazy::hash_t)
+	torch_xla::tensor_methods::bitwise_or(c10::intrusive_ptr<torch_xla::XLATensor, c10::detail::intrusive_target_default_null_type<torch_xla::XLATensor> > const&, c10::intrusive_ptr<torch_xla::XLATensor, c10::detail::intrusive_target_default_null_type<torch_xla::XLATensor> > const&)
+	torch_xla::XLANativeFunctions::bitwise_or(at::Tensor const&, at::Tensor const&)
+	
+	c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const
+	
+	
+	
+	
+	at::_ops::bitwise_or_Tensor::call(at::Tensor const&, at::Tensor const&)
+	at::native::__or__(at::Tensor const&, at::Tensor const&)
+	
+	at::_ops::__or___Tensor::call(at::Tensor const&, at::Tensor const&)
+	
+	
+	
+	
+	
+	
+	_PyEval_EvalFrameDefault
+	_PyObject_FastCallDictTstate
+	_PyObject_Call_Prepend
+	
+	_PyObject_MakeTpCall
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	_PyEval_EvalFrameDefault
+	
+	PyEval_EvalCode
+	
+	
+	
+	_PyRun_SimpleFileObject
+	_PyRun_AnyFileObject
+	Py_RunMain
+	Py_BytesMain
+	
+	__libc_start_main
+	_start
+*** End stack trace ***
+
+https://symbolize.stripped_domain/r/?trace=7fe397a969fc,7fe397a4251f&map= 
+*** SIGABRT received by PID 340825 (TID 340825) on cpu 24 from PID 340825; stack trace: ***
+PC: @     0x7fe397a969fc  (unknown)  pthread_kill
+    @     0x7fe211301067        928  (unknown)
+    @     0x7fe397a42520  (unknown)  (unknown)
+https://symbolize.stripped_domain/r/?trace=7fe397a969fc,7fe211301066,7fe397a4251f&map= 
+E0302 21:02:17.118810  340825 coredump_hook.cc:442] RAW: Remote crash data gathering hook invoked.
+E0302 21:02:17.118836  340825 coredump_hook.cc:481] RAW: Skipping coredump since rlimit was 0 at process start.
+E0302 21:02:17.118845  340825 client.cc:269] RAW: Coroner client retries enabled (b/136286901), will retry for up to 30 sec.
+E0302 21:02:17.118851  340825 coredump_hook.cc:537] RAW: Sending fingerprint to remote end.
+E0302 21:02:17.118894  340825 coredump_hook.cc:546] RAW: Cannot send fingerprint to Coroner: [NOT_FOUND] stat failed on crash reporting socket /var/google/services/logmanagerd/remote_coredump.socket (Is the listener running?): No such file or directory
+E0302 21:02:17.118902  340825 coredump_hook.cc:598] RAW: Dumping core locally.
+E0302 21:02:17.337938  340825 process_state.cc:807] RAW: Raising signal 6 with default behavior
+Aborted (core dumped)
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ 

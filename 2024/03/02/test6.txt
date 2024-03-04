@@ -1,0 +1,94 @@
+
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python test6_dolly.py 
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+Traceback (most recent call last):
+  File "/mnt/data1/nix/time/test6_dolly.py", line 7, in <module>
+    tokenizer = AutoTokenizer.from_pretrained(model, trust_remote_code=True)
+NameError: name 'model' is not defined. Did you mean: 'mode'?
+ubuntu@t1v-n-cbea58e8-w-0:/mnt/data1/nix/time$ python test6_dolly.py 
+WARNING:root:PJRT is now the default runtime. For more information, see https://github.com/pytorch/xla/blob/master/docs/pjrt.md
+WARNING:root:libtpu.so and TPU device found. Setting PJRT_DEVICE=TPU.
+tokenizer_config.json: 100%|████████████████| 450/450 [00:00<00:00, 413kB/s]
+tokenizer.json: 100%|██████████████████| 2.11M/2.11M [00:00<00:00, 5.07MB/s]
+special_tokens_map.json: 100%|█████████████| 228/228 [00:00<00:00, 1.14MB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+config.json: 100%|█████████████████████████| 819/819 [00:00<00:00, 3.61MB/s]
+/home/ubuntu/.venv10/lib/python3.10/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+pytorch_model.bin: 100%|████████████████| 5.68G/5.68G [00:31<00:00, 183MB/s]
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:0 for open-end generation.
+2024-03-02 21:07:28.669504: F ./torch_xla/csrc/runtime/debug_macros.h:20] Non-OK-status: status.status() status: INVALID_ARGUMENT: Expected pred or integral type in argument to and/or operation; got F32.
+*** Begin stack trace ***
+	tsl::CurrentStackTrace()
+	xla::Shape const* ConsumeValue<xla::Shape const*>(absl::lts_20230802::StatusOr<xla::Shape const*>&&)
+	torch_xla::ShapeHelper::ShapeOfXlaOp(xla::XlaOp)
+	torch_xla::XlaHelpers::TypeOfXlaOp(xla::XlaOp)
+	torch_xla::XlaHelpers::PromotedBinaryOp(xla::XlaOp, xla::XlaOp, std::function<xla::XlaOp (xla::XlaOp, xla::XlaOp)> const&)
+	
+	torch_xla::InferOutputShape(absl::lts_20230802::Span<xla::Shape const>, std::function<xla::XlaOp (absl::lts_20230802::Span<xla::XlaOp const>)> const&)
+	
+	torch_xla::BitwiseOrTensorOutputShape(torch::lazy::Value const&, torch::lazy::Value const&)
+	std::_Function_handler<xla::Shape (), torch_xla::BitwiseOrTensor::BitwiseOrTensor(torch::lazy::Value const&, torch::lazy::Value const&)::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+	torch_xla::XlaNode::GetOpShape(std::function<xla::Shape ()> const&) const
+	torch_xla::XlaNode::XlaNode(torch::lazy::OpKind, c10::ArrayRef<torch::lazy::Value>, std::function<xla::Shape ()> const&, unsigned long, torch::lazy::hash_t)
+	torch_xla::tensor_methods::bitwise_or(c10::intrusive_ptr<torch_xla::XLATensor, c10::detail::intrusive_target_default_null_type<torch_xla::XLATensor> > const&, c10::intrusive_ptr<torch_xla::XLATensor, c10::detail::intrusive_target_default_null_type<torch_xla::XLATensor> > const&)
+	torch_xla::XLANativeFunctions::bitwise_or(at::Tensor const&, at::Tensor const&)
+	
+	c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::vector<c10::IValue, std::allocator<c10::IValue> >*) const
+	
+	
+	
+	
+	at::_ops::bitwise_or_Tensor::call(at::Tensor const&, at::Tensor const&)
+	at::native::__or__(at::Tensor const&, at::Tensor const&)
+	
+	at::_ops::__or___Tensor::call(at::Tensor const&, at::Tensor const&)
+	
+	
+	
+	
+	
+	
+	_PyEval_EvalFrameDefault
+	_PyObject_FastCallDictTstate
+	_PyObject_Call_Prepend
+	
+	_PyObject_MakeTpCall
+	_PyEval_EvalFrameDefault
+	
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	_PyFunction_Vectorcall
+	PyObject_Call
+	_PyEval_EvalFrameDefault
+	
+	_PyEval_EvalFrameDefault
+	
+	PyEval_EvalCode
+	
+	
+	
+	_PyRun_SimpleFileObject
+	_PyRun_AnyFileObject
+	Py_RunMain
+	Py_BytesMain
+	
+	__libc_start_main
+	_start
+*** End stack trace ***
+
+https://symbolize.stripped_domain/r/?trace=7fb6324969fc,7fb63244251f&map= 
+*** SIGABRT received by PID 342833 (TID 342833) on cpu 25 from PID 342833; stack trace: ***
+PC: @     0x7fb6324969fc  (unknown)  pthread_kill
+    @     0x7fb4abd01067        928  (unknown)
+    @     0x7fb632442520  (unknown)  (unknown)
+https://symbolize.stripped_domain/r/?trace=7fb6324969fc,7fb4abd01066,7fb63244251f&map= 
+E0302 21:07:28.673431  342833 coredump_hook.cc:442] RAW: Remote crash data gathering hook invoked.
+E0302 21:07:28.673446  342833 coredump_hook.cc:481] RAW: Skipping coredump since rlimit was 0 at process start.
+E0302 21:07:28.673457  342833 client.cc:269] RAW: Coroner client retries enabled (b/136286901), will retry for up to 30 sec.
+E0302 21:07:28.673463  342833 coredump_hook.cc:537] RAW: Sending fingerprint to remote end.
+E0302 21:07:28.673487  342833 coredump_hook.cc:546] RAW: Cannot send fingerprint to Coroner: [NOT_FOUND] stat failed on crash reporting socket /var/google/services/logmanagerd/remote_coredump.socket (Is the listener running?): No such file or directory
+E0302 21:07:28.673495  342833 coredump_hook.cc:598] RAW: Dumping core locally.
+E0302 21:07:28.906869  342833 process_state.cc:807] RAW: Raising signal 6 with default behavior
