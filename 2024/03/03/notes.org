@@ -1,0 +1,7 @@
+the tpu oddessy is a strange one,
+the chip seems more for training than
+for serving inference.
+
+sudo apt install elixir cmake                                                sudo apt install libprotobuf-dev                                             sudo apt  install protobuf-compiler  # version                               sudo apt install libprotobuf-dev
+sudo apt install erlang-dev
+sudo apt install elixir cmake libprotobuf-dev protobuf-compiler erlang-dev
