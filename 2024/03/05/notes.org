@@ -1,0 +1,4 @@
+1. packaging of models and training and results functionally using nix.
+2. sending data files and archive to and from hugging face, archive.org, torrent, ipfs or other tools
+   like s3 buckets.
+3. 
