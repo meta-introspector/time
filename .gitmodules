@@ -3271,3 +3271,6 @@
 [submodule "2024/03/04/elixirconf2023"]
 	path = 2024/03/04/elixirconf2023
 	url = https://github.com/toranb/elixirconf2023.git
+[submodule "2024/03/04/asdf"]
+	path = 2024/03/04/asdf
+	url = https://github.com/asdf-vm/asdf.git
