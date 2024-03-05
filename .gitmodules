@@ -3274,3 +3274,6 @@
 [submodule "2024/03/04/asdf"]
 	path = 2024/03/04/asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "2024/03/05/langchainex"]
+	path = 2024/03/05/langchainex
+	url = https://github.com/orthagonal/langchainex

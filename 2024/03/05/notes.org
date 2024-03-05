@@ -1,4 +1,14 @@
-1. packaging of models and training and results functionally using nix.
+1. packaging of models and training and results functionally using nix or mix
 2. sending data files and archive to and from hugging face, archive.org, torrent, ipfs or other tools
    like s3 buckets.
-3. 
+3. meta operations on objects themselves. so installing packages.
+4. considering laws and contracts for ai bots, rules to follow. reasoning about rules and safety. expert systems.
+5. undeciablity as a fundamental concept of continuations.
+   we dont know what they will do or if they are good or bad.
+   have to evaluate and run the thing to find out.
+   So we can think of poker players or game theory.
+   versions of software we have to test. ci/cd.
+   so we can think of the outcome of thoughts as being experiments.
+   some thoughts we can reason about logically instead.
+   
+6. 
