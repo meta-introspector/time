@@ -1,0 +1,10 @@
+  500  iex -S mix run
+  501  sort -n list1.csv
+  502  sort -k2 -n list1.csv
+  503  sort -k2 -n list1.csv |head
+  504  sort -r -k2 -n list1.csv |head
+  505  sort -r -k2 -n list1.csv |head |cut -f1-3
+  506  sort -r -k2 -n list1.csv |head -100 |cut -f1-3
+  507  sort -r -k2 -n list1.csv |head -100 |cut -f1-3 > top100.csv
+  508  git add top100.csv 
+  509  history >ttxt
