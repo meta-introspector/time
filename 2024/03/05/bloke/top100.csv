@@ -1,100 +1,101 @@
-pysentimiento/robertuito-sentiment-analysis	64043378	43
-jonatasgrosman/wav2vec2-large-xlsr-53-english	62467540	379
-openai/clip-vit-large-patch14	58010688	970
-cardiffnlp/twitter-roberta-base-sentiment-latest	48262331	321
-mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis	32531389	190
-google-bert/bert-base-uncased	32487973	1387
-distilbert/distilbert-base-uncased	18471873	367
-facebook/wav2vec2-base-960h	15370380	202
-openai-community/gpt2	15142439	1703
-sentence-transformers/all-MiniLM-L6-v2	14625093	1463
-lxyuan/distilbert-base-multilingual-cased-sentiments-student	13755314	145
-distilbert/distilbert-base-uncased-finetuned-sst-2-english	13498471	413
-cardiffnlp/twitter-roberta-base-irony	13396246	19
-SamLowe/roberta-base-go_emotions	13139374	267
-Ashishkr/query_wellformedness_score	12649496	20
-marieke93/MiniLM-evidence-types	12649365	10
-FacebookAI/roberta-large	11473140	152
-sentence-transformers/all-mpnet-base-v2	10769568	607
-FacebookAI/xlm-roberta-base	10751776	468
-microsoft/layoutlmv3-base	9743863	246
-google/vit-base-patch16-224-in21k	9319986	115
-FacebookAI/roberta-base	9136264	301
-openai/clip-vit-base-patch32	9098702	331
-facebook/contriever	8100589	41
-google/electra-small-discriminator	6970843	21
-jonatasgrosman/wav2vec2-large-xlsr-53-portuguese	6853349	19
-cardiffnlp/twitter-roberta-base-sentiment	6812444	235
-smilegate-ai/kor_unsmile	6021713	7
-google-bert/bert-base-cased	5388692	195
-thenlper/gte-base	5089291	72
-sentence-transformers/paraphrase-MiniLM-L6-v2	5015216	61
-distilbert/distilbert-base-multilingual-cased	4740712	97
-microsoft/deberta-base	4668793	59
-prajjwal1/bert-small	4633425	15
-pyannote/segmentation	4578833	381
-albert/albert-base-v2	4290799	83
-stabilityai/stable-diffusion-xl-base-1.0	4176098	4613
-allenai/longformer-base-4096	4152288	136
-runwayml/stable-diffusion-v1-5	3988679	10368
-distilbert/distilgpt2	3931866	325
-facebook/bart-large-mnli	3929853	859
-Jean-Baptiste/roberta-large-ner-english	3723991	61
-distilbert/distilroberta-base	3714338	108
-Helsinki-NLP/opus-mt-de-en	3711161	30
-google-bert/bert-base-multilingual-cased	3706640	300
-pyannote/speaker-diarization	3649583	612
-tsmatz/xlm-roberta-ner-japanese	3588769	11
-MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli	3569260	150
-pyannote/segmentation-3.0	3434792	85
-google-t5/t5-small	3408420	217
-google/electra-base-discriminator	3376304	48
-benjamin/wtp-canine-s-1l	3314705	4
-Helsinki-NLP/opus-mt-fr-en	3161356	30
-openai/clip-vit-large-patch14-336	3135930	95
-owkin/phikon	2904825	12
-Helsinki-NLP/opus-mt-zh-en	2882294	338
-microsoft/layoutlm-base-uncased	2721890	28
-google-t5/t5-base	2711607	411
-CompVis/stable-diffusion-v1-4	2657214	6216
-sentence-transformers/bert-base-nli-mean-tokens	2448738	22
-facebook/bart-large-cnn	2429977	832
-microsoft/layoutlmv2-base-uncased	2406261	45
-almanach/camembert-base	2258888	49
-google/vit-base-patch16-224	2206937	459
-sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2	2203468	413
-timm/mobilenetv3_large_100.ra_in1k	2187595	26
-dbmdz/bert-large-cased-finetuned-conll03-english	2091811	50
-facebook/mms-tts-eng	2035986	82
-vennify/t5-base-grammar-correction	1983702	109
-nlpconnect/vit-gpt2-image-captioning	1976389	685
-uer/roberta-base-finetuned-chinanews-chinese	1929172	39
-microsoft/beit-base-patch16-224-pt22k-ft22k	1839269	62
-stabilityai/sd-vae-ft-mse	1815503	270
-YituTech/conv-bert-base	1786941	8
-google/flan-t5-base	1785546	591
-google/fnet-base	1778633	15
-sentence-transformers/multi-qa-mpnet-base-dot-v1	1778608	128
-seyonec/ChemBERTa-zinc-base-v1	1774950	24
-sentence-transformers/multi-qa-MiniLM-L6-cos-v1	1732240	97
-FacebookAI/xlm-roberta-large	1705656	254
-timm/resnet50.a1_in1k	1702179	13
-ehsanaghaei/SecureBERT	1665006	31
-CompVis/stable-diffusion-safety-checker	1644992	93
-Jean-Baptiste/camembert-ner	1641548	89
-facebook/bart-base	1622834	132
-intfloat/multilingual-e5-small	1605546	79
-facebook/wav2vec2-base	1582800	50
-openai/clip-vit-base-patch16	1574577	58
-stabilityai/stable-diffusion-xl-refiner-1.0	1535709	1383
-cambridgeltl/SapBERT-from-PubMedBERT-fulltext	1523306	33
-facebook/encodec_24khz	1510968	29
-DeepChem/ChemBERTa-77M-MLM	1484824	10
-BAAI/bge-small-en-v1.5	1460234	124
-emilyalsentzer/Bio_ClinicalBERT	1418350	208
-dslim/bert-base-NER	1411834	368
-Helsinki-NLP/opus-mt-it-en	1411558	11
-sentence-transformers/all-MiniLM-L12-v2	1386651	109
-laion/CLIP-ViT-B-16-laion2B-s34B-b88K	1347571	19
-ckiplab/bert-base-chinese-ner	1335123	74
-google/owlvit-base-patch32	1316746	85
+name,downloads,likes
+pysentimiento/robertuito-sentiment-analysis,64043378,43
+jonatasgrosman/wav2vec2-large-xlsr-53-english,62467540,379
+openai/clip-vit-large-patch14,58010688,970
+cardiffnlp/twitter-roberta-base-sentiment-latest,48262331,321
+mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis,32531389,190
+google-bert/bert-base-uncased,32487973,1387
+distilbert/distilbert-base-uncased,18471873,367
+facebook/wav2vec2-base-960h,15370380,202
+openai-community/gpt2,15142439,1703
+sentence-transformers/all-MiniLM-L6-v2,14625093,1463
+lxyuan/distilbert-base-multilingual-cased-sentiments-student,13755314,145
+distilbert/distilbert-base-uncased-finetuned-sst-2-english,13498471,413
+cardiffnlp/twitter-roberta-base-irony,13396246,19
+SamLowe/roberta-base-go_emotions,13139374,267
+Ashishkr/query_wellformedness_score,12649496,20
+marieke93/MiniLM-evidence-types,12649365,10
+FacebookAI/roberta-large,11473140,152
+sentence-transformers/all-mpnet-base-v2,10769568,607
+FacebookAI/xlm-roberta-base,10751776,468
+microsoft/layoutlmv3-base,9743863,246
+google/vit-base-patch16-224-in21k,9319986,115
+FacebookAI/roberta-base,9136264,301
+openai/clip-vit-base-patch32,9098702,331
+facebook/contriever,8100589,41
+google/electra-small-discriminator,6970843,21
+jonatasgrosman/wav2vec2-large-xlsr-53-portuguese,6853349,19
+cardiffnlp/twitter-roberta-base-sentiment,6812444,235
+smilegate-ai/kor_unsmile,6021713,7
+google-bert/bert-base-cased,5388692,195
+thenlper/gte-base,5089291,72
+sentence-transformers/paraphrase-MiniLM-L6-v2,5015216,61
+distilbert/distilbert-base-multilingual-cased,4740712,97
+microsoft/deberta-base,4668793,59
+prajjwal1/bert-small,4633425,15
+pyannote/segmentation,4578833,381
+albert/albert-base-v2,4290799,83
+stabilityai/stable-diffusion-xl-base-1.0,4176098,4613
+allenai/longformer-base-4096,4152288,136
+runwayml/stable-diffusion-v1-5,3988679,10368
+distilbert/distilgpt2,3931866,325
+facebook/bart-large-mnli,3929853,859
+Jean-Baptiste/roberta-large-ner-english,3723991,61
+distilbert/distilroberta-base,3714338,108
+Helsinki-NLP/opus-mt-de-en,3711161,30
+google-bert/bert-base-multilingual-cased,3706640,300
+pyannote/speaker-diarization,3649583,612
+tsmatz/xlm-roberta-ner-japanese,3588769,11
+MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli,3569260,150
+pyannote/segmentation-3.0,3434792,85
+google-t5/t5-small,3408420,217
+google/electra-base-discriminator,3376304,48
+benjamin/wtp-canine-s-1l,3314705,4
+Helsinki-NLP/opus-mt-fr-en,3161356,30
+openai/clip-vit-large-patch14-336,3135930,95
+owkin/phikon,2904825,12
+Helsinki-NLP/opus-mt-zh-en,2882294,338
+microsoft/layoutlm-base-uncased,2721890,28
+google-t5/t5-base,2711607,411
+CompVis/stable-diffusion-v1-4,2657214,6216
+sentence-transformers/bert-base-nli-mean-tokens,2448738,22
+facebook/bart-large-cnn,2429977,832
+microsoft/layoutlmv2-base-uncased,2406261,45
+almanach/camembert-base,2258888,49
+google/vit-base-patch16-224,2206937,459
+sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2,2203468,413
+timm/mobilenetv3_large_100.ra_in1k,2187595,26
+dbmdz/bert-large-cased-finetuned-conll03-english,2091811,50
+facebook/mms-tts-eng,2035986,82
+vennify/t5-base-grammar-correction,1983702,109
+nlpconnect/vit-gpt2-image-captioning,1976389,685
+uer/roberta-base-finetuned-chinanews-chinese,1929172,39
+microsoft/beit-base-patch16-224-pt22k-ft22k,1839269,62
+stabilityai/sd-vae-ft-mse,1815503,270
+YituTech/conv-bert-base,1786941,8
+google/flan-t5-base,1785546,591
+google/fnet-base,1778633,15
+sentence-transformers/multi-qa-mpnet-base-dot-v1,1778608,128
+seyonec/ChemBERTa-zinc-base-v1,1774950,24
+sentence-transformers/multi-qa-MiniLM-L6-cos-v1,1732240,97
+FacebookAI/xlm-roberta-large,1705656,254
+timm/resnet50.a1_in1k,1702179,13
+ehsanaghaei/SecureBERT,1665006,31
+CompVis/stable-diffusion-safety-checker,1644992,93
+Jean-Baptiste/camembert-ner,1641548,89
+facebook/bart-base,1622834,132
+intfloat/multilingual-e5-small,1605546,79
+facebook/wav2vec2-base,1582800,50
+openai/clip-vit-base-patch16,1574577,58
+stabilityai/stable-diffusion-xl-refiner-1.0,1535709,1383
+cambridgeltl/SapBERT-from-PubMedBERT-fulltext,1523306,33
+facebook/encodec_24khz,1510968,29
+DeepChem/ChemBERTa-77M-MLM,1484824,10
+BAAI/bge-small-en-v1.5,1460234,124
+emilyalsentzer/Bio_ClinicalBERT,1418350,208
+dslim/bert-base-NER,1411834,368
+Helsinki-NLP/opus-mt-it-en,1411558,11
+sentence-transformers/all-MiniLM-L12-v2,1386651,109
+laion/CLIP-ViT-B-16-laion2B-s34B-b88K,1347571,19
+ckiplab/bert-base-chinese-ner,1335123,74
+google/owlvit-base-patch32,1316746,85
