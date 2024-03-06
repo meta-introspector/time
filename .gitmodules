@@ -3337,3 +3337,27 @@
 [submodule "2024/03/06/nerves"]
 	path = 2024/03/06/nerves
 	url = https://github.com/nerves-project/nerves
+[submodule "2024/03/06/esshd"]
+	path = 2024/03/06/esshd
+	url = https://github.com/jbenden/esshd
+[submodule "2024/03/06/shrugs"]
+	path = 2024/03/06/shrugs
+	url = https://github.com/shortishly/shrugs
+[submodule "2024/03/06/gossiperl"]
+	path = 2024/03/06/gossiperl
+	url = https://github.com/gossiperl/gossiperl
+[submodule "2024/03/06/nano_ring"]
+	path = 2024/03/06/nano_ring
+	url = https://github.com/kbrw/nano_ring
+[submodule "2024/03/06/wrap"]
+	path = 2024/03/06/wrap
+	url = https://github.com/fremantle-industries/wrap
+[submodule "2024/03/06/mix_deploy"]
+	path = 2024/03/06/mix_deploy
+	url = https://github.com/cogini/mix_deploy
+[submodule "2024/03/06/nomad"]
+	path = 2024/03/06/nomad
+	url = https://github.com/sashaafm/nomad
+[submodule "2024/03/06/phoenix_example"]
+	path = 2024/03/06/phoenix_example
+	url = https://github.com/wojtekmach/phoenix_example
