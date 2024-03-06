@@ -3361,3 +3361,9 @@
 [submodule "2024/03/06/phoenix_example"]
 	path = 2024/03/06/phoenix_example
 	url = https://github.com/wojtekmach/phoenix_example
+[submodule "2024/03/06/elixir-arrow"]
+	path = 2024/03/06/elixir-arrow
+	url = https://github.com/treebee/elixir-arrow
+[submodule "2024/03/06/serde_arrow"]
+	path = 2024/03/06/serde_arrow
+	url = https://github.com/Benjamin-Philip/serde_arrow

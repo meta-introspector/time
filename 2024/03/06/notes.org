@@ -1,0 +1,56 @@
+* idea
+
+deploy via ssh, pull via git. file sharing via rsync.
+simple rest api and ssh api in erlang. all in one application.
+can push itself to new servers by command  (with ssh).
+can develop new versions of the code and optimize itself and share
+results via git.
+maybe use gossip. create working queue via rabbit mq.
+share results to others if needed. create reports.
+push results to hugging face datasets in git.
+they use arrow format.
+we want to support graphql/grp//openapi/protobuf as well.
+
+so lets just agree on a simple functional interface/protocol.
+the introspector meta protocol we can imagine as first giving us
+a list of identifiers, then relationships between them, then types.
+we can think of a protocol as a type.
+
+so identifiers can identify types or instances.
+we have propositions that an identifier represents a type at a certain depth
+in unimath. we have a set of propositions as our truth.
+we have a narrative about those truths. we can break down
+the language of the statements and classify them. we can show a schema
+to classify statements into groups concerning elements of a lattice.
+then we can create a groupoid structure around an idea.
+
+we can start by asking an application for a list of identifiers
+and then we can look which one of those has another list of identifiers
+or if it can deliver data as product of other types that always occur
+or as disjoint unions of types added together.
+
+so we have sets of addition or multiplication.
+then those can be the types of objects identified.
+
+then we can think of more complex types made of these simpler ones.
+each object can be see as the universe of universes type until we can reduce its strength.
+
+we might be able to come up with a floating point representation
+of a type. the state of each object represented in a simulation of a certain size.
+
+now the idea of implementing this system is that we can take in our notes
+from the time repo, this set, and load them into memory.
+it contains a list of repos linked to it. each of them has data we can select from.
+so each project contains strings. we can start with which strings occur in which project.
+the index project, time will contain the strings from the other object
+at least the name. we can create the diagonalization
+of all the projects by referencing them all and
+inserting that as a new project or row that references all the other rows.
+that is then a unique object that does not exist yet in that exact configuration.
+
+now we can look over the code and see what we can pick out.
+the results are going to be in a generic format that we can convert to arrow
+or json to feed to hugging face datasets.
+
+so we can think of erlang or elixer main memory as our basic dataset.
+or we can think of the xla tensor.
