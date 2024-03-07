@@ -54,3 +54,6 @@ or json to feed to hugging face datasets.
 
 so we can think of erlang or elixer main memory as our basic dataset.
 or we can think of the xla tensor.
+
+* gcp tpu list
+gcloud compute tpus list --zone=us-central1-b
