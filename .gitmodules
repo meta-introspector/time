@@ -3383,3 +3383,12 @@
 	path = 2024/03/07/openxla
 	url = https://github.com/openxla/xla
 
+[submodule "2024/03/08/tsl"]
+	path = 2024/03/08/tsl
+	url = https://github.com/google/tsl
+[submodule "2024/03/08/grpc"]
+	path = 2024/03/08/grpc
+	url = https://github.com/grpc/grpc
+[submodule "2024/03/08/rules_apple"]
+	path = 2024/03/08/rules_apple
+	url = https://github.com/bazelbuild/rules_apple
