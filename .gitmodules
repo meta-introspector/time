@@ -3277,6 +3277,7 @@
 [submodule "2024/03/05/langchainex"]
 	path = 2024/03/05/langchainex
 	url = https://github.com/orthagonal/langchainex
+
 [submodule "2024/03/06/archive-epilogue"]
 	path = 2024/03/06/archive-epilogue
 	url = https://github.com/rsewell/archive-epilogue
@@ -3367,3 +3368,8 @@
 [submodule "2024/03/06/serde_arrow"]
 	path = 2024/03/06/serde_arrow
 	url = https://github.com/Benjamin-Philip/serde_arrow
+
+[submodule "2024/03/07/nx"]
+	path = 2024/03/07/nx
+	url = https://github.com/elixir-nx/nx
+
