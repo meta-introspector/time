@@ -3373,3 +3373,13 @@
 	path = 2024/03/07/nx
 	url = https://github.com/elixir-nx/nx
 
+[submodule "2024/03/07/benchee"]
+	path = 2024/03/07/benchee
+	url = https://github.com/bencheeorg/benchee
+[submodule "2024/03/07/complex"]
+	path = 2024/03/07/complex
+	url = https://github.com/elixir-nx/complex
+[submodule "2024/03/07/openxla"]
+	path = 2024/03/07/openxla
+	url = https://github.com/openxla/xla
+
