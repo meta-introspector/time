@@ -1,0 +1,2 @@
+
+jq -r  '.[]| "git remote add " + .headRepositoryOwner.login +  " https://github.com/" + .headRepositoryOwner.login + "/" + .headRepository.name ' prs.json |sort -u

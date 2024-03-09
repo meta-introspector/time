@@ -3397,3 +3397,18 @@
 [submodule "2024/03/08/elixir-xla"]
 	path = 2024/03/08/elixir-xla
 	url = https://github.com/meta-introspector/xla
+[submodule "2024/03/09/jmlcoq"]
+	path = 2024/03/09/jmlcoq
+	url = https://github.com/coq-community/jmlcoq
+[submodule "2024/03/09/turbocharger"]
+	path = 2024/03/09/turbocharger
+	url = https://github.com/coqoon/turbocharger
+[submodule "2024/03/09/pcc"]
+	path = 2024/03/09/pcc
+	url = https://github.com/palmskog/pcc
+[submodule "2024/03/09/Java"]
+	path = 2024/03/09/Java
+	url = https://github.com/jesper-bengtson/Java
+[submodule "2024/03/09/coqfj"]
+	path = 2024/03/09/coqfj
+	url = https://github.com/hephaestus-pl/coqfj
