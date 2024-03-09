@@ -3368,7 +3368,6 @@
 [submodule "2024/03/06/serde_arrow"]
 	path = 2024/03/06/serde_arrow
 	url = https://github.com/Benjamin-Philip/serde_arrow
-
 [submodule "2024/03/07/nx"]
 	path = 2024/03/07/nx
 	url = https://github.com/elixir-nx/nx
@@ -3392,3 +3391,9 @@
 [submodule "2024/03/08/rules_apple"]
 	path = 2024/03/08/rules_apple
 	url = https://github.com/bazelbuild/rules_apple
+[submodule "2024/03/08/nx"]
+	path = 2024/03/08/nx
+	url = https://github.com/meta-introspector/nx
+[submodule "2024/03/08/elixir-xla"]
+	path = 2024/03/08/elixir-xla
+	url = https://github.com/meta-introspector/xla
