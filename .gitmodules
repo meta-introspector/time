@@ -3445,3 +3445,6 @@
 [submodule "2024/03/10/asdf-bazel"]
 	path = 2024/03/10/asdf-bazel
 	url = https://github.com/mrinalwadhwa/asdf-bazel
+[submodule "2024/03/10/iree"]
+	path = 2024/03/10/iree
+	url = https://github.com/meta-introspector/iree
