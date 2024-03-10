@@ -3454,3 +3454,6 @@
 [submodule "2024/03/10/shaderc"]
 	path = 2024/03/10/shaderc
 	url = https://github.com/google/shaderc
+[submodule "2024/03/10/googletest"]
+	path = 2024/03/10/googletest
+	url = https://github.com/google/googletest
