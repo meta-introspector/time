@@ -3439,3 +3439,9 @@
 [submodule "2024/03/10/pathex"]
 	path = 2024/03/10/pathex
 	url = https://github.com/hissssst/pathex
+[submodule "2024/03/10/rustler"]
+	path = 2024/03/10/rustler
+	url = https://github.com/rusterlium/rustler
+[submodule "2024/03/10/asdf-bazel"]
+	path = 2024/03/10/asdf-bazel
+	url = https://github.com/mrinalwadhwa/asdf-bazel
