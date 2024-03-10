@@ -1,0 +1,82 @@
+Thoughts for today:
+
+1. construction of equivalent programs on tpu,gpu,cpu via xla
+   using ml computational graphs is an interesting idea.
+
+   creation of datasets in hugging face.
+   one dataset for each build process in bazel/nix/make/cmake
+
+   so if we build bazel in bazel we will get the graph of the bazel code
+   then we can look at the build process and see what part of the graph is used
+   for what part.
+   if we trace the execution of the prints produced in debug mode
+   that will help us label them.
+
+   we can create a xla/ gpu/tpu build system that
+   checks models when committed to hugging face.
+   we want to first check how big they are etc.
+   also we want to collect structured data. we can write a csv file
+   or many, or use more structure.
+   machine,model,size,results where results is a series of function calls
+   
+   so the error results are a disjoint union of errors.
+   we can see that as hierarchy of grammar production rules for the errors.
+   so we basically have sexpressions or json or xml doms.
+
+* structure as code
+
+so using any programming language we can construct nested dictionaries
+like json.
+
+in elixir `IO.inspect(%{foo: %{bar: 1}})`
+
+* assumptions
+
+computation moves to where it can and is needed.
+different computations are equivalent if they produce the same result.
+a function goes from a domain to codomain (range).
+from one set to the other.
+identity lets us find objects in a set.
+morphisms are links between them.
+we can then think of these being described by another computation
+that carries them.
+so in a bazel build we can see the connection between hashes of content.
+we can think of reproducible builds that produce the same hashes
+across different builds of the same code, so that no environmental data is encorporated into the output
+that would corrupt its output changing the hash.
+so we can now think of the relationship between products of two different types,
+the total relationship between all elements of one type and another
+with some function to connect them.
+the functions can also be seen as part of a workflow.
+composed of smaller elements.
+
+so i think we can actually make sense out of a model in some sense
+some intuition, we can visualize or reduce dimensionality,
+we can focuse our attention, and we can experience a flow state
+and I like to call this the basic unit of consiousness,
+a moment of understanding created by a mathmatical setup
+so that you construct a point of view or reconstruct that point of view
+and that is part of the introspection process where you visualize or resample
+your own internal experience.
+creating trails or recording histories.
+
+* next idea
+
+need to review and rewrite my work. need a workflow system.
+review time repo in order. review all commits, comments, etc.
+reinterpret points of consiousness as unimath uu objects.
+function calls as recursive points of consiousness.
+specific to systems.
+coq of rust, safe rust extracted into erlang.
+
+thinking of compilers as doing
+inference on nested dictionaries, sexpressions, list terms.
+
+converting user code into terms that are used in allowed manners.
+the idea of control flow. attention flow.
+register flow. stalls. caching. fetching.
+load operations.
+store operations. load and process and store. allocation of regions.
+addressing. abstract algebras.
+so now we can get into ideas. we can think of contents of ideas as being named by identifiers. the identifies act as keys that point at the data, but also can be associated or content addressable hashing.
+
