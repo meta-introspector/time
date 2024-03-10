@@ -3412,3 +3412,30 @@
 [submodule "2024/03/09/coqfj"]
 	path = 2024/03/09/coqfj
 	url = https://github.com/hephaestus-pl/coqfj
+[submodule "2024/03/09/bazel"]
+	path = 2024/03/09/bazel
+	url = https://github.com/bazelbuild/bazel/
+[submodule "2024/03/10/explorer"]
+	path = 2024/03/10/explorer
+	url = https://github.com/elixir-explorer/explorer
+[submodule "2024/03/10/libgraph"]
+	path = 2024/03/10/libgraph
+	url = https://github.com/bitwalker/libgraph
+[submodule "2024/03/10/lagra"]
+	path = 2024/03/10/lagra
+	url = https://github.com/darkling/lagra
+[submodule "2024/03/10/1149ae2d50dd7664d2e827454704fedc"]
+	path = 2024/03/10/1149ae2d50dd7664d2e827454704fedc
+	url = https://gist.github.com/zblanco/1149ae2d50dd7664d2e827454704fedc
+[submodule "2024/03/10/grains"]
+	path = 2024/03/10/grains
+	url = https://gitlab.com/linges/grains
+[submodule "2024/03/10/flow"]
+	path = 2024/03/10/flow
+	url = https://github.com/dashbitco/flow
+[submodule "2024/03/10/dagger"]
+	path = 2024/03/10/dagger
+	url = https://github.com/zblanco/dagger
+[submodule "2024/03/10/pathex"]
+	path = 2024/03/10/pathex
+	url = https://github.com/hissssst/pathex
