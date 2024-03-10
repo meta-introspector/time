@@ -3448,3 +3448,9 @@
 [submodule "2024/03/10/iree"]
 	path = 2024/03/10/iree
 	url = https://github.com/meta-introspector/iree
+[submodule "2024/03/10/WasmEdge"]
+	path = 2024/03/10/WasmEdge
+	url = https://github.com/WasmEdge/WasmEdge
+[submodule "2024/03/10/shaderc"]
+	path = 2024/03/10/shaderc
+	url = https://github.com/google/shaderc
