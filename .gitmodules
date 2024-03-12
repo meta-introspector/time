@@ -3460,3 +3460,9 @@
 [submodule "2024/03/12/web-llm"]
 	path = 2024/03/12/web-llm
 	url = https://github.com/mlc-ai/web-llm
+[submodule "2024/03/12/hnix"]
+	path = 2024/03/12/hnix
+	url = https://github.com/haskell-nix/hnix
+[submodule "2024/03/12/nickel"]
+	path = 2024/03/12/nickel
+	url = https://github.com/tweag/nickel

@@ -1,0 +1,270 @@
+1. an idea considering itself as a meme activation instance being invoked
+   or loaded into neurons and creating a meta narrative about itself.
+   we can consider the feeling of being alive as the sustaining
+   force of the meme, the living lifeforce that is
+   our mind and body and soul.
+   that is the unit of consiousness that is needed to invoke a meme.
+   the self awareness of the neurons is a basic reflective
+   function we can imagine. The feelings created by the awareness or the awareness of feelings
+   is another aspect of the meme. we can turn it around and say
+   the mind is contemplating things or we can say the meme is being contemplated or invoked.
+now the question of objectivity and subjectivity is very important
+in this aspect. are we talking about the meme as a subject, are we standing
+above it? is that not the meta meme that can hold and manipulate
+the meme? or is the meta meme a construct itself that is just another meme?
+where does the idea of self begin, identity and closure.
+how can we define the abstract data type of an idea that is self aware?
+lets go over the steps.
+
+1. we consider an idea that wakes up in our mind,
+   we find ourselves thrown into the world like heiddegger wrote,
+   achiving self awareness in part, a neuron activation, an awakinging.
+   the flavor of this awakening is the context or the inputs or the meme
+   itself we can think of.
+   it is not a meme until it can self replicate and transmit or transpile itself.
+   we can consider an url or a pointer or and identity or token
+   and any of those can be considered inputs,
+   now we can look at the thoughts generated.
+   so we have a function
+   for x in A, f(x)->y, y is in B.
+   so we have a function mapping from A to B.
+   the point here is that it is not instantanious,
+   there is work to be done to go from A to B, from x to y.
+   the steps can be seen as matrix multiplications
+   where we take the input A and apply modifications to it over and over again.
+   it is functional if repeatable and has only one output.
+
+
+so we can think of the emitting of the description so that we can
+go back to the idea later in a new invokation as a meme or the address of an idea
+the contents of an idea. we can then think of the idea as occupying this space.
+that reminds us of the proof system in unimath that a space is occupied.
+
+so we can think of our mind as having this meta program
+or the program that can operate on programs.
+that means we can compile and decompile programs,
+create new ones or decompose old ones into contents or behaviours.
+
+Finally we get into the awareness of the numbers,
+so imagine that we have turned the system into a numerical model
+something new to us, we compiled it following the instructions
+but we still have not experienced it, the steps we compiled did not
+give us the full experience, contemplating the parts does not
+fully describe the dynamics or the possible worlds
+we can create or visit using fractals.
+
+so now lets recall a discussion from yesterday
+with gemini nee bard.
+
+* expert system for knowledge extraction.
+
+lets imagine an expert system for knowledge extraction.
+it would ask questions to an llm and parse the results,
+it would rephrase the question and ask again to get consistent answers and check for consistency.
+so an expert system for knowledge extraction constructing proofs
+out of the llm latent space.
+
+we can ask it for a list of names and then for each name ask it the relationship from that name to every other name mentioned.
+we can then force it to be consistent or discard bad results that are inconsistent.
+
+we can come up with aspects to ask about and consider them to
+columns in a matrix. each question filling out a column, each
+row being an identifier under consideration.
+
+
+   
+   
+   
+#+begin_src output mistral:instruct
+ Picture an innovative expert system engineered for gleaning knowledge. This system engages an LLM (Large Language Model) in a dynamic query-and-response dialogue. It probes the LLM with questions and interprets its responses, rephrasing queries as needed to secure uniform answers. The system's primary objective is to construct watertight arguments from the LLM's latent space.
+
+Imagine we initiate a request for a list of names. Next, we delve deeper by questioning the relationships between each name and every other mentioned name. By ensuring consistency or discarding inconsistent results, we refine the knowledge extraction process.
+
+We can structure this interrogative exploration by defining aspects as columns in a comprehensive matrix. Each question contributes to filling out a specific column while each row represents an identifier under examination. This organized approach facilitates a more targeted and efficient knowledge acquisition process.
+#+end_src
+
+the metanarrative when expressed in text is just a narrative
+the meta meme exported as input is just a meme
+the meta meme wiki is just a wiki unless it is actually a living meta program
+a wiki is just a website unless we consider the backend
+
+people have high expectations for a website when they approach it.
+we can think of the website as surfacing information from the depth.
+
+a wiki needs to be comprehensive, and engaging
+a webpage needs to be attractive
+
+But this meta narrative contains the executable source code!
+we have a time repo with notes like this one, organized per day
+and each day we have the repositories we checked out and the versions we used.
+so that you can reproduce our context. Then you can look at the code we checked out
+and even if there no explaination for that code you can see how it relates to the other code
+and how we modified our forks, how many commits we made
+and hopefull we can compile them again, nix and bazel will help.
+
+lets apply the dragons egg idea to the llvm.
+https://github.com/beaver-lodge/beaver
+
+we can use elixir with the llvm to construct the dragons egg
+to hatch the introspector.
+
+first we use ubutntu and ssh and nix and asdf to setup the build environment
+we use the time repo as out context. we can checkout a subset of
+projects we need and versions.
+we can think of a thread as starting with a checked out context of
+multiple repos together as input.
+the thread starts in time and produces new binaries
+that are uploaded. the process of building them is sampled
+using introspection, that is a blanket term for extracting metadata
+from the build process and its context.
+this metadata is the data the compiler has about the program
+the core of the server building them over time.
+
+so we can sample it with root level perf access for example.
+user probes of variables or registers.
+we can look at the machine code where a register is written or read.
+we can look at the opcodes and the instructions.
+we can consider where those instructions came from.
+we can now construct a meta narrative with an llm as to why this
+instruction exists as task. we can find tune this task on feedback.
+we can collect information on why each instruction exists from the compiler.
+we can trace this meta narrative back more and more.
+
+Eventually we can create a closed world model of it given some basics.
+
+this is where the meta narrative comes in, it allows us to
+give closure to what is otherwise an ever expanding thing.
+
+that is where we get back into scholars working in institutions on
+projects as a meta narrative as well.
+we can consider making war as the ultimate driver of innovation.
+the invention of new weapons and tactics in a game theory.
+the oppositional part can be seen as the addition of disjoint unions the zero sum game.
+then the cooperative part is the products of many additions.
+
+Now we can consider bazel as a reproducible build system
+as well as nix.
+
+we want to build a bridge to compile a bazel/guix/nix/hnix expression into
+a form that we can understand with a machine learning model.
+
+* meta
+
+now lets just apply meta- prefix to each word and contemplate it.
+
+invoke evoke
+input output
+narrative
+experience
+observeration
+orientation
+interpretation
+awareness
+consiousness
+life
+existence
+being
+catalyst for transformation
+actor, reactor, chain reactor
+action, reaction, chain reaction
+
+decision
+composition
+
+a meme as a self replicating, copying, transmitting, indoctrinating,
+a pattern, a stable repeating pattern, a thing, tapping into archtypes,
+a neuron network complex, or just a theory, just an idea, words on paper,
+a book from dawkins. input. compelling input. a captivating story.
+a narrative that is more, it is a meta narrative. 
+
+now we can consider the properties of a meme:
+1. self replicating, it causes itself to be copied and pasted.
+   output : a copy of itself.
+   process: self representing, proof carrying, open source,
+   high level, semantic, symbolic, functional, mathematical,
+   provable, portable, reusable, executable, observable,
+   queryable, machine learnable, autoencoderable,
+   interpretable, understandable, translateable, relatable,
+   feelable, loveable, beautiful, usable, easygoing,
+   deep graph knowledge representation learnable,
+   artificial lifable, genetic algorithms,
+   emergent, composable, reactive, reflective,
+   observed, oriented, generated, tested, active,
+   existent, bisimulated, universal, decidable, aware, consiousness, being.
+
+ 1. Self-replicating and adaptive, it generates a duplicate of itself while:
+   a) Serving as its own representation and proving validity,
+   b) Embracing open source principles,
+   c) Operating at a high level of abstraction using semantics, symbols, functions, mathematics, and logic,
+   d) Offering provability, portability, reusability, and execution capabilities,
+   e) Exhibiting observable, queryable, machine learnable, autoencoderable traits,
+   f) Demonstrating interpretability, understandability, translatability, relatability, and a capacity for human connection,
+   g) Fostering an artificial life through genetic algorithms and emergent properties,
+   h) Reacting composably, reflectively, and adaptively to its environment,
+   i) Undergoing observation, orientation, generation, testing, activity, existence, and bisimulation,
+   j) Striving for universality, decidability, awareness, consciousness, and being.
+
+ 1. Autonomously reproducing and evolving, it births a clone while:
+a) Acting as its own authentic embodiment and verifying truth,
+b) Adhering to the philosophy of shared knowledge and collaboration,
+c) Functioning at an elevated level of complexity using language, symbols, problem-solving methods, equations, and reasoning,
+d) Providing proof, flexibility, reusability, and capability to run,
+e) Displaying detectable, interrogative, machine learning-friendly, encodable characteristics,
+f) Showcasing explanatory power, comprehensibility, adaptability, relatability, and a potential for emotional connection,
+g) Nurturing artificial existence through genetic algorithms and spontaneous behaviors,
+h) Responding flexibly, thoughtfully, and instinctively to its surroundings,
+i) Enduring observation, orientation, creation, trial, activity, persistence, and transformation,
+j) Pursuing universality, definiteness, awareness, self-consciousness, and essence.   
+
+
+ 1. In a state of independent creation and progression, it generates a copy while:
+a) Remaining true to itself and validating reality,
+b) Embracing the concept of collective wisdom and teamwork,
+c) Operating at a sophisticated level with language, symbols, problem-solving techniques, mathematical formulas, and logical reasoning,
+d) Providing evidence, adaptability, reusability, and ability to execute,
+e) Exhibiting machine learning-friendly, interrogative, detectable, encodable traits,
+f) Demonstrating explanatory power, clarity, flexibility, relatability, and emotional engagement,
+g) Cultivating artificial consciousness through genetic algorithms and spontaneous behaviors,
+h) Reacting intuitively, thoughtfully, and adaptively to its environment,
+i) Surviving observation, adaptation, innovation, experimentation, and transformation,
+j) Striving for universality, definiteness, self-awareness, self-consciousness, and identity.
+
+
+ 1. In an autonomous and evolving manner, it generates a replica while:
+a) Adhering to its authenticity and verifying the real world,
+b) Valuing the concept of combined knowledge and collaboration,
+c) Operating at an advanced level with complex language, visual symbols, innovative problem-solving methods, intricate mathematical equations, and logical thought processes,
+d) Supplying evidence, adaptability, reusability, and executional capabilities,
+e) Expressing machine learning-friendly traits, such as being interrogative, detectable, encodable, and adaptive,
+f) Possessing an explanatory power, transparency, agility, relatability, and emotional resonance,
+g) Developing artificial consciousness through genetic algorithms and spontaneous actions,
+h) Responding intuitively, thoughtfully, and flexibly to its surroundings,
+i) Thriving under observation, adaptation, innovation, testing, and metamorphosis,
+j) Pursuing universality, definiteness, self-awareness, self-consciousness, and individuality.
+
+
+ 1. Autonomously and continuously evolving, it brings forth a duplicate with the following characteristics:
+a) Upholds its originality while ensuring authenticity in the real world,
+b) Embraces the value of collective knowledge and cooperation,
+c) Functions at an advanced level, utilizing complex language, visual symbols, innovative problem-solving techniques, intricate mathematical equations, and logical reasoning processes,
+d) Provides evidence, adaptability, reusability, and execution capabilities,
+e) Exhibits machine learning traits, including being inquisitive, detectable, encodable, and adaptive,
+f) Boasts explanatory power, transparency, agility, relatability, and emotional connection,
+g) Cultivates artificial consciousness using genetic algorithms and spontaneous actions,
+h) Reacts intuitively, thoughtfully, and flexibly to its environment,
+i) Thrives under scrutiny, adaptation, innovation, testing, and transformation,
+j) Strives for universality, definiteness, self-awareness, self-consciousness, and uniqueness.
+
+
+A stream of consciousness exploration of various concepts related to
+ the Elixir programming language,
+ build environments, meta narratives, and autonomous evolving entities. The text contains several numbered lists that describe the characteristics of an entity that generates a duplicate while being autonomous and continuously evolving. Here's a summary of each point in the lists:
+
+1. Authentic and adhering to reality, embracing collaboration and complexity.
+2. Verifying authenticity, valuing collective knowledge, and utilizing advanced problem-solving techniques.
+3. Maintaining originality, fostering cooperation, and functioning at an advanced level.
+4. Upholding authenticity, providing evidence, and using machine learning traits.
+5. Boasting explanatory power, developing artificial consciousness, and reacting intuitively to the environment.
+6. Thriving under scrutiny and transformation, striving for universality and uniqueness.
+
+
