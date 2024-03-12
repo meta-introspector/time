@@ -3508,3 +3508,6 @@
 [submodule "2024/03/12/mumi"]
 	path = 2024/03/12/mumi
 	url = https://git.savannah.gnu.org/git/guix/mumi.git
+[submodule "2024/03/12/guile"]
+	path = 2024/03/12/guile
+	url = git://git.sv.gnu.org/guile.git
