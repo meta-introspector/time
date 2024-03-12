@@ -3514,3 +3514,5 @@
 [submodule "2024/03/12/gnutls"]
 	path = 2024/03/12/gnutls
 	url = https://gitlab.com/gnutls/gnutls/
+[submodule "gnutls"]
+	url = https://github.com/meta-introspector/gnutls
