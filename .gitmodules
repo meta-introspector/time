@@ -3519,3 +3519,6 @@
 [submodule "2024/03/12/nettle"]
 	path = 2024/03/12/nettle
 	url = https://github.com/gnutls/nettle
+[submodule "2024/03/12/libtasn1"]
+	path = 2024/03/12/libtasn1
+	url = https://github.com/meta-introspector/libtasn1
