@@ -3466,3 +3466,45 @@
 [submodule "2024/03/12/nickel"]
 	path = 2024/03/12/nickel
 	url = https://github.com/tweag/nickel
+[submodule "2024/03/12/guix"]
+	path = 2024/03/12/guix
+	url = https://git.savannah.gnu.org/git/guix.git
+[submodule "2024/03/12/bootstrappable"]
+	path = 2024/03/12/bootstrappable
+	url = https://git.savannah.gnu.org/git/guix/bootstrappable.git
+[submodule "2024/03/12/dhcp"]
+	path = 2024/03/12/dhcp
+	url = https://git.savannah.gnu.org/git/guix/dhcp.git
+[submodule "2024/03/12/gnunet"]
+	path = 2024/03/12/gnunet
+	url = https://git.savannah.gnu.org/git/guix/gnunet.git
+[submodule "2024/03/12/guix-artwork"]
+	path = 2024/03/12/guix-artwork
+	url = https://git.savannah.gnu.org/git/guix/guix-artwork.git
+[submodule "2024/03/12/guix-cuirass"]
+	path = 2024/03/12/guix-cuirass
+	url = https://git.savannah.gnu.org/git/guix/guix-cuirass.git
+[submodule "2024/03/12/maintenance"]
+	path = 2024/03/12/maintenance
+	url = https://git.savannah.gnu.org/git/guix/maintenance.git
+[submodule "2024/03/12/videos"]
+	path = 2024/03/12/videos
+	url = https://git.savannah.gnu.org/git/guix/videos.git
+[submodule "2024/03/12/data-service"]
+	path = 2024/03/12/data-service
+	url = https://git.savannah.gnu.org/git/guix/data-service.git
+[submodule "2024/03/12/emacs-guix"]
+	path = 2024/03/12/emacs-guix
+	url = https://git.savannah.gnu.org/git/guix/emacs-guix.git
+[submodule "2024/03/12/build-coordinator"]
+	path = 2024/03/12/build-coordinator
+	url = https://git.savannah.gnu.org/git/guix/build-coordinator.git
+[submodule "2024/03/12/nar-herder"]
+	path = 2024/03/12/nar-herder
+	url = https://git.savannah.gnu.org/git/guix/nar-herder.git
+[submodule "2024/03/12/qa-frontpage"]
+	path = 2024/03/12/qa-frontpage
+	url = https://git.savannah.gnu.org/git/guix/qa-frontpage.git
+[submodule "2024/03/12/mumi"]
+	path = 2024/03/12/mumi
+	url = https://git.savannah.gnu.org/git/guix/mumi.git
