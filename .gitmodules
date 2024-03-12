@@ -3511,3 +3511,6 @@
 [submodule "2024/03/12/guile"]
 	path = 2024/03/12/guile
 	url = git://git.sv.gnu.org/guile.git
+[submodule "2024/03/12/gnutls"]
+	path = 2024/03/12/gnutls
+	url = https://gitlab.com/gnutls/gnutls/
