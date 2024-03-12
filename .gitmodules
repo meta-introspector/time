@@ -3457,3 +3457,6 @@
 [submodule "2024/03/10/googletest"]
 	path = 2024/03/10/googletest
 	url = https://github.com/google/googletest
+[submodule "2024/03/12/web-llm"]
+	path = 2024/03/12/web-llm
+	url = https://github.com/mlc-ai/web-llm
