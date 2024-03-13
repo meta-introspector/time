@@ -3519,8 +3519,40 @@
 [submodule "2024/03/12/nettle"]
 	path = 2024/03/12/nettle
 	url = https://github.com/gnutls/nettle
-
 [submodule "2024/03/12/libtasn1"]
 	path = 2024/03/12/libtasn1
 	url = https://github.com/meta-introspector/libtasn1
+[submodule "2024/03/13/guile"]
+	path = 2024/03/13/guile
+	url = https://gitlab.com/gnutls/guile
+[submodule "2024/03/13/libtool"]
+	path = 2024/03/13/libtool
+	url = git://git.savannah.gnu.org/libtool.git
+[submodule "2024/03/13/guile-git"]
+	path = 2024/03/13/guile-git
+	url = https://gitlab.com/guile-git/guile-git
+[submodule "2024/03/13/scheme-bytestructures"]
+	path = 2024/03/13/scheme-bytestructures
+	url = https://github.com/TaylanUB/scheme-bytestructures
+[submodule "2024/03/13/libgit2"]
+	path = 2024/03/13/libgit2
+	url = https://github.com/libgit2/libgit2
+[submodule "2024/03/13/guile-json"]
+	path = 2024/03/13/guile-json
+	url = https://github.com/aconchillo/guile-json
+[submodule "2024/03/13/guile-sqlite3"]
+	path = 2024/03/13/guile-sqlite3
+	url = https://notabug.org/guile-sqlite3/guile-sqlite3
+[submodule "2024/03/13/guile-xcb"]
+	path = 2024/03/13/guile-xcb
+	url = https://github.com/mwitmer/guile-xcb
+[submodule "2024/03/13/guile-gcrypt"]
+	path = 2024/03/13/guile-gcrypt
+	url = https://notabug.org/cwebber/guile-gcrypt
+[submodule "2024/03/13/guile-zlib"]
+	path = 2024/03/13/guile-zlib
+	url = https://notabug.org/guile-zlib/guile-zlib
+[submodule "2024/03/13/guile-lzlib"]
+	path = 2024/03/13/guile-lzlib
+	url = https://notabug.org/guile-lzlib/guile-lzlib
 

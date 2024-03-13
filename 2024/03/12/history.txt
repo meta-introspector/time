@@ -1,0 +1,437 @@
+sudo apt install libzstd-dev 
+export LD_LIBRARY_PATH=/mnt/data1/nix/root/lib:/mnt/data1/nix/root/lib64/
+
+APT
+   65  sudo apt install -y datefudge docbook docbook-to-man fonts-lmodern gtk-doc-tools  guile-3.0-dev libcmocka-dev libcmocka0 libopts25 libopts25-dev libosp5  libptexenc1 libsofthsm2 libteckit0 libtexlua53 libtexluajit2  libunbound-dev libzzip-0-13 net-tools opensp softhsm2 softhsm2-common  texlive-base texlive-binaries texlive-latex-base texlive-plain-generic
+  113  apt instl libev4-dev
+  114  sudo apt install libev4-dev
+  115  sudo apt install libev-dev
+  124  sudo apt install unbound-anchor
+  128  sudo apt install unbound
+  132  apt-seach asn1
+  133  apt-search asn1
+  134  apt search asn1
+  135  apt search asn1 |grep compile
+  136  apt search asn1 |grep compile -C2
+  137  sudo apt install asn1c
+  139  apt search asn1Parser
+  155  apt install automake1.16
+  156  sudo apt install automake1.11
+  157  sudo apt install automake1.13
+  168  sudo apt install help2man
+  252  apt remove guile-3.0
+  253  sudo apt remove guile-3.0
+  254  sudo apt remove guile-3
+  257  sudo apt install emacs-nox
+  260  sudo apt install help2man
+  268  apt install help2man
+  269  sudo apt install help2man
+  283  apt remote libgnutls
+  284  apt-remove libgnutls
+  285  apt remove libgnutls
+  330  sudo apt install help2man
+  335  sudo apt install help2man
+  449  sudo apt-isntall debhelper-compat  guile-avahi guile-gcrypt  guile-git guile-gnutls  guile-json  guile-library guile-lzlib guile-semver guile-ssh guile-sqlite3  guile-zlib  guile-zstd libbz2-dev locales-all po4a
+  450  sudo apt install debhelper-compat  guile-avahi guile-gcrypt  guile-git guile-gnutls  guile-json  guile-library guile-lzlib guile-semver guile-ssh guile-sqlite3  guile-zlib  guile-zstd libbz2-dev locales-all po4a
+  451  sudo apt install debhelper-compat  libbz2-dev locales-all po4a
+  479  history |grep apt
+  
+GUILE
+
+24  sudo cp /usr/local/lib/pkgconfig/guile-3.0.pc /usr/local/lib/pkgconfig/guile.pc 
+   25  ./bootstrap 
+   26  grep -r GUILE_PROGS /usr/local/lib/
+   27  grep -r GUILE_PROGS /usr/local/
+   28  . ./set.sh 
+   29  aclocal
+   30  autoreconf 
+   31  #autoreconf grep 
+   32  grep GUILE_PROGS *
+   33  grep -r GUILE_PROGS *
+   34  ./configure 
+   35  git pull
+   36  cd ..
+   37  git pull
+   38  git pull origin
+   39  git pull origin main
+   40  git submodule init .
+   41  git submodule update .
+   42  git pull
+   43  git pull origin main
+   44  git checkout main
+   45  git pull
+
+
+NETTLE
+cd /mnt/data1/nix/time/2024/03/12/nettle
+./configure  --prefix=/mnt/data1/nix/root/
+make -j20
+mak
+83  git submodule add https://github.com/gnutls/nettle
+   84  git commit -m 'nettle' -a
+   85  git pull
+   86  git checkout origin/main
+   87  git pull
+   88  git pull origin main
+   89  cd nettle/
+   90  ls
+   91  autoreconf 
+   92  ./configure 
+   93  sudo make install
+   94  cd ..
+   95  ls
+   96  ls -latr
+
+
+TASN1
+
+148  cd libtasn1/
+  149  ls
+  150  ./configure 
+  151  make install 
+  152  sudo make install 
+  153  aclocal-1.3
+  154  aclocal-1.13
+  155  apt install automake1.16
+  156  sudo apt install automake1.11
+  157  sudo apt install automake1.13
+  158  autoreconf 
+  159  autoreconf  --add-missing
+  160  automake  --add-missing
+  161  autoreconf  --add-missing
+  162  autoreconf
+  163  ./configure 
+  164  sudo make install 
+  165  sudo make install  -k20
+  166  sudo make install  -j20
+  167  help2man
+  168  sudo apt install help2man
+  169  sudo make install  -j20
+  170  sudo make install  -k
+  171  cd ..
+  172  ls
+  173  cd gnutls/
+  174  ./configure 
+  175  ./bootstrap 
+  176  ./configure 
+  177  ./configure --help
+  178  ./configure --help  > configure-help.txt
+  179  grep ASN configure-help.txt 
+  180  pkg-config libtasn1
+  181  export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig/
+  182  pkg-config libtasn1
+
+
+  187  command dirs
+  188  pkg-config libtasn1
+  189  find  /usr/local/ |grep asn
+  190  pkg-config libtasn1
+  191  bash -x ./configure  
+  192  bash -x ./configure   > log.txt 2>&1
+  193  pkg-config--exists --print-errors "ibtasn1
+  194  pkg-config--exists --print-errors libtasn1
+  195  pkg-config --exists --print-errors libtasn1
+  196  strace pkg-config--exists --print-errors libtasn1
+  197  strace pkg-config --exists --print-errors libtasn1
+  198  cd ..
+  199  cd libtasn1/
+  200  git remote add gnu https://gitlab.com/gnutls/libtasn1.git
+  201  git pull gnnu
+  202  git pull gnu
+  203  cd /mnt/data1/nix/time/
+  204  ls
+  205  cd 2024/0
+  206  cd 2024/03
+  207  ls
+  208  cd 12
+  209  ls
+  210  git submodule init
+  211  git submodule update .
+  212  cd ..
+  213  git pull
+  214  git pull origin
+  215  git pull origin main
+  216  ls
+  217  cd 12/
+  218  git submodule init
+  219  git submodule update
+  220  git submodule update .
+  221  cd guix
+  222  cd ..
+  223  cd guile/
+  224  ls
+  225  ./configure 
+  226  git submodule init
+  227  git submodule update
+  228  autoreconf 
+  229  git submodule init
+  230  ls ./bootstrap/Makefile.am 
+  231  ./autogen.sh 
+  232  ./configure 
+  233  make -j20
+  234  make install 
+  235  sudo make install 
+  236  guile
+  237  cd ..
+  238  cd guix
+  239  ls
+  240  autoreconf 
+  241  autoconf
+  242  git submodule init
+  243  autoconf
+  244  ./configure 
+  245  automake
+  246  automake --add-missin
+  247  automake --add-missing
+  248  ./configure 
+  249  pkg-config 
+  250  pkg-config  --list-all
+  251  pkg-config  --list-all |grep guile
+  252  apt remove guile-3.0
+  253  sudo apt remove guile-3.0
+  254  sudo apt remove guile-3
+  255  dlocate guile
+  256  emacs
+  257  sudo apt install emacs-nox
+  258  emacs
+  259  exit
+  260  sudo apt install help2man
+  261  vi ~/.bashrc 
+  262  ldd /lib/x86_64-linux-gnu/libgnutls.so.30
+  263  ldd /lib/x86_64-linux-gnu/libgnutls.so.30 |grep local
+  264  rm /usr/local/lib/libtasn1.so.6
+  265  sudo rm /usr/local/lib/libtasn1.so.6
+  266  rm /usr/local/lib/libtasn1.so.6
+  267  ldd /lib/x86_64-linux-gnu/libgnutls.so.30 |grep local
+  268  apt install help2man
+  269  sudo apt install help2man
+  270  gnu
+  271  git
+  272  cd /mnt/data1/nix/
+  273  ls -latr
+  274  cd time/
+  275  ls
+  276  cd 2024/03/
+  277  ls -latr
+  278  cd 12/
+  279  ls
+  280  cd libtasn1/a
+  281  cd libtasn1/
+  282  git pull
+  283  apt remote libgnutls
+  284  apt-remove libgnutls
+  285  apt remove libgnutls
+  286  ldd  /lib/x86_64-linux-gnu/libgnutls.so.30
+  287  set |grep LD
+  288  unset LD_LIBRARY_PATH
+  289  git pull gnu
+  290  git checkout v4.9
+  291  git checkout v4.9.0
+  292  git branch | grep 4.9
+  293  git branch | grep 4_9
+  294  git branch  -a| grep 4_9
+  295  git fetch  gnu
+  296  git branch
+  297  git branch  -a
+  298  git tags
+  299  git tag
+  300  git tag  |grep 4_9
+  301  git checkout libtasn1_4-9
+  302  git checkout libtasn1_4_9
+  303  git checkout libtasn1_4_9 --force  
+  304  autoreconf 
+  305  automake --add-missing
+  306  autoreconf 
+  307  touch ChangeLog
+  308  libtoolize
+  309  autoreconf 
+  310  ./configure 
+  311  make
+  312  sudo make -j20 install
+  313  sudo make clean
+  314  make
+  315  sudo chown ubuntu: -R 
+  316  sudo chown -R ubuntu: .
+  317  make
+  318  emacs
+  319  make
+  320  CFLAGS=-Wno-format-truncation make
+  321  export CFLAGS=-Wno-format-truncation 
+  322  make
+  323  CFLAGS=-Wabi=11 make
+  324  CXXFLAGS=-Wabi=11 make
+  325  make
+  326  grep -r -i  "wabi"  *
+  327  ./configure 
+  328  make
+  329  help2man
+  330  sudo apt install help2man
+  331  command dirs
+  332  set | grep  local
+  333  set | grep  local/lib
+  334  set | grep  /usr/local
+  335  sudo apt install help2man
+  336  make
+  337  sudo make install
+
+
+
+TLS
+TLS1
+
+46  cd gnutls/
+   60  git remote add mi https://github.com/meta-introspector/gnutls
+   61  git remote set-url mi https://github.com/meta-introspector/gnutls
+   62  git pull mi
+   63  git pull mi master
+   64  cat install.sh 
+   65  sudo apt install -y datefudge docbook docbook-to-man fonts-lmodern gtk-doc-tools  guile-3.0-dev libcmocka-dev libcmocka0 libopts25 libopts25-dev libosp5  libptexenc1 libsofthsm2 libteckit0 libtexlua53 libtexluajit2  libunbound-dev libzzip-0-13 net-tools opensp softhsm2 softhsm2-common  texlive-base texlive-binaries texlive-latex-base texlive-plain-generic
+   66  autoreconf 
+   67  git submodule init .
+   68  git submodule update .
+   72  git submodule init .
+   73  git submodule update .
+   74  cd gnutls/
+   75  git checkout main
+   76  git checkout master
+   77  ls
+   78  git reset --hard
+   79  ls
+   80  ./bootstrap 
+   81  ./configure 
+   82  cd ..
+
+97  cd gnutls/
+   98  ./configure 
+   99  set |grep LD
+  100  set |grep local
+  101  set |grep usr/local/
+  102  ./configure 
+  103  pkg-config --exists --print-errors nettle
+  104  find / -name nettle.pc 
+  105  find /usr/ -name nettle.pc 
+  106  set |grep usr/local/
+  107  ./configure 
+  108  pkg-config --exists --print-errors nettle
+  109  . /mnt/data1/nix/time/2024/03/12/guix/set.sh
+  110  pkg-config --exists --print-errors nettle
+  111  ./configure 
+  112  ./configure  --with-included-libtasn1
+  113  apt instl libev4-dev
+  114  sudo apt install libev4-dev
+  115  sudo apt install libev-dev
+  116  ./configure  --with-included-libtasn1
+  117  git pull
+  118  git fetch --all
+  119  git pull mi master
+  120  bash ./install.sh 
+  121  ./configure  --with-included-libtasn1
+  122  ./configure  --with-included-libtasn1 
+  123  unbound-anchor -a "/etc/unbound/root.key"
+  124  sudo apt install unbound-anchor
+  125  unbound-anchor -a "/etc/unbound/root.key"
+  126  sudo unbound-anchor -a "/etc/unbound/root.key"
+  127  sudo unbound-anchor 
+  128  sudo apt install unbound
+  129  history
+  130  ./configure  --with-included-libtasn1 --without-p11-kit
+  131  make -j 20
+  132  apt-seach asn1
+  133  apt-search asn1
+  134  apt search asn1
+  135  apt search asn1 |grep compile
+  136  apt search asn1 |grep compile -C2
+  137  sudo apt install asn1c
+  138  make -j 20
+  139  apt search asn1Parser
+  140  #./configure  --with-included-libtasn1 --without-p11-kit
+  141  cd .
+  142  cd ..
+  143  git pull
+  144  git pull origin
+  145  git pull origin main
+  146  git submodule init .
+  147  git submodule update .
+
+  338  cd ..
+  339  cd gnutls/
+  340  ls
+  341  make
+  342  LDFLAGS=-ld make
+  343  sudo  make install 
+  344  sudo  make install  -k
+  345  ./configure  --help
+  346  libtoolize
+  347  ./configure  libtoolize
+  348  ./configure  --with-gnu-ld
+  349  #./configure  --with-gnu-ld --with-lib-
+  350  pkg-config --print-errors --cflags --libs nettle
+  351  pkg-config --print-errors --version nettle
+  352  cd .
+  353  cd ..
+  354  . ./guix/set.sh
+  355  pkg-config --print-errors --version nettle
+  356  cd nettle/
+  357  ls
+  358  git branch
+  359  git tag
+  360  git checkout nettle_3.8_release_20220602
+  361  ./configure 
+  362  make
+  363  sudo make install
+  364  sudo make install -j 20
+  365  make clean
+  366  sudo chown -R ubunutu:
+  367  sudo chown -R ubunutu: .
+  368  sudo chown ubunutu: -R .
+  369  sudo chown ubuntu: -R .
+  370  sudo make install -j 20
+  371  make
+  372  make clean
+  373  sudo make clean
+  374  sudo chown ubuntu: -R .
+  375  ./configure 
+  376  make 
+  377  sudo make  install 
+
+
+
+
+GUIX install  failed
+  415  cd /tmp
+  416  wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh
+  417  chmod +x guix-install.sh
+  418  ./guix-install.sh
+  419  sudo ./guix-install.sh 
+  420  locate libunwind.so.8
+  421  sudo fine / -name libunwind\*
+  422  sudo find / -name libunwind\*
+  423  ldd /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1 
+  424  ldd /usr/lib/x86_64-linux-gnu/libunwind.so.8
+  425  sudo ./guix-install.sh 
+  426  guix
+  427  ldd /gnu/store/5kj8lyybjrdl7xd0fx9g9vzkz8sklqsy-guix-1.4.0/libexec/guix/guile
+  428  ldd /gnu/store/5kj8lyybjrdl7xd0fx9g9vzkz8sklqsy-guix-1.4.0/libexec/guix/guile | grep unwindo
+  429  ldd /gnu/store/5kj8lyybjrdl7xd0fx9g9vzkz8sklqsy-guix-1.4.0/libexec/guix/guile | grep unwind
+  430  ls /lib/x86_64-linux-gnu/libunwind.so.8
+  431  ldd /lib/x86_64-linux-gnu/libunwind.so.8
+  432  guix
+  433  /gnu/store/5kj8lyybjrdl7xd0fx9g9vzkz8sklqsy-guix-1.4.0/libexec/guix/guile 
+  434  ldd /gnu/store/5kj8lyybjrdl7xd0fx9g9vzkz8sklqsy-guix-1.4.0/libexec/guix/guile 
+
+try debian (needs other versions)
+
+438  cd ..
+  439  cd 13
+  440  wget http://deb.debian.org/debian/pool/main/g/guix/guix_1.4.0-5.debian.tar.xz
+  441  tar xf guix_1.4.0-5.debian.tar.xz 
+  442  cd ..
+  443  cd 12/gui
+  444  cd 12/
+  445  cd guix
+  446  dpkg-buildpackage 
+  447  mv debian/patches/ debian/patches2
+  448  dpkg-buildpackage 
+  449  sudo apt-isntall debhelper-compat  guile-avahi guile-gcrypt  guile-git guile-gnutls  guile-json  guile-library guile-lzlib guile-semver guile-ssh guile-sqlite3  guile-zlib  guile-zstd libbz2-dev locales-all po4a
+  450  sudo apt install debhelper-compat  guile-avahi guile-gcrypt  guile-git guile-gnutls  guile-json  guile-library guile-lzlib guile-semver guile-ssh guile-sqlite3  guile-zlib  guile-zstd libbz2-dev locales-all po4a
+  451  sudo apt install debhelper-compat  libbz2-dev locales-all po4a
