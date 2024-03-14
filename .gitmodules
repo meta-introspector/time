@@ -3559,3 +3559,8 @@
 [submodule "2024/03/13/ement.el"]
 	path = 2024/03/13/ement.el
 	url = https://github.com/alphapapa/ement.el
+
+[submodule "2024/03/14/guile-zstd"]
+	path = 2024/03/14/guile-zstd
+	url = https://github.com/meta-introspector/guile-zstd
+
