@@ -3570,3 +3570,9 @@
 [submodule "2024/03/17/mach-nix"]
 	path = 2024/03/17/mach-nix
 	url = https://github.com/DavHau/mach-nix
+[submodule "2024/03/18/hydra"]
+	path = 2024/03/18/hydra
+	url = https://github.com/NixOS/hydra
+[submodule "2024/03/18/guix-cuirass"]
+	path = 2024/03/18/guix-cuirass
+	url = https://git.savannah.gnu.org/git/guix/guix-cuirass.git
