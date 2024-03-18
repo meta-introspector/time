@@ -3578,6 +3578,7 @@
 
 #	url = https://git.savannah.gnu.org/git/guix/guix-cuirass.git
 	url = https://github.com/meta-introspector/guix-curiass
+
 [submodule "2024/03/16/flake-parts"]
 	url = https://github.com/hercules-ci/flake-parts
 [submodule "flake-parts"]
@@ -3606,4 +3607,10 @@
 [submodule "2024/03/18/fibers"]
 	path = 2024/03/18/fibers
 	url = https://github.com/wingo/fibers
+
+[submodule "2024/03/16/flake-parts"]
+	url = https://github.com/hercules-ci/flake-parts
+[submodule "flake-parts"]
+	url = https://github.com/hercules-ci/flake-parts
+
 
