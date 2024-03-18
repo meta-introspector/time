@@ -3468,7 +3468,7 @@
 	url = https://github.com/tweag/nickel
 [submodule "2024/03/12/guix"]
 	path = 2024/03/12/guix
-	url = https://git.savannah.gnu.org/git/guix.git
+	url = https://github.com/meta-introspector/guix
 [submodule "2024/03/12/bootstrappable"]
 	path = 2024/03/12/bootstrappable
 	url = https://git.savannah.gnu.org/git/guix/bootstrappable.git
