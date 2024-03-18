@@ -3576,3 +3576,5 @@
 [submodule "2024/03/18/guix-cuirass"]
 	path = 2024/03/18/guix-cuirass
 	url = https://git.savannah.gnu.org/git/guix/guix-cuirass.git
+[submodule "guix-cuirass/"]
+	url = https://github.com/meta-introspector/guix-curiass
