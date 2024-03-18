@@ -3581,3 +3581,12 @@
 	url = https://github.com/hercules-ci/flake-parts
 [submodule "flake-parts"]
 	url = https://github.com/hercules-ci/flake-parts
+[submodule "2024/03/16/nixified-ai-flake"]
+	path = 2024/03/16/nixified-ai-flake
+	url = https://github.com/nixified-ai/flake
+[submodule "2024/03/16/nix-beam-flakes"]
+	path = 2024/03/16/nix-beam-flakes
+	url = https://github.com/shanesveller/nix-beam-flakes
+[submodule "2024/03/16/mix-to-nix"]
+	path = 2024/03/16/mix-to-nix
+	url = https://github.com/serokell/mix-to-nix
