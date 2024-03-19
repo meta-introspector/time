@@ -185,3 +185,7 @@ workflows and streams.
 
 gh api user/starred  --paginate > stars.txt
 
+grep -P '(nix|guix)' ./sorte.txt  | grep clone_url  |cut '-d"' -f4 |cut -d. -f1-2 > urls.txt
+
+for x in `cat urls.txt `; do grep $x /mnt/data1/nix/time/.gitmodules || echo nope $x; done
+
