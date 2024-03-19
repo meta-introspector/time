@@ -3625,3 +3625,7 @@
 	url = https://github.com/serokell/mix-to-nix
 
 
+[submodule "2024/03/19/nixos-configs"]
+	path = 2024/03/19/nixos-configs
+	url = https://github.com/meta-introspector/nixos-configs
+
