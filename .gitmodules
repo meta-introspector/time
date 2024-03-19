@@ -3593,3 +3593,9 @@
 [submodule "2024/03/19/nixos-configs"]
 	path = 2024/03/19/nixos-configs
 	url = https://github.com/meta-introspector/nixos-configs
+[submodule "2024/03/19/nix-postgres"]
+	path = 2024/03/19/nix-postgres
+	url = https://github.com/supabase/nix-postgres
+[submodule "2024/03/19/supabase-nix-postgres"]
+	path = 2024/03/19/supabase-nix-postgres
+	url = https://github.com/supabase/nix-postgres
