@@ -189,26 +189,29 @@ grep -P '(nix|guix)' ./sorte.txt  | grep clone_url  |cut '-d"' -f4 |cut -d. -f1-
 
 for x in `cat urls.txt `; do grep $x /mnt/data1/nix/time/.gitmodules || echo nope $x; done
 
-** postgres
+** clean
+#+begin_src shell
+  nix gc
+  nix clean
+  nix --help |grep clean
+  nix-store --gc
+#+end_src
 
-  127  nix gc
-  128  nix clean
-  129  nix --help |grep clean
-  130  nix-store --gc
-  131  df -h
-  132  df
-  133  mkdir /home/postgres
-  134  chown postgres: /home/postgres
-  135  mkdir /run/postgresql
-  136  chown postgres: /run/postgresql
-  137  history
+** postgres
+#+begin_src shell
+  mkdir /home/postgres
+  chown postgres: /home/postgres
+  mkdir /run/postgresql
+  chown postgres: /run/postgresql
 nix build .#psql_15/bin -o result-15
-git submodule update .
-cd nix-postgres/
-bash-5.2#
-ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/postgres
-# ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/initdb 
-./initdb -D data2
-# ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/pg_ctl 
-#./pg_ctl -D data2 -l logfile start
-./postgres -D data2
+  #+end_src
+
+#+begin_src shell  
+
+  ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/postgres
+  ./initdb -D data2
+
+  #./pg_ctl -D data2 -l logfile start
+  ./postgres -D data2
+
+#+end_src
