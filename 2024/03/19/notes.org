@@ -212,6 +212,22 @@ nix build .#psql_15/bin -o result-15
   ./initdb -D data2
 
   #./pg_ctl -D data2 -l logfile start
-  ./postgres -D data2
+  ./postgres -D data2 &
 
+ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/createuser 
+
+./createuser root
+
+ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/createdb 
+./createdb cuirass
+
+ln -s /nix/store/lzffdhdlp7fg1ggm7spbs2czlny0m6nm-postgresql-and-plugins-15.6/bin/psql 
+#+end_src
+
+./psql
+
+#+begin_src shell  
+grant all PRIVILEGES on schema public to root;
+grant all PRIVILEGES on database cuirass to root;
+alter database cuirass owner to root;
 #+end_src
