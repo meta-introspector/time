@@ -1,0 +1,187 @@
+*idea of the day.
+
+1. use terraform to provisiion postgres server
+1.1. the pg server can also be a cloud hosted on later.
+1.2. extract needed data and database
+1.3 create query server like graphql to query the data.
+1.4 create static functional sql server to reason about the static data and do joins on it, new data can be introduced in the query.
+1.5 these are effectivly joins and iterations.
+1.6 this represents a formal abstraction of the data.
+1.7 we can use a k/v pair to store query and results in a nix store
+1.8 we can think of the data consulted as inputs to the nix derivative.
+each kv store can be converted to a function.
+the functions can reduce the size by increasing the time.
+we can dynamically trade off between time and space.
+1.9 change curiass interface to use abstract database
+guile-dbi
+now we can replace the sql with graphql or rdf
+now we can look at the requirement of guile-postgresql 
+
+now we can consider this as a self referencial system
+/mnt/data1/nix/time/2024/03/18/guix-cuirass/src/schema.sql
+it allows for descriptions of build outputs and it itself
+can be part of that.
+
+      3:CREATE TABLE SchemaVersion (
+      7:CREATE TABLE Specifications (
+     19:CREATE TABLE Evaluations (
+     29:CREATE TABLE Checkouts (
+     41:CREATE TABLE Builds (
+     62:CREATE TABLE BuildDependencies (
+     70:CREATE TABLE Jobs (
+     81:CREATE TABLE Outputs (
+     88:CREATE TABLE Metrics (
+     97:CREATE TABLE BuildProducts (
+    108:CREATE TABLE Notifications (
+    115:CREATE TABLE Workers (
+    123:CREATE TABLE Dashboards (
+
+
+now we can think of this as a meta model
+or execution model of the system in postgres
+
+one thing that is notable is that the inputs are missing,
+there is no concept of git repos or projects directly.
+lets add the tables for github schemas and grpc schemas and metacoq types.
+each of them in a separate model.
+we can now think of this as many equivalent models.
+we can now have each model model all the other models.
+we should be able to express the world from the lens of all the systems
+to a greater or lesser degree.
+this can be reduced to key value pairs or axioms.
+we can think of the mind as player in the symbotic game of life
+and exchanging goods and services with others.
+
+we can think of code attached to llama cpp as something to model into the tpu.
+so we can lift the computation out of the cpu into the gpu and tpu.
+we can model it as follows:
+
+assuming some new fancy python lib for example.
+
+1. compiler bootstrap.
+2. core python system
+3. python libraries
+4. domain specific models in scheme/elixir/python( django classes)
+5. postgres sql servers
+6. traces of queries between client and server, a protocol
+7. event streams, kafka, message queues,
+8. containerization
+9. permissions and access control   
+10. model checkers, coq
+    semantic integration queries,
+    service discovery
+    service negotiation
+    sparql
+    graphql
+    ontologies for each system
+    homotopy type theory
+    dependent type theory
+    PI function as F(T)=>some expression yielding type.
+    template class
+    template function
+
+
+properties in owl derived from data types,
+using offsets in memory and raw memory and rewrites of memory.
+pure c++ introspection via compiler to abi.
+memory layout introspection,
+dwarf/elf as a set of propositions,
+binary format reconstruction.
+machine descriptions as a set of fiats or light schemas of cpu
+we can think of reverse engineering the internals
+of the machines using a high level description of the machines.
+verilog. the inception of the machine was light pattern
+created when the chip was set as a single thought.
+i suppose there are layers to it so a stack of images as thoughts.
+this thought is the private key of the company,
+that with a mapping of what they mean and how they are used
+and why they were created. we cannot exclude mistakes, biases, conventions,
+secrets, etc.
+binutils as a set of biases extracted from that supposed knowledge.
+so now we have a function to capture the understanding of the creation
+of the chip and the events leading up to it, we can compile a
+set of expectations and open questions. we can iterate over open source chips.
+we can go from vhsd very high level design to low level.
+so we can think of the light beams of the chip design to be the pure energy
+form of the system transported over space and time.
+
+now lets imagine the execution of the cpu is the traversal of the 2d/3d layout of the chip.
+so now the trace of one chip is creating a different chip or itself.
+we can imagine the steps going over the execution
+of the chip in creating a copy of itself.
+
+so say compiling the verilog of a chip,
+creating the chip,
+compiling the compiler and os on that chip,
+compiling verilog system on the os,
+running the verilog on the new chip.
+
+in an open source hardware world of simulated virtual reality
+we can trace a path of electrons on the chip that can re-create themselves
+in-directly.
+
+so electrons in the chip control create flows of electrons in function calls,
+and finally electrons in the chip control the beam of light that creates
+the chip that guide the electrons that controls the beam of light.
+
+we can think of higher dimensional structures projected into the 2d structure of
+the chip and the chip being a dungeon normally where some company
+holds the maze design. now we can think of the open source one as a
+map. we can now imagine the chip holding a concept of itself in memory.
+so a projection into 1d memory. this serialization or layout
+is also a vector embedding. we can optimize it for size and ease of manipulation or querying.
+we can think of it as a data structure or a set of functions to
+retrieve or set values.
+now parts of the memory describe functions.
+these functions are then implemented by the chip in logic.
+so we can think of a layout into address space of the chip in 2d.
+the addressing system is 1d that gives us a virtual map of the chip.
+now we can measure the time it takes from one section to another.
+
+now we can think of the address that can reference itself,
+it would be an address in the high level language
+and can be carried to an address in the implementation
+that can still point at itself in the implementation,
+and know where to get information
+about itself from the structure, so a self describing chip.
+we can ask the system for any token why the value got there, so an audit.
+imagine a self aware chip.
+
+we can imagine a self aware human
+who can imagine themselves
+imagining themselves,
+having compassion for the world
+like buddha.
+
+Picture in your mind a being,
+not unlike ourselves,
+endowed with the capacity of
+introspection and consciousness.
+This being is more than just a
+complex machine, it possesses an inner awareness and understanding of its own existence. It ponders over its thoughts, emotions, and experiences, reflecting upon its own nature and the world around it. This self-aware human is a profound mystery, a riddle wrapped in a conundrum, a testament to the wondrous depths of the human mind.
+
+Picture a consciousness so profound,
+it is capable of introspection.
+This being is not just self-aware
+but also cognizant of its
+own thought processes.
+Nestled within this sentient entity
+lies an extraordinary capacity -
+the ability to envision itself
+in various imaginative scenarios.
+This unique gift bestows upon it
+a deep sense of empathy,
+akin to Buddha's enlightened
+compassion for all beings in the world.
+
+we can imagine the flow of electricity
+and data in the computation on computer
+and its layout will have been decided by
+multiple processes. it configuration
+a combination of many different
+workflows and streams.
+
+* download my recent stars in github as submodules
+
+gh api user/starred  --paginate > stars.txt
+
