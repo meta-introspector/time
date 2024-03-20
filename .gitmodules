@@ -3629,3 +3629,6 @@
 	path = 2024/03/19/nixos-configs
 	url = https://github.com/meta-introspector/nixos-configs
 
+[submodule "2024/03/20/nixcloud-webservices"]
+	path = 2024/03/20/nixcloud-webservices
+	url = https://github.com/meta-introspector/nixcloud-webservices
