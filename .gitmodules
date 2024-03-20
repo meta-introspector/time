@@ -3632,3 +3632,6 @@
 [submodule "2024/03/20/nixcloud-webservices"]
 	path = 2024/03/20/nixcloud-webservices
 	url = https://github.com/meta-introspector/nixcloud-webservices
+[submodule "2024/03/20/nix-installer"]
+	path = 2024/03/20/nix-installer
+	url = https://github.com/DeterminateSystems/nix-installer
