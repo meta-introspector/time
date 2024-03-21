@@ -3635,3 +3635,6 @@
 [submodule "2024/03/20/nix-installer"]
 	path = 2024/03/20/nix-installer
 	url = https://github.com/DeterminateSystems/nix-installer
+[submodule "2024/03/21/nix-dependency-track"]
+	path = 2024/03/21/nix-dependency-track
+	url = https://codeberg.org/raboof/nix-dependency-track
