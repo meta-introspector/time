@@ -1,0 +1,174 @@
+guix discover
+guix shell nix
+guix shell guile guile-fibers
+guix shell --development -f guix.scm
+guile --no-auto-compile -e main -s /usr/local/bin/cuirass register
+guile --no-auto-compile -e main -s /usr/local/bin/cuirass web --listen 0.0.0.0
+
+alter database cuirass owner to cuirass
+
+░░ Subject: A start job for unit cuirass-registry.service has begun execution
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit cuirass-registry.service has begun execution.
+░░ 
+░░ The job identifier is 220238.
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488995]: + set
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: + grep .
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH=/usr/bin/bash
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_ALIASES=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_ARGC=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_ARGV=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_CMDS=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_LINENO=([0]="0")
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_SOURCE=([0]="/usr/local/bin/cuirass.sh")
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_VERSINFO=([0]="5" [1]="1" [2]="16" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: BASH_VERSION='5.1.16(1)-release'
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: DIRSTACK=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: EUID=1001
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: GROUPS=()
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: HOME=/home/cuirass
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: HOSTNAME=t1v-n-54adcf8b-w-0
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: HOSTTYPE=x86_64
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: HOST_IP=10.128.0.37
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: IFS=$' \t\n'
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: INVOCATION_ID=72050c284f5143049c48194f4d3bea5c
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: JOURNAL_STREAM=8:55640080
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: LANG=C.UTF-8
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: LIB64_MOUNT=
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: LOGNAME=cuirass
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: MACHTYPE=x86_64-pc-linux-gnu
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: OPTERR=1
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: OPTIND=1
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: OSTYPE=linux-gnu
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PIDFILE=/run/nginx.pid
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PIPESTATUS=([0]="0")
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PPID=1
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PS4='+ '
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: PWD=/
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: SHELL=/bin/bash
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: SHELLOPTS=braceexpand:hashall:interactive-comments:xtrace
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: SHLVL=1
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: SYSTEMD_EXEC_PID=488993
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: TERM=dumb
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: TF_DOCKER_URL=gcr.io/cloud-tpu-v2-images/fake_tensorflow:latest
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: TF_ENV_VARS=
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: UID=1001
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: USER=cuirass
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488996]: _=-x
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + echo hello
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: hello
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + cd /mnt/data1/nix/time/2024/03/18/guix-cuirass/
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export GUILE_LOAD_COMPILED_PATH=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + GUILE_LOAD_COMPILED_PATH=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export GUILE_LOAD_PATH=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + GUILE_LOAD_PATH=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export CUIRASS_DATADIR=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + CUIRASS_DATADIR=/mnt/data1/nix/time/2024/03/18/guix-cuirass/src
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export CUIRASS_STATE_DIRECTORY=/mnt/data1/nix/time/2024/03/18/guix-cuirass/var
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + CUIRASS_STATE_DIRECTORY=/mnt/data1/nix/time/2024/03/18/guix-cuirass/var
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export GUILE_LOAD_PATH=/usr/local/share/guile/site/3.0:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/share/guile/site/3.0
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + GUILE_LOAD_PATH=/usr/local/share/guile/site/3.0:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/share/guile/site/3.0
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + export GUILE_LOAD_COMPILED_PATH=/usr/local/lib/guile/3.0/site-ccache:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/lib/guile/3.0/site-ccache:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/share/guile/site/3.0
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + GUILE_LOAD_COMPILED_PATH=/usr/local/lib/guile/3.0/site-ccache:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/lib/guile/3.0/site-ccache:/gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/share/guile/site/3.0
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488993]: + /gnu/store/yrc3vrs7b12i9imy22gzhphw65awxkdx-profile/bin/guile --no-auto-compile -e main -s /usr/local/bin/cuirass register
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: guile: warning: failed to install locale
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: running Fibers on 8 kernel threads
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: marking stale builds as "scheduled"...
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: builds will be made via the local build daemon
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: will perform up to 8 evaluations concurrently
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: opening bridge socket at '/mnt/data1/nix/time/2024/03/18/guix-cuirass/var/run/cuirass/bridge'
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: Uncaught exception in task:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    186:20  8 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    145:21  7 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1752:10  6 (with-exception-handler _ _ #:unwind? _ # _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In cuirass/scripts/register.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    215:13  5 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    256:37  4 (thunk)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:      99:5  3 (open-bridge-socket)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In unknown file:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:            2 (chmod "?" ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1685:16  1 (raise-exception _ #:continuable? _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1685:16  0 (raise-exception _ #:continuable? _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: ice-9/boot-9.scm:1685:16: In procedure raise-exception:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In procedure chmod: Operation not permitted
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: retrieving list of pending builds...
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: Uncaught exception in task:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:     172:8  2 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In cuirass/base.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    832:21  1 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1685:16  0 (raise-exception _ #:continuable? _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: ice-9/boot-9.scm:1685:16: In procedure raise-exception:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: Throw to key `psql-query-error' with args `(fatal-error "PGRES_FATAL_ERROR" "")'.
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: error: fatal: uncaught exception 'psql-query-error' in 'restart-builds' fiber!
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: error: exception arguments: (fatal-error "PGRES_FATAL_ERROR" "")
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    157:13 19 (run-fibers _ #:hz _ #:scheduler _ #:parallelism _ # _ # ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:      78:4 18 (%run-fibers _ 2 #<procedure finished? ()> _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers/interrupts.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:      69:4 17 (with-interrupts/thread-cputime _ _ #<procedure yield-?> ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers/scheduler.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    347:26 16 (run-scheduler #<scheduler 7f7873e75f00 (remote-peers:?> ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1747:15 15 (with-exception-handler #<procedure 7f7873fa7ae0 at ic?> ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1752:10 14 (with-exception-handler _ _ #:unwind? _ # _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers/scheduler.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    311:10 13 (next-task)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In fibers.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:     172:8 12 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1747:15 11 (with-exception-handler #<procedure 7f787726e480 at ic?> ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1752:10 10 (with-exception-handler _ _ #:unwind? _ # _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1752:10  9 (with-exception-handler _ _ #:unwind? _ # _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In guix/store.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    661:37  8 (thunk)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In cuirass/base.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    350:35  7 (_ _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In ice-9/boot-9.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1685:16  6 (raise-exception _ #:continuable? _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1685:16  5 (raise-exception _ #:continuable? _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1780:13  4 (_ #<&compound-exception components: (#<&error> #<&orig?>)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    2137:6  3 (_ _ . _)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:   1747:15  2 (with-exception-handler #<procedure 7f7873fa7780 at ic?> ?)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In cuirass/utils.scm:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:    180:23  1 (_)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: In unknown file:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]:            0 (make-stack #t)
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: ERROR: In procedure make-stack:
+Mar 21 18:34:08 t1v-n-54adcf8b-w-0 bash[488997]: Throw to key `psql-query-error' with args `(fatal-error "PGRES_FATAL_ERROR" "")'.
+Mar 21 18:35:38 t1v-n-54adcf8b-w-0 systemd[1]: cuirass-registry.service: start operation timed out. Terminating.
+Mar 21 18:35:38 t1v-n-54adcf8b-w-0 systemd[1]: cuirass-registry.service: Failed with result 'timeout'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ The unit cuirass-registry.service has entered the 'failed' state with result 'timeout'.
+Mar 21 18:35:38 t1v-n-54adcf8b-w-0 systemd[1]: Failed to start The gnu curiass registry server.
+░░ Subject: A start job for unit cuirass-registry.service has failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit cuirass-registry.service has finished with a failure.
+░░ 
+░░ The job identifier is 220238 and the job result is failed.
+bash-5.2# 
+
+
+journalctl -xeu cuirass-registry.service
+
+
+systemctl status -l cuirass-registry
+systemctl start cuirass-registry
+
+
+it would be nice to be able to record all changes to the system and track them.
+an audit trail.
+a log of all commands executed.
