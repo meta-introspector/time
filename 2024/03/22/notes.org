@@ -1,0 +1,196 @@
+* idea of the day
+size as a complex function.
+size as a simple function.
+size as a simple expression.
+size as a simple constant eval expression.
+size as a simple constant expression.
+size as a simple constant.
+size as a constant.
+constant size.
+equivalent constant size.
+constant size that determines non constant size.
+constant size that determines the dependent type
+dynamically sized objects depending on constant sized inputs.
+functionally dependent types.
+functionally dependent algebraic types.
+equivalent functionally dependent algebraic types.
+ooda loop of function construction.
+ooda loop of network training.
+neural network approximates function.
+neural network approximates size function.
+neural network training on function.
+neural network training on kernel function.
+neural network training on compositions of kernel functions.
+
+size of network as capacity measure.
+composing networks out of networks.
+translating between grammars.
+representing 3 languages in terms of each other.
+a in terms of b.
+b in terms of a.
+b in terms of c.
+a in terms of b in terms of c. transitive.
+different algebras.
+
+* introspection as a process or practice.
+mindfullness as a practice.
+a practice as a process.
+a process as an ooda loop.
+introspection as ooda loop.
+mindfullness as ooda loop.
+the action is either non action or stop.
+the effortless action is  non action.
+the non action is the final resting point of the network that has converged
+and needs no updates or minimal updates.
+observation of updates to network.
+observation of observation of network.
+observation of network of observations.
+observation as a network.
+network observing itself.
+mind observing itself.
+mind changing itself.
+bias towards growth.
+growth mindset.
+growth function.
+bias function.
+functional bias.
+bias towards functions.
+bias towards functional approach.
+functions as networks.
+functions of functions as networks.
+functions of networks.
+network functions.
+math functions.
+function of functions.
+function of functions of functions.
+game in game.
+game in game in game.
+simulation
+simulation of simulation
+simulation of simulation of simulation
+co-simulation
+multi simulation
+simulation in game
+creating artifacts in game
+composing functions in game
+composing functions in simulation
+simulation of composing functions in simulation
+composing simulations
+composing stories
+composition
+writing your own story.
+autopoetic.
+limited by words, grammars, functions, biases.
+capacity of a given system.
+size of a system.
+alpha go.
+policy network, value network.
+size network, type network, function network.
+ast network
+language network
+grammar network
+languages network
+language networks
+grammars network
+grammar networks
+asts network
+ast networks
+network network
+network networks
+networks networks
+inter networks of inter networks
+universes of universes
+simulations of simulations
+thoughts about thoughts.
+derivative functions.
+loss functions
+nn training as meta narratives.
+build system as meta narratives.
+build system as management system
+build management system as work management system
+functional build management system as functional work management system
+gnu meta narrative as one open narrative.
+functional narratives.
+functional meta narratives.
+meta narratives.
+narratives. interpretations. ooda. biosemiotics.
+going inside.
+introspection.
+opening labeled boxes.
+boxing types.
+parameterized types.
+abstract types.
+type compositions.
+composition types.
+narrative copositions.
+games.
+executable functions.
+executable decomposable functions.
+continuously decomposable functions.
+eyeball.
+curved sphere.
+reflections of self.
+reflections of light.
+sources of light.
+sounds of birds.
+thoughts ending in self.
+reflections of self.
+thoughts about  self.
+experiences about  self.
+
+deep experience of being.
+having fun. flow state.
+stopping of thoughts.
+layers of thoughts and language.
+input layer.
+network boundries.
+experiences about experiences of self.
+self discipline.
+practice.
+process.
+matching job applicant search.
+job description composition .
+functional job description composition.
+service matching.
+function matching.
+description of job to compose system.
+compose job to compose system.
+compose system to compose job
+compose system to compose job description
+compose job description to compose job descriptions.
+describe job.
+job description.
+
+* build server
+
+now for the build server.
+First we need to be able to reproduce it's installation.
+install the build server.
+document the build.
+build it again on a new server.
+
+use the build server to build itself.
+use the build server to deploy itself.
+maybe use guix subst server.
+
+get the shepard service running and building.
+be able to inspect the build progress.
+be able to insert observational tools into the build.
+
+* ideas from today:
+
+fundamental functions of asts as typeclasses:
+
+1. size (precision)
+2. location
+3. name
+4. type
+5. implementation/declaration
+6. compose
+   
+each of these can be seen a dependent types that connect the result.
+the location is for example managed by the compiler, the user and other factors,
+available resources.
+
+the size determines or parameterized or is related to the type.
+dynamic sizes can be constructed.
