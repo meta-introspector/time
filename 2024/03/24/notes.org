@@ -178,3 +178,28 @@ into a comprehesive autopoetic model of an open source build system that can bui
 The system then sets up TPU build clusters on Google Cloud Platform (GCP) and Ubuntu Guix for self-bootstrapping with versions 2 and 3 servers. Curiass runs remote build servers and workers that engage in continuous self-reflection and introspection, analyzing each build step meticulously.
 
 The system's comprehensive understanding of itself is autopoetic – it builds and runs itself while improving based on user feedback. This open source creation learns from its experiences, adapting to optimize performance, error handling, and overall efficiency. The evolving nature of this build system fosters a collaborative environment where continuous growth and improvement are at the forefront.
+
+*** continuation
+
+for each symbol X in (set of cells, atoms, quarks, mathematical symbols,
+words, ideas, thought, characters in this document, bits in this document,
+contiguous groups of bits in this document,
+models of the world, set of people,
+non contiguous groups of bits in this document,) things
+for each number N from 0 to 10 (for example),
+for each symbols, determine if the symbol S references (itself or any other object)
+in N steps given your RDF knowledge base KB of relationships between
+S and other members of type O object via relationship or predicate R,
+where there are ontologies O of properties P that are modeled with R
+and given a policy network to chose steps s1 in paths P which are selections
+of properties or creating of new properties.
+
+each property can be defined by its usage.
+we prove and assert that 
+1. there are no contradictions
+2. it is provable
+3. it is consistent
+      
+   in the network that can be observed
+in the search space.
+
