@@ -3638,3 +3638,6 @@
 [submodule "2024/03/21/nix-dependency-track"]
 	path = 2024/03/21/nix-dependency-track
 	url = https://codeberg.org/raboof/nix-dependency-track
+[submodule "2024/03/24/nur-packages"]
+	path = 2024/03/24/nur-packages
+	url = https://github.com/milahu/nur-packages
