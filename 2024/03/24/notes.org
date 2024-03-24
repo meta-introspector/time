@@ -1,7 +1,7 @@
 * today notes
-plastic people.
-then go home and check yourself,
-you think were talking about someone else?
+plastic people from zappa:
+"then go home and check yourself,
+you think were talking about someone else?"
 
 Lets remember the concept of selection
 of the next step between existing
@@ -119,4 +119,63 @@ gradient loss function learned from compilation pass.
 training on guix builds.
 introspection of functional builds such as nix, guix and bazel.
 os level perf tracing and recording.
-tpu and gpu recording. 
+tpu and gpu recording.
+
+** summary
+bio semiosis: construction of symbols, reality, meaning.
+meaning making, finding, the process of discovery of the world around us.
+we can think of models as systems. simple sets are enough for many purposes.
+models of mathematics. relationship between types.
+types of types.
+types of types of types.
+
+open source ecosystems as a system of project dependencies
+inter related with build systems to build them.
+guix as one such system.
+installations as deployments.
+self hosting cuirass servers.
+the bootstrap of guix starts in a non guix system.
+emergent gnu system. a clean system emerging from the dirt and chaos.
+the extrusion via forms.
+the extrusion of extrusion forms via forms.
+
+the plastic people as extrusions and forms of plastic.
+the plastic people as selections between forms of production.
+the ooda function as selection of actions between forms and functions of production.
+the ooda function as selection of actions between artifacts.
+the ooda function as the invisible hand that is selection of actions between goods and services.
+the wizard of oz as the man behind the curtain that is the invisible hand.
+the bee society as reflection of the mind of the queen bee.
+the sampling of build process as observability and semantic integration.
+tracing, logging, divs and spans. addition and multiplication.
+there exists and forall.
+functions.
+neurons approximating functions.
+symbolic functions and neuron approximations.
+progressive model sizes that approximate the function.
+addition of features as search.
+searching of feature space.
+autoencoders.
+recursive autoencoders.
+recursive autoencoders of sum and product rules.
+paths in graph as recursion.
+graph as matrix.
+deep knowledge graph embedding.
+
+**idea:
+large language model fine tuning and deep knowledge graph embedding
+of recursive paths extracted from runtime introspection,
+observability and semantic integration
+of the execution of the build systems for self
+bootstrapping tpu build clusters for v2 and v3 servers based on gcp,
+ubuntu guix ,
+curiass running remote build servers and workers that practice self
+reflection and introspection of each build step rolling up
+into a comprehesive autopoetic model of an open source build system that can build and run itself, improve on itself with user feedback and build a model of itself.
+
+*** mistral
+ Creatively interpreting the given text, let's imagine a self-aware and evolving open source build system. This system utilizes large language models for fine-tuning and deep knowledge graph embedding. These models extract recursive paths from runtime introspection, observability, and semantic integration of build systems.
+
+The system then sets up TPU build clusters on Google Cloud Platform (GCP) and Ubuntu Guix for self-bootstrapping with versions 2 and 3 servers. Curiass runs remote build servers and workers that engage in continuous self-reflection and introspection, analyzing each build step meticulously.
+
+The system's comprehensive understanding of itself is autopoetic – it builds and runs itself while improving based on user feedback. This open source creation learns from its experiences, adapting to optimize performance, error handling, and overall efficiency. The evolving nature of this build system fosters a collaborative environment where continuous growth and improvement are at the forefront.
