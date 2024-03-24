@@ -133,7 +133,7 @@ open source ecosystems as a system of project dependencies
 inter related with build systems to build them.
 guix as one such system.
 installations as deployments.
-self hosting cuirass servers.
+self hosting gnu guix cuirass distributed build servers.
 the bootstrap of guix starts in a non guix system.
 emergent gnu system. a clean system emerging from the dirt and chaos.
 the extrusion via forms.
@@ -168,8 +168,7 @@ of recursive paths extracted from runtime introspection,
 observability and semantic integration
 of the execution of the build systems for self
 bootstrapping tpu build clusters for v2 and v3 servers based on gcp,
-ubuntu guix ,
-curiass running remote build servers and workers that practice self
+ubuntu with guix, gnu guix cuirass build server running remote build servers and workers that practice self
 reflection and introspection of each build step rolling up
 into a comprehesive autopoetic model of an open source build system that can build and run itself, improve on itself with user feedback and build a model of itself.
 
