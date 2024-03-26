@@ -3647,3 +3647,6 @@
 [submodule "2024/03/25/guix-dotfiles"]
 	path = 2024/03/25/guix-dotfiles
 	url = https://github.com/engstrand-config/guix-dotfiles
+[submodule "2024/03/26/pick-up-nix"]
+	path = 2024/03/26/pick-up-nix
+	url = https://github.com/jmikedupont2/pick-up-nix.git
