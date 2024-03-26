@@ -3644,3 +3644,6 @@
 [submodule "2024/03/25/yacy_search_server"]
 	path = 2024/03/25/yacy_search_server
 	url = https://github.com/yacy/yacy_search_server
+[submodule "2024/03/25/guix-dotfiles"]
+	path = 2024/03/25/guix-dotfiles
+	url = https://github.com/engstrand-config/guix-dotfiles
