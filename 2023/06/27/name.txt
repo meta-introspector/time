@@ -1,0 +1,211 @@
+data AnnLookup = AnnLookupModule Module | AnnLookupName Name
+  = ModuleAnnotation | TypeAnnotation Name | ValueAnnotation Name
+  = NormalC Name [BangType]
+  | RecC Name [VarBangType]
+  | InfixC BangType Name BangType
+  | GadtC [Name] [BangType] Type
+  | RecGadtC [Name] [VarBangType] Type
+  = FunD Name [Clause]
+  | DataD Cxt Name [TyVarBndr ()] (Maybe Kind) [Con] [DerivClause]
+  | NewtypeD Cxt Name [TyVarBndr ()] (Maybe Kind) Con [DerivClause]
+  | TySynD Name [TyVarBndr ()] Type
+  | ClassD Cxt Name [TyVarBndr ()] [FunDep] [Dec]
+  | SigD Name Type
+  | KiSigD Name Kind
+  | InfixD Fixity Name
+  | DataFamilyD Name [TyVarBndr ()] (Maybe Kind)
+  | RoleAnnotD Name [Role]
+  | DefaultSigD Name Type
+  | PatSynD Name PatSynArgs PatSynDir Pat
+  | PatSynSigD Name PatSynType
+  = ModuleDoc | DeclDoc Name | ArgDoc Name Int | InstDoc Type
+  = VarE Name
+  | ConE Name
+  | DoE (Maybe ModName) [Stmt]
+  | MDoE (Maybe ModName) [Stmt]
+  | RecConE Name [FieldExp]
+  | UnboundVarE Name
+type FieldExp = (Name, Exp)
+type FieldPat = (Name, Pat)
+  = ImportF Callconv Safety String Name Type
+  | ExportF Callconv String Name Type
+data FunDep = FunDep [Name] [Name]
+  | ClassOpI Name Type ParentName
+  | PrimTyConI Name Arity Unlifted
+  | DataConI Name Type ParentName
+  | PatSynI Name PatSynType
+  | VarI Name Type (Maybe Dec)
+  | TyVarI Name Type
+data InjectivityAnn = InjectivityAnn Name [Name]
+  = Loc {loc_filename :: String,
+type ModName :: *
+newtype ModName = ModName String
+data Module = Module PkgName ModName
+type Name :: *
+data Name = Name OccName NameFlavour
+type NameFlavour :: *
+data NameFlavour
+  = NameS
+  | NameQ ModName
+  | NameU !Uniq
+  | NameL !Uniq
+  | NameG NameSpace PkgName ModName
+type NameIs :: *
+data NameIs = Alone | Applied | Infix
+type NameSpace :: *
+data NameSpace = VarName | DataName | TcClsName
+type OccName :: *
+newtype OccName = OccName String
+type ParentName :: *
+type ParentName = Name
+  | VarP Name
+  | ConP Name [Type] [Pat]
+  | InfixP Pat Name Pat
+  | UInfixP Pat Name Pat
+  | AsP Name Pat
+  | RecP Name [FieldPat]
+  = PrefixPatSyn [Name] | InfixPatSyn Name Name | RecordPatSyn [Name]
+type PkgName :: *
+newtype PkgName = PkgName String
+  = InlineP Name Inline RuleMatch Phases
+  | SpecialiseP Name Type (Maybe Inline) Phases
+  | CompleteP [Name] (Maybe Name)
+  qNewName :: String -> m Name
+  qLookupName :: Bool -> String -> m (Maybe Name)
+  qReify :: Name -> m Info
+  qReifyFixity :: Name -> m (Maybe Fixity)
+  qReifyType :: Name -> m Type
+  qReifyInstances :: Name -> [Type] -> m [Dec]
+  qReifyRoles :: Name -> m [Role]
+  qReifyConStrictness :: Name -> m [DecidedStrictness]
+  {-# MINIMAL qNewName, qReport, qRecover, qLookupName, qReify,
+  newName :: String -> m Name
+  {-# MINIMAL newName #-}
+data RuleBndr = RuleVar Name | TypedRuleVar Name Type
+data TyVarBndr flag = PlainTV Name flag | KindedTV Name flag Kind
+  | VarT Name
+  | ConT Name
+  | PromotedT Name
+  | InfixT Type Name Type
+  | UInfixT Type Name Type
+  = TypeFamilyHead Name
+type VarBangType = (Name, Bang, Type)
+  (Name -> k)
+falseName :: Name
+isInstance :: Name -> [Type] -> Q Bool
+justName :: Name
+leftName :: Name
+lookupName :: Bool -> String -> Q (Maybe Name)
+lookupTypeName :: String -> Q (Maybe Name)
+lookupValueName :: String -> Q (Maybe Name)
+manyName :: Name
+mkModName :: String -> ModName
+mkName :: String -> Name
+mkNameG :: NameSpace -> String -> String -> String -> Name
+mkNameG_d :: String -> String -> String -> Name
+mkNameG_tc :: String -> String -> String -> Name
+mkNameG_v :: String -> String -> String -> Name
+mkNameL :: String -> Uniq -> Name
+mkNameS :: String -> Name
+mkNameU :: String -> Uniq -> Name
+mkOccName :: String -> OccName
+mkPkgName :: String -> PkgName
+mk_tup_name :: Int -> NameSpace -> Bool -> Name
+modString :: ModName -> String
+nameBase :: Name -> String
+nameModule :: Name -> Maybe String
+namePackage :: Name -> Maybe String
+nameSpace :: Name -> Maybe NameSpace
+newNameIO :: String -> IO Name
+nonemptyName :: Name
+nothingName :: Name
+occString :: OccName -> String
+oneName :: Name
+pkgString :: PkgName -> String
+reify :: Name -> Q Info
+reifyConStrictness :: Name -> Q [DecidedStrictness]
+reifyFixity :: Name -> Q (Maybe Fixity)
+reifyInstances :: Name -> [Type] -> Q [InstanceDec]
+reifyRoles :: Name -> Q [Role]
+reifyType :: Name -> Q Type
+rightName :: Name
+showName :: Name -> String
+showName' :: NameIs -> Name -> String
+trueName :: Name
+tupleDataName :: Int -> Name
+tupleTypeName :: Int -> Name
+unboxedSumDataName :: SumAlt -> SumArity -> Name
+unboxedSumTypeName :: SumArity -> Name
+unboxedTupleDataName :: Int -> Name
+unboxedTupleTypeName :: Int -> Name
+  | ExplicitNamespaces
+  | NamedWildCards
+asP :: Quote m => Name -> m Pat -> m Pat
+  m Cxt -> Name -> [m (TyVarBndr ())] -> [FunDep] -> [m Dec] -> m Dec
+classP :: Quote m => Name -> [m Type] -> m Pred
+  Name
+conE :: Quote m => Name -> m Exp
+conK :: Name -> Kind
+  Quote m => Name -> [m Type] -> [m Pat] -> m Pat
+conT :: Quote m => Name -> m Type
+  -> Name
+  -> Name
+  Quote m => Name -> [m (TyVarBndr ())] -> Maybe (m Kind) -> m Dec
+defaultSigD :: Quote m => Name -> m Type -> m Dec
+  Quote m => Maybe ModName -> [m Stmt] -> m Exp
+fieldExp :: Quote m => Name -> m Exp -> m (Name, Exp)
+fieldPat :: Quote m => Name -> m Pat -> m FieldPat
+  Quote m => Callconv -> Safety -> String -> Name -> m Type -> m Dec
+funD :: Quote m => Name -> [m Clause] -> m Dec
+  Name -> [Q Clause] -> Maybe String -> [Maybe String] -> Q Dec
+funDep :: [Name] -> [Name] -> FunDep
+gadtC :: Quote m => [Name] -> [m StrictType] -> m Type -> m Con
+  Quote m => m (Bang, Type) -> Name -> m (Bang, Type) -> m Con
+infixLD :: Quote m => Int -> Name -> m Dec
+infixND :: Quote m => Int -> Name -> m Dec
+infixP :: Quote m => m Pat -> Name -> m Pat -> m Pat
+infixPatSyn :: Quote m => Name -> Name -> m PatSynArgs
+infixRD :: Quote m => Int -> Name -> m Dec
+infixT :: Quote m => m Type -> Name -> m Type -> m Type
+  Name -> [Name] -> Language.Haskell.TH.Lib.Internal.InjectivityAnn
+kiSigD :: Quote m => Name -> m Kind -> m Dec
+  Name -> Specificity -> m Kind -> m (TyVarBndr Specificity)
+  Quote m => Name -> m Kind -> m (TyVarBndr ())
+  Quote m => Maybe ModName -> [m Stmt] -> m Exp
+  -> Name
+  -> Name
+normalC :: Quote m => Name -> [m BangType] -> m Con
+  Name
+  Quote m => Name -> m PatSynArgs -> m PatSynDir -> m Pat -> m Dec
+  Name
+patSynSigD :: Quote m => Name -> m Type -> m Dec
+  Quote m => Name -> Specificity -> m (TyVarBndr Specificity)
+  Quote m => Name -> m (TyVarBndr ())
+pragCompleteD :: Quote m => [Name] -> Maybe Name -> m Dec
+  Quote m => Name -> Inline -> RuleMatch -> Phases -> m Dec
+pragSpecD :: Quote m => Name -> m Type -> Phases -> m Dec
+  Quote m => Name -> m Type -> Inline -> Phases -> m Dec
+prefixPatSyn :: Quote m => [Name] -> m PatSynArgs
+promotedT :: Quote m => Name -> m Type
+recC :: Quote m => Name -> [m VarBangType] -> m Con
+recConE :: Quote m => Name -> [m (Name, Exp)] -> m Exp
+  Quote m => [Name] -> [m VarStrictType] -> m Type -> m Con
+recP :: Quote m => Name -> [m FieldPat] -> m Pat
+recUpdE :: Quote m => m Exp -> [m (Name, Exp)] -> m Exp
+recordPatSyn :: Quote m => [Name] -> m PatSynArgs
+  Quote m => Name -> [Language.Haskell.TH.Lib.Internal.Role] -> m Dec
+ruleVar :: Quote m => Name -> m RuleBndr
+sigD :: Quote m => Name -> m Type -> m Dec
+  Quote m => Name -> [m (TyVarBndr ())] -> m Type -> m Dec
+typeAnnotation :: Name -> AnnTarget
+typedRuleVar :: Quote m => Name -> m Type -> m RuleBndr
+uInfixP :: Quote m => m Pat -> Name -> m Pat -> m Pat
+uInfixT :: Quote m => m Type -> Name -> m Type -> m Type
+unboundVarE :: Quote m => Name -> m Exp
+valueAnnotation :: Name -> AnnTarget
+varBangType :: Quote m => Name -> m BangType -> m VarBangType
+varE :: Quote m => Name -> m Exp
+varK :: Name -> Kind
+varP :: Quote m => Name -> m Pat
+varStrictType :: Quote m => Name -> m StrictType -> m VarStrictType
+varT :: Quote m => Name -> m Type

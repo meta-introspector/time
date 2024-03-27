@@ -1,0 +1,1088 @@
+:type Language.Haskell.TH.Syntax
+
+<interactive>:1:1: error:
+    Not in scope: data constructor ‘Language.Haskell.TH.Syntax’
+    Perhaps you meant one of these:
+      ‘Language.Haskell.TH.Syntax.Q’ (imported from Language.Haskell.TH.Syntax),
+      ‘Language.Haskell.TH.Syntax.AsP’ (imported from Language.Haskell.TH.Syntax),
+      ‘Language.Haskell.TH.DataD’ (imported from Language.Haskell.TH)
+ghci> :browse Language.Haskell.TH.Syntax
+type AnnLookup :: *
+data AnnLookup = AnnLookupModule Module | AnnLookupName Name
+type AnnTarget :: *
+data AnnTarget
+  = ModuleAnnotation | TypeAnnotation Name | ValueAnnotation Name
+type Arity :: *
+type Arity = Int
+type Bang :: *
+data Bang = Bang SourceUnpackedness SourceStrictness
+type BangType :: *
+type BangType = (Bang, Type)
+type Body :: *
+data Body = GuardedB [(Guard, Exp)] | NormalB Exp
+type Bytes :: *
+data Bytes
+  = Bytes {bytesPtr :: GHC.ForeignPtr.ForeignPtr GHC.Word.Word8,
+           bytesOffset :: Word,
+           bytesSize :: Word}
+type Callconv :: *
+data Callconv = CCall | StdCall | CApi | Prim | JavaScript
+type CharPos :: *
+type CharPos = (Int, Int)
+type Clause :: *
+data Clause = Clause [Pat] Body [Dec]
+type role Code representational nominal
+type Code :: (* -> *) -> * -> *
+newtype Code m a = Code {examineCode :: m (TExp a)}
+type Con :: *
+data Con
+  = NormalC Name [BangType]
+  | RecC Name [VarBangType]
+  | InfixC BangType Name BangType
+  | ForallC [TyVarBndr Specificity] Cxt Con
+  | GadtC [Name] [BangType] Type
+  | RecGadtC [Name] [VarBangType] Type
+type Cxt :: *
+type Cxt = [Pred]
+type Dec :: *
+data Dec
+  = FunD Name [Clause]
+  | ValD Pat Body [Dec]
+  | DataD Cxt Name [TyVarBndr ()] (Maybe Kind) [Con] [DerivClause]
+  | NewtypeD Cxt Name [TyVarBndr ()] (Maybe Kind) Con [DerivClause]
+  | TySynD Name [TyVarBndr ()] Type
+  | ClassD Cxt Name [TyVarBndr ()] [FunDep] [Dec]
+  | InstanceD (Maybe Overlap) Cxt Type [Dec]
+  | SigD Name Type
+  | KiSigD Name Kind
+  | ForeignD Foreign
+  | InfixD Fixity Name
+  | PragmaD Pragma
+  | DataFamilyD Name [TyVarBndr ()] (Maybe Kind)
+  | DataInstD Cxt
+              (Maybe [TyVarBndr ()])
+              Type
+              (Maybe Kind)
+              [Con]
+              [DerivClause]
+  | NewtypeInstD Cxt
+                 (Maybe [TyVarBndr ()])
+                 Type
+                 (Maybe Kind)
+                 Con
+                 [DerivClause]
+  | TySynInstD TySynEqn
+  | OpenTypeFamilyD TypeFamilyHead
+  | ClosedTypeFamilyD TypeFamilyHead [TySynEqn]
+  | RoleAnnotD Name [Role]
+  | StandaloneDerivD (Maybe DerivStrategy) Cxt Type
+  | DefaultSigD Name Type
+  | PatSynD Name PatSynArgs PatSynDir Pat
+  | PatSynSigD Name PatSynType
+  | ImplicitParamBindD String Exp
+type DecidedStrictness :: *
+data DecidedStrictness
+  = DecidedLazy | DecidedStrict | DecidedUnpack
+type DerivClause :: *
+data DerivClause = DerivClause (Maybe DerivStrategy) Cxt
+type DerivStrategy :: *
+data DerivStrategy
+  = StockStrategy
+  | AnyclassStrategy
+  | NewtypeStrategy
+  | ViaStrategy Type
+type DocLoc :: *
+data DocLoc
+  = ModuleDoc | DeclDoc Name | ArgDoc Name Int | InstDoc Type
+type Exp :: *
+data Exp
+  = VarE Name
+  | ConE Name
+  | LitE Lit
+  | AppE Exp Exp
+  | AppTypeE Exp Type
+  | InfixE (Maybe Exp) Exp (Maybe Exp)
+  | UInfixE Exp Exp Exp
+  | ParensE Exp
+  | LamE [Pat] Exp
+  | LamCaseE [Match]
+  | TupE [Maybe Exp]
+  | UnboxedTupE [Maybe Exp]
+  | UnboxedSumE Exp SumAlt SumArity
+  | CondE Exp Exp Exp
+  | MultiIfE [(Guard, Exp)]
+  | LetE [Dec] Exp
+  | CaseE Exp [Match]
+  | DoE (Maybe ModName) [Stmt]
+  | MDoE (Maybe ModName) [Stmt]
+  | CompE [Stmt]
+  | ArithSeqE Range
+  | ListE [Exp]
+  | SigE Exp Type
+  | RecConE Name [FieldExp]
+  | RecUpdE Exp [FieldExp]
+  | StaticE Exp
+  | UnboundVarE Name
+  | LabelE String
+  | ImplicitParamVarE String
+  | GetFieldE Exp String
+  | ProjectionE (GHC.Base.NonEmpty String)
+type FamilyResultSig :: *
+data FamilyResultSig
+  = NoSig | KindSig Kind | TyVarSig (TyVarBndr ())
+type FieldExp :: *
+type FieldExp = (Name, Exp)
+type FieldPat :: *
+type FieldPat = (Name, Pat)
+type Fixity :: *
+data Fixity = Fixity Int FixityDirection
+type FixityDirection :: *
+data FixityDirection = InfixL | InfixR | InfixN
+type Foreign :: *
+data Foreign
+  = ImportF Callconv Safety String Name Type
+  | ExportF Callconv String Name Type
+type FunDep :: *
+data FunDep = FunDep [Name] [Name]
+type Guard :: *
+data Guard = NormalG Exp | PatG [Stmt]
+type Info :: *
+data Info
+  = ClassI Dec [InstanceDec]
+  | ClassOpI Name Type ParentName
+  | TyConI Dec
+  | FamilyI Dec [InstanceDec]
+  | PrimTyConI Name Arity Unlifted
+  | DataConI Name Type ParentName
+  | PatSynI Name PatSynType
+  | VarI Name Type (Maybe Dec)
+  | TyVarI Name Type
+type InjectivityAnn :: *
+data InjectivityAnn = InjectivityAnn Name [Name]
+type Inline :: *
+data Inline = NoInline | Inline | Inlinable
+type InstanceDec :: *
+type InstanceDec = Dec
+type Kind :: *
+type Kind = Type
+type Lift :: * -> Constraint
+class Lift t where
+  lift :: Quote m => t -> m Exp
+  default lift :: (r ~ 'GHC.Types.BoxedRep 'GHC.Types.Lifted,
+                   Quote m) =>
+                  t -> m Exp
+  liftTyped :: Quote m => t -> Code m t
+  {-# MINIMAL liftTyped #-}
+type Lit :: *
+data Lit
+  = CharL Char
+  | StringL String
+  | IntegerL Integer
+  | RationalL Rational
+  | IntPrimL Integer
+  | WordPrimL Integer
+  | FloatPrimL Rational
+  | DoublePrimL Rational
+  | StringPrimL [GHC.Word.Word8]
+  | BytesPrimL Bytes
+  | CharPrimL Char
+type Loc :: *
+data Loc
+  = Loc {loc_filename :: String,
+         loc_package :: String,
+         loc_module :: String,
+         loc_start :: CharPos,
+         loc_end :: CharPos}
+type Match :: *
+data Match = Match Pat Body [Dec]
+type ModName :: *
+newtype ModName = ModName String
+type Module :: *
+data Module = Module PkgName ModName
+type ModuleInfo :: *
+data ModuleInfo = ModuleInfo [Module]
+type Name :: *
+data Name = Name OccName NameFlavour
+type NameFlavour :: *
+data NameFlavour
+  = NameS
+  | NameQ ModName
+  | NameU !Uniq
+  | NameL !Uniq
+  | NameG NameSpace PkgName ModName
+type NameIs :: *
+data NameIs = Alone | Applied | Infix
+type NameSpace :: *
+data NameSpace = VarName | DataName | TcClsName
+type OccName :: *
+newtype OccName = OccName String
+type Overlap :: *
+data Overlap = Overlappable | Overlapping | Overlaps | Incoherent
+type ParentName :: *
+type ParentName = Name
+type Pat :: *
+data Pat
+  = LitP Lit
+  | VarP Name
+  | TupP [Pat]
+  | UnboxedTupP [Pat]
+  | UnboxedSumP Pat SumAlt SumArity
+  | ConP Name [Type] [Pat]
+  | InfixP Pat Name Pat
+  | UInfixP Pat Name Pat
+  | ParensP Pat
+  | TildeP Pat
+  | BangP Pat
+  | AsP Name Pat
+  | WildP
+  | RecP Name [FieldPat]
+  | ListP [Pat]
+  | SigP Pat Type
+  | ViewP Exp Pat
+type PatSynArgs :: *
+data PatSynArgs
+  = PrefixPatSyn [Name] | InfixPatSyn Name Name | RecordPatSyn [Name]
+type PatSynDir :: *
+data PatSynDir = Unidir | ImplBidir | ExplBidir [Clause]
+type PatSynType :: *
+type PatSynType = Type
+type Phases :: *
+data Phases = AllPhases | FromPhase Int | BeforePhase Int
+type PkgName :: *
+newtype PkgName = PkgName String
+type Pragma :: *
+data Pragma
+  = InlineP Name Inline RuleMatch Phases
+  | SpecialiseP Name Type (Maybe Inline) Phases
+  | SpecialiseInstP Type
+  | RuleP String (Maybe [TyVarBndr ()]) [RuleBndr] Exp Exp Phases
+  | AnnP AnnTarget Exp
+  | LineP Int String
+  | CompleteP [Name] (Maybe Name)
+type Pred :: *
+type Pred = Type
+type role Q nominal
+type Q :: * -> *
+newtype Q a = Q {unQ :: forall (m :: * -> *). Quasi m => m a}
+type Quasi :: (* -> *) -> Constraint
+class (Control.Monad.IO.Class.MonadIO m, MonadFail m) =>
+      Quasi m where
+  qNewName :: String -> m Name
+  qReport :: Bool -> String -> m ()
+  qRecover :: m a -> m a -> m a
+  qLookupName :: Bool -> String -> m (Maybe Name)
+  qReify :: Name -> m Info
+  qReifyFixity :: Name -> m (Maybe Fixity)
+  qReifyType :: Name -> m Type
+  qReifyInstances :: Name -> [Type] -> m [Dec]
+  qReifyRoles :: Name -> m [Role]
+  qReifyAnnotations :: Data.Data.Data a => AnnLookup -> m [a]
+  qReifyModule :: Module -> m ModuleInfo
+  qReifyConStrictness :: Name -> m [DecidedStrictness]
+  qLocation :: m Loc
+  qRunIO :: IO a -> m a
+  qAddDependentFile :: FilePath -> m ()
+  qAddTempFile :: String -> m FilePath
+  qAddTopDecls :: [Dec] -> m ()
+  qAddForeignFilePath :: ForeignSrcLang -> String -> m ()
+  qAddModFinalizer :: Q () -> m ()
+  qAddCorePlugin :: String -> m ()
+  qGetQ :: base-4.16.4.0:Data.Typeable.Internal.Typeable a =>
+           m (Maybe a)
+  qPutQ :: base-4.16.4.0:Data.Typeable.Internal.Typeable a =>
+           a -> m ()
+  qIsExtEnabled :: Extension -> m Bool
+  qExtsEnabled :: m [Extension]
+  qPutDoc :: DocLoc -> String -> m ()
+  qGetDoc :: DocLoc -> m (Maybe String)
+  {-# MINIMAL qNewName, qReport, qRecover, qLookupName, qReify,
+              qReifyFixity, qReifyType, qReifyInstances, qReifyRoles,
+              qReifyAnnotations, qReifyModule, qReifyConStrictness, qLocation,
+              qAddDependentFile, qAddTempFile, qAddTopDecls, qAddForeignFilePath,
+              qAddModFinalizer, qAddCorePlugin, qGetQ, qPutQ, qIsExtEnabled,
+              qExtsEnabled, qPutDoc, qGetDoc #-}
+type Quote :: (* -> *) -> Constraint
+class Monad m => Quote m where
+  newName :: String -> m Name
+  {-# MINIMAL newName #-}
+type Range :: *
+data Range
+  = FromR Exp
+  | FromThenR Exp Exp
+  | FromToR Exp Exp
+  | FromThenToR Exp Exp Exp
+type Role :: *
+data Role = NominalR | RepresentationalR | PhantomR | InferR
+type RuleBndr :: *
+data RuleBndr = RuleVar Name | TypedRuleVar Name Type
+type RuleMatch :: *
+data RuleMatch = ConLike | FunLike
+type Safety :: *
+data Safety = Unsafe | Safe | Interruptible
+type SourceStrictness :: *
+data SourceStrictness
+  = NoSourceStrictness | SourceLazy | SourceStrict
+type SourceUnpackedness :: *
+data SourceUnpackedness
+  = NoSourceUnpackedness | SourceNoUnpack | SourceUnpack
+type Specificity :: *
+data Specificity = SpecifiedSpec | InferredSpec
+type Stmt :: *
+data Stmt
+  = BindS Pat Exp
+  | LetS [Dec]
+  | NoBindS Exp
+  | ParS [[Stmt]]
+  | RecS [Stmt]
+type Strict :: *
+type Strict = Bang
+type StrictType :: *
+type StrictType = BangType
+type SumAlt :: *
+type SumAlt = Int
+type SumArity :: *
+type SumArity = Int
+type role TExp nominal
+type TExp :: * -> *
+newtype TExp a = TExp {unType :: Exp}
+type TyLit :: *
+data TyLit = NumTyLit Integer | StrTyLit String | CharTyLit Char
+type TySynEqn :: *
+data TySynEqn = TySynEqn (Maybe [TyVarBndr ()]) Type Type
+type TyVarBndr :: * -> *
+data TyVarBndr flag = PlainTV Name flag | KindedTV Name flag Kind
+type Type :: *
+data Type
+  = ForallT [TyVarBndr Specificity] Cxt Type
+  | ForallVisT [TyVarBndr ()] Type
+  | AppT Type Type
+  | AppKindT Type Kind
+  | SigT Type Kind
+  | VarT Name
+  | ConT Name
+  | PromotedT Name
+  | InfixT Type Name Type
+  | UInfixT Type Name Type
+  | ParensT Type
+  | TupleT Int
+  | UnboxedTupleT Int
+  | UnboxedSumT SumArity
+  | ArrowT
+  | MulArrowT
+  | EqualityT
+  | ListT
+  | PromotedTupleT Int
+  | PromotedNilT
+  | PromotedConsT
+  | StarT
+  | ConstraintT
+  | LitT TyLit
+  | WildCardT
+  | ImplicitParamT String Type
+type TypeFamilyHead :: *
+data TypeFamilyHead
+  = TypeFamilyHead Name
+                   [TyVarBndr ()]
+                   FamilyResultSig
+                   (Maybe InjectivityAnn)
+type Uniq :: *
+type Uniq = Integer
+type Unlifted :: *
+type Unlifted = Bool
+type VarBangType :: *
+type VarBangType = (Name, Bang, Type)
+type VarStrictType :: *
+type VarStrictType = VarBangType
+addCorePlugin :: String -> Q ()
+addDependentFile :: FilePath -> Q ()
+addForeignFile :: ForeignSrcLang -> String -> Q ()
+addForeignFilePath :: ForeignSrcLang -> FilePath -> Q ()
+addForeignSource :: ForeignSrcLang -> String -> Q ()
+addModFinalizer :: Q () -> Q ()
+addTempFile :: String -> Q FilePath
+addTopDecls :: [Dec] -> Q ()
+badIO :: String -> IO a
+bindCode :: Monad m => m a -> (a -> Code m b) -> Code m b
+bindCode_ :: Monad m => m a -> Code m b -> Code m b
+cmpEq :: Ordering -> Bool
+compareBytes :: Bytes -> Bytes -> Ordering
+counter :: GHC.IORef.IORef Uniq
+dataToExpQ ::
+  (Quote m, Data.Data.Data a) =>
+  (forall b. Data.Data.Data b => b -> Maybe (m Exp)) -> a -> m Exp
+dataToPatQ ::
+  (Quote m, Data.Data.Data a) =>
+  (forall b. Data.Data.Data b => b -> Maybe (m Pat)) -> a -> m Pat
+dataToQa ::
+  (Quote m, Data.Data.Data a) =>
+  (Name -> k)
+  -> (Lit -> m q)
+  -> (k -> [m q] -> m q)
+  -> (forall b. Data.Data.Data b => b -> Maybe (m q))
+  -> a
+  -> m q
+defaultFixity :: Fixity
+eqBytes :: Bytes -> Bytes -> Bool
+extsEnabled :: Q [Extension]
+falseName :: Name
+getDoc :: DocLoc -> Q (Maybe String)
+getQ ::
+  base-4.16.4.0:Data.Typeable.Internal.Typeable a => Q (Maybe a)
+hoistCode ::
+  Monad m => (forall x. m x -> n x) -> Code m a -> Code n a
+isExtEnabled :: Extension -> Q Bool
+isInstance :: Name -> [Type] -> Q Bool
+joinCode :: Monad m => m (Code m a) -> Code m a
+justName :: Name
+leftName :: Name
+liftCode :: m (TExp a) -> Code m a
+liftData :: (Quote m, Data.Data.Data a) => a -> m Exp
+liftString :: Quote m => String -> m Exp
+location :: Q Loc
+lookupName :: Bool -> String -> Q (Maybe Name)
+lookupTypeName :: String -> Q (Maybe Name)
+lookupValueName :: String -> Q (Maybe Name)
+manyName :: Name
+maxPrecedence :: Int
+memcmp ::
+  GHC.Ptr.Ptr a
+  -> GHC.Ptr.Ptr b
+  -> Foreign.C.Types.CSize
+  -> IO Foreign.C.Types.CInt
+mkModName :: String -> ModName
+mkName :: String -> Name
+mkNameG :: NameSpace -> String -> String -> String -> Name
+mkNameG_d :: String -> String -> String -> Name
+mkNameG_tc :: String -> String -> String -> Name
+mkNameG_v :: String -> String -> String -> Name
+mkNameL :: String -> Uniq -> Name
+mkNameS :: String -> Name
+mkNameU :: String -> Uniq -> Name
+mkOccName :: String -> OccName
+mkPkgName :: String -> PkgName
+mk_tup_name :: Int -> NameSpace -> Bool -> Name
+modString :: ModName -> String
+nameBase :: Name -> String
+nameModule :: Name -> Maybe String
+namePackage :: Name -> Maybe String
+nameSpace :: Name -> Maybe NameSpace
+newNameIO :: String -> IO Name
+nonemptyName :: Name
+nothingName :: Name
+occString :: OccName -> String
+oneName :: Name
+pkgString :: PkgName -> String
+putDoc :: DocLoc -> String -> Q ()
+putQ ::
+  base-4.16.4.0:Data.Typeable.Internal.Typeable a => a -> Q ()
+recover :: Q a -> Q a -> Q a
+reify :: Name -> Q Info
+reifyAnnotations :: Data.Data.Data a => AnnLookup -> Q [a]
+reifyConStrictness :: Name -> Q [DecidedStrictness]
+reifyFixity :: Name -> Q (Maybe Fixity)
+reifyInstances :: Name -> [Type] -> Q [InstanceDec]
+reifyModule :: Module -> Q ModuleInfo
+reifyRoles :: Name -> Q [Role]
+reifyType :: Name -> Q Type
+report :: Bool -> String -> Q ()
+reportError :: String -> Q ()
+reportWarning :: String -> Q ()
+rightName :: Name
+runIO :: IO a -> Q a
+runQ :: Quasi m => Q a -> m a
+sequenceQ :: Monad m => [m a] -> m [a]
+showName :: Name -> String
+showName' :: NameIs -> Name -> String
+thenCmp :: Ordering -> Ordering -> Ordering
+trueName :: Name
+tupleDataName :: Int -> Name
+tupleTypeName :: Int -> Name
+unTypeCode :: Quote m => Code m a -> m Exp
+unTypeQ :: Quote m => m (TExp a) -> m Exp
+unboxedSumDataName :: SumAlt -> SumArity -> Name
+unboxedSumTypeName :: SumArity -> Name
+unboxedTupleDataName :: Int -> Name
+unboxedTupleTypeName :: Int -> Name
+unsafeCodeCoerce :: Quote m => m Exp -> Code m a
+unsafeTExpCoerce :: Quote m => m Exp -> m (TExp a)
+type Extension :: *
+data Extension
+  = Cpp
+  | OverlappingInstances
+  | UndecidableInstances
+  | IncoherentInstances
+  | UndecidableSuperClasses
+  | MonomorphismRestriction
+  | MonoLocalBinds
+  | DeepSubsumption
+  | RelaxedPolyRec
+  | ExtendedDefaultRules
+  | ForeignFunctionInterface
+  | UnliftedFFITypes
+  | InterruptibleFFI
+  | CApiFFI
+  | GHCForeignImportPrim
+  | JavaScriptFFI
+  | ParallelArrays
+  | Arrows
+  | TemplateHaskell
+  | TemplateHaskellQuotes
+  | QualifiedDo
+  | QuasiQuotes
+  | ImplicitParams
+  | ImplicitPrelude
+  | ScopedTypeVariables
+  | AllowAmbiguousTypes
+  | UnboxedTuples
+  | UnboxedSums
+  | UnliftedNewtypes
+  | UnliftedDatatypes
+  | BangPatterns
+  | TypeFamilies
+  | TypeFamilyDependencies
+  | TypeInType
+  | OverloadedStrings
+  | OverloadedLists
+  | NumDecimals
+  | DisambiguateRecordFields
+  | RecordWildCards
+  | RecordPuns
+  | ViewPatterns
+  | GADTs
+  | GADTSyntax
+  | NPlusKPatterns
+  | DoAndIfThenElse
+  | BlockArguments
+  | RebindableSyntax
+  | ConstraintKinds
+  | PolyKinds
+  | DataKinds
+  | InstanceSigs
+  | ApplicativeDo
+  | LinearTypes
+  | StandaloneDeriving
+  | DeriveDataTypeable
+  | AutoDeriveTypeable
+  | DeriveFunctor
+  | DeriveTraversable
+  | DeriveFoldable
+  | DeriveGeneric
+  | DefaultSignatures
+  | DeriveAnyClass
+  | DeriveLift
+  | DerivingStrategies
+  | DerivingVia
+  | TypeSynonymInstances
+  | FlexibleContexts
+  | FlexibleInstances
+  | ConstrainedClassMethods
+  | MultiParamTypeClasses
+  | NullaryTypeClasses
+  | FunctionalDependencies
+  | UnicodeSyntax
+  | ExistentialQuantification
+  | MagicHash
+  | EmptyDataDecls
+  | KindSignatures
+  | RoleAnnotations
+  | ParallelListComp
+  | TransformListComp
+  | MonadComprehensions
+  | GeneralizedNewtypeDeriving
+  | RecursiveDo
+  | PostfixOperators
+  | TupleSections
+  | PatternGuards
+  | LiberalTypeSynonyms
+  | RankNTypes
+  | ImpredicativeTypes
+  | TypeOperators
+  | ExplicitNamespaces
+  | PackageImports
+  | ExplicitForAll
+  | AlternativeLayoutRule
+  | AlternativeLayoutRuleTransitional
+  | DatatypeContexts
+  | NondecreasingIndentation
+  | RelaxedLayout
+  | TraditionalRecordSyntax
+  | LambdaCase
+  | MultiWayIf
+  | BinaryLiterals
+  | NegativeLiterals
+  | HexFloatLiterals
+  | DuplicateRecordFields
+  | OverloadedLabels
+  | EmptyCase
+  | PatternSynonyms
+  | PartialTypeSignatures
+  | NamedWildCards
+  | StaticPointers
+  | TypeApplications
+  | Strict
+  | StrictData
+  | EmptyDataDeriving
+  | NumericUnderscores
+  | QuantifiedConstraints
+  | StarIsType
+  | ImportQualifiedPost
+  | CUSKs
+  | StandaloneKindSignatures
+  | LexicalNegation
+  | FieldSelectors
+  | OverloadedRecordDot
+  | OverloadedRecordUpdate
+type ForeignSrcLang :: *
+data ForeignSrcLang
+  = LangC | LangCxx | LangObjc | LangObjcxx | LangAsm | RawObject
+ghci>
+
+
+
+
+
+
+:browse Language.Haskell.TH.Lib.Internal
+type BangQ :: *
+type BangQ = Q Bang
+type BangTypeQ :: *
+type BangTypeQ = Q BangType
+type BodyQ :: *
+type BodyQ = Q Body
+type ClauseQ :: *
+type ClauseQ = Q Clause
+type CodeQ :: * -> *
+type CodeQ = Code Q :: TYPE r -> *
+type ConQ :: *
+type ConQ = Q Con
+type CxtQ :: *
+type CxtQ = Q Cxt
+type DecQ :: *
+type DecQ = Q Dec
+type Language.Haskell.TH.Lib.Internal.Decs :: *
+type Language.Haskell.TH.Lib.Internal.Decs = [Dec]
+type DecsQ :: *
+type DecsQ = Q [Dec]
+type DerivClauseQ :: *
+type DerivClauseQ = Q DerivClause
+type DerivStrategyQ :: *
+type DerivStrategyQ = Q DerivStrategy
+type ExpQ :: *
+type ExpQ = Q Exp
+type FamilyResultSigQ :: *
+type FamilyResultSigQ = Q FamilyResultSig
+type FieldExpQ :: *
+type FieldExpQ = Q FieldExp
+type FieldPatQ :: *
+type FieldPatQ = Q FieldPat
+type GuardQ :: *
+type GuardQ = Q Guard
+type InfoQ :: *
+type InfoQ = Q Info
+type Language.Haskell.TH.Lib.Internal.InjectivityAnn :: *
+type Language.Haskell.TH.Lib.Internal.InjectivityAnn =
+  InjectivityAnn
+type KindQ :: *
+type KindQ = Q Kind
+type MatchQ :: *
+type MatchQ = Q Match
+type PatQ :: *
+type PatQ = Q Pat
+type PatSynArgsQ :: *
+type PatSynArgsQ = Q PatSynArgs
+type PatSynDirQ :: *
+type PatSynDirQ = Q PatSynDir
+type PredQ :: *
+type PredQ = Q Pred
+type RangeQ :: *
+type RangeQ = Q Range
+type Language.Haskell.TH.Lib.Internal.Role :: *
+type Language.Haskell.TH.Lib.Internal.Role = Role
+type RuleBndrQ :: *
+type RuleBndrQ = Q RuleBndr
+type SourceStrictnessQ :: *
+type SourceStrictnessQ = Q SourceStrictness
+type SourceUnpackednessQ :: *
+type SourceUnpackednessQ = Q SourceUnpackedness
+type StmtQ :: *
+type StmtQ = Q Stmt
+type StrictTypeQ :: *
+type StrictTypeQ = Q StrictType
+type TExpQ :: * -> *
+type TExpQ a = Q (TExp a)
+type TyLitQ :: *
+type TyLitQ = Q TyLit
+type TySynEqnQ :: *
+type TySynEqnQ = Q TySynEqn
+type TyVarBndrSpec :: *
+type TyVarBndrSpec = TyVarBndr Specificity
+type TyVarBndrUnit :: *
+type TyVarBndrUnit = TyVarBndr ()
+type TypeQ :: *
+type TypeQ = Q Type
+type VarBangTypeQ :: *
+type VarBangTypeQ = Q VarBangType
+type VarStrictTypeQ :: *
+type VarStrictTypeQ = Q VarStrictType
+anyclassStrategy :: Quote m => m DerivStrategy
+appE :: Quote m => m Exp -> m Exp -> m Exp
+appK :: Kind -> Kind -> Kind
+appKindT :: Quote m => m Type -> m Kind -> m Type
+appT :: Quote m => m Type -> m Type -> m Type
+appTypeE :: Quote m => m Exp -> m Type -> m Exp
+appsE :: Quote m => [m Exp] -> m Exp
+arithSeqE :: Quote m => m Range -> m Exp
+arrowK :: Kind
+arrowT :: Quote m => m Type
+asP :: Quote m => Name -> m Pat -> m Pat
+bang ::
+  Quote m => m SourceUnpackedness -> m SourceStrictness -> m Bang
+bangP :: Quote m => m Pat -> m Pat
+bangType :: Quote m => m Bang -> m Type -> m BangType
+bindS :: Quote m => m Pat -> m Exp -> m Stmt
+bytesPrimL :: Bytes -> Lit
+cApi :: Callconv
+cCall :: Callconv
+caseE :: Quote m => m Exp -> [m Match] -> m Exp
+charL :: Char -> Lit
+charPrimL :: Char -> Lit
+charTyLit :: Quote m => Char -> m TyLit
+Language.Haskell.TH.Lib.Internal.classD ::
+  Quote m =>
+  m Cxt -> Name -> [m (TyVarBndr ())] -> [FunDep] -> [m Dec] -> m Dec
+classP :: Quote m => Name -> [m Type] -> m Pred
+clause :: Quote m => [m Pat] -> m Body -> [m Dec] -> m Clause
+Language.Haskell.TH.Lib.Internal.closedTypeFamilyD ::
+  Quote m =>
+  Name
+  -> [m (TyVarBndr ())]
+  -> m FamilyResultSig
+  -> Maybe Language.Haskell.TH.Lib.Internal.InjectivityAnn
+  -> [m TySynEqn]
+  -> m Dec
+compE :: Quote m => [m Stmt] -> m Exp
+conE :: Quote m => Name -> m Exp
+conK :: Name -> Kind
+Language.Haskell.TH.Lib.Internal.conP ::
+  Quote m => Name -> [m Type] -> [m Pat] -> m Pat
+conT :: Quote m => Name -> m Type
+condE :: Quote m => m Exp -> m Exp -> m Exp -> m Exp
+Language.Haskell.TH.Lib.Internal.constraintK :: Quote m => m Kind
+cxt :: Quote m => [m Pred] -> m Cxt
+Language.Haskell.TH.Lib.Internal.dataD ::
+  Quote m =>
+  m Cxt
+  -> Name
+  -> [m (TyVarBndr ())]
+  -> Maybe (m Kind)
+  -> [m Con]
+  -> [m DerivClause]
+  -> m Dec
+dataD_doc ::
+  Q Cxt
+  -> Name
+  -> [Q (TyVarBndr ())]
+  -> Maybe (Q Kind)
+  -> [(Q Con, Maybe String, [Maybe String])]
+  -> [Q DerivClause]
+  -> Maybe String
+  -> Q Dec
+Language.Haskell.TH.Lib.Internal.dataFamilyD ::
+  Quote m => Name -> [m (TyVarBndr ())] -> Maybe (m Kind) -> m Dec
+Language.Haskell.TH.Lib.Internal.dataInstD ::
+  Quote m =>
+  m Cxt
+  -> Maybe [m (TyVarBndr ())]
+  -> m Type
+  -> Maybe (m Kind)
+  -> [m Con]
+  -> [m DerivClause]
+  -> m Dec
+dataInstD_doc ::
+  Q Cxt
+  -> Maybe [Q (TyVarBndr ())]
+  -> Q Type
+  -> Maybe (Q Kind)
+  -> [(Q Con, Maybe String, [Maybe String])]
+  -> [Q DerivClause]
+  -> Maybe String
+  -> Q Dec
+defaultSigD :: Quote m => Name -> m Type -> m Dec
+Language.Haskell.TH.Lib.Internal.derivClause ::
+  Quote m => Maybe (m DerivStrategy) -> [m Pred] -> m DerivClause
+Language.Haskell.TH.Lib.Internal.doE ::
+  Quote m => Maybe ModName -> [m Stmt] -> m Exp
+Language.Haskell.TH.Lib.Internal.docCons ::
+  (Q Con, Maybe String, [Maybe String]) -> Q ()
+doublePrimL :: Rational -> Lit
+dyn :: Quote m => String -> m Exp
+equalP :: Quote m => m Type -> m Type -> m Pred
+equalityT :: Quote m => m Type
+explBidir :: Quote m => [m Clause] -> m PatSynDir
+fieldExp :: Quote m => Name -> m Exp -> m (Name, Exp)
+fieldPat :: Quote m => Name -> m Pat -> m FieldPat
+floatPrimL :: Rational -> Lit
+forImpD ::
+  Quote m => Callconv -> Safety -> String -> Name -> m Type -> m Dec
+Language.Haskell.TH.Lib.Internal.forallC ::
+  Quote m => [m (TyVarBndr Specificity)] -> m Cxt -> m Con -> m Con
+Language.Haskell.TH.Lib.Internal.forallT ::
+  Quote m => [m (TyVarBndr Specificity)] -> m Cxt -> m Type -> m Type
+forallVisT :: Quote m => [m (TyVarBndr ())] -> m Type -> m Type
+fromE :: Quote m => m Exp -> m Exp
+fromR :: Quote m => m Exp -> m Range
+fromThenE :: Quote m => m Exp -> m Exp -> m Exp
+fromThenR :: Quote m => m Exp -> m Exp -> m Range
+fromThenToE :: Quote m => m Exp -> m Exp -> m Exp -> m Exp
+fromThenToR :: Quote m => m Exp -> m Exp -> m Exp -> m Range
+fromToE :: Quote m => m Exp -> m Exp -> m Exp
+fromToR :: Quote m => m Exp -> m Exp -> m Range
+funD :: Quote m => Name -> [m Clause] -> m Dec
+funD_doc ::
+  Name -> [Q Clause] -> Maybe String -> [Maybe String] -> Q Dec
+funDep :: [Name] -> [Name] -> FunDep
+gadtC :: Quote m => [Name] -> [m StrictType] -> m Type -> m Con
+getFieldE :: Quote m => m Exp -> String -> m Exp
+guardedB :: Quote m => [m (Guard, Exp)] -> m Body
+implBidir :: Quote m => m PatSynDir
+implicitParamBindD :: Quote m => String -> m Exp -> m Dec
+implicitParamT :: Quote m => String -> m Type -> m Type
+implicitParamVarE :: Quote m => String -> m Exp
+inferR :: Language.Haskell.TH.Lib.Internal.Role
+inferredSpec :: Specificity
+infixApp :: Quote m => m Exp -> m Exp -> m Exp -> m Exp
+infixC ::
+  Quote m => m (Bang, Type) -> Name -> m (Bang, Type) -> m Con
+infixE ::
+  Quote m => Maybe (m Exp) -> m Exp -> Maybe (m Exp) -> m Exp
+infixLD :: Quote m => Int -> Name -> m Dec
+infixND :: Quote m => Int -> Name -> m Dec
+infixP :: Quote m => m Pat -> Name -> m Pat -> m Pat
+infixPatSyn :: Quote m => Name -> Name -> m PatSynArgs
+infixRD :: Quote m => Int -> Name -> m Dec
+infixT :: Quote m => m Type -> Name -> m Type -> m Type
+injectivityAnn ::
+  Name -> [Name] -> Language.Haskell.TH.Lib.Internal.InjectivityAnn
+instanceD :: Quote m => m Cxt -> m Type -> [m Dec] -> m Dec
+instanceWithOverlapD ::
+  Quote m => Maybe Overlap -> m Cxt -> m Type -> [m Dec] -> m Dec
+intPrimL :: Integer -> Lit
+integerL :: Integer -> Lit
+interruptible :: Safety
+isStrict :: Quote m => m Strict
+javaScript :: Callconv
+kiSigD :: Quote m => Name -> m Kind -> m Dec
+Language.Haskell.TH.Lib.Internal.kindSig ::
+  Quote m => m Kind -> m FamilyResultSig
+kindedInvisTV ::
+  Quote m =>
+  Name -> Specificity -> m Kind -> m (TyVarBndr Specificity)
+Language.Haskell.TH.Lib.Internal.kindedTV ::
+  Quote m => Name -> m Kind -> m (TyVarBndr ())
+labelE :: Quote m => String -> m Exp
+lam1E :: Quote m => m Pat -> m Exp -> m Exp
+lamCaseE :: Quote m => [m Match] -> m Exp
+lamE :: Quote m => [m Pat] -> m Exp -> m Exp
+letE :: Quote m => [m Dec] -> m Exp -> m Exp
+letS :: Quote m => [m Dec] -> m Stmt
+listE :: Quote m => [m Exp] -> m Exp
+listK :: Kind
+listP :: Quote m => [m Pat] -> m Pat
+listT :: Quote m => m Type
+litE :: Quote m => Lit -> m Exp
+litP :: Quote m => Lit -> m Pat
+litT :: Quote m => m TyLit -> m Type
+match :: Quote m => m Pat -> m Body -> [m Dec] -> m Match
+Language.Haskell.TH.Lib.Internal.mdoE ::
+  Quote m => Maybe ModName -> [m Stmt] -> m Exp
+moduleAnnotation :: AnnTarget
+mulArrowT :: Quote m => m Type
+multiIfE :: Quote m => [m (Guard, Exp)] -> m Exp
+Language.Haskell.TH.Lib.Internal.newtypeD ::
+  Quote m =>
+  m Cxt
+  -> Name
+  -> [m (TyVarBndr ())]
+  -> Maybe (m Kind)
+  -> m Con
+  -> [m DerivClause]
+  -> m Dec
+newtypeD_doc ::
+  Q Cxt
+  -> Name
+  -> [Q (TyVarBndr ())]
+  -> Maybe (Q Kind)
+  -> (Q Con, Maybe String, [Maybe String])
+  -> [Q DerivClause]
+  -> Maybe String
+  -> Q Dec
+Language.Haskell.TH.Lib.Internal.newtypeInstD ::
+  Quote m =>
+  m Cxt
+  -> Maybe [m (TyVarBndr ())]
+  -> m Type
+  -> Maybe (m Kind)
+  -> m Con
+  -> [m DerivClause]
+  -> m Dec
+newtypeInstD_doc ::
+  Q Cxt
+  -> Maybe [Q (TyVarBndr ())]
+  -> Q Type
+  -> Maybe (Q Kind)
+  -> (Q Con, Maybe String, [Maybe String])
+  -> [Q DerivClause]
+  -> Maybe String
+  -> Q Dec
+newtypeStrategy :: Quote m => m DerivStrategy
+noBindS :: Quote m => m Exp -> m Stmt
+Language.Haskell.TH.Lib.Internal.noSig ::
+  Quote m => m FamilyResultSig
+noSourceStrictness :: Quote m => m SourceStrictness
+noSourceUnpackedness :: Quote m => m SourceUnpackedness
+nominalR :: Language.Haskell.TH.Lib.Internal.Role
+normalB :: Quote m => m Exp -> m Body
+normalC :: Quote m => Name -> [m BangType] -> m Con
+normalG :: Quote m => m Exp -> m Guard
+normalGE :: Quote m => m Exp -> m Exp -> m (Guard, Exp)
+notStrict :: Quote m => m Strict
+numTyLit :: Quote m => Integer -> m TyLit
+Language.Haskell.TH.Lib.Internal.openTypeFamilyD ::
+  Quote m =>
+  Name
+  -> [m (TyVarBndr ())]
+  -> m FamilyResultSig
+  -> Maybe Language.Haskell.TH.Lib.Internal.InjectivityAnn
+  -> m Dec
+parS :: Quote m => [[m Stmt]] -> m Stmt
+parensE :: Quote m => m Exp -> m Exp
+parensP :: Quote m => m Pat -> m Pat
+parensT :: Quote m => m Type -> m Type
+patG :: Quote m => [m Stmt] -> m Guard
+patGE :: Quote m => [m Stmt] -> m Exp -> m (Guard, Exp)
+patSynD ::
+  Quote m => Name -> m PatSynArgs -> m PatSynDir -> m Pat -> m Dec
+patSynD_doc ::
+  Name
+  -> Q PatSynArgs
+  -> Q PatSynDir
+  -> Q Pat
+  -> Maybe String
+  -> [Maybe String]
+  -> Q Dec
+patSynSigD :: Quote m => Name -> m Type -> m Dec
+phantomR :: Language.Haskell.TH.Lib.Internal.Role
+plainInvisTV ::
+  Quote m => Name -> Specificity -> m (TyVarBndr Specificity)
+Language.Haskell.TH.Lib.Internal.plainTV ::
+  Quote m => Name -> m (TyVarBndr ())
+pragAnnD :: Quote m => AnnTarget -> m Exp -> m Dec
+pragCompleteD :: Quote m => [Name] -> Maybe Name -> m Dec
+pragInlD ::
+  Quote m => Name -> Inline -> RuleMatch -> Phases -> m Dec
+pragLineD :: Quote m => Int -> String -> m Dec
+Language.Haskell.TH.Lib.Internal.pragRuleD ::
+  Quote m =>
+  String
+  -> Maybe [m (TyVarBndr ())]
+  -> [m RuleBndr]
+  -> m Exp
+  -> m Exp
+  -> Phases
+  -> m Dec
+pragSpecD :: Quote m => Name -> m Type -> Phases -> m Dec
+pragSpecInlD ::
+  Quote m => Name -> m Type -> Inline -> Phases -> m Dec
+pragSpecInstD :: Quote m => m Type -> m Dec
+prefixPatSyn :: Quote m => [Name] -> m PatSynArgs
+prim :: Callconv
+projectionE :: Quote m => GHC.Base.NonEmpty String -> m Exp
+promotedConsT :: Quote m => m Type
+promotedNilT :: Quote m => m Type
+promotedT :: Quote m => Name -> m Type
+promotedTupleT :: Quote m => Int -> m Type
+rationalL :: Rational -> Lit
+recC :: Quote m => Name -> [m VarBangType] -> m Con
+recConE :: Quote m => Name -> [m (Name, Exp)] -> m Exp
+recGadtC ::
+  Quote m => [Name] -> [m VarStrictType] -> m Type -> m Con
+recP :: Quote m => Name -> [m FieldPat] -> m Pat
+recS :: Quote m => [m Stmt] -> m Stmt
+recUpdE :: Quote m => m Exp -> [m (Name, Exp)] -> m Exp
+recordPatSyn :: Quote m => [Name] -> m PatSynArgs
+representationalR :: Language.Haskell.TH.Lib.Internal.Role
+roleAnnotD ::
+  Quote m => Name -> [Language.Haskell.TH.Lib.Internal.Role] -> m Dec
+ruleVar :: Quote m => Name -> m RuleBndr
+safe :: Safety
+sectionL :: Quote m => m Exp -> m Exp -> m Exp
+sectionR :: Quote m => m Exp -> m Exp -> m Exp
+sigD :: Quote m => Name -> m Type -> m Dec
+sigE :: Quote m => m Exp -> m Type -> m Exp
+sigP :: Quote m => m Pat -> m Type -> m Pat
+Language.Haskell.TH.Lib.Internal.sigT ::
+  Quote m => m Type -> m Kind -> m Type
+sourceLazy :: Quote m => m SourceStrictness
+sourceNoUnpack :: Quote m => m SourceUnpackedness
+sourceStrict :: Quote m => m SourceStrictness
+sourceUnpack :: Quote m => m SourceUnpackedness
+specifiedSpec :: Specificity
+standaloneDerivD :: Quote m => m Cxt -> m Type -> m Dec
+Language.Haskell.TH.Lib.Internal.standaloneDerivWithStrategyD ::
+  Quote m => Maybe (m DerivStrategy) -> m Cxt -> m Type -> m Dec
+Language.Haskell.TH.Lib.Internal.starK :: Quote m => m Kind
+staticE :: Quote m => m Exp -> m Exp
+stdCall :: Callconv
+stockStrategy :: Quote m => m DerivStrategy
+strTyLit :: Quote m => String -> m TyLit
+strictType :: Quote m => m Strict -> m Type -> m StrictType
+stringE :: Quote m => String -> m Exp
+stringL :: String -> Lit
+stringPrimL :: [GHC.Word.Word8] -> Lit
+thisModule :: Q Module
+tildeP :: Quote m => m Pat -> m Pat
+Language.Haskell.TH.Lib.Internal.tupE ::
+  Quote m => [Maybe (m Exp)] -> m Exp
+tupP :: Quote m => [m Pat] -> m Pat
+tupleK :: Int -> Kind
+tupleT :: Quote m => Int -> m Type
+Language.Haskell.TH.Lib.Internal.tySynD ::
+  Quote m => Name -> [m (TyVarBndr ())] -> m Type -> m Dec
+Language.Haskell.TH.Lib.Internal.tySynEqn ::
+  Quote m =>
+  Maybe [m (TyVarBndr ())] -> m Type -> m Type -> m TySynEqn
+tySynInstD :: Quote m => m TySynEqn -> m Dec
+Language.Haskell.TH.Lib.Internal.tyVarSig ::
+  Quote m => m (TyVarBndr ()) -> m FamilyResultSig
+typeAnnotation :: Name -> AnnTarget
+typedRuleVar :: Quote m => Name -> m Type -> m RuleBndr
+uInfixE :: Quote m => m Exp -> m Exp -> m Exp -> m Exp
+uInfixP :: Quote m => m Pat -> Name -> m Pat -> m Pat
+uInfixT :: Quote m => m Type -> Name -> m Type -> m Type
+unboundVarE :: Quote m => Name -> m Exp
+unboxedSumE :: Quote m => m Exp -> SumAlt -> SumArity -> m Exp
+unboxedSumP :: Quote m => m Pat -> SumAlt -> SumArity -> m Pat
+unboxedSumT :: Quote m => SumArity -> m Type
+Language.Haskell.TH.Lib.Internal.unboxedTupE ::
+  Quote m => [Maybe (m Exp)] -> m Exp
+unboxedTupP :: Quote m => [m Pat] -> m Pat
+unboxedTupleT :: Quote m => Int -> m Type
+unidir :: Quote m => m PatSynDir
+unpacked :: Quote m => m Strict
+unsafe :: Safety
+valD :: Quote m => m Pat -> m Body -> [m Dec] -> m Dec
+valueAnnotation :: Name -> AnnTarget
+varBangType :: Quote m => Name -> m BangType -> m VarBangType
+varE :: Quote m => Name -> m Exp
+varK :: Name -> Kind
+varP :: Quote m => Name -> m Pat
+varStrictType :: Quote m => Name -> m StrictType -> m VarStrictType
+varT :: Quote m => Name -> m Type
+viaStrategy :: Quote m => m Type -> m DerivStrategy
+viewP :: Quote m => m Exp -> m Pat -> m Pat
+wildCardT :: Quote m => m Type
+wildP :: Quote m => m Pat
+withDecDoc :: String -> Q Dec -> Q Dec
+withDecsDoc :: String -> Q [Dec] -> Q [Dec]
+wordPrimL :: Integer -> Lit
+ghci> 

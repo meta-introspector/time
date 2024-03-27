@@ -1,0 +1,14 @@
+data AnnLookup = AnnLookupModule Module | AnnLookupName Name
+  = ModuleAnnotation | TypeAnnotation Name | ValueAnnotation Name
+  = ModuleDoc | DeclDoc Name | ArgDoc Name Int | InstDoc Type
+         loc_module :: String,
+type Module :: *
+data Module = Module PkgName ModName
+type ModuleInfo :: *
+data ModuleInfo = ModuleInfo [Module]
+  qReifyModule :: Module -> m ModuleInfo
+              qReifyAnnotations, qReifyModule, qReifyConStrictness, qLocation,
+nameModule :: Name -> Maybe String
+reifyModule :: Module -> Q ModuleInfo
+moduleAnnotation :: AnnTarget
+thisModule :: Q Module
