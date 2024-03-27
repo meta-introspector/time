@@ -3649,11 +3649,8 @@
 	url = https://github.com/engstrand-config/guix-dotfiles
 [submodule "2024/03/26/pick-up-nix"]
 	path = 2024/03/26/pick-up-nix
-<<<<<<< HEAD
-	url = https://github.com/jmikedupont2/pick-up-nix.git
-=======
 	url = https://github.com/jmikedupont2/pick-up-nix
 [submodule "2024/03/27/hivemind"]
 	path = 2024/03/27/hivemind
 	url = https://github.com/learning-at-home/hivemind
->>>>>>> b19d669 (hivemind)
+
