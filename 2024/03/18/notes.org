@@ -1,0 +1,148 @@
+select * from builddependencies;
+ source | target 
+--------+--------
+   4986 |  30033
+   4986 |  30034
+
+ public | buildproducts     | table | cuirass
+   C-c C-ccuirass=# select *from buildproducts;
+ id | build | type | file_size | checksum | path 
+----+-------+------+-----------+----------+------
+(0 rows)
+
+
+cuirass=# select *from builds;
+WARNING: terminal is not fully functional
+Press RETURN to continue 
+
+ id   
+ derivation
+ evaluation
+ job_name
+ system
+
+cuirass=# select system,count(*) from builds group by system order by count(*) desc;
+    system    | count 
+--------------+-------
+ x86_64-linux | 30350
+ i686-linux   |    13
+(2 rows)
+
+ worker
+ nix_name
+  log
+  status
+  last_status
+   weather
+    priority
+    max_silent
+    timeout
+    timestamp
+    starttime
+    stoptime 
+
+
+
+cuirass=# cuirass=# select worker,count(*)from builds group by worker order by count(*) desc;
+WARNING: terminal is not fully functional
+Press RETURN to continue 
+
+cuirass=# cuirass=# select worker,status,count(*)from builds group by status,worker order by count(*) desc;
+WARNING: terminal is not fully functional
+Press RETURN to continue 
+
+  worker  | status | count 
+----------+--------+-------
+          |      2 | 20163
+ wpQJLU1t |      1 |  1252
+ kHgPTQjm |      1 |  1216
+ pXEdbaHC |      1 |   906
+ IQYI1JPH |      1 |   779
+ ncIse0c9 |      1 |   690
+ Z9lEdWCs |      1 |   650
+          |      0 |   595
+ kHgPTQjm |      0 |   535
+ wpQJLU1t |      0 |   532
+: 
+ IQYI1JPH |      0 |   471
+ sicNfQYL |      0 |   437
+ rWznRr2G |      1 |   415
+ pXEdbaHC |      0 |   391
+ rWznRr2G |      0 |   333
+ Z9lEdWCs |      0 |   317
+ sicNfQYL |      1 |   312
+ ncIse0c9 |      0 |   242
+          |     -2 |    13
+ HGb3NqJW |      0 |    10
+ QlGh6La9 |      1 |    10
+ LX6DbQlW |      1 |    10
+ w08ubS6n |      0 |     9
+: 
+ uGMkDPSk |      0 |     9
+ DphbiBAq |      0 |     8
+ cokfGwsE |      1 |     7
+ HGb3NqJW |      1 |     7
+ QlGh6La9 |      0 |     6
+ xPt9T60y |      1 |     6
+ xPt9T60y |      0 |     6
+ LX6DbQlW |      0 |     6
+          |      1 |     5
+ cokfGwsE |      0 |     4
+ uGMkDPSk |      1 |     4
+ DphbiBAq |      1 |     4
+ w08ubS6n |      1 |     3
+: 
+(36 rows)
+
+cuirass=# select status,count(*) from builds group by status order by count(*) desc;
+ status | count 
+--------+-------
+      2 | 20163
+      1 |  6276
+      0 |  3911
+     -2 |    13
+(4 rows)
+
+  worker  | count 
+----------+-------
+          | 20776
+ wpQJLU1t |  1784
+ kHgPTQjm |  1751
+ pXEdbaHC |  1297
+ IQYI1JPH |  1250
+ Z9lEdWCs |   967
+ ncIse0c9 |   932
+ sicNfQYL |   749
+ rWznRr2G |   748
+ HGb3NqJW |    17
+:
+ QlGh6La9 |    16
+:
+ LX6DbQlW |    16
+:
+ uGMkDPSk |    13
+:
+ w08ubS6n |    12
+:
+ DphbiBAq |    12
+:
+ xPt9T60y |    12
+:
+ cokfGwsE |    11
+:
+(17 rows)
+:
+
+public | builds            | table | cuirass
+ public | checkouts         | table | cuirass
+ public | dashboards        | table | cuirass
+ public | evaluations       | table | cuirass
+ public | jobs              | table | cuirass
+ public | metrics           | table | cuirass
+ public | notifications     | table | cuirass
+: 
+ public | outputs           | table | cuirass
+ public | schemaversion     | table | cuirass
+ public | specifications    | table | cuirass
+ public | workers           | table | cuirass
+(13 rows)
