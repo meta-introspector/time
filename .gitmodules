@@ -3663,3 +3663,6 @@
 [submodule "2024/03/27/peft"]
 	path = 2024/03/27/peft
 	url = https://github.com/huggingface/peft
+[submodule "2024/03/28/commune"]
+	path = 2024/03/28/commune
+	url = https://github.com/commune-ai/commune
