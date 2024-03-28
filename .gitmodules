@@ -3654,3 +3654,12 @@
 	path = 2024/03/27/hivemind
 	url = https://github.com/learning-at-home/hivemind
 
+[submodule "2024/03/27/swarm"]
+	path = 2024/03/27/swarm
+	url = https://github.com/yandex-research/swarm
+[submodule "2024/03/27/petals-api"]
+	path = 2024/03/27/petals-api
+	url = https://huggingface.co/spaces/bigscience/petals-api
+[submodule "2024/03/27/peft"]
+	path = 2024/03/27/peft
+	url = https://github.com/huggingface/peft
