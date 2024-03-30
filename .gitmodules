@@ -3669,3 +3669,6 @@
 [submodule "2024/03/30/health.petals.dev"]
 	path = 2024/03/30/health.petals.dev
 	url = https://github.com/petals-infra/health.petals.dev
+[submodule "2024/03/30/multipy"]
+	path = 2024/03/30/multipy
+	url = https://github.com/pytorch/multipy.git
