@@ -1,0 +1,12 @@
+<podiki> https://lists.gnu.org/archive/html/guix-devel/2024-03/msg00242.html
+<peanuts> "PyTorch with ROCm"
+	  https://lists.gnu.org/archive/html/guix-devel/2024-03/msg00242.html
+<podiki> namely this patch series: https://issues.guix.gnu.org/69591	[21:05]
+<peanuts> "[PATCH 00/31] Unbundle and update python-pytorch"
+	  https://issues.guix.gnu.org/69591
+<podiki> includes some update of cpuinfo i see
+<podiki> anyway, would look at that thread and issue/patch; seems like a lot
+	 of the work has been done, but not reviewed/merged yet		[21:06]
+<podiki> you can use it locally of course, and chime in if it works/anything
+	 you review
+ERC> 
