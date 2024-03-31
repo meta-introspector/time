@@ -1,0 +1,42 @@
+time operations:
+1. search for packages (locally,source,grep,llm)
+2. add package (via guix,nix,github), install, build
+3. deprecate,remove duplicates,package,version, 
+4. group/cluster code,projects,users,functions,data
+5. visualize concepts,code,..
+6. compiler,llm,user feedback as oracle/function/monad/continuation/connection/file
+   everything is a file. user is a file being read from.
+7. emacs,org,dom,structure,topology,semwweb,quads,
+   arrow,h5,gguf
+8. biosemiotics, genetic algorithms, neural networks
+9. zero knowlege proofs, snarks, introspection, oracle.
+
+The connection between two nodes, or instances of the software,
+via a user or external stream.
+
+Imagine we want to install an emacs package via guix into a running emacs.
+
+
+* a diffusion model for source code,
+using compiler introspection and error messages
+to learn meaning of code.
+we take a large corpus of source code like linux
+and mutate or remove or change one token at a time
+with an autoencoder creating an error message or a different runtime of the resulting code.
+
+we then train a model to reconstruct the file, or predict what change will fix or improve the output.
+we can give a gradient to the loss vector
+so that cheaper, faster, better, more beautiful,
+more symmetrical, with more positive feedback  or with
+more capital will be chosen,  
+
+we train to go from the error and internal compiler state
+to the better state via fixing the code .
+
+we can think of this as the principle of acidic reduction
+or sequential abstraction or decomposition
+or deconstruction.
+
+
+Code fusion seems to have done that, 
+https://arxiv.org/abs/2310.17680
