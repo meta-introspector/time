@@ -40,3 +40,8 @@ or deconstruction.
 
 Code fusion seems to have done that, 
 https://arxiv.org/abs/2310.17680
+
+
+#+begin_src shell
+guix install --without-tests=cpuinfo cpuinfo
+#+end_src
