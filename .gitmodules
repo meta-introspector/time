@@ -3675,3 +3675,6 @@
 [submodule "2024/03/31/cpuinfo"]
 	path = 2024/03/31/cpuinfo
 	url = https://github.com/meta-introspector/cpuinfo
+[submodule "2024/04/01/onnx"]
+	path = 2024/04/01/onnx
+	url = https://github.com/onnx/onnx
