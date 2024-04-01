@@ -3672,3 +3672,6 @@
 [submodule "2024/03/30/multipy"]
 	path = 2024/03/30/multipy
 	url = https://github.com/pytorch/multipy.git
+[submodule "2024/03/31/cpuinfo"]
+	path = 2024/03/31/cpuinfo
+	url = https://github.com/meta-introspector/cpuinfo
