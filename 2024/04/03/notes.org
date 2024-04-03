@@ -1,0 +1,4 @@
+
+#+begin_src shell
+guix shell python-pytorch --without-tests=cpuinfo  --without-tests=onnx  --without-tests=nnpack --without-tests=python-peachpy
+#+end_src
