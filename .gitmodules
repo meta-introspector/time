@@ -3690,3 +3690,5 @@
 	path = 2024/04/02/git-re-basin
 	url = https://github.com/samuela/git-re-basin
 
+[submodule "pytorch"]
+	url = https://github.com/meta-introspector/pytorch
