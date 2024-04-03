@@ -1977,7 +1977,7 @@
 	url = https://github.com/facebookresearch/ParlAI.git
 [submodule "2023/07/17/experiments/pytorch"]
 	path = 2023/07/17/experiments/pytorch
-	url = https://github.com/facebook/zstd.git
+	url = https://github.com/meta-introspector/pytorch.git
 [submodule "2023/07/17/experiments/bots/rasa"]
 	path = 2023/07/17/experiments/bots/rasa
 	url = https://github.com/RasaHQ/rasa.git
@@ -3690,5 +3690,3 @@
 	path = 2024/04/02/git-re-basin
 	url = https://github.com/samuela/git-re-basin
 
-[submodule "pytorch"]
-	url = https://github.com/meta-introspector/pytorch
