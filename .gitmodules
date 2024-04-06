@@ -3807,3 +3807,3936 @@
 [submodule "2024/04/05/distributed-llama"]
 	path = 2024/04/05/distributed-llama
 	url = https://github.com/b4rtaz/distributed-llama
+[submodule "2024/04/06/acurast-processor-update"]
+	path = 2024/04/06/acurast-processor-update
+	url = https://github.com/acurast/acurast-processor-update
+[submodule "2024/04/06/acurast-substrate"]
+	path = 2024/04/06/acurast-substrate
+	url = https://github.com/acurast/acurast-substrate
+[submodule "2024/04/06/acurast-kotlin-sdk"]
+	path = 2024/04/06/acurast-kotlin-sdk
+	url = https://github.com/acurast/acurast-kotlin-sdk
+[submodule "2024/04/06/acurast-docs"]
+	path = 2024/04/06/acurast-docs
+	url = https://github.com/acurast/acurast-docs
+[submodule "2024/04/06/smoldot"]
+	path = 2024/04/06/smoldot
+	url = https://github.com/acurast/smoldot
+[submodule "2024/04/06/acurast-core"]
+	path = 2024/04/06/acurast-core
+	url = https://github.com/acurast/acurast-core
+[submodule "2024/04/06/acurast-evm-oracle-sample"]
+	path = 2024/04/06/acurast-evm-oracle-sample
+	url = https://github.com/acurast/acurast-evm-oracle-sample
+[submodule "2024/04/06/acurast-hyperdrive"]
+	path = 2024/04/06/acurast-hyperdrive
+	url = https://github.com/acurast/acurast-hyperdrive
+[submodule "2024/04/06/nimbus"]
+	path = 2024/04/06/nimbus
+	url = https://github.com/acurast/nimbus
+[submodule "2024/04/06/mina-zkoracles"]
+	path = 2024/04/06/mina-zkoracles
+	url = https://github.com/acurast/mina-zkoracles
+[submodule "2024/04/06/acurast-typescript-sdk"]
+	path = 2024/04/06/acurast-typescript-sdk
+	url = https://github.com/acurast/acurast-typescript-sdk
+[submodule "2024/04/06/aepp-sdk-java"]
+	path = 2024/04/06/aepp-sdk-java
+	url = https://github.com/acurast/aepp-sdk-java
+[submodule "2024/04/06/ink-mmr"]
+	path = 2024/04/06/ink-mmr
+	url = https://github.com/acurast/ink-mmr
+[submodule "2024/04/06/projects-info"]
+	path = 2024/04/06/projects-info
+	url = https://github.com/acurast/projects-info
+[submodule "2024/04/06/merkle-mountain-range"]
+	path = 2024/04/06/merkle-mountain-range
+	url = https://github.com/acurast/merkle-mountain-range
+[submodule "2024/04/06/data-processor"]
+	path = 2024/04/06/data-processor
+	url = https://github.com/acurast/data-processor
+[submodule "2024/04/06/apps"]
+	path = 2024/04/06/apps
+	url = https://github.com/acurast/apps
+[submodule "2024/04/06/xcm-emulator"]
+	path = 2024/04/06/xcm-emulator
+	url = https://github.com/acurast/xcm-emulator
+[submodule "2024/04/06/elliptic-curves"]
+	path = 2024/04/06/elliptic-curves
+	url = https://github.com/acurast/elliptic-curves
+[submodule "2024/04/06/cache"]
+	path = 2024/04/06/cache
+	url = https://github.com/actions/cache
+[submodule "2024/04/06/ae_mdw"]
+	path = 2024/04/06/ae_mdw
+	url = https://github.com/aeternity/ae_mdw
+[submodule "2024/04/06/aesophia"]
+	path = 2024/04/06/aesophia
+	url = https://github.com/aeternity/aesophia
+[submodule "2024/04/06/aesophia_http"]
+	path = 2024/04/06/aesophia_http
+	url = https://github.com/aeternity/aesophia_http
+[submodule "2024/04/06/aeternity"]
+	path = 2024/04/06/aeternity
+	url = https://github.com/aeternity/aeternity
+[submodule "2024/04/06/protocol"]
+	path = 2024/04/06/protocol
+	url = https://github.com/aeternity/protocol
+[submodule "2024/04/06/robonomics"]
+	path = 2024/04/06/robonomics
+	url = https://github.com/airalab/robonomics
+[submodule "2024/04/06/bips"]
+	path = 2024/04/06/bips
+	url = https://github.com/bitcoin/bips
+[submodule "2024/04/06/chalk"]
+	path = 2024/04/06/chalk
+	url = https://github.com/chalk/chalk
+[submodule "2024/04/06/cheerio"]
+	path = 2024/04/06/cheerio
+	url = https://github.com/cheeriojs/cheerio
+[submodule "2024/04/06/chevrotain"]
+	path = 2024/04/06/chevrotain
+	url = https://github.com/chevrotain/chevrotain
+[submodule "2024/04/06/deno"]
+	path = 2024/04/06/deno
+	url = https://github.com/denoland/deno
+[submodule "2024/04/06/Robohash"]
+	path = 2024/04/06/Robohash
+	url = https://github.com/e1ven/Robohash
+[submodule "2024/04/06/electron"]
+	path = 2024/04/06/electron
+	url = https://github.com/electron/electron
+[submodule "2024/04/06/react"]
+	path = 2024/04/06/react
+	url = https://github.com/facebook/react
+[submodule "2024/04/06/domhandler"]
+	path = 2024/04/06/domhandler
+	url = https://github.com/fb55/domhandler
+[submodule "2024/04/06/domutils"]
+	path = 2024/04/06/domutils
+	url = https://github.com/fb55/domutils
+[submodule "2024/04/06/entities"]
+	path = 2024/04/06/entities
+	url = https://github.com/fb55/entities
+[submodule "2024/04/06/htmlparser2"]
+	path = 2024/04/06/htmlparser2
+	url = https://github.com/fb55/htmlparser2
+[submodule "2024/04/06/wycheproof"]
+	path = 2024/04/06/wycheproof
+	url = https://github.com/google/wycheproof
+[submodule "2024/04/06/yamux"]
+	path = 2024/04/06/yamux
+	url = https://github.com/hashicorp/yamux
+[submodule "2024/04/06/parse5"]
+	path = 2024/04/06/parse5
+	url = https://github.com/inikulin/parse5
+[submodule "2024/04/06/libsodium"]
+	path = 2024/04/06/libsodium
+	url = https://github.com/jedisct1/libsodium
+[submodule "2024/04/06/gitignore"]
+	path = 2024/04/06/gitignore
+	url = https://github.com/joeblau/gitignore
+[submodule "2024/04/06/Montserrat"]
+	path = 2024/04/06/Montserrat
+	url = https://github.com/JulietaUla/Montserrat
+[submodule "2024/04/06/community"]
+	path = 2024/04/06/community
+	url = https://github.com/Level/community
+[submodule "2024/04/06/specs"]
+	path = 2024/04/06/specs
+	url = https://github.com/libp2p/specs
+[submodule "2024/04/06/lodash"]
+	path = 2024/04/06/lodash
+	url = https://github.com/lodash/lodash
+[submodule "2024/04/06/micromatch"]
+	path = 2024/04/06/micromatch
+	url = https://github.com/micromatch/micromatch
+[submodule "2024/04/06/vscode"]
+	path = 2024/04/06/vscode
+	url = https://github.com/microsoft/vscode
+[submodule "2024/04/06/grin"]
+	path = 2024/04/06/grin
+	url = https://github.com/mimblewimble/grin
+[submodule "2024/04/06/cid"]
+	path = 2024/04/06/cid
+	url = https://github.com/multiformats/cid
+[submodule "2024/04/06/multiaddr"]
+	path = 2024/04/06/multiaddr
+	url = https://github.com/multiformats/multiaddr
+[submodule "2024/04/06/multibase"]
+	path = 2024/04/06/multibase
+	url = https://github.com/multiformats/multibase
+[submodule "2024/04/06/multihash"]
+	path = 2024/04/06/multihash
+	url = https://github.com/multiformats/multihash
+[submodule "2024/04/06/multistream"]
+	path = 2024/04/06/multistream
+	url = https://github.com/multiformats/multistream
+[submodule "2024/04/06/substrate"]
+	path = 2024/04/06/substrate
+	url = https://github.com/NodleCode/substrate
+[submodule "2024/04/06/cli"]
+	path = 2024/04/06/cli
+	url = https://github.com/npm/cli
+[submodule "2024/04/06/cumulus"]
+	path = 2024/04/06/cumulus
+	url = https://github.com/paritytech/cumulus
+[submodule "2024/04/06/frontier"]
+	path = 2024/04/06/frontier
+	url = https://github.com/paritytech/frontier
+[submodule "2024/04/06/ink"]
+	path = 2024/04/06/ink
+	url = https://github.com/paritytech/ink
+[submodule "2024/04/06/parity"]
+	path = 2024/04/06/parity
+	url = https://github.com/paritytech/parity
+[submodule "2024/04/06/polkadot"]
+	path = 2024/04/06/polkadot
+	url = https://github.com/paritytech/polkadot
+[submodule "2024/04/06/statemint"]
+	path = 2024/04/06/statemint
+	url = https://github.com/paritytech/statemint
+[submodule "2024/04/06/wasmi"]
+	path = 2024/04/06/wasmi
+	url = https://github.com/paritytech/wasmi
+[submodule "2024/04/06/zombienet"]
+	path = 2024/04/06/zombienet
+	url = https://github.com/paritytech/zombienet
+[submodule "2024/04/06/prettier"]
+	path = 2024/04/06/prettier
+	url = https://github.com/prettier/prettier
+[submodule "2024/04/06/protobuf"]
+	path = 2024/04/06/protobuf
+	url = https://github.com/protocolbuffers/protobuf
+[submodule "2024/04/06/moonbeam"]
+	path = 2024/04/06/moonbeam
+	url = https://github.com/PureStake/moonbeam
+[submodule "2024/04/06/toml_sort"]
+	path = 2024/04/06/toml_sort
+	url = https://github.com/PureStake/toml_sort
+[submodule "2024/04/06/request"]
+	path = 2024/04/06/request
+	url = https://github.com/request/request
+[submodule "2024/04/06/bitcoinj"]
+	path = 2024/04/06/bitcoinj
+	url = https://github.com/rsksmart/bitcoinj
+[submodule "2024/04/06/RSA"]
+	path = 2024/04/06/RSA
+	url = https://github.com/RustCrypto/RSA
+[submodule "2024/04/06/signatures"]
+	path = 2024/04/06/signatures
+	url = https://github.com/RustCrypto/signatures
+[submodule "2024/04/06/traits"]
+	path = 2024/04/06/traits
+	url = https://github.com/RustCrypto/traits
+[submodule "2024/04/06/utils"]
+	path = 2024/04/06/utils
+	url = https://github.com/rustcrypto/utils
+[submodule "2024/04/06/emittery"]
+	path = 2024/04/06/emittery
+	url = https://github.com/sindresorhus/emittery
+[submodule "2024/04/06/execa"]
+	path = 2024/04/06/execa
+	url = https://github.com/sindresorhus/execa
+[submodule "2024/04/06/got"]
+	path = 2024/04/06/got
+	url = https://github.com/sindresorhus/got
+[submodule "2024/04/06/memoize"]
+	path = 2024/04/06/memoize
+	url = https://github.com/sindresorhus/memoize
+[submodule "2024/04/06/chainlink"]
+	path = 2024/04/06/chainlink
+	url = https://github.com/smartcontractkit/chainlink
+[submodule "2024/04/06/fflonk"]
+	path = 2024/04/06/fflonk
+	url = https://github.com/w3f/fflonk
+[submodule "2024/04/06/Grants"]
+	path = 2024/04/06/Grants
+	url = https://github.com/w3f/Grants
+[submodule "2024/04/06/web3j"]
+	path = 2024/04/06/web3j
+	url = https://github.com/web3j/web3j
+[submodule "2024/04/06/webpack"]
+	path = 2024/04/06/webpack
+	url = https://github.com/webpack/webpack
+[submodule "2024/04/06/berry"]
+	path = 2024/04/06/berry
+	url = https://github.com/yarnpkg/berry
+[submodule "2024/04/06/yarn"]
+	path = 2024/04/06/yarn
+	url = https://github.com/yarnpkg/yarn
+[submodule "2024/04/06/zips"]
+	path = 2024/04/06/zips
+	url = https://github.com/zcash/zips
+[submodule "2024/04/06/group"]
+	path = 2024/04/06/group
+	url = https://github.com/zkcrypto/group
+[submodule "2024/04/06/polygon-edge"]
+	path = 2024/04/06/polygon-edge
+	url = https://github.com/0xPolygon/polygon-edge
+[submodule "2024/04/06/narwhal"]
+	path = 2024/04/06/narwhal
+	url = https://github.com/280north/narwhal
+[submodule "2024/04/06/msgpack-rust"]
+	path = 2024/04/06/msgpack-rust
+	url = https://github.com/3Hren/msgpack-rust
+[submodule "2024/04/06/EventEmitter3"]
+	path = 2024/04/06/EventEmitter3
+	url = https://github.com/3rd-Eden/EventEmitter3
+[submodule "2024/04/06/useragent"]
+	path = 2024/04/06/useragent
+	url = https://github.com/3rd-Eden/useragent
+[submodule "2024/04/06/5degrees-protocol"]
+	path = 2024/04/06/5degrees-protocol
+	url = https://github.com/5DegreesProtocol/5degrees-protocol
+[submodule "2024/04/06/source-map"]
+	path = 2024/04/06/source-map
+	url = https://github.com/7rulnik/source-map
+[submodule "2024/04/06/source-map-js"]
+	path = 2024/04/06/source-map-js
+	url = https://github.com/7rulnik/source-map-js
+[submodule "2024/04/06/PropTypes"]
+	path = 2024/04/06/PropTypes
+	url = https://github.com/aackerman/PropTypes
+[submodule "2024/04/06/jschardet"]
+	path = 2024/04/06/jschardet
+	url = https://github.com/aadsm/jschardet
+[submodule "2024/04/06/preact-typescript-parcel-starter"]
+	path = 2024/04/06/preact-typescript-parcel-starter
+	url = https://github.com/aalises/preact-typescript-parcel-starter
+[submodule "2024/04/06/bitcoinbook"]
+	path = 2024/04/06/bitcoinbook
+	url = https://github.com/aantonop/bitcoinbook
+[submodule "2024/04/06/smhasher"]
+	path = 2024/04/06/smhasher
+	url = https://github.com/aappleby/smhasher
+[submodule "2024/04/06/tokei"]
+	path = 2024/04/06/tokei
+	url = https://github.com/Aaronepower/tokei
+[submodule "2024/04/06/eslintd-fix"]
+	path = 2024/04/06/eslintd-fix
+	url = https://github.com/aaronjensen/eslintd-fix
+[submodule "2024/04/06/deasync"]
+	path = 2024/04/06/deasync
+	url = https://github.com/abbr/deasync
+[submodule "2024/04/06/abseil-cpp"]
+	path = 2024/04/06/abseil-cpp
+	url = https://github.com/abseil/abseil-cpp
+[submodule "2024/04/06/Acala"]
+	path = 2024/04/06/Acala
+	url = https://github.com/AcalaNetwork/Acala
+[submodule "2024/04/06/chopsticks"]
+	path = 2024/04/06/chopsticks
+	url = https://github.com/AcalaNetwork/chopsticks
+[submodule "2024/04/06/evm-provider"]
+	path = 2024/04/06/evm-provider
+	url = https://github.com/AcalaNetwork/evm-provider
+[submodule "2024/04/06/bitcoin"]
+	path = 2024/04/06/bitcoin
+	url = https://github.com/achow101/bitcoin
+[submodule "2024/04/06/biblib"]
+	path = 2024/04/06/biblib
+	url = https://github.com/aclements/biblib
+[submodule "2024/04/06/wepoll-ffi"]
+	path = 2024/04/06/wepoll-ffi
+	url = https://github.com/aclysma/wepoll-ffi
+[submodule "2024/04/06/acorn"]
+	path = 2024/04/06/acorn
+	url = https://github.com/acornjs/acorn
+[submodule "2024/04/06/acorn-async-iteration"]
+	path = 2024/04/06/acorn-async-iteration
+	url = https://github.com/acornjs/acorn-async-iteration
+[submodule "2024/04/06/acorn-bigint"]
+	path = 2024/04/06/acorn-bigint
+	url = https://github.com/acornjs/acorn-bigint
+[submodule "2024/04/06/acorn-class-fields"]
+	path = 2024/04/06/acorn-class-fields
+	url = https://github.com/acornjs/acorn-class-fields
+[submodule "2024/04/06/acorn-import-meta"]
+	path = 2024/04/06/acorn-import-meta
+	url = https://github.com/acornjs/acorn-import-meta
+[submodule "2024/04/06/acorn-jsx"]
+	path = 2024/04/06/acorn-jsx
+	url = https://github.com/acornjs/acorn-jsx
+[submodule "2024/04/06/acorn-numeric-separator"]
+	path = 2024/04/06/acorn-numeric-separator
+	url = https://github.com/acornjs/acorn-numeric-separator
+[submodule "2024/04/06/acorn-optional-catch-binding"]
+	path = 2024/04/06/acorn-optional-catch-binding
+	url = https://github.com/acornjs/acorn-optional-catch-binding
+[submodule "2024/04/06/acorn-private-methods"]
+	path = 2024/04/06/acorn-private-methods
+	url = https://github.com/acornjs/acorn-private-methods
+[submodule "2024/04/06/acorn-stage3"]
+	path = 2024/04/06/acorn-stage3
+	url = https://github.com/acornjs/acorn-stage3
+[submodule "2024/04/06/gomoku-terminal"]
+	path = 2024/04/06/gomoku-terminal
+	url = https://github.com/acrazing/gomoku-terminal
+[submodule "2024/04/06/deep-get-set"]
+	path = 2024/04/06/deep-get-set
+	url = https://github.com/acstll/deep-get-set
+[submodule "2024/04/06/gh-actions-cache"]
+	path = 2024/04/06/gh-actions-cache
+	url = https://github.com/actions/gh-actions-cache
+[submodule "2024/04/06/audit-check"]
+	path = 2024/04/06/audit-check
+	url = https://github.com/actions-rs/audit-check
+[submodule "2024/04/06/clippy"]
+	path = 2024/04/06/clippy
+	url = https://github.com/actions-rs/clippy
+[submodule "2024/04/06/example"]
+	path = 2024/04/06/example
+	url = https://github.com/actions-rs/example
+[submodule "2024/04/06/toolchain"]
+	path = 2024/04/06/toolchain
+	url = https://github.com/actions-rs/toolchain
+[submodule "2024/04/06/runner"]
+	path = 2024/04/06/runner
+	url = https://github.com/actions/runner
+[submodule "2024/04/06/runner-images"]
+	path = 2024/04/06/runner-images
+	url = https://github.com/actions/runner-images
+[submodule "2024/04/06/setup-node"]
+	path = 2024/04/06/setup-node
+	url = https://github.com/actions/setup-node
+[submodule "2024/04/06/stale"]
+	path = 2024/04/06/stale
+	url = https://github.com/actions/stale
+[submodule "2024/04/06/toolkit"]
+	path = 2024/04/06/toolkit
+	url = https://github.com/actions/toolkit
+[submodule "2024/04/06/actix-web"]
+	path = 2024/04/06/actix-web
+	url = https://github.com/actix/actix-web
+[submodule "2024/04/06/inquirer-select-line"]
+	path = 2024/04/06/inquirer-select-line
+	url = https://github.com/adam-golab/inquirer-select-line
+[submodule "2024/04/06/prettier-plugin-erb"]
+	path = 2024/04/06/prettier-plugin-erb
+	url = https://github.com/adamzapasnik/prettier-plugin-erb
+[submodule "2024/04/06/inquirer-fuzzy-path"]
+	path = 2024/04/06/inquirer-fuzzy-path
+	url = https://github.com/adelsz/inquirer-fuzzy-path
+[submodule "2024/04/06/deconz-sp"]
+	path = 2024/04/06/deconz-sp
+	url = https://github.com/adetante/deconz-sp
+[submodule "2024/04/06/explorer-besu-plugin"]
+	path = 2024/04/06/explorer-besu-plugin
+	url = https://github.com/adetante/explorer-besu-plugin
+[submodule "2024/04/06/Grants-Program"]
+	path = 2024/04/06/Grants-Program
+	url = https://github.com/adit313/Grants-Program
+[submodule "2024/04/06/librustzcash"]
+	path = 2024/04/06/librustzcash
+	url = https://github.com/adityapk00/librustzcash
+[submodule "2024/04/06/admeta"]
+	path = 2024/04/06/admeta
+	url = https://github.com/AdMetaNetwork/admeta
+[submodule "2024/04/06/admeta-decentraland"]
+	path = 2024/04/06/admeta-decentraland
+	url = https://github.com/AdMetaNetwork/admeta-decentraland
+[submodule "2024/04/06/admeta-webapp"]
+	path = 2024/04/06/admeta-webapp
+	url = https://github.com/AdMetaNetwork/admeta-webapp
+[submodule "2024/04/06/cosmos-sdk"]
+	path = 2024/04/06/cosmos-sdk
+	url = https://github.com/adoriasoft/cosmos-sdk
+[submodule "2024/04/06/polkadot_cosmos_integration"]
+	path = 2024/04/06/polkadot_cosmos_integration
+	url = https://github.com/adoriasoft/polkadot_cosmos_integration
+[submodule "2024/04/06/acorn5-object-spread"]
+	path = 2024/04/06/acorn5-object-spread
+	url = https://github.com/adrianheine/acorn5-object-spread
+[submodule "2024/04/06/Wexflow"]
+	path = 2024/04/06/Wexflow
+	url = https://github.com/aelassas/Wexflow
+[submodule "2024/04/06/mnemo"]
+	path = 2024/04/06/mnemo
+	url = https://github.com/aerosol/mnemo
+[submodule "2024/04/06/aebytecode"]
+	path = 2024/04/06/aebytecode
+	url = https://github.com/aeternity/aebytecode
+[submodule "2024/04/06/aecuckoo"]
+	path = 2024/04/06/aecuckoo
+	url = https://github.com/aeternity/aecuckoo
+[submodule "2024/04/06/aeminer"]
+	path = 2024/04/06/aeminer
+	url = https://github.com/aeternity/aeminer
+[submodule "2024/04/06/aep_dev_mode"]
+	path = 2024/04/06/aep_dev_mode
+	url = https://github.com/aeternity/aep_dev_mode
+[submodule "2024/04/06/ae_plugin"]
+	path = 2024/04/06/ae_plugin
+	url = https://github.com/aeternity/ae_plugin
+[submodule "2024/04/06/aeplugin_dev_mode"]
+	path = 2024/04/06/aeplugin_dev_mode
+	url = https://github.com/aeternity/aeplugin_dev_mode
+[submodule "2024/04/06/aepp-sophia-examples"]
+	path = 2024/04/06/aepp-sophia-examples
+	url = https://github.com/aeternity/aepp-sophia-examples
+[submodule "2024/04/06/aerepl"]
+	path = 2024/04/06/aerepl
+	url = https://github.com/aeternity/aerepl
+[submodule "2024/04/06/aeserialization"]
+	path = 2024/04/06/aeserialization
+	url = https://github.com/aeternity/aeserialization
+[submodule "2024/04/06/aesophia_aci_encoder"]
+	path = 2024/04/06/aesophia_aci_encoder
+	url = https://github.com/aeternity/aesophia_aci_encoder
+[submodule "2024/04/06/aesophia_cli"]
+	path = 2024/04/06/aesophia_cli
+	url = https://github.com/aeternity/aesophia_cli
+[submodule "2024/04/06/aestratum_client"]
+	path = 2024/04/06/aestratum_client
+	url = https://github.com/aeternity/aestratum_client
+[submodule "2024/04/06/aestratum_lib"]
+	path = 2024/04/06/aestratum_lib
+	url = https://github.com/aeternity/aestratum_lib
+[submodule "2024/04/06/aetmodel"]
+	path = 2024/04/06/aetmodel
+	url = https://github.com/aeternity/aetmodel
+[submodule "2024/04/06/AEXs"]
+	path = 2024/04/06/AEXs
+	url = https://github.com/aeternity/AEXs
+[submodule "2024/04/06/app_ctrl"]
+	path = 2024/04/06/app_ctrl
+	url = https://github.com/aeternity/app_ctrl
+[submodule "2024/04/06/argparse"]
+	path = 2024/04/06/argparse
+	url = https://github.com/aeternity/argparse
+[submodule "2024/04/06/cuckoo-prebuilt"]
+	path = 2024/04/06/cuckoo-prebuilt
+	url = https://github.com/aeternity/cuckoo-prebuilt
+[submodule "2024/04/06/docker-builder"]
+	path = 2024/04/06/docker-builder
+	url = https://github.com/aeternity/docker-builder
+[submodule "2024/04/06/ecrecover"]
+	path = 2024/04/06/ecrecover
+	url = https://github.com/aeternity/ecrecover
+[submodule "2024/04/06/emcl"]
+	path = 2024/04/06/emcl
+	url = https://github.com/aeternity/emcl
+[submodule "2024/04/06/enacl"]
+	path = 2024/04/06/enacl
+	url = https://github.com/aeternity/enacl
+[submodule "2024/04/06/enoise"]
+	path = 2024/04/06/enoise
+	url = https://github.com/aeternity/enoise
+[submodule "2024/04/06/epoch"]
+	path = 2024/04/06/epoch
+	url = https://github.com/aeternity/epoch
+[submodule "2024/04/06/erlang-nat"]
+	path = 2024/04/06/erlang-nat
+	url = https://github.com/aeternity/erlang-nat
+[submodule "2024/04/06/erlang-sha3"]
+	path = 2024/04/06/erlang-sha3
+	url = https://github.com/aeternity/erlang-sha3
+[submodule "2024/04/06/erl-base58"]
+	path = 2024/04/06/erl-base58
+	url = https://github.com/aeternity/erl-base58
+[submodule "2024/04/06/installer"]
+	path = 2024/04/06/installer
+	url = https://github.com/aeternity/installer
+[submodule "2024/04/06/lager"]
+	path = 2024/04/06/lager
+	url = https://github.com/aeternity/lager
+[submodule "2024/04/06/localnet"]
+	path = 2024/04/06/localnet
+	url = https://github.com/aeternity/localnet
+[submodule "2024/04/06/mnesia_rocksdb"]
+	path = 2024/04/06/mnesia_rocksdb
+	url = https://github.com/aeternity/mnesia_rocksdb
+[submodule "2024/04/06/parity-ethereum"]
+	path = 2024/04/06/parity-ethereum
+	url = https://github.com/aeternity/parity-ethereum
+[submodule "2024/04/06/swagger_endpoints"]
+	path = 2024/04/06/swagger_endpoints
+	url = https://github.com/aeternity/swagger_endpoints
+[submodule "2024/04/06/websocket_client"]
+	path = 2024/04/06/websocket_client
+	url = https://github.com/aeternity/websocket_client
+[submodule "2024/04/06/white-paper"]
+	path = 2024/04/06/white-paper
+	url = https://github.com/aeternity/white-paper
+[submodule "2024/04/06/whitepaper"]
+	path = 2024/04/06/whitepaper
+	url = https://github.com/aeternity/whitepaper
+[submodule "2024/04/06/hackathon-2022-summer"]
+	path = 2024/04/06/hackathon-2022-summer
+	url = https://github.com/aexkobe/hackathon-2022-summer
+[submodule "2024/04/06/preact-weui"]
+	path = 2024/04/06/preact-weui
+	url = https://github.com/afeiship/preact-weui
+[submodule "2024/04/06/find-root"]
+	path = 2024/04/06/find-root
+	url = https://github.com/agilemd/find-root
+[submodule "2024/04/06/candle-auction-ink"]
+	path = 2024/04/06/candle-auction-ink
+	url = https://github.com/agryaznov/candle-auction-ink
+[submodule "2024/04/06/protox"]
+	path = 2024/04/06/protox
+	url = https://github.com/ahamez/protox
+[submodule "2024/04/06/har-cli"]
+	path = 2024/04/06/har-cli
+	url = https://github.com/ahmadnassri/har-cli
+[submodule "2024/04/06/har-schema"]
+	path = 2024/04/06/har-schema
+	url = https://github.com/ahmadnassri/har-schema
+[submodule "2024/04/06/har-spec"]
+	path = 2024/04/06/har-spec
+	url = https://github.com/ahmadnassri/har-spec
+[submodule "2024/04/06/har-validator"]
+	path = 2024/04/06/har-validator
+	url = https://github.com/ahmadnassri/har-validator
+[submodule "2024/04/06/node-har-validator"]
+	path = 2024/04/06/node-har-validator
+	url = https://github.com/ahmadnassri/node-har-validator
+[submodule "2024/04/06/pkg-config"]
+	path = 2024/04/06/pkg-config
+	url = https://github.com/ahmadnassri/pkg-config
+[submodule "2024/04/06/browserslist"]
+	path = 2024/04/06/browserslist
+	url = https://github.com/ai/browserslist
+[submodule "2024/04/06/ink-quicksearch"]
+	path = 2024/04/06/ink-quicksearch
+	url = https://github.com/aicioara/ink-quicksearch
+[submodule "2024/04/06/nanoid"]
+	path = 2024/04/06/nanoid
+	url = https://github.com/ai/nanoid
+[submodule "2024/04/06/sockjs"]
+	path = 2024/04/06/sockjs
+	url = https://github.com/aio-libs/sockjs
+[submodule "2024/04/06/postcss"]
+	path = 2024/04/06/postcss
+	url = https://github.com/ai/postcss
+[submodule "2024/04/06/hs-web3"]
+	path = 2024/04/06/hs-web3
+	url = https://github.com/airalab/hs-web3
+[submodule "2024/04/06/substrate-node-robonomics"]
+	path = 2024/04/06/substrate-node-robonomics
+	url = https://github.com/airalab/substrate-node-robonomics
+[submodule "2024/04/06/babel-plugin-dynamic-import-node"]
+	path = 2024/04/06/babel-plugin-dynamic-import-node
+	url = https://github.com/airbnb/babel-plugin-dynamic-import-node
+[submodule "2024/04/06/javascript"]
+	path = 2024/04/06/javascript
+	url = https://github.com/airbnb/javascript
+[submodule "2024/04/06/airgap-vault"]
+	path = 2024/04/06/airgap-vault
+	url = https://github.com/airgap-it/airgap-vault
+[submodule "2024/04/06/tezos-rust-sdk"]
+	path = 2024/04/06/tezos-rust-sdk
+	url = https://github.com/airgap-it/tezos-rust-sdk
+[submodule "2024/04/06/airtap"]
+	path = 2024/04/06/airtap
+	url = https://github.com/airtap/airtap
+[submodule "2024/04/06/size-limit"]
+	path = 2024/04/06/size-limit
+	url = https://github.com/ai/size-limit
+[submodule "2024/04/06/tsutils"]
+	path = 2024/04/06/tsutils
+	url = https://github.com/ajafff/tsutils
+[submodule "2024/04/06/taproot-review"]
+	path = 2024/04/06/taproot-review
+	url = https://github.com/ajtowns/taproot-review
+[submodule "2024/04/06/Ajuna"]
+	path = 2024/04/06/Ajuna
+	url = https://github.com/ajuna-network/Ajuna
+[submodule "2024/04/06/SubstrateNetApi"]
+	path = 2024/04/06/SubstrateNetApi
+	url = https://github.com/ajuna-network/SubstrateNetApi
+[submodule "2024/04/06/techpaper"]
+	path = 2024/04/06/techpaper
+	url = https://github.com/ajuna-network/techpaper
+[submodule "2024/04/06/ajv"]
+	path = 2024/04/06/ajv
+	url = https://github.com/ajv-validator/ajv
+[submodule "2024/04/06/ajv-async"]
+	path = 2024/04/06/ajv-async
+	url = https://github.com/ajv-validator/ajv-async
+[submodule "2024/04/06/ajv-cli"]
+	path = 2024/04/06/ajv-cli
+	url = https://github.com/ajv-validator/ajv-cli
+[submodule "2024/04/06/ajv-errors"]
+	path = 2024/04/06/ajv-errors
+	url = https://github.com/ajv-validator/ajv-errors
+[submodule "2024/04/06/ajv-formats"]
+	path = 2024/04/06/ajv-formats
+	url = https://github.com/ajv-validator/ajv-formats
+[submodule "2024/04/06/ajv-i18n"]
+	path = 2024/04/06/ajv-i18n
+	url = https://github.com/ajv-validator/ajv-i18n
+[submodule "2024/04/06/ajv-istanbul"]
+	path = 2024/04/06/ajv-istanbul
+	url = https://github.com/ajv-validator/ajv-istanbul
+[submodule "2024/04/06/ajv-keywords"]
+	path = 2024/04/06/ajv-keywords
+	url = https://github.com/ajv-validator/ajv-keywords
+[submodule "2024/04/06/ajv-merge-patch"]
+	path = 2024/04/06/ajv-merge-patch
+	url = https://github.com/ajv-validator/ajv-merge-patch
+[submodule "2024/04/06/ajv-pack"]
+	path = 2024/04/06/ajv-pack
+	url = https://github.com/ajv-validator/ajv-pack
+[submodule "2024/04/06/gopbuf"]
+	path = 2024/04/06/gopbuf
+	url = https://github.com/akunspy/gopbuf
+[submodule "2024/04/06/vte"]
+	path = 2024/04/06/vte
+	url = https://github.com/alacritty/vte
+[submodule "2024/04/06/nodeunit-lcov-coveralls-example"]
+	path = 2024/04/06/nodeunit-lcov-coveralls-example
+	url = https://github.com/alanshaw/nodeunit-lcov-coveralls-example
+[submodule "2024/04/06/forward-secrecy"]
+	path = 2024/04/06/forward-secrecy
+	url = https://github.com/alax/forward-secrecy
+[submodule "2024/04/06/cfg-if"]
+	path = 2024/04/06/cfg-if
+	url = https://github.com/alexcrichton/cfg-if
+[submodule "2024/04/06/dlmalloc-rs"]
+	path = 2024/04/06/dlmalloc-rs
+	url = https://github.com/alexcrichton/dlmalloc-rs
+[submodule "2024/04/06/filetime"]
+	path = 2024/04/06/filetime
+	url = https://github.com/alexcrichton/filetime
+[submodule "2024/04/06/openssl-probe"]
+	path = 2024/04/06/openssl-probe
+	url = https://github.com/alexcrichton/openssl-probe
+[submodule "2024/04/06/tar-rs"]
+	path = 2024/04/06/tar-rs
+	url = https://github.com/alexcrichton/tar-rs
+[submodule "2024/04/06/wasm-gc"]
+	path = 2024/04/06/wasm-gc
+	url = https://github.com/alexcrichton/wasm-gc
+[submodule "2024/04/06/unicode-utils"]
+	path = 2024/04/06/unicode-utils
+	url = https://github.com/alexdima/unicode-utils
+[submodule "2024/04/06/picocolors"]
+	path = 2024/04/06/picocolors
+	url = https://github.com/alexeyraspopov/picocolors
+[submodule "2024/04/06/protobuf-objc"]
+	path = 2024/04/06/protobuf-objc
+	url = https://github.com/alexeyxo/protobuf-objc
+[submodule "2024/04/06/protobuf-swift"]
+	path = 2024/04/06/protobuf-swift
+	url = https://github.com/alexeyxo/protobuf-swift
+[submodule "2024/04/06/got-fetch"]
+	path = 2024/04/06/got-fetch
+	url = https://github.com/alexghr/got-fetch
+[submodule "2024/04/06/asynckit"]
+	path = 2024/04/06/asynckit
+	url = https://github.com/alexindigo/asynckit
+[submodule "2024/04/06/tslint-config-prettier"]
+	path = 2024/04/06/tslint-config-prettier
+	url = https://github.com/alexjoverm/tslint-config-prettier
+[submodule "2024/04/06/blanket"]
+	path = 2024/04/06/blanket
+	url = https://github.com/alex-seville/blanket
+[submodule "2024/04/06/react-instantsearch"]
+	path = 2024/04/06/react-instantsearch
+	url = https://github.com/algolia/react-instantsearch
+[submodule "2024/04/06/pyteal"]
+	path = 2024/04/06/pyteal
+	url = https://github.com/algorand/pyteal
+[submodule "2024/04/06/php-protobuf"]
+	path = 2024/04/06/php-protobuf
+	url = https://github.com/allegro/php-protobuf
+[submodule "2024/04/06/terminal-notifier"]
+	path = 2024/04/06/terminal-notifier
+	url = https://github.com/alloy/terminal-notifier
+[submodule "2024/04/06/through2-concurrent"]
+	path = 2024/04/06/through2-concurrent
+	url = https://github.com/almost/through2-concurrent
+[submodule "2024/04/06/handlebars-loader"]
+	path = 2024/04/06/handlebars-loader
+	url = https://github.com/altano/handlebars-loader
+[submodule "2024/04/06/honggfuzz-rs"]
+	path = 2024/04/06/honggfuzz-rs
+	url = https://github.com/altaua/honggfuzz-rs
+[submodule "2024/04/06/parking_lot"]
+	path = 2024/04/06/parking_lot
+	url = https://github.com/Amanieu/parking_lot
+[submodule "2024/04/06/contracts-wizard"]
+	path = 2024/04/06/contracts-wizard
+	url = https://github.com/amankumar1008/contracts-wizard
+[submodule "2024/04/06/js-cleanup"]
+	path = 2024/04/06/js-cleanup
+	url = https://github.com/aMarCruz/js-cleanup
+[submodule "2024/04/06/perf-regexes"]
+	path = 2024/04/06/perf-regexes
+	url = https://github.com/aMarCruz/perf-regexes
+[submodule "2024/04/06/rmcomms"]
+	path = 2024/04/06/rmcomms
+	url = https://github.com/aMarCruz/rmcomms
+[submodule "2024/04/06/rollup-plugin-cleanup"]
+	path = 2024/04/06/rollup-plugin-cleanup
+	url = https://github.com/aMarCruz/rollup-plugin-cleanup
+[submodule "2024/04/06/skip-regex"]
+	path = 2024/04/06/skip-regex
+	url = https://github.com/aMarCruz/skip-regex
+[submodule "2024/04/06/amdjs-api"]
+	path = 2024/04/06/amdjs-api
+	url = https://github.com/amdjs/amdjs-api
+[submodule "2024/04/06/kubelive"]
+	path = 2024/04/06/kubelive
+	url = https://github.com/ameerthehacker/kubelive
+[submodule "2024/04/06/eslint-plugin-compat"]
+	path = 2024/04/06/eslint-plugin-compat
+	url = https://github.com/amilajack/eslint-plugin-compat
+[submodule "2024/04/06/shivarthu"]
+	path = 2024/04/06/shivarthu
+	url = https://github.com/amiyatulu/shivarthu
+[submodule "2024/04/06/html-webpack-plugin"]
+	path = 2024/04/06/html-webpack-plugin
+	url = https://github.com/ampedandwired/html-webpack-plugin
+[submodule "2024/04/06/js-sdk"]
+	path = 2024/04/06/js-sdk
+	url = https://github.com/anagolay/js-sdk
+[submodule "2024/04/06/xvfb-maybe"]
+	path = 2024/04/06/xvfb-maybe
+	url = https://github.com/anaisbetts/xvfb-maybe
+[submodule "2024/04/06/inquirer-file-tree-selection"]
+	path = 2024/04/06/inquirer-file-tree-selection
+	url = https://github.com/anc95/inquirer-file-tree-selection
+[submodule "2024/04/06/htmlparser-benchmark"]
+	path = 2024/04/06/htmlparser-benchmark
+	url = https://github.com/AndreasMadsen/htmlparser-benchmark
+[submodule "2024/04/06/100-blockchain-developer-resources"]
+	path = 2024/04/06/100-blockchain-developer-resources
+	url = https://github.com/andrejrakic/100-blockchain-developer-resources
+[submodule "2024/04/06/zokrates-demo"]
+	path = 2024/04/06/zokrates-demo
+	url = https://github.com/andrejrakic/zokrates-demo
+[submodule "2024/04/06/encoding"]
+	path = 2024/04/06/encoding
+	url = https://github.com/andris9/encoding
+[submodule "2024/04/06/jsbn"]
+	path = 2024/04/06/jsbn
+	url = https://github.com/andyperlitch/jsbn
+[submodule "2024/04/06/gatsby-plugin-i18n"]
+	path = 2024/04/06/gatsby-plugin-i18n
+	url = https://github.com/angeloocana/gatsby-plugin-i18n
+[submodule "2024/04/06/acorn-es7"]
+	path = 2024/04/06/acorn-es7
+	url = https://github.com/angelozerr/acorn-es7
+[submodule "2024/04/06/prettier-plugin-kotlin"]
+	path = 2024/04/06/prettier-plugin-kotlin
+	url = https://github.com/Angry-Potato/prettier-plugin-kotlin
+[submodule "2024/04/06/angular"]
+	path = 2024/04/06/angular
+	url = https://github.com/angular/angular
+[submodule "2024/04/06/angularjs-slider"]
+	path = 2024/04/06/angularjs-slider
+	url = https://github.com/angular-slider/angularjs-slider
+[submodule "2024/04/06/ngx-slider"]
+	path = 2024/04/06/ngx-slider
+	url = https://github.com/angular-slider/ngx-slider
+[submodule "2024/04/06/just"]
+	path = 2024/04/06/just
+	url = https://github.com/angus-c/just
+[submodule "2024/04/06/upath"]
+	path = 2024/04/06/upath
+	url = https://github.com/anodynos/upath
+[submodule "2024/04/06/BIP39"]
+	path = 2024/04/06/BIP39
+	url = https://github.com/anquii/BIP39
+[submodule "2024/04/06/parse-strings-in-object"]
+	path = 2024/04/06/parse-strings-in-object
+	url = https://github.com/anselanza/parse-strings-in-object
+[submodule "2024/04/06/ant-design"]
+	path = 2024/04/06/ant-design
+	url = https://github.com/ant-design/ant-design
+[submodule "2024/04/06/react-slick"]
+	path = 2024/04/06/react-slick
+	url = https://github.com/ant-design/react-slick
+[submodule "2024/04/06/unplugin-vue2-script-setup"]
+	path = 2024/04/06/unplugin-vue2-script-setup
+	url = https://github.com/antfu/unplugin-vue2-script-setup
+[submodule "2024/04/06/whammy"]
+	path = 2024/04/06/whammy
+	url = https://github.com/antimatter15/whammy
+[submodule "2024/04/06/grammars-v4"]
+	path = 2024/04/06/grammars-v4
+	url = https://github.com/antlr/grammars-v4
+[submodule "2024/04/06/cordova-ios"]
+	path = 2024/04/06/cordova-ios
+	url = https://github.com/apache/cordova-ios
+[submodule "2024/04/06/cordova-lib"]
+	path = 2024/04/06/cordova-lib
+	url = https://github.com/apache/cordova-lib
+[submodule "2024/04/06/groovy"]
+	path = 2024/04/06/groovy
+	url = https://github.com/apache/groovy
+[submodule "2024/04/06/openwhisk-package-kafka"]
+	path = 2024/04/06/openwhisk-package-kafka
+	url = https://github.com/apache/openwhisk-package-kafka
+[submodule "2024/04/06/openwhisk-wskdeploy"]
+	path = 2024/04/06/openwhisk-wskdeploy
+	url = https://github.com/apache/openwhisk-wskdeploy
+[submodule "2024/04/06/gravity"]
+	path = 2024/04/06/gravity
+	url = https://github.com/aphysci/gravity
+[submodule "2024/04/06/got-scraping"]
+	path = 2024/04/06/got-scraping
+	url = https://github.com/apify/got-scraping
+[submodule "2024/04/06/rust-jsonrpc"]
+	path = 2024/04/06/rust-jsonrpc
+	url = https://github.com/apoelstra/rust-jsonrpc
+[submodule "2024/04/06/taproot"]
+	path = 2024/04/06/taproot
+	url = https://github.com/apoelstra/taproot
+[submodule "2024/04/06/apollo-tooling"]
+	path = 2024/04/06/apollo-tooling
+	url = https://github.com/apollographql/apollo-tooling
+[submodule "2024/04/06/invariant-packages"]
+	path = 2024/04/06/invariant-packages
+	url = https://github.com/apollographql/invariant-packages
+[submodule "2024/04/06/substrate-migrations"]
+	path = 2024/04/06/substrate-migrations
+	url = https://github.com/apopiak/substrate-migrations
+[submodule "2024/04/06/Security"]
+	path = 2024/04/06/Security
+	url = https://github.com/apple-oss-distributions/Security
+[submodule "2024/04/06/swift-evolution"]
+	path = 2024/04/06/swift-evolution
+	url = https://github.com/apple/swift-evolution
+[submodule "2024/04/06/swift-protobuf"]
+	path = 2024/04/06/swift-protobuf
+	url = https://github.com/apple/swift-protobuf
+[submodule "2024/04/06/librarian-chef"]
+	path = 2024/04/06/librarian-chef
+	url = https://github.com/applicationsonline/librarian-chef
+[submodule "2024/04/06/maci"]
+	path = 2024/04/06/maci
+	url = https://github.com/appliedzkp/maci
+[submodule "2024/04/06/build-images"]
+	path = 2024/04/06/build-images
+	url = https://github.com/appveyor/build-images
+[submodule "2024/04/06/ci"]
+	path = 2024/04/06/ci
+	url = https://github.com/appveyor/ci
+[submodule "2024/04/06/ex_multiaddr"]
+	path = 2024/04/06/ex_multiaddr
+	url = https://github.com/aratz-lasa/ex_multiaddr
+[submodule "2024/04/06/clipanion"]
+	path = 2024/04/06/clipanion
+	url = https://github.com/arcanis/clipanion
+[submodule "2024/04/06/corepack"]
+	path = 2024/04/06/corepack
+	url = https://github.com/arcanis/corepack
+[submodule "2024/04/06/libzip"]
+	path = 2024/04/06/libzip
+	url = https://github.com/arcanis/libzip
+[submodule "2024/04/06/pmm"]
+	path = 2024/04/06/pmm
+	url = https://github.com/arcanis/pmm
+[submodule "2024/04/06/typanion"]
+	path = 2024/04/06/typanion
+	url = https://github.com/arcanis/typanion
+[submodule "2024/04/06/typescript"]
+	path = 2024/04/06/typescript
+	url = https://github.com/arcanis/typescript
+[submodule "2024/04/06/TypeScript"]
+	path = 2024/04/06/TypeScript
+	url = https://github.com/arcanis/TypeScript
+[submodule "2024/04/06/memory-stats"]
+	path = 2024/04/06/memory-stats
+	url = https://github.com/Arc-blroth/memory-stats
+[submodule "2024/04/06/html5"]
+	path = 2024/04/06/html5
+	url = https://github.com/aredridel/html5
+[submodule "2024/04/06/node-getpass"]
+	path = 2024/04/06/node-getpass
+	url = https://github.com/arekinath/node-getpass
+[submodule "2024/04/06/node-sshpk"]
+	path = 2024/04/06/node-sshpk
+	url = https://github.com/arekinath/node-sshpk
+[submodule "2024/04/06/node-sshpk-agent"]
+	path = 2024/04/06/node-sshpk-agent
+	url = https://github.com/arekinath/node-sshpk-agent
+[submodule "2024/04/06/electron-release-server"]
+	path = 2024/04/06/electron-release-server
+	url = https://github.com/ArekSredzki/electron-release-server
+[submodule "2024/04/06/ares"]
+	path = 2024/04/06/ares
+	url = https://github.com/aresprotocols/ares
+[submodule "2024/04/06/bctv"]
+	path = 2024/04/06/bctv
+	url = https://github.com/arielgabizon/bctv
+[submodule "2024/04/06/prettier-miscellaneous"]
+	path = 2024/04/06/prettier-miscellaneous
+	url = https://github.com/arijs/prettier-miscellaneous
+[submodule "2024/04/06/pirates"]
+	path = 2024/04/06/pirates
+	url = https://github.com/ariporad/pirates
+[submodule "2024/04/06/esprima"]
+	path = 2024/04/06/esprima
+	url = https://github.com/ariya/esprima
+[submodule "2024/04/06/phantomjs"]
+	path = 2024/04/06/phantomjs
+	url = https://github.com/ariya/phantomjs
+[submodule "2024/04/06/curves"]
+	path = 2024/04/06/curves
+	url = https://github.com/arkworks-rs/curves
+[submodule "2024/04/06/snark"]
+	path = 2024/04/06/snark
+	url = https://github.com/arkworks-rs/snark
+[submodule "2024/04/06/abi-aa"]
+	path = 2024/04/06/abi-aa
+	url = https://github.com/ARM-software/abi-aa
+[submodule "2024/04/06/loglevel-serverSend"]
+	path = 2024/04/06/loglevel-serverSend
+	url = https://github.com/artemyarulin/loglevel-serverSend
+[submodule "2024/04/06/node-fs-filesystem"]
+	path = 2024/04/06/node-fs-filesystem
+	url = https://github.com/arthurintelligence/node-fs-filesystem
+[submodule "2024/04/06/is-map"]
+	path = 2024/04/06/is-map
+	url = https://github.com/arthurvr/is-map
+[submodule "2024/04/06/is-set"]
+	path = 2024/04/06/is-set
+	url = https://github.com/arthurvr/is-set
+[submodule "2024/04/06/random-boolean"]
+	path = 2024/04/06/random-boolean
+	url = https://github.com/arthurvr/random-boolean
+[submodule "2024/04/06/shelljs"]
+	path = 2024/04/06/shelljs
+	url = https://github.com/arturadib/shelljs
+[submodule "2024/04/06/zig-protobuf"]
+	path = 2024/04/06/zig-protobuf
+	url = https://github.com/Arwalk/zig-protobuf
+[submodule "2024/04/06/subsee"]
+	path = 2024/04/06/subsee
+	url = https://github.com/ascjones/subsee
+[submodule "2024/04/06/subscript"]
+	path = 2024/04/06/subscript
+	url = https://github.com/ascontract/subscript
+[submodule "2024/04/06/json5"]
+	path = 2024/04/06/json5
+	url = https://github.com/aseemk/json5
+[submodule "2024/04/06/iconv-lite"]
+	path = 2024/04/06/iconv-lite
+	url = https://github.com/ashtuchkin/iconv-lite
+[submodule "2024/04/06/assemble"]
+	path = 2024/04/06/assemble
+	url = https://github.com/assemble/assemble
+[submodule "2024/04/06/handlebars-helpers"]
+	path = 2024/04/06/handlebars-helpers
+	url = https://github.com/assemble/handlebars-helpers
+[submodule "2024/04/06/verb"]
+	path = 2024/04/06/verb
+	url = https://github.com/assemble/verb
+[submodule "2024/04/06/verb-cli"]
+	path = 2024/04/06/verb-cli
+	url = https://github.com/assemble/verb-cli
+[submodule "2024/04/06/Astar"]
+	path = 2024/04/06/Astar
+	url = https://github.com/AstarNetwork/Astar
+[submodule "2024/04/06/plonk"]
+	path = 2024/04/06/plonk
+	url = https://github.com/AstarNetwork/plonk
+[submodule "2024/04/06/asyncapi-react"]
+	path = 2024/04/06/asyncapi-react
+	url = https://github.com/asyncapi/asyncapi-react
+[submodule "2024/04/06/postal"]
+	path = 2024/04/06/postal
+	url = https://github.com/atech/postal
+[submodule "2024/04/06/athena-sdk"]
+	path = 2024/04/06/athena-sdk
+	url = https://github.com/athenafarm/athena-sdk
+[submodule "2024/04/06/athena-vault-contracts"]
+	path = 2024/04/06/athena-vault-contracts
+	url = https://github.com/athenafarm/athena-vault-contracts
+[submodule "2024/04/06/nucleus"]
+	path = 2024/04/06/nucleus
+	url = https://github.com/atlassian/nucleus
+[submodule "2024/04/06/yarn-deduplicate"]
+	path = 2024/04/06/yarn-deduplicate
+	url = https://github.com/atlassian/yarn-deduplicate
+[submodule "2024/04/06/atmosphere"]
+	path = 2024/04/06/atmosphere
+	url = https://github.com/Atmosphere/atmosphere
+[submodule "2024/04/06/atom"]
+	path = 2024/04/06/atom
+	url = https://github.com/atom/atom
+[submodule "2024/04/06/chainabstractionlayer"]
+	path = 2024/04/06/chainabstractionlayer
+	url = https://github.com/AtomicLoans/chainabstractionlayer
+[submodule "2024/04/06/language-c"]
+	path = 2024/04/06/language-c
+	url = https://github.com/atom/language-c
+[submodule "2024/04/06/language-clojure"]
+	path = 2024/04/06/language-clojure
+	url = https://github.com/atom/language-clojure
+[submodule "2024/04/06/language-coffee-script"]
+	path = 2024/04/06/language-coffee-script
+	url = https://github.com/atom/language-coffee-script
+[submodule "2024/04/06/language-css"]
+	path = 2024/04/06/language-css
+	url = https://github.com/atom/language-css
+[submodule "2024/04/06/language-java"]
+	path = 2024/04/06/language-java
+	url = https://github.com/atom/language-java
+[submodule "2024/04/06/language-sass"]
+	path = 2024/04/06/language-sass
+	url = https://github.com/atom/language-sass
+[submodule "2024/04/06/language-xml"]
+	path = 2024/04/06/language-xml
+	url = https://github.com/atom/language-xml
+[submodule "2024/04/06/linter-eslint"]
+	path = 2024/04/06/linter-eslint
+	url = https://github.com/AtomLinter/linter-eslint
+[submodule "2024/04/06/node-keytar"]
+	path = 2024/04/06/node-keytar
+	url = https://github.com/atom/node-keytar
+[submodule "2024/04/06/node-spellchecker"]
+	path = 2024/04/06/node-spellchecker
+	url = https://github.com/atom/node-spellchecker
+[submodule "2024/04/06/protoc-gen-haxe"]
+	path = 2024/04/06/protoc-gen-haxe
+	url = https://github.com/Atry/protoc-gen-haxe
+[submodule "2024/04/06/sbt-cppp"]
+	path = 2024/04/06/sbt-cppp
+	url = https://github.com/Atry/sbt-cppp
+[submodule "2024/04/06/AVADO-DNP-Polkadot-custom"]
+	path = 2024/04/06/AVADO-DNP-Polkadot-custom
+	url = https://github.com/AvadoDServer/AVADO-DNP-Polkadot-custom
+[submodule "2024/04/06/append-transform"]
+	path = 2024/04/06/append-transform
+	url = https://github.com/avajs/append-transform
+[submodule "2024/04/06/ava"]
+	path = 2024/04/06/ava
+	url = https://github.com/avajs/ava
+[submodule "2024/04/06/caching-transform"]
+	path = 2024/04/06/caching-transform
+	url = https://github.com/avajs/caching-transform
+[submodule "2024/04/06/default-require-extensions"]
+	path = 2024/04/06/default-require-extensions
+	url = https://github.com/avajs/default-require-extensions
+[submodule "2024/04/06/find-cache-dir"]
+	path = 2024/04/06/find-cache-dir
+	url = https://github.com/avajs/find-cache-dir
+[submodule "2024/04/06/coreth"]
+	path = 2024/04/06/coreth
+	url = https://github.com/ava-labs/coreth
+[submodule "2024/04/06/elm-format"]
+	path = 2024/04/06/elm-format
+	url = https://github.com/avh4/elm-format
+[submodule "2024/04/06/ncp"]
+	path = 2024/04/06/ncp
+	url = https://github.com/AvianFlu/ncp
+[submodule "2024/04/06/gRPC-haskell"]
+	path = 2024/04/06/gRPC-haskell
+	url = https://github.com/awakesecurity/gRPC-haskell
+[submodule "2024/04/06/proto3-suite"]
+	path = 2024/04/06/proto3-suite
+	url = https://github.com/awakesecurity/proto3-suite
+[submodule "2024/04/06/proto3-wire"]
+	path = 2024/04/06/proto3-wire
+	url = https://github.com/awakesecurity/proto3-wire
+[submodule "2024/04/06/preact-mobx-starter"]
+	path = 2024/04/06/preact-mobx-starter
+	url = https://github.com/awaw00/preact-mobx-starter
+[submodule "2024/04/06/cson-loader"]
+	path = 2024/04/06/cson-loader
+	url = https://github.com/awnist/cson-loader
+[submodule "2024/04/06/aws-sdk-js"]
+	path = 2024/04/06/aws-sdk-js
+	url = https://github.com/aws/aws-sdk-js
+[submodule "2024/04/06/aws-sdk-js-v3"]
+	path = 2024/04/06/aws-sdk-js-v3
+	url = https://github.com/aws/aws-sdk-js-v3
+[submodule "2024/04/06/axios"]
+	path = 2024/04/06/axios
+	url = https://github.com/axios/axios
+[submodule "2024/04/06/deep-object"]
+	path = 2024/04/06/deep-object
+	url = https://github.com/ayushgp/deep-object
+[submodule "2024/04/06/AZTEC"]
+	path = 2024/04/06/AZTEC
+	url = https://github.com/AztecProtocol/AZTEC
+[submodule "2024/04/06/azure-sdk-for-js"]
+	path = 2024/04/06/azure-sdk-for-js
+	url = https://github.com/Azure/azure-sdk-for-js
+[submodule "2024/04/06/azure-sdk-for-net"]
+	path = 2024/04/06/azure-sdk-for-net
+	url = https://github.com/Azure/azure-sdk-for-net
+[submodule "2024/04/06/ms-rest-js"]
+	path = 2024/04/06/ms-rest-js
+	url = https://github.com/Azure/ms-rest-js
+[submodule "2024/04/06/opendigitaltwins-dtdl"]
+	path = 2024/04/06/opendigitaltwins-dtdl
+	url = https://github.com/Azure/opendigitaltwins-dtdl
+[submodule "2024/04/06/prettier-config"]
+	path = 2024/04/06/prettier-config
+	url = https://github.com/azz/prettier-config
+[submodule "2024/04/06/pretty-quick"]
+	path = 2024/04/06/pretty-quick
+	url = https://github.com/azz/pretty-quick
+[submodule "2024/04/06/babel"]
+	path = 2024/04/06/babel
+	url = https://github.com/babel/babel
+[submodule "2024/04/06/babel-eslint"]
+	path = 2024/04/06/babel-eslint
+	url = https://github.com/babel/babel-eslint
+[submodule "2024/04/06/babel-loader"]
+	path = 2024/04/06/babel-loader
+	url = https://github.com/babel/babel-loader
+[submodule "2024/04/06/babel-preset-env"]
+	path = 2024/04/06/babel-preset-env
+	url = https://github.com/babel/babel-preset-env
+[submodule "2024/04/06/babylon"]
+	path = 2024/04/06/babylon
+	url = https://github.com/babel/babylon
+[submodule "2024/04/06/eslint-plugin-babel"]
+	path = 2024/04/06/eslint-plugin-babel
+	url = https://github.com/babel/eslint-plugin-babel
+[submodule "2024/04/06/minify"]
+	path = 2024/04/06/minify
+	url = https://github.com/babel/minify
+[submodule "2024/04/06/preset-modules"]
+	path = 2024/04/06/preset-modules
+	url = https://github.com/babel/preset-modules
+[submodule "2024/04/06/proposals"]
+	path = 2024/04/06/proposals
+	url = https://github.com/babel/proposals
+[submodule "2024/04/06/curl"]
+	path = 2024/04/06/curl
+	url = https://github.com/bagder/curl
+[submodule "2024/04/06/node-justify"]
+	path = 2024/04/06/node-justify
+	url = https://github.com/bahamas10/node-justify
+[submodule "2024/04/06/node-latest"]
+	path = 2024/04/06/node-latest
+	url = https://github.com/bahamas10/node-latest
+[submodule "2024/04/06/node-ssh-fingerprint"]
+	path = 2024/04/06/node-ssh-fingerprint
+	url = https://github.com/bahamas10/node-ssh-fingerprint
+[submodule "2024/04/06/sofa-pbrpc"]
+	path = 2024/04/06/sofa-pbrpc
+	url = https://github.com/baidu/sofa-pbrpc
+[submodule "2024/04/06/pytezos"]
+	path = 2024/04/06/pytezos
+	url = https://github.com/baking-bad/pytezos
+[submodule "2024/04/06/balancer-core"]
+	path = 2024/04/06/balancer-core
+	url = https://github.com/balancer-labs/balancer-core
+[submodule "2024/04/06/balancer-sor"]
+	path = 2024/04/06/balancer-sor
+	url = https://github.com/balancer-labs/balancer-sor
+[submodule "2024/04/06/bal-mining-scripts"]
+	path = 2024/04/06/bal-mining-scripts
+	url = https://github.com/balancer-labs/bal-mining-scripts
+[submodule "2024/04/06/module-ballerina-grpc"]
+	path = 2024/04/06/module-ballerina-grpc
+	url = https://github.com/ballerina-platform/module-ballerina-grpc
+[submodule "2024/04/06/base-task"]
+	path = 2024/04/06/base-task
+	url = https://github.com/base/base-task
+[submodule "2024/04/06/erlang_protobuffs"]
+	path = 2024/04/06/erlang_protobuffs
+	url = https://github.com/basho/erlang_protobuffs
+[submodule "2024/04/06/apple_support"]
+	path = 2024/04/06/apple_support
+	url = https://github.com/bazelbuild/apple_support
+[submodule "2024/04/06/bazel"]
+	path = 2024/04/06/bazel
+	url = https://github.com/bazelbuild/bazel
+[submodule "2024/04/06/bazelisk"]
+	path = 2024/04/06/bazelisk
+	url = https://github.com/bazelbuild/bazelisk
+[submodule "2024/04/06/bazel-skylib"]
+	path = 2024/04/06/bazel-skylib
+	url = https://github.com/bazelbuild/bazel-skylib
+[submodule "2024/04/06/platforms"]
+	path = 2024/04/06/platforms
+	url = https://github.com/bazelbuild/platforms
+[submodule "2024/04/06/reclient"]
+	path = 2024/04/06/reclient
+	url = https://github.com/bazelbuild/reclient
+[submodule "2024/04/06/rules_apple"]
+	path = 2024/04/06/rules_apple
+	url = https://github.com/bazelbuild/rules_apple
+[submodule "2024/04/06/rules_cc"]
+	path = 2024/04/06/rules_cc
+	url = https://github.com/bazelbuild/rules_cc
+[submodule "2024/04/06/rules_closure"]
+	path = 2024/04/06/rules_closure
+	url = https://github.com/bazelbuild/rules_closure
+[submodule "2024/04/06/rules_fuzzing"]
+	path = 2024/04/06/rules_fuzzing
+	url = https://github.com/bazelbuild/rules_fuzzing
+[submodule "2024/04/06/rules_go"]
+	path = 2024/04/06/rules_go
+	url = https://github.com/bazelbuild/rules_go
+[submodule "2024/04/06/rules_java"]
+	path = 2024/04/06/rules_java
+	url = https://github.com/bazelbuild/rules_java
+[submodule "2024/04/06/rules_jvm_external"]
+	path = 2024/04/06/rules_jvm_external
+	url = https://github.com/bazelbuild/rules_jvm_external
+[submodule "2024/04/06/rules_kotlin"]
+	path = 2024/04/06/rules_kotlin
+	url = https://github.com/bazelbuild/rules_kotlin
+[submodule "2024/04/06/rules_pkg"]
+	path = 2024/04/06/rules_pkg
+	url = https://github.com/bazelbuild/rules_pkg
+[submodule "2024/04/06/rules_proto"]
+	path = 2024/04/06/rules_proto
+	url = https://github.com/bazelbuild/rules_proto
+[submodule "2024/04/06/rules_python"]
+	path = 2024/04/06/rules_python
+	url = https://github.com/bazelbuild/rules_python
+[submodule "2024/04/06/rules_rust"]
+	path = 2024/04/06/rules_rust
+	url = https://github.com/bazelbuild/rules_rust
+[submodule "2024/04/06/publish-to-bcr"]
+	path = 2024/04/06/publish-to-bcr
+	url = https://github.com/bazel-contrib/publish-to-bcr
+[submodule "2024/04/06/bc-java"]
+	path = 2024/04/06/bc-java
+	url = https://github.com/bcgit/bc-java
+[submodule "2024/04/06/json-schema-to-typescript"]
+	path = 2024/04/06/json-schema-to-typescript
+	url = https://github.com/bcherny/json-schema-to-typescript
+[submodule "2024/04/06/node-pre-gyp-github"]
+	path = 2024/04/06/node-pre-gyp-github
+	url = https://github.com/bchr02/node-pre-gyp-github
+[submodule "2024/04/06/c8"]
+	path = 2024/04/06/c8
+	url = https://github.com/bcoe/c8
+[submodule "2024/04/06/cliui"]
+	path = 2024/04/06/cliui
+	url = https://github.com/bcoe/cliui
+[submodule "2024/04/06/nyc"]
+	path = 2024/04/06/nyc
+	url = https://github.com/bcoe/nyc
+[submodule "2024/04/06/signal-exit"]
+	path = 2024/04/06/signal-exit
+	url = https://github.com/bcoe/signal-exit
+[submodule "2024/04/06/test-exclude"]
+	path = 2024/04/06/test-exclude
+	url = https://github.com/bcoe/test-exclude
+[submodule "2024/04/06/v8-to-istanbul"]
+	path = 2024/04/06/v8-to-istanbul
+	url = https://github.com/bcoe/v8-to-istanbul
+[submodule "2024/04/06/y18n"]
+	path = 2024/04/06/y18n
+	url = https://github.com/bcoe/y18n
+[submodule "2024/04/06/yargs"]
+	path = 2024/04/06/yargs
+	url = https://github.com/bcoe/yargs
+[submodule "2024/04/06/regexp-to-ast"]
+	path = 2024/04/06/regexp-to-ast
+	url = https://github.com/bd82/regexp-to-ast
+[submodule "2024/04/06/toml-tools"]
+	path = 2024/04/06/toml-tools
+	url = https://github.com/bd82/toml-tools
+[submodule "2024/04/06/bd-wallet-core"]
+	path = 2024/04/06/bd-wallet-core
+	url = https://github.com/bdwallet/bd-wallet-core
+[submodule "2024/04/06/wallet-app"]
+	path = 2024/04/06/wallet-app
+	url = https://github.com/bdwallet/wallet-app
+[submodule "2024/04/06/beaker"]
+	path = 2024/04/06/beaker
+	url = https://github.com/beakerbrowser/beaker
+[submodule "2024/04/06/beam"]
+	path = 2024/04/06/beam
+	url = https://github.com/BeamMW/beam
+[submodule "2024/04/06/base64-js"]
+	path = 2024/04/06/base64-js
+	url = https://github.com/beatgammit/base64-js
+[submodule "2024/04/06/js-beautify"]
+	path = 2024/04/06/js-beautify
+	url = https://github.com/beautify-web/js-beautify
+[submodule "2024/04/06/javascripthon-loader"]
+	path = 2024/04/06/javascripthon-loader
+	url = https://github.com/Beg-in/javascripthon-loader
+[submodule "2024/04/06/first-pr-merge"]
+	path = 2024/04/06/first-pr-merge
+	url = https://github.com/behaviorbot/first-pr-merge
+[submodule "2024/04/06/csharpier"]
+	path = 2024/04/06/csharpier
+	url = https://github.com/belav/csharpier
+[submodule "2024/04/06/builtin-status-codes"]
+	path = 2024/04/06/builtin-status-codes
+	url = https://github.com/bendrucker/builtin-status-codes
+[submodule "2024/04/06/snakecase-keys"]
+	path = 2024/04/06/snakecase-keys
+	url = https://github.com/bendrucker/snakecase-keys
+[submodule "2024/04/06/caniuse-lite"]
+	path = 2024/04/06/caniuse-lite
+	url = https://github.com/ben-eb/caniuse-lite
+[submodule "2024/04/06/tmp-promise"]
+	path = 2024/04/06/tmp-promise
+	url = https://github.com/benjamingr/tmp-promise
+[submodule "2024/04/06/recast"]
+	path = 2024/04/06/recast
+	url = https://github.com/benjamn/recast
+[submodule "2024/04/06/redis-cookie-store"]
+	path = 2024/04/06/redis-cookie-store
+	url = https://github.com/benkroeger/redis-cookie-store
+[submodule "2024/04/06/eslint-plugin-import"]
+	path = 2024/04/06/eslint-plugin-import
+	url = https://github.com/benmosher/eslint-plugin-import
+[submodule "2024/04/06/erlang-idna"]
+	path = 2024/04/06/erlang-idna
+	url = https://github.com/benoitc/erlang-idna
+[submodule "2024/04/06/preact-mdc"]
+	path = 2024/04/06/preact-mdc
+	url = https://github.com/BerndWessels/preact-mdc
+[submodule "2024/04/06/preact-mdc-demo"]
+	path = 2024/04/06/preact-mdc-demo
+	url = https://github.com/BerndWessels/preact-mdc-demo
+[submodule "2024/04/06/chrome-app-livereload"]
+	path = 2024/04/06/chrome-app-livereload
+	url = https://github.com/bestander/chrome-app-livereload
+[submodule "2024/04/06/json3"]
+	path = 2024/04/06/json3
+	url = https://github.com/bestiejs/json3
+[submodule "2024/04/06/domain-browser"]
+	path = 2024/04/06/domain-browser
+	url = https://github.com/bevry/domain-browser
+[submodule "2024/04/06/getsetdeep"]
+	path = 2024/04/06/getsetdeep
+	url = https://github.com/bevry/getsetdeep
+[submodule "2024/04/06/bevy"]
+	path = 2024/04/06/bevy
+	url = https://github.com/bevyengine/bevy
+[submodule "2024/04/06/bifrost"]
+	path = 2024/04/06/bifrost
+	url = https://github.com/bifrost-finance/bifrost
+[submodule "2024/04/06/bsc"]
+	path = 2024/04/06/bsc
+	url = https://github.com/binance-chain/bsc
+[submodule "2024/04/06/from2-array"]
+	path = 2024/04/06/from2-array
+	url = https://github.com/binocarlos/from2-array
+[submodule "2024/04/06/biome"]
+	path = 2024/04/06/biome
+	url = https://github.com/biomejs/biome
+[submodule "2024/04/06/prime"]
+	path = 2024/04/06/prime
+	url = https://github.com/birkir/prime
+[submodule "2024/04/06/eccrypto"]
+	path = 2024/04/06/eccrypto
+	url = https://github.com/bitchan/eccrypto
+[submodule "2024/04/06/bitcoin-abc"]
+	path = 2024/04/06/bitcoin-abc
+	url = https://github.com/Bitcoin-ABC/bitcoin-abc
+[submodule "2024/04/06/documentation"]
+	path = 2024/04/06/documentation
+	url = https://github.com/bitcoinclassic/documentation
+[submodule "2024/04/06/azure-site-test"]
+	path = 2024/04/06/azure-site-test
+	url = https://github.com/00Kai0/azure-site-test
+[submodule "2024/04/06/html-docs-hello-world"]
+	path = 2024/04/06/html-docs-hello-world
+	url = https://github.com/00Kai0/html-docs-hello-world
+[submodule "2024/04/06/core-contracts"]
+	path = 2024/04/06/core-contracts
+	url = https://github.com/0xPolygon/core-contracts
+[submodule "2024/04/06/go-ibft"]
+	path = 2024/04/06/go-ibft
+	url = https://github.com/0xPolygon/go-ibft
+[submodule "2024/04/06/staking-contracts"]
+	path = 2024/04/06/staking-contracts
+	url = https://github.com/0xPolygon/staking-contracts
+[submodule "2024/04/06/flexibility"]
+	path = 2024/04/06/flexibility
+	url = https://github.com/10up/flexibility
+[submodule "2024/04/06/spected"]
+	path = 2024/04/06/spected
+	url = https://github.com/25th-floor/spected
+[submodule "2024/04/06/postcss-sprites"]
+	path = 2024/04/06/postcss-sprites
+	url = https://github.com/2createStudio/postcss-sprites
+[submodule "2024/04/06/axios-cookiejar-support"]
+	path = 2024/04/06/axios-cookiejar-support
+	url = https://github.com/3846masa/axios-cookiejar-support
+[submodule "2024/04/06/389-ds-base"]
+	path = 2024/04/06/389-ds-base
+	url = https://github.com/389ds/389-ds-base
+[submodule "2024/04/06/astroturf"]
+	path = 2024/04/06/astroturf
+	url = https://github.com/4Catalyzer/astroturf
+[submodule "2024/04/06/postcss-ie8"]
+	path = 2024/04/06/postcss-ie8
+	url = https://github.com/4wdmedia/postcss-ie8
+[submodule "2024/04/06/6to5"]
+	path = 2024/04/06/6to5
+	url = https://github.com/6to5/6to5
+[submodule "2024/04/06/postcss-flexibility"]
+	path = 2024/04/06/postcss-flexibility
+	url = https://github.com/7rulnik/postcss-flexibility
+[submodule "2024/04/06/keyring"]
+	path = 2024/04/06/keyring
+	url = https://github.com/99designs/keyring
+[submodule "2024/04/06/swift-shortcuts"]
+	path = 2024/04/06/swift-shortcuts
+	url = https://github.com/a2/swift-shortcuts
+[submodule "2024/04/06/postcss-font-grabber"]
+	path = 2024/04/06/postcss-font-grabber
+	url = https://github.com/AaronJan/postcss-font-grabber
+[submodule "2024/04/06/lens-protocol"]
+	path = 2024/04/06/lens-protocol
+	url = https://github.com/aave/lens-protocol
+[submodule "2024/04/06/http-state"]
+	path = 2024/04/06/http-state
+	url = https://github.com/abarth/http-state
+[submodule "2024/04/06/deasync-bin"]
+	path = 2024/04/06/deasync-bin
+	url = https://github.com/abbr/deasync-bin
+[submodule "2024/04/06/mime_guess"]
+	path = 2024/04/06/mime_guess
+	url = https://github.com/abonander/mime_guess
+[submodule "2024/04/06/abseil-py"]
+	path = 2024/04/06/abseil-py
+	url = https://github.com/abseil/abseil-py
+[submodule "2024/04/06/nanorand-rs"]
+	path = 2024/04/06/nanorand-rs
+	url = https://github.com/Absolucy/nanorand-rs
+[submodule "2024/04/06/foundation"]
+	path = 2024/04/06/foundation
+	url = https://github.com/AcademySoftwareFoundation/foundation
+[submodule "2024/04/06/acala"]
+	path = 2024/04/06/acala
+	url = https://github.com/AcalaNetwork/acala
+[submodule "2024/04/06/Acala-white-paper"]
+	path = 2024/04/06/Acala-white-paper
+	url = https://github.com/AcalaNetwork/Acala-white-paper
+[submodule "2024/04/06/evm-bench"]
+	path = 2024/04/06/evm-bench
+	url = https://github.com/AcalaNetwork/evm-bench
+[submodule "2024/04/06/evm-tests"]
+	path = 2024/04/06/evm-tests
+	url = https://github.com/AcalaNetwork/evm-tests
+[submodule "2024/04/06/parachain-utilities"]
+	path = 2024/04/06/parachain-utilities
+	url = https://github.com/AcalaNetwork/parachain-utilities
+[submodule "2024/04/06/predeploy-contracts"]
+	path = 2024/04/06/predeploy-contracts
+	url = https://github.com/AcalaNetwork/predeploy-contracts
+[submodule "2024/04/06/certvalidator"]
+	path = 2024/04/06/certvalidator
+	url = https://github.com/achow101/certvalidator
+[submodule "2024/04/06/signapple"]
+	path = 2024/04/06/signapple
+	url = https://github.com/achow101/signapple
+[submodule "2024/04/06/profiling"]
+	path = 2024/04/06/profiling
+	url = https://github.com/aclysma/profiling
+[submodule "2024/04/06/wepoll"]
+	path = 2024/04/06/wepoll
+	url = https://github.com/aclysma/wepoll
+[submodule "2024/04/06/go-symbols"]
+	path = 2024/04/06/go-symbols
+	url = https://github.com/acroca/go-symbols
+[submodule "2024/04/06/actions-runner-controller"]
+	path = 2024/04/06/actions-runner-controller
+	url = https://github.com/actions/actions-runner-controller
+[submodule "2024/04/06/action-versions"]
+	path = 2024/04/06/action-versions
+	url = https://github.com/actions/action-versions
+[submodule "2024/04/06/alpine_nodejs"]
+	path = 2024/04/06/alpine_nodejs
+	url = https://github.com/actions/alpine_nodejs
+[submodule "2024/04/06/checkout"]
+	path = 2024/04/06/checkout
+	url = https://github.com/actions/checkout
+[submodule "2024/04/06/container-template"]
+	path = 2024/04/06/container-template
+	url = https://github.com/actions/container-template
+[submodule "2024/04/06/container-toolkit-action"]
+	path = 2024/04/06/container-toolkit-action
+	url = https://github.com/actions/container-toolkit-action
+[submodule "2024/04/06/download-artifact"]
+	path = 2024/04/06/download-artifact
+	url = https://github.com/actions/download-artifact
+[submodule "2024/04/06/action-create-comment"]
+	path = 2024/04/06/action-create-comment
+	url = https://github.com/actions-ecosystem/action-create-comment
+[submodule "2024/04/06/first-interaction"]
+	path = 2024/04/06/first-interaction
+	url = https://github.com/actions/first-interaction
+[submodule "2024/04/06/go-versions"]
+	path = 2024/04/06/go-versions
+	url = https://github.com/actions/go-versions
+[submodule "2024/04/06/hello-world-javascript-action"]
+	path = 2024/04/06/hello-world-javascript-action
+	url = https://github.com/actions/hello-world-javascript-action
+[submodule "2024/04/06/http-client"]
+	path = 2024/04/06/http-client
+	url = https://github.com/actions/http-client
+[submodule "2024/04/06/javascript-action"]
+	path = 2024/04/06/javascript-action
+	url = https://github.com/actions/javascript-action
+[submodule "2024/04/06/labeler"]
+	path = 2024/04/06/labeler
+	url = https://github.com/actions/labeler
+[submodule "2024/04/06/node-versions"]
+	path = 2024/04/06/node-versions
+	url = https://github.com/actions/node-versions
+[submodule "2024/04/06/python-versions"]
+	path = 2024/04/06/python-versions
+	url = https://github.com/actions/python-versions
+[submodule "2024/04/06/reusable-workflows"]
+	path = 2024/04/06/reusable-workflows
+	url = https://github.com/actions/reusable-workflows
+[submodule "2024/04/06/cargo"]
+	path = 2024/04/06/cargo
+	url = https://github.com/actions-rs/cargo
+[submodule "2024/04/06/clippy-check"]
+	path = 2024/04/06/clippy-check
+	url = https://github.com/actions-rs/clippy-check
+[submodule "2024/04/06/meta"]
+	path = 2024/04/06/meta
+	url = https://github.com/actions-rs/meta
+[submodule "2024/04/06/runner-container-hooks"]
+	path = 2024/04/06/runner-container-hooks
+	url = https://github.com/actions/runner-container-hooks
+[submodule "2024/04/06/setup-dotnet"]
+	path = 2024/04/06/setup-dotnet
+	url = https://github.com/actions/setup-dotnet
+[submodule "2024/04/06/setup-go"]
+	path = 2024/04/06/setup-go
+	url = https://github.com/actions/setup-go
+[submodule "2024/04/06/setup-java"]
+	path = 2024/04/06/setup-java
+	url = https://github.com/actions/setup-java
+[submodule "2024/04/06/setup-python"]
+	path = 2024/04/06/setup-python
+	url = https://github.com/actions/setup-python
+[submodule "2024/04/06/starter-workflows"]
+	path = 2024/04/06/starter-workflows
+	url = https://github.com/actions/starter-workflows
+[submodule "2024/04/06/typescript-action"]
+	path = 2024/04/06/typescript-action
+	url = https://github.com/actions/typescript-action
+[submodule "2024/04/06/upload-artifact"]
+	path = 2024/04/06/upload-artifact
+	url = https://github.com/actions/upload-artifact
+[submodule "2024/04/06/virtual-environments"]
+	path = 2024/04/06/virtual-environments
+	url = https://github.com/actions/virtual-environments
+[submodule "2024/04/06/actix-net"]
+	path = 2024/04/06/actix-net
+	url = https://github.com/actix/actix-net
+[submodule "2024/04/06/examples"]
+	path = 2024/04/06/examples
+	url = https://github.com/actix/examples
+[submodule "2024/04/06/sync_wrapper"]
+	path = 2024/04/06/sync_wrapper
+	url = https://github.com/Actyx/sync_wrapper
+[submodule "2024/04/06/simple_asn1"]
+	path = 2024/04/06/simple_asn1
+	url = https://github.com/acw/simple_asn1
+[submodule "2024/04/06/gnatcoll-core"]
+	path = 2024/04/06/gnatcoll-core
+	url = https://github.com/AdaCore/gnatcoll-core
+[submodule "2024/04/06/gnatcoll-db"]
+	path = 2024/04/06/gnatcoll-db
+	url = https://github.com/AdaCore/gnatcoll-db
+[submodule "2024/04/06/xmlada"]
+	path = 2024/04/06/xmlada
+	url = https://github.com/AdaCore/xmlada
+[submodule "2024/04/06/torque"]
+	path = 2024/04/06/torque
+	url = https://github.com/adaptivecomputing/torque
+[submodule "2024/04/06/addr"]
+	path = 2024/04/06/addr
+	url = https://github.com/addr-rs/addr
+[submodule "2024/04/06/psl-types"]
+	path = 2024/04/06/psl-types
+	url = https://github.com/addr-rs/psl-types
+[submodule "2024/04/06/postcss-simple-grid"]
+	path = 2024/04/06/postcss-simple-grid
+	url = https://github.com/admdh/postcss-simple-grid
+[submodule "2024/04/06/rules_gitops"]
+	path = 2024/04/06/rules_gitops
+	url = https://github.com/adobe/rules_gitops
+[submodule "2024/04/06/temurin11-binaries"]
+	path = 2024/04/06/temurin11-binaries
+	url = https://github.com/adoptium/temurin11-binaries
+[submodule "2024/04/06/temurin17-binaries"]
+	path = 2024/04/06/temurin17-binaries
+	url = https://github.com/adoptium/temurin17-binaries
+[submodule "2024/04/06/temurin21-binaries"]
+	path = 2024/04/06/temurin21-binaries
+	url = https://github.com/adoptium/temurin21-binaries
+[submodule "2024/04/06/temurin-build"]
+	path = 2024/04/06/temurin-build
+	url = https://github.com/adoptium/temurin-build
+[submodule "2024/04/06/openjdk8-binaries"]
+	path = 2024/04/06/openjdk8-binaries
+	url = https://github.com/AdoptOpenJDK/openjdk8-binaries
+[submodule "2024/04/06/polkadot-cosmos-docs"]
+	path = 2024/04/06/polkadot-cosmos-docs
+	url = https://github.com/adoriasoft/polkadot-cosmos-docs
+[submodule "2024/04/06/prost"]
+	path = 2024/04/06/prost
+	url = https://github.com/adoriasoft/prost
+[submodule "2024/04/06/wexflow"]
+	path = 2024/04/06/wexflow
+	url = https://github.com/aelassas/wexflow
+[submodule "2024/04/06/ae-oracle-pricefeed"]
+	path = 2024/04/06/ae-oracle-pricefeed
+	url = https://github.com/aeternity/ae-oracle-pricefeed
+[submodule "2024/04/06/aeplugin_rebar3"]
+	path = 2024/04/06/aeplugin_rebar3
+	url = https://github.com/aeternity/aeplugin_rebar3
+[submodule "2024/04/06/aepp-sdk-js"]
+	path = 2024/04/06/aepp-sdk-js
+	url = https://github.com/aeternity/aepp-sdk-js
+[submodule "2024/04/06/aeproject"]
+	path = 2024/04/06/aeproject
+	url = https://github.com/aeternity/aeproject
+[submodule "2024/04/06/aeternity-fungible-token"]
+	path = 2024/04/06/aeternity-fungible-token
+	url = https://github.com/aeternity/aeternity-fungible-token
+[submodule "2024/04/06/aex141-nft-collection-example"]
+	path = 2024/04/06/aex141-nft-collection-example
+	url = https://github.com/aeternity/aex141-nft-collection-example
+[submodule "2024/04/06/aex141-nft-simple-marketplace"]
+	path = 2024/04/06/aex141-nft-simple-marketplace
+	url = https://github.com/aeternity/aex141-nft-simple-marketplace
+[submodule "2024/04/06/cuckoo"]
+	path = 2024/04/06/cuckoo
+	url = https://github.com/aeternity/cuckoo
+[submodule "2024/04/06/eaex10"]
+	path = 2024/04/06/eaex10
+	url = https://github.com/aeternity/eaex10
+[submodule "2024/04/06/ebip39"]
+	path = 2024/04/06/ebip39
+	url = https://github.com/aeternity/ebip39
+[submodule "2024/04/06/epbkdf2"]
+	path = 2024/04/06/epbkdf2
+	url = https://github.com/aeternity/epbkdf2
+[submodule "2024/04/06/rebar3-cuckoo-prebuilt-plugin"]
+	path = 2024/04/06/rebar3-cuckoo-prebuilt-plugin
+	url = https://github.com/aeternity/rebar3-cuckoo-prebuilt-plugin
+[submodule "2024/04/06/tipping-oracle-service"]
+	path = 2024/04/06/tipping-oracle-service
+	url = https://github.com/aeternity/tipping-oracle-service
+[submodule "2024/04/06/feedback-antd"]
+	path = 2024/04/06/feedback-antd
+	url = https://github.com/afc163/feedback-antd
+[submodule "2024/04/06/AFLplusplus"]
+	path = 2024/04/06/AFLplusplus
+	url = https://github.com/AFLplusplus/AFLplusplus
+[submodule "2024/04/06/AFNetworking"]
+	path = 2024/04/06/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking
+[submodule "2024/04/06/aframe"]
+	path = 2024/04/06/aframe
+	url = https://github.com/aframevr/aframe
+[submodule "2024/04/06/git-style-guide"]
+	path = 2024/04/06/git-style-guide
+	url = https://github.com/agis/git-style-guide
+[submodule "2024/04/06/vue-cropperjs"]
+	path = 2024/04/06/vue-cropperjs
+	url = https://github.com/Agontuk/vue-cropperjs
+[submodule "2024/04/06/Voice-Call-for-Mobile-Gaming"]
+	path = 2024/04/06/Voice-Call-for-Mobile-Gaming
+	url = https://github.com/AgoraIO/Voice-Call-for-Mobile-Gaming
+[submodule "2024/04/06/agoric-sdk"]
+	path = 2024/04/06/agoric-sdk
+	url = https://github.com/Agoric/agoric-sdk
+[submodule "2024/04/06/pythonfutures"]
+	path = 2024/04/06/pythonfutures
+	url = https://github.com/agronholm/pythonfutures
+[submodule "2024/04/06/pre-commit-elixir-hooks"]
+	path = 2024/04/06/pre-commit-elixir-hooks
+	url = https://github.com/ahamez/pre-commit-elixir-hooks
+[submodule "2024/04/06/postcss-logical-properties"]
+	path = 2024/04/06/postcss-logical-properties
+	url = https://github.com/ahmadalfy/postcss-logical-properties
+[submodule "2024/04/06/nanocolors"]
+	path = 2024/04/06/nanocolors
+	url = https://github.com/ai/nanocolors
+[submodule "2024/04/06/aiohttp"]
+	path = 2024/04/06/aiohttp
+	url = https://github.com/aio-libs/aiohttp
+[submodule "2024/04/06/babel-plugin-dynamic-import-webpack"]
+	path = 2024/04/06/babel-plugin-dynamic-import-webpack
+	url = https://github.com/airbnb/babel-plugin-dynamic-import-webpack
+[submodule "2024/04/06/css"]
+	path = 2024/04/06/css
+	url = https://github.com/airbnb/css
+[submodule "2024/04/06/react-with-styles"]
+	path = 2024/04/06/react-with-styles
+	url = https://github.com/airbnb/react-with-styles
+[submodule "2024/04/06/ruby"]
+	path = 2024/04/06/ruby
+	url = https://github.com/airbnb/ruby
+[submodule "2024/04/06/airgap-coin-lib"]
+	path = 2024/04/06/airgap-coin-lib
+	url = https://github.com/airgap-it/airgap-coin-lib
+[submodule "2024/04/06/airgap-distro"]
+	path = 2024/04/06/airgap-distro
+	url = https://github.com/airgap-it/airgap-distro
+[submodule "2024/04/06/airgap-raspberry-apk-signer"]
+	path = 2024/04/06/airgap-raspberry-apk-signer
+	url = https://github.com/airgap-it/airgap-raspberry-apk-signer
+[submodule "2024/04/06/airgap-sapling"]
+	path = 2024/04/06/airgap-sapling
+	url = https://github.com/airgap-it/airgap-sapling
+[submodule "2024/04/06/airgap-wallet"]
+	path = 2024/04/06/airgap-wallet
+	url = https://github.com/airgap-it/airgap-wallet
+[submodule "2024/04/06/swift-package-manager"]
+	path = 2024/04/06/swift-package-manager
+	url = https://github.com/airspeedswift/swift-package-manager
+[submodule "2024/04/06/abstract-browser"]
+	path = 2024/04/06/abstract-browser
+	url = https://github.com/airtap/abstract-browser
+[submodule "2024/04/06/browser-manifest"]
+	path = 2024/04/06/browser-manifest
+	url = https://github.com/airtap/browser-manifest
+[submodule "2024/04/06/browser-provider"]
+	path = 2024/04/06/browser-provider
+	url = https://github.com/airtap/browser-provider
+[submodule "2024/04/06/default"]
+	path = 2024/04/06/default
+	url = https://github.com/airtap/default
+[submodule "2024/04/06/demo"]
+	path = 2024/04/06/demo
+	url = https://github.com/airtap/demo
+[submodule "2024/04/06/manual"]
+	path = 2024/04/06/manual
+	url = https://github.com/airtap/manual
+[submodule "2024/04/06/match-browsers"]
+	path = 2024/04/06/match-browsers
+	url = https://github.com/airtap/match-browsers
+[submodule "2024/04/06/playwright"]
+	path = 2024/04/06/playwright
+	url = https://github.com/airtap/playwright
+[submodule "2024/04/06/sauce"]
+	path = 2024/04/06/sauce
+	url = https://github.com/airtap/sauce
+[submodule "2024/04/06/sauce-browsers"]
+	path = 2024/04/06/sauce-browsers
+	url = https://github.com/airtap/sauce-browsers
+[submodule "2024/04/06/system"]
+	path = 2024/04/06/system
+	url = https://github.com/airtap/system
+[submodule "2024/04/06/deb_packages"]
+	path = 2024/04/06/deb_packages
+	url = https://github.com/aisbaa/deb_packages
+[submodule "2024/04/06/storeon"]
+	path = 2024/04/06/storeon
+	url = https://github.com/ai/storeon
+[submodule "2024/04/06/webp-in-css"]
+	path = 2024/04/06/webp-in-css
+	url = https://github.com/ai/webp-in-css
+[submodule "2024/04/06/tslint-consistent-codestyle"]
+	path = 2024/04/06/tslint-consistent-codestyle
+	url = https://github.com/ajafff/tslint-consistent-codestyle
+[submodule "2024/04/06/ace"]
+	path = 2024/04/06/ace
+	url = https://github.com/ajaxorg/ace
+[submodule "2024/04/06/cloud9"]
+	path = 2024/04/06/cloud9
+	url = https://github.com/ajaxorg/cloud9
+[submodule "2024/04/06/conventional-changelog"]
+	path = 2024/04/06/conventional-changelog
+	url = https://github.com/ajoslin/conventional-changelog
+[submodule "2024/04/06/ajv-draft-04"]
+	path = 2024/04/06/ajv-draft-04
+	url = https://github.com/ajv-validator/ajv-draft-04
+[submodule "2024/04/06/json-schema-migrate"]
+	path = 2024/04/06/json-schema-migrate
+	url = https://github.com/ajv-validator/json-schema-migrate
+[submodule "2024/04/06/sublimetext-codeformatter"]
+	path = 2024/04/06/sublimetext-codeformatter
+	url = https://github.com/akalongman/sublimetext-codeformatter
+[submodule "2024/04/06/POC-polkadai-bridge"]
+	path = 2024/04/06/POC-polkadai-bridge
+	url = https://github.com/akropolisio/POC-polkadai-bridge
+[submodule "2024/04/06/polkahub-monorepo"]
+	path = 2024/04/06/polkahub-monorepo
+	url = https://github.com/akropolisio/polkahub-monorepo
+[submodule "2024/04/06/alacritty"]
+	path = 2024/04/06/alacritty
+	url = https://github.com/alacritty/alacritty
+[submodule "2024/04/06/Alamofire"]
+	path = 2024/04/06/Alamofire
+	url = https://github.com/Alamofire/Alamofire
+[submodule "2024/04/06/postcss-filter"]
+	path = 2024/04/06/postcss-filter
+	url = https://github.com/alanev/postcss-filter
+[submodule "2024/04/06/postcss-randomcolor"]
+	path = 2024/04/06/postcss-randomcolor
+	url = https://github.com/alanev/postcss-randomcolor
+[submodule "2024/04/06/ERC20Permit"]
+	path = 2024/04/06/ERC20Permit
+	url = https://github.com/albertocuestacanada/ERC20Permit
+[submodule "2024/04/06/PolkaTools"]
+	path = 2024/04/06/PolkaTools
+	url = https://github.com/albertov19/PolkaTools
+[submodule "2024/04/06/vscode-project-manager"]
+	path = 2024/04/06/vscode-project-manager
+	url = https://github.com/alefragnani/vscode-project-manager
+[submodule "2024/04/06/postcss-forced-variables"]
+	path = 2024/04/06/postcss-forced-variables
+	url = https://github.com/alekhrycaiko/postcss-forced-variables
+[submodule "2024/04/06/postcss-sass"]
+	path = 2024/04/06/postcss-sass
+	url = https://github.com/AleshaOleg/postcss-sass
+[submodule "2024/04/06/ethereum-lite-explorer"]
+	path = 2024/04/06/ethereum-lite-explorer
+	url = https://github.com/Alethio/ethereum-lite-explorer
+[submodule "2024/04/06/postcss-image-set"]
+	path = 2024/04/06/postcss-image-set
+	url = https://github.com/alex499/postcss-image-set
+[submodule "2024/04/06/postcss-responsive-properties"]
+	path = 2024/04/06/postcss-responsive-properties
+	url = https://github.com/alexandr-solovyov/postcss-responsive-properties
+[submodule "2024/04/06/corundum"]
+	path = 2024/04/06/corundum
+	url = https://github.com/AlexBelov/corundum
+[submodule "2024/04/06/cc-rs"]
+	path = 2024/04/06/cc-rs
+	url = https://github.com/alexcrichton/cc-rs
+[submodule "2024/04/06/cmake-rs"]
+	path = 2024/04/06/cmake-rs
+	url = https://github.com/alexcrichton/cmake-rs
+[submodule "2024/04/06/curl-rust"]
+	path = 2024/04/06/curl-rust
+	url = https://github.com/alexcrichton/curl-rust
+[submodule "2024/04/06/jobserver-rs"]
+	path = 2024/04/06/jobserver-rs
+	url = https://github.com/alexcrichton/jobserver-rs
+[submodule "2024/04/06/nghttp2-rs"]
+	path = 2024/04/06/nghttp2-rs
+	url = https://github.com/alexcrichton/nghttp2-rs
+[submodule "2024/04/06/rustc-demangle"]
+	path = 2024/04/06/rustc-demangle
+	url = https://github.com/alexcrichton/rustc-demangle
+[submodule "2024/04/06/ssh2-rs"]
+	path = 2024/04/06/ssh2-rs
+	url = https://github.com/alexcrichton/ssh2-rs
+[submodule "2024/04/06/glyph-brush"]
+	path = 2024/04/06/glyph-brush
+	url = https://github.com/alexheretic/glyph-brush
+[submodule "2024/04/06/spin-sleep"]
+	path = 2024/04/06/spin-sleep
+	url = https://github.com/alexheretic/spin-sleep
+[submodule "2024/04/06/minimal-lexical"]
+	path = 2024/04/06/minimal-lexical
+	url = https://github.com/Alexhuszagh/minimal-lexical
+[submodule "2024/04/06/postcss-filter-tint"]
+	path = 2024/04/06/postcss-filter-tint
+	url = https://github.com/alexlibby/postcss-filter-tint
+[submodule "2024/04/06/async-object-pool"]
+	path = 2024/04/06/async-object-pool
+	url = https://github.com/alexliesenfeld/async-object-pool
+[submodule "2024/04/06/httpmock"]
+	path = 2024/04/06/httpmock
+	url = https://github.com/alexliesenfeld/httpmock
+[submodule "2024/04/06/Cygwin"]
+	path = 2024/04/06/Cygwin
+	url = https://github.com/Alexpux/Cygwin
+[submodule "2024/04/06/grunt-blanket"]
+	path = 2024/04/06/grunt-blanket
+	url = https://github.com/alex-seville/grunt-blanket
+[submodule "2024/04/06/substrate-dex"]
+	path = 2024/04/06/substrate-dex
+	url = https://github.com/alexxuyang/substrate-dex
+[submodule "2024/04/06/propcheck"]
+	path = 2024/04/06/propcheck
+	url = https://github.com/alfert/propcheck
+[submodule "2024/04/06/algoliasearch-client-javascript"]
+	path = 2024/04/06/algoliasearch-client-javascript
+	url = https://github.com/algolia/algoliasearch-client-javascript
+[submodule "2024/04/06/algoliasearch-helper-js"]
+	path = 2024/04/06/algoliasearch-helper-js
+	url = https://github.com/algolia/algoliasearch-helper-js
+[submodule "2024/04/06/angular-instantsearch"]
+	path = 2024/04/06/angular-instantsearch
+	url = https://github.com/algolia/angular-instantsearch
+[submodule "2024/04/06/autocomplete"]
+	path = 2024/04/06/autocomplete
+	url = https://github.com/algolia/autocomplete
+[submodule "2024/04/06/docsearch-configs"]
+	path = 2024/04/06/docsearch-configs
+	url = https://github.com/algolia/docsearch-configs
+[submodule "2024/04/06/instantsearch"]
+	path = 2024/04/06/instantsearch
+	url = https://github.com/algolia/instantsearch
+[submodule "2024/04/06/instantsearch-android"]
+	path = 2024/04/06/instantsearch-android
+	url = https://github.com/algolia/instantsearch-android
+[submodule "2024/04/06/instantsearch-ios"]
+	path = 2024/04/06/instantsearch-ios
+	url = https://github.com/algolia/instantsearch-ios
+[submodule "2024/04/06/vue-instantsearch"]
+	path = 2024/04/06/vue-instantsearch
+	url = https://github.com/algolia/vue-instantsearch
+[submodule "2024/04/06/algorand-sdk-testing"]
+	path = 2024/04/06/algorand-sdk-testing
+	url = https://github.com/algorand/algorand-sdk-testing
+[submodule "2024/04/06/docs"]
+	path = 2024/04/06/docs
+	url = https://github.com/algorand/docs
+[submodule "2024/04/06/ARCs"]
+	path = 2024/04/06/ARCs
+	url = https://github.com/algorandfoundation/ARCs
+[submodule "2024/04/06/go-algorand"]
+	path = 2024/04/06/go-algorand
+	url = https://github.com/algorand/go-algorand
+[submodule "2024/04/06/graviton"]
+	path = 2024/04/06/graviton
+	url = https://github.com/algorand/graviton
+[submodule "2024/04/06/py-algorand-sdk"]
+	path = 2024/04/06/py-algorand-sdk
+	url = https://github.com/algorand/py-algorand-sdk
+[submodule "2024/04/06/formily"]
+	path = 2024/04/06/formily
+	url = https://github.com/alibaba/formily
+[submodule "2024/04/06/hooks"]
+	path = 2024/04/06/hooks
+	url = https://github.com/alibaba/hooks
+[submodule "2024/04/06/lowcode-engine"]
+	path = 2024/04/06/lowcode-engine
+	url = https://github.com/alibaba/lowcode-engine
+[submodule "2024/04/06/react-style-guide"]
+	path = 2024/04/06/react-style-guide
+	url = https://github.com/alioguzhan/react-style-guide
+[submodule "2024/04/06/aliyun-cli"]
+	path = 2024/04/06/aliyun-cli
+	url = https://github.com/aliyun/aliyun-cli
+[submodule "2024/04/06/all-contributors"]
+	path = 2024/04/06/all-contributors
+	url = https://github.com/all-contributors/all-contributors
+[submodule "2024/04/06/ESideas"]
+	path = 2024/04/06/ESideas
+	url = https://github.com/allenwb/ESideas
+[submodule "2024/04/06/HockeySDK-CocoaPods"]
+	path = 2024/04/06/HockeySDK-CocoaPods
+	url = https://github.com/alloy/HockeySDK-CocoaPods
+[submodule "2024/04/06/grpc-haskell"]
+	path = 2024/04/06/grpc-haskell
+	url = https://github.com/aloiscochard/grpc-haskell
+[submodule "2024/04/06/atomic-rs"]
+	path = 2024/04/06/atomic-rs
+	url = https://github.com/Amanieu/atomic-rs
+[submodule "2024/04/06/thread_local-rs"]
+	path = 2024/04/06/thread_local-rs
+	url = https://github.com/Amanieu/thread_local-rs
+[submodule "2024/04/06/action-semantic-pull-request"]
+	path = 2024/04/06/action-semantic-pull-request
+	url = https://github.com/amannn/action-semantic-pull-request
+[submodule "2024/04/06/postcss-selector-prefixer"]
+	path = 2024/04/06/postcss-selector-prefixer
+	url = https://github.com/amaranter/postcss-selector-prefixer
+[submodule "2024/04/06/postcss-theme-colors"]
+	path = 2024/04/06/postcss-theme-colors
+	url = https://github.com/ambar/postcss-theme-colors
+[submodule "2024/04/06/amdjs-tests"]
+	path = 2024/04/06/amdjs-tests
+	url = https://github.com/amdjs/amdjs-tests
+[submodule "2024/04/06/project-assets"]
+	path = 2024/04/06/project-assets
+	url = https://github.com/ameerthehacker/project-assets
+[submodule "2024/04/06/amethyst"]
+	path = 2024/04/06/amethyst
+	url = https://github.com/amethyst/amethyst
+[submodule "2024/04/06/amethyst-starter-2d"]
+	path = 2024/04/06/amethyst-starter-2d
+	url = https://github.com/amethyst/amethyst-starter-2d
+[submodule "2024/04/06/laminar"]
+	path = 2024/04/06/laminar
+	url = https://github.com/amethyst/laminar
+[submodule "2024/04/06/legion"]
+	path = 2024/04/06/legion
+	url = https://github.com/amethyst/legion
+[submodule "2024/04/06/prefab"]
+	path = 2024/04/06/prefab
+	url = https://github.com/amethyst/prefab
+[submodule "2024/04/06/rendy"]
+	path = 2024/04/06/rendy
+	url = https://github.com/amethyst/rendy
+[submodule "2024/04/06/space-menace"]
+	path = 2024/04/06/space-menace
+	url = https://github.com/amethyst/space-menace
+[submodule "2024/04/06/tools"]
+	path = 2024/04/06/tools
+	url = https://github.com/amethyst/tools
+[submodule "2024/04/06/website"]
+	path = 2024/04/06/website
+	url = https://github.com/amethyst/website
+[submodule "2024/04/06/ast-metadata-inferer"]
+	path = 2024/04/06/ast-metadata-inferer
+	url = https://github.com/amilajack/ast-metadata-inferer
+[submodule "2024/04/06/compat-db"]
+	path = 2024/04/06/compat-db
+	url = https://github.com/amilajack/compat-db
+[submodule "2024/04/06/eslint-plugin-compat-demo"]
+	path = 2024/04/06/eslint-plugin-compat-demo
+	url = https://github.com/amilajack/eslint-plugin-compat-demo
+[submodule "2024/04/06/PowerShell-DSC-for-Linux"]
+	path = 2024/04/06/PowerShell-DSC-for-Linux
+	url = https://github.com/amitsara/PowerShell-DSC-for-Linux
+[submodule "2024/04/06/shivarthu_client"]
+	path = 2024/04/06/shivarthu_client
+	url = https://github.com/amiyatulu/shivarthu_client
+[submodule "2024/04/06/shivarthu_frontend"]
+	path = 2024/04/06/shivarthu_frontend
+	url = https://github.com/amiyatulu/shivarthu_frontend
+[submodule "2024/04/06/proselint"]
+	path = 2024/04/06/proselint
+	url = https://github.com/amperser/proselint
+[submodule "2024/04/06/gsl"]
+	path = 2024/04/06/gsl
+	url = https://github.com/ampl/gsl
+[submodule "2024/04/06/rhea"]
+	path = 2024/04/06/rhea
+	url = https://github.com/amqp/rhea
+[submodule "2024/04/06/rhea-promise"]
+	path = 2024/04/06/rhea-promise
+	url = https://github.com/amqp/rhea-promise
+[submodule "2024/04/06/doiuse"]
+	path = 2024/04/06/doiuse
+	url = https://github.com/anandthakker/doiuse
+[submodule "2024/04/06/syft"]
+	path = 2024/04/06/syft
+	url = https://github.com/anchore/syft
+[submodule "2024/04/06/money-market-contracts"]
+	path = 2024/04/06/money-market-contracts
+	url = https://github.com/anchor-protocol/money-market-contracts
+[submodule "2024/04/06/go-curl"]
+	path = 2024/04/06/go-curl
+	url = https://github.com/andelf/go-curl
+[submodule "2024/04/06/summary"]
+	path = 2024/04/06/summary
+	url = https://github.com/AndreasMadsen/summary
+[submodule "2024/04/06/postcss-flexbox-reset"]
+	path = 2024/04/06/postcss-flexbox-reset
+	url = https://github.com/AndrejGajdos/postcss-flexbox-reset
+[submodule "2024/04/06/postcss-grid-reset"]
+	path = 2024/04/06/postcss-grid-reset
+	url = https://github.com/AndrejGajdos/postcss-grid-reset
+[submodule "2024/04/06/postcss-border"]
+	path = 2024/04/06/postcss-border
+	url = https://github.com/andrepolischuk/postcss-border
+[submodule "2024/04/06/postcss-color-short"]
+	path = 2024/04/06/postcss-color-short
+	url = https://github.com/andrepolischuk/postcss-color-short
+[submodule "2024/04/06/postcss-pseudo-class-any-button"]
+	path = 2024/04/06/postcss-pseudo-class-any-button
+	url = https://github.com/andrepolischuk/postcss-pseudo-class-any-button
+[submodule "2024/04/06/size-limit-action"]
+	path = 2024/04/06/size-limit-action
+	url = https://github.com/andresz1/size-limit-action
+[submodule "2024/04/06/build-djgpp"]
+	path = 2024/04/06/build-djgpp
+	url = https://github.com/andrewwutw/build-djgpp
+[submodule "2024/04/06/android-test"]
+	path = 2024/04/06/android-test
+	url = https://github.com/android/android-test
+[submodule "2024/04/06/ndk"]
+	path = 2024/04/06/ndk
+	url = https://github.com/android/ndk
+[submodule "2024/04/06/postcss-conditionals"]
+	path = 2024/04/06/postcss-conditionals
+	url = https://github.com/andyjansson/postcss-conditionals
+[submodule "2024/04/06/postcss-functions"]
+	path = 2024/04/06/postcss-functions
+	url = https://github.com/andyjansson/postcss-functions
+[submodule "2024/04/06/postcss-grid"]
+	path = 2024/04/06/postcss-grid
+	url = https://github.com/andyjansson/postcss-grid
+[submodule "2024/04/06/postcss-sassy-mixins"]
+	path = 2024/04/06/postcss-sassy-mixins
+	url = https://github.com/andyjansson/postcss-sassy-mixins
+[submodule "2024/04/06/mobx-devtools"]
+	path = 2024/04/06/mobx-devtools
+	url = https://github.com/andykog/mobx-devtools
+[submodule "2024/04/06/angeloocana"]
+	path = 2024/04/06/angeloocana
+	url = https://github.com/angeloocana/angeloocana
+[submodule "2024/04/06/tic-tac-toe-ai"]
+	path = 2024/04/06/tic-tac-toe-ai
+	url = https://github.com/angeloocana/tic-tac-toe-ai
+[submodule "2024/04/06/angular-cli"]
+	path = 2024/04/06/angular-cli
+	url = https://github.com/angular/angular-cli
+[submodule "2024/04/06/angularfire"]
+	path = 2024/04/06/angularfire
+	url = https://github.com/angular/angularfire
+[submodule "2024/04/06/angularfire2"]
+	path = 2024/04/06/angularfire2
+	url = https://github.com/angular/angularfire2
+[submodule "2024/04/06/benchpress-tree"]
+	path = 2024/04/06/benchpress-tree
+	url = https://github.com/angular/benchpress-tree
+[submodule "2024/04/06/clang-format"]
+	path = 2024/04/06/clang-format
+	url = https://github.com/angular/clang-format
+[submodule "2024/04/06/cli-builds"]
+	path = 2024/04/06/cli-builds
+	url = https://github.com/angular/cli-builds
+[submodule "2024/04/06/code-of-conduct"]
+	path = 2024/04/06/code-of-conduct
+	url = https://github.com/angular/code-of-conduct
+[submodule "2024/04/06/common-builds"]
+	path = 2024/04/06/common-builds
+	url = https://github.com/angular/common-builds
+[submodule "2024/04/06/components"]
+	path = 2024/04/06/components
+	url = https://github.com/angular/components
+[submodule "2024/04/06/core-builds"]
+	path = 2024/04/06/core-builds
+	url = https://github.com/angular/core-builds
+[submodule "2024/04/06/dev-infra"]
+	path = 2024/04/06/dev-infra
+	url = https://github.com/angular/dev-infra
+[submodule "2024/04/06/dev-infra-private-build-tooling-builds"]
+	path = 2024/04/06/dev-infra-private-build-tooling-builds
+	url = https://github.com/angular/dev-infra-private-build-tooling-builds
+[submodule "2024/04/06/dev-infra-private-docs-builds"]
+	path = 2024/04/06/dev-infra-private-docs-builds
+	url = https://github.com/angular/dev-infra-private-docs-builds
+[submodule "2024/04/06/dev-infra-private-ng-dev-builds"]
+	path = 2024/04/06/dev-infra-private-ng-dev-builds
+	url = https://github.com/angular/dev-infra-private-ng-dev-builds
+[submodule "2024/04/06/dgeni"]
+	path = 2024/04/06/dgeni
+	url = https://github.com/angular/dgeni
+[submodule "2024/04/06/dgeni-packages"]
+	path = 2024/04/06/dgeni-packages
+	url = https://github.com/angular/dgeni-packages
+[submodule "2024/04/06/domino"]
+	path = 2024/04/06/domino
+	url = https://github.com/angular/domino
+[submodule "2024/04/06/angular-eslint"]
+	path = 2024/04/06/angular-eslint
+	url = https://github.com/angular-eslint/angular-eslint
+[submodule "2024/04/06/flex-layout"]
+	path = 2024/04/06/flex-layout
+	url = https://github.com/angular/flex-layout
+[submodule "2024/04/06/in-memory-web-api"]
+	path = 2024/04/06/in-memory-web-api
+	url = https://github.com/angular/in-memory-web-api
+[submodule "2024/04/06/material2"]
+	path = 2024/04/06/material2
+	url = https://github.com/angular/material2
+[submodule "2024/04/06/protractor"]
+	path = 2024/04/06/protractor
+	url = https://github.com/angular/protractor
+[submodule "2024/04/06/tsickle"]
+	path = 2024/04/06/tsickle
+	url = https://github.com/angular/tsickle
+[submodule "2024/04/06/vscode-ng-language-service"]
+	path = 2024/04/06/vscode-ng-language-service
+	url = https://github.com/angular/vscode-ng-language-service
+[submodule "2024/04/06/react-infinite-scroll-component"]
+	path = 2024/04/06/react-infinite-scroll-component
+	url = https://github.com/ankeetmaini/react-infinite-scroll-component
+[submodule "2024/04/06/Dollar"]
+	path = 2024/04/06/Dollar
+	url = https://github.com/ankurp/Dollar
+[submodule "2024/04/06/masp"]
+	path = 2024/04/06/masp
+	url = https://github.com/anoma/masp
+[submodule "2024/04/06/lolbench"]
+	path = 2024/04/06/lolbench
+	url = https://github.com/anp/lolbench
+[submodule "2024/04/06/BinaryExtensions"]
+	path = 2024/04/06/BinaryExtensions
+	url = https://github.com/anquii/BinaryExtensions
+[submodule "2024/04/06/BIP39UserFlow"]
+	path = 2024/04/06/BIP39UserFlow
+	url = https://github.com/anquii/BIP39UserFlow
+[submodule "2024/04/06/antd-changelog-editor"]
+	path = 2024/04/06/antd-changelog-editor
+	url = https://github.com/ant-design/antd-changelog-editor
+[submodule "2024/04/06/ant-design-colors"]
+	path = 2024/04/06/ant-design-colors
+	url = https://github.com/ant-design/ant-design-colors
+[submodule "2024/04/06/ant-design-examples"]
+	path = 2024/04/06/ant-design-examples
+	url = https://github.com/ant-design/ant-design-examples
+[submodule "2024/04/06/ant-design-icons"]
+	path = 2024/04/06/ant-design-icons
+	url = https://github.com/ant-design/ant-design-icons
+[submodule "2024/04/06/ant-design-pro"]
+	path = 2024/04/06/ant-design-pro
+	url = https://github.com/ant-design/ant-design-pro
+[submodule "2024/04/06/antd-init"]
+	path = 2024/04/06/antd-init
+	url = https://github.com/ant-design/antd-init
+[submodule "2024/04/06/antd-moment-webpack-plugin"]
+	path = 2024/04/06/antd-moment-webpack-plugin
+	url = https://github.com/ant-design/antd-moment-webpack-plugin
+[submodule "2024/04/06/codemod-v5"]
+	path = 2024/04/06/codemod-v5
+	url = https://github.com/ant-design/codemod-v5
+[submodule "2024/04/06/create-next-app-antd"]
+	path = 2024/04/06/create-next-app-antd
+	url = https://github.com/ant-design/create-next-app-antd
+[submodule "2024/04/06/cssinjs"]
+	path = 2024/04/06/cssinjs
+	url = https://github.com/ant-design/cssinjs
+[submodule "2024/04/06/happy-work-theme"]
+	path = 2024/04/06/happy-work-theme
+	url = https://github.com/ant-design/happy-work-theme
+[submodule "2024/04/06/pro-chat"]
+	path = 2024/04/06/pro-chat
+	url = https://github.com/ant-design/pro-chat
+[submodule "2024/04/06/pro-flow"]
+	path = 2024/04/06/pro-flow
+	url = https://github.com/ant-design/pro-flow
+[submodule "2024/04/06/static-style-extract"]
+	path = 2024/04/06/static-style-extract
+	url = https://github.com/ant-design/static-style-extract
+[submodule "2024/04/06/unplugin-auto-import"]
+	path = 2024/04/06/unplugin-auto-import
+	url = https://github.com/antfu/unplugin-auto-import
+[submodule "2024/04/06/NanoID"]
+	path = 2024/04/06/NanoID
+	url = https://github.com/antiflasher/NanoID
+[submodule "2024/04/06/jsgif"]
+	path = 2024/04/06/jsgif
+	url = https://github.com/antimatter15/jsgif
+[submodule "2024/04/06/weppy"]
+	path = 2024/04/06/weppy
+	url = https://github.com/antimatter15/weppy
+[submodule "2024/04/06/antlr4"]
+	path = 2024/04/06/antlr4
+	url = https://github.com/antlr/antlr4
+[submodule "2024/04/06/Antlr4Formatter"]
+	path = 2024/04/06/Antlr4Formatter
+	url = https://github.com/antlr/Antlr4Formatter
+[submodule "2024/04/06/antlr4test-maven-plugin"]
+	path = 2024/04/06/antlr4test-maven-plugin
+	url = https://github.com/antlr/antlr4test-maven-plugin
+[submodule "2024/04/06/antlr-php-runtime"]
+	path = 2024/04/06/antlr-php-runtime
+	url = https://github.com/antlr/antlr-php-runtime
+[submodule "2024/04/06/grammars-v3"]
+	path = 2024/04/06/grammars-v3
+	url = https://github.com/antlr/grammars-v3
+[submodule "2024/04/06/intellij-plugin-v4"]
+	path = 2024/04/06/intellij-plugin-v4
+	url = https://github.com/antlr/intellij-plugin-v4
+[submodule "2024/04/06/stringtemplate4"]
+	path = 2024/04/06/stringtemplate4
+	url = https://github.com/antlr/stringtemplate4
+[submodule "2024/04/06/s2"]
+	path = 2024/04/06/s2
+	url = https://github.com/antvis/s2
+[submodule "2024/04/06/x6"]
+	path = 2024/04/06/x6
+	url = https://github.com/antvis/x6
+[submodule "2024/04/06/postcss-default-unit"]
+	path = 2024/04/06/postcss-default-unit
+	url = https://github.com/antyakushev/postcss-default-unit
+[submodule "2024/04/06/postcss-for"]
+	path = 2024/04/06/postcss-for
+	url = https://github.com/antyakushev/postcss-for
+[submodule "2024/04/06/axios-data-unpacker"]
+	path = 2024/04/06/axios-data-unpacker
+	url = https://github.com/anubhavsrivastava/axios-data-unpacker
+[submodule "2024/04/06/cerebrum"]
+	path = 2024/04/06/cerebrum
+	url = https://github.com/anudit/cerebrum
+[submodule "2024/04/06/anyascii"]
+	path = 2024/04/06/anyascii
+	url = https://github.com/anyascii/anyascii
+[submodule "2024/04/06/css-byebye"]
+	path = 2024/04/06/css-byebye
+	url = https://github.com/AoDev/css-byebye
+[submodule "2024/04/06/arrow-rs"]
+	path = 2024/04/06/arrow-rs
+	url = https://github.com/apache/arrow-rs
+[submodule "2024/04/06/commons-io"]
+	path = 2024/04/06/commons-io
+	url = https://github.com/apache/commons-io
+[submodule "2024/04/06/cordova-android"]
+	path = 2024/04/06/cordova-android
+	url = https://github.com/apache/cordova-android
+[submodule "2024/04/06/cordova-browser"]
+	path = 2024/04/06/cordova-browser
+	url = https://github.com/apache/cordova-browser
+[submodule "2024/04/06/cordova-cli"]
+	path = 2024/04/06/cordova-cli
+	url = https://github.com/apache/cordova-cli
+[submodule "2024/04/06/cordova-electron"]
+	path = 2024/04/06/cordova-electron
+	url = https://github.com/apache/cordova-electron
+[submodule "2024/04/06/cordova-plugin-camera"]
+	path = 2024/04/06/cordova-plugin-camera
+	url = https://github.com/apache/cordova-plugin-camera
+[submodule "2024/04/06/cordova-plugin-device"]
+	path = 2024/04/06/cordova-plugin-device
+	url = https://github.com/apache/cordova-plugin-device
+[submodule "2024/04/06/cordova-plugin-file"]
+	path = 2024/04/06/cordova-plugin-file
+	url = https://github.com/apache/cordova-plugin-file
+[submodule "2024/04/06/cordova-plugin-splashscreen"]
+	path = 2024/04/06/cordova-plugin-splashscreen
+	url = https://github.com/apache/cordova-plugin-splashscreen
+[submodule "2024/04/06/cordova-plugin-wkwebview-engine"]
+	path = 2024/04/06/cordova-plugin-wkwebview-engine
+	url = https://github.com/apache/cordova-plugin-wkwebview-engine
+[submodule "2024/04/06/cordova-plugman"]
+	path = 2024/04/06/cordova-plugman
+	url = https://github.com/apache/cordova-plugman
+[submodule "2024/04/06/flink"]
+	path = 2024/04/06/flink
+	url = https://github.com/apache/flink
+[submodule "2024/04/06/hive"]
+	path = 2024/04/06/hive
+	url = https://github.com/apache/hive
+[submodule "2024/04/06/incubator-heron"]
+	path = 2024/04/06/incubator-heron
+	url = https://github.com/apache/incubator-heron
+[submodule "2024/04/06/log4j"]
+	path = 2024/04/06/log4j
+	url = https://github.com/apache/log4j
+[submodule "2024/04/06/lucene"]
+	path = 2024/04/06/lucene
+	url = https://github.com/apache/lucene
+[submodule "2024/04/06/maven"]
+	path = 2024/04/06/maven
+	url = https://github.com/apache/maven
+[submodule "2024/04/06/maven-resolver"]
+	path = 2024/04/06/maven-resolver
+	url = https://github.com/apache/maven-resolver
+[submodule "2024/04/06/openwhisk"]
+	path = 2024/04/06/openwhisk
+	url = https://github.com/apache/openwhisk
+[submodule "2024/04/06/openwhisk-catalog"]
+	path = 2024/04/06/openwhisk-catalog
+	url = https://github.com/apache/openwhisk-catalog
+[submodule "2024/04/06/openwhisk-cli"]
+	path = 2024/04/06/openwhisk-cli
+	url = https://github.com/apache/openwhisk-cli
+[submodule "2024/04/06/openwhisk-client-go"]
+	path = 2024/04/06/openwhisk-client-go
+	url = https://github.com/apache/openwhisk-client-go
+[submodule "2024/04/06/openwhisk-GitHubSlackBot"]
+	path = 2024/04/06/openwhisk-GitHubSlackBot
+	url = https://github.com/apache/openwhisk-GitHubSlackBot
+[submodule "2024/04/06/openwhisk-package-cloudant"]
+	path = 2024/04/06/openwhisk-package-cloudant
+	url = https://github.com/apache/openwhisk-package-cloudant
+[submodule "2024/04/06/openwhisk-test"]
+	path = 2024/04/06/openwhisk-test
+	url = https://github.com/apache/openwhisk-test
+[submodule "2024/04/06/openwhisk-utilities"]
+	path = 2024/04/06/openwhisk-utilities
+	url = https://github.com/apache/openwhisk-utilities
+[submodule "2024/04/06/thrift"]
+	path = 2024/04/06/thrift
+	url = https://github.com/apache/thrift
+[submodule "2024/04/06/apify-js"]
+	path = 2024/04/06/apify-js
+	url = https://github.com/apify/apify-js
+[submodule "2024/04/06/header-generator"]
+	path = 2024/04/06/header-generator
+	url = https://github.com/apify/header-generator
+[submodule "2024/04/06/secp256k1-mw"]
+	path = 2024/04/06/secp256k1-mw
+	url = https://github.com/apoelstra/secp256k1-mw
+[submodule "2024/04/06/apollo"]
+	path = 2024/04/06/apollo
+	url = https://github.com/ApolloAuto/apollo
+[submodule "2024/04/06/apollo-client"]
+	path = 2024/04/06/apollo-client
+	url = https://github.com/apollographql/apollo-client
+[submodule "2024/04/06/apollo-ios"]
+	path = 2024/04/06/apollo-ios
+	url = https://github.com/apollographql/apollo-ios
+[submodule "2024/04/06/fullstack-tutorial"]
+	path = 2024/04/06/fullstack-tutorial
+	url = https://github.com/apollographql/fullstack-tutorial
+[submodule "2024/04/06/graphql-tag"]
+	path = 2024/04/06/graphql-tag
+	url = https://github.com/apollographql/graphql-tag
+[submodule "2024/04/06/graphql-tools"]
+	path = 2024/04/06/graphql-tools
+	url = https://github.com/apollographql/graphql-tools
+[submodule "2024/04/06/react-apollo-scalajs"]
+	path = 2024/04/06/react-apollo-scalajs
+	url = https://github.com/apollographql/react-apollo-scalajs
+[submodule "2024/04/06/vscode-graphql"]
+	path = 2024/04/06/vscode-graphql
+	url = https://github.com/apollographql/vscode-graphql
+[submodule "2024/04/06/stablecoin"]
+	path = 2024/04/06/stablecoin
+	url = https://github.com/apopiak/stablecoin
+[submodule "2024/04/06/AppImageKit"]
+	path = 2024/04/06/AppImageKit
+	url = https://github.com/AppImage/AppImageKit
+[submodule "2024/04/06/pkg2appimage"]
+	path = 2024/04/06/pkg2appimage
+	url = https://github.com/AppImageCommunity/pkg2appimage
+[submodule "2024/04/06/darwin-xnu"]
+	path = 2024/04/06/darwin-xnu
+	url = https://github.com/apple/darwin-xnu
+[submodule "2024/04/06/example-package-deckofplayingcards"]
+	path = 2024/04/06/example-package-deckofplayingcards
+	url = https://github.com/apple/example-package-deckofplayingcards
+[submodule "2024/04/06/llvm-project"]
+	path = 2024/04/06/llvm-project
+	url = https://github.com/apple/llvm-project
+[submodule "2024/04/06/sourcekit-lsp"]
+	path = 2024/04/06/sourcekit-lsp
+	url = https://github.com/apple/sourcekit-lsp
+[submodule "2024/04/06/swift"]
+	path = 2024/04/06/swift
+	url = https://github.com/apple/swift
+[submodule "2024/04/06/swift-3-api-guidelines-review"]
+	path = 2024/04/06/swift-3-api-guidelines-review
+	url = https://github.com/apple/swift-3-api-guidelines-review
+[submodule "2024/04/06/swift-algorithms"]
+	path = 2024/04/06/swift-algorithms
+	url = https://github.com/apple/swift-algorithms
+[submodule "2024/04/06/swift-argument-parser"]
+	path = 2024/04/06/swift-argument-parser
+	url = https://github.com/apple/swift-argument-parser
+[submodule "2024/04/06/swift-atomics"]
+	path = 2024/04/06/swift-atomics
+	url = https://github.com/apple/swift-atomics
+[submodule "2024/04/06/swift-corelibs-foundation"]
+	path = 2024/04/06/swift-corelibs-foundation
+	url = https://github.com/apple/swift-corelibs-foundation
+[submodule "2024/04/06/swift-corelibs-libdispatch"]
+	path = 2024/04/06/swift-corelibs-libdispatch
+	url = https://github.com/apple/swift-corelibs-libdispatch
+[submodule "2024/04/06/swift-crypto"]
+	path = 2024/04/06/swift-crypto
+	url = https://github.com/apple/swift-crypto
+[submodule "2024/04/06/swift-distributed-actors"]
+	path = 2024/04/06/swift-distributed-actors
+	url = https://github.com/apple/swift-distributed-actors
+[submodule "2024/04/06/swift-distributed-tracing"]
+	path = 2024/04/06/swift-distributed-tracing
+	url = https://github.com/apple/swift-distributed-tracing
+[submodule "2024/04/06/swift-docc"]
+	path = 2024/04/06/swift-docc
+	url = https://github.com/apple/swift-docc
+[submodule "2024/04/06/swift-docc-plugin"]
+	path = 2024/04/06/swift-docc-plugin
+	url = https://github.com/apple/swift-docc-plugin
+[submodule "2024/04/06/swift-docc-symbolkit"]
+	path = 2024/04/06/swift-docc-symbolkit
+	url = https://github.com/apple/swift-docc-symbolkit
+[submodule "2024/04/06/swift-evolution-staging"]
+	path = 2024/04/06/swift-evolution-staging
+	url = https://github.com/apple/swift-evolution-staging
+[submodule "2024/04/06/swift-experimental-string-processing"]
+	path = 2024/04/06/swift-experimental-string-processing
+	url = https://github.com/apple/swift-experimental-string-processing
+[submodule "2024/04/06/swift-format"]
+	path = 2024/04/06/swift-format
+	url = https://github.com/apple/swift-format
+[submodule "2024/04/06/swift-internals"]
+	path = 2024/04/06/swift-internals
+	url = https://github.com/apple/swift-internals
+[submodule "2024/04/06/swift-llvm"]
+	path = 2024/04/06/swift-llvm
+	url = https://github.com/apple/swift-llvm
+[submodule "2024/04/06/swift-nio"]
+	path = 2024/04/06/swift-nio
+	url = https://github.com/apple/swift-nio
+[submodule "2024/04/06/swift-nio-http2"]
+	path = 2024/04/06/swift-nio-http2
+	url = https://github.com/apple/swift-nio-http2
+[submodule "2024/04/06/swift-numerics"]
+	path = 2024/04/06/swift-numerics
+	url = https://github.com/apple/swift-numerics
+[submodule "2024/04/06/swift-package-collection-generator"]
+	path = 2024/04/06/swift-package-collection-generator
+	url = https://github.com/apple/swift-package-collection-generator
+[submodule "2024/04/06/swift-sample-distributed-actors-transport"]
+	path = 2024/04/06/swift-sample-distributed-actors-transport
+	url = https://github.com/apple/swift-sample-distributed-actors-transport
+[submodule "2024/04/06/swift-standard-library-preview"]
+	path = 2024/04/06/swift-standard-library-preview
+	url = https://github.com/apple/swift-standard-library-preview
+[submodule "2024/04/06/swift-syntax"]
+	path = 2024/04/06/swift-syntax
+	url = https://github.com/apple/swift-syntax
+[submodule "2024/04/06/swift-system"]
+	path = 2024/04/06/swift-system
+	url = https://github.com/apple/swift-system
+[submodule "2024/04/06/swift-xcode-playground-support"]
+	path = 2024/04/06/swift-xcode-playground-support
+	url = https://github.com/apple/swift-xcode-playground-support
+[submodule "2024/04/06/poseidon_in_circomlib_check"]
+	path = 2024/04/06/poseidon_in_circomlib_check
+	url = https://github.com/appliedzkp/poseidon_in_circomlib_check
+[submodule "2024/04/06/zkey-manager"]
+	path = 2024/04/06/zkey-manager
+	url = https://github.com/appliedzkp/zkey-manager
+[submodule "2024/04/06/metlia"]
+	path = 2024/04/06/metlia
+	url = https://github.com/appscode/metlia
+[submodule "2024/04/06/apron-node"]
+	path = 2024/04/06/apron-node
+	url = https://github.com/Apron-Network/apron-node
+[submodule "2024/04/06/Text-Tabs"]
+	path = 2024/04/06/Text-Tabs
+	url = https://github.com/ap/Text-Tabs
+[submodule "2024/04/06/deterministic-deployment-proxy"]
+	path = 2024/04/06/deterministic-deployment-proxy
+	url = https://github.com/Arachnid/deterministic-deployment-proxy
+[submodule "2024/04/06/aragon"]
+	path = 2024/04/06/aragon
+	url = https://github.com/aragon/aragon
+[submodule "2024/04/06/babel-plugin-lazy-import"]
+	path = 2024/04/06/babel-plugin-lazy-import
+	url = https://github.com/arcanis/babel-plugin-lazy-import
+[submodule "2024/04/06/postcss-aspect-ratio"]
+	path = 2024/04/06/postcss-aspect-ratio
+	url = https://github.com/arccoza/postcss-aspect-ratio
+[submodule "2024/04/06/postcss-if-media"]
+	path = 2024/04/06/postcss-if-media
+	url = https://github.com/arccoza/postcss-if-media
+[submodule "2024/04/06/postcss-layout"]
+	path = 2024/04/06/postcss-layout
+	url = https://github.com/arccoza/postcss-layout
+[submodule "2024/04/06/postcss-flexbox"]
+	path = 2024/04/06/postcss-flexbox
+	url = https://github.com/archana-s/postcss-flexbox
+[submodule "2024/04/06/postcss-speech-bubble"]
+	path = 2024/04/06/postcss-speech-bubble
+	url = https://github.com/archana-s/postcss-speech-bubble
+[submodule "2024/04/06/ocw-suit"]
+	path = 2024/04/06/ocw-suit
+	url = https://github.com/aresprotocols/ocw-suit
+[submodule "2024/04/06/capacitor-camera-preview"]
+	path = 2024/04/06/capacitor-camera-preview
+	url = https://github.com/arielhernandezmusa/capacitor-camera-preview
+[submodule "2024/04/06/dotscale"]
+	path = 2024/04/06/dotscale
+	url = https://github.com/arijitAD/dotscale
+[submodule "2024/04/06/htmlstreamparser"]
+	path = 2024/04/06/htmlstreamparser
+	url = https://github.com/arjunc77/htmlstreamparser
+[submodule "2024/04/06/algebra"]
+	path = 2024/04/06/algebra
+	url = https://github.com/arkworks-rs/algebra
+[submodule "2024/04/06/gm17"]
+	path = 2024/04/06/gm17
+	url = https://github.com/arkworks-rs/gm17
+[submodule "2024/04/06/groth16"]
+	path = 2024/04/06/groth16
+	url = https://github.com/arkworks-rs/groth16
+[submodule "2024/04/06/marlin"]
+	path = 2024/04/06/marlin
+	url = https://github.com/arkworks-rs/marlin
+[submodule "2024/04/06/r1cs-std"]
+	path = 2024/04/06/r1cs-std
+	url = https://github.com/arkworks-rs/r1cs-std
+[submodule "2024/04/06/template"]
+	path = 2024/04/06/template
+	url = https://github.com/arkworks-rs/template
+[submodule "2024/04/06/mbedtls"]
+	path = 2024/04/06/mbedtls
+	url = https://github.com/ARMmbed/mbedtls
+[submodule "2024/04/06/go-metrics"]
+	path = 2024/04/06/go-metrics
+	url = https://github.com/armon/go-metrics
+[submodule "2024/04/06/javascript-style-guide"]
+	path = 2024/04/06/javascript-style-guide
+	url = https://github.com/armoucar/javascript-style-guide
+[submodule "2024/04/06/acle"]
+	path = 2024/04/06/acle
+	url = https://github.com/ARM-software/acle
+[submodule "2024/04/06/quick-cache"]
+	path = 2024/04/06/quick-cache
+	url = https://github.com/arthurprs/quick-cache
+[submodule "2024/04/06/is-weakmap"]
+	path = 2024/04/06/is-weakmap
+	url = https://github.com/arthurvr/is-weakmap
+[submodule "2024/04/06/is-weakset"]
+	path = 2024/04/06/is-weakset
+	url = https://github.com/arthurvr/is-weakset
+[submodule "2024/04/06/antd-phone-input"]
+	path = 2024/04/06/antd-phone-input
+	url = https://github.com/ArtyomVancyan/antd-phone-input
+[submodule "2024/04/06/dumi-theme-antd-style"]
+	path = 2024/04/06/dumi-theme-antd-style
+	url = https://github.com/arvinxx/dumi-theme-antd-style
+[submodule "2024/04/06/Bandersnatch"]
+	path = 2024/04/06/Bandersnatch
+	url = https://github.com/asanso/Bandersnatch
+[submodule "2024/04/06/ascon-c"]
+	path = 2024/04/06/ascon-c
+	url = https://github.com/ascon/ascon-c
+[submodule "2024/04/06/as-scale-codec"]
+	path = 2024/04/06/as-scale-codec
+	url = https://github.com/ascontract/as-scale-codec
+[submodule "2024/04/06/asdf"]
+	path = 2024/04/06/asdf
+	url = https://github.com/asdf-vm/asdf
+[submodule "2024/04/06/postcss-d-ts"]
+	path = 2024/04/06/postcss-d-ts
+	url = https://github.com/askirmas/postcss-d-ts
+[submodule "2024/04/06/ask"]
+	path = 2024/04/06/ask
+	url = https://github.com/ask-lang/ask
+[submodule "2024/04/06/bazel-lib"]
+	path = 2024/04/06/bazel-lib
+	url = https://github.com/aspect-build/bazel-lib
+[submodule "2024/04/06/gcc-toolchain"]
+	path = 2024/04/06/gcc-toolchain
+	url = https://github.com/aspect-build/gcc-toolchain
+[submodule "2024/04/06/rules_cypress"]
+	path = 2024/04/06/rules_cypress
+	url = https://github.com/aspect-build/rules_cypress
+[submodule "2024/04/06/rules_deno"]
+	path = 2024/04/06/rules_deno
+	url = https://github.com/aspect-build/rules_deno
+[submodule "2024/04/06/rules_esbuild"]
+	path = 2024/04/06/rules_esbuild
+	url = https://github.com/aspect-build/rules_esbuild
+[submodule "2024/04/06/rules_jasmine"]
+	path = 2024/04/06/rules_jasmine
+	url = https://github.com/aspect-build/rules_jasmine
+[submodule "2024/04/06/rules_jest"]
+	path = 2024/04/06/rules_jest
+	url = https://github.com/aspect-build/rules_jest
+[submodule "2024/04/06/rules_js"]
+	path = 2024/04/06/rules_js
+	url = https://github.com/aspect-build/rules_js
+[submodule "2024/04/06/rules_rollup"]
+	path = 2024/04/06/rules_rollup
+	url = https://github.com/aspect-build/rules_rollup
+[submodule "2024/04/06/rules_swc"]
+	path = 2024/04/06/rules_swc
+	url = https://github.com/aspect-build/rules_swc
+[submodule "2024/04/06/rules_terser"]
+	path = 2024/04/06/rules_terser
+	url = https://github.com/aspect-build/rules_terser
+[submodule "2024/04/06/rules_ts"]
+	path = 2024/04/06/rules_ts
+	url = https://github.com/aspect-build/rules_ts
+[submodule "2024/04/06/rules_webpack"]
+	path = 2024/04/06/rules_webpack
+	url = https://github.com/aspect-build/rules_webpack
+[submodule "2024/04/06/AspNetCore"]
+	path = 2024/04/06/AspNetCore
+	url = https://github.com/aspnet/AspNetCore
+[submodule "2024/04/06/AspNetWebStack"]
+	path = 2024/04/06/AspNetWebStack
+	url = https://github.com/aspnet/AspNetWebStack
+[submodule "2024/04/06/EntityFramework"]
+	path = 2024/04/06/EntityFramework
+	url = https://github.com/aspnet/EntityFramework
+[submodule "2024/04/06/Extensions"]
+	path = 2024/04/06/Extensions
+	url = https://github.com/aspnet/Extensions
+[submodule "2024/04/06/jquery-validation-unobtrusive"]
+	path = 2024/04/06/jquery-validation-unobtrusive
+	url = https://github.com/aspnet/jquery-validation-unobtrusive
+[submodule "2024/04/06/Mvc"]
+	path = 2024/04/06/Mvc
+	url = https://github.com/aspnet/Mvc
+[submodule "2024/04/06/SignalR"]
+	path = 2024/04/06/SignalR
+	url = https://github.com/aspnet/SignalR
+[submodule "2024/04/06/assemble-boilerplate"]
+	path = 2024/04/06/assemble-boilerplate
+	url = https://github.com/assemble/assemble-boilerplate
+[submodule "2024/04/06/assemble-boilerplate-basic"]
+	path = 2024/04/06/assemble-boilerplate-basic
+	url = https://github.com/assemble/assemble-boilerplate-basic
+[submodule "2024/04/06/assemble-boilerplates"]
+	path = 2024/04/06/assemble-boilerplates
+	url = https://github.com/assemble/assemble-boilerplates
+[submodule "2024/04/06/assemble-boilerplate-sitemap"]
+	path = 2024/04/06/assemble-boilerplate-sitemap
+	url = https://github.com/assemble/assemble-boilerplate-sitemap
+[submodule "2024/04/06/assemble-bootstrap"]
+	path = 2024/04/06/assemble-bootstrap
+	url = https://github.com/assemble/assemble-bootstrap
+[submodule "2024/04/06/assemble-core"]
+	path = 2024/04/06/assemble-core
+	url = https://github.com/assemble/assemble-core
+[submodule "2024/04/06/assemble-handle"]
+	path = 2024/04/06/assemble-handle
+	url = https://github.com/assemble/assemble-handle
+[submodule "2024/04/06/assemble-less"]
+	path = 2024/04/06/assemble-less
+	url = https://github.com/assemble/assemble-less
+[submodule "2024/04/06/assemble-loader"]
+	path = 2024/04/06/assemble-loader
+	url = https://github.com/assemble/assemble-loader
+[submodule "2024/04/06/assemble-nunjucks"]
+	path = 2024/04/06/assemble-nunjucks
+	url = https://github.com/assemble/assemble-nunjucks
+[submodule "2024/04/06/assemble-permalinks"]
+	path = 2024/04/06/assemble-permalinks
+	url = https://github.com/assemble/assemble-permalinks
+[submodule "2024/04/06/assemble-streams"]
+	path = 2024/04/06/assemble-streams
+	url = https://github.com/assemble/assemble-streams
+[submodule "2024/04/06/boilerplate-bootstrap"]
+	path = 2024/04/06/boilerplate-bootstrap
+	url = https://github.com/assemble/boilerplate-bootstrap
+[submodule "2024/04/06/boilerplates"]
+	path = 2024/04/06/boilerplates
+	url = https://github.com/assemble/boilerplates
+[submodule "2024/04/06/boilerplate-site"]
+	path = 2024/04/06/boilerplate-site
+	url = https://github.com/assemble/boilerplate-site
+[submodule "2024/04/06/buttons"]
+	path = 2024/04/06/buttons
+	url = https://github.com/assemble/buttons
+[submodule "2024/04/06/context-workshop"]
+	path = 2024/04/06/context-workshop
+	url = https://github.com/assemble/context-workshop
+[submodule "2024/04/06/generator-assemble"]
+	path = 2024/04/06/generator-assemble
+	url = https://github.com/assemble/generator-assemble
+[submodule "2024/04/06/generator-verb"]
+	path = 2024/04/06/generator-verb
+	url = https://github.com/assemble/generator-verb
+[submodule "2024/04/06/grunt-assemble"]
+	path = 2024/04/06/grunt-assemble
+	url = https://github.com/assemble/grunt-assemble
+[submodule "2024/04/06/grunt-convert"]
+	path = 2024/04/06/grunt-convert
+	url = https://github.com/assemble/grunt-convert
+[submodule "2024/04/06/grunt-firebase"]
+	path = 2024/04/06/grunt-firebase
+	url = https://github.com/assemble/grunt-firebase
+[submodule "2024/04/06/grunt-github-api"]
+	path = 2024/04/06/grunt-github-api
+	url = https://github.com/assemble/grunt-github-api
+[submodule "2024/04/06/grunt-init-assemble"]
+	path = 2024/04/06/grunt-init-assemble
+	url = https://github.com/assemble/grunt-init-assemble
+[submodule "2024/04/06/grunt-readme"]
+	path = 2024/04/06/grunt-readme
+	url = https://github.com/assemble/grunt-readme
+[submodule "2024/04/06/permalinks"]
+	path = 2024/04/06/permalinks
+	url = https://github.com/assemble/permalinks
+[submodule "2024/04/06/assetgraph"]
+	path = 2024/04/06/assetgraph
+	url = https://github.com/assetgraph/assetgraph
+[submodule "2024/04/06/postcss-assets"]
+	path = 2024/04/06/postcss-assets
+	url = https://github.com/assetsjs/postcss-assets
+[submodule "2024/04/06/python-tabulate"]
+	path = 2024/04/06/python-tabulate
+	url = https://github.com/astanin/python-tabulate
+[submodule "2024/04/06/astar"]
+	path = 2024/04/06/astar
+	url = https://github.com/AstarNetwork/astar
+[submodule "2024/04/06/astar-apps"]
+	path = 2024/04/06/astar-apps
+	url = https://github.com/AstarNetwork/astar-apps
+[submodule "2024/04/06/astar-faucet-bot"]
+	path = 2024/04/06/astar-faucet-bot
+	url = https://github.com/AstarNetwork/astar-faucet-bot
+[submodule "2024/04/06/Audits"]
+	path = 2024/04/06/Audits
+	url = https://github.com/AstarNetwork/Audits
+[submodule "2024/04/06/bls12_381"]
+	path = 2024/04/06/bls12_381
+	url = https://github.com/AstarNetwork/bls12_381
+[submodule "2024/04/06/chain-extension-contracts"]
+	path = 2024/04/06/chain-extension-contracts
+	url = https://github.com/AstarNetwork/chain-extension-contracts
+[submodule "2024/04/06/dusk-plonk"]
+	path = 2024/04/06/dusk-plonk
+	url = https://github.com/AstarNetwork/dusk-plonk
+[submodule "2024/04/06/ink-test-contracts"]
+	path = 2024/04/06/ink-test-contracts
+	url = https://github.com/AstarNetwork/ink-test-contracts
+[submodule "2024/04/06/jubjub"]
+	path = 2024/04/06/jubjub
+	url = https://github.com/AstarNetwork/jubjub
+[submodule "2024/04/06/plasmdocs"]
+	path = 2024/04/06/plasmdocs
+	url = https://github.com/AstarNetwork/plasmdocs
+[submodule "2024/04/06/rngs"]
+	path = 2024/04/06/rngs
+	url = https://github.com/AstarNetwork/rngs
+[submodule "2024/04/06/subtle"]
+	path = 2024/04/06/subtle
+	url = https://github.com/AstarNetwork/subtle
+[submodule "2024/04/06/ruff"]
+	path = 2024/04/06/ruff
+	url = https://github.com/astral-sh/ruff
+[submodule "2024/04/06/docker-primecms"]
+	path = 2024/04/06/docker-primecms
+	url = https://github.com/astzweig/docker-primecms
+[submodule "2024/04/06/asyncapi"]
+	path = 2024/04/06/asyncapi
+	url = https://github.com/asyncapi/asyncapi
+[submodule "2024/04/06/generator"]
+	path = 2024/04/06/generator
+	url = https://github.com/asyncapi/generator
+[submodule "2024/04/06/parser"]
+	path = 2024/04/06/parser
+	url = https://github.com/asyncapi/parser
+[submodule "2024/04/06/parser-js"]
+	path = 2024/04/06/parser-js
+	url = https://github.com/asyncapi/parser-js
+[submodule "2024/04/06/spec"]
+	path = 2024/04/06/spec
+	url = https://github.com/asyncapi/spec
+[submodule "2024/04/06/async-profiler"]
+	path = 2024/04/06/async-profiler
+	url = https://github.com/async-profiler/async-profiler
+[submodule "2024/04/06/async-std"]
+	path = 2024/04/06/async-std
+	url = https://github.com/async-rs/async-std
+[submodule "2024/04/06/legion_transform"]
+	path = 2024/04/06/legion_transform
+	url = https://github.com/AThilenius/legion_transform
+[submodule "2024/04/06/clj-check"]
+	path = 2024/04/06/clj-check
+	url = https://github.com/athos/clj-check
+[submodule "2024/04/06/react-beautiful-dnd"]
+	path = 2024/04/06/react-beautiful-dnd
+	url = https://github.com/atlassian/react-beautiful-dnd
+[submodule "2024/04/06/atmosphere-extensions"]
+	path = 2024/04/06/atmosphere-extensions
+	url = https://github.com/Atmosphere/atmosphere-extensions
+[submodule "2024/04/06/atmosphere-samples"]
+	path = 2024/04/06/atmosphere-samples
+	url = https://github.com/Atmosphere/atmosphere-samples
+[submodule "2024/04/06/atmosphere-vertx"]
+	path = 2024/04/06/atmosphere-vertx
+	url = https://github.com/Atmosphere/atmosphere-vertx
+[submodule "2024/04/06/wasync"]
+	path = 2024/04/06/wasync
+	url = https://github.com/Atmosphere/wasync
+[submodule "2024/04/06/about"]
+	path = 2024/04/06/about
+	url = https://github.com/atom/about
+[submodule "2024/04/06/apm"]
+	path = 2024/04/06/apm
+	url = https://github.com/atom/apm
+[submodule "2024/04/06/archive-view"]
+	path = 2024/04/06/archive-view
+	url = https://github.com/atom/archive-view
+[submodule "2024/04/06/atom-babel6-transpiler"]
+	path = 2024/04/06/atom-babel6-transpiler
+	url = https://github.com/atom/atom-babel6-transpiler
+[submodule "2024/04/06/atom-dark-syntax"]
+	path = 2024/04/06/atom-dark-syntax
+	url = https://github.com/atom/atom-dark-syntax
+[submodule "2024/04/06/atom-dark-ui"]
+	path = 2024/04/06/atom-dark-ui
+	url = https://github.com/atom/atom-dark-ui
+[submodule "2024/04/06/atomdoc"]
+	path = 2024/04/06/atomdoc
+	url = https://github.com/atom/atomdoc
+[submodule "2024/04/06/atom-light-syntax"]
+	path = 2024/04/06/atom-light-syntax
+	url = https://github.com/atom/atom-light-syntax
+[submodule "2024/04/06/atom-light-ui"]
+	path = 2024/04/06/atom-light-ui
+	url = https://github.com/atom/atom-light-ui
+[submodule "2024/04/06/atom-nightly-releases"]
+	path = 2024/04/06/atom-nightly-releases
+	url = https://github.com/atom/atom-nightly-releases
+[submodule "2024/04/06/atom-select-list"]
+	path = 2024/04/06/atom-select-list
+	url = https://github.com/atom/atom-select-list
+[submodule "2024/04/06/atom-shell"]
+	path = 2024/04/06/atom-shell
+	url = https://github.com/atom/atom-shell
+[submodule "2024/04/06/autocomplete-atom-api"]
+	path = 2024/04/06/autocomplete-atom-api
+	url = https://github.com/atom/autocomplete-atom-api
+[submodule "2024/04/06/autocomplete-css"]
+	path = 2024/04/06/autocomplete-css
+	url = https://github.com/atom/autocomplete-css
+[submodule "2024/04/06/autocomplete-html"]
+	path = 2024/04/06/autocomplete-html
+	url = https://github.com/atom/autocomplete-html
+[submodule "2024/04/06/autocomplete-plus"]
+	path = 2024/04/06/autocomplete-plus
+	url = https://github.com/atom/autocomplete-plus
+[submodule "2024/04/06/autocomplete-snippets"]
+	path = 2024/04/06/autocomplete-snippets
+	url = https://github.com/atom/autocomplete-snippets
+[submodule "2024/04/06/autoflow"]
+	path = 2024/04/06/autoflow
+	url = https://github.com/atom/autoflow
+[submodule "2024/04/06/autosave"]
+	path = 2024/04/06/autosave
+	url = https://github.com/atom/autosave
+[submodule "2024/04/06/background-tips"]
+	path = 2024/04/06/background-tips
+	url = https://github.com/atom/background-tips
+[submodule "2024/04/06/base16-tomorrow-dark-theme"]
+	path = 2024/04/06/base16-tomorrow-dark-theme
+	url = https://github.com/atom/base16-tomorrow-dark-theme
+[submodule "2024/04/06/base16-tomorrow-light-theme"]
+	path = 2024/04/06/base16-tomorrow-light-theme
+	url = https://github.com/atom/base16-tomorrow-light-theme
+[submodule "2024/04/06/bookmarks"]
+	path = 2024/04/06/bookmarks
+	url = https://github.com/atom/bookmarks
+[submodule "2024/04/06/bracket-matcher"]
+	path = 2024/04/06/bracket-matcher
+	url = https://github.com/atom/bracket-matcher
+[submodule "2024/04/06/clear-cut"]
+	path = 2024/04/06/clear-cut
+	url = https://github.com/atom/clear-cut
+[submodule "2024/04/06/command-palette"]
+	path = 2024/04/06/command-palette
+	url = https://github.com/atom/command-palette
+[submodule "2024/04/06/dalek"]
+	path = 2024/04/06/dalek
+	url = https://github.com/atom/dalek
+[submodule "2024/04/06/deprecation-cop"]
+	path = 2024/04/06/deprecation-cop
+	url = https://github.com/atom/deprecation-cop
+[submodule "2024/04/06/design-decisions"]
+	path = 2024/04/06/design-decisions
+	url = https://github.com/atom/design-decisions
+[submodule "2024/04/06/dev-live-reload"]
+	path = 2024/04/06/dev-live-reload
+	url = https://github.com/atom/dev-live-reload
+[submodule "2024/04/06/encoding-selector"]
+	path = 2024/04/06/encoding-selector
+	url = https://github.com/atom/encoding-selector
+[submodule "2024/04/06/event-kit"]
+	path = 2024/04/06/event-kit
+	url = https://github.com/atom/event-kit
+[submodule "2024/04/06/exception-reporting"]
+	path = 2024/04/06/exception-reporting
+	url = https://github.com/atom/exception-reporting
+[submodule "2024/04/06/atomex-fa12-ligo"]
+	path = 2024/04/06/atomex-fa12-ligo
+	url = https://github.com/atomex-me/atomex-fa12-ligo
+[submodule "2024/04/06/atomex-michelson"]
+	path = 2024/04/06/atomex-michelson
+	url = https://github.com/atomex-me/atomex-michelson
+[submodule "2024/04/06/find-and-replace"]
+	path = 2024/04/06/find-and-replace
+	url = https://github.com/atom/find-and-replace
+[submodule "2024/04/06/first-mate"]
+	path = 2024/04/06/first-mate
+	url = https://github.com/atom/first-mate
+[submodule "2024/04/06/fs-plus"]
+	path = 2024/04/06/fs-plus
+	url = https://github.com/atom/fs-plus
+[submodule "2024/04/06/fuzzy-finder"]
+	path = 2024/04/06/fuzzy-finder
+	url = https://github.com/atom/fuzzy-finder
+[submodule "2024/04/06/git-diff"]
+	path = 2024/04/06/git-diff
+	url = https://github.com/atom/git-diff
+[submodule "2024/04/06/github"]
+	path = 2024/04/06/github
+	url = https://github.com/atom/github
+[submodule "2024/04/06/go-to-line"]
+	path = 2024/04/06/go-to-line
+	url = https://github.com/atom/go-to-line
+[submodule "2024/04/06/grammar-selector"]
+	path = 2024/04/06/grammar-selector
+	url = https://github.com/atom/grammar-selector
+[submodule "2024/04/06/grim"]
+	path = 2024/04/06/grim
+	url = https://github.com/atom/grim
+[submodule "2024/04/06/image-view"]
+	path = 2024/04/06/image-view
+	url = https://github.com/atom/image-view
+[submodule "2024/04/06/incompatible-packages"]
+	path = 2024/04/06/incompatible-packages
+	url = https://github.com/atom/incompatible-packages
+[submodule "2024/04/06/jasmine-focused"]
+	path = 2024/04/06/jasmine-focused
+	url = https://github.com/atom/jasmine-focused
+[submodule "2024/04/06/keybinding-resolver"]
+	path = 2024/04/06/keybinding-resolver
+	url = https://github.com/atom/keybinding-resolver
+[submodule "2024/04/06/keyboard-layout"]
+	path = 2024/04/06/keyboard-layout
+	url = https://github.com/atom/keyboard-layout
+[submodule "2024/04/06/language-csharp"]
+	path = 2024/04/06/language-csharp
+	url = https://github.com/atom/language-csharp
+[submodule "2024/04/06/language-gfm"]
+	path = 2024/04/06/language-gfm
+	url = https://github.com/atom/language-gfm
+[submodule "2024/04/06/language-git"]
+	path = 2024/04/06/language-git
+	url = https://github.com/atom/language-git
+[submodule "2024/04/06/language-go"]
+	path = 2024/04/06/language-go
+	url = https://github.com/atom/language-go
+[submodule "2024/04/06/language-html"]
+	path = 2024/04/06/language-html
+	url = https://github.com/atom/language-html
+[submodule "2024/04/06/language-hyperlink"]
+	path = 2024/04/06/language-hyperlink
+	url = https://github.com/atom/language-hyperlink
+[submodule "2024/04/06/language-javascript"]
+	path = 2024/04/06/language-javascript
+	url = https://github.com/atom/language-javascript
+[submodule "2024/04/06/language-json"]
+	path = 2024/04/06/language-json
+	url = https://github.com/atom/language-json
+[submodule "2024/04/06/language-less"]
+	path = 2024/04/06/language-less
+	url = https://github.com/atom/language-less
+[submodule "2024/04/06/language-make"]
+	path = 2024/04/06/language-make
+	url = https://github.com/atom/language-make
+[submodule "2024/04/06/language-mustache"]
+	path = 2024/04/06/language-mustache
+	url = https://github.com/atom/language-mustache
+[submodule "2024/04/06/language-objective-c"]
+	path = 2024/04/06/language-objective-c
+	url = https://github.com/atom/language-objective-c
+[submodule "2024/04/06/language-pegjs"]
+	path = 2024/04/06/language-pegjs
+	url = https://github.com/atom/language-pegjs
+[submodule "2024/04/06/language-perl"]
+	path = 2024/04/06/language-perl
+	url = https://github.com/atom/language-perl
+[submodule "2024/04/06/language-php"]
+	path = 2024/04/06/language-php
+	url = https://github.com/atom/language-php
+[submodule "2024/04/06/language-property-list"]
+	path = 2024/04/06/language-property-list
+	url = https://github.com/atom/language-property-list
+[submodule "2024/04/06/language-puppet"]
+	path = 2024/04/06/language-puppet
+	url = https://github.com/atom/language-puppet
+[submodule "2024/04/06/language-python"]
+	path = 2024/04/06/language-python
+	url = https://github.com/atom/language-python
+[submodule "2024/04/06/language-ruby"]
+	path = 2024/04/06/language-ruby
+	url = https://github.com/atom/language-ruby
+[submodule "2024/04/06/language-ruby-on-rails"]
+	path = 2024/04/06/language-ruby-on-rails
+	url = https://github.com/atom/language-ruby-on-rails
+[submodule "2024/04/06/language-shellscript"]
+	path = 2024/04/06/language-shellscript
+	url = https://github.com/atom/language-shellscript
+[submodule "2024/04/06/language-source"]
+	path = 2024/04/06/language-source
+	url = https://github.com/atom/language-source
+[submodule "2024/04/06/language-sql"]
+	path = 2024/04/06/language-sql
+	url = https://github.com/atom/language-sql
+[submodule "2024/04/06/language-text"]
+	path = 2024/04/06/language-text
+	url = https://github.com/atom/language-text
+[submodule "2024/04/06/language-todo"]
+	path = 2024/04/06/language-todo
+	url = https://github.com/atom/language-todo
+[submodule "2024/04/06/language-toml"]
+	path = 2024/04/06/language-toml
+	url = https://github.com/atom/language-toml
+[submodule "2024/04/06/language-typescript"]
+	path = 2024/04/06/language-typescript
+	url = https://github.com/atom/language-typescript
+[submodule "2024/04/06/language-yaml"]
+	path = 2024/04/06/language-yaml
+	url = https://github.com/atom/language-yaml
+[submodule "2024/04/06/line-ending-selector"]
+	path = 2024/04/06/line-ending-selector
+	url = https://github.com/atom/line-ending-selector
+[submodule "2024/04/06/link"]
+	path = 2024/04/06/link
+	url = https://github.com/atom/link
+[submodule "2024/04/06/Linter"]
+	path = 2024/04/06/Linter
+	url = https://github.com/AtomLinter/Linter
+[submodule "2024/04/06/markdown-preview"]
+	path = 2024/04/06/markdown-preview
+	url = https://github.com/atom/markdown-preview
+[submodule "2024/04/06/metrics"]
+	path = 2024/04/06/metrics
+	url = https://github.com/atom/metrics
+[submodule "2024/04/06/node"]
+	path = 2024/04/06/node
+	url = https://github.com/atom/node
+[submodule "2024/04/06/node-oniguruma"]
+	path = 2024/04/06/node-oniguruma
+	url = https://github.com/atom/node-oniguruma
+[submodule "2024/04/06/node-pathwatcher"]
+	path = 2024/04/06/node-pathwatcher
+	url = https://github.com/atom/node-pathwatcher
+[submodule "2024/04/06/notifications"]
+	path = 2024/04/06/notifications
+	url = https://github.com/atom/notifications
+[submodule "2024/04/06/one-dark-syntax"]
+	path = 2024/04/06/one-dark-syntax
+	url = https://github.com/atom/one-dark-syntax
+[submodule "2024/04/06/one-dark-ui"]
+	path = 2024/04/06/one-dark-ui
+	url = https://github.com/atom/one-dark-ui
+[submodule "2024/04/06/one-light-syntax"]
+	path = 2024/04/06/one-light-syntax
+	url = https://github.com/atom/one-light-syntax
+[submodule "2024/04/06/one-light-ui"]
+	path = 2024/04/06/one-light-ui
+	url = https://github.com/atom/one-light-ui
+[submodule "2024/04/06/open-on-github"]
+	path = 2024/04/06/open-on-github
+	url = https://github.com/atom/open-on-github
+[submodule "2024/04/06/package-generator"]
+	path = 2024/04/06/package-generator
+	url = https://github.com/atom/package-generator
+[submodule "2024/04/06/property-accessors"]
+	path = 2024/04/06/property-accessors
+	url = https://github.com/atom/property-accessors
+[submodule "2024/04/06/season"]
+	path = 2024/04/06/season
+	url = https://github.com/atom/season
+[submodule "2024/04/06/settings-view"]
+	path = 2024/04/06/settings-view
+	url = https://github.com/atom/settings-view
+[submodule "2024/04/06/snippets"]
+	path = 2024/04/06/snippets
+	url = https://github.com/atom/snippets
+[submodule "2024/04/06/solarized-dark-syntax"]
+	path = 2024/04/06/solarized-dark-syntax
+	url = https://github.com/atom/solarized-dark-syntax
+[submodule "2024/04/06/solarized-light-syntax"]
+	path = 2024/04/06/solarized-light-syntax
+	url = https://github.com/atom/solarized-light-syntax
+[submodule "2024/04/06/spell-check"]
+	path = 2024/04/06/spell-check
+	url = https://github.com/atom/spell-check
+[submodule "2024/04/06/status-bar"]
+	path = 2024/04/06/status-bar
+	url = https://github.com/atom/status-bar
+[submodule "2024/04/06/styleguide"]
+	path = 2024/04/06/styleguide
+	url = https://github.com/atom/styleguide
+[submodule "2024/04/06/superstring"]
+	path = 2024/04/06/superstring
+	url = https://github.com/atom/superstring
+[submodule "2024/04/06/symbols-view"]
+	path = 2024/04/06/symbols-view
+	url = https://github.com/atom/symbols-view
+[submodule "2024/04/06/tabs"]
+	path = 2024/04/06/tabs
+	url = https://github.com/atom/tabs
+[submodule "2024/04/06/teletype"]
+	path = 2024/04/06/teletype
+	url = https://github.com/atom/teletype
+[submodule "2024/04/06/text-buffer"]
+	path = 2024/04/06/text-buffer
+	url = https://github.com/atom/text-buffer
+[submodule "2024/04/06/timecop"]
+	path = 2024/04/06/timecop
+	url = https://github.com/atom/timecop
+[submodule "2024/04/06/tree-view"]
+	path = 2024/04/06/tree-view
+	url = https://github.com/atom/tree-view
+[submodule "2024/04/06/underscore-plus"]
+	path = 2024/04/06/underscore-plus
+	url = https://github.com/atom/underscore-plus
+[submodule "2024/04/06/update-package-dependencies"]
+	path = 2024/04/06/update-package-dependencies
+	url = https://github.com/atom/update-package-dependencies
+[submodule "2024/04/06/welcome"]
+	path = 2024/04/06/welcome
+	url = https://github.com/atom/welcome
+[submodule "2024/04/06/whitespace"]
+	path = 2024/04/06/whitespace
+	url = https://github.com/atom/whitespace
+[submodule "2024/04/06/wrap-guide"]
+	path = 2024/04/06/wrap-guide
+	url = https://github.com/atom/wrap-guide
+[submodule "2024/04/06/dht-crawler-polkadot"]
+	path = 2024/04/06/dht-crawler-polkadot
+	url = https://github.com/atredispartners/dht-crawler-polkadot
+[submodule "2024/04/06/libra"]
+	path = 2024/04/06/libra
+	url = https://github.com/atscaletech/libra
+[submodule "2024/04/06/SipHash"]
+	path = 2024/04/06/SipHash
+	url = https://github.com/attaswift/SipHash
+[submodule "2024/04/06/cq-prolyfill"]
+	path = 2024/04/06/cq-prolyfill
+	url = https://github.com/ausi/cq-prolyfill
+[submodule "2024/04/06/scaffold-eth"]
+	path = 2024/04/06/scaffold-eth
+	url = https://github.com/austintgriffith/scaffold-eth
+[submodule "2024/04/06/AutoMapper"]
+	path = 2024/04/06/AutoMapper
+	url = https://github.com/AutoMapper/AutoMapper
+[submodule "2024/04/06/automata"]
+	path = 2024/04/06/automata
+	url = https://github.com/automata-network/automata
+[submodule "2024/04/06/juice"]
+	path = 2024/04/06/juice
+	url = https://github.com/Automattic/juice
+[submodule "2024/04/06/LanguageClient-neovim"]
+	path = 2024/04/06/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim
+[submodule "2024/04/06/ava-docs"]
+	path = 2024/04/06/ava-docs
+	url = https://github.com/avajs/ava-docs
+[submodule "2024/04/06/ava-snapshot-example"]
+	path = 2024/04/06/ava-snapshot-example
+	url = https://github.com/avajs/ava-snapshot-example
+[submodule "2024/04/06/awesome-ava"]
+	path = 2024/04/06/awesome-ava
+	url = https://github.com/avajs/awesome-ava
+[submodule "2024/04/06/cooperate"]
+	path = 2024/04/06/cooperate
+	url = https://github.com/avajs/cooperate
+[submodule "2024/04/06/eslint-plugin-ava"]
+	path = 2024/04/06/eslint-plugin-ava
+	url = https://github.com/avajs/eslint-plugin-ava
+[submodule "2024/04/06/get-port"]
+	path = 2024/04/06/get-port
+	url = https://github.com/avajs/get-port
+[submodule "2024/04/06/avalanchego"]
+	path = 2024/04/06/avalanchego
+	url = https://github.com/ava-labs/avalanchego
+[submodule "2024/04/06/postcss-color-alpha"]
+	path = 2024/04/06/postcss-color-alpha
+	url = https://github.com/avanes/postcss-color-alpha
+[submodule "2024/04/06/jnanoid"]
+	path = 2024/04/06/jnanoid
+	url = https://github.com/aventrix/jnanoid
+[submodule "2024/04/06/elm-upgrade"]
+	path = 2024/04/06/elm-upgrade
+	url = https://github.com/avh4/elm-upgrade
+[submodule "2024/04/06/virtualagc"]
+	path = 2024/04/06/virtualagc
+	url = https://github.com/avtobiff/virtualagc
+[submodule "2024/04/06/postcss-placehold"]
+	path = 2024/04/06/postcss-placehold
+	url = https://github.com/awayken/postcss-placehold
+[submodule "2024/04/06/pre-commit-prettier"]
+	path = 2024/04/06/pre-commit-prettier
+	url = https://github.com/awebdeveloper/pre-commit-prettier
+[submodule "2024/04/06/enb-postcss"]
+	path = 2024/04/06/enb-postcss
+	url = https://github.com/awinogradov/enb-postcss
+[submodule "2024/04/06/amazon-ecs-agent"]
+	path = 2024/04/06/amazon-ecs-agent
+	url = https://github.com/aws/amazon-ecs-agent
+[submodule "2024/04/06/amplify-cli"]
+	path = 2024/04/06/amplify-cli
+	url = https://github.com/aws-amplify/amplify-cli
+[submodule "2024/04/06/aws-auto-scaling-custom-resource"]
+	path = 2024/04/06/aws-auto-scaling-custom-resource
+	url = https://github.com/aws/aws-auto-scaling-custom-resource
+[submodule "2024/04/06/aws-cli"]
+	path = 2024/04/06/aws-cli
+	url = https://github.com/aws/aws-cli
+[submodule "2024/04/06/aws-codebuild-docker-images"]
+	path = 2024/04/06/aws-codebuild-docker-images
+	url = https://github.com/aws/aws-codebuild-docker-images
+[submodule "2024/04/06/aws-encryption-sdk-javascript"]
+	path = 2024/04/06/aws-encryption-sdk-javascript
+	url = https://github.com/aws/aws-encryption-sdk-javascript
+[submodule "2024/04/06/aws-fpga"]
+	path = 2024/04/06/aws-fpga
+	url = https://github.com/aws/aws-fpga
+[submodule "2024/04/06/aws-kms-xksproxy-api-spec"]
+	path = 2024/04/06/aws-kms-xksproxy-api-spec
+	url = https://github.com/aws/aws-kms-xksproxy-api-spec
+[submodule "2024/04/06/aws-sdk-java"]
+	path = 2024/04/06/aws-sdk-java
+	url = https://github.com/aws/aws-sdk-java
+[submodule "2024/04/06/aws-toolkit-vscode"]
+	path = 2024/04/06/aws-toolkit-vscode
+	url = https://github.com/aws/aws-toolkit-vscode
+[submodule "2024/04/06/aws-cloudformation-resource-providers-controltower"]
+	path = 2024/04/06/aws-cloudformation-resource-providers-controltower
+	url = https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-controltower
+[submodule "2024/04/06/aws-cloudformation-resource-providers-nimblestudio"]
+	path = 2024/04/06/aws-cloudformation-resource-providers-nimblestudio
+	url = https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-nimblestudio
+[submodule "2024/04/06/cloudformation-guard"]
+	path = 2024/04/06/cloudformation-guard
+	url = https://github.com/aws-cloudformation/cloudformation-guard
+[submodule "2024/04/06/aws-cloud9-user-guide"]
+	path = 2024/04/06/aws-cloud9-user-guide
+	url = https://github.com/awsdocs/aws-cloud9-user-guide
+[submodule "2024/04/06/homebrew-tap"]
+	path = 2024/04/06/homebrew-tap
+	url = https://github.com/aws/homebrew-tap
+[submodule "2024/04/06/aws-c-io"]
+	path = 2024/04/06/aws-c-io
+	url = https://github.com/awslabs/aws-c-io
+[submodule "2024/04/06/aws-crt-nodejs"]
+	path = 2024/04/06/aws-crt-nodejs
+	url = https://github.com/awslabs/aws-crt-nodejs
+[submodule "2024/04/06/aws-greengrass-group-setup"]
+	path = 2024/04/06/aws-greengrass-group-setup
+	url = https://github.com/awslabs/aws-greengrass-group-setup
+[submodule "2024/04/06/aws-lc"]
+	path = 2024/04/06/aws-lc
+	url = https://github.com/awslabs/aws-lc
+[submodule "2024/04/06/cdk8s"]
+	path = 2024/04/06/cdk8s
+	url = https://github.com/awslabs/cdk8s
+[submodule "2024/04/06/python-uefivars"]
+	path = 2024/04/06/python-uefivars
+	url = https://github.com/awslabs/python-uefivars
+[submodule "2024/04/06/serverless-application-model"]
+	path = 2024/04/06/serverless-application-model
+	url = https://github.com/awslabs/serverless-application-model
+[submodule "2024/04/06/smithy"]
+	path = 2024/04/06/smithy
+	url = https://github.com/awslabs/smithy
+[submodule "2024/04/06/smithy-typescript"]
+	path = 2024/04/06/smithy-typescript
+	url = https://github.com/awslabs/smithy-typescript
+[submodule "2024/04/06/mit-0"]
+	path = 2024/04/06/mit-0
+	url = https://github.com/aws/mit-0
+[submodule "2024/04/06/amazon-forecast-samples"]
+	path = 2024/04/06/amazon-forecast-samples
+	url = https://github.com/aws-samples/amazon-forecast-samples
+[submodule "2024/04/06/amazon-transcribe-websocket-static"]
+	path = 2024/04/06/amazon-transcribe-websocket-static
+	url = https://github.com/aws-samples/amazon-transcribe-websocket-static
+[submodule "2024/04/06/aws-sdk-js-notes-app"]
+	path = 2024/04/06/aws-sdk-js-notes-app
+	url = https://github.com/aws-samples/aws-sdk-js-notes-app
+[submodule "2024/04/06/aws-sdk-js-tests"]
+	path = 2024/04/06/aws-sdk-js-tests
+	url = https://github.com/aws-samples/aws-sdk-js-tests
+[submodule "2024/04/06/aws-sdk-js-v3-workshop"]
+	path = 2024/04/06/aws-sdk-js-v3-workshop
+	url = https://github.com/aws-samples/aws-sdk-js-v3-workshop
+[submodule "2024/04/06/iam-access-analyzer-custom-policy-check-samples"]
+	path = 2024/04/06/iam-access-analyzer-custom-policy-check-samples
+	url = https://github.com/aws-samples/iam-access-analyzer-custom-policy-check-samples
+[submodule "2024/04/06/postcss-pseudoelements"]
+	path = 2024/04/06/postcss-pseudoelements
+	url = https://github.com/axa-ch/postcss-pseudoelements
+[submodule "2024/04/06/unicode-linebreak"]
+	path = 2024/04/06/unicode-linebreak
+	url = https://github.com/axelf4/unicode-linebreak
+[submodule "2024/04/06/moxios"]
+	path = 2024/04/06/moxios
+	url = https://github.com/axios/moxios
+[submodule "2024/04/06/postcss-instagram"]
+	path = 2024/04/06/postcss-instagram
+	url = https://github.com/azat-io/postcss-instagram
+[submodule "2024/04/06/postcss-tatar-stylesheets"]
+	path = 2024/04/06/postcss-tatar-stylesheets
+	url = https://github.com/azat-io/postcss-tatar-stylesheets
+[submodule "2024/04/06/perl6-net-curl"]
+	path = 2024/04/06/perl6-net-curl
+	url = https://github.com/azawawi/perl6-net-curl
+[submodule "2024/04/06/mdBook"]
+	path = 2024/04/06/mdBook
+	url = https://github.com/azerupi/mdBook
+[submodule "2024/04/06/barretenberg"]
+	path = 2024/04/06/barretenberg
+	url = https://github.com/AztecProtocol/barretenberg
+[submodule "2024/04/06/specification"]
+	path = 2024/04/06/specification
+	url = https://github.com/AztecProtocol/specification
+[submodule "2024/04/06/acr-builder"]
+	path = 2024/04/06/acr-builder
+	url = https://github.com/azure/acr-builder
+[submodule "2024/04/06/microsoft-authentication-library-for-dotnet"]
+	path = 2024/04/06/microsoft-authentication-library-for-dotnet
+	url = https://github.com/AzureAD/microsoft-authentication-library-for-dotnet
+[submodule "2024/04/06/microsoft-authentication-library-for-js"]
+	path = 2024/04/06/microsoft-authentication-library-for-js
+	url = https://github.com/AzureAD/microsoft-authentication-library-for-js
+[submodule "2024/04/06/AppConfiguration"]
+	path = 2024/04/06/AppConfiguration
+	url = https://github.com/Azure/AppConfiguration
+[submodule "2024/04/06/AppConfiguration-DotnetProvider"]
+	path = 2024/04/06/AppConfiguration-DotnetProvider
+	url = https://github.com/Azure/AppConfiguration-DotnetProvider
+[submodule "2024/04/06/arc-k8s-demo"]
+	path = 2024/04/06/arc-k8s-demo
+	url = https://github.com/Azure/arc-k8s-demo
+[submodule "2024/04/06/autorest"]
+	path = 2024/04/06/autorest
+	url = https://github.com/azure/autorest
+[submodule "2024/04/06/Autorest"]
+	path = 2024/04/06/Autorest
+	url = https://github.com/Azure/Autorest
+[submodule "2024/04/06/azure-amqp"]
+	path = 2024/04/06/azure-amqp
+	url = https://github.com/Azure/azure-amqp
+[submodule "2024/04/06/azure-cli"]
+	path = 2024/04/06/azure-cli
+	url = https://github.com/Azure/azure-cli
+[submodule "2024/04/06/azure-docker-extension"]
+	path = 2024/04/06/azure-docker-extension
+	url = https://github.com/Azure/azure-docker-extension
+[submodule "2024/04/06/azure-docs-sdk-dotnet"]
+	path = 2024/04/06/azure-docs-sdk-dotnet
+	url = https://github.com/Azure/azure-docs-sdk-dotnet
+[submodule "2024/04/06/azure-documentdb-node"]
+	path = 2024/04/06/azure-documentdb-node
+	url = https://github.com/Azure/azure-documentdb-node
+[submodule "2024/04/06/azure-event-hubs"]
+	path = 2024/04/06/azure-event-hubs
+	url = https://github.com/Azure/azure-event-hubs
+[submodule "2024/04/06/azure-event-hubs-dotnet"]
+	path = 2024/04/06/azure-event-hubs-dotnet
+	url = https://github.com/Azure/azure-event-hubs-dotnet
+[submodule "2024/04/06/azure-event-hubs-node"]
+	path = 2024/04/06/azure-event-hubs-node
+	url = https://github.com/Azure/azure-event-hubs-node
+[submodule "2024/04/06/azure-functions-core-tools"]
+	path = 2024/04/06/azure-functions-core-tools
+	url = https://github.com/Azure/azure-functions-core-tools
+[submodule "2024/04/06/azure-functions-eventgrid-extension"]
+	path = 2024/04/06/azure-functions-eventgrid-extension
+	url = https://github.com/Azure/azure-functions-eventgrid-extension
+[submodule "2024/04/06/azure-functions-host"]
+	path = 2024/04/06/azure-functions-host
+	url = https://github.com/Azure/azure-functions-host
+[submodule "2024/04/06/azure-iot-cli-extension"]
+	path = 2024/04/06/azure-iot-cli-extension
+	url = https://github.com/Azure/azure-iot-cli-extension
+[submodule "2024/04/06/azure-iot-sdk-csharp"]
+	path = 2024/04/06/azure-iot-sdk-csharp
+	url = https://github.com/Azure/azure-iot-sdk-csharp
+[submodule "2024/04/06/azure-iot-sdk-node"]
+	path = 2024/04/06/azure-iot-sdk-node
+	url = https://github.com/Azure/azure-iot-sdk-node
+[submodule "2024/04/06/azure-iot-sdks"]
+	path = 2024/04/06/azure-iot-sdks
+	url = https://github.com/azure/azure-iot-sdks
+[submodule "2024/04/06/azure-libraries-for-net"]
+	path = 2024/04/06/azure-libraries-for-net
+	url = https://github.com/Azure/azure-libraries-for-net
+[submodule "2024/04/06/azure-linux-extensions"]
+	path = 2024/04/06/azure-linux-extensions
+	url = https://github.com/Azure/azure-linux-extensions
+[submodule "2024/04/06/azure-powershell"]
+	path = 2024/04/06/azure-powershell
+	url = https://github.com/Azure/azure-powershell
+[submodule "2024/04/06/azure-quickstart-templates"]
+	path = 2024/04/06/azure-quickstart-templates
+	url = https://github.com/Azure/azure-quickstart-templates
+[submodule "2024/04/06/crawlee"]
+	path = 2024/04/06/crawlee
+	url = https://github.com/apify/crawlee
+[submodule "2024/04/06/S2"]
+	path = 2024/04/06/S2
+	url = https://github.com/antvis/S2
+[submodule "2024/04/06/disparity-colors"]
+	path = 2024/04/06/disparity-colors
+	url = https://github.com/npm/disparity-colors
+[submodule "2024/04/06/canvas"]
+	path = 2024/04/06/canvas
+	url = https://github.com/paritytech/canvas
+[submodule "2024/04/06/dot-jaeger"]
+	path = 2024/04/06/dot-jaeger
+	url = https://github.com/paritytech/dot-jaeger
+[submodule "2024/04/06/extended-parachain-template"]
+	path = 2024/04/06/extended-parachain-template
+	url = https://github.com/paritytech/extended-parachain-template
+[submodule "2024/04/06/frontier-parachain-template"]
+	path = 2024/04/06/frontier-parachain-template
+	url = https://github.com/paritytech/frontier-parachain-template
+[submodule "2024/04/06/ink-docs"]
+	path = 2024/04/06/ink-docs
+	url = https://github.com/paritytech/ink-docs
+[submodule "2024/04/06/parity-bridge"]
+	path = 2024/04/06/parity-bridge
+	url = https://github.com/paritytech/parity-bridge
+[submodule "2024/04/06/parity-bridges-ui"]
+	path = 2024/04/06/parity-bridges-ui
+	url = https://github.com/paritytech/parity-bridges-ui
+[submodule "2024/04/06/parity-signer"]
+	path = 2024/04/06/parity-signer
+	url = https://github.com/paritytech/parity-signer
+[submodule "2024/04/06/parity-wasm"]
+	path = 2024/04/06/parity-wasm
+	url = https://github.com/paritytech/parity-wasm
+[submodule "2024/04/06/polkadot-scripts"]
+	path = 2024/04/06/polkadot-scripts
+	url = https://github.com/paritytech/polkadot-scripts
+[submodule "2024/04/06/polkadot-staking-dashboard"]
+	path = 2024/04/06/polkadot-staking-dashboard
+	url = https://github.com/paritytech/polkadot-staking-dashboard
+[submodule "2024/04/06/simnet_scripts"]
+	path = 2024/04/06/simnet_scripts
+	url = https://github.com/paritytech/simnet_scripts
+[submodule "2024/04/06/substrate-bridge-relay"]
+	path = 2024/04/06/substrate-bridge-relay
+	url = https://github.com/paritytech/substrate-bridge-relay
+[submodule "2024/04/06/substrate-playground"]
+	path = 2024/04/06/substrate-playground
+	url = https://github.com/paritytech/substrate-playground
+[submodule "2024/04/06/substrate-template-generator"]
+	path = 2024/04/06/substrate-template-generator
+	url = https://github.com/paritytech/substrate-template-generator
+[submodule "2024/04/06/substrate-tip-bot"]
+	path = 2024/04/06/substrate-tip-bot
+	url = https://github.com/paritytech/substrate-tip-bot
+[submodule "2024/04/06/txwrapper"]
+	path = 2024/04/06/txwrapper
+	url = https://github.com/paritytech/txwrapper
+[submodule "2024/04/06/vscode-substrate"]
+	path = 2024/04/06/vscode-substrate
+	url = https://github.com/paritytech/vscode-substrate
+[submodule "2024/04/06/wasm-utils"]
+	path = 2024/04/06/wasm-utils
+	url = https://github.com/paritytech/wasm-utils
+[submodule "2024/04/06/parity-substrate-interface"]
+	path = 2024/04/06/parity-substrate-interface
+	url = https://github.com/nitor-infotech-oss/parity-substrate-interface
+[submodule "2024/04/06/private-tx"]
+	path = 2024/04/06/private-tx
+	url = https://github.com/parity-contracts/private-tx
+[submodule "2024/04/06/jsonrpc"]
+	path = 2024/04/06/jsonrpc
+	url = https://github.com/parity-js/jsonrpc
+[submodule "2024/04/06/shell"]
+	path = 2024/04/06/shell
+	url = https://github.com/parity-js/shell
+[submodule "2024/04/06/substrate-tcr"]
+	path = 2024/04/06/substrate-tcr
+	url = https://github.com/parity-samples/substrate-tcr
+[submodule "2024/04/06/chainextension-registry"]
+	path = 2024/04/06/chainextension-registry
+	url = https://github.com/paritytech/chainextension-registry
+[submodule "2024/04/06/homebrew-paritytech"]
+	path = 2024/04/06/homebrew-paritytech
+	url = https://github.com/paritytech/homebrew-paritytech
+[submodule "2024/04/06/jsonrpsee"]
+	path = 2024/04/06/jsonrpsee
+	url = https://github.com/paritytech/jsonrpsee
+[submodule "2024/04/06/ledgeracio"]
+	path = 2024/04/06/ledgeracio
+	url = https://github.com/paritytech/ledgeracio
+[submodule "2024/04/06/parity-bitcoin"]
+	path = 2024/04/06/parity-bitcoin
+	url = https://github.com/paritytech/parity-bitcoin
+[submodule "2024/04/06/parity-config-generator"]
+	path = 2024/04/06/parity-config-generator
+	url = https://github.com/paritytech/parity-config-generator
+[submodule "2024/04/06/parity-daemonize"]
+	path = 2024/04/06/parity-daemonize
+	url = https://github.com/paritytech/parity-daemonize
+[submodule "2024/04/06/pwasm-tutorial"]
+	path = 2024/04/06/pwasm-tutorial
+	url = https://github.com/paritytech/pwasm-tutorial
+[submodule "2024/04/06/rust-snappy"]
+	path = 2024/04/06/rust-snappy
+	url = https://github.com/paritytech/rust-snappy
+[submodule "2024/04/06/scale-info"]
+	path = 2024/04/06/scale-info
+	url = https://github.com/paritytech/scale-info
+[submodule "2024/04/06/subport"]
+	path = 2024/04/06/subport
+	url = https://github.com/paritytech/subport
+[submodule "2024/04/06/substrate-matrix-faucet"]
+	path = 2024/04/06/substrate-matrix-faucet
+	url = https://github.com/paritytech/substrate-matrix-faucet
+[submodule "2024/04/06/substrate-telemetry"]
+	path = 2024/04/06/substrate-telemetry
+	url = https://github.com/paritytech/substrate-telemetry
+[submodule "2024/04/06/wasm-tests"]
+	path = 2024/04/06/wasm-tests
+	url = https://github.com/paritytech/wasm-tests
+[submodule "2024/04/06/xcm-format"]
+	path = 2024/04/06/xcm-format
+	url = https://github.com/paritytech/xcm-format
+[submodule "2024/04/06/awesome-ink"]
+	path = 2024/04/06/awesome-ink
+	url = https://github.com/paritytech/awesome-ink
+[submodule "2024/04/06/finality-grandpa"]
+	path = 2024/04/06/finality-grandpa
+	url = https://github.com/paritytech/finality-grandpa
+[submodule "2024/04/06/polkadot-introspector"]
+	path = 2024/04/06/polkadot-introspector
+	url = https://github.com/paritytech/polkadot-introspector
+[submodule "2024/04/06/releng-scripts"]
+	path = 2024/04/06/releng-scripts
+	url = https://github.com/paritytech/releng-scripts
+[submodule "2024/04/06/substrate-connect"]
+	path = 2024/04/06/substrate-connect
+	url = https://github.com/paritytech/substrate-connect
+[submodule "2024/04/06/substrate-debug-kit"]
+	path = 2024/04/06/substrate-debug-kit
+	url = https://github.com/paritytech/substrate-debug-kit
+[submodule "2024/04/06/trie"]
+	path = 2024/04/06/trie
+	url = https://github.com/paritytech/trie
+[submodule "2024/04/06/arkworks-substrate"]
+	path = 2024/04/06/arkworks-substrate
+	url = https://github.com/paritytech/arkworks-substrate
+[submodule "2024/04/06/ink-waterfall"]
+	path = 2024/04/06/ink-waterfall
+	url = https://github.com/paritytech/ink-waterfall
+[submodule "2024/04/06/pipeline-scripts"]
+	path = 2024/04/06/pipeline-scripts
+	url = https://github.com/paritytech/pipeline-scripts
+[submodule "2024/04/06/rust-secp256k1"]
+	path = 2024/04/06/rust-secp256k1
+	url = https://github.com/paritytech/rust-secp256k1
+[submodule "2024/04/06/substrate-bip39"]
+	path = 2024/04/06/substrate-bip39
+	url = https://github.com/paritytech/substrate-bip39
+[submodule "2024/04/06/parachains-integration-tests"]
+	path = 2024/04/06/parachains-integration-tests
+	url = https://github.com/paritytech/parachains-integration-tests
+[submodule "2024/04/06/scripts"]
+	path = 2024/04/06/scripts
+	url = https://github.com/paritytech/scripts
+[submodule "2024/04/06/srtool"]
+	path = 2024/04/06/srtool
+	url = https://github.com/paritytech/srtool
+[submodule "2024/04/06/ss58-registry"]
+	path = 2024/04/06/ss58-registry
+	url = https://github.com/paritytech/ss58-registry
+[submodule "2024/04/06/substrate-subxt"]
+	path = 2024/04/06/substrate-subxt
+	url = https://github.com/paritytech/substrate-subxt
+[submodule "2024/04/06/subxt"]
+	path = 2024/04/06/subxt
+	url = https://github.com/paritytech/subxt
+[submodule "2024/04/06/app-dirs-rs"]
+	path = 2024/04/06/app-dirs-rs
+	url = https://github.com/paritytech/app-dirs-rs
+[submodule "2024/04/06/bn"]
+	path = 2024/04/06/bn
+	url = https://github.com/paritytech/bn
+[submodule "2024/04/06/grandpa-bridge-gadget"]
+	path = 2024/04/06/grandpa-bridge-gadget
+	url = https://github.com/paritytech/grandpa-bridge-gadget
+[submodule "2024/04/06/rust-ctrlc"]
+	path = 2024/04/06/rust-ctrlc
+	url = https://github.com/paritytech/rust-ctrlc
+[submodule "2024/04/06/substrate-api-sidecar"]
+	path = 2024/04/06/substrate-api-sidecar
+	url = https://github.com/paritytech/substrate-api-sidecar
+[submodule "2024/04/06/json-rpc-interface-spec"]
+	path = 2024/04/06/json-rpc-interface-spec
+	url = https://github.com/paritytech/json-rpc-interface-spec
+[submodule "2024/04/06/labels"]
+	path = 2024/04/06/labels
+	url = https://github.com/paritytech/labels
+[submodule "2024/04/06/ethabi"]
+	path = 2024/04/06/ethabi
+	url = https://github.com/paritytech/ethabi
+[submodule "2024/04/06/parity-bridges-common"]
+	path = 2024/04/06/parity-bridges-common
+	url = https://github.com/paritytech/parity-bridges-common
+[submodule "2024/04/06/substrate-developer-hub"]
+	path = 2024/04/06/substrate-developer-hub
+	url = https://github.com/paritytech/substrate-developer-hub
+[submodule "2024/04/06/whisper"]
+	path = 2024/04/06/whisper
+	url = https://github.com/paritytech/whisper
+[submodule "2024/04/06/parity-db"]
+	path = 2024/04/06/parity-db
+	url = https://github.com/paritytech/parity-db
+[submodule "2024/04/06/substrate-archive"]
+	path = 2024/04/06/substrate-archive
+	url = https://github.com/paritytech/substrate-archive
+[submodule "2024/04/06/polkadot-launch"]
+	path = 2024/04/06/polkadot-launch
+	url = https://github.com/paritytech/polkadot-launch
+[submodule "2024/04/06/try-runtime-cli"]
+	path = 2024/04/06/try-runtime-cli
+	url = https://github.com/paritytech/try-runtime-cli
+[submodule "2024/04/06/cargo-contract"]
+	path = 2024/04/06/cargo-contract
+	url = https://github.com/paritytech/cargo-contract
+[submodule "2024/04/06/ink-examples"]
+	path = 2024/04/06/ink-examples
+	url = https://github.com/paritytech/ink-examples
+[submodule "2024/04/06/parity-scale-codec"]
+	path = 2024/04/06/parity-scale-codec
+	url = https://github.com/paritytech/parity-scale-codec
+[submodule "2024/04/06/substrate-contracts-node"]
+	path = 2024/04/06/substrate-contracts-node
+	url = https://github.com/paritytech/substrate-contracts-node
+[submodule "2024/04/06/parity-common"]
+	path = 2024/04/06/parity-common
+	url = https://github.com/paritytech/parity-common
+[submodule "2024/04/06/polkadot-sdk"]
+	path = 2024/04/06/polkadot-sdk
+	url = https://github.com/paritytech/polkadot-sdk
+[submodule "2024/04/06/aecli-js"]
+	path = 2024/04/06/aecli-js
+	url = https://github.com/aeternity/aecli-js
+[submodule "2024/04/06/aepp-base"]
+	path = 2024/04/06/aepp-base
+	url = https://github.com/aeternity/aepp-base
+[submodule "2024/04/06/hd-wallet-js"]
+	path = 2024/04/06/hd-wallet-js
+	url = https://github.com/aeternity/hd-wallet-js
+[submodule "2024/04/06/superhero-wallet"]
+	path = 2024/04/06/superhero-wallet
+	url = https://github.com/aeternity/superhero-wallet
+[submodule "2024/04/06/aepp-calldata-js"]
+	path = 2024/04/06/aepp-calldata-js
+	url = https://github.com/aeternity/aepp-calldata-js
+[submodule "2024/04/06/aepp-cli-js"]
+	path = 2024/04/06/aepp-cli-js
+	url = https://github.com/aeternity/aepp-cli-js
+[submodule "2024/04/06/chain-registry"]
+	path = 2024/04/06/chain-registry
+	url = https://github.com/cosmology-tech/chain-registry
+[submodule "2024/04/06/create-cosmos-app"]
+	path = 2024/04/06/create-cosmos-app
+	url = https://github.com/cosmology-tech/create-cosmos-app
+[submodule "2024/04/06/interchain-ui"]
+	path = 2024/04/06/interchain-ui
+	url = https://github.com/cosmology-tech/interchain-ui
+[submodule "2024/04/06/starship"]
+	path = 2024/04/06/starship
+	url = https://github.com/cosmology-tech/starship
+[submodule "2024/04/06/smol_str"]
+	path = 2024/04/06/smol_str
+	url = https://github.com/rust-analyzer/smol_str
+[submodule "2024/04/06/async-broadcast"]
+	path = 2024/04/06/async-broadcast
+	url = https://github.com/smol-rs/async-broadcast
+[submodule "2024/04/06/cache-padded"]
+	path = 2024/04/06/cache-padded
+	url = https://github.com/smol-rs/cache-padded
+[submodule "2024/04/06/waker-fn"]
+	path = 2024/04/06/waker-fn
+	url = https://github.com/smol-rs/waker-fn
+[submodule "2024/04/06/smol"]
+	path = 2024/04/06/smol
+	url = https://github.com/stjepang/smol
+[submodule "2024/04/06/telescope"]
+	path = 2024/04/06/telescope
+	url = https://github.com/cosmology-tech/telescope
+[submodule "2024/04/06/async-executor"]
+	path = 2024/04/06/async-executor
+	url = https://github.com/smol-rs/async-executor
+[submodule "2024/04/06/async-io"]
+	path = 2024/04/06/async-io
+	url = https://github.com/smol-rs/async-io
+[submodule "2024/04/06/async-process"]
+	path = 2024/04/06/async-process
+	url = https://github.com/smol-rs/async-process
+[submodule "2024/04/06/atomic-waker"]
+	path = 2024/04/06/atomic-waker
+	url = https://github.com/smol-rs/atomic-waker
+[submodule "2024/04/06/blocking"]
+	path = 2024/04/06/blocking
+	url = https://github.com/smol-rs/blocking
+[submodule "2024/04/06/parking"]
+	path = 2024/04/06/parking
+	url = https://github.com/smol-rs/parking
+[submodule "2024/04/06/polling"]
+	path = 2024/04/06/polling
+	url = https://github.com/smol-rs/polling
+[submodule "2024/04/06/cosmos-kit"]
+	path = 2024/04/06/cosmos-kit
+	url = https://github.com/cosmology-tech/cosmos-kit
+[submodule "2024/04/06/async-lock"]
+	path = 2024/04/06/async-lock
+	url = https://github.com/smol-rs/async-lock
+[submodule "2024/04/06/async-task"]
+	path = 2024/04/06/async-task
+	url = https://github.com/smol-rs/async-task
+[submodule "2024/04/06/concurrent-queue"]
+	path = 2024/04/06/concurrent-queue
+	url = https://github.com/smol-rs/concurrent-queue
+[submodule "2024/04/06/fastrand"]
+	path = 2024/04/06/fastrand
+	url = https://github.com/smol-rs/fastrand
+[submodule "2024/04/06/async-channel"]
+	path = 2024/04/06/async-channel
+	url = https://github.com/smol-rs/async-channel
+[submodule "2024/04/06/futures-lite"]
+	path = 2024/04/06/futures-lite
+	url = https://github.com/smol-rs/futures-lite
+[submodule "2024/04/06/event-listener"]
+	path = 2024/04/06/event-listener
+	url = https://github.com/smol-rs/event-listener
+[submodule "2024/04/06/polymer-bundler"]
+	path = 2024/04/06/polymer-bundler
+	url = https://github.com/Polymer/polymer-bundler
+[submodule "2024/04/06/lit-element"]
+	path = 2024/04/06/lit-element
+	url = https://github.com/Polymer/lit-element
+[submodule "2024/04/06/lit-html"]
+	path = 2024/04/06/lit-html
+	url = https://github.com/Polymer/lit-html
+[submodule "2024/04/06/payroll-app"]
+	path = 2024/04/06/payroll-app
+	url = https://github.com/1Hive/payroll-app
+[submodule "2024/04/06/redemptions-app"]
+	path = 2024/04/06/redemptions-app
+	url = https://github.com/1Hive/redemptions-app
+[submodule "2024/04/06/time-lock-app"]
+	path = 2024/04/06/time-lock-app
+	url = https://github.com/1Hive/time-lock-app
+[submodule "2024/04/06/token-request-app"]
+	path = 2024/04/06/token-request-app
+	url = https://github.com/1Hive/token-request-app
+[submodule "2024/04/06/dandelion-template"]
+	path = 2024/04/06/dandelion-template
+	url = https://github.com/1Hive/dandelion-template
+[submodule "2024/04/06/ag0"]
+	path = 2024/04/06/ag0
+	url = https://github.com/Agoric/ag0
+[submodule "2024/04/06/SwingSet"]
+	path = 2024/04/06/SwingSet
+	url = https://github.com/AgoricBot/SwingSet
+[submodule "2024/04/06/dapp-psm"]
+	path = 2024/04/06/dapp-psm
+	url = https://github.com/Agoric/dapp-psm
+[submodule "2024/04/06/Documentation"]
+	path = 2024/04/06/Documentation
+	url = https://github.com/Agoric/Documentation
+[submodule "2024/04/06/eventual-send"]
+	path = 2024/04/06/eventual-send
+	url = https://github.com/Agoric/eventual-send
+[submodule "2024/04/06/big_dipper"]
+	path = 2024/04/06/big_dipper
+	url = https://github.com/agoric-labs/big_dipper
+[submodule "2024/04/06/esm"]
+	path = 2024/04/06/esm
+	url = https://github.com/agoric-labs/esm
+[submodule "2024/04/06/tape-xs"]
+	path = 2024/04/06/tape-xs
+	url = https://github.com/agoric-labs/tape-xs
+[submodule "2024/04/06/proposal-wavy-dot"]
+	path = 2024/04/06/proposal-wavy-dot
+	url = https://github.com/Agoric/proposal-wavy-dot
+[submodule "2024/04/06/ertp"]
+	path = 2024/04/06/ertp
+	url = https://github.com/Agoric/ertp
+[submodule "2024/04/06/eslint-config-jessie"]
+	path = 2024/04/06/eslint-config-jessie
+	url = https://github.com/Agoric/eslint-config-jessie
+[submodule "2024/04/06/interchaintest"]
+	path = 2024/04/06/interchaintest
+	url = https://github.com/Agoric-labs/interchaintest
+[submodule "2024/04/06/ERTP"]
+	path = 2024/04/06/ERTP
+	url = https://github.com/Agoric/ERTP
+[submodule "2024/04/06/moddable"]
+	path = 2024/04/06/moddable
+	url = https://github.com/agoric-labs/moddable
+[submodule "2024/04/06/agoric-3-proposals"]
+	path = 2024/04/06/agoric-3-proposals
+	url = https://github.com/Agoric/agoric-3-proposals
+[submodule "2024/04/06/realms-shim"]
+	path = 2024/04/06/realms-shim
+	url = https://github.com/Agoric/realms-shim
+[submodule "2024/04/06/xsnap-pub"]
+	path = 2024/04/06/xsnap-pub
+	url = https://github.com/agoric-labs/xsnap-pub
+[submodule "2024/04/06/SES-shim"]
+	path = 2024/04/06/SES-shim
+	url = https://github.com/Agoric/SES-shim
+[submodule "2024/04/06/agoric"]
+	path = 2024/04/06/agoric
+	url = https://github.com/Agoric/agoric
