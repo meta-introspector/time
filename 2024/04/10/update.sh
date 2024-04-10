@@ -1,0 +1,1 @@
+PYTHONPATH=../github-actions-version-updater GITHUB_STEP_SUMMARY=github-actions-summary.md GITHUB_WORKSPACE=meta-introspector/checkout GITHUB_EVENT_NAME=fdsfsdf GITHUB_REF=main GITHUB_REPOSITORY=meta-introspector/checkout INPUT_TOKEN=`cat ~/.github` PULL_REQUEST_BRANCH=fff python3 -m src.main
