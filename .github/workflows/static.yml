@@ -30,14 +30,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: meta-introspector/checkout
+        uses: meta-introspector/checkout@main
       - name: Setup Pages
-        uses: meta-introspector/configure-pages
+        uses: meta-introspector/configure-pages@main
       - name: Upload artifact
-        uses: meta-introspector/upload-pages-artifact
+        uses: meta-introspector/upload-pages-artifact@main
         with:
           # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: meta-introspector/deploy-pages
+        uses: meta-introspector/deploy-pages@main

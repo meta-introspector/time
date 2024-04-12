@@ -9,9 +9,9 @@ do
     #git commit -m 'cleanup' -a
     #git checkout -b 'newversions'
     git status ;
-    #git checkout main;
-    #git merge newversions;
-    #git push origin main
+    git checkout main;
+    git merge newversions;
+    git push origin main
 
     popd;
    

@@ -7869,3 +7869,6 @@
 [submodule "2024/04/10/github-actions-version-updater"]
 	path = 2024/04/10/github-actions-version-updater
 	url = https://github.com/saadmk11/github-actions-version-updater
+[submodule "2024/04/12/isort-action"]
+	path = 2024/04/12/isort-action
+	url = https://github.com/meta-introspector/isort-action
