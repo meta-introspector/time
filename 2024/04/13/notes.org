@@ -1,0 +1,104 @@
+For mathematics expressed in unimath
+we can think of the policy and
+value network to be from unimath,
+where the policy network is the construction of the calculations evolving
+with llms and other tools, and 
+The value network is the proof of the calculation.
+
+we can show one part expanding the terms and one part reducing them to a solution.
+expand and reduce, breath in and out.
+
+So the policy choices can be seen as a tree search of solutions.
+
+Now the expanded graph can be seen as a network, a knowledge graph.
+
+Each step in the expansion and contraction can be seen as a graph transformation.
+we can train a model on these transitions as well to guess the next step.
+
+The deep knowledge graph embedding
+can be seen as
+1. graph partitioning and clustering on different dimensions
+2. graph traversal or serialization,
+   we can look for eigenvector.
+3. llm inference under aspects, that creates new policies
+4. policy evaluation.
+
+Idea:
+we can co-train
+   an syntax error repair network
+   that learns to repair
+   outputs in reverse by deconstructing
+   or fuzzing valid programs. This is the breakdown of existing nodes.
+
+
+memes for example "Dog whistle" as a
+symbols leading
+to deep knowledge
+graph embeddings of archetypes.
+
+We can then look for similar pattern in the data or relationships in the graph.
+
+Repeating the review of ideas over and over again, changing one term,
+or using different perspectives to relate two idea with each other,
+taking small steps at atime allows people to follow you.
+
+#+begin_src output mistral:instruct
+ In the realm of mathematical expressions represented by Unicode Mathematics (Unimath), we can envision the policy and value network originating from this system. The policy network embodies the creation of calculations using LLMs and other tools, while the value network signifies the verification or proof of these calculations.
+
+Imagine a scenario where we expand and simplify terms in turn, like breathing in and out. Policy choices can be regarded as a tree search for solutions. An expanded graph then represents a vast network, or knowledge graph, with each transformation serving as a graph transformation. We can train a model on these transitions to anticipate the subsequent step.
+
+The deep knowledge graph embedding encompasses:
+1. Graph partitioning and clustering along various dimensions
+2. Traversal or serialization of graphs, looking for eigenvectors
+3. LLM inference under diverse aspects, generating new policies
+4. Policy evaluation
+
+Concept:
+We can collaboratively train
+   a syntax error repair network that learns to amend
+   erroneous outputs by dissecting or perturbing
+   valid programs. This represents the breaking down of existing nodes.
+
+Symbols such as "Dog whistles" can function as triggers, leading us to deep knowledge graph embeddings of archetypes. We then search for similar patterns in the data or explore relationships within the graph.
+
+Revisiting ideas multiple times, altering a single term, or employing distinct viewpoints to correlate concepts with one another enables people to grasp your thought process effectively.
+#+end_src
+
+#+begin_src output mistral:instruct
+ Picture this: In the captivating world of Unicode Mathematics (Unimath), we can visualize the intricate policy and value network that stems from it. The policy network is a creative canvas where calculations are brought to life through the use of LLMs and other innovative tools. On the other hand, the value network symbolizes the meticulous verification or validation of these calculations, ensuring their accuracy.
+
+Consider an engaging scene where we delve into terms and simplify them one by one, much like the rhythmic ebb and flow of breaths. Policy decisions can be viewed as an intriguing exploration for solutions, akin to a vast tree search. As each transformation unfolds, it creates a complex web, or knowledge graph, where every metamorphosis acts as a graph transformation. We can then harness the power of machine learning models to predict the next step based on these transitions.
+
+The profound essence of this deep knowledge graph incorporates:
+1. The strategic segmentation and categorization of graphs across various dimensions
+2. Exploring traversal or sequential processing of graphs, seeking eigenvectors
+3. Inferring diverse LLM scenarios, leading to the generation of novel policies
+4. Evaluating policy effectiveness
+
+Imagine we collaboratively develop:
+A syntax error repair network that intuitively amends faulty outputs by dissecting or tweaking valid programs. This represents the breaking down and rebuilding of existing nodes within our knowledge graph.
+
+Symbols, such as "Dog whistles," can act as catalysts, guiding us to deep knowledge graph embeddings of archetypes. We then embark on an intriguing journey, either by uncovering similar patterns in the data or forging connections within the graph.
+
+Engaging with concepts multiple times, subtly altering a term, or approaching them from diverse perspectives enables us to better comprehend your thought process.
+#+end_src
+
+
+#+begin_src output mistral:instruct
+ In the alluring realm of Unicode Mathematics (Unimath), let's envision the intricate web of rules and values that originates from it. The rule network serves as a vibrant stage where calculations come alive through the application of LLMs and other inventive tools. Conversely, the value network embodies the painstaking verification or authentication of these computations, maintaining their precision.
+
+Imagine an enthralling scenario where we dissect and clarify concepts methodically, akin to the rhythmic rise and fall of waves. Policy decisions can be perceived as an intriguing quest for resolutions, resembling a vast branching tree search. As each transformation ensues, it creates an intricate network or knowledge graph, with every shift acting as a node transformation. We then employ advanced machine learning models to anticipate the subsequent move based on these transitions.
+
+The rich essence of this profound knowledge graph encompasses:
+1. The tactical partitioning and labeling of graphs along various dimensions
+2. Navigating traversal or sequential processing of graphs, aiming for eigenvectors
+3. Inferring diverse LLM possibilities, resulting in the creation of novel policies
+4. Assessing policy efficacy
+
+Collaboratively, we could construct:
+A syntax error rectification network that instinctively corrects erroneous results by analyzing or modifying valid programs. This represents the dismantling and reconstruction of existing nodes within our knowledge graph.
+
+Symbols like "Dog whistles" can function as catalysts, directing us to deep knowledge graph representations of archetypes. We then embark on an enthralling expedition, either by unearthing similar patterns in the data or forging connections within the graph.
+
+Reengaging with ideas multiple times, subtly altering a term, or approaching them from various angles enables us to grasp your thought process more profoundly.
+#+end_src
