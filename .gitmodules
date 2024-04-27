@@ -7875,3 +7875,150 @@
 [submodule "2024/04/12/set-swap-space"]
 	path = 2024/04/12/set-swap-space
 	url = https://github.com/meta-introspector/set-swap-space
+[submodule "2024/04/16/gh-repo-clone-all"]
+	path = 2024/04/16/gh-repo-clone-all
+	url = https://github.com/dword-design/gh-repo-clone-all
+[submodule "2024/04/16/akm"]
+	path = 2024/04/16/akm
+	url = https://github.com/ohsawa0515/akm
+[submodule "2024/04/17/opentofu"]
+	path = 2024/04/17/opentofu
+	url = https://github.com/opentofu/opentofu
+[submodule "2024/04/17/multihash"]
+	path = 2024/04/17/multihash
+	url = https://github.com/multiformats/multihash
+[submodule "2024/04/17/pymultihash"]
+	path = 2024/04/17/pymultihash
+	url = https://github.com/ivilata/pymultihash
+[submodule "2024/04/17/sentencepiece"]
+	path = 2024/04/17/sentencepiece
+	url = https://github.com/google/sentencepiece
+[submodule "2024/04/17/tokenizers"]
+	path = 2024/04/17/tokenizers
+	url = https://github.com/huggingface/tokenizers
+[submodule "2024/04/19/grok-1-tiny-random"]
+	path = 2024/04/19/grok-1-tiny-random
+	url = https://huggingface.co/yujiepan/grok-1-tiny-random
+[submodule "2024/04/19/plantuml-parser"]
+	path = 2024/04/19/plantuml-parser
+	url = https://github.com/Enteee/plantuml-parser
+[submodule "2024/04/19/plantuml"]
+	path = 2024/04/19/plantuml
+	url = https://github.com/meta-introspector/plantuml
+[submodule "2024/04/20/aws-icons-for-plantuml"]
+	path = 2024/04/20/aws-icons-for-plantuml
+	url = https://github.com/awslabs/aws-icons-for-plantuml
+[submodule "2024/04/20/terraform-plantuml"]
+	path = 2024/04/20/terraform-plantuml
+	url = https://github.com/fmalk/terraform-plantuml
+[submodule "2024/04/21/plantuml-stdlib"]
+	path = 2024/04/21/plantuml-stdlib
+	url = https://github.com/plantuml/plantuml-stdlib
+[submodule "2024/04/21/PlantUMLHitchhikersGuide"]
+	path = 2024/04/21/PlantUMLHitchhikersGuide
+	url = https://github.com/Crashedmind/PlantUMLHitchhikersGuide
+[submodule "2024/04/21/plantuml-icon-font-sprites"]
+	path = 2024/04/21/plantuml-icon-font-sprites
+	url = https://github.com/tupadr3/plantuml-icon-font-sprites
+[submodule "2024/04/21/PlayingWithPlantUMLSource"]
+	path = 2024/04/21/PlayingWithPlantUMLSource
+	url = https://github.com/Crashedmind/PlayingWithPlantUMLSource
+[submodule "2024/04/24/terraform-examples"]
+	path = 2024/04/24/terraform-examples
+	url = https://github.com/futurice/terraform-examples
+[submodule "2024/04/24/terraform-on-aws-ec2"]
+	path = 2024/04/24/terraform-on-aws-ec2
+	url = https://github.com/stacksimplify/terraform-on-aws-ec2
+[submodule "2024/04/26/ipfs-cluster-fargate"]
+	path = 2024/04/26/ipfs-cluster-fargate
+	url = https://github.com/aws-samples/ipfs-cluster-fargate/
+[submodule "2024/04/27/iptoasn"]
+	path = 2024/04/27/iptoasn
+	url = https://github.com/libp2p/iptoasn
+[submodule "2024/04/27/js-libp2p"]
+	path = 2024/04/27/js-libp2p
+	url = https://github.com/libp2p/js-libp2p
+[submodule "2024/04/27/rust-libp2p"]
+	path = 2024/04/27/rust-libp2p
+	url = https://github.com/libp2p/rust-libp2p
+[submodule "2024/04/27/universal-connectivity"]
+	path = 2024/04/27/universal-connectivity
+	url = https://github.com/libp2p/universal-connectivity
+[submodule "2024/04/27/go-libp2p"]
+	path = 2024/04/27/go-libp2p
+	url = https://github.com/libp2p/go-libp2p
+[submodule "2024/04/27/blog"]
+	path = 2024/04/27/blog
+	url = https://github.com/libp2p/blog
+[submodule "2024/04/27/go-libp2p-pubsub"]
+	path = 2024/04/27/go-libp2p-pubsub
+	url = https://github.com/libp2p/go-libp2p-pubsub
+[submodule "2024/04/27/js-libp2p-amino-dht-bootstrapper"]
+	path = 2024/04/27/js-libp2p-amino-dht-bootstrapper
+	url = https://github.com/libp2p/js-libp2p-amino-dht-bootstrapper
+[submodule "2024/04/27/specs"]
+	path = 2024/04/27/specs
+	url = https://github.com/libp2p/specs
+[submodule "2024/04/27/go-libp2p-raft"]
+	path = 2024/04/27/go-libp2p-raft
+	url = https://github.com/libp2p/go-libp2p-raft
+[submodule "2024/04/27/cpp-libp2p"]
+	path = 2024/04/27/cpp-libp2p
+	url = https://github.com/libp2p/cpp-libp2p
+[submodule "2024/04/27/website"]
+	path = 2024/04/27/website
+	url = https://github.com/libp2p/website
+[submodule "2024/04/27/go-libp2p-relay-daemon"]
+	path = 2024/04/27/go-libp2p-relay-daemon
+	url = https://github.com/libp2p/go-libp2p-relay-daemon
+[submodule "2024/04/27/libp2p"]
+	path = 2024/04/27/libp2p
+	url = https://github.com/libp2p/libp2p
+[submodule "2024/04/27/github-mgmt"]
+	path = 2024/04/27/github-mgmt
+	url = https://github.com/libp2p/github-mgmt
+[submodule "2024/04/27/py-libp2p"]
+	path = 2024/04/27/py-libp2p
+	url = https://github.com/libp2p/py-libp2p
+[submodule "2024/04/27/docs"]
+	path = 2024/04/27/docs
+	url = https://github.com/libp2p/docs
+[submodule "2024/04/27/go-libp2p-gorpc"]
+	path = 2024/04/27/go-libp2p-gorpc
+	url = https://github.com/libp2p/go-libp2p-gorpc
+[submodule "2024/04/27/go-netroute"]
+	path = 2024/04/27/go-netroute
+	url = https://github.com/libp2p/go-netroute
+[submodule "2024/04/27/test-plans"]
+	path = 2024/04/27/test-plans
+	url = https://github.com/libp2p/test-plans
+[submodule "2024/04/27/go-libp2p-kad-dht"]
+	path = 2024/04/27/go-libp2p-kad-dht
+	url = https://github.com/libp2p/go-libp2p-kad-dht
+[submodule "2024/04/27/jvm-libp2p"]
+	path = 2024/04/27/jvm-libp2p
+	url = https://github.com/libp2p/jvm-libp2p
+[submodule "2024/04/27/go-libp2p-asn-util"]
+	path = 2024/04/27/go-libp2p-asn-util
+	url = https://github.com/libp2p/go-libp2p-asn-util
+[submodule "2024/04/27/npm-go-libp2p"]
+	path = 2024/04/27/npm-go-libp2p
+	url = https://github.com/libp2p/npm-go-libp2p
+[submodule "2024/04/27/js-libp2p-delegated-peer-routing"]
+	path = 2024/04/27/js-libp2p-delegated-peer-routing
+	url = https://github.com/libp2p/js-libp2p-delegated-peer-routing
+[submodule "2024/04/27/go-libp2p-daemon"]
+	path = 2024/04/27/go-libp2p-daemon
+	url = https://github.com/libp2p/go-libp2p-daemon
+[submodule "2024/04/27/hydra-booster"]
+	path = 2024/04/27/hydra-booster
+	url = https://github.com/libp2p/hydra-booster
+[submodule "2024/04/27/js-libp2p-cms"]
+	path = 2024/04/27/js-libp2p-cms
+	url = https://github.com/libp2p/js-libp2p-cms
+[submodule "2024/04/27/zeroconf"]
+	path = 2024/04/27/zeroconf
+	url = https://github.com/libp2p/zeroconf
+[submodule "2024/04/27/go-routing-language"]
+	path = 2024/04/27/go-routing-language
+	url = https://github.com/libp2p/go-routing-language
