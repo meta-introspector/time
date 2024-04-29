@@ -1,0 +1,25 @@
+Metaphors as features, edges.
+edge spans multiple nodes so nodesets to create hyperedges.
+Hypergraph learning and Deep hypergraph learning
+
+#+begin_src bash
+git submodule add https://github.com/iMoonLab/DeepHypergraph
+#+end_src
+
+#+RESULTS:
+
+Edges as branches, pointers,
+nodes as instruction types.
+
+intruction bytes as input,
+mask as learned model.
+split between instructions and parameters.
+instructions that depend on state of
+other instructions become hyper edges.
+calculating dependencies.
+dependencies as message passing.
+
+perf execution traces as inputs.
+perf records as input.
+perf code as input.
+
