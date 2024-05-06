@@ -8022,3 +8022,27 @@
 [submodule "2024/04/27/go-routing-language"]
 	path = 2024/04/27/go-routing-language
 	url = https://github.com/libp2p/go-routing-language
+[submodule "DeepHypergraph"]
+	path = DeepHypergraph
+	url = https://github.com/iMoonLab/DeepHypergraph
+[submodule "2024/04/29/DeepHypergraph"]
+	path = 2024/04/29/DeepHypergraph
+	url = https://github.com/iMoonLab/DeepHypergraph
+[submodule "2024/04/29/aws-modernization-workshop-sample"]
+	path = 2024/04/29/aws-modernization-workshop-sample
+	url = https://github.com/aws-samples/aws-modernization-workshop-sample
+[submodule "2024/05/04/terraform-ls"]
+	path = 2024/05/04/terraform-ls
+	url = https://github.com/hashicorp/terraform-ls
+[submodule "2024/05/05/hcledit"]
+	path = 2024/05/05/hcledit
+	url = https://github.com/minamijoyo/hcledit
+[submodule "2024/05/05/hcl2json"]
+	path = 2024/05/05/hcl2json
+	url = https://github.com/tmccombs/hcl2json
+[submodule "2024/05/05/nebula"]
+	path = 2024/05/05/nebula
+	url = https://github.com/vesoft-inc/nebula
+[submodule "2024/05/05/GraphKAN-Graph-Kolmogorov-Arnold-Networks"]
+	path = 2024/05/05/GraphKAN-Graph-Kolmogorov-Arnold-Networks
+	url = https://github.com/twilwa/GraphKAN-Graph-Kolmogorov-Arnold-Networks
