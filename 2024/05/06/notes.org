@@ -1,0 +1,50 @@
+summary of my current thoughts :
+
+0. insert definitions of fibers and quasifibers and base spaces.
+   to connect fibers to traces of executions of programs:
+   The fibers are the transitions or connections between one or more states in a hypergraph.   
+   The base space of states could be seen as the the memory of a program (also including the code).
+   the if memory is allocated dynamically or reused then we will have to add in new states to capture them.
+0.1 deep graph embedding
+   nodes ids are numbers to index the states, we sort the nodes
+   so the most common and core ones are centered at 1 and the higher we go the
+   more rare.
+0.2 hyperedges
+   the hyperedge connects more than one node. we can imagine it as an
+   artificial node with a chain of connections, the most important one first.
+0.3 edge types
+   the connections are edges between nodes.
+   if new types of transitions are found we can add them as new edge types.
+      
+1. comprehensive, self descriptive,
+   recurisive hierarchy of strongly typed data structures
+   like found in metacoq creates a perspective of how to view the world,
+   it is a meta-narrative of sorts and we can find many difference
+   equilvalent forms or languages that all describe the world to the same
+   level of detail that can be translated back and forth between each other. 
+   
+2. These paths inside or between type systems can be seen as fibers of a higher dimensional
+   structure that is expressing iteslf in a lower dimensional form.
+   so we can think of a cluster of instances of an asts or
+   a metacoq set of terms, or a graph of json data as embeddings of a higher dimenstional concept
+   that is expressed in a lower dimension.
+
+3. comprehensive applied to json.
+   json is composed of scalars, arrays and dictionaries.
+   a dict can be seen as a list of pairs.
+   now we can think of the system that is closed where each name or the index of an array
+   is also meaningful and described in the system.
+   each scalar value is defined somewhere
+   with a dictionary or a function that returns a dictionary of data about that scalar.
+4. expansion and reduction to create rings.
+   like integers and reals we can imagine we can add more details to the
+   core circle of data states to expand them to a larger expanded circle
+   that can be thought of adding the defintions of the scalars.
+   so if we start with the set of scalars and for each scalar we add in the dictionary of defintions about that scalar
+   and then we can see the set of the terms in those dictionaries as
+   the ontology. Now we might have overlapping definitions of terms so that one term
+   might map to another in different systems. We might split up these into groups.
+5. textual analysis of code via binary compiler execution introspection:
+   we can follow the path of execution of a compiler binary with a number of tools
+   to capture the meaning of the code textual language input and mark it up automatically.
+   
