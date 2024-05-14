@@ -8046,3 +8046,33 @@
 [submodule "2024/05/05/GraphKAN-Graph-Kolmogorov-Arnold-Networks"]
 	path = 2024/05/05/GraphKAN-Graph-Kolmogorov-Arnold-Networks
 	url = https://github.com/twilwa/GraphKAN-Graph-Kolmogorov-Arnold-Networks
+[submodule "2024/05/10/terraform-secure-express-example"]
+	path = 2024/05/10/terraform-secure-express-example
+	url = https://github.com/auth0-blog/terraform-secure-express-example
+[submodule "2024/05/10/hasura-react-auth0-lambda-starter"]
+	path = 2024/05/10/hasura-react-auth0-lambda-starter
+	url = https://github.com/chazgorman/hasura-react-auth0-lambda-starter/
+[submodule "2024/05/11/ansible-ssm"]
+	path = 2024/05/11/ansible-ssm
+	url = https://github.com/HQarroum/ansible-ssm
+[submodule "2024/05/11/ansible-tailscale-inventory"]
+	path = 2024/05/11/ansible-tailscale-inventory
+	url = https://github.com/m4wh6k/ansible-tailscale-inventory
+[submodule "2024/05/11/ansible-aws-cli"]
+	path = 2024/05/11/ansible-aws-cli
+	url = https://github.com/xchangebit/ansible-aws-cli
+[submodule "2024/05/11/terraform-provider-aws"]
+	path = 2024/05/11/terraform-provider-aws
+	url = https://github.com/hashicorp/terraform-provider-aws
+[submodule "2024/05/11/terraform-ssm-runcommand"]
+	path = 2024/05/11/terraform-ssm-runcommand
+	url = https://github.com/paololazzari/terraform-ssm-runcommand
+[submodule "2024/05/12/ansible-role-nvidia-driver"]
+	path = 2024/05/12/ansible-role-nvidia-driver
+	url = https://github.com/NVIDIA/ansible-role-nvidia-driver
+[submodule "2024/05/12/test-ground-infra"]
+	path = 2024/05/12/test-ground-infra
+	url = https://github.com/meta-introspector/test-ground-infra
+[submodule "2024/05/14/go-log"]
+	path = 2024/05/14/go-log
+	url = https://github.com/ipfs/go-log
