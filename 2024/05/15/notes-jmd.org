@@ -90,3 +90,9 @@ it would generate minimal access policies
 for the run system and extensive reports.
 we can feed those to ai with priority.
 
+*** semantic integration
+integrate all of this into the following equivalent apis
+*** openapi apis
+*** graphql apis
+*** rdf sparql apis
+*** ocaml/rust/coq types
