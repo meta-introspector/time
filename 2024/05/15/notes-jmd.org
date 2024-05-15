@@ -49,3 +49,44 @@ incidents and changes, patches applied
 audits 
 reports, dialogs, emails, chats, meetings.
 datasets created from all the other sources.
+
+* layers
+
+** private data
+like server keys
+
+private git hub repos on aws code commit for usage by servers.
+with aws type, account, region, repo and branch or commit
+parameters in ssm, or consul, or vault
+
+property like servers and buildings
+profile data
+user profiles
+traffic samples
+
+** protected data
+like cluster configurations
+parameters in ssm, or consul, or vault
+
+** public data
+like protocols and open source code.
+
+a bias towards freedom.
+ontologies, schemas and forms.
+
+* generators
+
+Imagine a terraform script that
+generates a terraform script and
+runs it on a new aws account it creates.
+it can be used to provision runners
+of a single command and audits
+the execution.
+like atlantis but self hosting
+in docker.
+it would collect perf data, systrace,
+protocols, etc.
+it would generate minimal access policies
+for the run system and extensive reports.
+we can feed those to ai with priority.
+
