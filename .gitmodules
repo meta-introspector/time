@@ -8076,3 +8076,12 @@
 [submodule "2024/05/14/go-log"]
 	path = 2024/05/14/go-log
 	url = https://github.com/ipfs/go-log
+[submodule "2024/05/14/extended-parachain-template"]
+	path = 2024/05/14/extended-parachain-template
+	url = https://github.com/paritytech/extended-parachain-template
+[submodule "2024/05/14/zombienet"]
+	path = 2024/05/14/zombienet
+	url = https://github.com/paritytech/zombienet
+[submodule "2024/05/14/substrate-node-template"]
+	path = 2024/05/14/substrate-node-template
+	url = https://github.com/substrate-developer-hub/substrate-node-template
