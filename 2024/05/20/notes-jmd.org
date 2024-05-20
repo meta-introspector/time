@@ -1,0 +1,303 @@
+In the document I try and recap the major ideas of the introspector
+project. 
+
+* RDF
+
+the http link or pointer as a fundamental resource to an object on
+the internet. The semantic web as a series of statements about subject predicate object in context
+as the sum of knowledge.
+
+* hypergraph
+
+the collection of statements together into a context to create hyperedges
+for making statements about multiple nodes in an edge.
+
+* user probes in perf
+
+the usage of linux perf to construct a
+user defined kernel module to extract a specific resource from a program
+at runtime in any programming language.
+
+* graph constructions as sampling.
+
+the construction of graphs of data from program executions as sampling
+of internal states. We can think of a user data probe in perf.
+
+* construction of possible probes as feature engineering.
+
+samplng of the compiler runtime data to construct probes and other
+derivative works from the source code of the program,
+labeled with test cases and traces.
+
+* UU the universe of universes
+
+We can think of the the UU or universe of universes of unimath to
+be a fundamental pointer to any type that can be shown to be equivalent to
+other types so that we can use to for thinking about any model.
+All the programming language models can be seen as instances of this UU type,
+so if we say "the gnu compiler" we can summarize its internal model with a single unitary UU
+object with many internal dimensions that represents it at a current time period
+or state.
+
+* Basic premise : "gnu bias"
+
+We can see the evolution of society via free/libre open source software,
+linux, wikipedia, open data and finally ai models that are built all
+on the bootstrap of gcc and linux indirectly.
+also bitcoin as an open source project is important.
+The amount of data about this process has influenced also the training of the llms
+in the corpus and the selection of the data in a way that I call the "gnu bias".
+We can see this as coming from the lisp lambda function, from the godel number
+as the idea that there exists memes as numbers that are self replicating and modifying.
+we can catalog and relate them to each other and then construct bridges and proofs
+between them in the meta introspector framwork by seeing them as instances of
+the introspector meme.
+The universe of universes or the UU or the any type
+as the fundamental unit of awareness that is a viewpoint constructed
+out of process of the meme construction and execution.
+
+* Introspector narrative
+
+** Cybernetic feedback loop
+The story about the introspector is that about
+how any program can reveal data about itself at runtime
+constructing a REPL feedback loop with the user in
+interactive learning environment.
+
+*** REPL
+read eval print loop
+
+* internal state
+* runtime inspection
+read and interpreting and print internal state
+observability framework for selecting the needed data dynamically.
+content negotiation
+
+** private and secret data
+*** access control lists.
+you want to make sure that only authorized users
+have access to data.
+tainted data flows.
+
+* OODA
+
+observe, orient, decide, act
+
+* self modifying
+
+emacs can load and eval new functions at runtime
+
+* open source
+the code is open source with community behind
+it creating a valuable meta data resource so
+that the public models are also trained on data about them.
+including in model training.
+
+* available source
+The code is available source and available to build binaries that
+are clearly derived from the source 
+
+* Introspector meta meme idea
+
+The metameme is a meme about memes.
+it constucts new memes and adapts them.
+
+** dawkins meme
+The dawkins meme about behavioural memes is play on the idea of the selfish gene.
+
+** meme meme
+The meme meme about picture memes is a mutation on the dawkins meme.
+
+** HGT meta meme.
+we can think of it as a fungus that collects dna via horizontal
+gene transfer into itself by hyphea.
+
+* Introspector meme coin idea.
+Meta meme coin that is a meta protocol.
+it is instanciated in multiple instances of in a typeclass in coq/ocaml or
+is a provider in terraform or a driver in the kernel or so/dll shim or python object
+or javascript object.
+
+** instances
+Instances can serve as prototypes.
+first instance is this time repo, and the linked meta-meme wiki.
+and other meta-introspector repositories, and other repos
+linked in. 
+
+*** org mode headings
+
+Org mode headings for addresses or anchor of urls that can be referenced.
+
+This heading here "org mode headings" can live in multiple servers as well.
+it will have multiple versions. We can hash the contents.
+but the essence of a self referencial loop is a topological space as well.
+we can look at it like loop in the topology and ask ourselves does it reduce
+to a point or a hole? it is somewhat like the decision problem.
+we can think about this more.
+We can think of self reference as something that is unresolved or
+creates continuations or curried state. It is an attempt at creating a meme.
+
+so instances of org mode headings can be seen as instances of the meta protocol.
+json and yaml documents as well. documents that can be processed in pandoc.
+
+* Brainstorm
+stream of consiousness.
+
+emacs is a c program.
+lift into rust via coq.
+trace the parts of emacs I use, and only port and test them on the fly
+and create the system as used as needed.
+we create an emergent functional system.
+replace emacs with any program
+run any open source, well documented,
+interactive program and trace it and be able to lift into a proof number.
+then we can multiply or add parts of it or other programs to construct new ones.
+rotations are multiplications. additions are optional disjoint unions.
+numbers turn into running programs.
+decision problem to know if to continue on one starting number or another.
+micropayments and encrypted states, or curried functions to capture
+state or metadata about state.
+we can think of logging as a derived state.
+instructions on the cpu are the most fundamental units of execution
+for the compiler. we can think of hot instructions as being executed the most
+or consuming the most resources.
+reducing the cost of hot instructions can have drastic effects on the runtime.
+replacing large data with smaller data can compress the state.
+each instruction takes time, power, memory and produces registers or side effects.
+the resulting values of the instructions can be modeled in
+neural network. we can construct a feature vector that
+samples different features for each record. some features will be null in some data types.
+we can partition the network into records with similar features.
+a deep graph knowledge embedding can learn new predicates as outputs or
+cached results of parts of its network.
+The combinatoric space is huge.
+we can think of the open source input of source code to the compiler, and the
+compilers source code itself as a form of a public key.
+The private key would be the context of its execution, a physical private space.
+some parts of our private space we choose to share, forming a public key.
+in the context of an abstract agent execution system that we can model after
+ssm, we deploy an agent to machines to form computational side effects.
+these side effects might be files written to disk, processes executed,
+clusters created. these can be thought about as custom terraform resources.
+we can imagine an audited, acl permissioned, secure, p2p, containerized,
+parameterized/configured, function as a part of a proof that runs inside of
+terraform as a provider.
+We can imagine llm workflows as being created by terraform resources.
+consider the
+ocaml, coq, c++, abi, rdf, graphql, grpc
+protocol types as records we can sample and transform between apis.
+we can consider micropayments for delivered or generated or found source code
+to achive some goal, fix some bug.
+There are zero knowledge proofs that form apis between systems to validate the work.
+we can think of quoting prices for equivalent goods on the blockchain
+with prices.
+each service provider can be seen as having a multi address on
+one or more networks.
+the prices quoting mechanism works by
+creating a spread across fungable resources.
+we can think of servers as composed of curried functions
+or states that are constructed by rotations of spinors or complex or arrays of real numbers or
+just bit representations or quantizations of those as representations or maps
+of data onto others as simple functions.
+we can think of truth tables of functions as a way to explore all the parameters
+of a certain space, and there are larger and larger spaces to explore.
+we can show by induction that this space gets larger.
+the private key of the owner of the hardware can be seen as starting
+a network.
+
+we construct proofs by composing calculations together that we can prove
+to fulfil the need or create an equivalent or even dummy type.
+we can think of a proxy or mirror type that is equivalent to another type
+or can reflect it and represent it fully for the needs of the system.
+this can be represented in bits in a compressed form.
+we can think of names of services as the addresses of memory
+of functions and data (static and dynamic memory) that is
+accessible from the system.
+each function becomes a number, each server as well, the composed number of the server plus function
+has two parts, the public and private.
+thus we can show equivalance between the memory address of some feature on
+two servers even if they have different fundamental physical attributes or spinors.
+in the gpu using augmented open source models.
+we can find tune those models on what we learn.
+new facts that we publish.
+we cam imagine a project where people buy into the network with compute.
+by connecting to ipfs nodes they can get copies of the files.
+so then we will fine tune the models on the public dataset we
+are creating. the public data are blocks you buy with gas to publish new knowledge into the system.
+the models are updated with the knowledge base.
+new knowledge is encorporated in and models are fine tuned.
+the changes to the weights are associated with the public data as
+well as with the model weights themselves.
+micro transations pay for the model hosting, cpu and gpu usage, networking and infratructure costs.
+each instruction of the binary is associated with a micro transaction,
+we can think of the compiler writers code as "buying" instruction gas
+for the user on the users hardware. so the user choosing the compiler is using gas to create
+programs that use more gas.
+we have a f(gas) -> f(f(gas)) relationship or similar.
+the compiler -> program
+compiler is a program that uses gas.
+using gas to run the compiler produces a program that uses more gas.
+writing a compiler to translate data.
+running a translator of data.
+capturing private data, sanitizing and publishing valuable data.
+we can think of our process here as brainstorming.
+relfecting over brainstorming as a creative process.
+capturing of thoughts and turning them into commercial products.
+thinking of apis and data types as commercial products.
+they represent a form of contract for service.
+
+service discovery becomes matching of numbers, also llms can be used and we can trace those executions as well
+so service matching becomes type equivalence, becomes proof of HOTT in COQ unimath.
+finding or refactoring of code.
+
+start with guix bootstrap.
+each resulting binary becomes a file on the blockchain or ipfs network.
+construct larger services.
+keep the private state and key secret in vault.
+consider rotations of keys and quantum cryptography.
+illumnating open source models and open source code traces as open dataset and model as valuable asset.
+
+* emacs org mode as an instances
+we can think of emacs and org mode as an example of a self documenting
+self introspecting system. if we think of emacs as part of the gnu project and GNU/linux system
+it becomes more apparent.
+we can think of it as an instance of the introspector metameme coin.
+it can spawn other coins.
+
+* meta meme wiki
+
+different articles in the meta meme wiki, or issues or discussions
+can be seen instances of the meme. we can relate them to the metameme elements in
+a matrix of points that define the metameme.
+We can rewrite them with differrent llms and capture traces of the models
+and relate them to each other. 
+
+* image generations
+
+different images generated with ai also form a body of the corpus.
+
+* github projects
+
+the diffrent github projects referenced, and also related ones, starred ones
+and associated or referenced projects.
+
+* other coins
+
+Other coins will be related to the project and instances created to references them.
+Holdings of those coins as wallets will be managed to provide resources.
+service discovery is done by a market pricing and coin swap setup.
+
+* supportable code
+
+private error messages on servers can be collected as logs and instead of being shared
+zero knowledge proofs can be constructed.
+The errors can be fed to ai via the ZKP to reconstruct public test cases
+to reproduce a given error, this can then be published into the knowledge base.
+this forms a support base and instances of open support tickets can be
+seen as the market demand.
+experts can suggest diagnostics that are safe to collect which
+results are then also encrypted.
+people can be paid for expert work. best answers can be used for training new models
+not only on the text but the resulting executable code.
+artists can be paid for contributions to models.
+
