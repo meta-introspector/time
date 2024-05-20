@@ -36,19 +36,21 @@ key creates cluster
 iso image created
 network topologies created.
 instance boot from iso image and user data script loads to boot.
+load configuration settings from private store, protected cluster storage and public sources.
 docker software installed from package repo
+programming language packages install (pip,npm)
 git repo pulled
 docker image pulled from docker repo
-inference applied from model blocks to records extracted from datasets.
 configuration management
 performance data collected
 usage data collected
 user profiles collected
-programming language packages
 incidents and changes, patches applied
 audits 
 reports, dialogs, emails, chats, meetings.
 datasets created from all the other sources.
+inference applied from model blocks to records extracted from datasets.
+proofs created using llmvwmcts
 
 * layers
 
@@ -89,6 +91,12 @@ protocols, etc.
 it would generate minimal access policies
 for the run system and extensive reports.
 we can feed those to ai with priority.
+
+generic :
+infrastructure
+
+remote script execution.
+github runner. jenkins-x
 
 *** semantic integration
 integrate all of this into the following equivalent apis
