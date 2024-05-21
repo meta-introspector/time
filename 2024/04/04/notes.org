@@ -1,0 +1,7 @@
+
+setup small petals network
+
+echo 'PJRT_DEVICE=TPU python -m petals.cli.run_server --port 31330 --num_blocks 4 petals-team/StableBeluga2 --initial_peers /ip4/10.128.0.41/tcp/31337/p2p/QmdrXCEWGMvjXxhCuys21JsB1kQbaL1zCFddNv9jb6KTix --device=xla' > join.sh
+
+docker run -d --net host --ipc host --volume petals-cache-backbone:/cache --name backbone --rm learningathome/petals:main python -m petals.cli.run_dht --host_maddrs /ip4/0.0.0.0/tcp/31337 --identity_path bootstrap1.id                              110  #docker logs                         111  #docker run -d --net host --ipc host --volume petals-cache-backbone:/cache --name backbone --rm learningathome/petals:main python -m petals.cli.run_dht --host_maddrs /ip4/0.0.0.0/tcp/31337 --identity_path bootstrap1.id
+docker logs  backbone | grep initial_peers

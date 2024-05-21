@@ -1,0 +1,28 @@
+What if we added limited trust back into blockchain,
+instead of not trusting people we had networks of more trust.
+Like with our software packages we trust that some git repo that we use is safe,
+like xz zip. :)
+So of course this trust might be misplaced. But in free/libre open source software you have a way
+validate the code.
+
+What if we said everyone was running a functional stack like guix or nix.
+Now with those two changes we can eliminate so much waste.
+How much is wasted trying to support windows and old browsers.
+
+the closure of a project is a set of where we can resolve all the references
+and compile all the code from the guix bootstrap.
+The path of the project are the derivations from the bootstrap to the executable.
+
+This script can be called over and over again to resolve git references and add them as submodules
+(as long as the names dont collide). We can add a new script to handle those names
+but this will get us quite far.
+
+We can think of the closure as the convergence of this git mess.
+
+#+begin_src shell
+      for x in `grep -a -o -P -h -r '(https:\/\/github.com\/[\w-]+\/[\w-]+)' * | sort -u`;
+      do git submodule add $x;
+      done
+      
+#+end_src
+
