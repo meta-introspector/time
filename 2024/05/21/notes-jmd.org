@@ -17,3 +17,5 @@ each project or each dataset can be a new linked resource.
 each sample can be thought of as a new data object in some dataset.
 a rdf chain or linked data chain must exists.
 https://dl.acm.org/doi/fullHtml/10.1145/3184558.3191554
+if we just start with guix bootstrap and study all the code
+needed to bootstrap the bootstrap we should be good.
