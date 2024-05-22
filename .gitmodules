@@ -8085,3 +8085,15 @@
 [submodule "2024/05/14/substrate-node-template"]
 	path = 2024/05/14/substrate-node-template
 	url = https://github.com/substrate-developer-hub/substrate-node-template
+[submodule "2024/05/22/tflint"]
+	path = 2024/05/22/tflint
+	url = https://github.com/terraform-linters/tflint
+[submodule "2024/05/22/terraform-ls"]
+	path = 2024/05/22/terraform-ls
+	url = https://github.com/hashicorp/terraform-ls
+[submodule "2024/05/22/rune"]
+	path = 2024/05/22/rune
+	url = https://github.com/CeleritasCelery/rune
+[submodule "2024/05/22/remacs"]
+	path = 2024/05/22/remacs
+	url = https://github.com/remacs/remacs
