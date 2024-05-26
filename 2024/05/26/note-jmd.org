@@ -19,3 +19,108 @@ shells and layers of privacy and data.
 * examples
 Start9.com
 Rocket.chat - javascript
+
+
+* submodule
+
+#+begin_src shell
+grep "url =" /mnt/data1/nix/time/.gitmodules  |cut -d= -f2 | cut -b2- |sort -u  > submodules.txt
+
+for x in `grep "> " diff.txt  |cut -b3-`' do github submodule add $x; done
+diff submodules.txt starsrepos.txt  > diff.txt
+grep "> " diff.txt  |cut -b3- >modules.txt
+#+end_src
+
+adding in all submodules
+
+* consider git
+
+consider the objects in multiple git repos
+we might even find the same object hashs in multiple
+repos.
+
+#+begin_src shell
+`find > files.txt`
+#+end_src
+
+running this will produce a bunch of
+.git references.
+
+#+begin_src shell
+find . -name \*.idx -exec git verify-pack -v {} \; -print
+
+sort < packs.txt |uniq -c |sort -n > report.txt
+
+grep blob packs.txt |cut "-d " -f1 |sort | uniq -c |sort -n |tail
+
+** example common blobs
+#+begin_src shell
+grep blob /mnt/data1/nix/packs.txt |cut "-d " -f1 |sort | uniq -c |sort -n |tail -10
+#+end_src
+
+#+RESULTS:
+|  4 | 9baaac1f51350572bd2a9066281a7076f8d07fea |
+|  4 | a846409201549b551413cc761971e9a343de93d2 |
+|  4 | be726b8541691d127c8312c3c975d8a1a3a53a28 |
+|  4 | d645695673349e3947e8e5ae42332d0ac3164cd7 |
+|  4 | ecb8613a7e4dbf9c1f7772db07f8d50dd7280537 |
+|  4 | f288702d2fa16d3cdf0035b15a9fcbc552cd88e7 |
+|  7 | 8b137891791fe96927ad78e64b0aad7bded08bdc |
+|  7 | 94a9ed024d3859793618152ea559a168bbcbb5e2 |
+| 10 | 261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64 |
+| 35 | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 |
+
+
+* model
+ git repo
+ git sub repo
+ pack files -> object files.
+ common object files between repos
+ (think autogpt clones)
+ construct a graph of repositories
+ containing the same or similar files.
+ branches and commits connecting those and people.
+
+ repo1:
+  c file - hash 456,  user2
+  readme - hash 123, user2
+ repo2:
+  readme - hash 123, user1
+
+ graph -> dkge, rdf4j
+
+ similarity search,
+copies and forks of repo from contents
+themselves.
+deep LLM embedding or vector of contents.
+   
+ attributes:
+ comprehensive,
+ search, query, edit, delete, insert,
+ bootstrapable,
+ secure,
+ audited,
+ open source,
+ self sustaining,
+ self modifying,
+ self describing,
+ unifying framework.
+ 
+ usage of knowledge graph:
+   search
+ 
+* bootstrap
+
+1. guix bootstrap starting from objects with hash BOOTSTRAP1.
+   in git repo at tree commit version V1.
+2. processes running on those files to produce new files with hash O1
+3. introspection processes that are tracing those derivations.
+   strace, ltrace, user probes, log files, valgrind information.
+4. this will give us a native partitioning and attention vector to
+   process the information and we can see what intermediate blocks are created
+   in memory from those inputs.
+5. we can look at each instruction and trace it back to source code,
+   we can show that the instructions are derived from source.
+6. we can look at the graph of the compilation, can show the compilation of
+   the compiler in relationship to the compilation of the user program in a complex relationship.
+      
