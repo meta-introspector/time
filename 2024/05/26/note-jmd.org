@@ -123,4 +123,31 @@ deep LLM embedding or vector of contents.
    we can show that the instructions are derived from source.
 6. we can look at the graph of the compilation, can show the compilation of
    the compiler in relationship to the compilation of the user program in a complex relationship.
-      
+
+
+* history
+
+#+begin_src shell
+  510  grep "url =" /mnt/data1/nix/time/.gitmodules  |cut -d= -f2 | cut -b2- |sort -u  > submodules.txt
+  511  cut -d, -f1 stars.csv | sort -u > starsrepos.txt
+  512  diff submodules.txt starsrepos.txt 
+  513  diff submodules.txt starsrepos.txt  > diff.txt
+  514  grep "> " diff.txt 
+  515  grep "> " diff.txt  |cut -b3-
+  516  for x in `grep "> " diff.txt  |cut -b3-`' do github submodule add $x; done
+  517  for x in `grep "> " diff.txt  |cut -b3-`;' do github submodule add $x; done
+  518  grep "> " diff.txt  |cut -b3- >modules.txt
+  519  bash ./run.sh
+
+  618  python3 ./export_stars.py  --user h4ck3rm1k3 --github-token XXXX
+  627  sort -u < stars.csv > stars2.csv
+  628  diff stars.csv stars2.csv 
+  629  cp stars2.csv  stars.csv 
+  630  git commit -m 'merge' stars.csv 
+
+  653  go install github.com/TimothyJones/csv-check@latest
+  662  go install github.com/TimothyJones/csv-clean@latest 
+  666  ~/go/bin/csv-clean <  stars.csv >stars2.csv 
+  667  cp stars2.csv stars.csv
+  670  ~/go/bin/csv-check <  stars.csv
+#+end_src
