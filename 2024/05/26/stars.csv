@@ -2862,8 +2862,8 @@ https://github.com/nix-community/nix-unstable-installer,A place to host Nix unst
 https://github.com/nix-community/NUR,Nix User Repository: User contributed nix packages [maintainer=@Mic92]
 https://github.com/nixified-ai/flake,A Nix flake for many AI projects
 https://github.com/NixOS/flake-registry,Global registry of Nix flakes
-https://github.com/NixOS/hydra,"Hydra, the Nix-based continuous build system"
-https://github.com/NixOS/nix,Nix, the purely functional package manager
+https://github.com/NixOS/hydra,"Hydra the Nix-based continuous build system"
+https://github.com/NixOS/nix,"Nix, the purely functional package manager"
 https://github.com/NixOS/nixops,NixOps is a tool for deploying to NixOS machines in a network or cloud.
 https://github.com/NixOS/nixpkgs,Nix Packages collection & NixOS
 https://github.com/NixOS/patchelf,A small utility to modify the dynamic linker and RPATH of ELF executables
