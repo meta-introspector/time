@@ -59,16 +59,16 @@ grep blob /mnt/data1/nix/packs.txt |cut "-d " -f1 |sort | uniq -c |sort -n |tail
 #+end_src
 
 #+RESULTS:
-|  4 | 9baaac1f51350572bd2a9066281a7076f8d07fea |
-|  4 | a846409201549b551413cc761971e9a343de93d2 |
-|  4 | be726b8541691d127c8312c3c975d8a1a3a53a28 |
-|  4 | d645695673349e3947e8e5ae42332d0ac3164cd7 |
+|  4 | eafb3fa03a67a7a8046e7ca485bee71b26035da6 |
 |  4 | ecb8613a7e4dbf9c1f7772db07f8d50dd7280537 |
-|  4 | f288702d2fa16d3cdf0035b15a9fcbc552cd88e7 |
-|  7 | 8b137891791fe96927ad78e64b0aad7bded08bdc |
-|  7 | 94a9ed024d3859793618152ea559a168bbcbb5e2 |
-| 10 | 261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64 |
-| 35 | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 |
+|  4 | f1c181ec9c5c921245027c6b452ecfc1d3626364 |
+|  5 | d00491fd7e5bb6fa28c517a0bb32b8b506539d4d |
+|  6 | f288702d2fa16d3cdf0035b15a9fcbc552cd88e7 |
+|  9 | 94a9ed024d3859793618152ea559a168bbcbb5e2 |
+|  9 | d645695673349e3947e8e5ae42332d0ac3164cd7 |
+| 15 | 261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64 |
+| 17 | 8b137891791fe96927ad78e64b0aad7bded08bdc |
+| 53 | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 |
 
 
 * model
@@ -151,3 +151,17 @@ deep LLM embedding or vector of contents.
   667  cp stars2.csv stars.csv
   670  ~/go/bin/csv-check <  stars.csv
 #+end_src
+
+* thoughts.
+
+1. the creation of,
+   construction of,
+   stringing together,
+   composing  parts of,
+   selection of,
+   symbols is called semiosis,
+   it can be formal of bloomy.
+2. we can consider stream of
+   consiousness writing, as also reading
+   while you are writing,
+   
