@@ -1,7 +1,7 @@
 url,description
 https://github.com/00-Evan/shattered-pixel-dungeon,"Shattered Pixel Dungeon is an open-source traditional roguelike dungeon crawler with randomized levels and enemies and hundreds of items to collect and use. It's based on the source code of Pixel Dungeon by Watabou."
 https://github.com/0-5788719150923125/vtx,an experiment
-https://github.com/0voice/backend_video,"后端免费技术分享视频，包含Linux，RTSP RTMP, HLS, 流媒体 ffmpeg WebRTCgolangNginx，ZeroMQ，MySQL，Redis，fastdfs，MongoDB，ZK，CDN，P2P，K8S，Docker，ffmpeg，TCP/IP，协程，DPDK"
+https://github.com/0voice/backend_video,"后端免费技术分享视频，包含Linux，RTSP RTMP HLS 流媒体 ffmpeg WebRTCgolangNginx，ZeroMQ，MySQL，Redis，fastdfs，MongoDB，ZK，CDN，P2P，K8S，Docker，ffmpeg，TCP/IP，协程，DPDK"
 https://github.com/0xPolygon/polygon-edge,A Framework for Building Ethereum-compatible Blockchain Networks
 https://github.com/0xProject/0x-monorepo,0x protocol monorepo - includes our smart contracts and many developer tools
 https://github.com/101tec/nutch,Mirror of Apache Nutch
@@ -107,7 +107,7 @@ https://github.com/ajhc/drift,A mirror of DrIFT.
 https://github.com/ajtulloch/decisiontrees,"High performance implementations of gradient boosting random forests etc. in Go"
 https://github.com/AJV009/AutoGPT,An experimental open-source attempt to make GPT-4 fully autonomous.
 https://github.com/akaihola/PyChecker,"PyChecker is a static analysis tool for finding bugs in Python source code. It finds problems that are typically caught by a compiler for less dynamic languages like C and C++. It is similar to lint. This is my mirror of https://github.com/thomasvs/pychecker"
-https://github.com/AkariAsai/self-rag,"This includes the original implementation of SELF-RAG: Learning to Retrieve, Generate and Critique through self-reflection by Akari Asai Zeqiu Wu Yizhong Wang Avirup Sil and Hannaneh Hajishirzi."
+https://github.com/AkariAsai/self-rag,"This includes the original implementation of SELF-RAG: Learning to Retrieve Generate and Critique through self-reflection by Akari Asai Zeqiu Wu Yizhong Wang Avirup Sil and Hannaneh Hajishirzi."
 https://github.com/akhilvij/systemd-to-sysvinit-converter,
 https://github.com/akirak/flake-templates,"A collection of barebone Nix shells for starting a project provided as flake templates"
 https://github.com/akkana/scripts,A collection of hopefully useful scripts.
@@ -148,7 +148,7 @@ https://github.com/alonsovidales/go_ml,"Machine Learning libraries for Go Lang -
 https://github.com/alphapapa/ement.el,A Matrix client for GNU Emacs
 https://github.com/alphapapa/org-ql,"A searching tool for Org-mode including custom query languages commands saved searches and agenda-like views etc."
 https://github.com/alphapapa/org-rifle,Rifle through your Org-mode buffers and acquire your target
-https://github.com/alrocar/POIProxy,"A proxy service to retrieve POIs (Points Of Interest) from several public services (Nominatim, Mapquest, Cloudmade, Geonames, Panoramio, Ovi, Flickr, Twitter, LastFM Wikipedia Youtube Foursquare ...)"
+https://github.com/alrocar/POIProxy,"A proxy service to retrieve POIs (Points Of Interest) from several public services (Nominatim Mapquest Cloudmade Geonames Panoramio Ovi Flickr Twitter LastFM Wikipedia Youtube Foursquare ...)"
 https://github.com/alstr/todo-to-issue-action,Action that converts TODO comments to GitHub issues on push.
 https://github.com/altaic/algebra-elementary,An elementary algebra library written in Haskell.
 https://github.com/alteryx/featuretools,An open source python library for automated feature engineering
@@ -407,7 +407,7 @@ https://github.com/berkshelf/buff-config,A simple configuration class
 https://github.com/berkshelf/ridley,A reliable Chef API client with a clean syntax
 https://github.com/BerlinVagrant/vagrant-dns,A plugin to manage DNS records for vagrant environments
 https://github.com/berpj/personal-farm,:tomato: An easy to build personal aeroponics system
-https://github.com/BerriAI/litellm,"Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic Ollama Sagemaker HuggingFace Replicate (100+ LLMs)"
+https://github.com/BerriAI/litellm,"Call all LLM APIs using the OpenAI format. Use Bedrock Azure OpenAI Cohere Anthropic Ollama Sagemaker HuggingFace Replicate (100+ LLMs)"
 https://github.com/bertramdev/hcl4j,HCL is the Hashicorp Configuration Language used in Terraform. This is a java Parser for parsing HCL and converting to Map objects.
 https://github.com/bertvv/ansible-role-bind,Sets up ISC BIND as an authoritative DNS server on several Linux distros & FreeBSD
 https://github.com/BetterVoice/freeswitch-container,This project can be used to deploy a FreeSWITCH server inside a Docker container. The container currently uses the latest stable release version 1.6.x. An effort was made to build many modules so the container can be generic enough to serve many purposes.
@@ -533,7 +533,7 @@ https://github.com/BVLC/caffe,Caffe: a fast open framework for deep learning.
 https://github.com/byteball/obyte-gui-wallet,Smart payments made simple
 https://github.com/c00w/hydrogen,Distributed System System
 https://github.com/C4ptainCrunch/django-semantic-mediawiki,Use django semantic mediawiki API as a django ORM backend
-https://github.com/c9s/GetOptionKit,"An object-oriented option parser library for PHP, which supports type constraints flag multiple flag multiple values required value checking"
+https://github.com/c9s/GetOptionKit,"An object-oriented option parser library for PHP which supports type constraints flag multiple flag multiple values required value checking"
 https://github.com/cachix/cachix,Command line client for Nix binary cache hosting:
 https://github.com/caddyserver/caddy,Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
 https://github.com/caioariede/django-location-field,"Location field and widget for Django. It supports Google Maps OpenStreetMap and Mapbox"
@@ -547,7 +547,7 @@ https://github.com/CannyLab/tsne-cuda,GPU Accelerated t-SNE for CUDA with Python
 https://github.com/canonical/snapcraft,"Package distribute and update any app for Linux and IoT."
 https://github.com/capistrano/capistrano,"A deployment automation tool built on Ruby Rake and SSH."
 https://github.com/capnproto/capnproto,Cap'n Proto serialization/RPC system - core tools and C++ library
-https://github.com/capstone-engine/capstone,"Capstone disassembly/disassembler framework for ARM, ARM64 (ARMv8), Alpha, BPF, Ethereum VM, HPPA, M68K, M680X, Mips, MOS65XX, PPC, RISC-V(rv32G/rv64G), SH, Sparc, SystemZ TMS320C64X TriCore Webassembly XCore and X86."
+https://github.com/capstone-engine/capstone,"Capstone disassembly/disassembler framework for ARM, ARM64 (ARMv8), Alpha, BPF, Ethereum VM, HPPA, M68K M680X Mips MOS65XX PPC RISC-V(rv32G/rv64G) SH Sparc SystemZ TMS320C64X TriCore Webassembly XCore and X86."
 https://github.com/cariaso/Semantic-MediaWiki-Bot,"Not quite working well yet as the server side is still evolving but a useful skeleton for my next round of improvement.  http://bugzilla.wikimedia.org/show_bug.cgi?id=45303"
 https://github.com/carld/micro-lisp,🎄A very small Lisp programming language 😀that used to be under 200 lines of C🎄
 https://github.com/carlini/yet-another-applied-llm-benchmark,A benchmark to evaluate language models on questions I've previously asked them to solve.
@@ -556,7 +556,7 @@ https://github.com/CarlQLange/chatgpt-arcana.el,Put ChatGPT in your emacs and gi
 https://github.com/cartazio/omega,Automatically exported from code.google.com/p/omega
 https://github.com/cashmusic/platform,"A free and open platform giving all musicians access to tools that let them manage promote and sell their music online."
 https://github.com/CastXML/CastXML,C-family Abstract Syntax Tree XML Output
-https://github.com/catchorg/Catch2,"A modern, C++-native test framework for unit-tests TDD and BDD - using C++14 C++17 and later (C++11 support is in v2.x branch and C++03 on the Catch1.x branch)"
+https://github.com/catchorg/Catch2,"A modern C++-native test framework for unit-tests TDD and BDD - using C++14 C++17 and later (C++11 support is in v2.x branch and C++03 on the Catch1.x branch)"
 https://github.com/cayleygraph/cayley,An open-source graph database
 https://github.com/ccccorey/waltonchain,
 https://github.com/CCLab/search-the-relics,A simple search site for polish edition of Wiki Loves Monuments
@@ -630,9 +630,9 @@ https://github.com/Chocobozzz/PeerTube,ActivityPub-federated video streaming pla
 https://github.com/ChrisDelClea/Inspirationals,
 https://github.com/chrisdone-archive/jl,Functional sed for JSON
 https://github.com/chrisdone-archive/jquery-console,A simple JQuery console emulator
-https://github.com/chrisjalinsky/dhcp-pxe-coreos,"A test environment for DNS, DHCP PXE TFTP CoreOS Kubernetes and related services"
-https://github.com/chrislusf/gleam,"Fast, efficient, and scalable distributed map/reduce system DAG execution in memory or on disk written in pure Go runs standalone or distributedly."
-https://github.com/chrislusf/glow,"Glow is an easy-to-use distributed computation system written in Go, similar to Hadoop Map Reduce, Spark, Flink Storm etc. I am also working on another similar pure Go system https://github.com/chrislusf/gleam  which is more flexible and more performant."
+https://github.com/chrisjalinsky/dhcp-pxe-coreos,"A test environment for DNS DHCP PXE TFTP CoreOS Kubernetes and related services"
+https://github.com/chrislusf/gleam,"Fast efficient and scalable distributed map/reduce system DAG execution in memory or on disk written in pure Go runs standalone or distributedly."
+https://github.com/chrislusf/glow,"Glow is an easy-to-use distributed computation system written in Go similar to Hadoop Map Reduce Spark Flink Storm etc. I am also working on another similar pure Go system https://github.com/chrislusf/gleam  which is more flexible and more performant."
 https://github.com/christheblog/datamining-go,Implementation of a few data mining algorithms in golang
 https://github.com/chriswoodford/Plesk-CLI-PHP-Client,
 https://github.com/chrivers/pyjaco,Python to JavaScript translator
@@ -777,7 +777,7 @@ https://github.com/corbinlc/GNURootDebian,This is the repository corresponding t
 https://github.com/coreinfrastructure/census,📜Automated review of open source software projects
 https://github.com/Corvusoft/restbed,Corvusoft's Restbed framework brings asynchronous RESTful functionality to C++14 applications.
 https://github.com/Corvusoft/restq,Corvusoft's RestQ framework provides an open HTTP API for technology agnostic and language neutral message broking services.
-https://github.com/cosinekitty/astronomy,"Astronomy Engine: multi-language calculation of Sun, Moon, and planet positions. Predicts lunar phases, eclipses, transits, oppositions, conjunctions, equinoxes, solstices, rise/set times and other events. Provides vector and angular coordinate transforms among equatorial ecliptic horizontal and galactic orientations."
+https://github.com/cosinekitty/astronomy,"Astronomy Engine: multi-language calculation of Sun, Moon and planet positions. Predicts lunar phases eclipses transits oppositions conjunctions equinoxes solstices rise/set times and other events. Provides vector and angular coordinate transforms among equatorial ecliptic horizontal and galactic orientations."
 https://github.com/CosmicMind/Graph,Graph is a semantic database that is used to create data-driven applications.
 https://github.com/cosminbasca/surfrdf,SuRF: a python Object RDF Mapper (ORM).
 https://github.com/CouchPotato/CouchPotatoServer,Automatic Movie Downloading via NZBs & Torrents
@@ -818,7 +818,7 @@ https://github.com/ctuning/cm4research,"CM interface and automation recipes to a
 https://github.com/Cue/scales,scales - Metrics for Python
 https://github.com/CuriosityChina/dnspod-go,
 https://github.com/CuriosityChina/terraform-dnspod,Terraform DNSPod Provider
-https://github.com/curl/curl,"A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP SMTPS TELNET TFTP WS and WSS. libcurl offers a myriad of powerful features"
+https://github.com/curl/curl,"A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S RTMP RTMPS RTSP SCP SFTP SMB SMBS SMTP SMTPS TELNET TFTP WS and WSS. libcurl offers a myriad of powerful features"
 https://github.com/CUTR-at-USF/gtfs-osm-sync,Synchronizes public transportation data in GTFS format with OpenStreetMap.org
 https://github.com/cuviper/linux-uprobes,"Linux kernel source tree with branches for Srikar Dronamraju's inode-uprobes work.  (see also github.com/srikard/linux)"
 https://github.com/cwacek/python-jsonschema-objects,Automatic Python binding generation from JSON Schemas
@@ -883,7 +883,7 @@ https://github.com/DataScienceSpecialization/DataScienceSpecialization.github.io
 https://github.com/dataux/dataux,"Federated mysql compatible proxy to elasticsearch mongo cassandra big-table google datastore"
 https://github.com/dat-ecosystem/website,dat-ecosystem website 
 https://github.com/dat/stanford-ner,This is a fork of the Stanford Named Entity Recognizer with added support for deploying in Java servlet mode. See github.com/dat/pyner for the Python adapter.
-https://github.com/davebalmer/jo,"Jo (0.5.0) is a thin (~16K) candy shell for making HTML5 apps. Jo works with: PhoneGap, Chrome, Safari, Opera, FireFox, iOS, Android BlackBerry 10 Tizen & Windows Phone 8+. Features include skinnable UI widgets a clean event model and a light data layer."
+https://github.com/davebalmer/jo,"Jo (0.5.0) is a thin (~16K) candy shell for making HTML5 apps. Jo works with: PhoneGap Chrome Safari Opera FireFox iOS Android BlackBerry 10 Tizen & Windows Phone 8+. Features include skinnable UI widgets a clean event model and a light data layer."
 https://github.com/davetimmins/ArcGIS.PCL,Migrated to https://github.com/davetimmins/Anywhere.ArcGIS
 https://github.com/davetroy/geohash-js,GeoHash Routines for Javascript
 https://github.com/DavHau/mach-nix,Create highly reproducible python environments
@@ -983,7 +983,7 @@ https://github.com/dmbaturin/bnfgen,Generates random text based on context-free 
 https://github.com/DmitryBaranovskiy/g.raphael,Charts for Raphaël
 https://github.com/DmitryBaranovskiy/raphael,JavaScript Vector Library
 https://github.com/dmjio/miso,:ramen: A tasty Haskell front-end framework
-https://github.com/dmotz/trystero,"🤝 Build instant multiplayer webapps, no server required — Magic WebRTC matchmaking over BitTorrent Nostr MQTT IPFS and Firebase"
+https://github.com/dmotz/trystero,"🤝 Build instant multiplayer webapps no server required — Magic WebRTC matchmaking over BitTorrent Nostr MQTT IPFS and Firebase"
 https://github.com/dmtcp/dmtcp,DMTCP: Distributed MultiThreaded CheckPointing
 https://github.com/dmyerscough/BIND-RESTful,BIND RESTful API
 https://github.com/dnschneid/crouton,Chromium OS Universal Chroot Environment
@@ -1049,7 +1049,7 @@ https://github.com/dxw/whippet,"Whippet is a framework for building WordPress si
 https://github.com/dycforever/inspector,elf inspector
 https://github.com/dzzh/elfstatsd,Linux daemon to aggregate data from web server logs in ELF format for Munin
 https://github.com/e14n/dialback-client,Client library for Dialback authentication
-https://github.com/e2b-dev/awesome-ai-sdks,"A database of SDKs, frameworks libraries and tools for creating monitoring debugging and deploying autonomous AI agents"
+https://github.com/e2b-dev/awesome-ai-sdks,"A database of SDKs frameworks libraries and tools for creating monitoring debugging and deploying autonomous AI agents"
 https://github.com/eaigner/hood,Database agnostic ORM for Go
 https://github.com/eaigner/jet,Jet is a super-flexible and lightweight SQL interface for Go
 https://github.com/EasyCrypt/certicrypt,CertiCrypt Coq Framework
@@ -1195,7 +1195,7 @@ https://github.com/ewalk153/osmbpfextract,
 https://github.com/ewasm/design,Ewasm Design Overview and Specification
 https://github.com/ewilderj/doap,RDF schema for describing software projects
 https://github.com/eXamadeus-zz/godaddypy,Python library useful for updating DNS settings through the GoDaddy API
-https://github.com/eXascaleInfolab/PyNetConvert,"Network (Graph) Format Converter:  RCG, Pajek, Metis NSL (NCol SNAP ...) Mathlab"
+https://github.com/eXascaleInfolab/PyNetConvert,"Network (Graph) Format Converter:  RCG Pajek Metis NSL (NCol SNAP ...) Mathlab"
 https://github.com/eXascaleInfolab/StaTIX,Statistical Type Inference (both fully automatic and semi supervised) for RDF datasets
 https://github.com/exceedhl/toft,"toft is a library currently supporting testing infrastructure code such as chef shell scripts with cucumber and lxc on linux machine"
 https://github.com/exercism/exercism,Crowd-sourced code mentorship. Practice having thoughtful conversations about code.
@@ -1364,7 +1364,7 @@ https://github.com/geeklist/ngeek,ngeek is a node.js CLI tool for accessing and 
 https://github.com/geekrelief/as3tohaxe,An Actionscript 3 to haXe source converter written in Haskell
 https://github.com/geerlingguy/ansible-role-ansible,Ansible Role - Ansible
 https://github.com/geerlingguy/ansible-role-apache,Ansible Role - Apache 2.x.
-https://github.com/GeertJohan/go.rice,"go.rice is a Go package that makes working with resources such as html,jscssimagestemplates etc very easy."
+https://github.com/GeertJohan/go.rice,"go.rice is a Go package that makes working with resources such as htmljscssimagestemplates etc very easy."
 https://github.com/gehaxelt/python-rss2irc,A simple IRC bot which fetches and posts RSS feeds
 https://github.com/geocommons/geopress,Mapping and location plugin for WordPress
 https://github.com/geoffxy/habitat,🔮 Execution time predictions for deep neural network training iterations across different GPUs.
@@ -1493,7 +1493,7 @@ https://github.com/gossiperl/gossiperl,Gossip middleware in Erlang
 https://github.com/govtrack/boundaries_us,ARCHIVE. A full Django deployment for represent-boundaries and represent-maps with definitions for U.S.-specific data files
 https://github.com/govtrack/django-registration-pv,A reusable Django app for new user registration with support for OpenID/OAuth login
 https://github.com/govtrack/govtrack.us-web,The Django source code for the GovTrack.us website.
-https://github.com/go-xorm/xorm,"Simple and Powerful ORM for Go, support mysql,postgres,tidbsqlite3mssqloracle Moved to https://gitea.com/xorm/xorm"
+https://github.com/go-xorm/xorm,"Simple and Powerful ORM for Go support mysqlpostgrestidbsqlite3mssqloracle Moved to https://gitea.com/xorm/xorm"
 https://github.com/Go-zh/tools.old,[DEPRECATED] using Go-zh/tools instead.
 https://github.com/gperftools/gperftools,Main gperftools repository
 https://github.com/gpt-engineer-org/gpt-engineer,"Specify what you want it to build the AI asks for clarification and then builds it."
@@ -1518,7 +1518,7 @@ https://github.com/griddb/griddb,"GridDB is a next-generation open source databa
 https://github.com/grigio/meteor-geospot,Geolocalized Proximity Chat with optional precise position
 https://github.com/grill-lab/OAT,"An open source toolkit for multimodal generative conversational task assistants helping assist people with real-world complex tasks"
 https://github.com/grininja/emojilang,Programming language where you can code using emojis 😌
-https://github.com/grpc/grpc,"The C based gRPC (C++, Python Ruby Objective-C PHP C#)"
+https://github.com/grpc/grpc,"The C based gRPC (C++ Python Ruby Objective-C PHP C#)"
 https://github.com/gruntjs/grunt-contrib,[DEPRECATED] A collection of common grunt tasks.
 https://github.com/gruntjs/grunt-contrib-handlebars,Precompile Handlebars templates to JST file.
 https://github.com/gruntjs/grunt,Grunt: The JavaScript Task Runner
@@ -1540,7 +1540,7 @@ https://github.com/GuntherRademacher/rr,RR - Railroad Diagram Generator
 https://github.com/gunyarakun/django-wikipedia-search,"Wikipedia search with django including a Python wikipedia parser."
 https://github.com/gurug-dev/distributed_data_systems_project,"Sentiment Analysis and SparkML modeling on Financial Data using HuggingFace Spark MongoDB Airflow and GCS."
 https://github.com/gvsulib/Open-Everything,Interactive website for our Open Everything exhibit on Open Access and Open Information
-https://github.com/h2oai/h2ogpt,"Private chat with local GPT with document, images, video, etc. 100% private Apache 2.0. Supports oLLaMa Mixtral llama.cpp and more. Demo: https://gpt.h2o.ai/ https://codellama.h2o.ai/"
+https://github.com/h2oai/h2ogpt,"Private chat with local GPT with document images video etc. 100% private Apache 2.0. Supports oLLaMa Mixtral llama.cpp and more. Demo: https://gpt.h2o.ai/ https://codellama.h2o.ai/"
 https://github.com/h4ck3rm1k3/arbk,django arbk
 https://github.com/h4ck3rm1k3/archive.org-uploader,perl script to upload files to archive.org
 https://github.com/h4ck3rm1k3/AutoToolsGeocoder,"autotools port of the ""Geocoder Open Source project"""
@@ -1656,7 +1656,7 @@ https://github.com/h4ck3rm1k3/SleekXMPP,Python 2.6+/3.1+ XMPP Library
 https://github.com/h4ck3rm1k3/Smallest-Federated-Wiki,"Our new wiki innovates three ways. It shares through federation composes by refactoring and wraps data with visualization."
 https://github.com/h4ck3rm1k3/srtracker,Open311 Service Request Status Site
 https://github.com/h4ck3rm1k3/steem-stats,Explorations of the Steem data
-https://github.com/h4ck3rm1k3/sticky,"Simple, key/value pair browser-storage cache leveraging the latest HTML5 storage APIs. Persists in your preferred order to one of indexedDB webSQL localStorage globalStorage or cookies."
+https://github.com/h4ck3rm1k3/sticky,"Simple key/value pair browser-storage cache leveraging the latest HTML5 storage APIs. Persists in your preferred order to one of indexedDB webSQL localStorage globalStorage or cookies."
 https://github.com/h4ck3rm1k3/sweble-wikitext,sweble the wikipedia parser wikitext 
 https://github.com/h4ck3rm1k3/thttpd,CGI server
 https://github.com/h4ck3rm1k3/transiki,Transit Wiki
@@ -1698,7 +1698,7 @@ https://github.com/harshitagg/open311,
 https://github.com/hashicorp/nomad-driver-podman,A nomad task driver plugin for sandboxing workloads in podman containers
 https://github.com/hashicorp/packer,Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 https://github.com/hashicorp/terraform-ls,Terraform Language Server
-https://github.com/hashicorp/terraform,"Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members treated as code edited reviewed and versioned."
+https://github.com/hashicorp/terraform,"Terraform enables you to safely and predictably create change and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members treated as code edited reviewed and versioned."
 https://github.com/hashicorp/vagrant,Vagrant is a tool for building and distributing development environments.
 https://github.com/hashrocket/namecheap,ruby namecheap API wrapper 
 https://github.com/haskell/aeson,A fast Haskell JSON library
@@ -1960,7 +1960,7 @@ https://github.com/jbmusso/tinkergraph-js,A pure JavaScript implementation of Ti
 https://github.com/jbrukh/gpt-jargon,Jargon is a natural language programming language specified and executed by LLMs like GPT-4.
 https://github.com/jbt/markdown-editor,Live (Github-flavored) Markdown Editor
 https://github.com/jcabot/ocl-repository,A repository for examples of all kinds of OCL (Object Constraint Language) expressions
-https://github.com/jcalazan/ansible-django-stack,"Ansible Playbook for setting up a Django app with Nginx, Gunicorn, PostgreSQL, Celery RabbitMQ Supervisor Virtualenv and Memcached. A Vagrantfile for provisioning a VirtualBox virtual machine is included as well."
+https://github.com/jcalazan/ansible-django-stack,"Ansible Playbook for setting up a Django app with Nginx Gunicorn PostgreSQL Celery RabbitMQ Supervisor Virtualenv and Memcached. A Vagrantfile for provisioning a VirtualBox virtual machine is included as well."
 https://github.com/jcarbaugh/django-blogdor,Yet another blog app for Django
 https://github.com/jcarbaugh/django-cloudmailin,Django client for CloudMailin incoming email service
 https://github.com/jcarbaugh/django-wordpress,WordPress models and views for Django.
@@ -2194,7 +2194,7 @@ https://github.com/kermitt2/delft,a Deep Learning Framework for Text
 https://github.com/kevina/zl-gcc,Modified version of GCC used by zl
 https://github.com/kevinclark/nitpick,A lint for Ruby 1.8. Defunct. Just for posterity.
 https://github.com/kevinprabhakar/distributedNeuralNetwork,"P2P Application that can train large neural networks over large datasets in a fraction of the time distributed across multiple computers"
-https://github.com/keybase/client,"Keybase Go Library, Client, Service OS X iOS Android Electron"
+https://github.com/keybase/client,"Keybase Go Library Client Service OS X iOS Android Electron"
 https://github.com/keybase/kbfs,Keybase Filesystem (KBFS)
 https://github.com/keybase/proofs,Public Keybase Proof System
 https://github.com/kgilmo/penning_artiq,
@@ -2307,7 +2307,7 @@ https://github.com/lenskit/lkpy,Python recommendation toolkit
 https://github.com/leobago/fti,Fault Tolerance Interface
 https://github.com/leostera/caramel,":candy: a functional language for building type-safe scalable and maintainable applications"
 https://github.com/leostera/minttea,A fun little TUI framework for OCaml
-https://github.com/leotac/graph,"Graph algorithms in c++ and python. MST (Boruvka, Kruskal, Prim) TSP (double-tree Christofides ILP formulation + cutting planes) Eulerian path"
+https://github.com/leotac/graph,"Graph algorithms in c++ and python. MST (Boruvka Kruskal Prim) TSP (double-tree Christofides ILP formulation + cutting planes) Eulerian path"
 https://github.com/lepture/mistune,A fast yet powerful Python Markdown parser with renderers and plugins.
 https://github.com/lesscpy/lesscpy,Python LESS compiler
 https://github.com/let-def/lrgrep,"Menhir polishing toolbox for experienced druids"
@@ -2345,7 +2345,7 @@ https://github.com/libuv/libuv,Cross-platform asynchronous I/O
 https://github.com/libwww-perl/WWW-Mechanize,Handy web browsing in a Perl object
 https://github.com/lieanu/it-sec-catalog,Automatically exported from code.google.com/p/it-sec-catalog，new version: https://it-sec-catalog.info/.
 https://github.com/lifenoodles/nasearch,Search engine for shownotes for the No Agenda Show
-https://github.com/Lightning-AI/litgpt,"Pretrain, finetune, deploy 20+ LLMs on your own data. Uses state-of-the-art techniques: flash attention FSDP 4-bit LoRA and more."
+https://github.com/Lightning-AI/litgpt,"Pretrain finetune deploy 20+ LLMs on your own data. Uses state-of-the-art techniques: flash attention FSDP 4-bit LoRA and more."
 https://github.com/lightningnetwork/lnd,Lightning Network Daemon ⚡️
 https://github.com/liip/packaging,deb and rpm packaging solution for php projects 
 https://github.com/linagora/hublin,DEPRECATED - An easy and free video conference service based on WebRTC
@@ -2420,7 +2420,7 @@ https://github.com/lttng/lttng-ust-java-tests,Integration tests and benchmarks f
 https://github.com/lttng/lttng-ust,"This repo is a mirror of the official lttng-ust git found at git://git.lttng.org/lttng-ust.git. LTTng-UST the Linux Trace Toolkit Next Generation Userspace Tracer is port of the low-overhead tracing capabilities of the LTTng kernel tracer to user-space. The library ""liblttng-ust"" enables tracing of applications and libraries."
 https://github.com/luanralid/AutoGPT,An experimental open-source attempt to make GPT-4 fully autonomous.
 https://github.com/lucabrunox/nix-user-chroot,Run nix in a lightweight chroot container
-https://github.com/LucaCanali/PyLatencyMap,"PyLatencyMap is a tool for heat map visualization on the CLI. It is integrated with scrips to collect and visualize I/O latency heat maps from various sources, including SystemTap DTrace Oracle wait events NetApp filers trace files."
+https://github.com/LucaCanali/PyLatencyMap,"PyLatencyMap is a tool for heat map visualization on the CLI. It is integrated with scrips to collect and visualize I/O latency heat maps from various sources including SystemTap DTrace Oracle wait events NetApp filers trace files."
 https://github.com/LucasCtrl/act_base,
 https://github.com/lucidrains/self-rewarding-lm-pytorch,"Implementation of the training framework proposed in Self-Rewarding Language Model from MetaAI"
 https://github.com/luhsra/multiverse,A (GCC) compiler plugin for multiversing functions
@@ -2467,7 +2467,7 @@ https://github.com/manala/ansible-roles,Manala ansible roles
 https://github.com/manexagirrezabal/athenarhythm,In this project we have developed three different approaches to assign primary stress to English out-of-vocabulary words.
 https://github.com/manexagirrezabal/zeuscansion,ZeuScansion is a fst-based system capable of performing metrical scansion of poetry written in English.
 https://github.com/mangtronix/ia-uploader,Downloadable application for uploading files to archive.org
-https://github.com/manzur/gitfs,"Git is distributed version control system focused on speed, effectivity and real-world usability on large projects. Its highlights include:distributed development strong support for non-linear development cryptographic authentication of history. This project aims to implement user mode file system to present revisions branches tags and so on in a git repository as a file tree. "
+https://github.com/manzur/gitfs,"Git is distributed version control system focused on speed effectivity and real-world usability on large projects. Its highlights include:distributed development strong support for non-linear development cryptographic authentication of history. This project aims to implement user mode file system to present revisions branches tags and so on in a git repository as a file tree. "
 https://github.com/mapbox/carto,fast CSS-like map stylesheets
 https://github.com/mapbox/mapping,OpenStreetMap contributions from the data team at Mapbox
 https://github.com/mapbox/osm-bright,A Carto template for OpenStreetMap data
@@ -2475,7 +2475,7 @@ https://github.com/mapmeld/Open311-Plugin-for-Ushahidi,API and plugin to set up 
 https://github.com/mapnik/mapnik,Mapnik is an open source toolkit for developing mapping applications
 https://github.com/mapnik/OGCServer,Pure python WMS
 https://github.com/MapQuest/mapquest-osm-server,A scalable OpenStreetMap API server built over a distributed key/value store.
-https://github.com/mar10/fancytree,"JavaScript tree view / tree grid plugin with support for keyboard, inline editing filtering checkboxes drag'n'drop and lazy loading"
+https://github.com/mar10/fancytree,"JavaScript tree view / tree grid plugin with support for keyboard inline editing filtering checkboxes drag'n'drop and lazy loading"
 https://github.com/Maratyszcza/PeachPy,x86-64 assembler embedded in Python
 https://github.com/marcan/takeover.sh,"Wipe and reinstall a running Linux system via SSH without rebooting. You know you want to."
 https://github.com/marcel/aws-s3,AWS-S3 is a Ruby implementation of Amazon's S3 REST API
@@ -2531,7 +2531,7 @@ https://github.com/maxtepkeev/architect,A set of tools which enhances ORMs writt
 https://github.com/MayOneUS/midas,Volunteer Project Management Platform
 https://github.com/mb21/JSONedit,"User friendly visual JSON editor built as an Angular 1 directive."
 https://github.com/mblauth/ftrace-userevents,Simple example for setting ftrace markers and uprobes.
-https://github.com/mboukabous/Security-Intelligence-on-Exchanged-Multimedia-Messages-Based-on-Deep-Learning,"Deep learning (DL) approaches use various processing layers to learn hierarchical representations of data. Recently, many methods and designs of natural language processing (NLP) models have shown significant development, especially in text mining and analysis. For learning vector-space representations of text, there are famous models like Word2vec, GloVe, and fastText. In fact, NLP took a big step forward when BERT and recently GTP-3 came out. Deep Learning algorithms are unable to deal with textual data in their natural language data form which is typically unstructured information; they require special representation of data as inputs instead. Usually, natural language text data needs to be converted into internal representations form that DL algorithms can read such as feature vectors, hence the necessity to use representation learning models. These models have shown a big leap during the last years. Their set ranges from the methods that embed words into distributed representations and use the language modeling objective to adjust them as model parameters (like Word2vec, fastText, and GloVe), to recently transfer learning models (like ELMo, BERT, ULMFiT, XLNet, ALBERT, RoBERTa, and GPT-2). These last use larger corpora, more parameters more computing resources and instead of assigning each word with a fixed vector they use multilayer neural networks to calculate dynamic representations for the words according to their context which is especially useful for the words with multiple meanings."
+https://github.com/mboukabous/Security-Intelligence-on-Exchanged-Multimedia-Messages-Based-on-Deep-Learning,"Deep learning (DL) approaches use various processing layers to learn hierarchical representations of data. Recently, many methods and designs of natural language processing (NLP) models have shown significant development, especially in text mining and analysis. For learning vector-space representations of text, there are famous models like Word2vec, GloVe, and fastText. In fact, NLP took a big step forward when BERT and recently GTP-3 came out. Deep Learning algorithms are unable to deal with textual data in their natural language data form which is typically unstructured information; they require special representation of data as inputs instead. Usually, natural language text data needs to be converted into internal representations form that DL algorithms can read such as feature vectors, hence the necessity to use representation learning models. These models have shown a big leap during the last years. Their set ranges from the methods that embed words into distributed representations and use the language modeling objective to adjust them as model parameters (like Word2vec, fastText, and GloVe) to recently transfer learning models (like ELMo BERT ULMFiT XLNet ALBERT RoBERTa and GPT-2). These last use larger corpora more parameters more computing resources and instead of assigning each word with a fixed vector they use multilayer neural networks to calculate dynamic representations for the words according to their context which is especially useful for the words with multiple meanings."
 https://github.com/mbr/Babel-CLDR,"A clone of the 1.0dev version of Babel with CLDR already added to make installing it through distutils/setuptools easier."
 https://github.com/mbr/flask-bootstrap,Ready-to-use Twitter-bootstrap for use in Flask.
 https://github.com/mbrit/sqlite-metrostyle,Version of SQLite's WinRT source branch that's compiled and checked against the Windows App Certification Kit. Use with Praeclarum's sqlite-net project.
@@ -2658,7 +2658,7 @@ https://github.com/mkuchnik/relm,ReLM is a Regular Expression engine for Languag
 https://github.com/mkwiatkowski/pythoscope,unit test generator for Python
 https://github.com/mlc-ai/web-llm,High-performance In-browser LLM Inference Engine 
 https://github.com/mlcommons/algorithmic-efficiency,MLCommons Algorithmic Efficiency is a benchmark and competition measuring neural network training speedups due to algorithmic improvements in both training algorithms and models.
-https://github.com/mlcommons/ck,"Collective Mind (CM) is a small, modular, cross-platform and decentralized workflow automation framework with a human-friendly interface and reusable automation recipes to make it easier to build, run benchmark and optimize AI ML and other applications and systems across diverse and continuously changing models data software and hardware"
+https://github.com/mlcommons/ck,"Collective Mind (CM) is a small modular cross-platform and decentralized workflow automation framework with a human-friendly interface and reusable automation recipes to make it easier to build run benchmark and optimize AI ML and other applications and systems across diverse and continuously changing models data software and hardware"
 https://github.com/mlcommons/ck-mlops,"A collection of portable workflows automation recipes and components for MLOps in a unified CK format. Note that this repository is outdated - please check the 2nd generation of the CK workflow automation meta-framework with portable MLOps and DevOps components here:"
 https://github.com/mlcommons/croissant,Croissant is a high-level format for machine learning datasets that brings together four rich layers.
 https://github.com/mlcommons/inference_results_v3.1,This repository contains the results and code for the MLPerf™ Inference v3.1 benchmark.
@@ -2741,7 +2741,7 @@ https://github.com/mtarunpr/coq-prover,Prove theorems in Coq by extracting lemma
 https://github.com/mtschirs/js-objectdetect,computer vision in your browser - javascript real-time object detection
 https://github.com/mudcube/MIDI.js,":musical_keyboard: Making life easy to create a MIDI-app on the web. Includes a library to program synesthesia into your app for memory recognition or for creating trippy effects. Convert soundfonts for Guitar Bass Drums ect. into code that can be read by the browser. Supports multiple simultaneous instruments and perfect timing."
 https://github.com/mudler/edgevpn,":sailboat: The immutable decentralized statically built p2p VPN without any central server and automatic discovery! Create decentralized introspectable tunnels over p2p with shared tokens"
-https://github.com/mudler/LocalAI,":robot: The free, Open Source OpenAI alternative. Self-hosted, community-driven and local-first. Drop-in replacement for OpenAI running on consumer-grade hardware. No GPU required. Runs gguf, transformers diffusers and many more models architectures. It allows to generate Text Audio Video Images. Also with voice cloning capabilities."
+https://github.com/mudler/LocalAI,":robot: The free Open Source OpenAI alternative. Self-hosted community-driven and local-first. Drop-in replacement for OpenAI running on consumer-grade hardware. No GPU required. Runs gguf transformers diffusers and many more models architectures. It allows to generate Text Audio Video Images. Also with voice cloning capabilities."
 https://github.com/muellerberndt/mini-agi,MiniAGI is a simple general-purpose autonomous agent based on the OpenAI API.
 https://github.com/mulesoft/api-designer,A web editor for creating and sharing RAML API specifications
 https://github.com/multiformats/multihash,Self describing hashes - for future proofing
@@ -2983,7 +2983,7 @@ https://github.com/onnx/tensorflow-onnx,Convert TensorFlow Keras Tensorflow.js a
 https://github.com/ontodev/robot,ROBOT is an OBO Tool
 https://github.com/ontola/ontologies,Never manage a namespace object map again scrap typo's for well-known ontologies. Like DefinitelyTyped but for ontologies.
 https://github.com/onyxfish/fakerwiki,FakerWiki is a library for local testing of Python ScraperWiki scripts.
-https://github.com/oobabooga/text-generation-webui,A Gradio web UI for Large Language Models. Supports transformers, GPTQ AWQ EXL2 llama.cpp (GGUF) Llama models.
+https://github.com/oobabooga/text-generation-webui,A Gradio web UI for Large Language Models. Supports transformers GPTQ AWQ EXL2 llama.cpp (GGUF) Llama models.
 https://github.com/opatrascoiu/ocl,"An implementation of the Object Constraint Language (OCL)"
 https://github.com/open311/open311-mobile,Mobile client for Open311 API
 https://github.com/open311/open311-validator-py,Generic validator for Open311 API using GeoReport v2 spec
@@ -3020,7 +3020,7 @@ https://github.com/openlink/virtuoso-opensource,"Virtuoso is a high-performance 
 https://github.com/open-metadata/OpenMetadata,"OpenMetadata is a unified platform for discovery observability and governance powered by a central metadata repository in-depth lineage and seamless team collaboration."
 https://github.com/opennorth/represent-boundaries,"A web API to geographic boundaries loaded from shapefiles packaged as a Django app"
 https://github.com/OpenObservability/OpenMetrics,"Evolving the Prometheus exposition format into a standard."
-https://github.com/openp2p-cn/openp2p,"OpenP2P is a lightweight P2P sharing network. Support Cone,Symmetric(NAT1-NAT4)UPNPIPv6both UDP&TCP punch. You can build you private sharing network or uses the public sharing network"
+https://github.com/openp2p-cn/openp2p,"OpenP2P is a lightweight P2P sharing network. Support ConeSymmetric(NAT1-NAT4)UPNPIPv6both UDP&TCP punch. You can build you private sharing network or uses the public sharing network"
 https://github.com/openplans/argo,Getting Json on the map
 https://github.com/openplans/cebu-taxi,Cebu Taxi Crowdsource Application
 https://github.com/openplans/cibi_animation,An animated visualization of cibi.me bike share plans
@@ -3067,7 +3067,7 @@ https://github.com/openresty/sregex,A non-backtracking NFA/DFA-based Perl-compat
 https://github.com/OpenRock/OpenAM,Mirror of https://stash.forgerock.org/projects/OPENAM/openam
 https://github.com/opensecrets/parsefec,Parser for pulling data out of FEC Filings.  Open sourced for Transparency Camp 2014
 https://github.com/opensemanticsearch/open-semantic-search-apps,"Python/Django based webapps and web user interfaces for search structure (meta data management like thesaurus ontologies annotations and named entities) and data import (ETL like text extraction OCR and crawling filesystems or websites)"
-https://github.com/opensemanticsearch/open-semantic-search,"Open Source research tool to search, browse, analyze and explore large document collections by Semantic Search Engine and Open Source Text Mining & Text Analytics platform (Integrates ETL for document processing, OCR for images & PDF named entity recognition for persons organizations & locations metadata management by thesaurus & ontologies search user interface & search apps for fulltext search faceted search & knowledge graph)"
+https://github.com/opensemanticsearch/open-semantic-search,"Open Source research tool to search browse analyze and explore large document collections by Semantic Search Engine and Open Source Text Mining & Text Analytics platform (Integrates ETL for document processing OCR for images & PDF named entity recognition for persons organizations & locations metadata management by thesaurus & ontologies search user interface & search apps for fulltext search faceted search & knowledge graph)"
 https://github.com/opensemanticsearch/solr-ontology-tagger,"Automatic tagging and analysis of documents in an Apache Solr index for faceted search by RDF(S) Ontologies & SKOS thesauri"
 https://github.com/openshift/jenkins-cloud-plugin,OpenShift Origin Jenkins Cloud Plugin
 https://github.com/openshift/origin-server,OpenShift 2 (deprecated)
@@ -3117,7 +3117,7 @@ https://github.com/oracle/graalpython,A Python 3 implementation built on GraalVM
 https://github.com/oracle/smith,Smith: A microcontainer builder
 https://github.com/OrangeShark/guile-git,Mirror of guile-git repository
 https://github.com/oreillymedia/open_government,Open Government released as part of #PDFtribute
-https://github.com/orientechnologies/orientdb,OrientDB is the most versatile DBMS supporting Graph, Document Reactive Full-Text and Geospatial models in one Multi-Model product. OrientDB can run distributed (Multi-Master) supports SQL ACID Transactions Full-Text indexing and Reactive Queries.
+https://github.com/orientechnologies/orientdb,OrientDB is the most versatile DBMS supporting Graph Document Reactive Full-Text and Geospatial models in one Multi-Model product. OrientDB can run distributed (Multi-Master) supports SQL ACID Transactions Full-Text indexing and Reactive Queries.
 https://github.com/OriginTrail/ChatDKG,ChatDKG is an open framework for efficient search access and utilization of trusted knowledge with AI based on OriginTrail Decentralized Knowledge Graph (DKG) and Knowledge Assets. The ChatDKG framework is designed as an open community project to explore a diverse range of possible applications.
 https://github.com/OriginTrail/ot-node-prototype,
 https://github.com/OriginTrail/smart-contract-audit-documents,
@@ -3189,7 +3189,7 @@ https://github.com/patrickod/docker-tor-hidden-services,A simple way of exposing
 https://github.com/patricoferris/ocaml-search,Simple in-memory monomorphic and heterogeneous search indexes in OCaml
 https://github.com/patrikf/glip,git library in PHP
 https://github.com/paulcwatts/drf-json-schema,Extensible JSON API schema for Django Rest Framework
-https://github.com/paulpierre/RasaGPT,💬 RasaGPT is the first headless LLM chatbot platform built on top of Rasa and Langchain. Built w/ Rasa, FastAPI, Langchain LlamaIndex SQLModel pgvector ngrok telegram
+https://github.com/paulpierre/RasaGPT,💬 RasaGPT is the first headless LLM chatbot platform built on top of Rasa and Langchain. Built w/ Rasa FastAPI Langchain LlamaIndex SQLModel pgvector ngrok telegram
 https://github.com/PaulRBerg/hardhat-template,Hardhat-based template for developing Solidity smart contracts
 https://github.com/paulsmith/tablestruct,tablestruct creates mappings between Go structs and database tables.
 https://github.com/pavlobaron/wpcorpus,wpcorpus - NLP corpus based on Wikipedia's full article dump
@@ -3472,7 +3472,7 @@ https://github.com/Ravenbrook/bugzilla-schema,A tool to generate documentation o
 https://github.com/raverkamp/plsql-parser,A parser for Oracle PL/SQL in written in java. Complete for packages. But no conditional compilation.
 https://github.com/rayners/phenny-modules,
 https://github.com/ray-project/ray,Ray is a unified framework for scaling AI and Python applications. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.
-https://github.com/razo-zapata/Sequitur,My own implementation of Sequitur[1], a method for inferring compositional hierarchies from strings. [1] Nevill-Manning C.G. and Witten I.H. (1997) Identifying Hierarchical Structure in Sequences: A linear-time algorithm Journal of Artificial Intelligence Research 7 67-82
+https://github.com/razo-zapata/Sequitur,My own implementation of Sequitur[1] a method for inferring compositional hierarchies from strings. [1] Nevill-Manning C.G. and Witten I.H. (1997) Identifying Hierarchical Structure in Sequences: A linear-time algorithm Journal of Artificial Intelligence Research 7 67-82
 https://github.com/rbelew/FECAnalysisTools,Tools to sort parse and output FEC contributor data for use in data mining
 https://github.com/rbelew/PyFEC,Python tools for analysis of Federal Election Commission (FEC) data
 https://github.com/rbrito/xpdf-poppler,Fork of xpdf with use of the poppler library
@@ -3490,7 +3490,7 @@ https://github.com/redaktor/owl2jsonschema.js,Convert OWL/RDFS and XML Schema to
 https://github.com/reddit-archive/reddit-plugin-place-opensource,place
 https://github.com/redox-os/redox,Mirror of https://gitlab.redox-os.org/redox-os/redox
 https://github.com/redrabbit/git.limo,A Git source code management tool powered by Elixir with easy installation & high extensibility.
-https://github.com/red/red,Red is a next-generation programming language strongly inspired by Rebol, but with a broader field of usage thanks to its native-code compiler from system programming to high-level scripting and cross-platform reactive GUI while providing modern support for concurrency all in a zero-install zero-config single ~1MB file! 
+https://github.com/red/red,Red is a next-generation programming language strongly inspired by Rebol but with a broader field of usage thanks to its native-code compiler from system programming to high-level scripting and cross-platform reactive GUI while providing modern support for concurrency all in a zero-install zero-config single ~1MB file! 
 https://github.com/redten-ai/llama-client-aic,a platform for distributed self-hosted llm rag and reinforcement learning with human feedback (rlhf)
 https://github.com/RedTuna/mysolr,Python Solr binding
 https://github.com/redwood/redwood,A highly-configurable distributed realtime database that manages a state tree shared among many peers.
@@ -3682,8 +3682,8 @@ https://github.com/scy/levitation,Tools to convert Wikipedia dumps into Git repo
 https://github.com/sdiehl/kaleidoscope,Haskell LLVM JIT Compiler Tutorial
 https://github.com/seancribbs/neotoma,Erlang library and packrat parser-generator for parsing expression grammars.
 https://github.com/seanmor5/tpuserve,Serve compiled XLA from Nx JAX TensorFlow etc. on Cloud TPU VMs
-https://github.com/seattlerb/hoe,Hoe is a rake/rubygems helper for project Rakefiles. It helps you manage, maintain and release your project and includes a dynamic plug-in system allowing for easy extensibility. Hoe ships with plug-ins for all your usual project tasks including rdoc generation testing packaging deployment and announcement.
-https://github.com/seaweedfs/seaweedfs,SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files! Blob store has O(1) disk seek, cloud tiering. Filer supports Cloud Drive, cross-DC active-active replication, Kubernetes, POSIX FUSE mount, S3 API S3 Gateway Hadoop WebDAV encryption Erasure Coding.
+https://github.com/seattlerb/hoe,Hoe is a rake/rubygems helper for project Rakefiles. It helps you manage maintain and release your project and includes a dynamic plug-in system allowing for easy extensibility. Hoe ships with plug-ins for all your usual project tasks including rdoc generation testing packaging deployment and announcement.
+https://github.com/seaweedfs/seaweedfs,"SeaweedFS is a fast distributed storage system for blobs, objects files and data lake for billions of files! Blob store has O(1) disk seek cloud tiering. Filer supports Cloud Drive cross-DC active-active replication Kubernetes POSIX FUSE mount S3 API S3 Gateway Hadoop WebDAV encryption Erasure Coding."
 https://github.com/sebastianbergmann/phpunit,The PHP Unit Testing framework.
 https://github.com/sebbacon/informatazyrtare-theme,Alavateli theme for Informata Zyrtare (Kosovo)
 https://github.com/secretsquirrel/BDFProxy,Patch Binaries via MITM: BackdoorFactory + mitmProxy.  
@@ -3701,7 +3701,7 @@ https://github.com/semsol/arc2,ARC RDF Classes for PHP
 https://github.com/senchalabs/connect,Connect is a middleware layer for Node.js
 https://github.com/sensiblecodeio/custard,A platform for tools that do stuff with data
 https://github.com/sensiblecodeio/scraperwiki-python,ScraperWiki Python library for scraping and saving data
-https://github.com/sequelize/sequelize,Feature-rich ORM for modern Node.js and TypeScript, it supports PostgreSQL (with JSON and JSONB support), MySQL, MariaDB SQLite MS SQL Server Snowflake Oracle DB (v6) DB2 and DB2 for IBM i.
+https://github.com/sequelize/sequelize,Feature-rich ORM for modern Node.js and TypeScript it supports PostgreSQL (with JSON and JSONB support) MySQL MariaDB SQLite MS SQL Server Snowflake Oracle DB (v6) DB2 and DB2 for IBM i.
 https://github.com/serde-rs/json,Strongly typed JSON library for Rust
 https://github.com/serge1/ELFIO,ELFIO - ELF (Executable and Linkable Format) reader and producer implemented as a header only C++ library
 https://github.com/serge-sans-paille/beniget,Extract semantic information about static Python code
@@ -3842,9 +3842,9 @@ https://github.com/SS-archive/salt-states,Collection of salt state files for use
 https://github.com/sstephenson/hike,A Ruby library for finding files in a set of paths
 https://github.com/ssx86/soffice,openoffice wrapper with python & PyQt
 https://github.com/stackbox/code,My Rubbish
-https://github.com/stacksimplify/terraform-on-aws-ec2,Terraform On AWS for EC2, VPC, ASG, ALB, CLB, NLB, CloudWatch SNS S3 CodePipeline ACM Route53
+https://github.com/stacksimplify/terraform-on-aws-ec2,Terraform On AWS for EC2 VPC ASG ALB CLB NLB CloudWatch SNS S3 CodePipeline ACM Route53
 https://github.com/stacks-network/stacks,Overview of Bitcoin's Stacks layer.
-https://github.com/StackStorm/st2,StackStorm (aka IFTTT for Ops) is event-driven automation for auto-remediation, incident responses troubleshooting deployments and more for DevOps and SREs. Includes rules engine workflow 160 integration packs with 6000+ actions (see https://exchange.stackstorm.org) and ChatOps. Installer at https://docs.stackstorm.com/install/index.html
+https://github.com/StackStorm/st2,StackStorm (aka IFTTT for Ops) is event-driven automation for auto-remediation incident responses troubleshooting deployments and more for DevOps and SREs. Includes rules engine workflow 160 integration packs with 6000+ actions (see https://exchange.stackstorm.org) and ChatOps. Installer at https://docs.stackstorm.com/install/index.html
 https://github.com/stackvana/hook.io,Open-Source Microservice Hosting Platform
 https://github.com/stafel/fibr,A distributed language model service for Alpaca / Llama
 https://github.com/staffanm/ferenda,Transform unstructured document collections to structured Linked Data
@@ -4156,7 +4156,7 @@ https://github.com/tonymorris/fp-course,Functional Programming Course
 https://github.com/tonymorris/geo-osm,Data structures and HXT parser for OpenStreetMap files
 https://github.com/tools/godep,dependency tool for go
 https://github.com/topazproject/topaz,A high performance ruby written in RPython
-https://github.com/topcoder20022/reaction,Reaction Commerce is a reactive, open source ecommerce platform built with JavaScript, Node.js MongoDB Meteor CoffeeScript Bootstrap and Docker.
+https://github.com/topcoder20022/reaction,Reaction Commerce is a reactive open source ecommerce platform built with JavaScript Node.js MongoDB Meteor CoffeeScript Bootstrap and Docker.
 https://github.com/ToposInstitute/tac-corpus,
 https://github.com/toranb/elixirconf2023,fine tuning language models with Axon
 https://github.com/torch/torch7,http://torch.ch
@@ -4365,7 +4365,7 @@ https://github.com/wanelo-chef/resource-control,Lightweight resource providers f
 https://github.com/wang502/chord,Go implementation of Chord Protocol https://en.wikipedia.org/wiki/Chord_(peer-to-peer) can be used to build DHT
 https://github.com/WardCunningham/Smallest-Federated-Wiki,This wiki innovates by: 1. federated sharing 2. drag refactoring and 3. data visualization.
 https://github.com/wasabeef/awesome-android-ui,A curated list of awesome Android UI/UX libraries
-https://github.com/WasmEdge/WasmEdge,WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge and decentralized applications. It powers serverless apps embedded functions microservices smart contracts and IoT devices.
+https://github.com/WasmEdge/WasmEdge,WasmEdge is a lightweight high-performance and extensible WebAssembly runtime for cloud native edge and decentralized applications. It powers serverless apps embedded functions microservices smart contracts and IoT devices.
 https://github.com/waterbearlang/waterbear,Visual block syntax for programming languages
 https://github.com/waynehamadi/Auto-GPT,An experimental open-source attempt to make GPT-4 fully autonomous.
 https://github.com/wcandillon/jsoniq,JSONiq Implementation that compiles to JavaScript
