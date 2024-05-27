@@ -128,14 +128,10 @@ deep LLM embedding or vector of contents.
 * history
 
 #+begin_src shell
-  510  grep "url =" /mnt/data1/nix/time/.gitmodules  |cut -d= -f2 | cut -b2- |sort -u  > submodules.txt
-  511  cut -d, -f1 stars.csv | sort -u > starsrepos.txt
-  512  diff submodules.txt starsrepos.txt 
-  513  diff submodules.txt starsrepos.txt  > diff.txt
-  514  grep "> " diff.txt 
-  515  grep "> " diff.txt  |cut -b3-
-  516  for x in `grep "> " diff.txt  |cut -b3-`' do github submodule add $x; done
-  517  for x in `grep "> " diff.txt  |cut -b3-`;' do github submodule add $x; done
+ grep "url =" /mnt/data1/nix/time/.gitmodules  |cut -d= -f2 | cut -b2- |sort -u  > submodules.txt
+ cut -d, -f1 stars.csv | sort -u > starsrepos.txt
+ diff submodules.txt starsrepos.txt  > diff.txt
+ for x in `grep "> " diff.txt  |cut -b3-`;' do git submodule add $x; done
   518  grep "> " diff.txt  |cut -b3- >modules.txt
   519  bash ./run.sh
 
@@ -164,4 +160,13 @@ deep LLM embedding or vector of contents.
 2. we can consider stream of
    consiousness writing, as also reading
    while you are writing,
-   
+
+* user_lists.json
+
+get the list of user lists and then pull out one list and clone them
+#+begin_src shell
+./user_lists.sh > user_lists.json
+jq -c '.data[]|.lists|.edges[]|.node|{ "name":.name, "items": .items|.edges[]|.node.url }' ./user_lists.json > ./user_lists2.json
+for x in `jq . ./user_lists2.json | grep "p2p git" -C2 |grep https | cut -d: -f2-|cut '-d"' -f2`; do git submodule add $x; done
+#+end_src
+
