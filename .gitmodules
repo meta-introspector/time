@@ -12987,3 +12987,69 @@
 [submodule "2024/05/28/WeGit"]
 	path = 2024/05/28/WeGit
 	url = https://github.com/welldan97/WeGit
+[submodule "2024/05/28/oasis-core"]
+	path = 2024/05/28/oasis-core
+	url = https://github.com/oasisprotocol/oasis-core
+[submodule "2024/05/28/lotus"]
+	path = 2024/05/28/lotus
+	url = https://github.com/filecoin-project/lotus
+[submodule "2024/05/28/prysm"]
+	path = 2024/05/28/prysm
+	url = https://github.com/prysmaticlabs/prysm
+[submodule "2024/05/28/berty"]
+	path = 2024/05/28/berty
+	url = https://github.com/berty/berty
+[submodule "2024/05/28/wasp"]
+	path = 2024/05/28/wasp
+	url = https://github.com/iotaledger/wasp
+[submodule "2024/05/28/mina"]
+	path = 2024/05/28/mina
+	url = https://github.com/minaprotocol/mina
+[submodule "2024/05/28/celestia-node"]
+	path = 2024/05/28/celestia-node
+	url = https://github.com/celestiaorg/celestia-node
+[submodule "2024/05/28/status-go"]
+	path = 2024/05/28/status-go
+	url = https://github.com/status-im/status-go
+[submodule "2024/05/28/flow-go"]
+	path = 2024/05/28/flow-go
+	url = https://github.com/onflow/flow-go
+[submodule "2024/05/28/bee"]
+	path = 2024/05/28/bee
+	url = https://github.com/ethersphere/bee
+[submodule "2024/05/28/mx-chain-go"]
+	path = 2024/05/28/mx-chain-go
+	url = https://github.com/multiversx/mx-chain-go
+[submodule "2024/05/28/sonr"]
+	path = 2024/05/28/sonr
+	url = https://github.com/di-dao/sonr
+[submodule "2024/05/28/edgevpn"]
+	path = 2024/05/28/edgevpn
+	url = https://github.com/mudler/edgevpn
+[submodule "2024/05/28/golangci-lint"]
+	path = 2024/05/28/golangci-lint
+	url = https://github.com/golangci/golangci-lint
+[submodule "2024/05/28/sourcegraph"]
+	path = 2024/05/28/sourcegraph
+	url = https://github.com/sourcegraph/sourcegraph
+[submodule "2024/05/28/sweep"]
+	path = 2024/05/28/sweep
+	url = https://github.com/sweepai/sweep
+[submodule "2024/05/28/rewrite"]
+	path = 2024/05/28/rewrite
+	url = https://github.com/openrewrite/rewrite
+[submodule "2024/05/28/pysonar2"]
+	path = 2024/05/28/pysonar2
+	url = https://github.com/yinwang0/pysonar2
+[submodule "2024/05/28/khoj"]
+	path = 2024/05/28/khoj
+	url = https://github.com/khoj-ai/khoj
+[submodule "2024/05/28/signoz"]
+	path = 2024/05/28/signoz
+	url = https://github.com/SigNoz/signoz
+[submodule "2024/05/28/nixtract"]
+	path = 2024/05/28/nixtract
+	url = https://github.com/tweag/nixtract
+[submodule "2024/05/28/depot"]
+	path = 2024/05/28/depot
+	url = https://cl.tvl.fyi/depot
