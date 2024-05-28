@@ -11427,9 +11427,6 @@
 [submodule "2024/05/26/syb"]
 	path = 2024/05/26/syb
 	url = https://github.com/dreixel/syb
-[submodule "2024/05/26/peerforge"]
-	path = 2024/05/26/peerforge
-	url = https://github.com/drgomesp/peerforge
 [submodule "2024/05/26/Telegram"]
 	path = 2024/05/26/Telegram
 	url = https://github.com/DrKLO/Telegram
@@ -12975,15 +12972,3 @@
 [submodule "2024/05/27/pre-commit-latex-hooks"]
 	path = 2024/05/27/pre-commit-latex-hooks
 	url = https://github.com/jonasbb/pre-commit-latex-hooks
-[submodule "2024/05/28/gitverse"]
-	path = 2024/05/28/gitverse
-	url = https://github.com/hackergrrl/gitverse
-[submodule "2024/05/28/gitwit-agent"]
-	path = 2024/05/28/gitwit-agent
-	url = https://github.com/jamesmurdza/gitwit-agent
-[submodule "2024/05/28/weave-gitops"]
-	path = 2024/05/28/weave-gitops
-	url = https://github.com/weaveworks/weave-gitops
-[submodule "2024/05/28/WeGit"]
-	path = 2024/05/28/WeGit
-	url = https://github.com/welldan97/WeGit
