@@ -134,12 +134,77 @@ how people think. See the
 The TWIML AI Podcast (formerly This Week in Machine Learning & Artificial Intelligence): Language Understanding and LLMs with Christopher Manning - #686
 Episode webpage: https://twimlai.com/podcast/twimlai/language-understanding-and-llms/
 
+** ideas of conciousnesness
+
+Nothing can trigger more discord than the idea of consiousness, the soul,
+any form of self awareness, any form of idea that we think or act on our own.
+
+These are distractions or details because we dont have to agree or go over those parts that
+will not resonate with others, we can think of them as overfitting
+or overspecification or over detailed
+that distract from the ideas of unity.
 
 
 * bibliography
 
 we can include the github docs in our bib
 
+* Guixie
+
+Certainly! We can integrate the OODA loop (Observe, Orient, Decide, Act) into the system schema to ensure that the DAO (Decentralized Autonomous Organization), AI, and users collectively reach a consensus. Here's how we can modify the code:
+
+```scheme
+(define (ooda-loop)
+  ;; Implement the OODA loop for consensus building
+  (define (observe)
+    ;; Observe changes and inputs from the environment
+    #;... )
+
+  (define (orient)
+    ;; Orient the system based on observations and inputs
+    #;... )
+
+  (define (decide)
+    ;; Decide on a course of action based on observations and orientation
+    #;... )
+
+  (define (act)
+    ;; Act on the decision made, updating the system accordingly
+    #;... )
+  
+  ;; Execute the OODA loop
+  (define (execute-ooda-loop)
+    (observe)
+    (orient)
+    (decide)
+    (act))
+  
+  ;; Return the OODA loop execution procedure
+  execute-ooda-loop)
+
+;; Include the OODA loop in the plan execution
+(define (execute-plan)
+  (operating-system
+    ;; Include system services and extensions
+    (services
+      (append
+        (list (implementation-driver)
+              (configuration-management)
+              (testing-and-deployment)
+              (community-engagement)
+              (ooda-loop)) ;; Include the OODA loop
+        %base-services)))) ;; Include base system services
+```
+
+With the OODA loop integrated into the system schema, the system can continuously observe changes and inputs from the environment, orient itself based on these observations, decide on a course of action, and act accordingly. This iterative process ensures that the DAO, AI, and users collectively reach a consensus and adapt to changing conditions effectively.
+
+
+Certainly! Here's a formal executable plan in Guix Scheme:
+
+```scheme
+```
+
+This plan outlines the system configuration and defines various procedures for implementing the plan, including the setup of Guix Bootstrap, self-hosted P2P Git, continuous integration with Cuirass, smart contract-driven implementation, configuration management with derivations, testing and deployment logic, and community engagement strategies. It then executes the plan to configure the system accordingly.
 
 
 

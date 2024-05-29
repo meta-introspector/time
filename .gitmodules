@@ -13071,3 +13071,9 @@
 [submodule "2024/05/28/polygon-edge"]
 	path = 2024/05/28/polygon-edge
 	url = https://github.com/0xPolygon/polygon-edge
+[submodule "2024/05/29/guixie"]
+	path = 2024/05/29/guixie
+	url = https://github.com/meta-introspector/guixie
+[submodule "2024/05/29/guix-config"]
+	path = 2024/05/29/guix-config
+	url = https://github.com/meta-introspector/guix-config.git
