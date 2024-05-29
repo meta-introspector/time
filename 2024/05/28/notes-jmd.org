@@ -1,0 +1,143 @@
+* usage
+
+What is the usefulness of the time repo?
+
+based on the idea of the time based directory structure
+of the w3c, where standards have a date of the publishing in the url
+that allows for updates as well.
+
+I dont plan to have multiple submodules pointing
+to different versions of the same project over time but we could.
+
+The issues of duplicate object storage would have to be addressed,
+also i noticed many submodules also share objects
+with the same id.
+
+Also managing all of this is slowing down my machine.
+So there are some downsides.
+
+But the fundamental recording in ordering in time of when a git repo was
+added to the project is essential, we can think of doing this in a mono repo as well.
+
+* Template haskell.
+
+TH is a means to execute user defined code at the compile time
+and make those results available at runtime, it allows for full knowledge of the
+compilers representation of the system.
+
+lets apply this idea to sourcegraph.
+If source graph were to index haskell, and search for code,
+and snippets would be executed in the compiler with template haskell enabled,
+and source graph was written in haskell, we could then directly execute the found code
+in the sg haskell process like template haskell executes the user code,
+we can think of it is a bigger context,
+bigger than template haskell because it contains
+multiple versions and has an ability to index and chunk the code
+for understanding.
+
+We can think of the compiler's job as paying attention to the source
+code in the right order to facilitate the understanding of it.
+
+This ordering of the data can be mapped back to the source code.
+we can think of the value of a register X at time T at instruction pointer IP
+has being related to source line L and column range C and this can be seen as a morphism that
+connects the time with the space with the source in a hypergraph of sorts.
+
+so if we have a unified model we can show some kind of looping structure,
+the compiler builds the compiler, then builds the os,
+then the shell and tools,
+it builds a bunch of libraries in different versions and dependencies,
+
+we can show a connection between this and a plan,
+we can show a neural network model and a code execution trace
+and show they are related in content.
+the neural network can model the execution.
+the execution can be the neural network executing in context.
+this expanded context can be some kind of enironment.
+So we can think of the source of the training data, the providence
+of it, that can reson about and model. it is basically the model of the model itself in its context,
+a smaller representation of itself.
+
+The values of the ast of the compiler
+that are needed to describe the asts of the compiler,
+the reduction of the nodes to a simpler form, the quoting of values.
+
+So first of all a single number can be used if large enough, so consider that to be a unitary binary form,
+some bits that can be executed.
+we can think of one string object per name, and the we can vectorize those strings and rewrite them
+in such a way to include more context. We can think of a bag of features or a lattice of features that we have
+for each identifier.
+we can think of this lattice structure as having fields or functions that
+access parts of data structures, each of those can be seen as a bitmask
+so that they can be selected via a 1 in the posiition in a null vector so that it selects
+only that one field. we can think of the group theory of these feature vectors
+as patterns of selection or even modification. instead of a  1 we might use 0.5 for half of the thing etc.
+those can be seen a rotations.
+
+so bitmasks for each type, recursive types, switching fields and other protocols can define
+dfa like structures. we can use ASN1 to define each memory object. we
+can think of a core file dump  of the compiler being read.
+the gdb gives the instructions to decode it.
+
+This is rooted in the os process. We can think of a secure nix/guix system behind that.
+
+So we are able to decode the memory of the core file sampled at any point in time
+or use the perf tool to dynamically sample that.
+its essentially a position in a file that is the memory object of some width.
+it cold be seen as the composition of many sampling calls driven by a function that knows
+or reads the structure.
+This is like the ELF header and ABI, the DWARF format etc.
+we can also look at user defined data structures.
+
+So we can imagine just using GDB as well, which uses ptrace,
+we can imagine porting gdb to use perf instead.
+
+So we can imagine this system to contain functions,
+and we can load and run them, willy nilly, it would be undecidable.
+
+so this is where we get into alpha go
+the value and policy network and llmvwmcts,
+we can evaluate and rank any actions using this system.
+
+So now we can imagine multiple layers of generators
+each adjusting a hyperparameters.
+the hyperparameters or HP are the most
+important because predicting them is so hard,
+we can imagine entire scientific experiements
+around each one.
+
+my vision is of many interlocking topological
+spaces that produce an emergent system.
+
+The interplay between them all
+creates the hand of god or some emergent property
+that cannot be predicted easily.
+
+We can build from simple to complex via induction.
+
+We can think of changing of
+version strings as being one such hyperparameter.
+
+* new ideas
+** brainstorm
+** ordering matters or not?
+** free flowing of ideas
+** sparks of light
+** we have enough working code in the GNU sphere
+consider the contents of my submodules of time.
+it contains so much source code.
+** auditing and connecting builds
+we can start with a known bootstrap code.
+guix bootstrap.
+we have a starting hash of input and derive outputs from there
+that are used to derive more outputs given new package inputs which are again hashes
+of versions for those new input packages.
+the derived outputs are created with build processes, ideally reproducible
+and also traceble.
+These reproduction will have the same traces as well as outputs.
+we can flag any intermediate step that is different.
+we can start by sampling instructions and registers randomly,
+creating user probes and useing other perf features that we will discover.
+also reading perf source code, and compiler intermediaries.
+these are just some of the recordings, we can use criu as well.
+CRIU is checkpoint and restore in user space.
