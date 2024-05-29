@@ -1,0 +1,28 @@
+\section{Introduction}\label{sect:intro}
+
+Many recent influential discoveries in deep learning were enabled by the trend of scaling model and dataset size.
+Over the last decade, computer vision has grown from training models with 60 million parameters~\cite{alexnet} on 1.3 million images~\cite{imagenet_cvpr09} to 15 times more parameters~\cite{Kolesnikov2020BigT} and 200 times more training data~\cite{jft-300m}. In natural language processing, the state-of-the-art language models~\cite{gpt3} with 175 billion parameters are trained on over 570GB of texts, and even this does not saturate the model quality~\cite{kaplan2020scaling}.
+Training these large models can take years even with a top-of-the-line GPU server~\cite{gpt3costlambda}. As a result, researchers and practitioners often have to run distributed training with multiple machines~\cite{mlperf}.
+
+The dominant approach to distributed deep learning is data-parallel training~\cite{valiant1990bridging}, where each worker processes a fraction of the training batch and then exchanges its gradients with peers. If done naïvely, the gradient exchange step can overload the network as the number of workers increases. To combat this issue, modern distributed training algorithms take advantage of communication-efficient protocols, such as all-reduce~\cite{bandwidth_optimal_allreduce}. These protocols 
+allow workers to collectively compute the global average gradient with a constant communication overhead, regardless of the total number of peers.
+
+However, this efficiency makes the protocols more fragile: if any single participant fails or takes too long to process its batch, all other nodes are stalled.
+Therefore, scaling all-reduce protocols beyond a couple of servers requires specialized infrastructure with dedicated ultra-high bandwidth networking~\cite{mlperf}.
+This kind of infrastructure is notoriously expensive compared to regular
+GPU servers or preemptible cloud VMs (see Appendix~\ref{sect:cloud_costs} for details).
+
+Hence, it is tempting to consider distributed training on cheap unreliable instances as a cost-efficient alternative. A similar scenario arises in federated learning~\cite{mcmahan2017communication}, where a single model is trained on heterogeneous devices due to privacy concerns.
+In both scenarios, workers use a shared network, where both latency and bandwidth can vary drastically due to interference from other users~\cite{variability_azure}\nocite{variability_aws}. Furthermore, compute nodes are also subject to failure (or preemption) caused by factors beyond the protocol's control.
+
+Running large-scale distributed training in these circumstances requires fault- and latency-tolerant algorithms~\cite{lian2017can,sgpush}. Most of these algorithms replace all-reduce averaging with \textbf{gossip}: each participant periodically downloads the latest parameters from their neighbors in a sparsely connected communication graph and averages the results. The updates gradually propagate through the graph over multiple rounds of averaging.
+However, the communication required to perform gossip grows linearly with the number of neighbors. Hence, when scaling to hundreds of peers, decentralized SGD has to keep the communication graph sparse, slowing down the convergence.
+
+In this work, we propose an alternative approach. Instead of relying on a predefined communication graph, participants dynamically organize themselves into groups using a fully decentralized matchmaking algorithm called \textbf{Moshpit All-Reduce}. This strategy allows us to use communication-efficient all-reduce protocols that significantly reduce the network load compared to gossip-based averaging, while still being able to operate in unreliable hardware and network conditions.
+
+Our contributions can be summarized as follows:
+\begin{itemize}
+    \item We propose {\bf Moshpit All-Reduce} --- a novel decentralized averaging protocol for large-scale training with unreliable communication-constrained devices. According to our analysis, this method has exponential convergence rate independent of network topology and size.
+    \item Armed with this averaging protocol, we develop {\bf Moshpit SGD} for distributed optimization. We derive convergence rates for this algorithm and establish its equivalence to Centralized (Local) SGD in terms of iteration complexity under realistic assumptions.
+    \item Our experiments demonstrate that Moshpit All-Reduce is significantly more efficient under network latency in realistic conditions. In particular, we train ResNet-50 on ImageNet to 75\% accuracy 1.3 times faster than existing decentralized training algorithms and pretrain ALBERT-large 1.5 times faster on preemptible cloud VMs.\footnote{Implementation and code of experiments are at \href{https://github.com/yandex-research/moshpit-sgd}{\texttt{github.com/yandex-research/moshpit-sgd}}.}
+\end{itemize}

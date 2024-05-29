@@ -1,0 +1,89 @@
+\documentclass{article}
+
+
+
+
+
+
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+\usepackage{lipsum}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{makecell,multirow} %
+
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\usepackage[breaklinks]{hyperref}
+\usepackage{amsmath}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage{caption}
+\usepackage{mwe}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[final,nonatbib]{neurips_2020}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\title{Towards Crowdsourced Training of Large Neural Networks using Decentralized Mixture-of-Experts}
+
+\author{%
+  Max Ryabinin\thanks{Corresponding author.} \\
+  Yandex\\
+  National Research University\\
+  Higher School of Economics\\
+  \texttt{mryabinin@hse.ru} \\
+  \And
+  Anton Gusev \\
+  Independent \\
+  \texttt{uartman@mail.ru} \\
+}
+
+
+\begin{document}
+
+\maketitle
+
+\vspace{-4px}
+\begin{abstract}
+Many recent breakthroughs in deep learning were achieved by training increasingly larger models on massive datasets. However, training such models can be prohibitively expensive. For instance, the cluster used to train GPT-3 costs over \$250 million\footnote{\hspace{-2px}A conservative estimate based on \url{https://blogs.microsoft.com/ai/openai-azure-supercomputer}}. As a result, most researchers cannot afford to train state of the art models and contribute to their development. Hypothetically, a researcher could crowdsource the training of large neural networks with thousands of regular PCs provided by volunteers. The raw computing power of a hundred thousand \$2500 desktops dwarfs that of a \$250M server pod, but one cannot utilize that power efficiently with conventional distributed training methods. In this work, we propose Learning@home: a novel neural network training paradigm designed to handle large amounts of poorly connected participants. We analyze the performance, reliability, and architectural constraints of this paradigm and compare it against existing distributed training techniques.
+\end{abstract}
+\input{intro.tex}
+
+\input{related.tex}
+
+\input{method.tex}
+
+\input{experiments.tex}
+
+\section{Conclusion}
+The main purpose of this study is to convey the idea that one \textit{can} train large neural networks on unreliable hardware. We propose a specialized layer and training infrastructure designed to meet the requirements of volunteer computing over the Internet.
+The preliminary experiments demonstrate that Learning@home can scale to thousands of nodes and successfully train popular model archetypes despite network latency and node failures.
+
+We believe that decentralized deep learning will change the way we think about training neural networks. Instead of running isolated experiments, researchers and practitioners will be able to join forces and solve the biggest problems together. Instead of being confined to a single supercomputer, our models will naturally grow in capacity as more people and organizations around the world join in.
+We expand on the ramifications of deep learning decentralization in the broader impact statement.
+
+However, reaching the full potential of this idea requires expertise not only in deep learning, but also information security, distributed systems, crowdsourcing and many other areas. We believe that this monumental task is best solved through scientific collaboration. To that end, we will continue to develop Learning@home as a public open-source project\footnote{\url{https://learning-at-home.github.io}}.
+
+\section*{Acknowledgements and funding}
+We would like to thank Artem Babenko and Vladimir Aliev for their invaluable assistance in both brainstorming and proofreading the final paper. We are also grateful to anonymous reviewers for their helpful suggestions on improving the presentation of the paper. Max Ryabinin was supported by Yandex and National Research University Higher School of Economics.
+
+\input{discussion.tex}
+
+
+\nocite{paszke2019pytorch}
+\bibliography{bibliography}
+\bibliographystyle{unsrt}
+
+\appendix
+\input{supplementary.tex}
+
+
+\end{document}

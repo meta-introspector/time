@@ -1,0 +1,106 @@
+\vspace{-14px}
+\section{Related work}\label{sect:related}
+\vspace{-4px}
+
+\subsection{Volunteer computing}\label{sect:related_volunteer}
+\vspace{-4px}
+
+Using volunteer hardware has long been a viable alternative to high-performance computing. Since the development of BOINC \cite{anderson2004boinc} research organizations with sufficient public outreach have been able to run massive scientific computations on devices provided by volunteers. Successful projects such as Folding@home can have over $10^5$ active participants, rivaling the floating-point performance of world's fastest supercomputers\footnote{In January 2019, Folding@home reported 146,091 teraflops; in November 2019, the top-1 supercomputer ``Summit'' reported 148,600 teraflops; see \url{top500.org/lists/2019/11} .}. In fact, Folding@home was the first ``supercomputer'' to reach both 1 and 10 petaflops milestones~\cite{folding_timeline}.
+
+However, unlike traditional HPC, the volunteer nature of these projects imposes some additional limitations. First, the majority of volunteers are only available part-time. 
+For instance, a participant can provide an office workstation that only contributes compute outside of business hours. 
+Second, volunteer hardware is heterogeneous: different nodes may have different performance, memory limits, and even operating systems. Finally, participants usually communicate over the Internet, which is 2--3 orders of magnitude slower than typical HPC connections. As a result, both compute nodes and communication channels are not nearly as reliable as in traditional supercomputers. 
+
+Due to the limitations mentioned above, volunteer computing works best for tasks that can be split into many independent chunks. A single Folding@home task is to run a physical simulation of a protein for a specified number of frames. Together, volunteers can perform hundreds of thousands of concurrent tasks and only need to communicate with the server to submit their results. Other projects like SETI@home and Einstein@home follow a similar pattern.%
+
+Based on the existing volunteer computing projects, we formulate the following usage scenario:
+\vspace{-4px}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Large pool of weak computers:} the infrastructure consists of $10^3 \sim 10^6$ heterogeneous PCs\footnote{Typical specifications: 2--8 CPU cores, 4--16GB RAM, and a single customer-grade GPU with 2--12GB of memory and 4--14 float32 TFLOPS (based on \url{https://pcpartpicker.com} and \url{https://techpowerup.com})};
+    \item \textbf{Communication:} nodes communicate with speed and reliability of a home internet connection\footnote{We assume 20--250ms latency and 100Mbps symmetric bandwidth, $0.33\%$ packet loss based on \cite{speedtest,li2017case}};
+    \item \textbf{Frequent node failures:} a compute node may fail to process a task for a variety of reasons. We expect 5--20\% of computers to have at least one failure a day under normal operating conditions.
+\end{itemize}
+\vspace{-6px}
+
+\subsection{Distributed training}\label{sect:related_distributed}
+\vspace{-3px}
+
+To analyze the existing distributed training approaches from the perspective of volunteer computing, we broadly divide them into several categories.
+
+\textbf{Synchronous data parallel training} \cite{valiant1990bridging}\textbf{.} Each worker stores a copy of model parameters, computing gradients for a fraction of the training batch. The gradients are then averaged across workers and applied to the model, making up the same update on all machines. Due to its simplicity and scalability, this method has been widely used to reduce the training time of large neural networks to the order of minutes \cite{goyal2017accurate,You2020Large}. 
+    
+However, with low-end or midrange hardware it is not always possible to store the entire model on each worker. In addition, gradient communication, even when overlapped with computation, requires a high-speed connection between all participants, often faster than hundreds of megabytes per second, which is unrealistic when considering typical household Internet connections.
+    
+\textbf{Asynchronous training} \cite{recht2011hogwild, zhang2015staleness} usually involves a single parameter server and multiple compute nodes fetching the latest parameters, processing batches, and submitting updates back to the server. This technique improves worker throughput, but this improvement comes at a cost. If several workers submit simultaneous updates, they might get applied in an arbitrary order, which leads to the issue of \textit{stale gradients} \cite{stale_gradients_can_win} and possibly hinders model convergence.
+
+\textbf{Model parallel training.} Each node stores a fraction of model layers, each training batch is processed by all nodes in a sequential order determined by the layer distribution scheme. The training batch can be divided into several micro-batches and processed in a pipeline fashion, significantly increasing hardware utilization \cite{huang2019gpipe,zero,pipemare,pipedream}.
+    
+Unlike the two previous paradigms, this method allows training models that exceed the memory limit of any individual worker. Notable examples of successful model parallel training for large neural networks are \cite{huang2019gpipe} and \cite{shoeybi2019megatron}, yet these systems also have a high-speed network between workers. On top of that, model parallelism is highly vulnerable to node and network failures: if a single worker in a chain turns off or stops sending outputs, the training stops entirely. 
+
+It is possible to combine data and model parallelism to mitigate the outlined issues to some degree, but the requirement for fast worker interconnect holds even in that case. In light of this, the method we design has to maintain high throughput even in the presence of slow and unreliable network connections, possibly sacrificing the latency (time to process a given batch) as a necessary tradeoff. 
+
+This constraint may be justified by the following observation: the wall-clock training time of a neural network (with model and optimizer fixed) mostly depends on how many batches it processes per second. As we show in Section \ref{sect:exp_convergence}, the effect of stale gradients can be mitigated with the right architecture. We summarize the desired properties in Table \ref{tab:distributed}.
+
+\begin{table*}[t]
+\caption{Comparison of distributed training schemes in the volunteer computing context. ``Desired'' denotes the algorithm with properties that would be beneficial for this setting. ``Only workers'' means that the system has central components that are not fault-tolerant.}
+\setlength{\tabcolsep}{3pt}
+\hspace{-6pt}\begin{tabular}{cccccccc} 
+\toprule
+ \multirow{2}{*}{Training method}& Model            & Training       & \multirow{2}{*}{Scalability}    & \multirow{2}{*}{Fault tolerance}             & Worker         & \multicolumn{2}{c}{Network}  \\
+         & size limit       & throughput     &                &             & hot-join       & Bandwidth     & Latency                   \\ 
+\midrule
+Data parallel  & Worker           & \textbf{High } & Medium         & \textbf{Full}         & \textbf{Yes }  & \textbf{High}        & Low                       \\
+Asynchronous   & Worker           & \textbf{High } & \textbf{High}  & Only workers\textbf{} & \textbf{Yes }  & Medium        & \textbf{Any}              \\
+Model parallel & \textbf{System}  & Medium         & Low            & No                    & No             & High          & Low                       \\
+Federated      & Worker           & Low            & \textbf{High}  & Only workers\textbf{} & \textbf{Yes }  & \textbf{Low}        & \textbf{Any}              \\
+Desired        & \textbf{System}  & \textbf{High } & \textbf{High}  & \textbf{Full}         & \textbf{Yes }  & \textbf{Low}  & \textbf{Any}              \\
+\bottomrule
+\end{tabular}
+\label{tab:distributed}
+\vspace{-12pt}
+\end{table*}
+
+\textbf{Federated learning.} The problem of utilizing large quantities of consumer devices for training a single model has also been discussed within the context of data-private learning. Federated learning \cite{mcmahan2017communication} attempts to mitigate the issue by keeping the data on devices, training a local version of the model, and sending only the parameter updates. These updates are encrypted so that the server can only decrypt their average across several devices.
+
+\vspace{-1px}
+
+Unsurprisingly, federated learning sacrifices performance for privacy. Secure aggregation procedures \cite{bonawitz2017practical} require multiple workers to communicate and scale quadratically with their number. These properties hardly align with the scenario from Section \ref{sect:related_volunteer}, making federated learning a poor fit for jointly training large models.
+
+\textbf{Deep learning with volunteer computing.} To the best of our knowledge, there are three projects that use volunteer computing for training neural networks. The first work~\cite{desell2017} leverages volunteer resources for evaluation of CNN architectures generated by evolution algorithms; each model is trained on a single device.
+The second study~\cite{volunteer_dl_async} relies on standard asynchronous training and is therefore inapplicable to models that do not fit into a single consumer-grade GPU. Moreover, the architecture described in that study is only partially decentralized, relying on a centralized parameter server that communicates with all nodes. Lastly, the project known as Leela Chess Zero~\cite{lc0}, relies on volunteer hardware to play massive amounts of chess games for generating self-play data used in reinforcement learning. However, the model itself is trained on a single central server.
+
+Our primary insight from this section is that existing methods for training general large neural networks do not fit well into the volunteer computing scenario. However, there is a subclass of deep learning architectures which is much better suited for this task.
+
+\vspace{-2px}
+\subsection{Mixture-of-Experts}\label{sect:related_moe}
+\vspace{-2px}
+
+Mixture-of-Experts (MoE) was first proposed almost three decades ago as a method to train multiple neural networks (``experts'') for a common task \cite{moe_first}. The intent is for each expert to specialize in making predictions for a small subset of data. Presented with an input, MoE first determines which experts are best suited to process that input using a separate \textit{gating function}. Then it applies the chosen experts and aggregates their outputs into the final prediction. This work has sparked many follow-ups that reveal different MoE structures \cite{jordan1994hierarchical, yao2009hierarchical,moe_lifelong,rasmussen2002infinite} and individual expert types \cite{moe_svm,moe_dirichlet}.
+
+A subsequent study~\cite{eigen2013learning} demonstrates that Mixture-of-Experts can be used as a layer within larger neural networks and trained jointly by backpropagation. Depending on the task, individual experts can utilize convolutional, recurrent, or other specialized layers. Such MoE can have a large number of experts, but it only needs to compute a few of them to process any given input.
+
+Shazeer et al.~\cite{shazeer2017outrageously} (and later~\cite{Lepikhin2020GShardSG}) brought that idea to the extreme by training ``outrageously'' large mixtures with thousands of experts. The drastic increase in capacity allows authors to achieve superior performance in large-scale machine translation and language modeling. The paper also addresses problems that arise with increased mixture size. When trained na\"ively, the gating function learns to use a small fraction of available experts for all inputs, not taking full advantage of the available capacity. The authors alleviate this issue by adding a regularization term that promotes ``load-balancing'' across all experts.
+
+However, scaling this approach from thousands to millions of experts reveals additional problems in the design of a gating function. In order to choose the most appropriate experts for the task, MoE predicts a ``priority'' value for each expert and selects the ones with the highest priority. As the number of experts approaches millions, such a gating function itself becomes computationally intractable, especially in our decentralized setting.
+
+A popular solution to this problem is to structure the set of experts in a search-friendly way. For instance, Hierarchical Mixture-of-Experts~\cite{jordan1994hierarchical} organizes experts in a tree-like structure. Selecting the best experts is then reduced to a beam search over this tree, which scales logarithmically in the number of experts. More recent study by Lample et al. \cite{pkm} explores this idea at scale by organizing over a million keys in a factorized 1024-by-1024 grid. For this grid, the gating function only needs to predict two vectors of size 1024. This work also demonstrates that such layers can benefit Transformer models in the masked language modeling task.
+
+However, these works require a centralized infrastructure for training. When the gating function picks appropriate experts for the input at hand, it must somehow find these experts across all nodes. In our scenario, even maintaining the dynamic ``address book'' of all active experts would be infeasible for any single participant.
+
+\nocite{puigcerver2020scalable}
+
+\vspace{-2px}
+
+\subsection{Distributed Hash Tables}\label{sect:related_dht}
+
+\vspace{-2px}
+
+Fortunately, there is a way to implement bookkeeping in a decentralized system --- the distributed hash table (DHT). This is a family of distributed data structures that store key-value pairs across multiple computers in a network. A single computer within such structure only needs to ``know'' $O(\log N)$ out of $N$ computers; at the same time it can look up any key with at most $O(\log N)$ requests to his peers. There are several DHT variants, but they all have common properties:
+\vspace{-4px}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Decentralization:} nodes form and maintain DHT without any central coordination;
+    \item \textbf{Scalability:} DHT can scale to millions of active nodes that are continually joining and leaving; 
+    \item \textbf{Fault tolerance:} a failure in one or a few nodes does not affect DHT integrity and availability;
+\end{itemize} 
+
+A DHT-like protocol was first proposed in 1998 by \cite{tewari1998beyond} and popularized in early 2000s by four protocols: CAN~\cite{can}, Chord~\cite{chord}, Pastry~\cite{pastry} and Tapestry~\cite{tapestry}. By far, the most popular DHT variation is Kademlia~\cite{kademlia} with numerous applications such as BitTorrent, I2P, and Ethereum. A more recent work~\cite{kaashoek2003koorde} further improves theoretical performance for either lookup time or the number of connections; however, this version is less widespread due to being significantly harder to implement.

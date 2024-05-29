@@ -13062,3 +13062,12 @@
 [submodule "2024/05/28/neo4j"]
 	path = 2024/05/28/neo4j
 	url = https://github.com/neo4j/neo4j
+[submodule "2024/05/28/ot-node"]
+	path = 2024/05/28/ot-node
+	url = https://github.com/OriginTrail/ot-node
+[submodule "2024/05/28/ChatDKG"]
+	path = 2024/05/28/ChatDKG
+	url = https://github.com/OriginTrail/ChatDKG
+[submodule "2024/05/28/polygon-edge"]
+	path = 2024/05/28/polygon-edge
+	url = https://github.com/0xPolygon/polygon-edge

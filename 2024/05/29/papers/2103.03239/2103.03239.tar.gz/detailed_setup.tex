@@ -1,0 +1,112 @@
+\section{Detailed experimental setup}
+\label{sect:detailed_setup}
+
+In this section, we provide the detailed hardware configuration of servers used for each of our distributed training experiments.
+
+\subsection{ImageNet training}\label{sect:detailed_setup_resnet}
+
+Both homogeneous and heterogeneous training setups for ImageNet are provisioned in our on-premise infrastructure across multiple data centers and an office space (for the heterogeneous setup only).
+
+\paragraph{Homogeneous.}For the homogeneous setup, we use 16 identical instances with the following specifications:
+\begin{itemize}
+    \item \textbf{GPU:} V100-PCIe,
+    \item \textbf{CPU:} 6 vCPUs (Xeon E5-2650v4),
+    \item \textbf{RAM:} 64GB.
+\end{itemize}
+
+\paragraph{Heterogeneous.}In turn, the heterogeneous setup contains multiple instance types listed in Table~\ref{fig:tab_setup_resnet}:
+\begin{table}[h]
+\centering
+\caption{\textbf{Heterogeneous} setup for ImageNet training.}
+\label{fig:tab_setup_resnet}
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Instances & GPUs & GPU type & Cores & RAM, GB & CPU type \\ 
+\midrule
+4            & 1      & V100-PCIe  & 6        & 64     & E5-2650v4 \\
+17           & 2      & GTX 1080Ti & 8        & 64     & E5-2650v4 \\
+7            & 1      & GTX 1080Ti & 4        & 32     & E5-2650v4 \\
+16           & 1      & P40  & 4        & 32     & E5-2667v2 \\
+20           & 1      & M40-24GB  & 4        & 32     & E5-2667v2 \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{ALBERT training}\label{sect:detailed_setup_albert}
+
+
+\paragraph{Homogeneous.}For the homogeneous setup, we use a single virtual machine with the following specifications:
+\begin{itemize}
+    \item \textbf{GPU:} $8{\times}$ V100-PCIe,
+    \item \textbf{CPU:} 48 vCPUs (Xeon E5-2650v4),
+    \item \textbf{RAM:} 488GB.
+\end{itemize}
+
+At the time of writing, the cloud rent cost for this instance is \textbf{\$24.48} per hour.
+
+\paragraph{Heterogeneous.}Our heterogeneous setup is composed of two parts: AWS EC2 Spot instances and crowdsourced machines from the \texttt{Vast.ai} marketplace. For spot instances, we picked the smallest suitable instance size available from the cloud provider and further limited their bandwidth to 1Gb/s\footnote{We use \texttt{tc qdisc} Linux utility to artificially limit the network throughput, similarly to~\cite{MLSYS2019_d09bf415}}. As for marketplace instances, we report the hardware specifications for each worker gathered 1 hour after the start of ALBERT training.
+
+Since both cloud and marketplace instances are preemptible, the actual cost of the server fleet will vary based on the current price. For simplicity, we report the maximum hourly price we ended up paying for this instance (enforced via maximum bid). Finally, some marketplace instances have missing specifications, such as unknown CPU type. This is likely caused by non-standard virtualization configured by the device owner. The resulting fleet configuration, shown in Table~\ref{fig:tab_setup}, costs up to \$15.43/hour, depending on the number of active instances.
+
+\begin{table*}[ht!]
+\centering
+\caption{\textbf{Heterogeneous} setup for ALBERT training.}
+\label{fig:tab_setup}
+\small
+\setlength{\tabcolsep}{2pt}
+\hspace{7pt}\begin{tabular}{@{}ccccccc@{}}
+\toprule
+GPU           & Cores & RAM, GB & CPU type                       & Download, Mb/s & Upload, Mb/s &
+Cost, \$/hour \\ 
+\midrule
+\multicolumn{7}{c}{Preemptible \texttt{g4dn.xlarge} instances ($32{\times}$)} \\
+\midrule
+T4            & 4         & 16     & Xeon Platinum 8259CL           & 1000          & 1000        & 0.1578         \\
+
+\midrule
+\multicolumn{7}{c}{Marketplace instances} \\    
+\midrule
+GTX 1070Ti    & 6         & 16     & E5-2640                        & 425           & 255         & 0.036         \\
+GTX 1070Ti    & 6         & 16     & i3-6100T                       & 121           & 36          & 0.06          \\
+GTX 1080Ti    & 4         & 20     & i3-6096P                       & 817           & 308         & 0.101         \\
+GTX 1080Ti    & 20        & 129    & E5-2630v4                      & 660           & 475         & 0.182         \\
+GTX 1080Ti    & 1         & 16     & i7-7700K                       & 245           & 210         & 0.302         \\
+GTX 1080Ti    & 48        & 97     & Xeon Platinum 8124             & 583           & 539         & 0.217         \\
+GTX 1080Ti    & 10        & 16     & Unknown                        & n/a           & n/a           & 0.15          \\
+GTX 1080Ti    & 4         & 16     & Xeon Gold 6149                 & 98            & 100         & 0.2           \\ %
+GTX 1080Ti    & 4         & 16     & Xeon Gold 6149                 & 99            & 98          & 0.2           \\ %
+GTX 1080Ti    & 4         & 16     & Xeon Gold 6149                 & 99            & 99          & 0.2           \\ %
+GTX 1080Ti    & 4         & 16     & Xeon Gold 6149                 & 99            & 99          & 0.2           \\ %
+RTX 2070S     & 24        & 32     & E5-2620v2                      & 199           & 25          & 0.199         \\
+RTX 2070S     & 32        & 97     & E5-2650                        & 162           & 64          & 0.285         \\
+RTX 2080      & 6         & 16     & E5-2620v3                      & 271           & 287         & 0.25          \\
+RTX 2080      & 24        & 32     & E5-2630v3                      & 199           & 25          & 0.302         \\
+RTX 2080S     & 4         & 32     & E5-2697v4                      & 101           & 99          & 0.292         \\ %
+RTX 2080S     & 4         & 32     & E5-2697v4                      & 93            & 99          & 0.292         \\ %
+RTX 2080S     & 4         & 32     & E5-2697v4                      & 94            & 98          & 0.292         \\ %
+RTX 2080S     & 4         & 32     & E5-2697v4                      & 94            & 98          & 0.292         \\ %
+RTX 2080S     & 4         & 32     & E5-2697v4                      & 100           & 99          & 0.292         \\ %
+RTX 2080Ti   & 4         & 16     & Ryzen Threadripper 3960x       & 279           & 271          & 0.35          \\
+RTX 2080Ti   & 8         & 129    & E5-2670v3                      & 616           & 672          & 0.201         \\
+RTX 2080Ti   & 6         & 32     & E5-2620v3                      & 217           & 61           & 0.22          \\
+RTX 2080Ti   & 8         & 16     & E5-2697v2                      & 100           & 58           & 0.3           \\
+RTX 2080Ti   & 8         & 21     & E5-2697v2                      & 145           & 49           & 0.243         \\
+RTX 2080Ti    & 12        & 32     & Unknown                        & 111          & 92          & 0.326         \\
+RTX 2080Ti    & 12        & 64     & E5-2690v3                      & 205          & 61          & 0.549         \\
+RTX 3080      & 16        & 16     & i7-10700K                      & 69           & 49          & 0.462         \\
+RTX 3090      & 14        & 32     & E5-2695v3                      & 93           & 37          & 0.498         \\
+RTX 3090      & 16        & 32     & Ryzen 9 3950X                  & 338          & 38          & 0.511         \\
+Titan RTX     & 4         & 32     & Xeon W-3223                   & 321           & 115          & 1             \\
+Titan RTX     & 4         & 32     & Xeon Gold 6149                 & 99           & 100         & 0.702         \\ %
+Titan V       & 8         & 32     & i7-7700K                       & 97           & 50          & 0.282         \\
+V100-FHHL     & 8         & 60     & Xeon Gold 6148                 & 544          & 584         & 0.39          \\
+\midrule
+\multicolumn{6}{c}{Total hourly cost (as listed):} &\bf 15.43 \\    
+\bottomrule
+\end{tabular}
+\end{table*}

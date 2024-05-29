@@ -1,0 +1,43 @@
+\section{GPU instance costs}
+\label{sect:cloud_costs}
+
+This section provides a brief cost analysis of typical deep learning compute resources both in the cloud and on-premises.
+For brevity, we limit this analysis to the popular GPUs available at the time of submission. Note that the exact costs will depend on a variety of factors such as the cloud provider, the region, electricity costs, and market fluctuations. Therefore, we warn the reader to consider this analysis only as a rough estimate. 
+
+Specifically, we estimate the compute costs for the occasional usage scenario: running a single set of experiments over several weeks or conducting infrequent experiments. This scenario covers most research scientists and small organizations. The most straightforward way to provision a GPU server in such a scenario is to rent it from a cloud provider (e.g., GCP or AWS) or a public marketplace (e.g., Vast.ai or Golem).
+
+While the exact server specifications vary from one provider to another, there are two broad categories of GPU machines: regular and preemptible. Regular instance types typically offer 1--8 GPUs per node with tight uptime guarantees (typically $99.99\%$) and a high-bandwidth network (tens of Gb/s). In turn, preemptible instances provide the same resource type at a significant discount with the condition that the machine can be terminated at any time after short notice.
+
+To account for individual variations, we report the average rent price over three popular cloud providers.
+We consider three popular instance types: two high-end instances with 8 Tesla V100 or A100 GPUs and a low-end instance with a single Tesla T4 GPU.
+We also describe several low-end servers and workstations available on a public marketplace. Unlike cloud VMs, these instances are hosted on non-curated hardware with less uptime guarantees (typically 95\% -- 99.9\%), slower network and significant variation in performance. However, marketplace instances are the cheapest in terms of cost per TFLOPS. To quantify this, we report the average over three most affordable instances that fit the chosen minimum requirements.
+
+As a point of comparison, we also measure each system's training performance for BERT-Large~\cite{bert} fine-tuning on SQuAD v1.1~\cite{squad} in PyTorch with mixed precision. We follow the official benchmarking protocol by~\cite{nvidia_perf} and reuse the official performance results for V100, A100, and T4 instances. The only exception is GTX 1080Ti, where we use full 32-bit precision because that device does not support efficient half-precision operations.
+
+\begin{table}[h]
+\small
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1}
+\centering
+\caption{Cloud and marketplace GPU instance pricing for short-term usage.}
+\label{fig:cloud_costs}
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+\multicolumn{4}{c}{Minimum system specifications} & \multicolumn{2}{c}{Average cost, \$/hour} & \multirow{2}[2]{*}{\shortstack{BERT-Large\\ training samples/s}} \\
+\cmidrule(lr){1-4}\cmidrule(lr){5-6}
+GPU & CPU cores & CPU type & RAM, GB & Regular & Preemptible &  \\ \midrule
+\multicolumn{7}{c}{Cloud instances} \\ \midrule
+8$\times$ V100 & 64 & Intel Xeon Broadwell & 480 & 23.47 & 7.13 & 354 \\
+8$\times$  A100 & 96 & AMD Epyc ROME & 960 & 30.65 & 10.18 & 755 \\
+1$\times$  T4 & 4 & Intel Xeon Cascade Lake & 16 & 0.46 & 0.18 & 18 \\ \midrule
+\multicolumn{7}{c}{Marketplace instances} \\ \midrule
+6$\times$ 3090 & 32 & AMD Epyc Rome & 480 & 5.04 & 4.17 & 154 \\
+4$\times$  2080Ti & 16 & Intel Xeon Haswell & 240 & 0.96 & 0.84 & 83.4 \\
+1$\times$  RTX 1080Ti & 8 & Intel Xeon Haswell & 16 & 0.22 & 0.16 & 12 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{fig:cloud_costs} shows two main tendencies. First, preemptible \textit{cloud} instances are, on average, three times cheaper than their non-preemptible counterparts\footnote{The cost can be up to $11{\times}$ cheaper for some instance types, e.g. Azure V100 instances in the central US region at the time of writing.}. Second, the high-end HPC-grade servers that offer the highest raw performance are less cost-effective than lower-tier servers and marketplace instances. In theory, one could match the raw floating-point performance of a $8{\times}$V100 instance at a fraction of its cost using multiple lower-tier workstations, such as $4{\times}$ RTX 2080Ti, with a smaller total cost.
+However, in practice, running distributed training with these workstations is challenging due to their unreliability and slow network connection.
+
+Note that this analysis does not represent the cloud costs for sustained GPU usage. If an organization plans to constantly use GPU resources over a period of multiple years, they can reduce the costs by deploying their own compute infrastructure or relying on the sustained usage discounts reaching up to 60--70\%. Thus, the long-term compute costs are much harder to analyze and depend on a number of additional factors, such as local electricity prices for on-premise infrastructure. However, this scenario offers similar trade-offs: HPC-grade infrastructure offers greater interconnectivity, but requires expensive network interface cards, high-end switches and a more complex setup process.

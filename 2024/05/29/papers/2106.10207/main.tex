@@ -1,0 +1,144 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2020
+
+% ready for submission
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2020}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2020}
+
+% to avoid loading the natbib package, add option nonatbib:
+    %  \usepackage[nonatbib]{neurips_2020}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+% \usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{makecell,multirow} %
+
+\usepackage{xcolor}
+\definecolor{niceblue}{rgb}{0.0,0.19,0.56}
+\usepackage[breaklinks]{hyperref}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\hypersetup{colorlinks,linkcolor={blue},citecolor={niceblue},urlcolor={blue}}
+\usepackage{amsmath}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage{caption}
+\usepackage{mwe}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[final,nonatbib]{neurips_2021}
+\usepackage{xcolor}
+\usepackage{enumitem}
+% \usepackage{emoji}
+\usepackage{optidef}
+\usepackage{soul}
+\usepackage{textcomp}  % Required for encoding \textbigcircle
+\usepackage{scalerel}  % Required for emoji \scalerel
+\sethlcolor{lightgray}
+\def\hourglass{\scalerel*{\includegraphics{resources/emoji/23f3.pdf}}{\textrm{\textbigcircle}}}
+\def\checkbox{\scalerel*{\includegraphics{resources/emoji/2705.pdf}}{\textrm{\textbigcircle}}}
+\DeclareSymbolFont{matha}{OML}{txmi}{m}{it}% txfonts
+\DeclareMathSymbol{\varv}{\mathord}{matha}{118}
+
+\newcommand{\block}[1]{%
+  \raisebox{\dimexpr(\fontcharht\font`X-1em)/2}{\rule{1em}{#1\dimexpr1em/8}}%
+}
+\DeclareUnicodeCharacter{2581}{\block{1}}
+
+
+\title{Distributed Deep Learning In Open Collaborations}
+
+\author{%
+  Michael Diskin\thanks{Equal contribution. Correspondence to \texttt{mryabinin0@gmail.com}\newline Detailed author contributions are listed \hyperref[sec:contributions]{at the end} of the work.}\textsuperscript{\hspace{0.6em}$\dag\heartsuit$}
+   \And
+   Alexey Bukhtiyarov\footnotemark[1]\textsuperscript{\hspace{0.6em}$\dag\clubsuit$}
+   \And
+   Max Ryabinin\footnotemark[1]\textsuperscript{\hspace{0.6em}$\dag\heartsuit$}
+   \AND
+   Lucile Saulnier\textsuperscript{$\ddag$}
+   \And
+   Quentin Lhoest\textsuperscript{$\ddag$}
+   \And
+   Anton Sinitsin\textsuperscript{$\dag\heartsuit$}
+   \And
+   Dmitry Popov\textsuperscript{$\dag\heartsuit$}\\
+   \And
+   Dmitry Pyrkin\textsuperscript{$\heartsuit$}\\
+   \And 
+   Maxim Kashirin\textsuperscript{$\heartsuit$}\\
+   \And
+   Alexander Borzunov\textsuperscript{$\dag\heartsuit$}\\
+   \And
+   Albert Villanova del Moral\textsuperscript{$\ddag$}\\
+   \And
+   Denis Mazur\textsuperscript{$\clubsuit$}\\
+   \And
+   Ilia Kobelev\textsuperscript{$\dag\clubsuit$}\\
+   \And
+   Yacine Jernite\textsuperscript{$\ddag$}\\
+   \And
+   Thomas Wolf\textsuperscript{$\ddag$}\\
+   \And
+   Gennady Pekhimenko\textsuperscript{$\diamondsuit\spadesuit$}\\
+   \and
+   \centerline{$\dag$ Yandex, Russia}\\
+   \centerline{$\ddag$ Hugging Face, USA}\\
+   \centerline{$\heartsuit$ HSE University, Russia}\\
+   \centerline{$\clubsuit$ Moscow Institute of Physics and Technology, Russia}\\
+   \centerline{$\diamondsuit$  University of Toronto, Canada}\\
+   \centerline{$\spadesuit$ Vector Institute, Canada}
+\vspace{-16pt}
+}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Modern deep learning applications require increasingly more compute to train state-of-the-art models. To address this demand, large corporations and institutions use dedicated High-Performance Computing clusters, whose construction and maintenance are both environmentally costly and well beyond the budget of most organizations. As a result, some research directions become the exclusive domain of a few large industrial and even fewer academic actors. To alleviate this disparity, smaller groups may pool their computational resources and run collaborative experiments that benefit all participants. This paradigm, known as grid- or volunteer computing, has seen successful applications in numerous scientific areas. However, using this approach for machine learning is difficult due to high latency, asymmetric bandwidth, and several challenges unique to volunteer computing. In this work, we carefully analyze these constraints and propose a novel algorithmic framework designed specifically for collaborative training. We demonstrate the effectiveness of our approach for SwAV and ALBERT pretraining in realistic conditions and achieve performance comparable to traditional setups at a fraction of the cost. Finally, we provide a detailed report of successful collaborative language model pretraining with 40 participants.
+\vspace{-8pt}
+
+
+\end{abstract}
+\input{intro.tex}
+
+\input{related.tex}
+
+\input{method.tex}
+
+\input{experiments.tex}
+
+\input{discussion.tex}
+
+\input{acknowledgements.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\clearpage
+\input{contributions}
+\clearpage
+
+\appendix
+\input{supplementary.tex}
+
+\end{document}
+
+

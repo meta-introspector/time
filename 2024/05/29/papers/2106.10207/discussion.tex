@@ -1,0 +1,8 @@
+\section{Conclusion}\label{sect:conclusion}
+
+In this work, we proposed DeDLOC --- a collaborative deep learning approach that enables large-scale collective distributed training on whichever computers available to participants, regardless of hardware and network limitations.
+We demonstrated with several experiments that this is a viable approach that maintains its efficiency in a broad range of conditions. Finally, we report the first real collaborative training run of such a scale and share our findings on volunteer activity to pave the road for similar experiments in the future.
+
+An essential property of collaborative training is its environmental impact. While all distributed training experiments have a negative impact due to carbon emissions~\cite{Anthony2020CarbontrackerTA}, DeDLOC has one unique advantage. Due to the ability to utilize heterogeneous low-end devices, it can prolong the effective lifespan of existing computers. We discuss other aspects of environmental impact in Appendix~\ref{appendix:env_impact}.
+
+One issue that needs to be addressed before starting collaborative experiments is the need to gather a community of volunteers. Although our proposed authentication mechanism (see Appendix~\ref{appendix:authorization}) allows acknowledging participants for their contributions (briefly discussed in Appendix~\ref{appendix:contribution_measurement}), the best approach to recruit volunteers is an open question: one needs to take into account both the resources of community members and their motivation for training a specific model.

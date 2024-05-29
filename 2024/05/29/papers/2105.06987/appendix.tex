@@ -1,0 +1,128 @@
+% \section{Details of Experimental Configuration}\label{apn:config}
+
+% The current section of the appendix provides both a description of the datasets and details of the models and experimental setups used in this work. 
+
+
+% \subsection{ASR model configuration}
+% \begin{table*}[ht!]
+% \caption{Description of ASR Datasets}\label{apn-tab:ood-detection}
+% \centering
+% \begin{tabular}{cc|cccc}
+% \toprule
+% \multirow{1}{*}{Dataset} & \multirow{1}{*}{Subset} & Hours & Utterances & Words / Utterance & Domain\\
+% \midrule
+% \multirow{5}{*}{Librispeech} & Train  & 960 & 281.2K & 33.4 & \multirow{6}{*}{Story Books} \\
+% & Dev-Clean  & 5.4 & 2703 & 17.8 &   \\
+% & Dev-Other  & 5.3 & 2864 & 18.9 &   \\
+% & Test-Clean & 5.4 & 2620 & 20.1 &   \\
+% & Test-Other & 5.1 & 2939 & 17.8 &   \\
+% \midrule
+% AMI & Eval   & - & 12643 & 7.1 &  Meetings \\
+% \midrule 
+% Common-Voice RU & \multirow{3}{*}{Test}  & - & 6300 & 9.6 & \multirow{3}{*}{General} \\
+% Common-Voice FR & & - & 14760 & 9.5 &  \\
+% Common-Voice DE & & - & 13511 & 8.8 &  \\
+% \bottomrule
+% \end{tabular}
+% \end{table*}
+% In this work ensembles of the VGG-Transformer sequence-to-sequence ASR model~\cite{vgg-transformer} were considered. An ensemble of 4 models was constructed using a different seed for both initialization and mini-batch shuffling in each model. We used ensembles of only 4 VGG-Transformer models for inference, as more did not fit into the memory of an RTX 2080ti card used for inference. We used the Fairseq~\cite{fairseq} implementation and training recipe for this model with no modifications. Specifically, models were trained at a fixed learning rate for 80 epochs, where an epoch is a full pass through the entire training set. Checkpoints over the last 30 epochs were averaged together, which proved to be crucial to ensuring good performance. Training took 8 days using 8 V100 GPUs. Models were trained on the full 960 hours of the LibriSpeech dataset~\cite{librispeech} in exactly the same configuration as described in~\cite{vgg-transformer}. LibriSpeech is a dataset with ~1000 hours of read books encoded in 16-bit, 16kHz FLAC format. The reference transcriptions were BPE tokenized using a vocabulary of 5000 tokens, as per the standard recipe in Fairseq for the VGG-transformer~\cite{fairseq,vgg-transformer}. For OOD detection we also considered the evaluation subset of the AMI dataset~\cite{ami-dataset}, which is a dataset of meeting transcriptions, as well as the Russian and French datasets of the Common Voice Project~\cite{ardila2019common}, which consist of people reading out diverse text from the internet. AMI is encoded in 16-bit, 16Khz WAV format. Common Voice data was stored as 24kHz 32-bit MP3 files which were converted into 16-bit 16kHz WAV format via the SOX tool. Finally, WER was evaluated using the NIST SCLITE scoring tool.
+
+% \subsection{NMT model configuration}
+% \begin{table*}[ht!]
+% \caption{Description of NMT Datasets}\label{apn-tab:ood-detection}
+% \centering
+% \begin{tabular}{ccc|ccc}
+% \toprule
+% \multirow{1}{*}{Dataset} & \multirow{1}{*}{Subset} & LNG & Sentences & Words / Sent.  & Domain\\
+% \midrule
+% \multirow{2}{*}{WMT'14 EN-FR} & \multirow{2}{*}{Train}  & En & \multirow{2}{*}{40.8M} & 29.2 &  \\
+% &    & Fr &  & 33.5 & Policy, News, Web \\
+% \midrule
+% \multirow{2}{*}{WMT'17 EN-DE} & \multirow{2}{*}{Train}  & En & \multirow{2}{*}{4.5M} & 26.2 &   \\
+% &   & De &  & 24.8 & Policy, News, Web  \\
+% \midrule
+% \multirow{3}{*}{Newstest14} & - & En  & \multirow{3}{*}{3003} & 27.0 &  \multirow{3}{*}{News} \\
+%                             & - & Fr  &  & 32.1 &   \\
+%                             & - & De  &  & 28.2 &   \\
+% \midrule 
+% \multirow{3}{*}{Khresmoi-Summary} & \multirow{3}{*}{Dev+Test} & En & \multirow{3}{*}{1500} & 19.0 & \multirow{3}{*}{Medical} \\
+% & & Fr &  & 21.8 & \\
+% & & De &  & 17.9 & \\
+% \bottomrule
+% \end{tabular}
+% \end{table*}
+% This work considered ensembles of Transformer-Big~\cite{attentionisallyouneed} neural machine translation (NMT) models. An ensemble 6 models was constructed using a different seed for both initialization and mini-batch shuffling in each model. NMT models were trained on the WMT'14 English-French and WMT'17 English-German datasets in both directions (En-Fr, Fr-En, En-De, De-En). All models were trained using the standard Fairseq~\cite{fairseq} implementation and recipe, which is consistent with the baseline setup in described in~\cite{ott2018scaling}. The data was tokenized using a BPE vocabulary of 40,000 tokens as per the standard recipe. For each dataset and translation direction an ensemble of 6 models was trained using different random seeds. All 6 models were used during inference. Models trained on WMT'17 English-German were trained for 193000 steps of gradient descent, which corresponds to roughly 49 epochs, while WMT'14 English-French models were trained for 800000 steps of gradient descent, which corresponds to roughly 19 epochs. All models were trained using mixed-precision training. Models were evaluated on newstest14, which was treated as in-domain data. OOD data was constructed by considering BPE-token permuted and language-flipped versions of the newstest14 dataset. Furthermore, the \emph{khresmoi-summary} medical dataset as well the reference transcriptions of the LibriSpeech test-clean and test-other datasets were also used as OOD evaluation datasets. All additional datasets used consistent tokenization using the 40K BPE vocabulary. 
+
+
+
+
+% \newpage
+% \newpage
+\section{Derivations} \label{apn:derivations}
+
+
+The current section details the derivation of differential entropy, mutual information and expected pairwise KL-divergence for a Prior Network which parameterizes the Dirichlet distribution:
+\begin{empheq}{align}
+\begin{split}
+{\tt p}(\bm{\pi} | \bm{x}^{*};\bm{\hat \theta}) =&\ {\tt Dir}(\bm{\pi} ; \bm{\hat \alpha}) \\
+\bm{\hat \alpha} =&\ \bm{f}(\bm{x}^{*};\bm{\hat \theta})
+\end{split}
+\end{empheq}
+where ${\tt p}(\bm{\pi} ; \bm{\hat \alpha})$ is a prior distribution over categorical distributions.
+The Dirichlet distribution is defined as:
+\begin{empheq}{align}
+\begin{split}
+{\tt Dir}(\bm{\pi};\bm{\alpha}) =&\ \mathcal{C}(\bm{\alpha})\prod_{c=1}^K \pi_c^{\alpha_c -1} ,\quad \alpha_c >0\\
+\mathcal{C}(\bm{\alpha}) =&\  \frac{\Gamma(\alpha_0)}{\prod_{c=1}^K\Gamma(\alpha_c)},\quad \alpha_0 = \sum_{c=1}^K \alpha_c
+\end{split}
+\end{empheq}
+where $\Gamma(\cdot)$ is the \emph{Gamma function}.
+
+\subsection{Differential Entropy}
+The differential entropy of the Dirichlet distribution can be derived as follows:
+\begin{empheq}{align}
+\begin{split}
+  \mathcal{H}[{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})]=&\ -\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x};\bm{\hat \theta})}[\ln({\tt p}(\bm{\pi}|\bm{x};\bm{\hat \theta}))] \\
+=&\ \sum_{c=1}^K\ln\Gamma(\hat \alpha_c)-\ln\Gamma(\hat \alpha_0) - \sum_{c=1}^K(\hat \alpha_c-1)\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x};\bm{\hat \theta})}[\ln\pi_c] \\
+=&\ \sum_{c=1}^K\ln\Gamma(\hat \alpha_c)-\ln\Gamma(\hat \alpha_0) - \sum_{c=1}^K(\hat \alpha_c-1)\cdot\big(\psi(\hat \alpha_c)-\psi(\hat \alpha_0)\big)
+\end{split}
+\end{empheq}
+where $\psi$ is the \emph{digamma function} and $\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{\hat \alpha})}[\ln(\pi_c)]=\psi(\hat \alpha_c)-\psi(\hat \alpha_0)$ is a standard result.
+
+\subsection{Mutual Information}
+The mutual information between the labels y and the categorical $\bm{\pi}$ for a Dirichlet distribution can be calculated as follows, using the fact that mutual information is the difference of the entropy of the expected distribution and the expected entropy of the distribution.
+\begin{empheq}{align}
+\begin{split}
+\underbrace{\mathcal{I}[y,\bm{\pi} |\bm{x}^{*},\bm{\hat \theta}]}_{Knowledge\ Uncertainty} = &\  \underbrace{\mathcal{H}[ \mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*}, \bm{\hat \theta})}[{\tt P}(y|\bm{\pi}]]}_{Total\ Uncertainty} - \underbrace{\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*}, \bm{\hat \theta})}[\mathcal{H}[{\tt P}(y|\bm{\pi})]]}_{Expected\ Data\ Uncertainty} \\
+= &\ \mathcal{H}[{\tt P}(y|\bm{x}^{*},\bm{\hat \theta})]  + \sum_{c=1}^K \mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*}, \bm{\hat \theta})}[\pi_c\ln\pi_c] \\
+=&\ -\sum_{c=1}^K\frac{\hat \alpha_c}{\hat \alpha_0}\Big(\ln\frac{\hat \alpha_c}{\hat \alpha_0} - \psi(\hat \alpha_c+1) +\psi(\hat \alpha_0+1) \Big)
+\end{split}
+\end{empheq}
+The second term in this derivation is a non-standard result. The expected entropy of the distribution can be calculated in the following way:
+\begin{empheq}{align}
+\begin{split}
+\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*}, \bm{\hat \theta})}[\pi_c\ln\pi_c] = &\ \frac{\Gamma(\hat \alpha_0)}{\prod_{c=1}^K\Gamma(\hat \alpha_c)}\int_{\mathcal{S}_K}\pi_c\ln\pi_c\prod_{c=1}^K \pi_c^{\hat \alpha_c -1}d\bm{\pi}   \\
+= &\ \frac{\hat \alpha_c}{\hat \alpha_0}\frac{\Gamma(\hat \alpha_0+1)}{\Gamma(\hat \alpha_c+1)\prod_{c'=1, \neq c}^K\Gamma(\hat \alpha_{c'})}\int_{\mathcal{S}_K}\pi_c^{\hat \alpha_c}\ln\pi_c\prod_{c'=1,\neq c}^K \pi_{c'}^{\hat \alpha_{c'} -1}d\bm{\pi} \\
+= &\ \frac{\hat \alpha_c}{\hat \alpha_0}\big(\psi(\hat \alpha_c+1) - \psi(\hat \alpha_0+1)\big)
+\end{split}
+\end{empheq}
+Here the expectation is calculated by noting that the standard result of the expectation of $\ln\pi_c$ with respect to a Dirichlet distribution can be used if the extra factor $\pi_c$ is accounted for by adding 1 to the associated concentration parameter $\hat \alpha_c$ and multiplying by $\frac{\hat \alpha_c}{\hat \alpha_0}$ in order to  have the correct normalizing constant.
+
+\subsection{Expected Pairwise KL-divergence}
+Similarly, the Expected Pairwise KL-divergence can also be analytically calculated for the Dirichlet distribution using the following derivation:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{K}[{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})] = &\ \mathbb{E}_{{\tt p}(\bm{\pi}^{(1)}|\bm{x}^{*};\bm{\hat \theta}),{\tt p}(\bm{\pi}^{(2)}|\bm{x}^{*};\bm{\hat \theta})}\big[{\tt KL}[{\tt P}(y|\bm{\pi}^{(1)})||{\tt P}(y|\bm{\pi}^{(2)})]\big] \\
+= &\ - \sum_{c=1}^K\mathbb{E}_{{\tt p}(\bm{\pi}^{(1)}|\bm{x}^{*};\bm{\hat \theta})}[{\tt P}(\omega_c|\bm{\pi}^{(1)})]\mathbb{E}_{{\tt p}(\bm{\pi}^{(2)}|\bm{x}^{*};\bm{\hat \theta})}[\ln {\tt P}(\omega_c|\bm{\pi}^{(2)})] \\
+- &\ \mathbb{E}_{{\tt p}(\bm{\pi}^{(1)}|\bm{x}^{*};\bm{\hat \theta})}\big[\mathcal{H}[{\tt P}(y|\bm{\pi}^{(1)})]\big] \\
+= &\  \sum_{c=1}^K\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})}[\pi_c\ln\pi_c] - \sum_{c=1}^K\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})}[\pi_c]\mathbb{E}_{{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})}[\ln\pi_c]
+\end{split}
+\end{empheq}
+The last step is valid only if ${\tt p}(\bm{\pi}^{(1)}|\bm{x}^{*};\bm{\hat \theta}) = {\tt p}(\bm{\pi}^{(2)}|\bm{x}^{*};\bm{\hat \theta}) = {\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})$, which represents independent draws of categorical from the Dirichlet. This expression then leads to a particularly elegant solution:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{K}[{\tt p}(\bm{\pi}|\bm{x}^{*};\bm{\hat \theta})] = &\  \sum_{c=1}^K\frac{\hat \alpha_c}{\hat \alpha_0}\big(\psi(\hat \alpha_c+1) -\psi(\hat \alpha_0+1)\big) - \sum_{c=1}^K\frac{\hat \alpha_c}{\hat \alpha_0}\big(\psi(\hat \alpha_c)-\psi(\hat \alpha_0)\big) \\
+= &\  \frac{K-1}{\hat \alpha_0}
+\end{split}
+\end{empheq}
+Thus, the expected pairwise KL-divergence is inversely proportional to the concentration of the Dirichlet and is maximized when the concentration $\hat \alpha_0$ tends to 0.

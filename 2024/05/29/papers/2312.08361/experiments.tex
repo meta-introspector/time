@@ -1,0 +1,88 @@
+\section{Experiments}\label{sect:experiments}
+
+\subsection{Inference with unreliable servers}\label{sect:experiments_basic}
+
+First, we conduct small-scale preliminary experiments to test the fault-tolerant generation algorithm described in Section~\ref{sect:method_algorithm}.
+For these experiments, we use a smaller BLOOM model with 7.1 billion parameters~\citep{bloom-7b1}. This model contains 30 transformer blocks with hidden size 4096. We compare our algorithm with baselines when generating a single sequence of length 512. For simplicity, we run all computations and communications in single precision and disregard word embeddings and logits for this set of experiments. We measure the time to run a certain number of tokens through all blocks and simulate failures by resetting pipeline stages at a certain rate.
+
+
+We compare three inference strategies:
+\begin{enumerate}
+    \vspace{-2px}
+    \item \textbf{Caching with restarts}, which refers to standard inference with servers storing attention caches. On failure, it restarts the entire generation from scratch since the failed server's caches are lost.
+    \vspace{-2px}
+    \item \textbf{Cache-less inference}, which reruns past tokens on every step. On failure, it restarts only the last generation step.
+    \vspace{-2px}
+    \item \textbf{Algorithm~\ref{alg:main}}, which is specifically designed for fault-tolerant inference.
+    \vspace{-2px}
+\end{enumerate}
+
+All runs use four pipeline stages with (8, 7, 8, 7) model layers per pipeline stage. Each pipeline stage is served by a single GeForce 1080 Ti GPU; the four GPUs are running in a single system with dual Xeon Gold 6148 CPU, 12 DDR4 LRDIMM sticks with 64 GB each. The system has 16 dedicated PCIe Gen.~3 lanes per GPU in dual root configuration, without using PCIe switches. Each stage runs in an isolated Docker containers with virtual network interfaces, but there is no limit to communication bandwidth for this experiment. We repeat all experiments 50 times and report the average time. The adjusted standard deviation never exceeds 0.2\%. We use the pipeline parallelism implementation from Megatron-DeepSpeed~\citep{bigscience-megatron-deepspeed} for the cache-less baseline.
+
+\begin{table*}[t]
+  \centering
+ \vspace{-5pt}
+ \caption{Sequential inference speed (steps/second) of BLOOM (7.1B) with varying failure rates. A failure rate $p$ means that sending any set of activations to the next stage of the pipeline fails with probability $p$. Missing values mean that the algorithm did not finish within 1 hour.}
+ \vspace{5pt}
+ \label{tbl:inference_with_failures}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{ccccccccc}\toprule
+\multirow{2}{*}{\bf{Inference Algorithm}}  & \multicolumn{4}{c}{\bf{128 tokens, failure rate:}} & \multicolumn{4}{c}{\bf{1024 tokens, failure rate:}} \\
+\cmidrule{2-5} \cmidrule{6-9}
+{}  & 0    & 1e-4   & 1e-3   & 1e-2 & 0    & 1e-4   & 1e-3   & 1e-2 \\
+\midrule
+Caching with restarts & 17.1 & 16.7 & 12 & 0.18 & 15.5 & 11.8 & 0.48 & -- \\
+Cache-less inference & 3.44 & 3.44 & 3.44 & 3.44 &  0.89 & 0.89 & 0.89 & 0.89 \\
+Algorithm~\ref{alg:main} (ours)  &  11.4   & 11.4  & 10.6   &   3.38   & 10.7 & 10.7 & 7.76 & 2.17 \\
+\bottomrule
+\end{tabular}
+\vspace{-5pt}
+\end{table*}
+
+We report performance measurements in Table~\ref{tbl:inference_with_failures}. Unlike baselines, our algorithm provides reasonable performance \textit{in all tested conditions}, especially for higher failure rates (common for communicating over the Internet, using spot/preemptible instances or unreliable hardware). Caching with restarts is most efficient for inference without failures, with our algorithm being somewhat slower due to less mature implementation. Finally, the cache-less inference can be competitive for short sequences (128 tokens), but slows down considerably on 1024 tokens, which agrees with our intuition from~\ref{sect:method_analysis}.
+
+We provide plots showing additional evaluations for a wider range of failure rates (up to 5\%) and sequence lengths (up to 2048 tokens) in Appendix~\ref{appendix:failure_rate_plots} (Figure~\ref{fig:failure_rate_plots}).
+
+\subsection{Experiments for Llama 2 (70B) and BLOOM (176B)}
+\label{sect:experiments_controlled}
+
+\input{resources/main_exp_table.tex}
+
+In this section, we evaluate our system on more practical tasks of running Llama 2 (70B)~\citep{llama2} and BLOOM (176B)~\citep{bloom}.
+First, we consider servers running in a network with controlled bandwidth and latency\footnote{We simulate network conditions using \texttt{tc qdisc}.}. We measure performance for \textbf{(a)} Llama 2 distributed across 3 servers with a T4 GPU each, \textbf{(b)} BLOOM distributed across 3 servers with an A100 (80 GB) GPU each, and \textbf{(c)} BLOOM distributed across 10 servers with an RTX 3090 GPU each. We use 4-bit NormalFloat quantization~\citep{dettmers2023qlora} for Llama 2 and 8-bit matrix decomposition~\citep{dettmers2022llm} for BLOOM in all evaluations including the baselines below.
+
+We report performance of:
+\begin{itemize}
+    \vspace{-2px}
+    \item \textbf{Sequential (autoregressive) inference} for batch size 1 (i.e., each step generates 1 token). It is measured in generation steps per second a client can do and shows the \textit{generation latency}.
+    \vspace{-2px}
+    \item \textbf{Parallel forward passes} for batches of 128-token sequences\footnote{Intenally, large batches are split into micro-batches of 1024 tokens each to minimize pipeline bubbles.}. It is measured in tokens per second a client can process. This shows the \textit{system's throughput} during batch processing and fine-tuning.
+    \vspace{-2px}
+\end{itemize}
+
+Since the backward pass performance depends on a set of trainable weights, batch size, and other hyperparameters, we report its performance in different setups separately in Appendix~\ref{appendix:backward_pass}.
+
+\paragraph{Concurrent clients.} We also investigate the effect of having concurrent clients. We assume that each server
+belongs to a different person, and multiple people (possibly, all of them) are interested in running inference or fine-tuning at the same time. In order to do that, they run the client interacting with our distributed system. The client runs on the same machine, uses 8 CPU cores and no GPU.
+We report the speed of sequential inference and parallel forward passes that \textit{each client gets on average.}
+
+\paragraph{Offloading baseline.} We also evaluate parameter offloading, where each user runs independently on a single GPU, swapping parameters from CPU memory.
+First, we report the actual throughput of RAM offloading in case of DeepSpeed with default recommended parameters and enabled $\texttt{pin\_memory}$ (gives $1.2{-}2\times$ speedup).
+Next, we report the \textit{theoretical-best} throughput the offloading baseline can reach for BLOOM. It is calculated as a maximal throughput in the best hardware setup possible (CPU RAM offloading via PCIe 4.0 with 16 PCIe lanes), assuming infinite GPU performance. The calculations are detailed in Appendix~\ref{appendix:offloading_estimate}.
+
+\paragraph{Local pipeline parallelism (NVLink).} Next, we report performance for BLOOM running on a server with 3$\times$ A100 (80 GB) GPUs. In this setup, a single server has enough GPU memory to load the entire model, which provides an \textit{upper bound} for performance reachable with these GPUs. This setup runs pipeline-parallelism from DeepSpeed v0.7.7.
+
+\paragraph{Heterogeneous servers.} To validate that our system works on heterogeneous hardware, we simulate 12 heterogeneous devices by partitioning each A100 (80~GB) into several virtual servers (3 large and 1 small). We get 9 servers hosting 7 blocks each, one server with 3 blocks and two more servers with 2 blocks (70 blocks in total, as required for BLOOM). Additionally, we benchmark the system on real heterogeneous GPUs with diverse compute capabilities in the "Real-world setup" below.
+
+\paragraph{Real-world setup.} Finally, we benchmark BLOOM in a real-world setup with 14 smaller servers holding 2$\times$RTX 3060, 4$\times$2080Ti, 2$\times$3090, 2$\times$A4000, and 4$\times$A5000 GPUs. These are personal servers and servers from university labs, spread across Europe and North America and connected to the Internet at speeds of 100--1000 Mbit/s. Four of the servers operate from behind firewalls\footnote{We use the Circuit Relay protocol from libp2p~\citep{libp2p-circuit-relay} to traverse NATs and firewalls.}.
+
+\paragraph{Analysis.} We report the results for Llama 2 in Table~\ref{tbl:llama2_exps} and for BLOOM in Table~\ref{tbl:main_exp_table}. For inference, performance does not depend much on bandwidth or sequence length but degrades with higher latency. In turn, fine-tuning forward passes for large batches are affected by both bandwidth and latency.
+
+We can see that the offloading baseline is about an order of magnitude slower than our system for inference, both in practice and in the theoretical-best setup assuming an infinite GPU performance. For parallel forward passes, offloading is competitive if networking is limited to 100 Mbit/s or has high latency. In other cases, our algorithm offers higher throughput than offloading for training.
+
+Crucially, our system significantly outperforms offloading even when each GPU node runs its own client doing single-batch inference at the same time. Thus, \textbf{given the same hardware}, a group of researchers will get much better inference speed by collaborating over the Internet using our system compared to each of them running offloading independently.
+
+Finally, the real-world setup turns out to be slower than the A100 benchmarks due to slower hardware. Still, our algorithm outperforms offloading even when communicating between different continents.
+
+
+\paragraph{Additional experiments.} We conduct two additional experiments to test individual components of our system. We evaluate the load balancing from~\ref{sect:method_petals} in isolation in Appendix~\ref{appendix:load_balancing_exps}. We also evaluate the performance of model compression from Section~\ref{sect:method_implementation} in Appendix~\ref{appendix:8bit_quality}. To reiterate, for each model, we use the same compression strategy in our system and all baselines. Finally, we perform a qualitative evaluation of fault tolerance by shutting down random servers during inference and fine-tuning to verify that the algorithm produces correct outputs and gradients.

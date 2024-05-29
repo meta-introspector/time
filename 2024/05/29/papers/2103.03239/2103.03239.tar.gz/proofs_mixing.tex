@@ -1,0 +1,338 @@
+\section{Proofs of Mixing Properties of Moshpit All-Reduce}\label{sect:missing_proofs}
+
+\textbf{Notation.} Throughout the following sections, we use the standard notation from the literature on stochastic optimization. That is, for any $n$-dimensional vectors $x = (x_1,\ldots,x_n)^\top,y = (y_1,\ldots,y_n)^\top\in\R^n$ we use $\langle x,y\rangle$ to denote the standard inner product: $\langle x, y\rangle = x_1y_1 + \ldots + x_ny_n$. Next, we use $\|x\|$ to denote the $\ell_2$=norm of $x$ ($\|x\| = \sqrt{\langle x, x\rangle}$), $\EE[\xi]$ to denote an expectation of a random variable $\xi$, $\EE[\xi\mid \eta]$ is used for the conditional expectation of $\xi$ given $\eta$, and $\PP\{E\}$ denotes the probability of an event $E$.
+
+\subsection{Computing exact average in a full grid}\label{sect:equiv_to_torus}
+As discussed in Section~\ref{sect:method_algorithm}, Moshpit All-Reduce obtains the exact average of parameter vectors from $N$ peers arranged in a grid with $d$ coordinates and $M$ positions per coordinate when $N\equiv M^d$. That is, when the grid is full and each step averages $M$ parameter values along a single grid coordinate without repetitions, the algorithm needs only $d$ steps to compute the actual average across all nodes. In this section, we give a proof of this fact.
+
+First, let us formally define the setting and the averaging steps of Moshpit All-Reduce in this specific case. Let $\theta_{i_1 i_2\ldots i_d}$ be the parameter vector of the worker with coordinates $i_1, i_2,\ldots, i_d$; each coordinate $i_k$ takes values from $1$ to $M$, because the hypercube of peers is completely full (thus, due to the pigeonhole principle, there are no unoccupied coordinates). Next, arrange the coordinates of these vector according to the order of averaging iterations: namely, at iteration 1
+\begin{equation}
+    \overline{\theta}_{i_1 i_2\ldots  i_d}^1=\frac{1}{M}\sum_{j_1=1}^M \theta_{j_1 i_2\ldots i_d},\quad  i_1\in\{1,\ldots,M\},
+\end{equation}
+which means that for the first iteration, we take the average across the first axis $\overline{\theta}^1$ and replicate it across all $M$ resulting vectors regardless of their index $i_1$. The next averaging steps can be expressed similarly with a simple recurrence relation:
+\begin{equation}
+\label{eqn:avg_recurrence}
+    \overline{\theta}_{i_1 i_2 \ldots i_d}^t=\frac{1}{M}\sum_{j_t=1}^M \overline{\theta}_{i_1\ldots i_{t-1} j_t i_{t+1}\ldots i_d}^{t-1}.
+\end{equation}
+Given this formal definition, we can now state and prove the exact averaging result:
+\begin{theorem}[Exact average in a full $d$-dimensional hypercube after $d$ steps]
+Assume that $M^d$ peers are arranged in a $d$-dimensional hypercube with $M$ positions in each dimension. Also, assume that each peer fully participates in every averaging step and $M$-sized groups for each averaging iteration are determined based on the hypercube coordinates. Then, if Moshpit All-Reduce is ran in the above setup for $d$ iterations without repeating groups (i.e. averaging across each dimension exactly once), its result for each participant is the average value of $\theta$ across all $M^d$ peers.
+\end{theorem}
+\begin{proof}
+We can directly obtain the expression for the average by expanding the recurrence and rearranging the sums:
+\begin{eqnarray*}
+    \overline{\theta}_{i_1 i_2\ldots i_d}^d &=& \frac{1}{M}\sum_{j_d=1}^M\overline{\theta}_{i_1\ldots i_{d-1} j_d}^{d-1}=\frac{1}{M}\sum_{j_d=1}^M\left(\frac{1}{M}\sum_{j_{d-1}=1}^M \overline{\theta}_{i_1 i_2\ldots j_{d-1}j_d}\right)=\ldots\\
+    &=& \frac{1}{M}\Bigg(\underbrace{\sum_{j_d=1}^M\Bigg(\frac{1}{M}\sum_{j_{d-1}=1}^M\ldots\sum_{j_2=1}^M\Bigg(\frac{1}{M}\sum_{j_1=1}^M}_{d\textrm{ summations}} \theta_{j_1 \ldots j_d}\Bigg)\Bigg)\Bigg)\\
+    &=& \frac{1}{M^d}\sum_{j_d=1}^M\sum_{j_{d-1}=1}^M\ldots\sum_{j_2=1}^M\sum_{j_1=1}^M \theta_{j_1 \ldots j_d} =\frac{1}{M^d}\sum_{j_1, \ldots, j_d=1}^M  \theta_{j_1 \ldots j_d}.
+\end{eqnarray*}
+But this is exactly the global average of all $\theta$, since there are $M^d$ participants and each vector is represented in the sum because of summation over all possible indices.
+\end{proof}
+
+Notice that for a given grid of peers, if some of its indices do not have corresponding parameter vectors, Equation~\ref{eqn:avg_recurrence} may result in different average vectors on different workers due to different numbers of peers along a coordinate for different indices. For example, running two iterations of Moshpit Averaging with $d=2,\ M=2$ and three parameter vectors $\theta_{11},\ \theta_{21},\ \theta_{22}$ results in $\frac{\theta_{11}+\theta_{21}}{2}$ on the first worker and $\frac{\theta_{11}+\theta_{21}}{4}+\theta_{22}$ on other workers, with neither equal to the global average. However, the variance of the averaged vectors does decrease, which is formally proven in Section~\ref{sec:proof_quality_of_avg_deterministic_vectors}.
+
+\subsection{Proof of Theorem~\ref{thm:quality_of_avg_deterministic_vectors_0}}\label{sect:correctness_proof}
+Below we provide the complete proof of Theorem~\ref{thm:quality_of_avg_deterministic_vectors_0}. For the readers' convenience, we restate the theorem.
+\begin{theorem}[Theorem~\ref{thm:quality_of_avg_deterministic_vectors_0}]\label{thm:quality_of_avg_deterministic_vectors_0_supp}
+If all workers have non-zero probability of successfully running a communication round in Moshpit Averaging and the order of $\texttt{peers}_t$ is random, then all local vectors $\theta^t_i$ converge to the global average with probability $1$:
+\begin{equation}
+    \forall i = 1,\ldots, N\quad \left\|\theta^t_i - \frac1N \sum_{i=1}^N \theta^0_i\right\|^2 \xrightarrow[t\to\infty]{} 0.\label{eq:quality_of_avg_deterministic_vectors_0_supp}
+\end{equation}
+\end{theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:quality_of_avg_deterministic_vectors_0}]
+    First of all, we notice that \eqref{eq:quality_of_avg_deterministic_vectors_0_supp} is equivalent to
+    \begin{equation}
+    \forall i = 1,\ldots, N,\;\forall j=1,\ldots,n\quad \left(\theta^t_i(j) - \frac1N \sum_{i=1}^N \theta^0_i(j)\right)^2 \xrightarrow[t\to\infty]{} 0,\label{eq:quality_of_avg_deterministic_vectors_0_supp_tech_1}
+    \end{equation}
+    where $\theta_i^t(j)$ denotes $j$-th component of $\theta_i^t$. Consider an arbitrary component $j \in \{1,\ldots,n\}$ and the sequence of intervals $\{I_{j,t}\}_{t\ge 0}$ where $I_{j,t} = \text{conv}\{\theta_1^t(j),\theta_2^t(j),\ldots, \theta_N^t(j)\}$. Then, $\{I_{j,t}\}_{t\ge 0}$ is a sequence of nested intervals ($I_{j,t+1} \subseteq I_{j,t} \forall t\ge 0$), since averaging in groups does not expand the convex hull of $\{\theta_1^t,\theta_2^t,\ldots, \theta_N^t\}$. For convenience, we specify the bounds of the intervals: $I_{j,t} = [a_{j,t}, b_{j,t}]$. Using the Cantor's intersection theorem, we conclude that
+    \begin{equation*}
+        \bigcap\limits_{t=0}^\infty I_{j,t} = I_j = [a_j, b_j],
+    \end{equation*}
+    where $\overline{\theta}(j) = \frac{1}{N}\sum_{i=1}^n\theta_i^0(j) \in [a_j, b_j]$. If $[a_j, b_j] = \{\overline{\theta}(j)\}$ with probability $1$, then \eqref{eq:quality_of_avg_deterministic_vectors_0_supp_tech_1} holds with probability $1$ as well. Suppose the opposite: there exist such $j \in \{1,\ldots,n\}$, $[a,b]$ and $\delta,\Delta > 0$ that $\overline{\theta}(j) \in [a,b]$, $b-a = \Delta$ and
+    \begin{equation*}
+        \PP\Bigg\{\underbrace{[a,b] \subseteq \bigcap\limits_{t=0}^\infty I_{j,t}}_{E}\Bigg\} = \delta > 0\quad \text{ and }\quad \forall \varepsilon > 0\; \PP\Bigg\{\underbrace{[a-\varepsilon,b+\varepsilon] \subseteq \bigcap\limits_{t=0}^\infty I_{j,t}}_{E_{\varepsilon}}\Bigg\} < \delta.
+    \end{equation*}
+    This implies that for all $\varepsilon > 0$ there exists such $T_{\varepsilon} > 0$ that
+    \begin{equation*}
+        \PP\Big\{\underbrace{\forall t \ge T_{\varepsilon}\;\; a_{j,t}\in [a-\varepsilon,a], b_{j,t}\in[b,b+\varepsilon]}_{E_{\varepsilon}'}\Big\} = \delta_{\varepsilon} > 0.
+    \end{equation*}
+    Consider $\varepsilon = \frac{\Delta}{(2N+100)^{2N}}$ and assume that the event $E_{\varepsilon}'$ holds. Next, we introduce new notation: $J_{\text{left}}^t = \{i \in \{1,\ldots, n\}\mid \theta_{i}^t(j) \in [a-\varepsilon,a]\}$ and $J_{\text{right}}^t = \{i \in \{1,\ldots, n\}\mid \theta_{i}^t(j) \in [b,b+\varepsilon]\}$. Since $E_{\varepsilon}'$ holds the sets $J_{\text{left}}^t$ and $J_{\text{right}}^t$ are non-empty for all $t\ge T_{\varepsilon}$ with probability $\delta_{\varepsilon} > 0$:
+    \begin{equation}
+        \PP\left\{\forall t \ge T_{\varepsilon}\;\; J_{\text{left}}^t \neq \varnothing\text{ and }  J_{\text{right}}^t \neq \varnothing\right\} = \delta_{\varepsilon} > 0. \label{eq:quality_of_avg_deterministic_vectors_0_supp_tech_2}
+    \end{equation}
+    We notice that every pair of workers $i_1,i_2$ has a non-zero probability of taking part in the averaging inside the common group at each iteration since all workers have a non-zero probability of successfully running a communication round and the order of $\texttt{peers}_t$ is random. This implies that every pair of workers $i_1,i_2$ with probability $1$ take part in the averaging inside the common group infinitely many times when $t$ goes to the infinity.
+    
+    Next, we choose some $t_0 \ge T_{\varepsilon}$. Let $J_{\text{left}}^{t_0} = \{i_{l,1},\ldots, i_{l,q_l}\}$ and $J_{\text{right}}^{t_0} = \{i_{r,1},\ldots, i_{r,q_r}\}$. Consider the event $E_{\varepsilon,0}' \subseteq E_{\varepsilon}'$ such that in $E_{\varepsilon,0}'$ peer $i_{l,1}$ computes an average in the group containing any peer from $J_{\text{right}}^{t_0}$ at some iteration $t_1 > t_0$. Our observations above imply that $\PP\{E_{\varepsilon,0}'\} = \PP\{E_{\varepsilon}'\} = \delta_{\varepsilon} > 0$. Then, $\theta_{i_{l,1}}^{t_1}(j) \ge \frac{N-1}{N}(a-\varepsilon) + \frac{1}{N}b = a-\varepsilon + \frac{1}{N}(\Delta + \varepsilon) = a - \frac{\Delta}{(2N+100)^{2N}} + \frac{1}{N}\left(\Delta + \frac{\Delta}{(2N+100)^{2N}}\right) > a + \frac{\Delta}{2N}$, i.e., $\theta_{i_{l,1}}^{t_1}(j) \in (a,b]$ meaning that $i_{l,1} \not\in J_{\text{left}}^{t_1}$. The last part of the proof shows that for any $t\ge t_1$, the peer $i_{l,1}$ will never be the part of $J_{\text{left}}^t$ and after a finite number of iterations $J_{\text{left}}^t = \varnothing$ with probability $\delta_{\varepsilon} > 0$ when $E_{\varepsilon,0}'$ holds, implying the contradiction with \eqref{eq:quality_of_avg_deterministic_vectors_0_supp_tech_2}.
+    
+    To show that, we consider the following set of peers: $\widehat{J}_{\text{left}}^{t_1} = \{i\in\{1,\ldots,n\}\mid \exists t \ge t_1:\; \theta_i^{t}(j)\in [a-\varepsilon, a+\frac{\Delta}{2N})\}$. Next, we consider the event $E_{\varepsilon,1}'\subseteq E_{\varepsilon,0}'$ such that in $E_{\varepsilon,1}'$ peer $i_{l,1}$ computes an average in the group containing some peer $i_{l,avg,1}$ from $\widehat{J}_{\text{left}}^{t_1}$ at some iteration $t_2 > t_1$ (and $t_2$ is the first such moment after $t_1$). Again, our observations imply $\PP\{E_{\varepsilon,1}'\} = \PP\{E_{\varepsilon,0}'\} = \delta_{\varepsilon}>0$. Then, $\theta_{i_{l,1}}^{t_2}(j) = \theta_{i_{l,avg,1}}^{t_2}(j) > \frac{N-1}{N}(a-\varepsilon) + \frac{1}{N}\left(a+\frac{\Delta}{2N}\right) = a + \frac{\Delta}{2N^2} - \frac{(N-1)\Delta}{N(2N+100)^{2N}} > a + \frac{\Delta}{4N^2}$. After that, we consider the event $E_{\varepsilon,2}'\subseteq E_{\varepsilon,1}'$ such that in $E_{\varepsilon,2}'$ peer $i_{l,1}$ or $i_{l,avg,1}$ computes an average in the group containing a peer $i_{l,avg,2}\neq i_{l,avg,1}$ from $\widehat{J}_{\text{left}}^{t_1}$ at an iteration $t_3 > t_2$ (and $t_3$ is the first such moment after $t_2$). Then, $\theta_{i_{l,1}}^{t_3}(j), \theta_{i_{l,avg,1}}^{t_3}(j)$ and $\theta_{i_{l,avg,2}}^{t_3}(j)$ are greater than $\frac{N-1}{N}(a-\varepsilon) + \frac{1}{N}\left(a + \frac{\Delta}{4N^2}\right) = a + \frac{\Delta}{4N^3} - \frac{(N-1)\Delta}{N(2N+100)^{2N}} > a + \frac{\Delta}{8N^3}$.
+    
+    Therefore, after at least $N-1$ of such averaging iterations, with probability $\delta_\varepsilon$ all $\theta_i^t(j)$ will be greater than $a + \frac{\Delta}{(2N)^N} > a$ while $E_{\varepsilon}'$ holds. This contradicts \eqref{eq:quality_of_avg_deterministic_vectors_0_supp_tech_2}. Therefore, 
+    \begin{equation*}
+        \bigcap\limits_{t=0}^\infty I_{j,t} = \{\overline{\theta}(j)\}
+    \end{equation*}
+    with probability $1$, which concludes the proof.
+\end{proof}
+
+
+\subsection{Proof of Theorem~\ref{thm:quality_of_avg_deterministic_vectors}}\label{sec:proof_quality_of_avg_deterministic_vectors}
+In this section, we provide the complete proof of Theorem~\ref{thm:quality_of_avg_deterministic_vectors}. For convenience, we restate the theorem below.
+\begin{theorem}[Theorem~\ref{thm:quality_of_avg_deterministic_vectors}, averaging convergence rate]\label{thm:quality_of_avg_deterministic_vectors_supp}
+    Consider the modification of Moshpit All-Reduce that works as follows: at each iteration $k\geq 1$ 1) peers are randomly split into $r$ disjoint groups of sizes $M_1^k,\ldots, M_r^k$ in such a way that $\sum_{i=1}^r M_i^k = N$ and $M_i^k \ge 1\  \forall i = 1,\ldots,r$ and 2) peers from each group compute their group average via All-Reduce. Let $\theta_1,\ldots,\theta_N$ be the input vectors of this procedure and $\theta_1^T,\ldots,\theta_N^T$ be the outputs after $T$ iterations. Then,
+    \begin{eqnarray}
+         \EE\left[\frac{1}{N}\sum\limits_{i=1}^N\|\theta_i^T - \overline{\theta}\|^2\right] = \left(\frac{r-1}{N} + \frac{r}{N^2}\right)^T\cdot\frac{1}{N}\sum\limits_{i=1}^N\|\theta_i - \overline{\theta}\|^2, \label{eq:determ_quality_of_avg_supp}
+    \end{eqnarray}
+    where $\overline{\theta} = \frac{1}{N}\sum_{i=1}^N\theta_i$.
+\end{theorem}
+\begin{proof}
+First of all, let us clarify the procedure of random splitting of peers in $r$ groups. We assume that at iteration $k$ of the modified algorithm we generate a random permutation $\pi^k = (\pi_1^k,\ldots,\pi_N^k)$ of $1,\ldots, N$. Next, $J_1^k = \{\pi_1^k,\ldots,\pi_{M_1^k}^k\}$ form the indices of the first group of workers, $J_2^k = \{\pi_{M_1^k+1}^k,\ldots,\pi_{M_2^k}^k\}$ are the indices of the second group, and $J_r^k = \{\pi_{M_1^k+M_2^k+\ldots+M_{r-1}^k+1}^k,\ldots,\pi_{N}^k\}$ are the indices of group $r$. In other words, we generate a random permutation and take contiguous subgroups of indices corresponding to predefined group sizes $M_i^k$, starting from the first group.
+
+By definition, we have $\bigsqcup_{i=1}^r J_i^k = \{1,2,\ldots,N\}$, where $\sqcup$ defines the disjoint union operator. Moreover, notice that group sizes $M_1^k,\ldots,M_r^k$ can depend on $k$ and even be random: for our analysis, it is sufficient that the randomness defining the permutation is independent from $M_1^k,\ldots,M_r^k$. Next, vectors $\theta_1^k,\ldots,\theta_N^k$ are obtained by the following formula:
+\begin{equation*}
+    \forall j=1,\ldots,N,\quad \theta_j^k = \frac{1}{M_i^k}\sum\limits_{t\in J_i^k}\theta_t^{k-1},\quad \text{where } J_i^k \text{ is the group for which } j\in J_i^k.
+\end{equation*}
+Using this, we show that the average of vectors $\{\theta_i^k\}_{i=1}^n$ remains the same throughout the iterations of Moshpit All-Reduce:
+\begin{equation*}
+    \frac{1}{N}\sum\limits_{j=1}^N\theta_j^k = \frac{1}{N}\sum\limits_{i=1}^rM_i^k\cdot\frac{1}{M_i^k}\sum\limits_{t\in J_i^k}\theta_t^{k-1} = \frac{1}{N}\sum\limits_{i=1}^r\sum\limits_{t\in J_i^k}\theta_t^{k-1} = \frac{1}{N}\sum\limits_{j=1}^N\theta_j^{k-1}.
+\end{equation*}
+Therefore, the quantity $\frac{1}{N}\sum_{j=1}^N\|\theta_j^k - \overline{\theta}\|^2$ (average distortion) measures the quality of averaging. For this quantity, we can derive the following expression:
+\begin{eqnarray}
+    \frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^k - \overline{\theta}\|^2 &=& \frac{1}{N}\sum\limits_{i=1}^r M_i^k\left\|\frac{1}{M_i^k}\sum\limits_{t\in J_i^k}\theta_t^{k-1} - \overline{\theta}\right\|^2\notag\\
+    &=& \frac{1}{N}\sum\limits_{i=1}^r\frac{1}{M_i^k}\left(\sum\limits_{t\in J_i^k}\|\theta_t^{k-1} - \overline{\theta}\|^2 + 2\sum\limits_{t,l\in J_i^k, t < l}\langle \theta_t^{k-1} - \overline{\theta}, \theta_l^{k-1} - \overline{\theta} \rangle\right).\notag
+\end{eqnarray}
+Taking the expectation $\EE_{\pi^k}[\cdot]$ with respect to the randomness coming from the choice of $\pi^k$ we get
+\begin{eqnarray}
+    \EE_{\pi^k}\left[\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^k - \overline{\theta}\|^2\right] &\notag\\
+    &\hspace{-2.5cm}= \frac{1}{N}\sum\limits_{i=1}^r\frac{1}{M_i^k}\left(\EE_{\pi^k}\left[\sum\limits_{t\in J_i^k}\|\theta_t^{k-1} - \overline{\theta}\|^2\!\right] \!+\! 2\EE_{\pi^k}\!\left[\sum\limits_{t,l\in J_i^k, t < l}\langle \theta_t^{k-1} - \overline{\theta}, \theta_l^{k-1} - \overline{\theta} \rangle\right]\right).\notag
+\end{eqnarray}
+Since $\forall j,j_1,j_2 \in\{1,\ldots,N\},j_1\neq j_2$ and for all $i=1,\ldots,r$
+\begin{equation*}
+    \PP\left\{j\in J_i^k\right\} = \frac{M_i^k}{N},\quad \PP\left\{j_1,j_2 \in J_i^k\right\} = \frac{M_{i}^k(M_i^k - 1)}{N^2},
+\end{equation*}
+we have
+\begin{eqnarray*}
+    \EE_{\pi^k}\left[\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^k - \overline{\theta}\|^2\right] &=& \frac{1}{N}\sum\limits_{i=1}^r\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2\\
+    &&\quad +\frac{1}{N}\sum\limits_{i=1}^r2\frac{M_i^k - 1}{N^2}\sum\limits_{1 \le j_1 < j_2 \le N}\langle \theta_{j_1}^{k-1} - \overline{\theta}, \theta_{j_2}^{k-1} - \overline{\theta}\rangle\\
+    &=& \frac{r}{N^2}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2 + 2\frac{N-r}{N^3}\sum\limits_{1 \le j_1 < j_2 \le N}\langle \theta_{j_1}^{k-1} - \overline{\theta}, \theta_{j_2}^{k-1} - \overline{\theta}\rangle\\
+    &=& \left(\frac{r}{N^2} - \frac{N-r}{N^3}\right)\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2 +\frac{N-r}{N^3}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2\\
+    &&\quad +2\frac{N-r}{N^3}\sum\limits_{1 \le j_1 < j_2 \le N}\langle \theta_{j_1}^{k-1} - \overline{\theta}, \theta_{j_2}^{k-1} - \overline{\theta}\rangle\\
+    &=& \frac{N(r-1)+r}{N^3}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2 + \frac{N-r}{N^3}\underbrace{\left\|\sum\limits_{j=1}^N(\theta_j^{k-1} - \overline{\theta})\right\|^2}_{\|N\overline{\theta} - N\overline{\theta}\|^2 = 0}\\
+    &=& \left(\frac{r-1}{N} + \frac{r}{N^2}\right)\cdot\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2.
+\end{eqnarray*}
+Finally, we take the full expectation from the both sides of the above equation and apply the tower property $\EE\left[\EE_{\pi^k}\left[\cdot\right]\right] = \EE\left[\cdot\right]$:
+\begin{equation*}
+    \EE\left[\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^k - \overline{\theta}\|^2\right] = \left(\frac{r-1}{N} + \frac{r}{N^2}\right)\EE\left[\frac{1}{N}\sum\limits_{j=1}^N\|\theta_j^{k-1} - \overline{\theta}\|^2\right].
+\end{equation*}
+Unrolling the recurrence for $k=T$, we establish \eqref{eq:determ_quality_of_avg_supp}.
+\end{proof}
+
+\begin{remark}
+    The result implies that increasing the group size $\alpha > 1$ times implies almost $\alpha$ times faster convergence to the average.
+\end{remark}
+
+\begin{remark}
+    Our analysis can be easily generalized to the case when number of groups $r$ can depend on $k$ and be a random variable independent from the choice of permutations and the number of groups at previous steps. In this case, \eqref{eq:determ_quality_of_avg_supp} transforms into
+    \begin{equation}
+        \EE\left[\frac{1}{N}\sum\limits_{i=1}^N\|\theta_i^T - \overline{\theta}\|^2\right] = \frac{1}{N}\sum\limits_{i=1}^N\|\theta_i - \overline{\theta}\|^2\cdot\prod_{k=1}^T\left(\frac{\EE[r_k]-1}{N} + \frac{\EE[r_k]}{N^2}\right), \label{eq:determ_quality_of_avg_generalized_supp}
+    \end{equation}
+    where $r_k$ is the number of groups at iteration $k$.
+\end{remark}
+
+\subsection{Additional Guarantees For Moshpit Averaging}\label{sec:mix_rand_proof}
+In this section,  we derive the result measuring the rate of variance reduction when averaging random vectors with Algorithm~\ref{alg:moshpit}. We start with the following technical lemma:
+\begin{lemma}\label{lem:ode_lemma}
+    Let $\xi \sim \text{Binom}(M,p)$ have a binomial distribution with parameters $M$ (number of trials) and $p$ (probability of success for each trial). Then
+    \begin{eqnarray}
+        m_1(M,p) := \EE\left[\min\left\{\frac{1}{\xi},1\right\}\right] &=& (1-p)^M + \sum\limits_{i=1}^M\frac{(1-p)^{M-i} - (1-p)^M}{i}, \label{eq:binom_first_inverse_moment}\\
+        m_2(M,p) := \EE\left[\min\left\{\frac{1}{\xi^2},1\right\}\right] &=& (1-p)^M + \sum\limits_{i=1}^M\frac{(1-p)^{M-i} - (1-p)^M}{i}\sum\limits_{j=i}^M\frac{1}{j}. \label{eq:binom_second_inverse_moment}
+    \end{eqnarray}
+\end{lemma}
+\begin{proof}
+    We start with the proof of \eqref{eq:binom_first_inverse_moment}. By definition of the expectation, we have
+    \begin{eqnarray*}
+        \EE\left[\min\left\{\frac{1}{\xi},1\right\}\right] &=& (1-p)^M + \sum\limits_{i=1}^M \frac{1}{i}p^i(1-p)^{M-i}\binom{M}{i}.
+    \end{eqnarray*}
+    For simplicity of further derivations, we introduce the following notation: $m_1(M,p) = \EE\left[\min\left\{\frac{1}{\xi},1\right\}\right]$ and $m_2(M,p) = \EE\left[\min\left\{\frac{1}{\xi^2},1\right\}\right]$. Taking the derivative of $m_1(M,p)$ by $p$, we obtain
+    \begin{eqnarray*}
+        m_1'(M,p) &=& -M(1-p)^{M-1} + \sum\limits_{i=1}^Mp^{i-1}(1-p)^{M-i}\binom{M}{i} \\
+        &&\quad - \sum\limits_{i=1}^M\frac{M-i}{i}p^i(1-p)^{M-i-1}\binom{M}{i}\\
+        &=& -M(1-p)^{M-1} + \frac{1}{p}\left(-(1-p)^M + \sum\limits_{i=0}^Mp^{i}(1-p)^{M-i}\binom{M}{i}\right)\\
+        && - \frac{M}{1-p}\sum\limits_{i=1}^M\frac{1}{i}p^i(1-p)^{M-i}\binom{M}{i}\\
+        &&\quad + \frac{1}{1-p}\left(-(1-p)^M + \sum\limits_{i=0}^Mp^i(1-p)^{M-i}\binom{M}{i}\right)\\
+        &=& -M(1-p)^{M-1} + \frac{1}{p}\left(1 - (1-p)^M\right) - \frac{M}{1-p}\left(m_1(M,p) - (1-p)^M\right)\\
+        &&\quad+ \frac{1}{1-p}\left(1- (1-p)^M\right)\\
+        &=& \frac{1}{p(1-p)} - \frac{(1-p)^{M-1}}{p} - \frac{M}{1-p}m_1(M,p).
+    \end{eqnarray*}
+    Rearranging the terms, we get the following linear first-order ODE
+    \begin{equation}
+        m_1'(M,p) + \frac{M}{1-p}m_1(M,p) = \frac{1}{p(1-p)} - \frac{(1-p)^{M-1}}{p}. \label{eq:first_moment_ODE}
+    \end{equation}
+    To solve it, we consider the following homogeneous ODE:
+    \begin{equation*}
+        m_1'(M,p) + \frac{M}{1-p}m_1(M,p) = 0.
+    \end{equation*}
+    The solution of this ODE is $m_1(M,p) = C(1-p)^M$, where $C\in\R$ is an arbitrary real constant. Next, we go back to the initial ODE \eqref{eq:first_moment_ODE} and try to find a solution of the form $m_1(M,p) = C(p)(1-p)^M$, where $C(p):\R \to \R$ is a differentiable function:
+    \begin{eqnarray*}
+        \left(C(p)(1-p)^M\right)' + \frac{M}{1-p}C(p)(1-p)^M &=& \frac{1}{p(1-p)} - \frac{(1-p)^{M-1}}{p}\\
+        &\Downarrow&\\
+        C'(p)(1-p)^M &=& \frac{1}{p(1-p)} - \frac{(1-p)^{M-1}}{p}\\
+        &\Downarrow&\\
+        C'(p) &=& \frac{1}{p(1-p)^{M+1}} - \frac{1}{p(1-p)}.
+    \end{eqnarray*}
+    Since 
+    \begin{equation}
+        \frac{1}{x(1-x)^{k+1}} = \frac{1}{x(1-x)^{k}} + \frac{1}{(1-x)^{k+1}}\label{eq:technical_expansion}
+    \end{equation}
+    for all $x\not\in \{0,1\}$ and all non-negative integers $k$, we have
+    \begin{eqnarray*}
+        C'(p) &=& \frac{1}{p} + \frac{1}{1-p} + \frac{1}{(1-p)^2} + \ldots + \frac{1}{(1-p)^{M+1}} - \frac{1}{p} - \frac{1}{1-p}\\
+        &\Downarrow&\\
+        C'(p) &=& \sum\limits_{i=1}^M(1-p)^{-i-1},
+    \end{eqnarray*}
+    hence
+    \begin{eqnarray*}
+        C(p) = \hat{C} + \sum\limits_{i=1}^M\frac{1}{i}(1-p)^{-i},
+    \end{eqnarray*}
+    where $\hat{C}$ is a real constant. Putting all together, we obtain
+    \begin{eqnarray*}
+        m_1(M,p) &=& C(p)(1-p)^M = \hat{C}(1-p)^M + \sum\limits_{i=1}^M\frac{1}{i}(1-p)^{M-i}.
+    \end{eqnarray*}
+    Taking $m_1(M,0) = 1$ into account, we conclude that $\hat{C} = 1 - \sum_{i=1}^M\frac{1}{i}$ and obtain \eqref{eq:binom_first_inverse_moment}.
+    
+    Using a similar technique, we derive \eqref{eq:binom_second_inverse_moment}. By definition of the expectation, we have
+    \begin{eqnarray*}
+        m_2(M,p) &=& (1-p)^M + \sum\limits_{i=1}^M \frac{1}{i^2}p^i(1-p)^{M-i}\binom{M}{i}.
+    \end{eqnarray*}
+    Taking the derivative of $m_2(M,p)$ by $p$, we obtain
+    \begin{eqnarray*}
+        m_2'(M,p) &=& -M(1-p)^{M-1} + \sum\limits_{i=1}^M\frac{1}{i}p^{i-1}(1-p)^{M-i}\binom{M}{i}\\
+        &&\quad - \sum\limits_{i=1}^M\frac{M-i}{i^2}p^i(1-p)^{M-i-1}\binom{M}{i}\\
+        &=& -M(1-p)^{M-1} + \frac{1}{p} \sum\limits_{i=1}^M\frac{1}{i}p^{i}(1-p)^{M-i}\binom{M}{i}\\
+        && - \frac{M}{1-p}\sum\limits_{i=1}^M\frac{1}{i^2}p^i(1-p)^{M-i}\binom{M}{i} + \frac{1}{1-p}\sum\limits_{i=1}^M\frac{1}{i}p^i(1-p)^{M-i}\binom{M}{i}\\
+        &=& -M(1-p)^{M-1} + \frac{1}{p}\left(m_1(M,p) - (1-p)^M\right) \\
+        &&\quad + \frac{1}{1-p}\left(-M m_2(M,p) + M(1-p)^M + m_1(M,p) - (1-p)^M\right)\\
+        &=& \frac{m_1(M,p)}{p(1-p)} - \frac{(1-p)^{M-1}}{p} - \frac{M}{1-p}m_2(M,p).
+    \end{eqnarray*}
+    Rearranging the terms, we get the following linear first-order ODE
+    \begin{equation}
+        m_2'(M,p) + \frac{M}{1-p}m_2(M,p) = \frac{m_1(M,p)}{p(1-p)} - \frac{(1-p)^{M-1}}{p}. \label{eq:second_moment_ODE}
+    \end{equation}
+    To solve this ODE, we consider the homogeneous ODE:
+    \begin{equation*}
+        m_2'(M,p) + \frac{M}{1-p}m_2(M,p) = 0.
+    \end{equation*}
+    The solution of this ODE is $m_2(M,p) = C(1-p)^M$, where $C\in\R$ is an arbitrary real constant. Next, we go back to the initial ODE \eqref{eq:second_moment_ODE} and try to find a solution of the form $m_2(M,p) = C(p)(1-p)^M$, where $C(p):\R \to \R$ is a differentiable function:
+    \begin{eqnarray*}
+        \left(C(p)(1-p)^M\right)' + \frac{M}{1-p}C(p)(1-p)^M &=& \frac{m_1(M,p)}{p(1-p)} - \frac{(1-p)^{M-1}}{p}\\
+        &\Downarrow&\\
+        C'(p)(1-p)^M &=& \frac{m_1(M,p)}{p(1-p)} - \frac{(1-p)^{M-1}}{p}\\
+        &\Downarrow&\\
+        C'(p) &=& \frac{m_1(M,p)}{p(1-p)^{M+1}} - \frac{1}{p(1-p)}.
+    \end{eqnarray*}
+    Using \eqref{eq:technical_expansion} and \eqref{eq:binom_first_inverse_moment}, we derive
+    \begin{eqnarray*}
+        C'(p) &\overset{\eqref{eq:binom_first_inverse_moment}}{=}& -\frac{\sum\limits_{i=1}^M\frac{1}{i}}{p(1-p)} + \frac{\sum\limits_{i=1}^M\frac{1}{i}(1-p)^{M-i}}{p(1-p)^{M+1}}\\
+        &=& -\sum\limits_{i=1}^M \frac{1}{ip(1-p)} + \sum\limits_{i=1}^M\frac{1}{ip(1-p)^{i+1}}\\
+        &\overset{\eqref{eq:technical_expansion}}{=}& -\sum\limits_{i=1}^M\frac{1}{i}\left(\frac{1}{p} + \frac{1}{1-p}\right)\\
+        &&\quad + \sum\limits_{i=1}^M\frac{1}{i}\left(\frac{1}{p} + \frac{1}{1-p} + \frac{1}{(1-p)^2} + \ldots + \frac{1}{(1-p)^{i+1}}\right)\\
+        &=& \sum\limits_{i=1}^M\frac{1}{i}\left(\frac{1}{(1-p)^2} + \ldots + \frac{1}{(1-p)^{i+1}}\right) = \sum\limits_{i=1}^M \frac{1}{(1-p)^{i+1}}\sum\limits_{j=i}^M\frac{1}{j},
+    \end{eqnarray*}
+    hence 
+    \begin{eqnarray*}
+        C(p) = \hat{C} + \sum\limits_{i=1}^M\frac{1}{i}(1-p)^{-i}\sum\limits_{j=i}^M\frac{1}{j},
+    \end{eqnarray*}
+    where $\hat{C}$ is a real constant. Putting all together, we obtain
+    \begin{eqnarray*}
+        m_2(M,p) &=& C(p)(1-p)^M = \hat{C}(1-p)^M + \sum\limits_{i=1}^M\frac{1}{i}(1-p)^{M-i}\sum\limits_{j=i}^M\frac{1}{j}.
+    \end{eqnarray*}
+    Taking $m_2(M,0) = 1$ into account, we conclude that $\hat{C} = 1 - \sum_{i=1}^M\frac{1}{i}\sum_{j=i}^M\frac{1}{j}$ and obtain \eqref{eq:binom_second_inverse_moment}.
+\end{proof}
+
+Using this lemma, we derive the following result:
+\begin{theorem}\label{thm:quality_of_avg_supp}
+    Assume that peers participating in Moshpit Averaging have independent random vectors $\theta_1,\ldots,\theta_N$ with means $\overline{\theta}_1,\ldots,\overline{\theta}_N$ and variances bounded by $\sigma^2$ before the averaging. Let $\theta_1^T,\ldots,\theta_N^T$ be the outputs of Moshpit Averaging after $T$ iterations. Finally, we assume that each peer from the grid can be dropped out for the whole averaging process before averaging independently from other peers, i.e., $N \sim \text{Binom}(M^d,p)$. Then, for all $i = 1,\ldots,N$ we have
+    \begin{equation}
+        \EE\left[\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\right] \leq M^{T-1}\sigma^2 m_1(M-1,p)\left(m_2(M-1,p)\right)^{T-1},\label{eq:variance_bound_supp}
+    \end{equation}
+    where functions $m_1(M,p)$ and $m_2(M,p)$ are defined in \eqref{eq:binom_first_inverse_moment} and \eqref{eq:binom_second_inverse_moment} respectively, and $\EE_\theta\left[\cdot\right]$ denotes the expectation w.r.t.\ the randomness from $\theta_1,\ldots,\theta_N$. Moreover, if $p \ge \frac{2}{3}$ and $M \ge 11$, then $m_1(M-1,p) \le \frac{2}{M}$, $m_2(M-1,p) \le \frac{3}{M^2}$ and 
+    \begin{equation}
+        \EE\left[\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\right] \leq \frac{2\sigma^2}{M(\nicefrac{M}{3})^{T-1}}.\label{eq:variance_bound_2_supp}
+    \end{equation}
+\end{theorem}
+\begin{proof}
+First of all, we recall an equivalent formulation of Moshpit Averaging. Consider a hypercube $\{1,\ldots,M\}^d$. One can consider the elements of this hypercube as hyperindices and assign a unique hyperindex to each peer so that peers can be viewed as vertices in the hypercube. Then, during the $k$-th iteration of Moshpit All-Reduce, each worker computes the average among those peers that have hyperindices with the same values except the $k$-th index; in other words, peers compute averages along the $k$-th dimension of the hypercube. Next, if $N = 0$, we assume that $\theta_i^T = \EE_{\theta}\left[\theta_i^T\right]$ and \eqref{eq:variance_bound_supp} holds for free. Therefore, to derive \eqref{eq:variance_bound_supp}, we assume that $N > 0$.
+
+More formally, we use the following notation: $\theta_{C_i} = \theta_i$ for all $i= 1,\ldots,N$, where $C_{i} = (c_{1}^i, c_2^i,\ldots, c_d^i)$, $c_{j}^i \in \{1,\ldots,M\}$ for all $j = 1,\ldots,M$, and $C_{i} \neq C_k$ for $i\neq k$. Let $\cC$ be the set of hyperindices corresponding to all peers. Next, we use $\theta_{C_i}^t$ to define the vector stored on $i$-th peer after $t$ iterations of Moshpit Averaging. Then, for all $i = 1,\ldots,N$ we have $\theta_{C_i}^0 = \theta_{C_i}$ and for all $t = 1,\ldots,d$
+\begin{equation*}
+    \theta_{C_i}^{t} = \frac{1}{b_{i,t}}\sum\limits_{k\in J_{i,t}}\theta_{C_k}^{t-1},
+\end{equation*}
+where $J_{i,t} = \{k \in N\mid C_k = (c_1^k,\ldots,c_d^k) \in \cC \text{ and } c_j^k = c_j^i\; \forall j \neq t\}$ and $b_{i,t} = |J_{i,t}|$. Using this, we derive the following formula for $\theta_{C_i}^t$:
+\begin{equation*}
+    \theta_i^T \equiv \theta_{C_i}^T = \frac{1}{b_{i,T}}\sum\limits_{i_1\in J_{i,T}}\frac{1}{b_{i_1,T-1}}\sum\limits_{i_2\in J_{i_1,T-1}}\frac{1}{b_{i_2,T-2}}\sum\limits_{i_3\in J_{i_2,T-1}}\ldots\frac{1}{b_{i_{T-1},1}}\sum\limits_{i_T\in J_{i_{T-1},1}}\theta_{i_{T}}.
+\end{equation*}
+Taking the expectation w.r.t. $\theta_1,\ldots,\theta_N$, we get
+\begin{equation*}
+    \EE_{\theta}\left[\theta_i^T\right] = \frac{1}{b_{i,T}}\sum\limits_{i_1\in J_{i,T}}\frac{1}{b_{i_1,T-1}}\sum\limits_{i_2\in J_{i_1,T-1}}\frac{1}{b_{i_2,T-2}}\sum\limits_{i_3\in J_{i_2,T-1}}\ldots\frac{1}{b_{i_{T-1},1}}\sum\limits_{i_T\in J_{i_{T-1},1}}\overline{\theta}_{i_{T}}.
+\end{equation*}
+Using the independence of $\theta_1,\ldots,\theta_N$, we derive
+\begin{eqnarray*}
+    \EE_\theta\left[\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\right] &=& \EE_\theta\left[\left\|\sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T}\in J_{i_{T-1},1}}\frac{\theta_{i_T} - \overline{\theta}_{i_T}}{b_{i,T} b_{i_1,T-1}\ldots b_{i_{T-1},1}}\right\|^2\right]\\
+    &=& \sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T}\in J_{i_{T-1},1}}\frac{\EE_\theta\left[\|\theta_{i_T} - \overline{\theta}_{i_T}\|^2\right]}{b_{i,T}^2 b_{i_1,T-1}^2\ldots b_{i_{T-1},1}^2}\\
+    &\le& \sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T}\in J_{i_{T-1},1}}\frac{\sigma^2}{b_{i,T}^2 b_{i_1,T-1}^2\ldots b_{i_{T-1},1}^2}\\
+    &=& \sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T-1}\in J_{i_{T-2},2}}\frac{\sigma^2}{b_{i,T}^2 b_{i_1,T-1}^2\ldots b_{i_{T-2},2}^2b_{i_{T-1},1}}.
+\end{eqnarray*}
+Next, taking the full expectation from the both sides of the previous inequality and using the tower property, we obtain
+\begin{equation}
+     \EE\!\left[\!\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\!\right] \!\le\! \EE\!\left[\!\sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T-1}\in J_{i_{T-2},2}}\frac{\sigma^2}{b_{i,T}^2 b_{i_1,T-1}^2\ldots b_{i_{T-2},2}^2b_{i_{T-1},1}}\!\right]\!. \label{eq:rand_mix_thm_technical_1}
+\end{equation}
+Notice that $J_{i_k,T-k} \cap J_{i_{k+1},T-k-1} = \{i_{k+1}\}$ for all $k=0,\ldots,T-1$, where $i_0 = i$. Moreover, for $k_1, k_2 \in\{0,1,\ldots,T\}$, $k_1 < k_2$ either $J_{i_{k_1},T-k_1} \cap J_{i_{k_2},T-k_2} = \{k_2\}$ or $J_{i_{k_1},T-k_1} \cap J_{i_{k_2},T-k_2} = \varnothing$. The first situation is possible iff $i_{k_1} = i_{k_1+1} = \ldots i_{k_2-1}$.
+
+Taking these observations about sets $J_{i_{k}, T-k}$ into account, we consider the sets $J_{i_k,T-k}' = J_{i_k,T-k}\setminus\{i_{k}\}$ for $k = 0, 1, \ldots, T-1$. These sets are pairwise disjoint and their cardinalities $b_{i_k,T-k}' = |J_{i_k,T-k}'|$ satisfy the following relations: $b_{i_k,T-k} = 1 + b_{i_k,T-k}' \ge \max\{1, b_{i_k,T-k}'\} =: \hat{b}_{i_k,T-k}$ for $k = 1, 2, \ldots, T-1$. Moreover, $b_{i,T}', b_{i_1,T-1}',\ldots, b_{i_{T-1},1}'$ are independent random variables from the binomial distribution $\text{Binom}(M-1, p)$. Finally, we notice that the number of terms in \eqref{eq:rand_mix_thm_technical_1} is upper-bounded by $M^{T-1}$, since $|J_{i,t}| \le M$ for all $i = 1,\ldots,N$ and $t=0,\ldots,T$.
+
+Putting all together, we obtain
+\begin{eqnarray*}
+    \EE\left[\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\right] &\le& \EE\left[\sum\limits_{i_1\in J_{i,T}}\sum\limits_{i_2\in J_{i_1,T-1}}\ldots \sum\limits_{i_{T-1}\in J_{i_{T-2},2}}\frac{\sigma^2}{\hat b_{i,T}^2 \hat b_{i_1,T-1}^2\ldots \hat b_{i_{T-2},2}^2\hat b_{i_{T-1},1}}\right]\\
+    &\le& M^{T-1}\sigma^2\EE\left[\frac{1}{\hat\xi_{1}^2 \hat\xi_{2}^2\ldots \hat\xi_{T-1}^2\hat\xi_{T}}\right]\\
+    &=& M^{T-1}\sigma^2\EE\left[\frac{1}{\hat\xi_{1}^2}\right]\EE\left[\frac{1}{\hat\xi_{2}^2}\right]\ldots \EE\left[\frac{1}{\hat\xi_{T-1}^2}\right]\EE\left[\frac{1}{\hat\xi_{T}}\right],
+\end{eqnarray*}
+where $\hat \xi_k^2 = \max\{1,\xi_1^2\}$ for $k=1,\ldots,T$ and $\xi_1,\ldots,\xi_T$ are i.i.d.\ random variables having the binomial distribution $\text{Binom}(M-1, p)$. Then one can simplify the inequality above using Lemma~\ref{lem:ode_lemma} and get
+\begin{eqnarray*}
+    \EE\left[\left\|\theta_i^T - \EE_{\theta}\left[\theta_i^T\right]\right\|^2\right] &\le& M^{T-1}\sigma^2 m_1(M-1,p)\left(m_2(M-1,p)\right)^{T-1},
+\end{eqnarray*}
+where functions $m_1(M,p)$ and $m_2(M,p)$ are defined in \eqref{eq:binom_first_inverse_moment} and \eqref{eq:binom_second_inverse_moment} respectively.
+
+Next, we simplify the obtained upper bound under the assumption that $M$ and $p$ are not too small; specifically, $M\ge 11$ and $p\ge \nicefrac{2}{3}$. From \eqref{eq:binom_first_inverse_moment}, we have
+\begin{eqnarray*}
+    m_1(M-1,p) &=& (1-p)^{M-1} + \sum\limits_{i=1}^{M-1}\frac{1}{i}\left((1-p)^{M-1-i} - (1-p)^{M-1}\right)\\
+    &\le& (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^{i}}.
+\end{eqnarray*}
+Since
+\begin{equation*}
+    \frac{1}{(k+1)(1-p)^{k+1}}\cdot\frac{k(1-p)^k}{1} = \frac{k}{(k+1)(1-p)} \xrightarrow[k\to\infty]{}\frac{1}{1-p} \ge 3,
+\end{equation*}
+we have
+\begin{equation*}
+    (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^{i}} = \Theta\left((1-p)^M\cdot\frac{1}{M(1-p)^M}\right) = \Theta\left(\frac{1}{M}\right).
+\end{equation*}
+Using simple algebra, one can prove that for $M\ge 11$ and $p \ge\nicefrac{2}{3}$ the following inequality holds:
+\begin{equation*}
+    m_1(M-1,p)\le (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^{i}} \le \frac{2}{M}.
+\end{equation*}
+Similarly, we analyze $m_2(M-1, p)$:
+\begin{eqnarray*}
+    m_2(M-1,p) &=& (1-p)^{M-1} + \sum\limits_{i=1}^{M-1}\frac{1}{i}\left((1-p)^{M-1-i} - (1-p)^{M-1}\right)\sum\limits_{j=i}^{M-1}\frac{1}{j}\\
+    &\le& (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^i}\sum\limits_{j=i}^{M-1}\frac{1}{j}.
+\end{eqnarray*}
+Since
+\begin{eqnarray*}
+    \frac{\frac{1}{k(1-p)^k}\sum\limits_{j=k}^{M-1}\frac{1}{j}}{\frac{1}{(k-1)(1-p)^{k-1}}\sum\limits_{j=k-1}^{M-1}\frac{1}{j}} &=& \frac{(k-1)\sum\limits_{j=k}^{M-1}\frac{1}{j}}{k(1-p)\left(\frac{1}{k-1} + \sum\limits_{j=k}^{M-1}\frac{1}{j}\right)} \ge \frac{3(k-1)\cdot\frac{1}{k}}{k\left(\frac{1}{k-1}+\frac{1}{k}\right)}\\
+    &=& \frac{3(k-1)^2}{k(2k-1)}\xrightarrow[k\to\infty]{}  \frac{3}{2},
+\end{eqnarray*}
+we have
+\begin{equation*}
+    (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^i}\sum\limits_{j=i}^{M-1}\frac{1}{j} = \Theta\left((1-p)^M\cdot\frac{1}{M^2(1-p)^M}\right) = \Theta\left(\frac{1}{M^2}\right).
+\end{equation*}
+Next, one can prove with simple algebra that for $M\ge 11$ and $p \ge\nicefrac{2}{3}$ the following inequality holds:
+\begin{equation*}
+    m_2(M-1,p) \le (1-p)^{M-1}\sum\limits_{i=1}^{M-1}\frac{1}{i(1-p)^i}\sum\limits_{j=i}^{M-1}\frac{1}{j} \le \frac{3}{M^2}.
+\end{equation*}
+Plugging the obtained upper bounds for $m_1(M-1,p)$ and $m_2(M-1,p)$ in \eqref{eq:variance_bound_supp}, we obtain \eqref{eq:variance_bound_2_supp}.
+\end{proof}

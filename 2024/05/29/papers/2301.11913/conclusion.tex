@@ -1,0 +1,8 @@
+\section{Conclusion}
+
+In this work, we evaluate the feasibility of high-throughput training of billion-scale neural networks on unreliable peers with low network bandwidth. 
+We find that training in this setup can be possible with very large models and pipeline parallelism.
+To this end, we propose SWARM parallelism to overcome the challenges of pipeline parallelism for preemptible devices with heterogeneous network bandwidths and computational throughputs. 
+We show that our method is highly effective at rebalancing peers and maximizing the aggregate training throughput even in presence of unstable nodes.
+We also show that training \textbf{large models} with \textbf{SWARM parallelism} and \textbf{compression}-aware architectures enables high utilization of cheap preemptible instances with slow interconnect. 
+As such, our work makes training of large models accessible to researchers that do not have access to dedicated compute infrastructure.

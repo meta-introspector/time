@@ -1,0 +1,95 @@
+\section{Method}\label{sect:method}
+
+Using pretrained large language models for NLP tasks consists of two main workloads: inference and fine-tuning. The inference workload typically consists of encoding an input text, then generating tokens autoregressively.
+In turn, fine-tuning requires updating either all of the model's parameters or (more commonly for large models) a small set of trainable weights (e.g., adapters or soft prompts) by backpropagation. These two workloads also cover more advanced use cases:
+\begin{itemize}
+    \item Manually engineering prompts for a given task, then deploying the model with these prompts.
+    \item Fine-tuning with adapters~\citep{hu2021lora, houlsby2019parameter, tfew} or ``soft'' prompts~\citep{ptune-liu, ptune-lester, ptune-v2} and inferencing fine-tuned models.
+    \item Distillation into a smaller task-specific model for faster inference~\citep{schick2021generatingdatasets}\nocite{west2021symbolickd}.
+\end{itemize}
+
+Counter-intuitively, we found that inference is more challenging than fine-tuning for cost-efficient setups. To that end, we dedicate most of this section to inference-specific problems. As for fine-tuning, we describe a way to support arbitrary parameter-efficient fine-tuning in Section~\ref{sect:fine-tuning}.
+
+\subsection{Performance bottlenecks of LLM inference}\label{sect:method_analysis}
+
+Unlike training, autoregressive LLM inference cannot be done with a single pass through the model. Instead, the model needs to process one token at a time, pass it through the entire model, then generate the next token and repeat the process. In case of model parallelism, training an $n$-layer\footnote{Here and below, the term \textit{model layer} (or \textit{block}) refers to one transformer block that typically combines self-attention, a feed-forward network, normalization layers, and a residual connection~\citep{transformer}.} model on a sequence of $t$ tokens needs $O(n)$ communication rounds, while generating the same sequence needs $O(n \cdot t)$ rounds, making it more susceptible to network latency. Similarly with parameter offloading, generating a sequence of $t$ tokens needs loading every layer $t$ times, which also takes $O(n \cdot t)$ time.
+
+The other problem of autoregressive generation is dealing with attention for past tokens~\citep{transformer}. During an inference step $t$, each layer needs to attend to $t - 1$ previous attention keys and values. Existing inference algorithms store past entries in accelerator memory. Caching half-precision activations of a 2048-token sequence for large models like GPT-3~\citep{gpt3} or OPT-175B~\citep{opt} (with 96 layers of 12288 units each) takes up 9.6~GB GPU memory \textit{for each sequence}. Offloading these cached values faces the same problems as offloading in general.
+
+An alternative solution is to recompute all previous tokens on every inference step, storing only one set of keys \& values at a time.
+Naturally, this approach needs increasingly more computation with sequence length $t$, for a total of $O(t^3)$ time for transformer-based models\footnote{All public LLMs with 100B+ parameters use standard attention that scales as $O(n^2)$ for sequence length $n$.}.Surprisingly, this approach is often more efficient than offloaded caching, especially for shorter sequences due to the overhead from loading and storing cache from RAM or SSD.
+
+Parameter offloading can still be efficient when generating \textit{large amounts of short sequences} in bulk. Each individual sequence still takes a long time to generate, but the system maintains high throughput by running many samples in parallel.
+Unfortunately, this scenario does not cover many important LLM use cases. For instance, it is incompatible with in-context learning or prompt engineering, where the model needs to process long sequences of training examples~\citep{gpt3}. More importantly, it does not support ``interactive'' applications where LLM needs to quickly respond to a user input. This rules out many LLM applications such as conversation systems or input completion (e.g. ChatGPT or Smart Compose).
+
+Hence, we explore a new solution based on pipeline-parallelism. A related line of work~\citep{ds_inference} investigates model parallelism to inference LLMs in GPU clusters. However, their approach does not apply to our more affordable setups: cheap ``preemptible'' instances or connecting existing resources over the Internet. To operate in these conditions, an inference algorithm needs to deal with node preemption, network errors, and high latency.
+
+\subsection{Distributed generation with fault tolerance}\label{sect:method_algorithm}
+
+In this section, we formulate an algorithm for inferencing LLMs in a fleet of unreliable geographically distributed devices connected over the Internet. Each device can act as a server, a client, or both. A~\textbf{client} is a node operated by the user, which runs inference or fine-tuning jobs through the swarm of servers. A client only holds input and output embeddings ($< 3\%$ of model weights for BLOOM-176B) and delegates running transformer blocks (the most expensive computations) to remote servers. A \textbf{server} is a GPU-enabled node holding a set of consecutive transformer blocks and processing requests coming from client nodes.
+
+For simplicity, we assume that every block is hosted on several servers and examine this assumption in the next section. Following this notation, a fault-tolerant algorithm should allow each client to complete an inference job with reproducible results even if some remote servers fail during inference.
+
+As we discuss in Section~\ref{sect:method_analysis}, autoregressive generation requires many sequential communication rounds, making it sensitive to network latency.
+However, if every device stores its past attention cache, every round only transfers activations for a single token, i.e. several kilobytes of data\footnote{For GPT-3 and OPT-175B, one 12288-dimensional token embedding in 16-bit precision takes up 24 KiB.}. We use this model to directly minimize the inference time over possible pipeline configurations. As we show later in Section~\ref{sect:experiments_controlled}, this allows efficient inference over a low-bandwidth Internet connection.
+
+A more challenging problem is how to recover from node and network failures. If a remote server shuts down, any cached attention keys stored on that server will be lost with it. There are two naïve solutions to this problem: restarting inference from scratch or recomputing past embeddings on every step. Restarting might be enough at a small scale. However, running 50B+ models may involve many unreliable devices, making it unlikely to generate long sequence without at least one failure. In turn recomputing past attention caches requires communicating past tokens on every communication round, resulting in $O(n \cdot t^2)$ total data transferred, where $n$ is the number of pipeline layers and $t$ is the sequence length. In other words, both these solutions struggle to generate long sequences.
+
+We address this problem by maintaining two types of cache: \textit{server-side cache} holds past attention keys and values for their layers, like in existing inference algorithms, while \textit{client-side cache} holds past inputs sent to a given pipeline stage\footnote{Here, a \textit{pipeline stage} is a set of consecutive model layers hosted on one server (as in pipeline parallelism).}. If a server disconnects, a client can find another server with that pipeline stage and use client-side cache to restore the server state.
+
+The resulting procedure is described in Algorithm~\ref{alg:main}.
+For every pipeline stage, the client maintains a heap (priority queue) of servers that hold this stage (and may hold additional stages). The servers in queue are ordered by the network latency, measured from past communication. These queues are maintained through the lifetime of a client. To begin generation, the client runs a beam-search-like procedure to find a sequence of servers that results in the least total inference time under our performance model. When running inference steps, a client keeps track of intermediate activations sent between pipeline stages. If a remote server fails or leaves, the client retrieves the next best server (or multiple servers) and requests it to restore the attention state from the client's cached activations.
+
+\input{resources/algorithm.tex}
+
+When servers fail, the algorithm needs to send $O(t)$ data (in one round) for each failed server and compute only the stages held by the failed servers. This can be seen as an interpolation between naive and cached inference, depending on the server failure rate. If none of the servers fail, we recover $O(n \cdot t)$ communication, similarly to~\citet{ds_inference}. In turn, if all servers fail after one step, the algorithm effectively performs non-caching generation, which is the best option in that scenario.
+
+
+In the basic formulation, all communication between pipeline stages is routed through the client, i.e. the client receives the outputs of every pipeline stage, caches it and sends it to the subsequent stage. In practice, it is more efficient to let pipeline stages communicate directly: once the server obtains output activations, it sends them to both client and the subsequent stage. This reduces the total step time since both messages are a few kilobytes in size an can be sent in parallel. To verify that both client and the next pipeline stage received the same set of activations, they can verify the checksums (i.e. hash values) of the received activations asynchronously, without blocking computation.
+
+Algorithm~\ref{alg:main} can support greedy inference or any sampling variants (including~\citet{nucleus}). However, it requires one more step to support search-based algorithms such as beam search: cache reordering. This allows a client to generate multiple continuations of the same input prefix by cloning its attention cache and dropping less likely hypotheses. We describe beam search in Appendix~\ref{appendix:beam_search}.
+
+\textbf{Shortest path routing.}
+In the Algorithm~\ref{alg:main}, the \texttt{find\_best\_chain} function (line 4) selects a sequence of servers that can run the required layers in the least amount of time. To estimate this time we add up two factors: computation time, determined by server's compute throughput (``GPU speed'') and the network latency between the client and that server. Servers measure their own compute throughput and share this information with the clients. In turn, clients measure the network latency between them and a given server by ``pinging'' the candidate servers during routing. If a server runs multiple consecutive blocks, we multiply the computation time by the number of blocks. %
+
+
+To find the best chain of servers, clients find the shortest path between the first and last block, using a graph where edge weights correspond to server inference time, as described in the previous paragraph. To minimize overhead, we do not run pathfinding from scratch on each call to \texttt{find\_best\_chain}. Instead, clients run lifelong pathfinding in the background and reuse it between inference calls. More specifically, we use the $\text{D}^*$ Lite~\citep{dstar} algorithm because it allows clients to quickly adjust paths after a server is banned or leaves the network.
+
+
+
+
+\subsection{Automatic load balancing}\label{sect:method_petals}
+
+In order to run inference or fine-tuning, each server needs to be assigned to a pipeline stage, then reassigned if other servers join or leave the network. For example, if we deploy an LLM on idle compute resources from several data centers or labs, the number of participants may change over time based on the demand. Moreover, servers may have different compute throughput, network bandwidth, and geographical location. To operate in these conditions efficiently, servers should automatically choose which model layers they should serve in a given situation.
+
+To that end, servers periodically run a load balancing procedure and switch to new blocks if necessary. 
+Formally, servers choose blocks so as to maximize the total system throughput (tokens per second).
+Each server periodically announces its blocks and empirically measured throughput to a distributed hash table~\citep{kademlia}. When a new server joins, it uses this information to identify a contiguous interval\footnote{This interval is always contiguous, since splitting it would harm the inference latency. } of blocks that would increase the total system throughput the most.
+
+
+Since peers may leave or fail at any time, all nodes periodically check if launching a rebalancing procedure would significantly improve the overall throughput. If it is the case, they switch layers until the throughput becomes near-optimal. In particular, if all peers serving certain blocks suddenly leave the system, this procedure quickly redistributes the remaining resources to close the emerged gaps.
+
+We provide a detailed description of the load balancing algorithms in Appendix~\ref{appendix:load_balancing_algo} and validate their properties in experiments reported in Appendix~\ref{appendix:load_balancing_exps}.
+
+\subsection{Parameter-efficient fine-tuning}\label{sect:fine-tuning}
+
+While LLMs achieve high quality on many problems with simple prompt engineering~\citep{gpt3}, they often need training to achieve the best results. Traditionally, this is done by fine-tuning all model parameters on the downstream task.
+However, for extremely large models, this strategy becomes impractical due to hardware requirements. For example, fine-tuning BLOOM-176B with Adam would require almost 3~TB of GPU memory to store the model, gradients, and optimizer states.
+
+Fortunately, \textit{parameter-efficient fine-tuning} methods have been developed that keep most of the pretrained model intact. Some of them choose a subset of existing parameters to update~\citep{sung2021training,guo2021parameter} while others augment the model with additional trainable weights~\citep{hu2021lora, houlsby2019parameter, ptune-liu, ptune-lester, ptune-v2, tfew}. Despite their lower memory requirements, parameter-efficient approaches are often competitive with full model fine-tuning \citep{hu2021lora,ptune-v2,yong_adapting} and even outperform it in low-data regimes~\citep{2205.05638}. Another appealing property of these approaches for our use-case is that they allow rapidly switching a pretrained LLM between adapters.
+
+By focusing on parameter-efficient fine-tuning, we are able to simplify the system design by \textit{making clients responsible for storing their trainable parameters} (see Figure~\ref{fig:algorithm}). Servers can run backpropagation through their layers and return gradients with respect to activations, but they \textit{do not update the server-side parameters}.
+Even when client communicates learned values (e.g. soft prompts) to a server, the server treats these values same as input activations. Thus, a server can simultaneously run different fine-tuning tasks without them interfering with one another.
+This design choice also allows users to define custom adapters in simple PyTorch without having network engineering expertise. %
+
+Unlike inference, fine-tuning forward and backward passes process the entire batch at one go and do not need to store past attention caches between successive client requests. Thus, in case of a failure, we can discard the incomplete forward/backward pass and just repeat the previous forward/backward pass request. This algorithm behaves similarly to the cache-less baseline from Section~\ref{sect:experiments_basic}.
+
+\subsection{Implementation details}\label{sect:method_implementation}
+Since our main intended use-case is running on inexpensive low-end devices, we need to work around their capabilities.
+In terms of raw FLOPs, even consumer-grade GPUs like GeForce RTX 3070 could run a complete inference step of BLOOM-176B in less than a second~\citep{ga102-datasheet}. However, the GPU memory can only hold a small fraction of model layers: running na\"ively would require 44 RTX 3070 GPUs and 44 communication rounds.
+To make this more efficient, we use quantization to store more parameters per GPU, reducing the number of consecutive devices and communication rounds.
+
+One option for quantization is to use 8-bit mixed matrix decomposition for matrix multiplication to quantize the weights to 8-bit precision and reduce the memory footprint compared to 16-bit weights, as suggested in \cite{dettmers2022llm}. This decomposition separates hidden states and weights into two portions: about 0.1\% of 16-bit outlier and 99.9\% of 8-bit regular values, which roughly halves the memory footprint with negligible effect on the model quality (see evaluations in Appendix~\ref{appendix:8bit_quality}). Another option is to use the 4-bit NormalFloat format~\citep{dettmers2023qlora}.
+
+To send less data between subsequent pipeline stages, we apply dynamic blockwise quantization \citep{dettmers2022optimizers} to the hidden states before pipeline-parallel communication, which halves the bandwidth requirements without any noticeable effect on generation quality~\citep{ryabinin2023swarm}.
+During fine-tuning, we also take advantage of gradient checkpointing~\citep{gradient_checkpointing_autograd,gradient_checkpointing_dl} and half precision to reduce VRAM usage --- both are standard practice for large language models~\citep{megatron2,gpt3,varuna}. In experiments, we apply the same optimizations to baseline systems for a fair comparison.

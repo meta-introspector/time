@@ -1,0 +1,102 @@
+
+\section{Cost and performance estimate of \$2500 desktop PCs}
+\vspace{-2px}
+
+According to several PC building websites (\url{https://pcpartpicker.com}, \url{https://newegg.com}), most popular \$2250--2750 desktops are equipped with RTX 2080/2080Ti or GTX 1080Ti GPU. These GPUs are 50--80\% as fast as Tesla V100 for deep learning \cite{lambdabenchmarks}. As a rough estimate, the combined throughput of 10,000 desktops is 8--15 times that of server pod with 512 V100 GPUs.
+
+\section{A primer on Distributed Hash Tables}
+\vspace{-2px}
+
+On a high level, DHT is a dictionary that can be accessed by every participant. Each key-value pair is stored on a small subset of peers determined by the hash function of the key.
+\begin{itemize}
+    \item Each participant has a unique identifier (ID) that is sampled uniformly from the space possible outputs of the hash function.
+    \item When storing a $(key,\ value)$ pair, one should search for $k$ peers whose IDs are closest to $\mathrm{hash}(key)$. Then, request each of these $k$ peers to store the $(key,\ value)$ pair.
+    \item When retrieving a value for a key, one should compute $\mathrm{hash}(key)$, search for peers with IDs similar to that hash value and request value from those peers.
+\end{itemize}
+
+Specific DHT variants such as Chord~\cite{chord} or Kademlia~\cite{kademlia} employ different hash types and different algorithms for finding nearest peers. For instance, Kademlia DHT selects nearest peers based on the XOR distance function: $d(x, y) = \mathrm{int}(x \oplus y)$.
+
+Each participant is directly aware of only a small subset of DHT peers. When storing or retrieving a key, the participant requests additional peers from its neighbors in a semi-greedy search, minimizing XOR distance until it finds $k$ nearest peers. In Kademlia, nodes form a special navigable graph structure that lets them find nearest peers in at most $O(k + \log_2 N)$ requests to other DHT peers, where $N$ is the total number of participants. 
+
+\section{Finding best experts across the DHT}\label{appendix:find_experts}
+\vspace{-2px}
+
+Recall that the gating function is defined as 
+\[
+g(x, f) = \sum_{i=0}^{d - 1} g_i(x)[u_i],
+\]
+where $g_0,\dots\,g_{d-1}$ are linear layers, $u_i$ is the $i$-th component of the expert unique identifier $\mathrm{uid}(f)$, and $[k]$ takes $k$-th component of a vector. Our objective is to find $k$ experts with largest $g(x, \cdot)$. In a centralized setting, one can find $k$ largest scores from each linear layer $g_i$ using the algorithm described in \cite{pkm}.
+
+Unfortunately, in our case not all combinations of indices correspond to valid experts. Therefore, we developed a specialized beam search algorithm similar to the one used in machine translation. The core idea is to start with top-$k$ indices along the first grid dimension and add one dimension at a time.
+
+In order for this algorithm to work, participants maintain the following information on the DHT:
+
+\begin{itemize}
+    \item For every expert UID, store its server address and the timestamp;
+    \item For every prefix in expert UID, store all suffixes corresponding to active experts and the timestamp.
+\end{itemize}
+
+For instance, if there are 6 experts: "ffn.1.3", "ffn.2.1", "ffn.2.2", "ffn.2.6" and "ffn.3.2" and "ffn.3.5"; the DHT will contain the following information:
+
+\begin{figure}[h!]
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+    \toprule
+    Key    & ffn.1.*   & ffn.2.*         & ffn.3.*      & ffn.1.3 & ffn.2.1 & ffn.2.2 & ffn.2.6 & ffn.3.2 & ffn.3.5 \\
+    Value  & [3],$t_1$ & [1, 2, 6],$t_2$ & [2, 5],$t_3$ & \multicolumn{6}{c}{[Address of a server that hosts the given expert]}\\
+    \bottomrule
+    \end{tabular}
+    \caption{DHT keys and values for 6 experts defined above, t corresponds to last update timestamp.}
+\end{figure}
+
+For higher grid dimensions, we store similar information for every grid prefix. For instance, an expert with UID "transformer.10.20.30" will affect 3 keys: "transformer.10.*", "transformer.10.20.*" and "transformer.10.20.30". Each prefix key stores at most as many values as there are indices in the next grid dimension, typically 100 or 256.
+
+With this data structure, DMoE can use beam search to select the best experts. Algorithm \ref{alg:beam_search} starts from the leftmost dimension of the grid and processes one dimension at each step. The worst case complexity of this algorithm is $O(d k \log N)$ from  $O(d k)$ lookups to the DHT.
+
+
+\begin{algorithm}[h]
+   \caption{SelectExperts}
+   \label{alg:beam_search}
+\begin{algorithmic}
+   \STATE {\bfseries Input:} $x, k, d, M,\ (g_0, \ldots, g_{d-1})$
+   \STATE beam $ := [0, 1, ..., M - 1]$ \quad \quad \quad \quad \quad \quad \quad // all 1-prefixes
+   \STATE scores $ := [g_0(x, 0) ... g_0(x, M - 1)]$ \quad \quad  \quad // initial scores
+   \STATE // select $k$ best starting points
+   \STATE beam, scores $:=$ TopK(beam, scores, k)
+   \FOR{$i \in [1,\ \ldots,\ d - 1]$}
+   \STATE // expand all candidates in beam
+   \STATE new\_beam, new\_scores $ := [\ ], [\ ]$
+   \FOR{prefix, score $\in$ beam, scores}
+   \FOR{$j \in \mathrm{ActiveSuffixes(prefix)}$}
+       \STATE new\_beam.add(prefix$ \bigoplus [j]$) // concat
+       \STATE new\_scores.add(score $ + g_i(x, j)$)
+   \ENDFOR
+   \ENDFOR
+   \STATE // select at most $k$ best prefixes
+   \STATE beam, scores $:=$ TopK(new\_beam, new\_scores, k)
+   \ENDFOR
+   \STATE {\bfseries Return} beam
+\end{algorithmic}
+\end{algorithm}
+
+The TopK function simply sorts the inputs by score and returns $k$ inputs with highest scores. In turn, the ActiveSuffixes function queries the DHT for a given prefix and returns a set of all active suffixes as described above. Assuming that servers re-publish their experts every $t$ seconds, the function can simply check whether the timestamp for a given prefix is less than $t$ seconds old.
+
+\vspace{-4pt}
+\section{On gradient checkpointing in Learning@home}\label{appendix:checkpoints}
+\vspace{-2px}
+
+In general, gradient checkpointing increases computation per training batch by approximately 1/3, but allows training larger models with the same GPU memory. More importantly, in our scenario checkpointing also removes the need to store intermediate activations. In our experiments, this has led to both significantly higher training throughput and a smaller memory footprint.
+
+Without gradient checkpointing, we would have to store intermediate activations in memory. Since the GPU can only fit a few batches at a time, it quickly runs out of memory and is forced to wait for the backward pass. For Transformer layers (see Figure 4, top), this results in approximately 9 times less throughput at 100ms latency.
+
+\vspace{-4pt}
+\section{Reducing the network load}\label{appendix:networkload}
+\vspace{-4pt}
+
+One way to reduce the communication load is to convert tensors to a lower precision before transfer. Prior work in this area suggests that distributed training works even when communicating with 8-bit precision tensors~\cite{Dettmers20158BitAF, natural_compression}. Many popular architectures, including Transformers, can train entirely in that precision mode \cite{NIPS2019_8736}. Consequently, low precision communication appears as a logical way of reducing communication requirements.
+
+In addition, the deep learning architectures discussed in this work rely on backpropagation for training. With the advancement of optimization methods allowing nearly independent layer-wise training~\cite{ma2019hsic,jaderberg2017decoupled,real2017large}, it might be even more suitable to use these techniques for asynchronous training with fewer restrictions on the architectures being used.
+
+Another solution is to use experts that have a higher capacity to input size ratio. The architectures used in Section 4.1 are already somewhat biased in that direction, but they are far from optimal.

@@ -1,0 +1,38 @@
+\section{Training with a dynamic number of peers}
+\label{sect:load_state_from_peers}
+
+Many practical setups with unreliable devices allow peers to join or leave at any time, which can produce undesirable side-effects. For instance, consider a participant that joins the ``swarm'' midway through the training process. If this participant starts with the initial model parameters, it can undo some of the progress made by other peers.
+
+To circumvent this issue, we require each new participant to download the latest parameters from a random up-to-date peer discovered through DHT. The same technique is used to synchronize the optimizer statistics and the learning rate schedule. This protocol is also triggered if a peer becomes desynchronized with others, e.g., after a network freeze.
+
+\section{Load balancing via linear programming}
+\label{sect:load_balancing}
+
+When running Moshpit Averaging on heterogeneous devices, one must regularly perform Butterfly All-Reduce among peers with uneven network bandwidth.
+In order to speed up the protocol, we can make low-throughput peers receive, average, and send smaller partitions of the averaged vector; conversely, the high-throughput peers can process greater fractions of the input vector.
+To compute the optimal partitioning, peers must solve an optimization problem that minimizes the total time spent on communication during all-reduce.
+
+Consider a group of $M$ peers with network bandwidths $b_1, ..., b_M$, defined for simplicity as the minimum of the upload and download speed for each peer. Our objective is to find $w_i$ --- a fraction of all input vectors to be processed by the $i$-th peer.
+
+In Butterfly All-Reduce, each peer $i$ splits its vector into parts and sends these parts to corresponding peers. Since there is no need to send $w_i$ to itself, $i$-th peer will upload a total of $1 - w_i$ of the vector to its peers.
+On the receiving side, peer $i$ will average $w_i$ of the vector from all peers in its group. To do so, it must download $M-1$ vector parts of size $w_i$ from all other peers.
+After that, peers distribute the averaged parts by running the same procedure in reverse (see Figure~\ref{fig:butterfly_allreduce}).
+
+Thus, the communication time for each peer is proportional to $t_i = (1-w_i+(M-1) w_i) \cdot \frac{1}{b_i}$ and the total runtime of Butterfly All-Reduce is the maximum communication time over all peers: $T = \max_i t_i=\max_i (1-w_i+(M-1) w_i) \cdot \frac{1}{b_i}$. Formally, we minimize $T$ with respect to $w_i$ with two constraints on the fraction weights:
+\begin{alignat*}{3}
+\min_w&\quad &\max_i &(1-w_i +&(M-1)w_i)\cdot\frac{1}{b_i}&\\
+\text{subject to}&\quad& \sum_{i=1}^M w_i = 1&&&\\
+&&w_i \geq 0 &&&\forall i=1,\ldots,M
+\end{alignat*}
+
+Because the functions being maximized and the constraints are linear in $w_i$, this problem can be reduced to linear programming~\cite{kaplan1974application}. Namely, we can minimize a surrogate variable $\xi$ such that $\forall i, \ \xi \geq (1-w_i+(M-1)\cdot w_i) \cdot \frac{1}{b_i}$. The resulting linear program is formulated as follows:
+
+\begin{alignat*}{3}
+\min_{w,\xi}&\quad& \xi && &\\
+\text{subject to}&\quad& \sum_{i=1}^M w_i& = 1 &&\\
+&\quad& w_i& \geq 0 &&\quad \forall i=1,\ldots,M\\
+&\quad&\xi&\geq (1-&w_i+(M-1)w_i)\cdot\frac{1}{b_i}&\quad\forall i=1,\ldots,M
+\end{alignat*}
+
+We solve this problem using the interior point method~\cite{andersen} implemented as part of the SciPy package (\texttt{scipy.optimize.linprog}).
+Note that depending on the conditions given by participant bandwidth, optimal weights of specific peers might be equal to 0 in some cases. In essence, this allows our method to smoothly interpolate between data parallelism~\cite{valiant1990bridging}, parameter server~\cite{parameter_server_first} and sharded parameter server~\cite{sharded_ps_first} in manner similar to BytePS~\cite{byteps}.

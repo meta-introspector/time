@@ -1,0 +1,24 @@
+\section{Decentralized matchmaking}
+\label{sect:matchmaking}
+
+In order to run group all-reduce over unreliable devices, Moshpit Averaging must be able to dynamically form groups of active devices that share the same key $C_i$.
+In theory, this matchmaking can be implemented precisely as described in Algorithm~\ref{alg:moshpit}: each peer adds itself to a certain DHT key, waits for a said period of time, and then reads the same key to retrieve a list of its groupmates.
+
+However, in practice, this kind of matchmaking would be extremely fragile: if any peer arrives late (for example, due to latency), it may join the group when other peers have already finished matchmaking. As a result, some workers will treat this peer as active, while others will behave as though there is no such peer at all, breaking the consensus and rendering all peers unable to run all-reduce in a stable manner.
+
+To avoid this and other similar inconsistencies, Moshpit All-Reduce employs a more sophisticated matchmaking protocol with the following guarantees 
+\begin{enumerate}
+    \item Peers that join the same group are guaranteed to have the same list of groupmates;
+    \item The group will have the maximum possible number of peers, unless some of them fail;
+    \item If some peers fail, matchmaking will still form the group out of the remaining ones.
+\end{enumerate}
+
+To achieve this, each peer first declares itself onto the DHT (as in Algorithm~\ref{alg:moshpit}). Then, peers attempt to form groups by calling the \texttt{REQUEST\_JOIN\_GROUP} remote procedure call. Intuitively, if peer A calls this RPC on peer B, then \textit{peer A requests to join peer B's group}, which can be either accepted or rejected by the group ``leader'' B, which may or may not have other ``followers''.
+
+If a peer is accepted to a group, it commits to stay active (i.e. to await other peers) for a set period of time and perform all-reduce with the peers supplied by the group ``leader''. On the other hand, a peer can be rejected if (a) the potential ``leader'' is already a follower in another group, (b) the group is already running all-reduce, or (c) if the ``leader'' failed or left during matchmaking.
+
+To ensure that this protocol forms groups of maximum size, each peer generates a unique ``priority'' based on its local timestamp\footnote{More specifically, the priority is a tuple of $\texttt{(timestamp, peer\_id)}$, where \texttt{peer\_id} is used to break ties.}. Peers prioritize joining the group of neighbors that have the lowest ``priority''. Under normal circumstances, all workers will join the group of a peer that was first to start matchmaking according to its own local time. However, if this peer has failed or already finished matchmaking, the group will be formed around one of the remaining peers.
+
+Matchmaking for 64 peers can take less than 1 second if all workers are located in the same cloud region and are highly synchronized. However, this can grow to 2.9 seconds for two different cloud regions and up to 9 seconds when training with commodity hardware around the world.
+
+To ensure that this latency does not affect the training performance, Moshpit SGD performs matchmaking asynchronously in the background thread, while the model is accumulating gradients. All peers begin matchmaking 15 seconds before the estimated averaging round, so that in $\ge 95\%$ of averaging iterations, the matchmaking step is already finished by the time peers need to run all-reduce.

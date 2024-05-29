@@ -1,0 +1,89 @@
+\section{Preliminaries: Ensembles and Distillation}
+
+We view ensembles within a Bayesian framework where the model parameters $\bm{\theta}$ are random variables over which a prior distribution ${\tt p}(\bm{\theta})$ is placed. The posterior distribution ${\tt p}(\bm{\theta}|\mathcal{D})$ is obtained via Bayes' rule:
+\begin{empheq}{align}
+\begin{split}
+  {\tt p}(\bm{\theta}|\mathcal{D}) &= \frac{{\tt p}(\mathcal{D}|\bm{\theta}){\tt p}(\bm{\theta})}{{\tt p}(\mathcal{D})}  \propto {\tt p}(\mathcal{D}|\bm{\theta}){\tt p}(\bm{\theta}) 
+\end{split}
+\label{eqn:bayesposterior}
+\end{empheq}
+Consider an ensemble of models $\{{\tt P}(y|\bm{x}^{*}, \bm{\theta}^{(m)})\}_{m=1}^M $ sampled from the posterior:
+\begin{empheq}{align}
+\begin{split}
+\big\{{\tt P}(y| \bm{x}, \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow& \big\{{\tt P}(y| \bm{\pi}^{(m)} )\big\}_{m=1}^M,\quad \bm{\pi}^{(m)} =\ \bm{f}(\bm{x}; \bm{\theta}^{(m)}),\  \bm{\theta}^{(m)}\sim {\tt p}(\bm{\theta}|\mathcal{D})
+\end{split}
+\end{empheq}
+where $\bm{\pi}$ are the parameters of a categorical distribution $[ {\tt P}(y=\omega_1),\cdots, {\tt P}(y=\omega_K)]^{\tt T}$. The predictive distribution, or \emph{predictive posterior}, for a test input $\bm{x}^{*}$ is obtained by taking the expectation with respect to the model posterior:
+\begin{empheq}{align}
+\begin{split}
+    {\tt P}(y| \bm{x}^{*}, \mathcal{D}) = &\ \mathbb{E}_{{\tt p}(\bm{\theta}|\mathcal{D})}\big[{\tt P}(y|\bm{x}^{*}, \bm{\theta})\big]
+    \approx \ \frac{1}{M}\sum_{m=1}^M{\tt P}(y|\bm{x}^{*}, \bm{\theta}^{(m)})
+\end{split}
+\label{eqn:modunc}
+\end{empheq}
+In practice this is intractable and we approximate via Monte-Carlo sampling. Given the ensemble, the entropy of the predictive posterior is a measure of \emph{total uncertainty}. \emph{Knowledge uncertainty} can be assessed via measures of the spread, or `disagreement', of the ensemble such as \emph{mutual information}:
+\begin{empheq}{align}
+\begin{split}
+\underbrace{\mathcal{I}[y,\bm{\theta}| \bm{x}^{*},\mathcal{D}]}_{\text{Knowledge Uncertainty}} = &\ \underbrace{\mathcal{H}\big[\mathbb{E}_{{\tt p}(\bm{\theta}|\mathcal{D})}[{\tt P}(y|\bm{x}^{*}, \bm{\theta})]\big]}_{\text{Total Uncertainty}} - \underbrace{\mathbb{E}_{{\tt p}(\bm{\theta}|\mathcal{D})}\big[\mathcal{H}[{\tt P}(y|\bm{x}^{*},\bm{\theta})]\big]}_{\text{Expected Data Uncertainty}} 
+\end{split}
+\label{eqn:mibayes}
+\end{empheq}
+
+While ensembles yield improved predictive performance and theoretically interpretable uncertainty estimates, they are expensive during training, and especially so during inference. Thus, it is common to \emph{distill} an ensemble into a single model. Typically, this is done by minimizing the KL-divergence to the predictive posterior of the ensemble:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{L}^{\text{EnD}}(\bm{\phi},\mathcal{D}_{\tt ens}) =&  \mathbb{E}_{{\tt \hat p}(\bm{x})}\Big[{\tt KL}\big[{\tt P}(y| \bm{x}, \mathcal{D})\ ||\ {\tt P}(y| \bm{x};\bm{\phi})\big] \Big]
+\end{split}
+\end{empheq}
+This approach has been thoroughly investigated for a range of tasks, such as image classifcation, machine translation, etc..
+While distillation allows a single model to capture the predictive quality and estimates of \emph{total uncertainty} of the ensemble at low computational and memory cost, information about the diversity of the ensemble is lost. Consequently, it is no longer possible to obtain estimates of \emph{knowledge uncertainty} which is particularly useful for anomaly detection~\cite{malinin-thesis, malinin-endd-2019}.
+
+\cite{malinin-endd-2019} recently proposed a class of distillation techniques called \emph{Ensemble Distribution Distillation} (\Endd), where the goal is to capture both the mean and the diversity of an ensemble within a single model. The proposed solution to \Endd was to distill an ensemble into a Prior Network model which parameterizes the Dirichlet distribution as follows:
+% \begin{empheq}{align}
+% \begin{split}
+% \big\{{\tt P}(y| \bm{x}^{*}, \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow& \big\{{\tt P}(y| \bm{\pi}^{(m)} )\big\}_{m=1}^M \\
+% \bm{\pi}^{(m)} \sim&\  {\tt p}(\bm{\pi} | \bm{x}^{*}, \mathcal{D})
+% \end{split}
+% \end{empheq}
+\begin{empheq}{align}
+\begin{split}
+{\tt p}(\bm{\pi} | \bm{x};\bm{\hat \phi}) =& {\tt Dir}(\bm{\pi} | \bm{\hat \alpha}), \bm{\hat \alpha} = e^{\bm{z}}, \bm{z}= \bm{f}(\bm{x};\bm{\hat \phi}),\
+\hat \alpha_c > 0,\ \hat \alpha_0 = \sum_{c=1}^K \hat \alpha_c
+\end{split}
+\label{eqn:DPN1}
+\end{empheq}
+
+% In this work we consider how an ensemble, which is a set of samples from an \emph{implicit} distribution over distributions, can be \emph{distribution distilled} into an \emph{explicit} distribution over distributions modelled using a single Prior Network model, ie: $\big\{{\tt P}(y | \bm{x} ; \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow {\tt p}(\bm{\pi} | \bm{x};\bm{\hat \phi})$.
+
+Distribution distillation is then accomplished as follows. Firstly, a \emph{transfer dataset} $\mathcal{D}_{\tt ens}= \{\bm{x}^{(i)}, \bm{\pi}^{(i,1:M)} \}_{i=1}^N \sim {\tt \hat p}(\bm{x},\bm{\pi})$ is composed of the inputs $\bm{x}_i$ from the original training set $\mathcal{D}=\{\bm{x}^{(i)},y^{(i)}\}_{i=1}^N$ and the categorical distributions $\{\bm{\pi}^{(i,1:M)}\}_{i=1}^N$ derived from the ensemble for each input. Secondly, given this transfer set, the model ${\tt p}(\bm{\pi} | \bm{x};\bm{\phi})$ is trained by minimizing the negative log-likelihood of each categorical distribution $\bm{\pi}^{(im)}$:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{L}^{\text{EnD}^2}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  -\mathbb{E}_{{\tt \hat p}(\bm{x})}\big[\mathbb{E}_{{\tt \hat p}(\bm{\pi}|\bm{x})}[\ln{\tt p}(\bm{\pi} | \bm{x};\bm{\phi}) ] \big] %\\
+%=&\ - \frac{1}{N}\sum_{i=1}^N\Big[\ln\Gamma(\hat \alpha_{0}^{(i)}) - \sum_{c=1}^K\ln\Gamma(\hat \alpha_{c}^{(i)}) + \frac{1}{M}\sum_{m=1}^M\sum_{c=1}^K(\hat \alpha_{c}^{(i)} -1)\ln\pi_{c}^{(im)}\Big]
+\end{split}
+\label{eqn:endd-loss1}
+\end{empheq}
+Given a distribution-distilled Prior Network, the predictive distribution is given by the expected categorical distribution $\bm{\hat \pi}$ under the Dirichlet prior:
+\begin{empheq}{align}
+\begin{split} 
+{\tt P}(y = \omega_c| \bm{x}^{*};\bm{\hat \phi}) = &\ \mathbb{E}_{{\tt p}(\bm{\pi} | \bm{x}^{*};\bm{\hat \phi})}[{\tt P}(y = \omega_c | \bm{\pi})]=\ \hat \pi_c\ = \frac{\hat \alpha_c}{\sum_{k=1}^K \hat \alpha_k} =\ \frac{ e^{\hat z_c}}{\sum_{k=1}^K e^{\hat z_k}}
+\end{split}\label{eqn:dirposterior}
+\end{empheq}
+Measures of \emph{total} and \emph{knowledge uncertainty} are obtained by considering the mutual information between the prediction $y$ and the parameters of $\bm{\pi}$ of the categorical: 
+\begin{empheq}{align}
+\begin{split}
+   \underbrace{\mathcal{I}[y,{\tt \bm{\pi}} |\bm{x}^{*};\bm{\hat \phi}]}_{\text{Knowledge Uncertainty}}=&\ \underbrace{\mathcal{H}\big[\mathbb{E}_{{\tt p}({\tt \bm{\pi}}|\bm{x}^{*};\bm{\hat \phi})}[{\tt P}(y|{\tt \bm{\pi}})]\big]}_{\text{Total Uncertainty}} - \underbrace{\mathbb{E}_{{\tt p}({\tt \bm{\pi}}|\bm{x}^{*};\bm{\hat \phi})}\big[\mathcal{H}[{\tt P}(y|{\tt \bm{\pi}})]\big]}_{\text{Expected Data Uncertainty}} 
+\end{split}
+ \label{eqn:mipn}
+\end{empheq}
+
+It is important to highlight that \Endd can also be accomplished by distilling an ensemble into a mixture model which yields a separate softmax for each ensemble member~\cite{hydra,mdd}. The principle downside of this approach is that it requires more parameters, and attempts to model the ensemble in excessive detail, which requires more flexible and powerful models. As a result, for good performance, it necessary to split the model into multiple heads at an earlier stage, which significantly increases computational and memory complexity. In contrast, \Endd via Prior Networks has a fixed computational and memory cost of one model regardless of the size of the original ensemble. 
+
+
+
+
+
+% Specifically, for an in-domain test input $\bm{x}^{*}$, the ensemble should produce a consistent set of predictions with little spread, as described in figure~\ref{fig:dirs-confident} and figure~\ref{fig:dirs-dataunc}. In other words, the models should agree in their estimates of \emph{data uncertainty}. On the other hand, for inputs which are different from the training data, the models in the ensemble should `disagree' and produce a diverse set of predictions, as shown in figure~\ref{fig:dirs-knowunc}. Ideally, the models should yield increasingly diverse predictions as input $\bm{x}^{*}$ moves further away from the training data. If an input is completely unlike the training data, then the level of disagreement should be significant. Hence, the measures of \emph{model uncertainty} will capture \emph{knowledge uncertainty} given an appropriate choice of prior.
+
+%G
+%This formulation of mutual information allows the \emph{total uncertainty} to be decomposed into \emph{knowledge uncertainty} and \emph{expected data uncertainty}~\citep{mutual-information,mutual-information2}. The entropy of the predictive posterior, or \emph{total uncertainty}, will be high whenever the model is uncertain - both in regions of severe class overlap and out-of-domain. However, the difference of the entropy of the predictive posterior and the expected entropy of the individual models will be non-zero only if the models disagree. For example, in regions of class overlap, \emph{each} member of the ensemble will yield a high entropy distribution (figure~\ref{fig:dirs}b) - the entropy of the predictive posterior and the expected entropy will be similar and mutual information will be low. In this situation \emph{total uncertainty} is dominated by \emph{data uncertainty}. On the other hand, for out-of-domain inputs the ensemble yields diverse distributions over classes such that the predictive posterior is near uniform (figure~\ref{fig:dirs-knowunc}), while the expected entropy of each model may be much lower. In this region of input space the models' understanding of data is low and, therefore, \emph{knowledge uncertainty} is high.

@@ -1,0 +1,181 @@
+\section{Distillation for Structured Prediction}
+
+\begin{eqnarray*}
+{\cal D}
+%% =\left\{\{{\bm x}^{(1)},y^{(1)}\},\ldots,{\bm x}^{(N)},y^{(N)}\}\right\}
+=
+\left\{\{{\bm x}^{(i)},y^{(i)}\}\right\}_{i=1}^N
+; \:\:\:\:
+y^{(i)}\in\{\omega_1,\ldots,\omega_K\}
+\end{eqnarray*}
+In terms of standard notation given the training data ${\cal D}$ training can be expressed as
+\begin{eqnarray}
+{\overline{\bm\theta}} = 
+= 
+\argmax_{\bm\theta}\left\{
+\sum_{i=1}^N
+\log\left({\tt P}(y^{(i)}|\bm{x}^{(i)}; {{\bm{\theta}}})\right)
+\right\}
+\end{eqnarray}
+The labels, $y$ from the joint distribution are now discarded, and the posteriors frome the trained model are used to estimate the distilled model parameters ${\hat{\bm\theta}}$
+\begin{eqnarray}
+{\hat{\bm\theta}} = \argmin_{\bm\theta}\left\{
+\sum_{i=1}^N{\tt KL}\big[
+{\tt P}(y|\bm{x}^{(i)}; {\overline{\bm{\theta}}})
+\big|\big|
+{{\tt P}(y|\bm{x}^{(i)}; {{\bm{\theta}}})}
+\big]
+\right\}
+\end{eqnarray}
+where
+\begin{eqnarray}
+{\tt KL}\big[
+{\tt P}(y|\bm{x}^{(i)}; {\overline{\bm{\theta}}})
+\big|\big|
+{{\tt P}(y|\bm{x}^{(i)}; {{\bm{\theta}}})}
+\big] = 
+\sum_{k=1}^K{\tt P}(y=\omega_k|{\bm x}^{(i)}; {\overline{\bm{\theta}}})\log
+\left(
+\frac{{\tt P}(y=\omega_k|{\bm x}^{(i)}; {\overline{\bm{\theta}}})}
+{{\tt P}(y=\omega_k|{\bm x}^{(i)};{\bm\theta})}
+\right)
+\end{eqnarray}
+When the data is now structured, for example tasks such as speech recognition, speech synthesis and machine translation the joint distribution of the data is more complicated as there are now observations sequences and label sequences. The data distribution can be expressed as~\footnote{Of course $T$ and $L$ vary, but for simplicity this is ignored for notational simplicity.} ${\tt p}_{\tt tr}({\bm x}_{1:T},y_{1:L})$. Again only samples from the true distribution 
+\begin{eqnarray*}
+{\cal D}
+%% =\left\{\{{\bm x}^{(1)},y^{(1)}\},\ldots,{\bm x}^{(N)},y^{(N)}\}\right\}
+=
+\left\{\{{\bm x}^{(i)}_{1:T},y^{(i)}_{1:L}\}\right\}_{i=1}^N
+; \:\:\:\:
+y^{(i)}\in\{\omega_1,\ldots,\omega_K\}
+\end{eqnarray*}
+Again this data can be used to train a standard sequence model with parameters ${\overline{\bm\theta}}$. One optimal difference is that the simple (conditional) maximum likelihood training for unstructured data can use minimum Bayes risk training with an appropriate sequence loss function.  The original implementation of knowledge distillation, or teacher-student training, for this form of model used a simple per sample approximation
+\begin{eqnarray}
+{\hat{\bm\theta}} = \argmin_{\bm\theta}\left\{
+\sum_{i=1}^N\sum_{j=1}^T{\tt KL}\big[
+{\tt P}(y|\bm{x}^{(i)}_j; {\overline{\bm{\theta}}})
+\big|\big|
+{{\tt P}(y|\bm{x}^{(i)}_j; {{\bm{\theta}}})}
+\big]
+\right\}
+\end{eqnarray}
+Effectively this has ignored the problem as a sequence problem. Sequence teacher-student training, sequence distillation, aims to address this problem by considering posterior distributions of complete sequences, compressed into a lattice ${\cal L}$ generated from model ${\overline{\bm\theta}}$ for the $i-th$ sample, ${\cal L}|\bm{x}^{(i)}_{1:T}; {\overline{\bm{\theta}}}$. The expression then becomes
+\begin{eqnarray}
+{\hat{\bm\theta}} = \argmin_{\bm\theta}\left\{
+\sum_{i=1}^N{\tt KL}\big[
+{\cal L}|\bm{x}^{(i)}_{1:T}; {\overline{\bm{\theta}}}
+\big|\big|
+{\cal L}|\bm{x}^{(i)}_{1:T}; {\bm{\theta}}
+\big]
+\right\}
+\end{eqnarray}
+
+For these approaches there is no assumption that the complexity of the models is consistent between ${\overline{\bm\theta}}$ and ${\hat{\bm\theta}}$. This distillation can be used to simplify the complexity of the model, yielding speed and memory advantages.
+
+The second application of distillation is to distill an ensemble of models into a single model. Applying standard ensemble distillation
+\begin{eqnarray}
+{\hat{\bm\theta}} = \argmin_{\bm\theta}\left\{
+\sum_{i=1}^N\sum_{m=1}^M{\tt KL}\big[
+{\tt p}(y|\bm{x}^{(i)}; {\overline{\bm{\theta}}}^{(m)})
+\big|\big|
+{\tt p}(y|\bm{x}^{(i)}; {\bm{\theta}})
+\big]
+\right\}
+\end{eqnarray}
+where the ensemble of models comprises parameters, $\left\{{\overline{\bm\theta}}^{(m)}\right\}_{m=1}^M$.  As previously mentioned this has ignored the diversity associated with the model. To address this problem ensemble distribution distillation can be used. Here the distribution of the predictions in the ensemble is modelled. Denote the prediction of sample ${\bm x}^{(i)}$ using model ${\overline{\bm\theta}}^{(m)}$ as
+\begin{eqnarray}
+{\bm\pi}^{(mi)} = \left[
+\begin{array}{c}
+{\tt P}(y=\omega_1|{\bm x}^{(i)};{\overline{\bm\theta}}^{(m)}) \\
+\vdots\\
+{\tt P}(y=\omega_K|{\bm x}^{(i)};{\overline{\bm\theta}}^{(m)}) 
+\end{array}
+\right]; 
+\:\:\:\:
+{\bm\pi}^{(mi)} \sim {\tt p}_{\pi}({\bm x}^{(i)})
+\end{eqnarray}
+To model the ensemble distribution these samples can then be used for training the model
+\begin{eqnarray}
+{\hat{\bm\theta}} = 
+\argmin_{\bm\theta}\left\{
+\sum_{i=1}^N
+{\tt KL}\big[
+{\tt p}_{\pi}(\bm{x}^{(i)})
+\big|\big|
+{\tt p}_{\pi}(\bm{x}^{(i)}; {\bm{\theta}})
+\big]
+\right\}
+\approx
+\argmax_{\bm\theta}\left\{
+\sum_{i=1}^N
+\sum_{m=1}^M
+\log\left(
+{\tt p}_{\pi}({\bm\pi}^{(mi)} | \bm{x}^{(i)}; {\bm{\theta}})
+\right)
+\right\}
+\end{eqnarray}
+This form of model, associated with distributions over distributions, is a prior network. This has the same form as density networks, networks that predict the parameters of parametric distributions, but the form here is a distribution over distributions. Thus
+\begin{eqnarray*}
+{\tt p}_{\pi}({\bm\pi}^{(mi)} | \bm{x}^{(i)}; {\bm{\theta}})
+= {\tt Dir}({\bm\pi}^{(mi)}; {\cal F}_\alpha(\bm{x}^{(i)}; {\bm{\theta}}))
+\end{eqnarray*}
+where ${\cal F}_\alpha(\bm{x}^{(i)}; {\bm{\theta}})$ yields the appropriate Dirichlet distribution parameters.
+
+Extending this form of distribution to handle structured data is non-trivial. It is possible to extend the notation above to handle lattices
+\begin{eqnarray}
+{\cal L}^{(mi)} = 
+{\cal L}|{\bm x}^{(i)};{\overline{\bm\theta}}^{(m)};
+\:\:\:\:
+{\cal L}^{(mi)} \sim {\tt p}_{\cal L}({\bm x}^{(i)})
+\end{eqnarray}
+The challenge is to decide on the appropriate parametric form for ${\tt p}_{\cal L}({\bm x}^{(i)};{\bm\theta})$.
+
+\section{Sequence Distribution Distillation}
+The simplest approach to a distribution over the lattice~\footnote{The initial form considered here is a prefix-tree not a lattice.} is to make an additional conditional independence assumption: the distribution over the predicted word distributions is only dependent on the history of words to that point. Thus consider adding a new arc ${\cal A}$ to the lattice having taken word sequence $w_{1:\tau-1}=w_1,\ldots,w_{\tau-1}$ where $w_\tau\in\{\omega_k\}_{k=1}^K$. Initially just consider the scenario where only the word-id information is  considered (so duration and score are not considered). The task is to get the distribution over the predictions for word $w_\tau$. Consider
+\begin{eqnarray*}
+{\tt p}_{\pi}({{\bm\pi}}_{\tau}|w_{1:\tau-1};{\bm\theta})
+\end{eqnarray*}
+where
+\begin{eqnarray}
+{\bm\pi}_{\tau} = \left[
+\begin{array}{c}
+{\tt P}(y=\omega_1|w_{1:\tau-1}) \\
+\vdots\\
+{\tt P}(y=\omega_K|w_{1:\tau-1}) 
+\end{array}
+\right]
+\end{eqnarray}
+
+Consider the following form
+\begin{eqnarray}
+{\tt p}_{\pi}({{\bm\pi}}_{\tau}|w_{1:\tau-1};{\bm\theta})
+\approx
+{\tt p}_{\pi}({{\bm\pi}}_{\tau}|w_{\tau-1},{\bm\alpha}_{\tau-1};{\bm\theta})
+= {\tt Dir}({{\bm\pi}}_{\tau};{\cal F}_\alpha(w_{\tau-1},{\bm\alpha}_{\tau-1};{\bm\theta})
+= {\tt Dir}({{\bm\pi}}_{\tau};{\bm\alpha}_{\tau})
+\end{eqnarray}
+This effectively replaces the standard PMF prediction from an RNN-LM, with a Dirichlet distribution prediction. Following this logic through
+\begin{eqnarray}
+{\cal F}_\alpha(w_{\tau},{\bm\alpha}_{\tau};{\bm\theta}) \approx
+{\cal F}_\alpha(w_{\tau},{\bm h}_{\tau};{\bm\theta}); \:\:\:\:
+{\bm h}_{\tau} = {\cal F}_{\tt h}(w_{\tau-1},{\bm h}_{\tau-1};{\bm\theta})
+\end{eqnarray}
+This form of model can be trained in the same fashion as standard LMs, but now using the distributions that result from an ensemble if language models. Let 
+\begin{eqnarray}
+{\bm\pi}^{(m)}_{\tau} = \left[
+\begin{array}{c}
+{\tt P}(y=\omega_1|w_{1:\tau-1};{\bm\theta}^{(m)}) \\
+\vdots\\
+{\tt P}(y=\omega_K|w_{1:\tau-1};{\bm\theta}^{(m)}) 
+\end{array}
+\right]
+\end{eqnarray}
+The optimisation criterion then becomes
+\begin{eqnarray}
+{\hat{\bm\theta}} = \argmax_{{\bm\theta}}\left\{
+\sum_{\tau=1}^L\sum_{m=1}^M\log\left(
+{\tt p}_{\pi}({\bm\pi}^{(m)}_{\tau}|w_{1:\tau-1};{\bm\theta})
+\right)
+\right\}
+\end{eqnarray}
+

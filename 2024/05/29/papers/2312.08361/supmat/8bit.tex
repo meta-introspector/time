@@ -1,0 +1,38 @@
+\section{Quality and efficiency of BLOOM with 8-bit quantization}\label{appendix:8bit_quality}
+
+\begin{table}[b]
+\begin{minipage}{0.56\textwidth}
+\centering
+\caption{Zero-shot accuracy for \mbox{BLOOM-176B} and \mbox{OPT-175B} with 8-bit and 16-bit weights.\nocite{eval-harness}}
+\vspace{9pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}\toprule
+\textbf{Model}            & \textbf{Bits} & \textbf{HellaSwag} & \textbf{LAMBADA} & \textbf{WinoGrande} & \textbf{Avg}             \\\midrule
+\multirow{2}{*}{BLOOM}    & 16            & 73.0               & 67.2             & 70.1                & 70.1                     \\
+                          & 8             & 72.8               & 68.1             & 70.1                & 70.3                    \\\midrule
+\multirow{2}{*}{OPT} & 16            & 78.5               & 74.7             & 72.6                & 75.3                     \\
+                          & 8             & 78.5               & 74.6             & 71.7                & \multicolumn{1}{r}{74.9} \\\bottomrule
+\end{tabular}
+}
+\label{tab:quality}
+\end{minipage}
+\hspace{4px}
+\begin{minipage}{0.42\textwidth}
+\centering
+\caption{Generation throughput (tokens/s) for BLOOM-176B with 8-bit and 16-bit weights on 8$\times$~A100 GPUs.}
+\label{tbl:memory_footprint}
+\resizebox{0.75\linewidth}{!}{%
+\begin{tabular}{lccc}\toprule
+\multirow{2}{*}{\bf Weights}& \multicolumn{3}{c}{\bf Batch size} \\\cmidrule{2-4} & \bf 1 & \bf 8 &\bf 32  \\\toprule
+16-bit       & 4.18 & 31.3  & 100.6  \\
+8-bit        & 3.95 & 29.4  & 95.8\\\bottomrule
+\end{tabular}
+}
+\label{tab:throughput}
+\end{minipage}
+\end{table}
+
+As shown in Table~\ref{tab:quality}, this method has little effect on LLM quality for major benchmarks.
+In terms of inference time, Table~\ref{tab:throughput} demonstrates that quantization has about $5\%$ of overhead with batch size 1 (20 tokens), but becomes negligible for larger batches.
+
+

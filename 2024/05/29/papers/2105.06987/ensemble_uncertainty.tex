@@ -1,0 +1,62 @@
+\section{Uncertainty Estimation via Ensembles}\label{sec:ensembles}
+%%%%FLOW!!!!!!%%%%
+
+In this work we take a Bayesian viewpoint on ensembles, as it yields an elegant probabilistic framework within which interpretable uncertainty estimates can be obtained. The core of the Bayesian approach is to treat the model parameters $\bm{\theta}$ as random variables and place a prior  ${\tt p}(\bm{\theta})$ over them to compute a posterior ${\tt p}(\bm{\theta}|\mathcal{D})$ via Bayes' rule:
+\begin{empheq}{align}
+\begin{split}
+  {\tt p}(\bm{\theta}|\mathcal{D}) &= \frac{{\tt p}(\mathcal{D}|\bm{\theta}){\tt p}(\bm{\theta})}{{\tt p}(\mathcal{D})}
+\end{split}
+\label{eqn:bayesposterior}
+\end{empheq}
+However, exact Bayesian inference is intractable for neural networks. It is therefore necessary to consider an explicit or implicit approximation ${\tt q}(\bm{\theta})$ to the true posterior ${\tt p}(\bm{\theta}|\mathcal{D})$ to generate an ensemble of models. A number of different approaches to generating an ensemble of models have been developed, such as Monte-Carlo Dropout~\cite{Gal2016Dropout}, DeepEnsembles~\cite{deepensemble2017}, and Stochastic Weight Averaging Gaussian (SWAG)~\cite{maddox2019simple}. A full overview is available in~\cite{ashukha2020pitfalls, trust-uncertainty}. 
+
+Consider an ensemble of models $\{{\tt P}(y | \bm{x}; \bm{\theta}^{(m)})\}_{m=1}^M$ sampled from an approximate posterior ${\tt q}(\bm{\theta})$, where each model captures an \emph{unstructured} mapping $\bm{x} \rightarrow y$, where $\bm{x} \in \mathcal{R}^D$ and $y \in \{\omega_1,\cdots,\omega_K\}$. Each of the models ${\tt P}(y|\bm{x}, \bm{\theta}^{(m)})$ yields a \emph{different} estimate of \emph{data uncertainty}. Uncertainty in predictions due to \emph{knowledge uncertainty} is expressed as the level of spread, or `disagreement', of models in the ensemble~\cite{malinin-thesis}. The \emph{predictive posterior} of the ensemble is obtained by taking the expectation with respect to the models in the ensemble:
+\begin{empheq}{align}
+\begin{split}
+{\tt P}(y | \bm{x}, \mathcal{D}) =&\  \mathbb{E}_{{\tt p}(\bm{\theta}|\mathcal{D})}\big[{\tt P}(y | \bm{x} ; \bm{\theta}) \big] \\
+\approx&\ \frac{1}{M}\sum_{m=1}^M {\tt P}(y | \bm{x}; \bm{\theta}^{(m)}),\ \bm{\theta}^{(m)} \sim {\tt q}(\bm{\theta})
+\end{split}
+\end{empheq}
+The entropy of the predictive posterior will be an estimate of \emph{total uncertainty} in predictions:
+\begin{empheq}{align}
+\mathcal{H}\big[{\tt P}(y |  \bm{x}, \mathcal{D})\big] =&\  \mathbb{E}_{{\tt P}(y |  \bm{x},  \mathcal{D})}\big[ -\ln {\tt P}(y | \bm{x},  \mathcal{D}) \big] 
+\end{empheq}
+\emph{Total uncertainty} in the prediction is due to both \emph{data uncertainty} and \emph{knowledge uncertainty}. However, for tasks such as misclassification detection considering the log-likelihood score assigned by the predictive posterior to a particular class can yield superior performance as it is more sensitive to the prediction made~\cite{malinin-thesis}:
+\begin{empheq}{align}
+\begin{split}
+\text{SCR} =&\ \ln{\tt P}(y = \hat \omega| \bm{x}, \mathcal{D})
+\end{split}
+\end{empheq}
+
+In certain situations, such as active learning~\cite{batchbald} and out-of-distribution input detection, it is desirable to evaluate uncertainty in predictions due to \emph{knowledge uncertainty}. The sources of uncertainty can be decomposed by considering the \emph{mutual information} between the model parameters $\bm{\theta}$ and the prediction $y$~\cite{mutual-information}:
+\begin{empheq}{align}
+\begin{split}
+\underbrace{\mathcal{I}\big[y, \bm{\theta} | \bm{x}, \mathcal{D}\big]}_{\text{Knowledge Uncertainty}} =&\ \underbrace{\mathcal{H}\big[{\tt P}(y |  \bm{x}, \mathcal{D})\big]}_{\text{Total Uncertainty}} \\
+- &  \underbrace{\mathbb{E}_{{\tt q}(\bm{\theta})}\big[\mathcal{H}[{\tt P}(y | \bm{x}; \bm{\theta})]\big]}_{\text{Expected Data Uncertainty}}
+\end{split}\label{eqn:mi}
+\end{empheq}
+This is expressed as the difference between the entropy of the predictive posterior and the expected entropy of each model in the ensemble. The former is a measure of \emph{total uncertainty}, while the later is a measure of \emph{expected data uncertainty}. Their difference will be measure of spread of the ensemble and an estimate of \emph{knowledge uncertainty}. It is also possible to consider the \emph{expected pairwise KL-divergence} between models in an ensemble as an alternative measure of ensemble diversity:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{K}[y, \bm{\theta}] =&\ \mathbb{E}_{{\tt q}(\bm{\theta}){\tt q}(\bm{\tilde \theta})}\big[{\tt KL}[{\tt P}(y|\bm{x},\bm{\theta})||{\tt P}(y|\bm{x},\bm{\tilde \theta}) ]\big] \\
+=&  \underbrace{-\sum_{y} \mathbb{E}_{{\tt q}(\bm{\theta})}[{\tt P}(y|\bm{x}, \bm{\theta})]\mathbb{E}_{{\tt q}(\bm{\tilde \theta})}[\ln{\tt P}(y|\bm{x}, \bm{\tilde \theta}]}_{\text{Total Uncertainty}}\\
+- &  \underbrace{\mathbb{E}_{{\tt q}(\bm{\theta})}\big[\mathcal{H}[{\tt P}(y | \bm{x}; \bm{\theta})]\big]}_{\text{Expected Data Uncertainty}}
+\end{split}
+\label{eqn:epklbayes}
+\end{empheq}
+where ${\tt q}(\bm{\theta})={\tt q}(\bm{\tilde \theta})$. This measure is an upper bound on the mutual information and also allows \emph{total uncertainty} to be decomposed into \emph{knowledge uncertainty} and \emph{data uncertainty}~\cite{malinin-thesis}. Notably, only estimates of \emph{total uncertainty} differ, while the estimate of \emph{data uncertainty} provided by both decompositions is the same. 
+
+
+
+
+
+
+
+% First, let's consider the entropy of as single model in the ensemble at an input $\bm{x}$:
+% \begin{empheq}{align}
+% \begin{split}
+%  \mathcal{H}\big[{\tt P}(y | \bm{x}; \bm{\theta})\big]
+% =&\ \mathbb{E}_{{\tt P}(y |  \bm{x}; \bm{\theta})}\big[ -\ln {\tt P}(y | \bm{x}; \bm{\theta}) \big] 
+% \end{split}
+% \end{empheq}
+% This will be an estimate of \emph{data uncertainty}, or uncertainty due to the natural complexity of the data~\cite{malinin-thesis}.

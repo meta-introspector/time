@@ -1,0 +1,968 @@
+\begin{thebibliography}{104}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aji \& Heafield(2019)Aji and Heafield]{aji2019making}
+Aji, A.~F. and Heafield, K.
+\newblock Making asynchronous stochastic gradient descent work for
+  transformers.
+\newblock In \emph{Proceedings of the 3rd Workshop on Neural Generation and
+  Translation}, pp.\  80--89, Hong Kong, 2019. Association for Computational
+  Linguistics.
+\newblock \doi{10.18653/v1/D19-5608}.
+\newblock URL \url{https://aclanthology.org/D19-5608}.
+
+\bibitem[Allen(2013)]{mechanics}
+Allen, D.~H.
+\newblock \emph{How Mechanics Shaped the Modern World}.
+\newblock 2013.
+\newblock ISBN 9783319017013.
+
+\bibitem[Alman \& Williams(2021)Alman and Williams]{refined_laser}
+Alman, J. and Williams, V.~V.
+\newblock A refined laser method and faster matrix multiplication.
+\newblock In Marx, D. (ed.), \emph{Proceedings of the 2021 {ACM-SIAM} Symposium
+  on Discrete Algorithms, {SODA} 2021, Virtual Conference, January 10 - 13,
+  2021}, pp.\  522--539. {SIAM}, 2021.
+\newblock \doi{10.1137/1.9781611976465.32}.
+\newblock URL \url{https://doi.org/10.1137/1.9781611976465.32}.
+
+\bibitem[Arjevani et~al.(2020)Arjevani, Shamir, and Srebro]{arjevani2020tight}
+Arjevani, Y., Shamir, O., and Srebro, N.
+\newblock A tight convergence analysis for stochastic gradient descent with
+  delayed updates.
+\newblock In Kontorovich, A. and Neu, G. (eds.), \emph{Proceedings of the 31st
+  International Conference on Algorithmic Learning Theory}, volume 117 of
+  \emph{Proceedings of Machine Learning Research}, pp.\  111--132. PMLR, 2020.
+\newblock URL \url{https://proceedings.mlr.press/v117/arjevani20a.html}.
+
+\bibitem[Atre et~al.(2021)Atre, Jha, and Rao]{eydle}
+Atre, M., Jha, B., and Rao, A.
+\newblock Distributed deep learning using volunteer computing-like paradigm.
+\newblock In \emph{{IEEE} International Parallel and Distributed Processing
+  Symposium Workshops, {IPDPS} Workshops 2021, Portland, OR, USA, June 17-21,
+  2021}, pp.\  933--942. {IEEE}, 2021.
+\newblock \doi{10.1109/IPDPSW52791.2021.00144}.
+\newblock URL \url{https://doi.org/10.1109/IPDPSW52791.2021.00144}.
+
+\bibitem[Ba et~al.(2016)Ba, Kiros, and Hinton]{ba2016layernorm}
+Ba, L.~J., Kiros, J.~R., and Hinton, G.~E.
+\newblock Layer normalization.
+\newblock \emph{ArXiv preprint}, abs/1607.06450, 2016.
+\newblock URL \url{https://arxiv.org/abs/1607.06450}.
+
+\bibitem[Baevski \& Auli(2019)Baevski and Auli]{baevski2019adaptiveinputs}
+Baevski, A. and Auli, M.
+\newblock Adaptive input representations for neural language modeling.
+\newblock In \emph{7th International Conference on Learning Representations,
+  {ICLR} 2019, New Orleans, LA, USA, May 6-9, 2019}. OpenReview.net, 2019.
+\newblock URL \url{https://openreview.net/forum?id=ByxZX20qFQ}.
+
+\bibitem[Baines et~al.(2021)Baines, Bhosale, Caggiano, Goyal, Goyal, Ott,
+  Lefaudeux, Liptchinsky, Rabbat, Sheiffer, Sridhar, and Xu]{FairScale2021}
+Baines, M., Bhosale, S., Caggiano, V., Goyal, N., Goyal, S., Ott, M.,
+  Lefaudeux, B., Liptchinsky, V., Rabbat, M., Sheiffer, S., Sridhar, A., and
+  Xu, M.
+\newblock Fairscale: A general purpose modular pytorch library for high
+  performance and large scale training.
+\newblock \url{https://github.com/facebookresearch/fairscale}, 2021.
+
+\bibitem[Ben-Nun \& Hoefler(2019)Ben-Nun and
+  Hoefler]{model_parallelism_survey1}
+Ben-Nun, T. and Hoefler, T.
+\newblock Demystifying parallel and distributed deep learning: An in-depth
+  concurrency analysis.
+\newblock \emph{ACM Comput. Surv.}, 52\penalty0 (4), 2019.
+\newblock ISSN 0360-0300.
+\newblock \doi{10.1145/3320060}.
+\newblock URL \url{https://doi.org/10.1145/3320060}.
+
+\bibitem[Black et~al.(2021)Black, Leo, Wang, Leahy, and Biderman]{gptneo}
+Black, S., Leo, G., Wang, P., Leahy, C., and Biderman, S.
+\newblock {GPT-Neo: Large Scale Autoregressive Language Modeling with
+  Mesh-Tensorflow}, 2021.
+\newblock URL \url{https://doi.org/10.5281/zenodo.5297715}.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert{-}Voss, Krueger,
+  Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin,
+  Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and Amodei]{gpt3}
+Brown, T.~B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P.,
+  Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S.,
+  Herbert{-}Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A.,
+  Ziegler, D.~M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin,
+  M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A.,
+  Sutskever, I., and Amodei, D.
+\newblock Language models are few-shot learners.
+\newblock In Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M., and Lin, H.
+  (eds.), \emph{Advances in Neural Information Processing Systems 33: Annual
+  Conference on Neural Information Processing Systems 2020, NeurIPS 2020,
+  December 6-12, 2020, virtual}, 2020.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html}.
+
+\bibitem[Chen et~al.(2016)Chen, Xu, Zhang, and
+  Guestrin]{gradient_checkpointing_dl}
+Chen, T., Xu, B., Zhang, C., and Guestrin, C.
+\newblock Training deep nets with sublinear memory cost.
+\newblock \emph{ArXiv preprint}, abs/1604.06174, 2016.
+\newblock URL \url{https://arxiv.org/abs/1604.06174}.
+
+\bibitem[Chilimbi et~al.(2014)Chilimbi, Suzue, Apacible, and
+  Kalyanaraman]{projectadam}
+Chilimbi, T., Suzue, Y., Apacible, J., and Kalyanaraman, K.
+\newblock Project adam: Building an efficient and scalable deep learning
+  training system.
+\newblock In \emph{11th {USENIX} Symposium on Operating Systems Design and
+  Implementation ({OSDI} 14)}, pp.\  571--582, Broomfield, CO, 2014. {USENIX}
+  Association.
+\newblock ISBN 978-1-931971-16-4.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi14/technical-sessions/presentation/chilimbi}.
+
+\bibitem[Chowdhery et~al.(2022)Chowdhery, Narang, Devlin, Bosma, Mishra,
+  Roberts, Barham, Chung, Sutton, Gehrmann, Schuh, Shi, Tsvyashchenko, Maynez,
+  Rao, Barnes, Tay, Shazeer, Prabhakaran, Reif, Du, Hutchinson, Pope, Bradbury,
+  Austin, Isard, Gur{-}Ari, Yin, Duke, Levskaya, Ghemawat, Dev, Michalewski,
+  Garcia, Misra, Robinson, Fedus, Zhou, Ippolito, Luan, Lim, Zoph, Spiridonov,
+  Sepassi, Dohan, Agrawal, Omernick, Dai, Pillai, Pellat, Lewkowycz, Moreira,
+  Child, Polozov, Lee, Zhou, Wang, Saeta, Diaz, Firat, Catasta, Wei,
+  Meier{-}Hellstern, Eck, Dean, Petrov, and Fiedel]{palm}
+Chowdhery, A., Narang, S., Devlin, J., Bosma, M., Mishra, G., Roberts, A.,
+  Barham, P., Chung, H.~W., Sutton, C., Gehrmann, S., Schuh, P., Shi, K.,
+  Tsvyashchenko, S., Maynez, J., Rao, A., Barnes, P., Tay, Y., Shazeer, N.,
+  Prabhakaran, V., Reif, E., Du, N., Hutchinson, B., Pope, R., Bradbury, J.,
+  Austin, J., Isard, M., Gur{-}Ari, G., Yin, P., Duke, T., Levskaya, A.,
+  Ghemawat, S., Dev, S., Michalewski, H., Garcia, X., Misra, V., Robinson, K.,
+  Fedus, L., Zhou, D., Ippolito, D., Luan, D., Lim, H., Zoph, B., Spiridonov,
+  A., Sepassi, R., Dohan, D., Agrawal, S., Omernick, M., Dai, A.~M., Pillai,
+  T.~S., Pellat, M., Lewkowycz, A., Moreira, E., Child, R., Polozov, O., Lee,
+  K., Zhou, Z., Wang, X., Saeta, B., Diaz, M., Firat, O., Catasta, M., Wei, J.,
+  Meier{-}Hellstern, K., Eck, D., Dean, J., Petrov, S., and Fiedel, N.
+\newblock {PaLM}: Scaling language modeling with pathways.
+\newblock \emph{CoRR}, abs/2204.02311, 2022.
+\newblock \doi{10.48550/arXiv.2204.02311}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2204.02311}.
+
+\bibitem[Coates et~al.(2013)Coates, Huval, Wang, Wu, Catanzaro, and
+  Ng]{coates13}
+Coates, A., Huval, B., Wang, T., Wu, D.~J., Catanzaro, B., and Ng, A.~Y.
+\newblock Deep learning with {COTS} {HPC} systems.
+\newblock In \emph{Proceedings of the 30th International Conference on Machine
+  Learning, {ICML} 2013, Atlanta, GA, USA, 16-21 June 2013}, volume~28 of
+  \emph{{JMLR} Workshop and Conference Proceedings}, pp.\  1337--1345.
+  JMLR.org, 2013.
+\newblock URL \url{http://proceedings.mlr.press/v28/coates13.html}.
+
+\bibitem[Coppersmith \& Winograd(1990)Coppersmith and
+  Winograd]{coppersmith_winograd}
+Coppersmith, D. and Winograd, S.
+\newblock Matrix multiplication via arithmetic progressions.
+\newblock \emph{Journal of Symbolic Computation}, 9\penalty0 (3):\penalty0
+  251--280, 1990.
+\newblock ISSN 0747-7171.
+\newblock \doi{https://doi.org/10.1016/S0747-7171(08)80013-2}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0747717108800132}.
+\newblock Computational algebraic complexity editorial.
+
+\bibitem[Dai et~al.(2021)Dai, Liu, Le, and Tan]{coatnet}
+Dai, Z., Liu, H., Le, Q.~V., and Tan, M.
+\newblock Coatnet: Marrying convolution and attention for all data sizes.
+\newblock In Ranzato, M., Beygelzimer, A., Dauphin, Y.~N., Liang, P., and
+  Vaughan, J.~W. (eds.), \emph{Advances in Neural Information Processing
+  Systems 34: Annual Conference on Neural Information Processing Systems 2021,
+  NeurIPS 2021, December 6-14, 2021, virtual}, pp.\  3965--3977, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/20568692db622456cc42a2e853ca21f8-Abstract.html}.
+
+\bibitem[Dean et~al.(2012)Dean, Corrado, Monga, Chen, Devin, Le, Mao, Ranzato,
+  Senior, Tucker, Yang, and Ng]{dean12}
+Dean, J., Corrado, G., Monga, R., Chen, K., Devin, M., Le, Q.~V., Mao, M.~Z.,
+  Ranzato, M., Senior, A.~W., Tucker, P.~A., Yang, K., and Ng, A.~Y.
+\newblock Large scale distributed deep networks.
+\newblock In Bartlett, P.~L., Pereira, F. C.~N., Burges, C. J.~C., Bottou, L.,
+  and Weinberger, K.~Q. (eds.), \emph{Advances in Neural Information Processing
+  Systems 25: 26th Annual Conference on Neural Information Processing Systems
+  2012. Proceedings of a meeting held December 3-6, 2012, Lake Tahoe, Nevada,
+  United States}, pp.\  1232--1240, 2012.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2012/hash/6aca97005c68f1206823815f66102863-Abstract.html}.
+
+\bibitem[Dettmers(2016)]{Dettmers20158BitAF}
+Dettmers, T.
+\newblock 8-bit approximations for parallelism in deep learning.
+\newblock In Bengio, Y. and LeCun, Y. (eds.), \emph{4th International
+  Conference on Learning Representations, {ICLR} 2016, San Juan, Puerto Rico,
+  May 2-4, 2016, Conference Track Proceedings}, 2016.
+\newblock URL \url{http://arxiv.org/abs/1511.04561}.
+
+\bibitem[Dettmers et~al.(2022)Dettmers, Lewis, Shleifer, and
+  Zettlemoyer]{adam8bit}
+Dettmers, T., Lewis, M., Shleifer, S., and Zettlemoyer, L.
+\newblock 8-bit optimizers via block-wise quantization.
+\newblock In \emph{The Tenth International Conference on Learning
+  Representations, {ICLR} 2022, Virtual Event, April 25-29, 2022}.
+  OpenReview.net, 2022.
+\newblock URL \url{https://openreview.net/forum?id=shpkpVXzo3h}.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{bert}
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K.
+\newblock {BERT}: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pp.\  4171--4186,
+  Minneapolis, Minnesota, 2019. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/N19-1423}.
+\newblock URL \url{https://aclanthology.org/N19-1423}.
+
+\bibitem[Dhariwal \& Nichol(2021)Dhariwal and Nichol]{guided_diffusion}
+Dhariwal, P. and Nichol, A.~Q.
+\newblock Diffusion models beat gans on image synthesis.
+\newblock In Ranzato, M., Beygelzimer, A., Dauphin, Y.~N., Liang, P., and
+  Vaughan, J.~W. (eds.), \emph{Advances in Neural Information Processing
+  Systems 34: Annual Conference on Neural Information Processing Systems 2021,
+  NeurIPS 2021, December 6-14, 2021, virtual}, pp.\  8780--8794, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/49ad23d1ec9fa4bd8d77d02681df5cfa-Abstract.html}.
+
+\bibitem[Diskin et~al.(2021)Diskin, Bukhtiyarov, Ryabinin, Saulnier, Lhoest,
+  Sinitsin, Popov, Pyrkin, Kashirin, Borzunov, del Moral, Mazur, Kobelev,
+  Jernite, Wolf, and Pekhimenko]{dedloc}
+Diskin, M., Bukhtiyarov, A., Ryabinin, M., Saulnier, L., Lhoest, Q., Sinitsin,
+  A., Popov, D., Pyrkin, D.~V., Kashirin, M., Borzunov, A., del Moral, A.~V.,
+  Mazur, D., Kobelev, I., Jernite, Y., Wolf, T., and Pekhimenko, G.
+\newblock Distributed deep learning in open collaborations.
+\newblock In Ranzato, M., Beygelzimer, A., Dauphin, Y.~N., Liang, P., and
+  Vaughan, J.~W. (eds.), \emph{Advances in Neural Information Processing
+  Systems 34: Annual Conference on Neural Information Processing Systems 2021,
+  NeurIPS 2021, December 6-14, 2021, virtual}, pp.\  7879--7897, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/41a60377ba920919939d83326ebee5a1-Abstract.html}.
+
+\bibitem[ElasticHorovod()]{elastic_horovod}
+ElasticHorovod.
+\newblock {Elastic Horovod}.
+\newblock \url{ https://horovod.readthedocs.io/en/stable/elastic_include.html}.
+\newblock Accessed: 2021-10-04.
+
+\bibitem[Fatahalian et~al.(2004)Fatahalian, Sugerman, and
+  Hanrahan]{practical_matmul_earlier}
+Fatahalian, K., Sugerman, J., and Hanrahan, P.
+\newblock Understanding the efficiency of gpu algorithms for matrix-matrix
+  multiplication.
+\newblock pp.\  133--137, 2004.
+\newblock \doi{10.1145/1058129.1058148}.
+
+\bibitem[Fedus et~al.(2021)Fedus, Zoph, and Shazeer]{fedus2021switch}
+Fedus, W., Zoph, B., and Shazeer, N.
+\newblock Switch transformers: Scaling to trillion parameter models with simple
+  and efficient sparsity.
+\newblock \emph{ArXiv preprint}, abs/2101.03961, 2021.
+\newblock URL \url{https://arxiv.org/abs/2101.03961}.
+
+\bibitem[Fukushima(1980)]{conv_first}
+Fukushima, K.
+\newblock {N}eocognitron: {A} self-organizing neural network model for a
+  mechanism of pattern recognition unaffected by shift in position.
+\newblock \emph{Biological Cybernetics}, 36:\penalty0 193--202, 1980.
+
+\bibitem[Galileo(1638)]{square_cube}
+Galileo, G.
+\newblock \emph{Discorsi e dimostrazioni matematiche intorno a due nuove
+  scienze}.
+\newblock 1638.
+
+\bibitem[Gao et~al.(2020)Gao, Biderman, Black, Golding, Hoppe, Foster, Phang,
+  He, Thite, Nabeshima, Presser, and Leahy]{gao2020pile}
+Gao, L., Biderman, S., Black, S., Golding, L., Hoppe, T., Foster, C., Phang,
+  J., He, H., Thite, A., Nabeshima, N., Presser, S., and Leahy, C.
+\newblock The pile: An 800gb dataset of diverse text for language modeling,
+  2020.
+
+\bibitem[Gokaslan \& Cohen(2019)Gokaslan and Cohen]{gokaslan2019openwebtext}
+Gokaslan, A. and Cohen, V.
+\newblock Openwebtext corpus, 2019.
+\newblock URL \url{http://Skylion007. github. io/OpenWebTextCorpus}.
+
+\bibitem[Goodfellow et~al.(2013)Goodfellow, Warde{-}Farley, Mirza, Courville,
+  and Bengio]{goodfellow2013maxout}
+Goodfellow, I.~J., Warde{-}Farley, D., Mirza, M., Courville, A.~C., and Bengio,
+  Y.
+\newblock Maxout networks.
+\newblock In \emph{Proceedings of the 30th International Conference on Machine
+  Learning, {ICML} 2013, Atlanta, GA, USA, 16-21 June 2013}, volume~28 of
+  \emph{{JMLR} Workshop and Conference Proceedings}, pp.\  1319--1327.
+  JMLR.org, 2013.
+\newblock URL \url{http://proceedings.mlr.press/v28/goodfellow13.html}.
+
+\bibitem[Griewank \& Walther(2000)Griewank and
+  Walther]{gradient_checkpointing_autograd}
+Griewank, A. and Walther, A.
+\newblock Algorithm 799: revolve: an implementation of checkpointing for the
+  reverse or adjoint mode of computational differentiation.
+\newblock \emph{ACM Transactions on Mathematical Software (TOMS)}, 26\penalty0
+  (1):\penalty0 19--45, 2000.
+
+\bibitem[Harlap et~al.(2017)Harlap, Tumanov, Chung, Ganger, and
+  Gibbons]{proteus}
+Harlap, A., Tumanov, A., Chung, A., Ganger, G.~R., and Gibbons, P.~B.
+\newblock Proteus: Agile ml elasticity through tiered reliability in dynamic
+  resource markets.
+\newblock In \emph{Proceedings of the Twelfth European Conference on Computer
+  Systems}, EuroSys '17, pp.\  589–604, New York, NY, USA, 2017. Association
+  for Computing Machinery.
+\newblock ISBN 9781450349383.
+\newblock \doi{10.1145/3064176.3064182}.
+\newblock URL \url{https://doi.org/10.1145/3064176.3064182}.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{resnet}
+He, K., Zhang, X., Ren, S., and Sun, J.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{2016 {IEEE} Conference on Computer Vision and Pattern
+  Recognition, {CVPR} 2016, Las Vegas, NV, USA, June 27-30, 2016}, pp.\
+  770--778. {IEEE} Computer Society, 2016.
+\newblock \doi{10.1109/CVPR.2016.90}.
+\newblock URL \url{https://doi.org/10.1109/CVPR.2016.90}.
+
+\bibitem[He et~al.(2021)He, Liu, Gao, and Chen]{deberta}
+He, P., Liu, X., Gao, J., and Chen, W.
+\newblock Deberta: decoding-enhanced bert with disentangled attention.
+\newblock In \emph{9th International Conference on Learning Representations,
+  {ICLR} 2021, Virtual Event, Austria, May 3-7, 2021}. OpenReview.net, 2021.
+\newblock URL \url{https://openreview.net/forum?id=XPZIaotutsD}.
+
+\bibitem[Hochreiter \& Schmidhuber(1995)Hochreiter and Schmidhuber]{lstm}
+Hochreiter, S. and Schmidhuber, J.
+\newblock {Long Short-Term Memory}.
+\newblock Technical Report FKI-207-95, Fakult\"{a}t f\"{u}r Informatik,
+  Technische Universit\"{a}t M\"{u}nchen, 1995.
+\newblock Revised 1996 (see www.idsia.ch/\~{}juergen,
+  www7.informatik.tu-muenchen.de/\~{}hochreit).
+
+\bibitem[Huang et~al.(2020)Huang, Yu, and Geijn]{strassen_reloaded}
+Huang, J., Yu, C.~D., and Geijn, R. A. v.~d.
+\newblock Strassen’s algorithm reloaded on gpus.
+\newblock \emph{ACM Trans. Math. Softw.}, 46\penalty0 (1), 2020.
+\newblock ISSN 0098-3500.
+\newblock \doi{10.1145/3372419}.
+\newblock URL \url{https://doi.org/10.1145/3372419}.
+
+\bibitem[Huang et~al.(2019)Huang, Cheng, Bapna, Firat, Chen, Chen, Lee, Ngiam,
+  Le, Wu, and Chen]{huang2019gpipe}
+Huang, Y., Cheng, Y., Bapna, A., Firat, O., Chen, D., Chen, M.~X., Lee, H.,
+  Ngiam, J., Le, Q.~V., Wu, Y., and Chen, Z.
+\newblock Gpipe: Efficient training of giant neural networks using pipeline
+  parallelism.
+\newblock In Wallach, H.~M., Larochelle, H., Beygelzimer, A.,
+  d'Alch{\'{e}}{-}Buc, F., Fox, E.~B., and Garnett, R. (eds.), \emph{Advances
+  in Neural Information Processing Systems 32: Annual Conference on Neural
+  Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019,
+  Vancouver, BC, Canada}, pp.\  103--112, 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2019/hash/093f65e080a295f8076b1c5722a46aa2-Abstract.html}.
+
+\bibitem[Jacobs et~al.(1991)Jacobs, Jordan, Nowlan, and Hinton]{moe_first}
+Jacobs, R.~A., Jordan, M.~I., Nowlan, S.~J., and Hinton, G.~E.
+\newblock Adaptive mixtures of local experts.
+\newblock \emph{Neural Computation}, 3\penalty0 (1):\penalty0 79–87, 1991.
+\newblock ISSN 0899-7667.
+\newblock \doi{10.1162/neco.1991.3.1.79}.
+\newblock URL \url{https://doi.org/10.1162/neco.1991.3.1.79}.
+
+\bibitem[Jia et~al.(2019)Jia, Zaharia, and Aiken]{beyond_data_and_model}
+Jia, Z., Zaharia, M., and Aiken, A.
+\newblock Beyond data and model parallelism for deep neural networks.
+\newblock In Talwalkar, A., Smith, V., and Zaharia, M. (eds.),
+  \emph{Proceedings of Machine Learning and Systems 2019, MLSys 2019, Stanford,
+  CA, USA, March 31 - April 2, 2019}. mlsys.org, 2019.
+\newblock URL \url{https://proceedings.mlsys.org/book/265.pdf}.
+
+\bibitem[Kaplan et~al.(2020)Kaplan, McCandlish, Henighan, Brown, Chess, Child,
+  Gray, Radford, Wu, and Amodei]{kaplan2020scaling}
+Kaplan, J., McCandlish, S., Henighan, T., Brown, T.~B., Chess, B., Child, R.,
+  Gray, S., Radford, A., Wu, J., and Amodei, D.
+\newblock Scaling laws for neural language models, 2020.
+
+\bibitem[Katevenis et~al.(1991)Katevenis, Sidiropoulos, and Courcoubetis]{iwrr}
+Katevenis, M., Sidiropoulos, S., and Courcoubetis, C.
+\newblock Weighted round-robin cell multiplexing in a general-purpose atm
+  switch chip.
+\newblock \emph{IEEE Journal on Selected Areas in Communications}, 9\penalty0
+  (8):\penalty0 1265--1279, 1991.
+\newblock \doi{10.1109/49.105173}.
+
+\bibitem[Kijsipongse et~al.(2018)Kijsipongse, Piyatumrong, and
+  U-ruekolan]{volunteer_dl_async}
+Kijsipongse, E., Piyatumrong, A., and U-ruekolan, S.
+\newblock A hybrid gpu cluster and volunteer computing platform for scalable
+  deep learning.
+\newblock \emph{The Journal of Supercomputing}, 2018.
+\newblock \doi{10.1007/s11227-018-2375-9}.
+
+\bibitem[Krizhevsky(2014)]{krizhevsky2014oneweirdtrick}
+Krizhevsky, A.
+\newblock One weird trick for parallelizing convolutional neural networks.
+\newblock \emph{CoRR}, abs/1404.5997, 2014.
+\newblock URL \url{http://arxiv.org/abs/1404.5997}.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{alexnet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In Bartlett, P.~L., Pereira, F. C.~N., Burges, C. J.~C., Bottou, L.,
+  and Weinberger, K.~Q. (eds.), \emph{Advances in Neural Information Processing
+  Systems 25: 26th Annual Conference on Neural Information Processing Systems
+  2012. Proceedings of a meeting held December 3-6, 2012, Lake Tahoe, Nevada,
+  United States}, pp.\  1106--1114, 2012.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html}.
+
+\bibitem[Lample et~al.(2019)Lample, Sablayrolles, Ranzato, Denoyer, and
+  J{\'{e}}gou]{pkm}
+Lample, G., Sablayrolles, A., Ranzato, M., Denoyer, L., and J{\'{e}}gou, H.
+\newblock Large memory layers with product keys.
+\newblock In Wallach, H.~M., Larochelle, H., Beygelzimer, A.,
+  d'Alch{\'{e}}{-}Buc, F., Fox, E.~B., and Garnett, R. (eds.), \emph{Advances
+  in Neural Information Processing Systems 32: Annual Conference on Neural
+  Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019,
+  Vancouver, BC, Canada}, pp.\  8546--8557, 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2019/hash/9d8df73a3cfbf3c5b47bc9b50f214aff-Abstract.html}.
+
+\bibitem[Lan et~al.(2020)Lan, Chen, Goodman, Gimpel, Sharma, and
+  Soricut]{albert}
+Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P., and Soricut, R.
+\newblock {ALBERT:} {A} lite {BERT} for self-supervised learning of language
+  representations.
+\newblock In \emph{8th International Conference on Learning Representations,
+  {ICLR} 2020, Addis Ababa, Ethiopia, April 26-30, 2020}. OpenReview.net, 2020.
+\newblock URL \url{https://openreview.net/forum?id=H1eA7AEtvS}.
+
+\bibitem[Langston(2020)]{microsoft_supercomputer}
+Langston, J.
+\newblock Microsoft announces new supercomputer, lays out vision for future ai
+  work.
+\newblock https://blogs.microsoft.com/ai/openai-azure-supercomputer/, 2020.
+\newblock Accessed: 2021-10-1.
+
+\bibitem[Larrea et~al.(2019)Larrea, Joubert, Brim, Budiardja, Maxwell, Ezell,
+  Zimmer, Boehm, Elwasif, Oral, Fuson, Pelfrey, Hernandez, Leverman, Hanley,
+  Berrill, and Tharrington]{summit}
+Larrea, V. G.~V., Joubert, W., Brim, M.~J., Budiardja, R.~D., Maxwell, D.,
+  Ezell, M., Zimmer, C., Boehm, S., Elwasif, W.~R., Oral, S., Fuson, C.,
+  Pelfrey, D., Hernandez, O.~R., Leverman, D., Hanley, J., Berrill, M.~A., and
+  Tharrington, A.~N.
+\newblock Scaling the summit: Deploying the world's fastest supercomputer.
+\newblock In Weiland, M., Juckeland, G., Alam, S.~R., and Jagode, H. (eds.),
+  \emph{High Performance Computing - {ISC} High Performance 2019 International
+  Workshops, Frankfurt, Germany, June 16-20, 2019, Revised Selected Papers},
+  volume 11887 of \emph{Lecture Notes in Computer Science}, pp.\  330--351.
+  Springer, 2019.
+\newblock \doi{10.1007/978-3-030-34356-9\_26}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-34356-9\_26}.
+
+\bibitem[Lepikhin et~al.(2021)Lepikhin, Lee, Xu, Chen, Firat, Huang, Krikun,
+  Shazeer, and Chen]{Lepikhin2020GShardSG}
+Lepikhin, D., Lee, H., Xu, Y., Chen, D., Firat, O., Huang, Y., Krikun, M.,
+  Shazeer, N., and Chen, Z.
+\newblock Gshard: Scaling giant models with conditional computation and
+  automatic sharding.
+\newblock In \emph{9th International Conference on Learning Representations,
+  {ICLR} 2021, Virtual Event, Austria, May 3-7, 2021}. OpenReview.net, 2021.
+\newblock URL \url{https://openreview.net/forum?id=qrwe7XHTmYb}.
+
+\bibitem[Li et~al.(2021)Li, Zhang, and He]{curriculum_minja}
+Li, C., Zhang, M., and He, Y.
+\newblock Curriculum learning: {A} regularization method for efficient and
+  stable billion-scale {GPT} model pre-training.
+\newblock \emph{ArXiv preprint}, abs/2108.06084, 2021.
+\newblock URL \url{https://arxiv.org/abs/2108.06084}.
+
+\bibitem[Li et~al.(2019)Li, Walls, Xu, and Guo]{li2019speeding}
+Li, S., Walls, R.~J., Xu, L., and Guo, T.
+\newblock Speeding up deep learning with transient servers.
+\newblock In \emph{2019 IEEE International Conference on Autonomic Computing
+  (ICAC)}, pp.\  125--135. IEEE, 2019.
+
+\bibitem[Li et~al.(2020)Li, Ben-Nun, Nadiradze, Digirolamo, Dryden, Alistarh,
+  and Hoefler]{wagma}
+Li, S., Ben-Nun, T., Nadiradze, G., Digirolamo, S., Dryden, N., Alistarh, D.,
+  and Hoefler, T.
+\newblock Breaking (global) barriers in parallel stochastic optimization with
+  wait-avoiding group averaging.
+\newblock \emph{IEEE Transactions on Parallel and Distributed Systems}, pp.\
+  1–1, 2020.
+\newblock ISSN 2161-9883.
+\newblock \doi{10.1109/tpds.2020.3040606}.
+\newblock URL \url{http://dx.doi.org/10.1109/TPDS.2020.3040606}.
+
+\bibitem[Lian et~al.(2017)Lian, Zhang, Zhang, Hsieh, Zhang, and Liu]{dp_sgd}
+Lian, X., Zhang, C., Zhang, H., Hsieh, C., Zhang, W., and Liu, J.
+\newblock Can decentralized algorithms outperform centralized algorithms? {A}
+  case study for decentralized parallel stochastic gradient descent.
+\newblock In Guyon, I., von Luxburg, U., Bengio, S., Wallach, H.~M., Fergus,
+  R., Vishwanathan, S. V.~N., and Garnett, R. (eds.), \emph{Advances in Neural
+  Information Processing Systems 30: Annual Conference on Neural Information
+  Processing Systems 2017, December 4-9, 2017, Long Beach, CA, {USA}}, pp.\
+  5330--5340, 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2017/hash/f75526659f31040afeb61cb7133e4e6d-Abstract.html}.
+
+\bibitem[Lin et~al.(2020)Lin, Li, and Pekhimenko]{lin2020multinode}
+Lin, J., Li, X., and Pekhimenko, G.
+\newblock Multi-node bert-pretraining: Cost-efficient approach, 2020.
+
+\bibitem[Lin et~al.(2022)Lin, Wang, Liu, and Qiu]{lin2021survey}
+Lin, T., Wang, Y., Liu, X., and Qiu, X.
+\newblock A survey of transformers.
+\newblock \emph{{AI} Open}, 3:\penalty0 111--132, 2022.
+\newblock \doi{10.1016/j.aiopen.2022.10.001}.
+\newblock URL \url{https://doi.org/10.1016/j.aiopen.2022.10.001}.
+
+\bibitem[Lin et~al.(2018)Lin, Han, Mao, Wang, and
+  Dally]{deepgradientcompression}
+Lin, Y., Han, S., Mao, H., Wang, Y., and Dally, B.
+\newblock Deep gradient compression: Reducing the communication bandwidth for
+  distributed training.
+\newblock In \emph{6th International Conference on Learning Representations,
+  {ICLR} 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track
+  Proceedings}. OpenReview.net, 2018.
+\newblock URL \url{https://openreview.net/forum?id=SkhQHMW0W}.
+
+\bibitem[Maymounkov \& Mazieres(2002)Maymounkov and Mazieres]{kademlia}
+Maymounkov, P. and Mazieres, D.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In \emph{International Workshop on Peer-to-Peer Systems}, pp.\
+  53--65. Springer, 2002.
+
+\bibitem[Merity et~al.(2017)Merity, Xiong, Bradbury, and Socher]{wikitext103}
+Merity, S., Xiong, C., Bradbury, J., and Socher, R.
+\newblock Pointer sentinel mixture models.
+\newblock In \emph{5th International Conference on Learning Representations,
+  {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track
+  Proceedings}. OpenReview.net, 2017.
+\newblock URL \url{https://openreview.net/forum?id=Byj72udxe}.
+
+\bibitem[Narayanan et~al.(2019)Narayanan, Harlap, Phanishayee, Seshadri,
+  Devanur, Ganger, Gibbons, and Zaharia]{pipedream}
+Narayanan, D., Harlap, A., Phanishayee, A., Seshadri, V., Devanur, N.~R.,
+  Ganger, G.~R., Gibbons, P.~B., and Zaharia, M.
+\newblock Pipedream: Generalized pipeline parallelism for dnn training.
+\newblock In \emph{Proceedings of the 27th ACM Symposium on Operating Systems
+  Principles}, SOSP ’19, pp.\  1–15, New York, NY, USA, 2019. Association
+  for Computing Machinery.
+\newblock ISBN 9781450368735.
+\newblock \doi{10.1145/3341301.3359646}.
+\newblock URL \url{https://doi.org/10.1145/3341301.3359646}.
+
+\bibitem[Narayanan et~al.(2021)Narayanan, Shoeybi, Casper, LeGresley, Patwary,
+  Korthikanti, Vainbrand, Kashinkunti, Bernauer, Catanzaro, et~al.]{megatron2}
+Narayanan, D., Shoeybi, M., Casper, J., LeGresley, P., Patwary, M.,
+  Korthikanti, V., Vainbrand, D., Kashinkunti, P., Bernauer, J., Catanzaro, B.,
+  et~al.
+\newblock Efficient large-scale language model training on gpu clusters.
+\newblock \emph{ArXiv preprint}, abs/2104.04473, 2021.
+\newblock URL \url{https://arxiv.org/abs/2104.04473}.
+
+\bibitem[Ott et~al.(2019)Ott, Edunov, Baevski, Fan, Gross, Ng, Grangier, and
+  Auli]{Ott2019fairseqAF}
+Ott, M., Edunov, S., Baevski, A., Fan, A., Gross, S., Ng, N., Grangier, D., and
+  Auli, M.
+\newblock fairseq: A fast, extensible toolkit for sequence modeling.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics (Demonstrations)},
+  pp.\  48--53, Minneapolis, Minnesota, 2019. Association for Computational
+  Linguistics.
+\newblock \doi{10.18653/v1/N19-4009}.
+\newblock URL \url{https://aclanthology.org/N19-4009}.
+
+\bibitem[Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan,
+  Killeen, Lin, Gimelshein, Antiga, Desmaison, K{\"{o}}pf, Yang, DeVito,
+  Raison, Tejani, Chilamkurthy, Steiner, Fang, Bai, and
+  Chintala]{paszke2019pytorch}
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen,
+  T., Lin, Z., Gimelshein, N., Antiga, L., Desmaison, A., K{\"{o}}pf, A., Yang,
+  E., DeVito, Z., Raison, M., Tejani, A., Chilamkurthy, S., Steiner, B., Fang,
+  L., Bai, J., and Chintala, S.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In Wallach, H.~M., Larochelle, H., Beygelzimer, A.,
+  d'Alch{\'{e}}{-}Buc, F., Fox, E.~B., and Garnett, R. (eds.), \emph{Advances
+  in Neural Information Processing Systems 32: Annual Conference on Neural
+  Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019,
+  Vancouver, BC, Canada}, pp.\  8024--8035, 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html}.
+
+\bibitem[Pudipeddi et~al.(2020)Pudipeddi, Mesmakhosroshahi, Xi, and
+  Bharadwaj]{l2l}
+Pudipeddi, B., Mesmakhosroshahi, M., Xi, J., and Bharadwaj, S.
+\newblock Training large neural networks with constant memory using a new
+  execution algorithm.
+\newblock \emph{ArXiv preprint}, abs/2002.05645, 2020.
+\newblock URL \url{https://arxiv.org/abs/2002.05645}.
+
+\bibitem[Radford et~al.(2018)Radford, Narasimhan, Salimans, and Sutskever]{gpt}
+Radford, A., Narasimhan, K., Salimans, T., and Sutskever, I.
+\newblock Improving language understanding by generative pre-training.
+\newblock 2018.
+\newblock URL
+  \url{https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf}.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, and
+  Sutskever]{radford2019language}
+Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., and Sutskever, I.
+\newblock Language models are unsupervised multitask learners.
+\newblock 2019.
+
+\bibitem[Rae et~al.(2021)Rae, Borgeaud, Cai, Millican, Hoffmann, Song,
+  Aslanides, Henderson, Ring, Young, Rutherford, Hennigan, Menick, Cassirer,
+  Powell, van~den Driessche, Hendricks, Rauh, Huang, Glaese, Welbl, Dathathri,
+  Huang, Uesato, Mellor, Higgins, Creswell, McAleese, Wu, Elsen, Jayakumar,
+  Buchatskaya, Budden, Sutherland, Simonyan, Paganini, Sifre, Martens, Li,
+  Kuncoro, Nematzadeh, Gribovskaya, Donato, Lazaridou, Mensch, Lespiau,
+  Tsimpoukelli, Grigorev, Fritz, Sottiaux, Pajarskas, Pohlen, Gong, Toyama,
+  de~Masson~d'Autume, Li, Terzi, Mikulik, Babuschkin, Clark, de~Las~Casas, Guy,
+  Jones, Bradbury, Johnson, Hechtman, Weidinger, Gabriel, Isaac, Lockhart,
+  Osindero, Rimell, Dyer, Vinyals, Ayoub, Stanway, Bennett, Hassabis,
+  Kavukcuoglu, and Irving]{gopher}
+Rae, J.~W., Borgeaud, S., Cai, T., Millican, K., Hoffmann, J., Song, F.,
+  Aslanides, J., Henderson, S., Ring, R., Young, S., Rutherford, E., Hennigan,
+  T., Menick, J., Cassirer, A., Powell, R., van~den Driessche, G., Hendricks,
+  L.~A., Rauh, M., Huang, P.-S., Glaese, A., Welbl, J., Dathathri, S., Huang,
+  S., Uesato, J., Mellor, J., Higgins, I., Creswell, A., McAleese, N., Wu, A.,
+  Elsen, E., Jayakumar, S., Buchatskaya, E., Budden, D., Sutherland, E.,
+  Simonyan, K., Paganini, M., Sifre, L., Martens, L., Li, X.~L., Kuncoro, A.,
+  Nematzadeh, A., Gribovskaya, E., Donato, D., Lazaridou, A., Mensch, A.,
+  Lespiau, J.-B., Tsimpoukelli, M., Grigorev, N., Fritz, D., Sottiaux, T.,
+  Pajarskas, M., Pohlen, T., Gong, Z., Toyama, D., de~Masson~d'Autume, C., Li,
+  Y., Terzi, T., Mikulik, V., Babuschkin, I., Clark, A., de~Las~Casas, D., Guy,
+  A., Jones, C., Bradbury, J., Johnson, M., Hechtman, B., Weidinger, L.,
+  Gabriel, I., Isaac, W., Lockhart, E., Osindero, S., Rimell, L., Dyer, C.,
+  Vinyals, O., Ayoub, K., Stanway, J., Bennett, L., Hassabis, D., Kavukcuoglu,
+  K., and Irving, G.
+\newblock Scaling language models: Methods, analysis \& insights from training
+  gopher, 2021.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{t5}
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou,
+  Y., Li, W., and Liu, P.~J.
+\newblock Exploring the limits of transfer learning with a unified text-to-text
+  transformer.
+\newblock \emph{J. Mach. Learn. Res.}, 21:\penalty0 140:1--140:67, 2020.
+\newblock URL \url{http://jmlr.org/papers/v21/20-074.html}.
+
+\bibitem[Rajbhandari et~al.(2020)Rajbhandari, Rasley, Ruwase, and He]{zero}
+Rajbhandari, S., Rasley, J., Ruwase, O., and He, Y.
+\newblock Zero: Memory optimization towards training a trillion parameter
+  models.
+\newblock In \emph{SC}, 2020.
+
+\bibitem[Rajbhandari et~al.(2021)Rajbhandari, Ruwase, Rasley, Smith, and
+  He]{zero_ssd}
+Rajbhandari, S., Ruwase, O., Rasley, J., Smith, S., and He, Y.
+\newblock Zero-infinity: Breaking the gpu memory wall for extreme scale deep
+  learning.
+\newblock \emph{ArXiv preprint}, abs/2104.07857, 2021.
+\newblock URL \url{https://arxiv.org/abs/2104.07857}.
+
+\bibitem[Ramesh et~al.(2021)Ramesh, Pavlov, Goh, Gray, Voss, Radford, Chen, and
+  Sutskever]{dalle}
+Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., and
+  Sutskever, I.
+\newblock Zero-shot text-to-image generation.
+\newblock In Meila, M. and Zhang, T. (eds.), \emph{Proceedings of the 38th
+  International Conference on Machine Learning, {ICML} 2021, 18-24 July 2021,
+  Virtual Event}, volume 139 of \emph{Proceedings of Machine Learning
+  Research}, pp.\  8821--8831. {PMLR}, 2021.
+\newblock URL \url{http://proceedings.mlr.press/v139/ramesh21a.html}.
+
+\bibitem[Recht et~al.(2011)Recht, R{\'{e}}, Wright, and Niu]{recht2011hogwild}
+Recht, B., R{\'{e}}, C., Wright, S.~J., and Niu, F.
+\newblock Hogwild: {A} lock-free approach to parallelizing stochastic gradient
+  descent.
+\newblock In Shawe{-}Taylor, J., Zemel, R.~S., Bartlett, P.~L., Pereira, F.
+  C.~N., and Weinberger, K.~Q. (eds.), \emph{Advances in Neural Information
+  Processing Systems 24: 25th Annual Conference on Neural Information
+  Processing Systems 2011. Proceedings of a meeting held 12-14 December 2011,
+  Granada, Spain}, pp.\  693--701, 2011.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2011/hash/218a0aefd1d1a4be65601cc6ddc1520e-Abstract.html}.
+
+\bibitem[Ren et~al.(2021)Ren, Rajbhandari, Aminabadi, Ruwase, Yang, Zhang, Li,
+  and He]{zerooffload}
+Ren, J., Rajbhandari, S., Aminabadi, R.~Y., Ruwase, O., Yang, S., Zhang, M.,
+  Li, D., and He, Y.
+\newblock Zero-offload: Democratizing billion-scale model training, 2021.
+
+\bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{backprop_rnn}
+Rumelhart, D.~E., Hinton, G.~E., and Williams, R.~J.
+\newblock Learning representations by back-propagating errors.
+\newblock \emph{Nature}, 323:\penalty0 533--536, 1986.
+
+\bibitem[Ryabinin \& Gusev(2020)Ryabinin and Gusev]{hivemind_dmoe}
+Ryabinin, M. and Gusev, A.
+\newblock Towards crowdsourced training of large neural networks using
+  decentralized mixture-of-experts.
+\newblock In Larochelle, H., Ranzato, M., Hadsell, R., Balcan, M., and Lin, H.
+  (eds.), \emph{Advances in Neural Information Processing Systems 33: Annual
+  Conference on Neural Information Processing Systems 2020, NeurIPS 2020,
+  December 6-12, 2020, virtual}, 2020.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2020/hash/25ddc0f8c9d3e22e03d3076f98d83cb2-Abstract.html}.
+
+\bibitem[Ryabinin et~al.(2021)Ryabinin, Gorbunov, Plokhotnyuk, and
+  Pekhimenko]{moshpit}
+Ryabinin, M., Gorbunov, E., Plokhotnyuk, V., and Pekhimenko, G.
+\newblock Moshpit {SGD:} communication-efficient decentralized training on
+  heterogeneous unreliable devices.
+\newblock In Ranzato, M., Beygelzimer, A., Dauphin, Y.~N., Liang, P., and
+  Vaughan, J.~W. (eds.), \emph{Advances in Neural Information Processing
+  Systems 34: Annual Conference on Neural Information Processing Systems 2021,
+  NeurIPS 2021, December 6-14, 2021, virtual}, pp.\  18195--18211, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/97275a23ca44226c9964043c8462be96-Abstract.html}.
+
+\bibitem[Sennrich et~al.(2016)Sennrich, Haddow, and
+  Birch]{sennrich-etal-2016-neural}
+Sennrich, R., Haddow, B., and Birch, A.
+\newblock Neural machine translation of rare words with subword units.
+\newblock In \emph{Proceedings of the 54th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pp.\  1715--1725,
+  Berlin, Germany, 2016. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P16-1162}.
+\newblock URL \url{https://aclanthology.org/P16-1162}.
+
+\bibitem[Shazeer(2020)]{gated_improve}
+Shazeer, N.
+\newblock {GLU} variants improve transformer.
+\newblock \emph{ArXiv preprint}, abs/2002.05202, 2020.
+\newblock URL \url{https://arxiv.org/abs/2002.05202}.
+
+\bibitem[Shazeer et~al.(2017)Shazeer, Mirhoseini, Maziarz, Davis, Le, Hinton,
+  and Dean]{shazeer2017outrageously}
+Shazeer, N., Mirhoseini, A., Maziarz, K., Davis, A., Le, Q.~V., Hinton, G.~E.,
+  and Dean, J.
+\newblock Outrageously large neural networks: The sparsely-gated
+  mixture-of-experts layer.
+\newblock In \emph{5th International Conference on Learning Representations,
+  {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track
+  Proceedings}. OpenReview.net, 2017.
+\newblock URL \url{https://openreview.net/forum?id=B1ckMDqlg}.
+
+\bibitem[Shazeer et~al.(2018)Shazeer, Cheng, Parmar, Tran, Vaswani,
+  Koanantakool, Hawkins, Lee, Hong, Young, Sepassi, and
+  Hechtman]{meshtensorflow}
+Shazeer, N., Cheng, Y., Parmar, N., Tran, D., Vaswani, A., Koanantakool, P.,
+  Hawkins, P., Lee, H., Hong, M., Young, C., Sepassi, R., and Hechtman, B.~A.
+\newblock Mesh-tensorflow: Deep learning for supercomputers.
+\newblock In Bengio, S., Wallach, H.~M., Larochelle, H., Grauman, K.,
+  Cesa{-}Bianchi, N., and Garnett, R. (eds.), \emph{Advances in Neural
+  Information Processing Systems 31: Annual Conference on Neural Information
+  Processing Systems 2018, NeurIPS 2018, December 3-8, 2018, Montr{\'{e}}al,
+  Canada}, pp.\  10435--10444, 2018.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2018/hash/3a37abdeefe1dab1b30f7c5c7e581b93-Abstract.html}.
+
+\bibitem[Shoeybi et~al.(2019)Shoeybi, Patwary, Puri, LeGresley, Casper, and
+  Catanzaro]{shoeybi2019megatron}
+Shoeybi, M., Patwary, M., Puri, R., LeGresley, P., Casper, J., and Catanzaro,
+  B.
+\newblock Megatron-lm: Training multi-billion parameter language models using
+  gpu model parallelism.
+\newblock \emph{ArXiv preprint}, abs/1909.08053, 2019.
+\newblock URL \url{https://arxiv.org/abs/1909.08053}.
+
+\bibitem[Stich \& Karimireddy(2020)Stich and Karimireddy]{stich2020error}
+Stich, S.~U. and Karimireddy, S.~P.
+\newblock The error-feedback framework: Sgd with delayed gradients.
+\newblock \emph{Journal of Machine Learning Research}, 21\penalty0
+  (237):\penalty0 1--36, 2020.
+\newblock URL \url{http://jmlr.org/papers/v21/19-748.html}.
+
+\bibitem[Strohmaier et~al.(2021)Strohmaier, Dongarra, Simon, and Meuer]{fugaku}
+Strohmaier, E., Dongarra, J., Simon, H., and Meuer, M.
+\newblock Fugaku.
+\newblock https://www.top500.org/system/179807/, 2021.
+\newblock Estimated energy consumption 29,899.23 kW. Accessed: 2021-10-4.
+
+\bibitem[Su et~al.(2021)Su, Lu, Pan, Wen, and Liu]{su2021roformer}
+Su, J., Lu, Y., Pan, S., Wen, B., and Liu, Y.
+\newblock Roformer: Enhanced transformer with rotary position embedding, 2021.
+
+\bibitem[Sun et~al.(2021)Sun, Wang, Feng, Ding, Pang, Shang, Liu, Chen, Zhao,
+  Lu, Liu, Wu, Gong, Liang, Shang, Sun, Liu, Ouyang, Yu, Tian, Wu, and
+  Wang]{ernie3}
+Sun, Y., Wang, S., Feng, S., Ding, S., Pang, C., Shang, J., Liu, J., Chen, X.,
+  Zhao, Y., Lu, Y., Liu, W., Wu, Z., Gong, W., Liang, J., Shang, Z., Sun, P.,
+  Liu, W., Ouyang, X., Yu, D., Tian, H., Wu, H., and Wang, H.
+\newblock {ERNIE} 3.0: Large-scale knowledge enhanced pre-training for language
+  understanding and generation.
+\newblock \emph{ArXiv preprint}, abs/2107.02137, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.02137}.
+
+\bibitem[Tabatabaee et~al.(2020)Tabatabaee, Le~Boudec, and
+  Boyer]{interleaved_round_robin}
+Tabatabaee, S.~M., Le~Boudec, J.-Y., and Boyer, M.
+\newblock Interleaved weighted round-robin: A network calculus analysis.
+\newblock In \emph{2020 32nd International Teletraffic Congress (ITC 32)}, pp.\
+   64--72, 2020.
+\newblock \doi{10.1109/ITC3249928.2020.00016}.
+
+\bibitem[Tang et~al.(2020)Tang, Shi, Chu, Wang, and
+  Li]{model_parallelism_survey2}
+Tang, Z., Shi, S., Chu, X., Wang, W., and Li, B.
+\newblock Communication-efficient distributed deep learning: A comprehensive
+  survey, 2020.
+
+\bibitem[Tarnawski et~al.(2021)Tarnawski, Narayanan, and Phanishayee]{piper}
+Tarnawski, J., Narayanan, D., and Phanishayee, A.
+\newblock Piper: Multidimensional planner for {DNN} parallelization.
+\newblock In Ranzato, M., Beygelzimer, A., Dauphin, Y.~N., Liang, P., and
+  Vaughan, J.~W. (eds.), \emph{Advances in Neural Information Processing
+  Systems 34: Annual Conference on Neural Information Processing Systems 2021,
+  NeurIPS 2021, December 6-14, 2021, virtual}, pp.\  24829--24840, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/d01eeca8b24321cd2fe89dd85b9beb51-Abstract.html}.
+
+\bibitem[Thorpe et~al.(2022)Thorpe, Zhao, Eyolfson, Qiao, Jia, Zhang,
+  Netravali, and Xu]{thorpe2022bamboo}
+Thorpe, J., Zhao, P., Eyolfson, J., Qiao, Y., Jia, Z., Zhang, M., Netravali,
+  R., and Xu, G.~H.
+\newblock Bamboo: Making preemptible instances resilient for affordable
+  training of large dnns, 2022.
+
+\bibitem[TorchElastic()]{pytorch_elastic}
+TorchElastic.
+\newblock {PyTorch Elastic}.
+\newblock \url{https://pytorch.org/elastic}.
+\newblock Accessed: 2021-10-04.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{transformer}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, L., and Polosukhin, I.
+\newblock Attention is all you need.
+\newblock In Guyon, I., von Luxburg, U., Bengio, S., Wallach, H.~M., Fergus,
+  R., Vishwanathan, S. V.~N., and Garnett, R. (eds.), \emph{Advances in Neural
+  Information Processing Systems 30: Annual Conference on Neural Information
+  Processing Systems 2017, December 4-9, 2017, Long Beach, CA, {USA}}, pp.\
+  5998--6008, 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html}.
+
+\bibitem[Verizon(2021)]{verizon_latency}
+Verizon.
+\newblock Monthly ip latency data, 2021.
+\newblock Accessed: 2021-10-05.
+
+\bibitem[Vogels et~al.(2019)Vogels, Karimireddy, and Jaggi]{vogels2019powersgd}
+Vogels, T., Karimireddy, S.~P., and Jaggi, M.
+\newblock Powersgd: Practical low-rank gradient compression for distributed
+  optimization.
+\newblock In Wallach, H.~M., Larochelle, H., Beygelzimer, A.,
+  d'Alch{\'{e}}{-}Buc, F., Fox, E.~B., and Garnett, R. (eds.), \emph{Advances
+  in Neural Information Processing Systems 32: Annual Conference on Neural
+  Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019,
+  Vancouver, BC, Canada}, pp.\  14236--14245, 2019.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2019/hash/d9fbed9da256e344c1fa46bb46c34c5f-Abstract.html}.
+
+\bibitem[Wang \& Komatsuzaki(2021)Wang and Komatsuzaki]{gptj}
+Wang, B. and Komatsuzaki, A.
+\newblock {GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model}.
+\newblock \url{https://github.com/kingoflolz/mesh-transformer-jax}, May 2021.
+
+\bibitem[Wang et~al.(2022)Wang, Yuan, Rimanic, He, Dao, Chen, Re, and
+  Zhang]{wang2022finetuning}
+Wang, J., Yuan, B., Rimanic, L., He, Y., Dao, T., Chen, B., Re, C., and Zhang,
+  C.
+\newblock Fine-tuning language models over slow networks using activation
+  quantization with guarantees.
+\newblock In Oh, A.~H., Agarwal, A., Belgrave, D., and Cho, K. (eds.),
+  \emph{Advances in Neural Information Processing Systems}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=QDPonrGtl1}.
+
+\bibitem[Wang et~al.(2020)Wang, Bai, and Pekhimenko]{MLSYS2020_96da2f59}
+Wang, S., Bai, Y., and Pekhimenko, G.
+\newblock {BPPSA:} scaling back-propagation by parallel scan algorithm.
+\newblock In Dhillon, I.~S., Papailiopoulos, D.~S., and Sze, V. (eds.),
+  \emph{Proceedings of Machine Learning and Systems 2020, MLSys 2020, Austin,
+  TX, USA, March 2-4, 2020}. mlsys.org, 2020.
+\newblock URL \url{https://proceedings.mlsys.org/book/317.pdf}.
+
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
+  Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu,
+  Le~Scao, Gugger, Drame, Lhoest, and Rush]{wolf-etal-2020-transformers}
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P.,
+  Rault, T., Louf, R., Funtowicz, M., Davison, J., Shleifer, S., von Platen,
+  P., Ma, C., Jernite, Y., Plu, J., Xu, C., Le~Scao, T., Gugger, S., Drame, M.,
+  Lhoest, Q., and Rush, A.
+\newblock Transformers: State-of-the-art natural language processing.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing: System Demonstrations}, pp.\  38--45, Online,
+  2020. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2020.emnlp-demos.6}.
+\newblock URL \url{https://aclanthology.org/2020.emnlp-demos.6}.
+
+\bibitem[Yang et~al.(2019)Yang, Zhang, Li, R{\'e}, Aberger, and Sa]{pipemare}
+Yang, B., Zhang, J., Li, J., R{\'e}, C., Aberger, C.~R., and Sa, C.~D.
+\newblock Pipemare: Asynchronous pipeline parallel dnn training.
+\newblock \emph{ArXiv}, abs/1910.05124, 2019.
+
+\bibitem[You et~al.(2020)You, Li, Reddi, Hseu, Kumar, Bhojanapalli, Song,
+  Demmel, Keutzer, and Hsieh]{lamb}
+You, Y., Li, J., Reddi, S.~J., Hseu, J., Kumar, S., Bhojanapalli, S., Song, X.,
+  Demmel, J., Keutzer, K., and Hsieh, C.
+\newblock Large batch optimization for deep learning: Training {BERT} in 76
+  minutes.
+\newblock In \emph{8th International Conference on Learning Representations,
+  {ICLR} 2020, Addis Ababa, Ethiopia, April 26-30, 2020}. OpenReview.net, 2020.
+\newblock URL \url{https://openreview.net/forum?id=Syx4wnEtvH}.
+
+\bibitem[Yuan et~al.(2022)Yuan, He, Davis, Zhang, Dao, Chen, Liang, Re, and
+  Zhang]{yuan2022decentralized}
+Yuan, B., He, Y., Davis, J.~Q., Zhang, T., Dao, T., Chen, B., Liang, P., Re,
+  C., and Zhang, C.
+\newblock Decentralized training of foundation models in heterogeneous
+  environments.
+\newblock In Oh, A.~H., Agarwal, A., Belgrave, D., and Cho, K. (eds.),
+  \emph{Advances in Neural Information Processing Systems}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=UHoGOaGjEq}.
+
+\bibitem[Zhai et~al.(2021)Zhai, Kolesnikov, Houlsby, and Beyer]{scaling_vit}
+Zhai, X., Kolesnikov, A., Houlsby, N., and Beyer, L.
+\newblock Scaling vision transformers.
+\newblock \emph{ArXiv preprint}, abs/2106.04560, 2021.
+\newblock URL \url{https://arxiv.org/abs/2106.04560}.
+
+\bibitem[Zhang \& Gao(2015)Zhang and Gao]{practical_matmul_best}
+Zhang, P. and Gao, Y.
+\newblock Matrix multiplication on high-density multi-gpu architectures:
+  Theoretical and experimental investigations.
+\newblock In Kunkel, J.~M. and Ludwig, T. (eds.), \emph{High Performance
+  Computing - 30th International Conference, {ISC} High Performance 2015,
+  Frankfurt, Germany, July 12-16, 2015, Proceedings}, volume 9137 of
+  \emph{Lecture Notes in Computer Science}, pp.\  17--30. Springer, 2015.
+\newblock \doi{10.1007/978-3-319-20119-1\_2}.
+\newblock URL \url{https://doi.org/10.1007/978-3-319-20119-1\_2}.
+
+\bibitem[Zhang et~al.(2020)Zhang, Wang, Joshi, and Joe-Wong]{zhang2020machine}
+Zhang, X., Wang, J., Joshi, G., and Joe-Wong, C.
+\newblock Machine learning on volatile instances.
+\newblock In \emph{IEEE INFOCOM 2020-IEEE Conference on Computer
+  Communications}, pp.\  139--148. IEEE, 2020.
+
+\bibitem[Zheng et~al.(2022)Zheng, Li, Zhang, Zhuang, Chen, Huang, Wang, Xu,
+  Zhuo, Xing, Gonzalez, and Stoica]{alpa}
+Zheng, L., Li, Z., Zhang, H., Zhuang, Y., Chen, Z., Huang, Y., Wang, Y., Xu,
+  Y., Zhuo, D., Xing, E.~P., Gonzalez, J.~E., and Stoica, I.
+\newblock Alpa: Automating inter- and intra-operator parallelism for
+  distributed deep learning, 2022.
+\newblock URL \url{https://arxiv.org/abs/2201.12023}.
+
+\end{thebibliography}

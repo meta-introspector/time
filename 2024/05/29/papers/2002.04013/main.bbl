@@ -1,0 +1,482 @@
+\begin{thebibliography}{10}
+
+\bibitem{imagenet_cvpr09}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
+\newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
+\newblock In {\em CVPR09}, 2009.
+
+\bibitem{alexnet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
+  editors, {\em Advances in Neural Information Processing Systems 25}, pages
+  1097--1105. Curran Associates, Inc., 2012.
+
+\bibitem{resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em 2016 IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 770--778, 2015.
+
+\bibitem{huang2019gpipe}
+Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Dehao Chen, Mia Chen,
+  HyoukJoong Lee, Jiquan Ngiam, Quoc~V Le, Yonghui Wu, et~al.
+\newblock Gpipe: Efficient training of giant neural networks using pipeline
+  parallelism.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  103--112, 2019.
+
+\bibitem{kolesnikovlarge}
+Alexander Kolesnikov, Lucas Beyer, Xiaohua Zhai, Joan Puigcerver, Jessica Yung,
+  Sylvain Gelly, and Neil Houlsby.
+\newblock Large scale learning of general visual representations for transfer.
+\newblock {\em CoRR}, abs/1912.11370, 2019.
+
+\bibitem{jft300data}
+Baoyuan Wu, Weidong Chen, Yanbo Fan, Yong Zhang, Jinlong Hou, Jie Liu, and Tong
+  Zhang.
+\newblock Tencent ml-images: A large-scale multi-label image database for
+  visual representation learning.
+\newblock {\em IEEE Access}, 7:172683--172693, 2019.
+
+\bibitem{bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In {\em NAACL-HLT}, 2019.
+
+\bibitem{roberta}
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
+  Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.
+\newblock Roberta: A robustly optimized bert pretraining approach.
+\newblock {\em ArXiv}, abs/1907.11692, 2019.
+
+\bibitem{kaplan2020scaling}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B. Brown, Benjamin Chess, Rewon
+  Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
+\newblock Scaling laws for neural language models, 2020.
+
+\bibitem{brown2020language}
+Tom~B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla
+  Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,
+  et~al.
+\newblock Language models are few-shot learners.
+\newblock {\em arXiv preprint arXiv:2005.14165}, 2020.
+
+\bibitem{shoeybi2019megatron}
+Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper,
+  and Bryan Catanzaro.
+\newblock Megatron-lm: Training multi-billion parameter language models using
+  gpu model parallelism.
+\newblock {\em arXiv preprint arXiv:1909.08053}, 2019.
+
+\bibitem{zellers2019defending}
+Rowan Zellers, Ari Holtzman, Hannah Rashkin, Yonatan Bisk, Ali Farhadi,
+  Franziska Roesner, and Yejin Choi.
+\newblock Defending against neural fake news.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  9051--9062, 2019.
+
+\bibitem{tnlg}
+Corby Rosset.
+\newblock Turing-nlg: A 17-billion-parameter language model by microsoft.
+\newblock
+  https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/.
+
+\bibitem{gpt3costlambda}
+Chuan Li.
+\newblock Demystifying gpt-3 language model: A technical overview.
+\newblock "\url{https://lambdalabs.com/blog/demystifying-gpt-3}".
+
+\bibitem{gpt3cost}
+Elliot Turner.
+\newblock Estimate of GPT-3 training cost based on public cloud GPU/TPU cost
+  models, from Elliot Turner's personal page (accessed on May 29, 2020).
+
+\bibitem{larson_crowd}
+Stefan Larson, Christopher Snow, Michael Shirts, and Vijay Pande.
+\newblock Folding@home and genome@home: Using distributed computing to tackle
+  previously intractable problems in computational biology.
+\newblock {\em arXiv}, 02 2009.
+
+\bibitem{adam2015atlas}
+C~Adam-Bourdarios, D~Cameron, A~Filip{\v{c}}i{\v{c}}, E~Lancon, Wenjing Wu,
+  et~al.
+\newblock Atlas@ home: harnessing volunteer computing for hep.
+\newblock In {\em Journal of Physics: Conference Series}, volume 664, page
+  022009. IOP Publishing, 2015.
+
+\bibitem{gross_folding}
+Michael Gross.
+\newblock Folding research recruits unconventional help.
+\newblock In {\em Current Biology. 22 (2): R35–R38}, 2012.
+
+\bibitem{Dettmers20158BitAF}
+Tim Dettmers.
+\newblock 8-bit approximations for parallelism in deep learning.
+\newblock {\em ICLR}, 2015.
+
+\bibitem{Sun2019OptimizingNP}
+Peng Sun, Wansen Feng, Ruobing Han, Shengen Yan, and Yonggang Wen.
+\newblock Optimizing network performance for distributed dnn training on gpu
+  clusters: Imagenet/alexnet training in 1.5 minutes.
+\newblock {\em ArXiv}, abs/1902.06855, 2019.
+
+\bibitem{anderson2004boinc}
+David~P Anderson.
+\newblock Boinc: A system for public-resource computing and storage.
+\newblock In {\em Fifth IEEE/ACM international workshop on grid computing},
+  pages 4--10. IEEE, 2004.
+
+\bibitem{folding_timeline}
+{\em Folding@home project timeline}.
+\newblock \url{https://foldingathome.org/project-timeline}(accessed on May 30,
+  2020).
+
+\bibitem{speedtest}
+Speedtest global index for fixed broadband.
+\newblock \url{https://www.speedtest.net/global-index} (accessed on 11.08.2020,
+  bandwidth for top countries and general trend).
+
+\bibitem{li2017case}
+Fuliang Li, Xingwei Wang, Tian Pan, and Jiahai Yang.
+\newblock A case study of ipv6 network performance: Packet delay, loss, and
+  reordering.
+\newblock {\em Mathematical Problems in Engineering}, 2017, 2017.
+
+\bibitem{valiant1990bridging}
+Leslie~G Valiant.
+\newblock A bridging model for parallel computation.
+\newblock {\em Communications of the ACM}, 33(8):103--111, 1990.
+
+\bibitem{goyal2017accurate}
+Priya Goyal, Piotr Dollár, Ross Girshick, Pieter Noordhuis, Lukasz Wesolowski,
+  Aapo Kyrola, Andrew Tulloch, Yangqing Jia, and Kaiming He.
+\newblock Accurate, large minibatch sgd: Training imagenet in 1 hour, 2017.
+
+\bibitem{You2020Large}
+Yang You, Jing Li, Sashank Reddi, Jonathan Hseu, Sanjiv Kumar, Srinadh
+  Bhojanapalli, Xiaodan Song, James Demmel, Kurt Keutzer, and Cho-Jui Hsieh.
+\newblock Large batch optimization for deep learning: Training bert in 76
+  minutes.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{recht2011hogwild}
+Benjamin Recht, Christopher Re, Stephen Wright, and Feng Niu.
+\newblock Hogwild: A lock-free approach to parallelizing stochastic gradient
+  descent.
+\newblock In {\em Advances in neural information processing systems}, pages
+  693--701, 2011.
+
+\bibitem{zhang2015staleness}
+Wei Zhang, Suyog Gupta, Xiangru Lian, and Ji~Liu.
+\newblock Staleness-aware async-sgd for distributed deep learning.
+\newblock {\em arXiv preprint arXiv:1511.05950}, 2015.
+
+\bibitem{stale_gradients_can_win}
+Sanghamitra Dutta, Gauri Joshi, Soumyadip Ghosh, Parijat Dube, and Priya
+  Nagpurkar.
+\newblock Slow and stale gradients can win the race: Error-runtime trade-offs
+  in distributed sgd.
+\newblock 03 2018.
+
+\bibitem{zero}
+Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He.
+\newblock Zero: Memory optimization towards training a trillion parameter
+  models.
+\newblock 10 2019.
+
+\bibitem{pipemare}
+Bowen Yang, Jian Zhang, Jonathan Li, Christopher R{\'e}, Christopher~R.
+  Aberger, and Christopher~De Sa.
+\newblock Pipemare: Asynchronous pipeline parallel dnn training.
+\newblock {\em ArXiv}, abs/1910.05124, 2019.
+
+\bibitem{pipedream}
+Deepak Narayanan, Aaron Harlap, Amar Phanishayee, Vivek Seshadri, Nikhil~R.
+  Devanur, Gregory~R. Ganger, Phillip~B. Gibbons, and Matei Zaharia.
+\newblock Pipedream: Generalized pipeline parallelism for dnn training.
+\newblock In {\em Proceedings of the 27th ACM Symposium on Operating Systems
+  Principles}, SOSP ’19, page 1–15, New York, NY, USA, 2019. Association
+  for Computing Machinery.
+
+\bibitem{mcmahan2017communication}
+Brendan McMahan, Eider Moore, Daniel Ramage, Seth Hampson, and Blaise~Aguera
+  y~Arcas.
+\newblock Communication-efficient learning of deep networks from decentralized
+  data.
+\newblock In {\em Artificial Intelligence and Statistics}, pages 1273--1282,
+  2017.
+
+\bibitem{bonawitz2017practical}
+Keith Bonawitz, Vladimir Ivanov, Ben Kreuter, Antonio Marcedone, H~Brendan
+  McMahan, Sarvar Patel, Daniel Ramage, Aaron Segal, and Karn Seth.
+\newblock Practical secure aggregation for privacy-preserving machine learning.
+\newblock In {\em Proceedings of the 2017 ACM SIGSAC Conference on Computer and
+  Communications Security}, pages 1175--1191, 2017.
+
+\bibitem{desell2017}
+T.~{Desell}.
+\newblock Developing a volunteer computing project to evolve convolutional
+  neural networks and their hyperparameters.
+\newblock In {\em 2017 IEEE 13th International Conference on e-Science
+  (e-Science)}, pages 19--28, 2017.
+
+\bibitem{volunteer_dl_async}
+Ekasit Kijsipongse, Apivadee Piyatumrong, and Suriya U-ruekolan.
+\newblock A hybrid gpu cluster and volunteer computing platform for scalable
+  deep learning.
+\newblock {\em The Journal of Supercomputing}, 04 2018.
+
+\bibitem{lc0}
+{Pascutto, Gian-Carlo and Linscott, Gary}.
+\newblock Leela chess zero.
+\newblock 2019.
+
+\bibitem{moe_first}
+Robert~A. Jacobs, Michael~I. Jordan, Steven~J. Nowlan, and Geoffrey~E. Hinton.
+\newblock Adaptive mixtures of local experts.
+\newblock {\em Neural Computation}, 3(1):79–87, March 1991.
+
+\bibitem{jordan1994hierarchical}
+Michael~I Jordan and Robert~A Jacobs.
+\newblock Hierarchical mixtures of experts and the em algorithm.
+\newblock {\em Neural computation}, 6(2):181--214, 1994.
+
+\bibitem{yao2009hierarchical}
+Bangpeng Yao, Dirk Walther, Diane Beck, and Li~Fei-Fei.
+\newblock Hierarchical mixture of classification experts uncovers interactions
+  between brain regions.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  2178--2186, 2009.
+
+\bibitem{moe_lifelong}
+Rahaf Aljundi, Punarjay Chakravarty, and Tinne Tuytelaars.
+\newblock Expert gate: Lifelong learning with a network of experts.
+\newblock pages 7120--7129, 07 2017.
+
+\bibitem{rasmussen2002infinite}
+Carl~E Rasmussen and Zoubin Ghahramani.
+\newblock Infinite mixtures of gaussian process experts.
+\newblock In {\em Advances in neural information processing systems}, pages
+  881--888, 2002.
+
+\bibitem{moe_svm}
+Ronan Collobert, Samy Bengio, and Yoshua Bengio.
+\newblock A parallel mixture of svms for very large scale problems.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  633--640, 2002.
+
+\bibitem{moe_dirichlet}
+Babak Shahbaba and Radford Neal.
+\newblock Nonlinear models using dirichlet process mixtures.
+\newblock {\em Journal of Machine Learning Research}, 10(Aug):1829--1850, 2009.
+
+\bibitem{eigen2013learning}
+David Eigen, Marc'Aurelio Ranzato, and Ilya Sutskever.
+\newblock Learning factored representations in a deep mixture of experts.
+\newblock {\em arXiv preprint arXiv:1312.4314}, 2013.
+
+\bibitem{shazeer2017outrageously}
+Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le,
+  Geoffrey Hinton, and Jeff Dean.
+\newblock Outrageously large neural networks: The sparsely-gated
+  mixture-of-experts layer.
+\newblock {\em arXiv preprint arXiv:1701.06538}, 2017.
+
+\bibitem{Lepikhin2020GShardSG}
+Dmitry Lepikhin, H.~Lee, Yuanzhong Xu, Dehao Chen, Orhan Firat, Y.~Huang,
+  M.~Krikun, Noam Shazeer, and Z.~Chen.
+\newblock Gshard: Scaling giant models with conditional computation and
+  automatic sharding.
+\newblock {\em ArXiv}, abs/2006.16668, 2020.
+
+\bibitem{pkm}
+Guillaume Lample, Alexandre Sablayrolles, Marc\'~Aurelio Ranzato, Ludovic
+  Denoyer, and Herve Jegou.
+\newblock Large memory layers with product keys.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\' Alch\'{e}-Buc,
+  E.~Fox, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 32}, pages 8546--8557. Curran Associates, Inc., 2019.
+
+\bibitem{puigcerver2020scalable}
+Joan Puigcerver, Carlos Riquelme, Basil Mustafa, Cedric Renggli,
+  Andr{\'e}~Susano Pinto, Sylvain Gelly, Daniel Keysers, and Neil Houlsby.
+\newblock Scalable transfer learning with expert models.
+\newblock {\em arXiv preprint arXiv:2009.13239}, 2020.
+
+\bibitem{tewari1998beyond}
+Renu Tewari, Michael Dahlin, Harrick Vin, and John Kay.
+\newblock Beyond hierarchies: Design considerations for distributed caching on
+  the internet.
+\newblock Technical report, Citeseer.
+
+\bibitem{can}
+Sylvia Ratnasamy, Paul Francis, Mark Handley, Richard Karp, and Scott Shenker.
+\newblock A scalable content-addressable network.
+\newblock In {\em Proceedings of the 2001 conference on Applications,
+  technologies, architectures, and protocols for computer communications},
+  pages 161--172, 2001.
+
+\bibitem{chord}
+Hari Balakrishnan, M~Frans Kaashoek, David Karger, Robert Morris, and Ion
+  Stoica.
+\newblock Looking up data in p2p systems.
+\newblock {\em Communications of the ACM}, 46(2):43--48, 2003.
+
+\bibitem{pastry}
+Antony Rowstron and Peter Druschel.
+\newblock Pastry: Scalable, decentralized object location, and routing for
+  large-scale peer-to-peer systems.
+\newblock In {\em IFIP/ACM International Conference on Distributed Systems
+  Platforms and Open Distributed Processing}, pages 329--350. Springer, 2001.
+
+\bibitem{tapestry}
+Ben Zhao, Ling Huang, Jeremy Stribling, Sean Rhea, Anthony Joseph, and John
+  Kubiatowicz.
+\newblock Tapestry: A resilient global-scale overlay for service deployment.
+\newblock {\em IEEE Journal on Selected Areas in Communications}, 22, 07 2003.
+
+\bibitem{kademlia}
+Petar Maymounkov and David Mazieres.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em International Workshop on Peer-to-Peer Systems}, pages
+  53--65. Springer, 2002.
+
+\bibitem{kaashoek2003koorde}
+M~Frans Kaashoek and David~R Karger.
+\newblock Koorde: A simple degree-optimal distributed hash table.
+\newblock In {\em International Workshop on Peer-to-Peer Systems}, pages
+  98--107. Springer, 2003.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock {\em The journal of machine learning research}, 15(1):1929--1958,
+  2014.
+
+\bibitem{gradient_checkpointing_autograd}
+Andreas Griewank and Andrea Walther.
+\newblock Algorithm 799: revolve: an implementation of checkpointing for the
+  reverse or adjoint mode of computational differentiation.
+\newblock {\em ACM Transactions on Mathematical Software (TOMS)}, 26(1):19--45,
+  2000.
+
+\bibitem{gradient_checkpointing_dl}
+Tianqi Chen, Bing Xu, Chiyuan Zhang, and Carlos Guestrin.
+\newblock Training deep nets with sublinear memory cost.
+\newblock {\em arXiv preprint arXiv:1604.06174}, 2016.
+
+\bibitem{sukhov2016generating}
+Andrei~M Sukhov, MA~Astrakhantseva, AK~Pervitsky, SS~Boldyrev, and AA~Bukatov.
+\newblock Generating a function for network delay.
+\newblock {\em Journal of High Speed Networks}, 22(4):321--333, 2016.
+
+\bibitem{hendrycks2016gaussian}
+Dan Hendrycks and Kevin Gimpel.
+\newblock Gaussian error linear units (gelus), 2016.
+
+\bibitem{mnist}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
+
+\bibitem{dai2019transformer}
+Zihang Dai, Zhilin Yang, Yiming Yang, Jaime~G Carbonell, Quoc Le, and Ruslan
+  Salakhutdinov.
+\newblock Transformer-xl: Attentive language models beyond a fixed-length
+  context.
+\newblock In {\em Proceedings of the 57th Annual Meeting of the Association for
+  Computational Linguistics}, pages 2978--2988, 2019.
+
+\bibitem{wikitext2}
+2016 Stephen Merity~et al.
+\newblock Wikitext-2.
+
+\bibitem{dettmerswikitext2}
+Tim Dettmers.
+\newblock https://github.com/TimDettmers/transformer-xl/tree/wikitext2.
+
+\bibitem{folding_covid}
+\url{https://foldingathome.org/covid19/}(accessed on June 4, 2020).
+
+\bibitem{urdaneta2011survey}
+Guido Urdaneta, Guillaume Pierre, and Maarten~Van Steen.
+\newblock A survey of dht security techniques.
+\newblock {\em ACM Computing Surveys (CSUR)}, 43(2):1--49, 2011.
+
+\bibitem{sybil_attacks_dht}
+Liang Wang and Jussi Kangasharju.
+\newblock Real-world sybil attacks in bittorrent mainline dht.
+\newblock In {\em 2012 IEEE Global Communications Conference (GLOBECOM)}, pages
+  826--832. IEEE, 2012.
+
+\bibitem{dos_resistance}
+Baruch Awerbuch and Christian Scheideler.
+\newblock A denial-of-service resistant dht.
+\newblock In {\em International Symposium on Distributed Computing}, pages
+  33--47. Springer, 2007.
+
+\bibitem{sybil_nodes}
+Zied Trifa and Maher Khemakhem.
+\newblock Sybil nodes as a mitigation strategy against sybil attack.
+\newblock {\em Procedia Computer Science}, 32:1135--1140, 2014.
+
+\bibitem{bagdasaryan2018backdoor}
+Eugene Bagdasaryan, Andreas Veit, Yiqing Hua, Deborah Estrin, and Vitaly
+  Shmatikov.
+\newblock How to backdoor federated learning.
+\newblock {\em arXiv preprint arXiv:1807.00459}, 2018.
+
+\bibitem{bhagoji2018analyzing}
+Arjun~Nitin Bhagoji, Supriyo Chakraborty, Prateek Mittal, and Seraphin Calo.
+\newblock Analyzing federated learning through an adversarial lens.
+\newblock {\em arXiv preprint arXiv:1811.12470}, 2018.
+
+\bibitem{paszke2019pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  8024--8035, 2019.
+
+\bibitem{lambdabenchmarks}
+Chuan~Li Stephen~Balaban.
+\newblock Deep learning gpu benchmarks, lambda labs website, 2018/10/08.
+
+\bibitem{natural_compression}
+Samuel Horvath, Chen{-}Yu Ho, Ludovit Horvath, Atal~Narayan Sahu, Marco Canini,
+  and Peter Richt{\'{a}}rik.
+\newblock Natural compression for distributed deep learning.
+\newblock {\em CoRR}, abs/1905.10988, 2019.
+
+\bibitem{NIPS2019_8736}
+Xiao Sun, Jungwook Choi, Chia-Yu Chen, Naigang Wang, Swagath Venkataramani,
+  Vijayalakshmi~(Viji) Srinivasan, Xiaodong Cui, Wei Zhang, and Kailash
+  Gopalakrishnan.
+\newblock Hybrid 8-bit floating point (hfp8) training and inference for deep
+  neural networks.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\' Alch\'{e}-Buc,
+  E.~Fox, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 32}, pages 4901--4910. Curran Associates, Inc., 2019.
+
+\bibitem{ma2019hsic}
+Wan-Duo~Kurt Ma, J.~P. Lewis, and W.~Bastiaan Kleijn.
+\newblock The hsic bottleneck: Deep learning without back-propagation, 2019.
+
+\bibitem{jaderberg2017decoupled}
+Max Jaderberg, Wojciech~Marian Czarnecki, Simon Osindero, Oriol Vinyals, Alex
+  Graves, David Silver, and Koray Kavukcuoglu.
+\newblock Decoupled neural interfaces using synthetic gradients.
+\newblock In {\em Proceedings of the 34th International Conference on Machine
+  Learning-Volume 70}, pages 1627--1635. JMLR. org, 2017.
+
+\bibitem{real2017large}
+Esteban Real, Sherry Moore, Andrew Selle, Saurabh Saxena, Yutaka~Leon Suematsu,
+  Jie Tan, Quoc~V Le, and Alexey Kurakin.
+\newblock Large-scale evolution of image classifiers.
+\newblock In {\em Proceedings of the 34th International Conference on Machine
+  Learning-Volume 70}, pages 2902--2911. JMLR. org, 2017.
+
+\end{thebibliography}

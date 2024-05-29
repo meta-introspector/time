@@ -1,0 +1,191 @@
+\documentclass{article}
+\pdfoutput=1
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2021
+
+% ready for submission
+\usepackage[nonatbib,preprint]{neurips_2021}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2021}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2021}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2021}
+
+\title{Scaling Ensemble Distribution Distillation to Many Classes with Proxy Targets}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  Max Ryabinin\thanks{Equal contribution.} \\
+  Yandex, HSE University\\
+  Moscow, Russia \\
+  \texttt{mryabinin0@gmail.com} \\
+  % examples of more authors
+  \And 
+   Andrey Malinin
+   \footnotemark[1] \\
+   Yandex, HSE University \\
+   Moscow, Russia \\
+   \texttt{am969@yandex-team.ru} \\
+  \And
+   Mark Gales \\
+   University of Cambridge \\
+   Cambridge, United Kingdom \\
+   \texttt{mjfg@eng.cam.ac.uk} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+%\usepackage{amsmath,graphicx}
+%\usepackage{pifont}
+\usepackage{subfigure}
+\usepackage[titletoc,title]{appendix}
+\usepackage{mathtools}
+\usepackage{subfiles}
+%\usepackage{times}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{empheq}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{xspace}
+\usepackage{siunitx}    
+\newcommand{\Endd}{EnD$^2$\xspace}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \subfile{abstract}
+\end{abstract}
+
+\subfile{introduction}
+\subfile{background}
+\subfile{method}
+\subfile{experiments}
+\subfile{conclusion}
+
+\bibliographystyle{IEEEbib}
+\bibliography{bibliography}
+
+% \section*{Checklist}
+
+% %%% BEGIN INSTRUCTIONS %%%
+% The checklist follows the references.  Please
+% read the checklist guidelines carefully for information on how to answer these
+% questions.  For each question, change the default \answerTODO{} to \answerYes{},
+% \answerNo{}, or \answerNA{}.  You are strongly encouraged to include a {\bf
+% justification to your answer}, either by referencing the appropriate section of
+% your paper or providing a brief inline description.  For example:
+% \begin{itemize}
+%   \item Did you include the license to the code and datasets? \answerYes{See Section~\ref{gen_inst}.}
+%   \item Did you include the license to the code and datasets? \answerNo{The code and the data are proprietary.}
+%   \item Did you include the license to the code and datasets? \answerNA{}
+% \end{itemize}
+% Please do not modify the questions and only use the provided macros for your
+% answers.  Note that the Checklist section does not count towards the page
+% limit.  In your paper, please delete this instructions block and only keep the
+% Checklist section heading above along with the questions/answers below.
+% %%% END INSTRUCTIONS %%%
+
+% \begin{enumerate}
+
+% \item For all authors...
+% \begin{enumerate}
+%   \item Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+%     \answerTODO{}
+%   \item Did you describe the limitations of your work?
+%     \answerTODO{}
+%   \item Did you discuss any potential negative societal impacts of your work?
+%     \answerTODO{}
+%   \item Have you read the ethics review guidelines and ensured that your paper conforms to them?
+%     \answerTODO{}
+% \end{enumerate}
+
+% \item If you are including theoretical results...
+% \begin{enumerate}
+%   \item Did you state the full set of assumptions of all theoretical results?
+%     \answerTODO{}
+% 	\item Did you include complete proofs of all theoretical results?
+%     \answerTODO{}
+% \end{enumerate}
+
+% \item If you ran experiments...
+% \begin{enumerate}
+%   \item Did you include the code, data, and instructions needed to reproduce the main experimental results (either in the supplemental material or as a URL)?
+%     \answerTODO{}
+%   \item Did you specify all the training details (e.g., data splits, hyperparameters, how they were chosen)?
+%     \answerTODO{}
+% 	\item Did you report error bars (e.g., with respect to the random seed after running experiments multiple times)?
+%     \answerTODO{}
+% 	\item Did you include the total amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)?
+%     \answerTODO{}
+% \end{enumerate}
+
+% \item If you are using existing assets (e.g., code, data, models) or curating/releasing new assets...
+% \begin{enumerate}
+%   \item If your work uses existing assets, did you cite the creators?
+%     \answerTODO{}
+%   \item Did you mention the license of the assets?
+%     \answerTODO{}
+%   \item Did you include any new assets either in the supplemental material or as a URL?
+%     \answerTODO{}
+%   \item Did you discuss whether and how consent was obtained from people whose data you're using/curating?
+%     \answerTODO{}
+%   \item Did you discuss whether the data you are using/curating contains personally identifiable information or offensive content?
+%     \answerTODO{}
+% \end{enumerate}
+
+% \item If you used crowdsourcing or conducted research with human subjects...
+% \begin{enumerate}
+%   \item Did you include the full text of instructions given to participants and screenshots, if applicable?
+%     \answerTODO{}
+%   \item Did you describe any potential participant risks, with links to Institutional Review Board (IRB) approvals, if applicable?
+%     \answerTODO{}
+%   \item Did you include the estimated hourly wage paid to participants and the total amount spent on participant compensation?
+%     \answerTODO{}
+% \end{enumerate}
+
+% \end{enumerate}
+
+\end{document}

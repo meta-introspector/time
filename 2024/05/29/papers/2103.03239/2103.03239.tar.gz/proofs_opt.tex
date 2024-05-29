@@ -1,0 +1,484 @@
+\section{Convergence Proofs of Moshpit SGD}\label{sect:missing_proofs_local_sgd}
+In this section, we provide the complete statements of the theorems establishing the convergence of Moshpit SGD together with the full proofs. First, we introduce all necessary definitions, basic inequalities and auxiliary lemmas; then we prove the convergence in strongly convex and convex cases; lastly, we provide the proofs for the non-convex case.
+
+\subsection{Definitions, Basic Facts and Auxiliary Results}\label{sect:basic_facts}
+
+
+Below we provide several classical definitions and results which are used in our proofs.
+
+\subsubsection{Standard Definitions from Optimization Theory}
+
+\begin{definition}[$L$-smoothness]\label{def:L_smoothness}
+A function $f:\R^n \to \R$ is called $L$-smooth if for all $x,y\in \R^n$, the following inequality holds:
+\begin{equation}
+    \|\nabla f(x) - \nabla f(y)\| \le L\|x-y\|.\label{eq:L_smoothness_def}
+\end{equation}
+\end{definition}
+If the function $f$ is $L$-smooth, then for all $x,y\in\R^n$
+\begin{equation}
+    f(y) \le f(x) + \langle\nabla f(x), y-x \rangle + \frac{L}{2}\|y-x\|^2. \label{eq:L_smoothness_cor}
+\end{equation}
+Next, if $f$ is additionally convex and $x^*$ is its minimizer, then for all $x\in\R^d$
+\begin{equation}
+    \|\nabla f(x)\|^2 \le 2L\left(f(x) - f(x^*)\right). \label{eq:L_smoothness_cor_2}
+\end{equation}
+
+
+\begin{definition}[$\mu$-strong convexity]\label{def:str_cvx}
+    A differentiable function $f:\R^n \to\R$ is called $\mu$-strongly convex if there exists a constant $\mu \ge 0$ such that for all $x,y\in \R^n$
+    \begin{equation}
+        f(y) \ge f(x) + \langle\nabla f(x), y-x \rangle + \frac{\mu}{2}\|y-x\|^2. \label{eq:str_cvx_def}
+    \end{equation}
+\end{definition}
+
+\subsubsection{Basic Facts}
+For all $a,b,\theta_1,\ldots,\theta_N\in\R^n$ and $\alpha > 0$, the following inequalities hold:
+\begin{eqnarray}
+    \|a+b\|^2 &\le& 2\|a\|^2 + 2\|b\|^2, \label{eq:a+b}\\
+    \left\|\frac{1}{N}\sum\limits_{i=1}^N\theta_i\right\|^2 &\le& \frac{1}{N}\sum\limits_{i=1}^N\|\theta_i\|^2, \label{eq:jensen_ineq}\\
+    \langle a,b\rangle &\le& \frac{\|a\|^2}{2\alpha} + \frac{\alpha\|b\|^2}{2}. \label{eq:young_inequality}
+\end{eqnarray}
+
+\subsubsection{Properties of Expectation}
+\textbf{Variance decomposition.} For a random vector $\eta \in \R^d$ and any deterministic vector $x \in \R^d$, the variance satisfies
+\begin{equation}\label{eq:variance_decomposition}
+	\EE\left[\left\|\eta - \EE\eta\right\|^2\right] = \EE\left[\|\eta-x\|^2\right] - \left\|\EE\eta - x\right\|^2
+\end{equation}
+
+\textbf{Tower property of expectation.} For any random variables $\xi,\eta\in \R^d$ we have
+\begin{equation}
+	\EE\left[\xi\right] = \EE\left[\EE\left[\xi\mid \eta\right]\right]\label{eq:tower_property}
+\end{equation}
+under the assumption that $\EE[\xi]$ and $\EE\left[\EE\left[\xi\mid \eta\right]\right]$ are well-defined.
+
+\subsubsection{Auxiliary Results}
+For the readers' convenience, we list all auxiliary results that we use in our proofs below. The first result is classical and establishes that the gradient descent step is a contractive operator.
+\begin{lemma}[Lemma 6 from \cite{karimireddy2020scaffold}]\label{lem:gd_contraction}
+    For any $L$-smooth and $\mu$-strongly convex function $f:\R^n\to\R$, points $x,y\in \R^n$, and stepsize $\gamma \in (0,\nicefrac{1}{L}]$, the following inequality holds:
+    \begin{equation}
+        \|x - \gamma\nabla f(x) - y + \gamma\nabla f(y)\|^2 \le (1-\gamma\mu)\|x-y\|^2. \label{eq:gd_contraction}
+    \end{equation}
+\end{lemma}
+
+The next two lemmas are useful for estimating typical recurrences appearing in the analysis.
+\begin{lemma}[Lemma~I.2 from \cite{gorbunov2020local}]\label{lem:lemma_i_2_gorbunov}
+    Let $\{r_k\}_{k\ge 0}$ satisfy
+    \begin{equation*}
+        r_K \le \frac{a}{\gamma W_K} + c_1\gamma + c_2\gamma^2
+    \end{equation*}
+    for all $K \ge 0$ with some constants $a,c_2 \ge 0$, $c_1 \ge 0$, where $w_k = (1-\gamma\mu(1-\delta_{pv,1}))^{-(k+1)}$, $W_K = \sum_{k=0}^Kw_k$, $\mu > 0$, $\delta_{pv,1}\in [0,1)$ and $\gamma \le \gamma_0$ for some $\gamma_0 > 0$, $\gamma_0 \le \nicefrac{1}{\mu(1-\delta_{pv,1})}$. Then, for all $K$ such that
+    \begin{align*}
+        \text{either  } & \frac{\ln\left(\max\left\{2, \min\left\{\nicefrac{a\mu^2(1-\delta_{pv,1})^2K^2}{c_1},\nicefrac{a\mu^3(1-\delta_{pv,1})^3K^3}{c_2}\right\}\right\}\right)}{K} \le 1\\
+        \text{or  } & \gamma_0 \le \frac{\ln\left(\max\left\{2, \min\left\{\nicefrac{a\mu^2(1-\delta_{pv,1})^2K^2}{c_1},\nicefrac{a\mu^3(1-\delta_{pv,1})^3K^3}{c_2}\right\}\right\}\right)}{(1-\delta_{pv,1})\mu K}
+    \end{align*}
+    and
+    \begin{equation*}
+        \gamma = \min\left\{\gamma_0, \frac{\ln\left(\max\left\{2, \min\left\{\nicefrac{a\mu^2(1-\delta_{pv,1})^2K^2}{c_1},\nicefrac{a\mu^3(1-\delta_{pv,1})^3K^3}{c_2}\right\}\right\}\right)}{(1-\delta_{pv,1})\mu K}\right\}
+    \end{equation*}
+    we have that
+    \begin{equation*}
+        r_K = \widetilde{\cO}\left(\frac{a}{\gamma_0}\exp\left(-\gamma_0\mu(1-\delta_{pv,1})K\right) + \frac{c_1}{(1-\delta_{pv,1})\mu K} + \frac{c_2}{(1-\delta_{pv,1})^2\mu^2 K^2}\right).
+    \end{equation*}
+\end{lemma}
+
+\begin{lemma}[Lemma~I.3 from \cite{gorbunov2020local}]\label{lem:lemma_i_3_gorbunov}
+    Let $\{r_k\}_{k\ge 0}$ satisfy
+    \begin{equation*}
+        r_K \le \frac{a}{\gamma K} + c_1\gamma + c_2\gamma^2
+    \end{equation*}
+    for all $K \ge 0$ with some constants $a,c_2 \ge 0$, $c_1 \ge 0$ where $\gamma \le \gamma_0$ for some $\gamma_0 > 0$. Then for all $K$ and
+    \begin{equation*}
+        \gamma = \min\left\{\gamma_0, \sqrt{\frac{a}{c_1 K}}, \sqrt[3]{\frac{a}{c_2 K}}\right\}
+    \end{equation*}
+    we have that
+    \begin{equation*}
+        r_K = \cO\left(\frac{a}{\gamma_0 K} + \sqrt{\frac{ac_1}{K}} + \frac{\sqrt[3]{a^2c_2}}{K^{\nicefrac{2}{3}}}\right).
+    \end{equation*}
+\end{lemma}
+
+Finally, the lemma below is useful for our convergence analysis in the non-convex case.
+\begin{lemma}[Lemma~I.1 from \cite{gorbunov2020local}]\label{lem:lemma_i_1_gorbunov}
+	For any $\tau$ random vectors $\xi_1,\ldots,\xi_\tau\in\R^d$ such that $\forall t=2,\ldots,\tau$ the random vector $\xi_t$ depends on $\xi_{1},\ldots,\xi_{t-1}$ and does not depend on $\xi_{t+1},\ldots,\xi_{\tau}$ the following inequality holds
+	\begin{equation}
+		\EE\left[\left\|\sum\limits_{t=1}^\tau\xi_t\right\|^2\right] \le e\tau\sum\limits_{t=1}^\tau\EE\left[\left\|\EE_t[\xi_{t}]\right\|^2\right] + e\sum\limits_{t=1}^\tau\EE\left[\left\|\xi_t-\EE_t[\xi_{t}]\right\|^2\right], \label{eq:lemma_i_1_gorbunov}
+	\end{equation}
+	where $\EE_t[\cdot]$ denotes the conditional expectation $\EE[\ \cdot\mid \xi_{t-1},\ldots,\xi_1]$.
+\end{lemma}
+
+\subsection{Convex Case}
+In this section, we give the full proof of Theorem~\ref{thm:cvx_convergence} about the convergence of Moshpit SGD for convex and strongly convex problems. The scheme of the proof follows the similar steps as in the state-of-the-art analysis of Local-SGD \cite{khaled2020tighter,woodworth2020local,gorbunov2020local}. We start with the following lemma:
+\begin{lemma}\label{lem:key_lemma_cvx}
+    Let $f_1 = \ldots = f_N = f$, function $f$ be $\mu$-strongly convex (Def.~\ref{def:str_cvx}) and $L$-smooth (see Def.~\ref{def:L_smoothness}), and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\mu\EE[\|\theta^k-\theta^*\|^2] + \gamma^2\delta_{pv,2}^2$ and $\widetilde{\theta} = \theta^*$, where $\theta^* \in \argmin_{\theta\in\R^n} f(\theta)$ and $\delta_{pv,1}\in [0,1)$, $\delta_{pv,2}\ge 0$. Then, for any $k \ge 0$ the iterates produced by Moshpit SGD with $\gamma \le \nicefrac{1}{4L}$ satisfy
+    \begin{eqnarray}
+        \gamma\EE\left[f(\theta^k) - f(\theta^*)\right] &\le& (1-\gamma\mu(1-\delta_{pv,1}))\EE\left[\|\theta^k - \theta^*\|^2\right] - \EE\left[\|\theta^{k+1} - \theta^*\|^2\right]\notag\\
+        &&\quad+ \frac{3L\gamma}{2}\EE[V_k] + \gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right),\label{eq:key_lemma_cvx}
+    \end{eqnarray}
+    where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$ and $\theta^k = \frac{1}{N_k}\sum_{i\in P_k}\theta_i^k$.
+\end{lemma}
+\begin{proof}
+Recall that Assumption~\ref{as:averaging_quality} with $\Delta_{pv}^k = \delta_{pv,1}\gamma\mu\EE[\|\theta^k-\theta^*\|^2] + \gamma^2\delta_{pv,2}^2$ and $\widetilde{\theta} = \theta^*$ states
+\begin{equation}
+    \EE\left[\langle\theta^{k+1} - \widehat{\theta}^{k+1}, \theta^{k+1}+\widehat{\theta}^{k+1} - 2\theta^*\rangle\right] \le \delta_{pv,1}\gamma\mu\EE[\|\theta^k-\theta^*\|^2] + \gamma^2\delta_{pv,2}^2, \label{eq:key_lemma_cvx_tech_1}
+\end{equation}
+where $\widehat \theta^{k+1} = \frac{1}{N_{k}}\sum_{i\in P_{k}}(\theta_i^{k}-\gamma g_i^k)$. Next, the definition of $\widehat \theta^{k+1}$ implies
+\begin{equation}
+    \widehat \theta^{k+1} = \frac{1}{N_k}\sum\limits_{i\in P_{k}}\theta_i^{k} - \frac{\gamma}{N_k}\sum\limits_{i\in P_{k}} g_i^k = \theta^k - \gamma g^k,\notag
+\end{equation}
+where $g^k = \frac{1}{N_k}\sum_{i\in P_k}g_i^k$. Using this, we derive
+\begin{eqnarray}
+    \|\theta^{k+1} - \theta^*\|^2 &=& \|\widehat{\theta}^{k+1} - \theta^*\|^2 + 2\langle \theta^{k+1} - \widehat{\theta}^{k+1}, \widehat{\theta}^{k+1} - \theta^* \rangle + \|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2\notag\\
+    &=& \|\theta^k - \theta^* - \gamma g^k\|^2 +  \langle\theta^{k+1} - \widehat{\theta}^{k+1}, \theta^{k+1}+\widehat{\theta}^{k+1} - 2\theta^*\rangle \notag\\
+    &=& \|\theta^k - \theta^*\|^2 -2\gamma\langle\theta^k - \theta^*, g^k\rangle + \gamma^2\|g^k\|^2\notag\\
+    &&\quad +  \langle\theta^{k+1} - \widehat{\theta}^{k+1}, \theta^{k+1}+\widehat{\theta}^{k+1} - 2\theta^*\rangle. \notag
+\end{eqnarray}
+Taking the conditional expectation $\EE\left[\ \cdot \mid \theta^k\right] := \EE\left[\ \cdot \mid P_k, \theta_i^k, i\in P_k\right]$ from the both sides of the previous equation and using Assumption~\ref{as:bounded_var}, we obtain
+\begin{eqnarray}
+    \EE\left[\|\theta^{k+1} - \theta^*\|^2\mid \theta^k\right] &=& \|\theta^k - \theta^*\|^2 -2\gamma\left\langle\theta^k - \theta^*, \frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k)\right\rangle\notag\\
+    &&\quad + \gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}g_i^k\right\|^2\mid \theta^k\right] \notag\\
+    &&\quad +  \EE\left[\langle\theta^{k+1} - \widehat{\theta}^{k+1}, \theta^{k+1}+\widehat{\theta}^{k+1} - 2\theta^*\rangle\mid \theta^k\right]. \label{eq:key_lemma_cvx_tech_2}
+\end{eqnarray}
+Next, we estimate the second and the third terms in the right-hand side of \eqref{eq:key_lemma_cvx_tech_2}. First,
+\begin{eqnarray}
+    -2\gamma\left\langle\theta^k - \theta^*, \frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k)\right\rangle &=& \frac{2\gamma}{N_k}\sum\limits_{i\in P_k}\left(\langle\theta^* - \theta_i^k, \nabla f(\theta_i^k) \rangle + \langle\theta_i^k - \theta^k, \nabla f(\theta_i^k) \rangle \right)\notag\\
+    &\overset{\eqref{eq:str_cvx_def},\eqref{eq:L_smoothness_cor}}{\le}& \frac{2\gamma}{N_k}\sum\limits_{i\in P_k}\left( f(\theta^*) - f(\theta_i^k) - \frac{\mu}{2}\|\theta_i^k - \theta^*\|^2\right)\notag\\
+    &&\quad + \frac{2\gamma}{N_k}\sum\limits_{i\in P_k}\left(f(\theta_i^k) - f(\theta^k) + \frac{L}{2}\|\theta_i^k - \theta^k\|^2\right)\notag\\
+    &\overset{\eqref{eq:jensen_ineq}}{\le}& 2\gamma\left(f(\theta^*) - f(\theta^k)\right) -\gamma\mu\|\theta^k - \theta^*\|^2 + L\gamma V_k, \label{eq:key_lemma_cvx_tech_3}
+\end{eqnarray}
+where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$. Secondly, since stochastic gradients $\{g_i^k\}_{i\in P_k}$ are computed independently, we get
+\begin{eqnarray}
+    \gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}g_i^k\right\|^2\mid \theta^k\right] &\overset{\eqref{eq:variance_decomposition}}{=}& \gamma^2\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k)\right\|^2\notag\\
+    &&\quad + \gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}(g_i^k-\nabla f(\theta_i^k))\right\|^2\mid \theta^k\right]\notag\\
+    &\overset{\eqref{eq:jensen_ineq}}{\le}& 2\gamma^2 \left\|\frac{1}{N_k}\sum\limits_{i\in P_k}(\nabla f(\theta_i^k)-\nabla f(\theta^k))\right\|^2 + 2\gamma^2\|\nabla f(\theta^k)\|^2 \notag\\
+    &&\quad + \frac{\gamma^2}{N_k^2}\sum\limits_{i\in P_k}\EE\left[\|g_i^k - \nabla f(\theta_i^k)\|^2\mid \theta^k\right]\notag\\
+    &\overset{\eqref{eq:jensen_ineq},\eqref{eq:L_smoothness_cor_2},\eqref{eq:bounded_variance}}{\le}& \frac{2\gamma^2}{N_k}\sum\limits_{i\in P_k}\|\nabla f(\theta_i^k)-\nabla f(\theta^k)\|^2 \notag\\
+    &&\quad + 4L\gamma^2\left(f(\theta^k) - f(\theta^*)\right) + \frac{\gamma^2\sigma^2}{N_k}\notag\\
+    &\overset{\eqref{eq:L_smoothness_def}}{\le}& \underbrace{\frac{2L^2\gamma^2}{N_k}\sum\limits_{i\in P_k}\|\theta_i^k - \theta^k\|^2}_{2L^2\gamma^2 V_k}\notag\\
+    &&\quad + 4L\gamma^2\left(f(\theta^k) - f(\theta^*)\right) + \frac{\gamma^2\sigma^2}{N_{\min}}. \label{eq:key_lemma_cvx_tech_4}
+\end{eqnarray}
+Plugging \eqref{eq:key_lemma_cvx_tech_3} and \eqref{eq:key_lemma_cvx_tech_4} in \eqref{eq:key_lemma_cvx_tech_2}, we obtain
+\begin{eqnarray}
+    \EE\left[\|\theta^{k+1} - \theta^*\|^2\mid \theta^k\right] &\le& (1-\gamma\mu)\|\theta^k - \theta^*\|^2 - 2\gamma\left(1 - 2L\gamma\right)\left(f(\theta^k) - f(\theta^*)\right)\notag\\
+    &&\quad + L\gamma\left(1+2L\gamma\right)V_k + \frac{\gamma^2\sigma^2}{N_{\min}} \notag\\
+    &&\quad +  \EE\left[\langle\theta^{k+1} - \widehat{\theta}^{k+1}, \theta^{k+1}+\widehat{\theta}^{k+1} - 2\theta^*\rangle\mid \theta^k\right], \notag
+\end{eqnarray}
+and
+\begin{eqnarray}
+    \EE\left[\|\theta^{k+1} - \theta^*\|^2\right] &\overset{\eqref{eq:key_lemma_cvx_tech_1}}{\le}& (1-\gamma\mu(1-\delta_{pv,1}))\EE\left[\|\theta^k - \theta^*\|^2\right] - 2\gamma\left(1 - 2L\gamma\right)\EE\left[f(\theta^k) - f(\theta^*)\right]\notag\\
+    &&\quad+ L\gamma\left(1+2L\gamma\right)\EE[V_k] + \gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\notag\\
+    &\le& (1-\gamma\mu(1-\delta_{pv,1}))\EE\left[\|\theta^k - \theta^*\|^2\right] - \gamma\EE\left[f(\theta^k) - f(\theta^*)\right]\notag\\
+    &&\quad+ \frac{3L\gamma}{2}\EE[V_k] + \gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right),\notag
+\end{eqnarray}
+where in the last inequality we use $\gamma \le \nicefrac{1}{4L}$.
+\end{proof}
+
+Next, we estimate the term $\EE[V_k]$ measuring the expected dissimilarity between local iterates and their global average at iteration $k$.
+
+\begin{lemma}\label{lem:V_k_lemma_cvx}
+    Let $f_1 = \ldots = f_N = f$, function $f$ be $\mu$-strongly convex (Def.~\ref{def:str_cvx}) and $L$-smooth (see Def.~\ref{def:L_smoothness}), and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\mu\EE[\|\theta^k-\theta^*\|^2] + \gamma^2\delta_{pv,2}^2$ and $\widetilde{\theta} = \theta^*$, where $\theta^* \in \argmin_{\theta\in\R^n} f(\theta)$ and $\delta_{pv,1}\in [0,1)$, $\delta_{pv,2}\ge 0$. Then, for any $k \ge 0$ the iterates produced by Moshpit SGD with $\gamma \le \nicefrac{1}{4L}$ satisfy
+    \begin{equation}
+        \EE[V_k] \le 2\gamma^2\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right), \label{eq:V_k_bound_cvx}
+    \end{equation}
+    where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$ and $\theta^k = \frac{1}{N_k}\sum_{i\in P_k}\theta_i^k$.
+\end{lemma}
+\begin{proof}
+    First of all, if $k = a\tau$ for some integer $a\ge 0$, then \eqref{eq:V_k_bound_cvx} follows from Assumption~\ref{as:averaging_quality} (eq.~\eqref{eq:quality_of_avg}). Therefore, we consider such $k$ that $k = a\tau + t'$ for some $t'\in (0,\tau)$. Then, for any $i,j \in P_{k}$, $i\neq j$
+    \begin{eqnarray*}
+        \EE\left[\|\theta_i^k - \theta_j^k\|^2\mid \theta^{k-1}\right] &=& \EE\left[\|\theta_i^{k-1} - \gamma g_i^{k-1} - \theta_j^{k-1} + \gamma g_{j}^{k-1}\|^2\mid \theta^{k-1}\right]\\
+        &\overset{\eqref{eq:variance_decomposition}}{=}& \|\theta_i^{k-1} - \gamma \nabla f(\theta_i^{k-1}) - \theta_j^{k-1} + \gamma \nabla f(\theta_j^{k-1})\|^2\\
+        &&\quad +\gamma^2\EE\left[\|g_i^{k-1} - \nabla f(\theta_i^{k-1}) + g_{j}^{k-1} - \nabla f(\theta_j^{k-1})\|^2\mid \theta^{k-1}\right].
+    \end{eqnarray*}
+    Using Lemma~\ref{lem:gd_contraction} and independence of $g_i^{k-1}$ and $g_j^{k-1}$ for given $\theta_i^{k-1}, \theta_j^{k-1}$, $i\neq j$ we derive
+    \begin{eqnarray*}
+        \EE\left[\|\theta_i^k - \theta_j^k\|^2\mid \theta^{k-1}\right] &\overset{\eqref{eq:gd_contraction}}{\le}& (1-\gamma\mu)\|\theta_i^{k-1} - \theta_j^{k-1}\|^2 +\gamma^2\EE\left[\|g_i^{k-1} - \nabla f(\theta_i^{k-1})\|^2\mid \theta^{k-1}\right]\\
+        &&\quad +\gamma^2\EE\left[\|g_j^{k-1} - \nabla f(\theta_j^{k-1})\|^2\mid \theta^{k-1}\right]\\
+        &\overset{\eqref{eq:bounded_variance}}{\le}& (1-\gamma\mu)\|\theta_i^{k-1} - \theta_j^{k-1}\|^2 + 2\gamma^2\sigma^2,
+    \end{eqnarray*}
+    from which we get the following: 
+    \begin{equation}
+        \EE_g\left[\|\theta_i^k - \theta_j^k\|^2\right] \le (1-\gamma\mu)\EE_g\left[\|\theta_i^{k-1} - \theta_j^{k-1}\|^2\right] + 2\gamma^2\sigma^2 \le \EE_g\left[\|\theta_i^{k-1} - \theta_j^{k-1}\|^2\right] + 2\gamma^2\sigma^2.\notag %
+    \end{equation}
+    Here, $\EE_g[\cdot]$ denotes the expectation conditioned on $\{P_k\}_{k = a\tau}^{(a+1)\tau-1}$. Unrolling the recurrence, we get
+    \begin{eqnarray}
+        \EE_g\left[\|\theta_i^k - \theta_j^k\|^2\right] &\le& \EE_g\left[\|\theta_i^{a\tau} - \theta_j^{a\tau}\|^2\right] + 2(k-a\tau)\gamma^2\sigma^2\notag \\
+        &\le& \EE_g\left[\|\theta_i^{a\tau} - \theta_j^{a\tau}\|^2\right] + 2(\tau-1)\gamma^2\sigma^2.\label{eq:V_k_lemma_technical_1}
+    \end{eqnarray}
+    Using this, we estimate $\EE_{g}[V_k]$:
+    \begin{eqnarray*}
+        \EE_g[V_k] &=& \frac{1}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\left\|\theta_i^k - \frac{1}{N_k}\sum\limits_{j\in P_k}\theta_j^k\right\|^2\right] \overset{\eqref{eq:jensen_ineq}}{\le} \frac{1}{N_k^2}\sum\limits_{i,j \in P_k}\EE_g\left[\|\theta_i^k - \theta_j^k\|^2\right]\\
+        &\overset{\eqref{eq:V_k_lemma_technical_1}}{\le}& \frac{1}{N_k^2}\sum\limits_{i,j \in P_k}\EE_g\left[\|\theta_i^{a\tau} - \theta_j^{a\tau}\|^2\right] + 2(\tau-1)\gamma^2\sigma^2 \\
+        &\overset{\eqref{eq:a+b}}{\le}& \frac{2}{N_k^2}\sum\limits_{i,j \in P_k}\left(\EE_g\left[\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right] + \EE_g\left[\|\theta_j^{a\tau} - \theta^{a\tau}\|^2\right]\right) + 2(\tau-1)\gamma^2\sigma^2\\
+        &=& \frac{4}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right]+ 2(\tau-1)\gamma^2\sigma^2\\
+        &\le& \frac{4}{N_{a\tau}}\cdot\frac{N_{a\tau}}{N_k}\sum\limits_{i\in P_{a\tau}}\EE_g\left[\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right]+ 2(\tau-1)\gamma^2\sigma^2\\
+        &\le& \EE_g\left[\frac{8}{N_{a\tau}}\sum\limits_{i\in P_{a\tau}}\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right]+ 2(\tau-1)\gamma^2\sigma^2,
+    \end{eqnarray*}
+    where in the last inequality we use $2N_{(a+1)\tau} = 2|P_{(a+1)\tau}| \ge |P_{a\tau}| = N_{a\tau}$ and $|N_k|\le |N_{k-1}|$ following from Assumption~\ref{as:averaging_quality}. Finally, we take the full expectation from the previous inequality:
+    \begin{eqnarray*}
+        \EE[V_k] &\overset{\eqref{eq:tower_property}}{\le}& 8\EE\left[\frac{1}{N_{a\tau}}\sum\limits_{i\in P_{a\tau}}\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right]+ 2(\tau-1)\gamma^2\sigma^2 \overset{\eqref{eq:quality_of_avg}}{\le} 2\gamma^2\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right).
+    \end{eqnarray*}
+    This finishes the proof.
+\end{proof}
+
+Combining Lemmas~\ref{lem:key_lemma_cvx}~and~\ref{lem:V_k_lemma_cvx}, we get the following result:
+\begin{theorem}[Theorem~\ref{thm:cvx_convergence}, convergence in the convex case]\label{thm:cvx_convergence_supp}
+    Let $f_1 = \ldots = f_N = f$ be $\mu$-strongly convex (Def.~\ref{def:str_cvx}) and $L$-smooth (see Def.~\ref{def:L_smoothness}), and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\mu\EE[\|\theta^k-\theta^*\|^2] + \gamma^2\delta_{pv,2}^2$ and $\widetilde{\theta} = \theta^*$, where $\theta^* \in \argmin_{\theta\in\R^n} f(\theta)$ and $\delta_{pv,1}\in [0,1)$, $\delta_{pv,2}\ge 0$. Then, for any $K \ge 0$, the iterates produced by Moshpit SGD with $\gamma \le \nicefrac{1}{4L}$ satisfy
+    \begin{eqnarray}
+        \EE\left[f(\overline{\theta}^K) - f(\theta^*)\right] &\le& (1-\gamma\mu(1-\delta_{pv,1}))^K\frac{R_0^2}{\gamma}\notag\\
+        &&\quad + \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right), \label{eq:str_cvx_bound_supp}
+    \end{eqnarray}
+    when $\mu > 0$, and
+    \begin{equation}
+        \EE\left[f(\overline{\theta}^K) - f(\theta^*)\right] \le \frac{R_0^2}{\gamma K} + \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right), \label{eq:cvx_bound_supp}
+    \end{equation}
+    when $\mu = 0$, where $R_0 = \|\theta^0 - \theta^*\|$, $\overline{\theta}^K = \frac{1}{W_K}\sum_{k=0}^Kw_k\theta^k = \frac{1}{W_K}\sum_{k=0}^K\frac{w_k}{N_k}\sum_{i\in P_k}\theta_i^k$, $w_k = (1-\gamma\mu(1-\delta_{pv,1}))^{-(k+1)}$, and $W_K = \sum_{k=0}^Kw_k$. That is, Moshpit SGD achieves $\EE[f(\overline{\theta}^K) - f(\theta^*)] \le \varepsilon$ after 
+    \begin{equation}
+        K = \widetilde{\cO}\left(\frac{L}{(1-\delta_{pv,1})\mu} +  \frac{\sigma^2}{N_{\min}(1-\delta_{pv,1})\mu\varepsilon} + \frac{\delta_{pv,2}^2}{(1-\delta_{pv,1})\mu\varepsilon} + \sqrt{\frac{L((\tau-1)\sigma^2+\delta_{aq}^2)}{(1-\delta_{pv,1})^2\mu^2\varepsilon}}\right)\label{eq:str_cvx_bound_2_supp}
+    \end{equation}
+    iterations with
+    \begin{equation*}
+        \gamma = \min\left\{\frac{1}{4L}, \frac{\ln\left(\max\left\{2, \min\left\{\frac{R_0^2\mu^2(1-\delta_{pv,1})^2K^2}{(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}}) },\frac{R_0^2\mu^3(1-\delta_{pv,1})^3K^3}{3L\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)}\right\}\right\}\right)}{(1-\delta_{pv,1})\mu K}\right\}
+    \end{equation*}
+    when $\mu > 0$, and after
+    \begin{equation}
+        K = \cO\left(\frac{LR_0^2}{\varepsilon} +  \frac{R_0^2\sigma^2}{N_{\min}\varepsilon^2} + \frac{R_0^2\delta_{pv,2}^2}{\varepsilon^2} + \frac{R_0^2\sqrt{L((\tau-1)\sigma^2+\delta_{aq}^2)}}{\varepsilon^{\nicefrac{3}{2}}}\right)\label{eq:cvx_bound_2_supp}
+    \end{equation}
+    iterations with
+    \begin{equation*}
+       \gamma = \min\left\{\frac{1}{4L} \sqrt{\frac{R_0}{(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}})K}}, \sqrt[3]{\frac{R_0^2}{3L\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right) K}}\right\}
+    \end{equation*}
+    when $\mu = 0$.
+\end{theorem}
+\begin{proof}
+    Plugging the result of Lemma~\ref{lem:V_k_lemma_cvx} in inequality \eqref{eq:key_lemma_cvx} from Lemma~\ref{lem:key_lemma_cvx}, we obtain
+    \begin{eqnarray}
+        \gamma\EE\left[f(\theta^k) - f(\theta^*)\right] &\le& (1-\gamma\mu(1-\delta_{pv,1}))\EE\left[\|\theta^k - \theta^*\|^2\right] - \EE\left[\|\theta^{k+1} - \theta^*\|^2\right]\notag\\
+        &&\quad+ 3L\gamma^3\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right) + \gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right).\notag
+    \end{eqnarray}
+    Next, we sum up these inequalities for $k=0,\ldots, K$ with weights $w_k = (1-\gamma\mu(1-\delta_{pv,1}))^{-(k+1)}$ and divide both sides by $\gamma W_K$, where $W_K = \sum_{k=0}^Kw_k$:
+    \begin{eqnarray*}
+        \frac{1}{W_K}\sum\limits_{k=0}^K w_k\EE\left[f(\theta^k) - f(\theta^*)\right] &\le& \frac{1}{\gamma W_K}\sum\limits_{k=0}^K(1-\gamma\mu(1-\delta_{pv,1}))w_k\EE\left[\|\theta^k - \theta^*\|^2\right]\notag\\
+        &&\quad - \frac{1}{\gamma W_K}\sum\limits_{k=0}^K w_k\EE\left[\|\theta^{k+1} - \theta^*\|^2\right]\notag\\
+        &&\quad+ \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right)\\
+        &=& \frac{1}{\gamma W_K}\sum\limits_{k=0}^K\left(w_{k-1}\EE\left[\|\theta^k - \theta^*\|^2\right] - w_k\EE\left[\|\theta^{k+1} - \theta^*\|^2\right]\right)\notag\\
+        &&\quad+ \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right)\\
+        &=& \frac{w_{-1}\|\theta^0 - \theta^*\|^2 - w_K\EE\left[\|\theta^{K+1}-\theta^*\|^2\right]}{\gamma W_K}\\
+        &&\quad+ \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right)\\
+        &\le& \frac{\|\theta^0 - \theta^*\|^2}{\gamma W_K} \\
+        &&\quad + \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right).
+    \end{eqnarray*}
+    Since $f$ is convex, we apply the Jensen's inquality
+    \begin{eqnarray*}
+        f\left(\frac{1}{W_K}\sum\limits_{k=0}^K w_k\theta^k\right) &\le& \frac{1}{W_K}\sum\limits_{k=0}^K w_k f(\theta^k)
+    \end{eqnarray*}
+    to the previous result and get
+    \begin{eqnarray*}
+        \EE\left[f(\overline{\theta}^K) - f(\theta^*)\right] &\le& \frac{R_0^2}{\gamma W_K} + \gamma\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 3L\gamma\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)\right),
+    \end{eqnarray*}
+    where $R_0 = \|\theta^0 - \theta^*\|$ and $\overline{\theta}^K = \frac{1}{W_K}\sum_{k=0}^Kw_k\theta^k = \frac{1}{W_K}\sum_{k=0}^K\frac{w_k}{N_k}\sum_{i\in P_k}\theta_i^k$. If $\mu > 0$, then $W_K \ge w_K \ge (1-\gamma\mu(1-\delta_{pv,1}))^{-K}$, implying \eqref{eq:str_cvx_bound_supp}. Next, $w_k = 1$ and $W_K = K$ when $\mu = 0$ gives \eqref{eq:cvx_bound_supp}. It remains to estimate the total number of iterations $K$ required by Moshpit SGD to find an $\varepsilon$-solution, i.e., to achieve $\EE[f(\overline{\theta}^K) - f(\theta^*)] \le \varepsilon$. Applying Lemma~\ref{lem:lemma_i_2_gorbunov} to \eqref{eq:str_cvx_bound_supp}, we get the following result: if $\mu > 0$ and 
+    \begin{equation*}
+        \gamma = \min\left\{\frac{1}{4L}, \frac{\ln\left(\max\left\{2, \min\left\{\frac{R_0^2\mu^2(1-\delta_{pv,1})^2K^2}{\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}} },\frac{R_0^2\mu^3(1-\delta_{pv,1})^3K^3}{3L\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right)}\right\}\right\}\right)}{(1-\delta_{pv,1})\mu K}\right\},
+    \end{equation*}
+    then $\EE\left[f(\overline{\theta}^K) - f(\theta^*)\right]$ equals
+    \begin{equation*}
+        \widetilde{\cO}\left(LR_0^2\exp\left(-\frac{\mu}{L}(1-\delta_{pv,1})K\right) + \frac{\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}}}{(1-\delta_{pv,1})\mu K} + \frac{L\left(\delta_{aq}^2 + (\tau-1)\sigma^2\right)}{(1-\delta_{pv,1})^2\mu^2 K^2}\right),
+    \end{equation*}
+    implying \eqref{eq:str_cvx_bound_2_supp}. Similarly, we apply Lemma~\ref{lem:lemma_i_3_gorbunov} to \eqref{eq:cvx_bound_supp} and get that for $\mu = 0$ and 
+    \begin{equation*}
+        \gamma = \min\left\{\frac{1}{4L} \sqrt{\frac{R_0}{(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}})K}}, \sqrt[3]{\frac{R_0^2}{3L\left(4\delta_{aq}^2 + (\tau-1)\sigma^2\right) K}}\right\},
+    \end{equation*}
+    \begin{equation*}
+        \EE\left[f(\overline{\theta}^K) - f(\theta^*)\right] = \cO\left(\frac{LR_0^2}{K} + \sqrt{\frac{R_0^2(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}})}{K}} + \frac{\sqrt[3]{R_0^4L\left(\delta_{aq}^2 + (\tau-1)\sigma^2\right)}}{K^{\nicefrac{2}{3}}}\right),
+    \end{equation*}
+    implying \eqref{eq:cvx_bound_2_supp}.
+\end{proof}
+
+
+
+
+
+
+
+
+\subsection{Non-Convex Case}
+In this section, we give the full proof of Theorem~\ref{thm:non_cvx_convergence} about convergence of Moshpit SGD for general non-convex problems. The proof follows the similar steps as in the state-of-the-art analysis of Local-SGD in non-convex case~\cite{li2019communication,koloskova2020unified}. We start with the following lemma:
+\begin{lemma}\label{lem:key_lemma_non_cvx}
+    Let $f_1 = \ldots = f_N = f$, function $f$ be $L$-smooth and bounded from below by $f_*$, and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\EE[\|\nabla f(\theta^k)\|^2] + L\gamma^2\delta_{pv,2}^2$, $\delta_{pv,1}\in [0,\nicefrac{1}{2})$, $\delta_{pv,2}\ge 0$. Then, for any $K \ge 0$ the iterates produced by Moshpit SGD with $\gamma \le \nicefrac{(1-2\delta_{pv,1})}{8L}$ satisfy
+    \begin{eqnarray}
+         \frac{(1-2\delta_{pv,1})\gamma}{4}\sum\limits_{k=0}^{K-1}\EE\left[\|\nabla f(\theta^k)\|^2\right] &\le& f(\theta^0) - f_* + \gamma L^2\sum\limits_{k=0}^{K-1} \EE[V_k]\notag\\
+         &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right),\label{eq:key_lemma_non_cvx}
+    \end{eqnarray}
+    where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$ and $\theta^k = \frac{1}{N_k}\sum_{i\in P_k}\theta_i^k$.
+\end{lemma}
+\begin{proof}
+    Recall that Assumption~\ref{as:averaging_quality} with $\Delta_{pv}^k = \delta_{pv,1}\gamma\EE[\|\nabla f(\theta^k)\|^2] + L\gamma^2\delta_{pv,2}^2$ states
+\begin{equation}
+    \EE\left[\langle\nabla f(\theta^k), \theta^{k+1}-\widehat{\theta}^{k+1}\rangle + L\|\widehat{\theta}^{k+1} - \theta^{k+1}\|^2\right] \le \delta_{pv,1}\gamma\EE[\|\nabla f(\theta^k)\|^2] + L\gamma^2\delta_{pv,2}^2, \label{eq:key_lemma_non_cvx_tech_1}
+\end{equation}
+where $\widehat \theta^{k+1} = \frac{1}{N_{k}}\sum_{i\in P_{k}}(\theta_i^{k}-\gamma g_i^k)$. As for the convex case, the definition of $\widehat \theta^{k+1}$ implies
+\begin{equation}
+    \widehat \theta^{k+1} = \frac{1}{N_k}\sum\limits_{i\in P_{k}}\theta_i^{k} - \frac{\gamma}{N_k}\sum\limits_{i\in P_{k}} g_i^k = \theta^k - \gamma g^k,\notag
+\end{equation}
+where $g^k = \frac{1}{N_k}\sum_{i\in P_k}g_i^k$. Using this and L-smoothness of $f$, we derive
+    \begin{eqnarray*}
+        f(\theta^{k+1}) - f(\theta^k) &\overset{\eqref{eq:L_smoothness_cor}}{\le}& \langle\nabla f(\theta^k), \theta^{k+1} - \theta^k \rangle + \frac{L}{2}\|\theta^{k+1} - \theta^k\|^2\\
+        &\overset{\eqref{eq:a+b}}{\le}& \langle\nabla f(\theta^k), \widehat{\theta}^{k+1} - \theta^k \rangle + \langle\nabla f(\theta^k), \theta^{k+1} - \widehat{\theta}^{k+1} \rangle\\
+        &&\quad+ L\|\widehat{\theta}^{k+1} - \theta^k\|^2 + L\|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2\\
+        &=& - \gamma\langle\nabla f(\theta^k), g^k\rangle + L\gamma^2\|g^k\|^2 + \langle\nabla f(\theta^k), \theta^{k+1} - \widehat{\theta}^{k+1} \rangle\\
+        &&\quad + L\|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2,
+    \end{eqnarray*}
+    from which it follows that
+    \begin{eqnarray}
+        \EE\left[f(\theta^{k+1}) - f(\theta^k)\mid \theta^k\right] &\le& -\gamma\left\langle\nabla f(\theta^k), \frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k) \right\rangle\notag\\
+        &&\quad + \EE\left[\langle\nabla f(\theta^k), \theta^{k+1} - \widehat{\theta}^{k+1} \rangle\mid \theta^k\right]\notag\\
+        &&\quad + \EE\left[L\|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2\mid \theta^k\right]\notag\\
+        &&\quad + L\gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}g_i^k\right\|^2\mid \theta^k\right],\label{eq:key_lemma_non_cvx_tech_2}
+    \end{eqnarray}
+    where $\EE\left[\ \cdot \mid \theta^k\right] := \EE\left[\ \cdot \mid P_k, \theta_i^k, i\in P_k\right]$. Next, we estimate the last three terms in the right-hand side of \eqref{eq:key_lemma_non_cvx_tech_2}. First of all,
+\begin{eqnarray}
+    -\gamma\left\langle\nabla f(\theta^k), \frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k)\right\rangle &=& -\gamma\|\nabla f(\theta^k)\|^2 \notag\\
+    &&\quad - \gamma\left\langle\nabla f(\theta^k), \frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k) - \nabla f(\theta^k)\right\rangle \notag\\
+    &\overset{\eqref{eq:young_inequality}}{\le}& -\gamma\|\nabla f(\theta^k)\|^2 + \frac{\gamma}{2}\|\nabla f(\theta^k)\|^2\notag\\
+    &&\quad+ \frac{\gamma}{2}\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}(\nabla f(\theta_i^k) - \nabla f(\theta^k))\right\|^2\notag\\
+    &\overset{\eqref{eq:jensen_ineq}}{\le}& - \frac{\gamma}{2}\|\nabla f(\theta^k)\|^2 + \frac{\gamma}{2N_k}\sum\limits_{i\in P_k}\|\nabla f(\theta_i^k) - \nabla f(\theta^k)\|^2\notag\\
+    &\overset{\eqref{eq:L_smoothness_def}}{\le}& - \frac{\gamma}{2}\|\nabla f(\theta^k)\|^2 + \frac{\gamma L^2}{2}V_k, \label{eq:key_lemma_non_cvx_tech_3}
+\end{eqnarray}
+where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$. Secondly, since the stochastic gradients $\{g_i^k\}_{i\in P_k}$ are computed independently, we derive
+\begin{eqnarray}
+    L\gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}g_i^k\right\|^2\mid \theta^k\right] &\overset{\eqref{eq:variance_decomposition}}{=}& L\gamma^2\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}\nabla f(\theta_i^k)\right\|^2\notag\\
+    &&\quad + L\gamma^2\EE\left[\left\|\frac{1}{N_k}\sum\limits_{i\in P_k}(g_i^k-\nabla f(\theta_i^k))\right\|^2\mid \theta^k\right]\notag\\
+    &\overset{\eqref{eq:jensen_ineq}}{\le}& 2L\gamma^2 \left\|\frac{1}{N_k}\sum\limits_{i\in P_k}(\nabla f(\theta_i^k)-\nabla f(\theta^k))\right\|^2 \notag\\
+    &&\quad + 2L\gamma^2\|\nabla f(\theta^k)\|^2 \notag\\
+    &&\quad + \frac{\gamma^2L}{N_k^2}\sum\limits_{i\in P_k}\EE\left[\|g_i^k - \nabla f(\theta_i^k)\|^2\mid \theta^k\right]\notag\\
+    &\overset{\eqref{eq:jensen_ineq},\eqref{eq:bounded_variance}}{\le}& \frac{2\gamma^2L}{N_k}\sum\limits_{i\in P_k}\|\nabla f(\theta_i^k)-\nabla f(\theta^k)\|^2\notag\\
+    &&\quad + 2L\gamma^2\|\nabla f(\theta^k)\|^2 + \frac{\gamma^2L\sigma^2}{N_k}\notag\\
+    &\overset{\eqref{eq:L_smoothness_def}}{\le}& \underbrace{\frac{2L^3\gamma^2}{N_k}\sum\limits_{i\in P_k}\|\theta_i^k - \theta^k\|^2}_{2L^3\gamma^2 V_k} + 2L\gamma^2\|\nabla f(\theta^k)\|^2\notag\\
+    &&\quad + \frac{\gamma^2L\sigma^2}{N_{\min}}. \label{eq:key_lemma_non_cvx_tech_4}
+\end{eqnarray}
+Plugging \eqref{eq:key_lemma_non_cvx_tech_3} and \eqref{eq:key_lemma_non_cvx_tech_4} in \eqref{eq:key_lemma_non_cvx_tech_2}, we obtain
+\begin{eqnarray}
+    \EE\left[f(\theta^{k+1}) - f(\theta^k)\mid \theta^k\right] &\le& -\frac{\gamma}{2}\left(1 - 4L\gamma\right)\|\nabla f(\theta^k)\|^2 + \frac{\gamma L^2}{2}\left(1 + 4L\gamma\right)V_k + \frac{L\gamma^2\sigma^2}{N_{\min}}\notag\\
+    &&\quad + \EE\left[\langle\nabla f(\theta^k), \theta^{k+1} - \widehat{\theta}^{k+1} \rangle + L\|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2\mid \theta^k\right].\notag
+\end{eqnarray}
+Next, we take the full expectation from the both sides of the above inequality, apply the tower property \eqref{eq:tower_property} and take into account that $\gamma \le \nicefrac{(1-2\delta_{pv,1})}{8L}$:
+\begin{eqnarray*}
+    \EE\left[f(\theta^{k+1}) - f(\theta^k)\right] &\le& -\frac{\gamma}{2}\left(1 - 4L\gamma\right)\EE\left[\|\nabla f(\theta^k)\|^2\right] + \frac{\gamma L^2}{2}\left(1 + 4L\gamma\right)\EE[V_k] + \frac{L\gamma^2\sigma^2}{N_{\min}}\\
+    &&\quad + \EE\left[\langle\nabla f(\theta^k), \theta^{k+1} - \widehat{\theta}^{k+1} \rangle + L\|\theta^{k+1} - \widehat{\theta}^{k+1}\|^2\right]\\
+    &\overset{\eqref{eq:key_lemma_non_cvx_tech_1}}{\le}& -\frac{\gamma}{2}\left(1 - 2\delta_{pv,1} - 4L\gamma\right)\EE\left[\|\nabla f(\theta^k)\|^2\right] + \frac{\gamma L^2}{2}\left(1 + 4L\gamma\right)\EE[V_k] \notag\\
+    &&\quad + L\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\\
+    &\le& -\frac{(1-2\delta_{pv,1})\gamma}{4}\EE\left[\|\nabla f(\theta^k)\|^2\right] + \gamma L^2 \EE[V_k]\notag\\
+    &&\quad + L\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right).
+\end{eqnarray*}
+Summing up the obtained inequalities for $k = 0,\ldots, K-1$ and rearranging the terms, we derive
+\begin{eqnarray*}
+    \frac{(1-2\delta_{pv,1})\gamma}{4}\sum\limits_{k=0}^{K-1}\EE\left[\|\nabla f(\theta^k)\|^2\right] &\le& \sum\limits_{k=0}^{K-1} \EE\left[f(\theta^k) - f(\theta^{k+1})\right] + \gamma L^2\sum\limits_{k=0}^{K-1} \EE[V_k]\notag\\
+    &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\\
+    &=& f(\theta^0) - \EE[f(\theta^{K})] + \gamma L^2\sum\limits_{k=0}^{K-1} \EE[V_k] \\
+    &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\\
+    &\le& f(\theta^0) - f_* + \gamma L^2\sum\limits_{k=0}^{K-1} \EE[V_k]\\
+    &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right),
+\end{eqnarray*}
+where $f_*$ is a uniform lower bound for $f$.
+\end{proof}
+The next step towards completing the proof of Theorem~\ref{thm:non_cvx_convergence} gives the upper bound for $\sum_{k=0}^{K-1} \EE[V_k]$ that appeared in \eqref{eq:key_lemma_non_cvx}.
+
+\begin{lemma}\label{lem:V_k_lemma_non_cvx}
+    Let $f_1 = \ldots = f_N = f$ be $L$-smooth and bounded from below by $f_*$, and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\EE[\|\nabla f(\theta^k)\|^2] + L\gamma^2\delta_{pv,2}^2$, $\delta_{pv,1}\in [0,\nicefrac{1}{2})$, $\delta_{pv,2}\ge 0$. Then, for any $K \ge 0$ the iterates produced by Moshpit SGD with $\gamma \le \nicefrac{1}{\left(4\sqrt{e}L(\tau-1)\right)}$ satisfy
+    \begin{eqnarray}
+        \sum\limits_{k=0}^{K-1}\EE[V_k] &\le& 8e\gamma^2(\tau-1)^2\sum\limits_{k=0}^{K-1}\EE[\|\nabla f(\theta^k)\|^2] + 4\gamma^2K\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right) ,\label{eq:V_k_lemma_non_cvx}
+    \end{eqnarray}
+    where $V_k = \frac{1}{N_k}\sum_{i\in P_k}\|\theta_i^k - \theta^k\|^2$ and $\theta^k = \frac{1}{N_k}\sum_{i\in P_k}\theta_i^k$.
+\end{lemma}
+\begin{proof}
+    First of all, consider $k$ such that $k = a\tau + t'$ for some $t'\in [0,\tau)$. Let $\EE_g[\cdot]$ denote the expectation conditioned on $\{P_t\}_{t=a\tau}^{(a+1)\tau-1}$. Then
+     \begin{eqnarray}
+         \EE_g[V_k] &=& \frac{1}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\|\theta_i^k - \theta^k\|^2\right] \overset{\eqref{eq:variance_decomposition}}{\le} \frac{1}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\|\theta_i^k - \theta^{a\tau}\|^2\right] \notag\\
+         &=& \frac{1}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\left\|\theta_i^{a\tau} - \theta^{a\tau} - \gamma\sum\limits_{t=a\tau}^{k-1} g_i^t\right\|^2\right]\notag\\
+         &\overset{\eqref{eq:a+b}}{\le}& \frac{2}{N_k} \sum\limits_{i\in P_k}\EE_g\left[\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right] + \frac{2\gamma^2}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\left\|\sum\limits_{t=a\tau}^{k-1} g_i^t\right\|^2\right]. \label{eq:V_k_lemma_non_cvx_tech_1}
+     \end{eqnarray}
+     Next, we estimate the second term in the right-hand side of \eqref{eq:V_k_lemma_non_cvx_tech_1} using Lemma~\ref{lem:lemma_i_1_gorbunov}:
+     \begin{eqnarray}
+         \frac{2\gamma^2}{N_k}\sum\limits_{i\in P_k}\EE_g\left[\left\|\sum\limits_{t=a\tau}^{k-1} g_i^t\right\|^2\right] &\overset{\eqref{eq:lemma_i_1_gorbunov}}{\le}& \frac{2e\gamma^2(k - a\tau)}{N_k} \sum\limits_{i\in P_k} \sum\limits_{t=a\tau}^{k-1}\EE_g[\|\nabla f(\theta_i^t)\|^2]\notag\\
+         &&\quad + \frac{2e\gamma^2}{N_k}\sum\limits_{i\in P_k} \sum\limits_{t=a\tau}^{k-1}\EE_g[\|g_i^t - \nabla f(\theta_i^t)\|^2]\notag\\
+         &\overset{\eqref{eq:a+b},\eqref{eq:bounded_variance}}{\le}& 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE_g[\|\nabla f(\theta^t)\|^2] \notag\\
+         &&\quad+ 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\frac{1}{N_k}\sum\limits_{i\in P_k}\EE_g[\|\nabla f(\theta_i^t) - \nabla f(\theta^t)\|^2] \notag\\
+         &&\quad+ 2e\gamma^2 (k - a\tau)\sigma^2\notag\\
+         &\overset{\eqref{eq:L_smoothness_def}}{\le}& 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE_g[\|\nabla f(\theta^t)\|^2]\notag\\
+         &&\quad + 4e\gamma^2L^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\frac{N_t}{N_k}\cdot\frac{1}{N_t}\sum\limits_{i\in P_t}\EE_g[\|\theta_i^t - \theta^t\|^2]\notag\\
+         &&\quad + 2e\gamma^2(\tau-1)\sigma^2\notag\\
+         &\le& 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE_g[\|\nabla f(\theta^t)\|^2] \notag\\
+         &&\quad + 8e\gamma^2L^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE_g[V_t] + 2e\gamma^2(\tau-1)\sigma^2,\notag
+     \end{eqnarray}
+     where in the last two inequalities we use $N_k = |P_k| \le |P_{k-1}| = N_{k-1}$ for all $k\ge 1$ and $N_{a\tau} \le 2 N_{(a+1)\tau}$ for all integer $a \ge 0$. Plugging this inequality in \eqref{eq:V_k_lemma_non_cvx_tech_1} and taking the full expectation from the result, we get
+     \begin{eqnarray}
+         \EE[V_k] &\le& 2\EE\left[\frac{1}{N_k}\sum\limits_{i\in P_k}\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right] + 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[\|\nabla f(\theta^t)\|^2]\notag\\
+         &&\quad + 8e\gamma^2L^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[V_t] + 2e\gamma^2(\tau-1)\sigma^2\notag\\
+         &\le& 4\EE\left[\frac{1}{N_{a\tau}}\sum\limits_{i\in P_{a\tau}}\|\theta_i^{a\tau} - \theta^{a\tau}\|^2\right] + 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[\|\nabla f(\theta^t)\|^2] \notag\\
+         &&\quad + 8e\gamma^2L^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[V_t] + 2e\gamma^2(\tau-1)\sigma^2\notag\\
+         &\overset{\eqref{eq:quality_of_avg}}{\le}& 4e\gamma^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[\|\nabla f(\theta^t)\|^2] + 8e\gamma^2L^2(\tau-1) \sum\limits_{t=a\tau}^{k-1}\EE[V_t]\notag\\
+         &&\quad + 2\gamma^2\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right),\notag
+     \end{eqnarray}
+     where in the second inequality we also use $N_k = |P_k| \le |P_{k-1}| = N_{k-1}$ for all $k\ge 1$ and $N_{a\tau} \le 2 N_{(a+1)\tau}$ for all integer $a \ge 0$. Summing up the obtained inequalities for $k = a\tau, a\tau+1,\ldots, K'$ for some $K' \in[a\tau, (a+1)\tau-1]$ we derive
+     \begin{eqnarray*}
+         \sum\limits_{k=a\tau}^{K'}\EE[V_k] &\le& 4e\gamma^2(\tau-1)\sum\limits_{k=a\tau}^{K'} \sum\limits_{t=a\tau}^{k-1}\EE[\|\nabla f(\theta^t)\|^2] + 8e\gamma^2L^2(\tau-1) \sum\limits_{k=a\tau}^{K'}\sum\limits_{t=a\tau}^{k-1}\EE[V_t]\\
+         &&\quad + 2\gamma^2(K'-a\tau+1)\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)\\
+         &\le& 4e\gamma^2(\tau-1)^2\sum\limits_{k=a\tau}^{K'} \EE[\|\nabla f(\theta^k)\|^2] + 8e\gamma^2L^2(\tau-1)^2 \sum\limits_{k=a\tau}^{K'}\EE[V_k]\\
+         &&\quad + 2\gamma^2(K'-a\tau+1)\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)\\
+         &\le& 4e\gamma^2(\tau-1)^2\sum\limits_{k=a\tau}^{K'} \EE[\|\nabla f(\theta^k)\|^2] + \frac{1}{2} \sum\limits_{k=a\tau}^{K'}\EE[V_k]\notag\\
+         &&\quad + 2\gamma^2(K'-a\tau+1)\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right),
+     \end{eqnarray*}
+     where in the last inequality we use $\gamma \le \nicefrac{1}{\left(4\sqrt{e}L(\tau-1)\right)}$. Rearranging the terms, we get that for $K' \ge 0$
+     \begin{eqnarray*}
+         \sum\limits_{k=a\tau}^{K'} \EE[V_k] &\le& 8e\gamma^2(\tau-1)^2\sum\limits_{k=a\tau}^{K'}\EE[\|\nabla f(\theta^k)\|^2] + 4\gamma^2(K'-a\tau+1)\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right),
+     \end{eqnarray*}
+     where $a\ge 0$ is an integer such that $a\tau \le K' \le (a+1)\tau - 1$. Summing up the obtained inequalities for $K' = \tau-1, 2\tau-1,\ldots, \tau\lfloor\nicefrac{(K-1)}{\tau}\rfloor - 1, K-1$, we derive \eqref{eq:V_k_lemma_non_cvx}.
+\end{proof}
+
+Combining Lemmas~\ref{lem:key_lemma_non_cvx}~and~\ref{lem:V_k_lemma_non_cvx}, we get the following result:
+\begin{theorem}[Theorem~\ref{thm:non_cvx_convergence}]
+    Let $f_1 = \ldots = f_N = f$, function $f$ be $L$-smooth and bounded from below by $f_*$, and Assumptions~\ref{as:bounded_var}~and~\ref{as:averaging_quality} hold with $\Delta_{pv}^k = \delta_{pv,1}\gamma\EE[\|\nabla f(\theta^k)\|^2] + L\gamma^2\delta_{pv,2}^2$, $\delta_{pv,1}\in [0,\nicefrac{1}{2})$, $\delta_{pv,2}\ge 0$. Then, for any $K \ge 0$ the iterates produced by Moshpit SGD with
+    \begin{equation*}
+        \gamma \le \min\left\{\frac{1-2\delta_{pv,1}}{8L},\frac{\sqrt{1-2\delta_{pv,1}}}{8\sqrt{e}L(\tau-1)}\right\}
+    \end{equation*}
+    satisfy
+    \begin{eqnarray}
+        \EE\left[\|\nabla f(\theta_{\text{rand}}^K)\|^2\right] &\le& \frac{8\Delta_0}{(1-2\delta_{pv,1})K\gamma} \notag\\
+        &&\quad + \frac{8L\gamma}{1-2\delta_{pv,1}}\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 4\gamma L\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)\right), \label{eq:non_cvx_bound_supp}
+    \end{eqnarray}
+    where $\Delta_0 = f(\theta^0) - f_*$ and $\theta_{\text{rand}}^K$ is chosen uniformly at random from $\{\theta^0,\theta^1,\ldots,\theta^{K-1}\}$. That is, Moshpit SGD achieves $\EE\left[\|\nabla f(\theta_{\text{rand}}^K)\|^2\right] \le \varepsilon^2$ after 
+    \begin{eqnarray}
+        \cO\Bigg(\frac{L\Delta_0}{(1-2\delta_{pv,1})^2\varepsilon^2}\Bigg[1 +(\tau-1)\sqrt{1-2\delta_{pv,1}} + \frac{\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}}}{\varepsilon^2}&\notag\\
+        &\hspace{-2cm} + \frac{\sqrt{(1-2\delta_{pv,1})(\delta_{aq}^2+(\tau-1)\sigma^2)}}{\varepsilon}\Bigg]\Bigg)\label{eq:non_cvx_bound_2_supp}
+    \end{eqnarray}
+    iterations with
+    \begin{equation*}
+        \gamma = \min\left\{\frac{1-2\delta_{pv,1}}{8L},\frac{\sqrt{1-2\delta_{pv,1}}}{8\sqrt{e}L(\tau-1)}, \sqrt{\frac{\Delta_0}{LK\left(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}}\right)}}, \sqrt[3]{\frac{\Delta_0}{4L^2\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)}}\right\}.
+    \end{equation*}
+\end{theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:non_cvx_convergence}]
+    Plugging the result of Lemma~\ref{lem:V_k_lemma_non_cvx} in the inequality \eqref{eq:key_lemma_non_cvx} from Lemma~\ref{lem:key_lemma_non_cvx}, we obtain
+    \begin{eqnarray*}
+        \frac{(1-2\delta_{pv,1})\gamma}{4}\sum\limits_{k=0}^{K-1}\EE\left[\|\nabla f(\theta^k)\|^2\right] &\le& f(\theta^0) - f_* + 8e\gamma^3L^2\tau(\tau-1)\sum\limits_{k=0}^{K-1}\EE[\|\nabla f(\theta^k)\|^2] \\
+        &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\\
+        &&\quad + 4KL^2\gamma^3\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)\\
+        &\le& f(\theta^0) - f_* + \frac{(1-2\delta_{pv,1})\gamma}{8}\sum\limits_{k=0}^{K-1}\EE\left[\|\nabla f(\theta^k)\|^2\right] \\
+         &&\quad + KL\gamma^2\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2\right)\\
+        &&\quad + 4KL^2\gamma^3\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right).
+    \end{eqnarray*}
+    Next,
+    \begin{eqnarray*}
+        \frac{1}{K}\sum\limits_{k=0}^K\EE\left[\|\nabla f(\theta^k)\|^2\right] &\le& \frac{8\Delta_0}{(1-2\delta_{pv,1})K\gamma} \\
+        &&\quad + \frac{8L\gamma}{1-2\delta_{pv,1}}\left(\frac{\sigma^2}{N_{\min}} + \delta_{pv,2}^2 + 4\gamma L\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)\right),
+    \end{eqnarray*}
+    where $\Delta_0 = f(\theta^0) - f_*$. Since $\theta_{\text{rand}}^K$ is chosen uniformly at random from $\{\theta^0,\theta^1,\ldots,\theta^{K-1}\}$,
+    \begin{equation*}
+        \EE\left[\|\nabla f(\theta_{\text{rand}}^K)\|^2\right] \overset{\eqref{eq:tower_property}}{=} \frac{1}{K}\sum\limits_{k=0}^K\EE\left[\|\nabla f(\theta^k)\|^2\right]
+    \end{equation*}
+    and \eqref{eq:non_cvx_bound_supp} holds. Applying Lemma~\ref{lem:lemma_i_3_gorbunov} to \eqref{eq:non_cvx_bound_supp}, we get the following result: if
+    \begin{equation*}
+        \gamma = \min\left\{\frac{1-2\delta_{pv,1}}{8L},\frac{\sqrt{1-2\delta_{pv,1}}}{8\sqrt{e}L(\tau-1)}, \sqrt{\frac{\Delta_0}{LK\left(\delta_{pv,2}^2 + \nicefrac{\sigma^2}{N_{\min}}\right)}}, \sqrt[3]{\frac{\Delta_0}{4L^2\left(2\delta_{aq}^2 + e(\tau-1)\sigma^2\right)}}\right\},
+    \end{equation*}
+    then $\EE\left[\|\nabla f(\theta_{\text{rand}}^K)\|^2\right]$ equals
+    \begin{equation*}
+        \cO\!\left(\!\frac{L\Delta_0\left(1\!+\! (\tau\!-\!1)\sqrt{1\!-\!2\delta_{pv,1}}\right)}{(1\!-\!2\delta_{pv,1})^2K} + \sqrt{\frac{L\Delta_0\left(\delta_{pv,2}^2\! +\! \nicefrac{\sigma^2}{N_{\min}}\right)}{(1\!-\!2\delta_{pv,1})^2K}} + \frac{\sqrt[3]{L^2\Delta_0^2(\delta_{aq}^2\! +\! (\tau\!-\!1)\sigma^2)}}{(1\!-\!2\delta_{pv,1})K^{\nicefrac{2}{3}}}\!\right)\!,
+    \end{equation*}
+    which implies the desired convergence result from \eqref{eq:non_cvx_bound_2_supp}.
+\end{proof}

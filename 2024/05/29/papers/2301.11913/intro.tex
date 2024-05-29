@@ -1,0 +1,36 @@
+\section{Introduction}
+\label{sect:intro}
+
+For the past several years, the deep learning community has been growing more reliant on large pretrained neural networks. The most evident example of this trend is natural language processing, where the parameter count of models has grown from hundreds of millions~\citep{transformer,gpt,bert} to billions~\citep{megatron2,t5,gptj,ernie3} to hundreds of billions~\citep{gpt3,fedus2021switch,palm,gopher} with consistent gains in quality~\citep{kaplan2020scaling}. Likewise, many models in computer vision are reaching the billion-parameter scale~\citep{dalle,scaling_vit,coatnet,guided_diffusion}.
+
+At this scale, the models no longer fit into a single accelerator and require specialized training algorithms that partition the parameters across devices~\citep{alexnet,dean12}. While these model-parallel algorithms use different partitioning strategies, they all share the need to perform intensive device-to-device communication~\citep{pipedream,megatron2}. Also, if a single device fails, it will cause the entire training process to break down. As a result, model-parallel algorithms are typically deployed in dedicated high-performance computing (HPC) clusters or supercomputers~\citep{shoeybi2019megatron,zero,megatron2}.
+
+This kind of infrastructure is notoriously expensive to build and operate, which makes it available only to a few well-resourced organizations~\citep{summit,fugaku,microsoft_supercomputer}. Most researchers cannot afford the experiments necessary for a proper evaluation of their ideas. This ultimately limits the scientific progress for many important research areas, such as solving NLP problems in ``non-mainstream'' languages.
+
+Several recent works propose more cost-efficient distributed training strategies that leverage fleets of temporary ``preemptible'' instances that can be dynamically allocated in regions with low demand for hardware and electricity, making them 2--10 times cheaper than their dedicated counterparts~\citep{proteus}. Another solution is to train in ``collaborations'' by pooling together preexisting resources or using the help of volunteers~\citep{dedloc,eydle,hivemind_dmoe,yuan2022decentralized}. 
+
+However, training in either of those setups requires specialized algorithms that can adapt to the changing number of workers, utilize heterogeneous devices and recover from hardware and network failures. While there are several practical algorithms for unreliable hardware~\citep{volunteer_dl_async,lin2020multinode,moshpit}, they can only train relatively small models that \textit{fit into the memory of the smallest device}. This limits the practical impact of cost-efficient strategies, because today's large-scale experiments often involve models with billions of parameters.%
+
+
+
+
+In this work, we aim to find a practical way of training large neural networks using \textbf{unreliable heterogeneous devices with slow interconnect}.
+We begin by studying the impact of model size on the balance between communication and computation costs of pipeline-parallel training.
+Specifically, increasing the size leads computation costs to grow faster than the network footprint, thus making \textbf{household-grade connection speeds} more practical than one might think.
+This idea inspires the creation of \textbf{SWARM parallelism}, a pipeline-parallel approach designed to handle peer failures by prioritizing stable peers with lower latency.
+In addition, this approach periodically rebalances the pipeline stages, which allows handling devices with different hardware and network speeds.
+
+In summary, we make the following contributions:
+\vspace{-6pt}
+
+\begin{itemize}
+    \item We analyze the existing model-parallel training techniques and formulate the ``Square-Cube Law'' of distributed training: a counterintuitive observation that, for some methods, \textit{training larger models can actually decrease the network overhead}.
+    \item We develop SWARM parallelism, a decentralized model-parallel algorithm\footnote{The code for our experiments can be found at \href{https://github.com/yandex-research/swarm}{\texttt{github.com/yandex-research/swarm}}.}that leverages randomized fault-tolerant pipelines and dynamically rebalances nodes between pipeline stages. To the best of our knowledge, this is the first decentralized algorithm capable of billion-scale training on heterogeneous unreliable devices with slow interconnect.
+    \item Combining insights from the square-cube law, SWARM parallelism, and 8-bit compression, we show that it is possible to train a billion-scale Transformer language model on preemptible servers with low-power GPUs and the network bandwidth of less than $200$Mb/s while achieving high training throughput.
+\end{itemize}
+
+
+
+
+
+

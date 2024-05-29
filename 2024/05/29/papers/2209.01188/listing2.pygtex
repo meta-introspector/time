@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Use distributed BLOOM with soft prompts}
+\PYG{n}{model} \PYG{o}{=} \PYG{n}{AutoModelForSequenceClassification} \PYGZbs{}
+    \PYG{o}{.}\PYG{n}{from\PYGZus{}pretrained}\PYG{p}{(}
+        \PYG{l+s+s2}{\PYGZdq{}bigscience/bloom\PYGZhy{}petals\PYGZdq{}}\PYG{p}{,}
+        \PYG{n}{tuning\PYGZus{}mode}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}ptune\PYGZdq{}}\PYG{p}{,} \PYG{n}{pre\PYGZus{}seq\PYGZus{}len}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Define optimizer for prompts and linear head}
+\PYG{n}{opt} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{optim}\PYG{o}{.}\PYG{n}{AdamW}\PYG{p}{(}\PYG{n}{model}\PYG{o}{.}\PYG{n}{parameters}\PYG{p}{())}
+
+\PYG{k}{for} \PYG{n}{input\PYGZus{}ids}\PYG{p}{,} \PYG{n}{labels} \PYG{o+ow}{in} \PYG{n}{data\PYGZus{}loader}\PYG{p}{:}
+    \PYG{c+c1}{\PYGZsh{} Forward pass with local \PYGZam{} remote layers}
+    \PYG{n}{out} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{forward}\PYG{p}{(}\PYG{n}{input\PYGZus{}ids}\PYG{p}{)}
+    \PYG{n}{loss} \PYG{o}{=} \PYG{n}{cross\PYGZus{}entropy}\PYG{p}{(}\PYG{n}{out}\PYG{o}{.}\PYG{n}{logits}\PYG{p}{,} \PYG{n}{labels}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Distributed backward w.r.t. local params}
+    \PYG{n}{loss}\PYG{o}{.}\PYG{n}{backward}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} Compute prompts.grad}
+    \PYG{n}{opt}\PYG{o}{.}\PYG{n}{step}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} Update local params only}
+    \PYG{n}{opt}\PYG{o}{.}\PYG{n}{zero\PYGZus{}grad}\PYG{p}{()}
+\end{Verbatim}

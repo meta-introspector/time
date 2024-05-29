@@ -1,0 +1,39 @@
+\section*{Broader Impact}
+\label{sect:broader}
+\vspace{-4px}
+
+The approach proposed in this work is only a prototype with limited direct consequences, but the long-term goal of training huge models with volunteer computing can have a lasting effect on both the research community and the general public.
+
+\vspace{-6px}
+\subsection*{Funding bias vs crowdsourcing bias} 
+\vspace{-6px}
+The main positive outcome we pursue is to let researchers harness volunteer computing and train models on the scale currently available only to large corporations. Ideally, a deep learning researcher with a promising idea will be able to amass the computation needed to realize this idea by involving volunteers. However, the project's appeal for volunteers depends on many factors such as subject area, current societal trends, and even researcher's personality.
+
+For example, a project about teaching agents to play games~\cite{lc0} or fighting global pandemics~\cite{folding_covid} is likely to attract more resources than deep learning applied to soil science. In essence, volunteer computing is biased towards exciting or socially relevant research the same way as traditional HPC is biased towards the interests of those who fund it.
+
+\vspace{-6px}
+\subsection*{Alternative use and misuse} 
+\vspace{-6px}
+The proposed technology can be used with different economic models. If a deep learning system is immediately useful (e.g. for machine translation, information retrieval, etc), the participants could use it for their needs based on their contributions to training. This can take many forms: several labs combining their hardware and training larger models; a web-service that lets people contribute their compute instead of using ads/subscriptions; or simply a framework that someone can use to run distributed training across two or more datacenters.
+
+Unfortunately, this also allows several opportunities for malicious use. If a machine is hacked, the attacker can use its compute unnoticed by the machine owner --- much the same way that botnets are currently used to mine cryptocurrencies. Furthermore, due to decentalized nature even legitimate Learning@home projects can be hijacked by hackers.
+
+\vspace{-6px}
+\subsection*{Security} 
+\vspace{-6px}
+Using crowdsourced hardware makes Learning@home susceptible to attacks from malicious participants. There are multiple attack vectors already known in P2P community: denial of service attacks, Sybil attacks, Eclipse attacks and more \cite{urdaneta2011survey, sybil_attacks_dht, dos_resistance, sybil_nodes}. Fortunately, there are variations of the DHT protocol that make it resistant to said attacks: if a reader wishes to learn more about DHT security, we recommend starting with \cite{urdaneta2011survey}.
+
+Another source of vulnerability stems from the sequential nature of neural networks. If a single expert were to return incorrect (e.g. NaN) outputs or gradients, it could compromise the outputs of the entire network and even poison adjacent nodes through backpropagation. Recent studies expose similar attack patterns on federated learning systems \cite{bagdasaryan2018backdoor, bhagoji2018analyzing}.
+
+The redundant nature of mixture-of-experts layers provides some degree of resistance against those attacks. A single malicious expert will only affect a small fraction of inputs that pass through this specific expert. Furthermore, a trainer with access to predictions from multiple experts could provide a higher degree of robustness by using statistical techniques (e.g., by ignoring outlier gradients). However, such techniques need to be carefully designed so as not to introduce harmful side effects.
+
+\vspace{-6px}
+\subsection*{The burden on the network} 
+\vspace{-6px}
+Finally, we would like to point out the potential harm that our approach can do to network infrastructure. The experiments we ran in Section \ref{sect:exp_throughput} saturate with the bandwidth of $100-200$Mbps, most of which is tensors passed between experts and trainers. 
+
+This coincides with the typical home internet speed available in major cities of developed countries. However, not all ISPs design their infrastructure for users who always use up all their bandwidth. If too many Learning@home participants are located in one LAN or MAN, it can cause congestion or even failures in the network infrastructure. 
+
+Similar situations frequently took place in late 2000s due to growing popularity of BitTorrent for file sharing. Fortunately, the network infrastructure is continually improving, which leads us to believe that this problem will eventually be solved. Until then, we describe several ways to reduce network load of Learning@home in Appendix E.
+
+

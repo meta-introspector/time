@@ -1,0 +1,204 @@
+\section{Sequence Ensemble Distribution Distillation}\label{sec:sendd}
+
+Having established how to emulate an ensemble of autoregressive models using an Autoregressive Prior Network, we now examine how to carry out Sequence Ensemble Distribution Distillation.
+
+Typically, Ensemble Distribution Distillation is done in a two-step fashion. First, a transfer dataset is formed. This can either be the original training dataset or using context deriving from the B-best beam-search hypotheses of the teacher $\{\bm{\hat y}^{(b)}\}_{b=1}^B$ within the beam $\mathcal{B}$. Previous work on sequence-level knowledge distillation show that the latter yields superior results. However, we will re-evaluate this in the context of SEnD$^2$.
+\begin{empheq}{align}
+\begin{split}
+\mathcal{D}_{\tt ens} =&\ \Big\{\bm{x}^{(i)}, \big\{\{\bm{\pi}_l^{(1:M)}, \bm{\hat y}_{<l}\}_{l=1}^{L_i}\big\}^{(i)} \Big\}_{i=1}^{B\cdot N} =\ {\tt \hat p}(\bm{x},\bm{\hat y}_{<l}, \bm{\pi}_l)
+\end{split}
+\end{empheq}
+Here the transfer dataset is equivalent to the empirical distribution ${\tt \hat p}(\bm{x},\bm{\hat y}_{<l}, \bm{\pi}_l)$ which figures in the expressions below. Secondly, given the transfer dataset, the likelihood of the predictions of each model in the ensemble, given the B-best contexts, for each input $\bm{x}$, is maximized under the Dirichlet prior:
+\begin{empheq}{align}
+\begin{split}
+\mathcal{L}_{\tt SEnD^2}^{NLL}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  \mathbb{E}_{{\tt \hat p}(\bm{x},\bm{\hat y}_{<l})}\big[\mathbb{E}_{{\tt \hat p}(\bm{\pi}_l|\bm{\hat y}_{<l},\bm{x})}[-\ln{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\phi}) ] \big] %\\
+%=&\ \mathbb{E}_{{\tt \hat p}(\bm{x},\bm{\hat y}_{<l})}\big[{\tt KL}\big[{\tt \hat p}(\bm{\pi}_l|\bm{\hat y}_{<l},\bm{x})\|{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\phi})\big] \big] +Z
+\end{split}
+\label{eqn:endd-nll-loss}
+\end{empheq}
+
+Unfortunately, as will be shown in the next section, this naive approach does not perform well in practice due to several issues.
+
+\textbf{Mediator Dirichlet} The distribution of the ensemble's predictions on the simplex is unlikely to be Dirichlet-distributed. 
+
+\begin{empheq}{align}
+\big\{{\tt P}(y_l | \bm{y}_{<l}, \bm{x} ; \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow&\ {\tt p}(\bm{\pi}_l | \bm{\beta}_l(\bm{x},\bm{y}_{<l})) \rightarrow {\tt p}(\bm{\pi}_l | \bm{y}_{<l},\bm{x};\bm{\hat \phi})
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{L}_{\tt SEnD^2}^{KL}(\bm{\phi},\mathcal{D}_{\tt ens}) =\  \mathbb{E}_{{\tt \hat p}(\bm{x},\bm{\hat y}_{<l})}\big[{\tt KL}\big[{\tt \hat p}\big(\bm{\pi}_l| \bm{\beta}_l(\bm{x},\bm{y}_{<l})\big)\|{\tt p}\big(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\phi}\big)\big] \big] \\
+=\  \ln\Gamma(\beta_0)- \sum_{k=1}^K\ln\Gamma(\beta_k) +\sum_{k=1}^K\ln\Gamma(\alpha_k) - \ln\Gamma(\alpha_0) + \sum_{k=1}^K(\beta_k-\alpha_k)\big(\psi(\beta_k) - \psi(\beta_0)\big)% \\
+%=\ \sum_{k=1}^K\ln\Gamma(\alpha_k) - \ln\Gamma(\alpha_0) + -\sum_{k=1}^K\alpha_k\big(\psi(\beta_k) - \psi(\beta_0)\big)  + Z
+\end{split}
+\label{eqn:endd-kl-loss}
+\end{empheq}
+
+\begin{empheq}{align}
+ \bm{\beta}_l(\bm{x},\bm{y}_{<l}) = \bm{\hat \pi}_l \cdot \beta_0,\quad \bm{\hat \pi}_l = \frac{1}{M}\sum_{m=1}^M\bm{\pi}_l^{(m)},\ \beta_0^1 = \frac{K-1}{\mathcal{K}(y_l,\bm{\theta}|\bm{x})},\ \beta_0^2 = \frac{K-1}{2\mathcal{M}(y_l,\bm{\theta}|\bm{x})}
+\end{empheq}
+
+\begin{empheq}{align}
+\mathcal{K}(y_l,\bm{\theta}|\bm{x}) &\ \frac{1}{M(M-1)}\sum_{m=1}^M\sum_{j=1}^M {\tt KL}[\bm{\pi}_l^{m}\|\bm{\pi}_l^{j}],\quad \mathcal{M}(y_l,\bm{\theta}|\bm{x}) =\ \frac{1}{M}\sum_{m=1}^M{\tt KL}[\bm{\hat \pi}_l\|\bm{\pi}_l^{m}]
+\end{empheq}
+
+
+\textbf{Aggregation Trick}
+\begin{empheq}{align}
+\begin{split}
+\frac{\partial\mathcal{L}_{\tt SEnD^2}^{KL}}{\partial \alpha_k} =\  \psi(\alpha_k) - \psi(\alpha_0) - \big(\psi(\beta_k) - \psi(\beta_0)\big)
+%=\ \sum_{k=1}^K\ln\Gamma(\alpha_k) - \ln\Gamma(\alpha_0) + -\sum_{k=1}^K\alpha_k\big(\psi(\beta_k) - \psi(\beta_0)\big)  + Z
+\end{split}
+\label{eqn:nll}
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\frac{\partial\mathcal{L}_{\tt SEnD^2}^{KL}}{\partial \alpha_k} =\  \psi(\sum_{k+1}^K\alpha_k) - \psi(\alpha_0) - \big(\psi(\sum_{k+1}^K\beta_k) - \psi(\beta_0)\big)
+%=\ \sum_{k=1}^K\ln\Gamma(\alpha_k) - \ln\Gamma(\alpha_0) + -\sum_{k=1}^K\alpha_k\big(\psi(\beta_k) - \psi(\beta_0)\big)  + Z
+\end{split}
+\label{eqn:nll2}
+\end{empheq}
+
+
+
+\textbf{Length-scale adjustment}
+
+\begin{empheq}{align}
+\begin{split}
+\frac{\partial T\mathcal{L}_{\tt SEnD^2}^{KL}}{\partial \alpha_k} =&\  \psi(\frac{\alpha_k}{T}) - \psi(\frac{\alpha_0}{T}) - \big(\psi(\frac{\beta_k}{T}) - \psi(\frac{\beta_0}{T})\big)
+\approx\ \ln\frac{\hat \pi_k}{\pi_k^{\beta}} -\frac{T}{2}\Big(\frac{\alpha_0 - \alpha_k}{\alpha_k\alpha_0} -  \frac{\beta_0 - \beta_k}{\beta_k\beta_0}\Big)%,\quad \pi_k^\beta = \frac{\beta_k}{\beta_0}
+%=\ \sum_{k=1}^K\ln\Gamma(\alpha_k) - \ln\Gamma(\alpha_0) + -\sum_{k=1}^K\alpha_k\big(\psi(\beta_k) - \psi(\beta_0)\big)  + Z
+\end{split}
+\label{eqn:nll3}
+\end{empheq}
+
+\textbf{Alternative Dirichlet Parameterization}
+
+\begin{empheq}{align}
+\begin{split}
+\alpha_k =&\ \hat\pi_k \cdot \alpha_0,\quad \alpha_0 = e^{z_0},\  \bm{\hat \pi} = {\tt softmax}(\bm{z})
+\end{split}
+\label{eqn:nll3}
+\end{empheq}
+
+
+\begin{empheq}{align}
+\begin{split}
+\frac{\partial \alpha_k}{\partial z_k} =&\  (1-\hat \pi_k) \alpha_k,\quad \frac{\partial \alpha_k}{\partial z_0} = \alpha_k
+\end{split}
+\label{eqn:nll3}
+\end{empheq}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% A crucial limitation of all knowledge distillation approaches is that information about the diversity of the ensemble, which is necessary for separation of uncertainties into \emph{knowledge uncertainty} and \emph{data uncertainty}, is lost in the process~\cite{malinin-endd-2019}. It has been shown that this separation is especially useful for structured uncertainty estimation~\cite{malinin-structured-2020}. However, a recent new approach to distillation, called Ensemble Distribution Distillation (EnD$^2$)~\cite{malinin-endd-2019}, solves this problem and allows distilling ensembles of classification models into a single model whilst preserving information about ensemble diversity. Here, an ensemble is interpreted as a set of samples from an \emph{implicit} conditional distribution over output distributions:
+% \begin{empheq}{align}
+% \begin{split}
+% \big\{{\tt P}(y| \bm{x}^{*}, \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow& \big\{{\tt P}(y| \bm{\pi}^{(m)} )\big\}_{m=1}^M,\quad 
+% \bm{\pi}^{(m)} \sim\  {\tt p}(\bm{\pi} | \bm{x}^{*}, \mathcal{D})
+% \end{split}
+% \end{empheq}
+% It is possible to \emph{distribution-distill} the ensemble into a model ${\tt p}(\bm{\pi} | \bm{x};\bm{\hat \phi})$ which parameterizes an \emph{explicit} conditional distribution output distributions via a straightforward application of maximum-likelihood estimation.
+% \begin{empheq}{align}
+% \big\{{\tt P}(y | \bm{x} ; \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow&\ {\tt p}(\bm{\pi} | \bm{x};\bm{\hat \phi})
+% \end{empheq}
+%In~\cite{malinin-endd-2019} this explicit distribution over distributions was modelled using a neural network model which parameterizes the Dirichlet Distribution:
+% \begin{empheq}{align}
+% \begin{split}
+% {\tt p}(\bm{\pi} | \bm{x};\bm{\hat \phi}) =&\ {\tt Dir}(\bm{\pi} | \bm{\hat \alpha}),\quad \bm{\hat \alpha} =\ \bm{f}(\bm{x};\bm{\hat \phi}),\quad \hat \alpha_c > 0,\ \hat \alpha_0 = \sum_{c=1}^K \hat \alpha_c
+% \end{split}
+% \label{eqn:DPN1}
+% \end{empheq}
+% However, as a single uni-model Dirichlet may be too restrictive and poorly capture the behaviour of an ensemble, we can also consider a model which yields a mixture of Dirichlet distributions:
+% \begin{empheq}{align}
+% \begin{split}
+% {\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \phi}) =&\ \sum_{j=1}^J w_j\cdot{\tt Dir}(\bm{\pi} | \bm{\hat \alpha}^{(l,j)}) \\
+% \big\{\{\bm{\hat \alpha}^{(l,j)}\}_{j=1}^J,\ \bm{w}^{(l)}\big\} =&\ \bm{f}(\bm{y}_{<l},\bm{x};\bm{\hat \phi}),\quad \hat \alpha_c^{(l,j)} > 0,\ w_j^{(l)} \geq 0, \sum_{j=1}^J w_j^{(l)}=1
+% \end{split}
+% \label{eqn:DPN1}
+% \end{empheq}
+
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L} =&\ \sum_{c=1}^K\ln\Gamma(\alpha_c)-\ln\Gamma(\alpha_0) - \sum_{c=1}^K(\alpha_c-1)\ln\pi_k \\
+% =&\ \sum_{c=1}^K\ln\Gamma(\alpha_c)-\ln\Gamma(\alpha_0) - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[(\alpha_c - \frac{1}{2})\ln\alpha_c\big] -\big[(\alpha_0 - \frac{1}{2})\ln\alpha_0\big] - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[(\alpha_0\hat \pi_c - \frac{1}{2})\ln\alpha_0\hat \pi_c\big] -\big[(\alpha_0 - \frac{1}{2})\ln\alpha_0\big] - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[(\alpha_0\hat \pi_c - \frac{1}{2})\ln\alpha_0\hat \pi_c\big] -\big[(\alpha_0 - \frac{1}{2})\ln\alpha_0\big] - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[(\alpha_0\hat \pi_c - \frac{1}{2})(\ln\alpha_0+\ln\hat \pi_c)\big] -\big[(\alpha_0 - \frac{1}{2})\ln\alpha_0\big] - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[\alpha_0\hat \pi_c\ln\alpha_0 - \frac{1}{2}\ln\alpha_0 + \alpha_0\hat \pi_c\ln\hat \pi_c - \frac{1}{2}\ln\hat \pi_c \big] -\big[\alpha_0\ln\alpha_0 - \frac{1}{2}\ln\alpha_0\big] - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[+ \alpha_0\hat \pi_c\ln\hat \pi_c - \frac{1}{2}\ln\hat \pi_c\big]  + \frac{1-K}{2}\ln\alpha_0 - \alpha_0\sum_{c=1}^K\hat \pi_k\ln\pi_k + C \\
+% =&\ \sum_{c=1}^K\big[\alpha_0\hat \pi_c\ln\frac{\hat \pi_c}{\pi_c} - \frac{1}{2}\ln\hat \pi_c\big]  + \frac{1-K}{2}\ln\alpha_0 + C \\
+% =&\ \alpha_0{\tt KL}[\bm{\hat \pi}||\bm{\pi}] - \frac{1}{2}\sum_{c=1}^K\ln\hat \pi_c  + \frac{1-K}{2}\ln\alpha_0 + C \\
+% \end{split}
+% \label{eqn:endd-loss}
+% \end{empheq}
+% , and is is accomplished in two steps. Firstly, a \emph{transfer dataset} $\mathcal{D}_{\tt ens}= \{\bm{x}^{(i)}, \bm{\pi}^{(i,1:M)} \}_{i=1}^N \sim {\tt \hat p}(\bm{x},\bm{\pi})$ is composed of the inputs $\bm{x}^{(i)}$ from the original training set $\mathcal{D}=\{\bm{x}^{(i)},y^{(i)}\}_{i=1}^N$ and the categorical distributions $\{\bm{\pi}^{(i,1:M)}\}_{i=1}^N$ derived from the ensemble for each input. Secondly, given this transfer set, the model ${\tt p}(\bm{\pi} | \bm{x};\bm{\phi})$ is trained by minimizing the negative log-likelihood of each categorical distribution $\bm{\pi}^{(im)}$:
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  -\mathbb{E}_{{\tt \hat p}(\bm{x})}\big[\mathbb{E}_{{\tt \hat p}(\bm{\pi}|\bm{x})}[\ln{\tt p}(\bm{\pi} | \bm{x};\bm{\phi}) ] \big]
+% \end{split}
+% \label{eqn:endd-loss1}
+% \end{empheq}
+
+%\footnote{From now on, when we refer to Ensemble Distribution Distillation, we explicitly mean Ensemble Distribution Distillation using Dirichlet Prior Networks.}
+% \begin{empheq}{align}
+% \begin{split} 
+% {\tt P}(y = \omega_c| \bm{x}^{*};\bm{\hat \phi}) = &\ \mathbb{E}_{{\tt p}(\bm{\pi} | \bm{x}^{*};\bm{\hat \phi})}[{\tt P}(y = \omega_c | \bm{\pi})]=\ \hat \pi_c =\ \frac{\hat \alpha_c}{\sum_{k=1}^K \hat \alpha_k} =\ \frac{ e^{\hat z_c}}{\sum_{k=1}^K e^{\hat z_k}}
+% \end{split}\label{eqn:dirposterior}
+% \end{empheq}
+% Separable measures of uncertainty can be obtained by considering the mutual information between the prediction $y$ and the parameters of $\bm{\pi}$ of the categorical: 
+% \begin{empheq}{align}
+% \underbrace{\mathcal{MI}[y,{\tt \bm{\pi}} |\bm{x}^{*};\bm{\hat \phi}]}_{Knowledge\ Uncertainty}=&\ \underbrace{\mathcal{H}\big[\mathbb{E}_{{\tt p}({\tt \bm{\pi}}|\bm{x}^{*};\bm{\hat \phi})}[{\tt P}(y|{\tt \bm{\pi}})]\big]}_{Total\ Uncertainty} - \underbrace{\mathbb{E}_{{\tt p}({\tt \bm{\pi}}|\bm{x}^{*};\bm{\hat \phi})}\big[\mathcal{H}[{\tt P}(y|{\tt \bm{\pi}})]\big]}_{Expected\ Data\ Uncertainty} \label{eqn:mipn}
+% \end{empheq}
+% Similar to equation~\ref{eqn:mibayes}, this expression allows \emph{total uncertainty}, given by the entropy of the expected distribution, to be decomposed into \emph{data uncertainty} and \emph{knowledge uncertainty}~\citep{malinin-pn-2018}. If Ensemble Distribution Distillation is successful, then the measures of uncertainty derivable from a distribution-distilled model should be identical to those derived from the original ensemble.
+
+
+
+
+
+
+
+
+
+
+
+
+% This loss will have the following form in the case of a uni-model Dirichlet:
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L}_{{\tt UD}}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  -\frac{1}{NB}\sum_{i=1}^N\frac{1}{L_i}\sum_{l=1}^{L_i}\frac{1}{M}\sum_{m=1}^M\ln {\tt Dir}(\bm{\pi}_l^{(im)}|\bm{\hat \alpha}_l^{(i)})
+% % \mathcal{L}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  \frac{1}{NB}\sum_{i=1}^N\frac{1}{L_i}\sum_{l=1}^{L_i}\mathcal{L}(\bm{\phi},\bm{\pi}_l^{(i,1:M)},\bm{y}_{<l}^{(i)},\bm{x}^{(i)}) \\
+% % \mathcal{L}(\bm{\phi},\bm{\pi}_l^{(i,1:M)},\bm{y}_{<l}^{(i)},\bm{x}^{(i)}) =&\ -\ln\Gamma(\hat \alpha_{0}^{(i)}) + \sum_{c=1}^K\big[\ln\Gamma(\hat \alpha_{c}^{(i)}) - \frac{1}{M}\sum_{m=1}^M(\hat \alpha_{c}^{(i)} -1)\ln\pi_{c}^{(im)}\big]
+% \end{split}
+% \label{eqn:endd-loss1}
+% \end{empheq}
+% In the case of a model which yields a mixture of Dirichlet distributions, the loss is:
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L}_{{\tt MD}}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\ -\frac{1}{NB}\sum_{i=1}^N\frac{1}{L_i}\sum_{l=1}^{L_i}\frac{1}{M}\sum_{m=1}^M\ln \Big[\sum_{j=1}^J w_j^{(il)}{\tt Dir}(\bm{\pi}_l^{(im)}|\bm{\hat \alpha}_l^{(ij)})\Big]
+% \end{split}
+% \label{eqn:endd-loss2}
+% \end{empheq}
+% However, due to the sum within the logarithm, it may be difficult to express this loss into a numerically stable way (as we cannot directly take log-gammas). Thus, it may be better to consider minimizing a Jensen-upper bound to this loss:
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L}_{{\tt MD-UB}}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\ -\frac{1}{NB}\sum_{i=1}^N\frac{1}{L_i}\sum_{l=1}^{L_i}\frac{1}{M}\sum_{m=1}^M\sum_{j=1}^J w_j^{(il)}\Big[\ln{\tt Dir}(\bm{\pi}_l^{(im)}|\bm{\hat \alpha}_l^{(i)})\Big] \\
+% \geq&\ -\frac{1}{NB}\sum_{i=1}^N\frac{1}{L_i}\sum_{l=1}^{L_i}\frac{1}{M}\sum_{m=1}^M\ln \Big[\sum_{j=1}^J w_j^{(il)}{\tt Dir}(\bm{\pi}_l^{(im)}|\bm{\hat \alpha}_l^{(ij)})\Big] 
+% \end{split}
+% \label{eqn:endd-loss3}
+% \end{empheq}
+% As this loss can now be expressed into terms of sums of log-gammas, it can be evaluated with greater numerical stability.

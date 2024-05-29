@@ -1,0 +1,825 @@
+\begin{thebibliography}{100}
+
+\bibitem{alexnet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
+  editors, {\em Advances in Neural Information Processing Systems 25}, pages
+  1097--1105. Curran Associates, Inc., 2012.
+
+\bibitem{imagenet_cvpr09}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
+\newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
+\newblock In {\em CVPR09}, 2009.
+
+\bibitem{Kolesnikov2020BigT}
+Alexander Kolesnikov, Lucas Beyer, Xiaohua Zhai, Joan Puigcerver, Jessica Yung,
+  S.~Gelly, and N.~Houlsby.
+\newblock Big transfer (bit): General visual representation learning.
+\newblock In {\em ECCV}, 2020.
+
+\bibitem{jft-300m}
+Chen Sun, Abhinav Shrivastava, Saurabh Singh, and Abhinav Gupta.
+\newblock Revisiting unreasonable effectiveness of data in deep learning era.
+\newblock In {\em ICCV}, 2017.
+
+\bibitem{gpt3}
+Tom~B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla
+  Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,
+  et~al.
+\newblock Language models are few-shot learners.
+\newblock {\em arXiv preprint arXiv:2005.14165}, 2020.
+
+\bibitem{kaplan2020scaling}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B. Brown, Benjamin Chess, Rewon
+  Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei.
+\newblock Scaling laws for neural language models, 2020.
+
+\bibitem{gpt3costlambda}
+Chuan Li.
+\newblock Demystifying gpt-3 language model: A technical overview, 2020.
+\newblock "\url{https://lambdalabs.com/blog/demystifying-gpt-3}".
+
+\bibitem{mlperf}
+Peter Mattson, Christine Cheng, Cody Coleman, Greg Diamos, Paulius
+  Micikevicius, David Patterson, Hanlin Tang, Gu-Yeon Wei, Peter Bailis, Victor
+  Bittorf, David Brooks, Dehao Chen, Debojyoti Dutta, Udit Gupta, Kim
+  Hazelwood, Andrew Hock, Xinyuan Huang, Bill Jia, Daniel Kang, David Kanter,
+  Naveen Kumar, Jeffery Liao, Guokai Ma, Deepak Narayanan, Tayo Oguntebi,
+  Gennady Pekhimenko, Lillian Pentecost, Vijay~Janapa Reddi, Taylor Robie,
+  Tom~St. John, Carole-Jean Wu, Lingjie Xu, Cliff Young, and Matei Zaharia.
+\newblock {MLPerf Training Benchmark}.
+\newblock In {\em {Proceedings of the 3rd Conference on Machine Learning and
+  Systems (MLSys'20)}}, 2020.
+
+\bibitem{valiant1990bridging}
+Leslie~G Valiant.
+\newblock A bridging model for parallel computation.
+\newblock {\em Communications of the ACM}, 33(8):103--111, 1990.
+
+\bibitem{bandwidth_optimal_allreduce}
+Pitch Patarasuk and Xin Yuan.
+\newblock Bandwidth optimal all-reduce algorithms for clusters of workstations.
+\newblock {\em J. Parallel Distrib. Comput.}, 69(2):117–124, February 2009.
+
+\bibitem{mcmahan2017communication}
+Brendan McMahan, Eider Moore, Daniel Ramage, Seth Hampson, and Blaise~Aguera
+  y~Arcas.
+\newblock Communication-efficient learning of deep networks from decentralized
+  data.
+\newblock In {\em Artificial Intelligence and Statistics}, pages 1273--1282,
+  2017.
+
+\bibitem{variability_azure}
+V.~{Persico}, P.~{Marchetta}, A.~{Botta}, and A.~{Pescape}.
+\newblock On network throughput variability in microsoft azure cloud.
+\newblock In {\em 2015 IEEE Global Communications Conference (GLOBECOM)}, pages
+  1--6, 2015.
+
+\bibitem{variability_aws}
+Valerio Persico, Pietro Marchetta, Alessio Botta, and Antonio Pescapè.
+\newblock Measuring network throughput in the cloud: The case of amazon ec2.
+\newblock {\em Computer Networks}, 93:408 -- 422, 2015.
+\newblock Cloud Networking and Communications II.
+
+\bibitem{lian2017can}
+Xiangru Lian, Ce~Zhang, Huan Zhang, Cho-Jui Hsieh, Wei Zhang, and Ji~Liu.
+\newblock Can decentralized algorithms outperform centralized algorithms? a
+  case study for decentralized parallel stochastic gradient descent.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  5330--5340, 2017.
+
+\bibitem{sgpush}
+Mahmoud Assran, Nicolas Loizou, Nicolas Ballas, and Mike Rabbat.
+\newblock Stochastic gradient push for distributed deep learning.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, {\em
+  Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of {\em Proceedings of Machine Learning Research}, pages 344--353.
+  PMLR, 09--15 Jun 2019.
+
+\bibitem{goyal2017accurate}
+Priya Goyal, Piotr Dollár, Ross Girshick, Pieter Noordhuis, Lukasz Wesolowski,
+  Aapo Kyrola, Andrew Tulloch, Yangqing Jia, and Kaiming He.
+\newblock Accurate, large minibatch sgd: Training imagenet in 1 hour, 2017.
+
+\bibitem{You2020Large}
+Yang You, Jing Li, Sashank Reddi, Jonathan Hseu, Sanjiv Kumar, Srinadh
+  Bhojanapalli, Xiaodan Song, James Demmel, Kurt Keutzer, and Cho-Jui Hsieh.
+\newblock Large batch optimization for deep learning: Training bert in 76
+  minutes.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{parameter_server_first}
+Mu~Li.
+\newblock Scaling distributed machine learning with the parameter server.
+\newblock In {\em Proceedings of the 2014 International Conference on Big Data
+  Science and Computing}, BigDataScience '14, New York, NY, USA, 2014.
+  Association for Computing Machinery.
+
+\bibitem{adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock In {\em 3rd International Conference on Learning Representations,
+  {ICLR} 2015}, 2015.
+
+\bibitem{survey_distributed2}
+Salem Alqahtani and Murat Demirbas.
+\newblock Performance analysis and comparison of distributed machine learning
+  systems, 2019.
+
+\bibitem{survey_distributed}
+Joost Verbraeken, Matthijs Wolting, Jonathan Katzy, Jeroen Kloppenburg, Tim
+  Verbelen, and Jan~S. Rellermeyer.
+\newblock A survey on distributed machine learning.
+\newblock {\em ACM Comput. Surv.}, 53(2), March 2020.
+
+\bibitem{localsgd_first}
+Martin Zinkevich, Markus Weimer, Lihong Li, and Alex Smola.
+\newblock Parallelized stochastic gradient descent.
+\newblock In J.~Lafferty, C.~Williams, J.~Shawe-Taylor, R.~Zemel, and
+  A.~Culotta, editors, {\em Advances in Neural Information Processing Systems},
+  volume~23, pages 2595--2603. Curran Associates, Inc., 2010.
+
+\bibitem{lin2018deep}
+Yujun Lin, Song Han, Huizi Mao, Yu~Wang, and Bill Dally.
+\newblock Deep gradient compression: Reducing the communication bandwidth for
+  distributed training.
+\newblock In {\em International Conference on Learning Representations}, 2018.
+
+\bibitem{pmlr-v97-koloskova19a}
+Anastasia Koloskova, Sebastian Stich, and Martin Jaggi.
+\newblock Decentralized stochastic optimization and gossip algorithms with
+  compressed communication.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, {\em
+  Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of {\em Proceedings of Machine Learning Research}, pages
+  3478--3487. PMLR, 09--15 Jun 2019.
+
+\bibitem{sharded_ps_first}
+Jeffrey Dean, Greg Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Mark Mao,
+  Marc\textquotesingle~aurelio Ranzato, Andrew Senior, Paul Tucker, Ke~Yang,
+  Quoc Le, and Andrew Ng.
+\newblock Large scale distributed deep networks.
+\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
+  editors, {\em Advances in Neural Information Processing Systems}, volume~25,
+  pages 1223--1231. Curran Associates, Inc., 2012.
+
+\bibitem{byteps}
+Yimin Jiang, Yibo Zhu, Chang Lan, Bairen Yi, Yong Cui, and Chuanxiong Guo.
+\newblock A unified architecture for accelerating distributed {DNN} training in
+  heterogeneous gpu/cpu clusters.
+\newblock In {\em 14th {USENIX} Symposium on Operating Systems Design and
+  Implementation ({OSDI} 20)}, pages 463--479. {USENIX} Association, November
+  2020.
+
+\bibitem{mikami2019massively}
+Hiroaki Mikami, Hisahiro Suganuma, Pongsakorn U-chupala, Yoshiki Tanaka, and
+  Yuichi Kageyama.
+\newblock Massively distributed sgd: Imagenet/resnet-50 training in a flash,
+  2019.
+
+\bibitem{shoeybi2019megatron}
+Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper,
+  and Bryan Catanzaro.
+\newblock Megatron-lm: Training multi-billion parameter language models using
+  gpu model parallelism.
+\newblock {\em arXiv preprint arXiv:1909.08053}, 2019.
+
+\bibitem{secure_aggregation}
+Aaron Segal, Antonio Marcedone, Benjamin Kreuter, Daniel Ramage, H.~Brendan
+  McMahan, Karn Seth, K.~A. Bonawitz, Sarvar Patel, and Vladimir Ivanov.
+\newblock Practical secure aggregation for privacy-preserving machine learning.
+\newblock In {\em CCS}, 2017.
+
+\bibitem{federatedlearningatscale}
+K.~A. Bonawitz, Hubert Eichner, Wolfgang Grieskamp, Dzmitry Huba, Alex
+  Ingerman, Vladimir Ivanov, Chloé~M Kiddon, Jakub Konečný, Stefano
+  Mazzocchi, Brendan McMahan, Timon~Van Overveldt, David Petrou, Daniel Ramage,
+  and Jason Roselander.
+\newblock Towards federated learning at scale: System design.
+\newblock In {\em SysML 2019}, 2019.
+\newblock To appear.
+
+\bibitem{fed_intel}
+Micah~J. Sheller, Brandon Edwards, G.~Anthony Reina, Jason Martin, Sarthak
+  Pati, Aikaterini Kotrotsou, Mikhail Milchenko, Weilin Xu, Daniel Marcus,
+  Rivka~R. Colen, and Spyridon Bakas.
+\newblock Federated learning in medicine: facilitating multi-institutional
+  collaborations without sharing patient data.
+\newblock {\em Scientific Reports}, 10(1):12598, Jul 2020.
+
+\bibitem{fed_nvidia}
+Wenqi Li, Fausto Milletar{\`i}, Daguang Xu, Nicola Rieke, Jonny Hancox, Wentao
+  Zhu, Maximilian Baust, Yan Cheng, S{\'e}bastien Ourselin, {M. Jorge} Cardoso,
+  and Andrew Feng.
+\newblock {\em Privacy-Preserving Federated Brain Tumour Segmentation}, pages
+  133--141.
+\newblock Lecture Notes in Computer Science (including subseries Lecture Notes
+  in Artificial Intelligence and Lecture Notes in Bioinformatics). SPRINGER,
+  January 2019.
+\newblock 10th International Workshop on Machine Learning in Medical Imaging,
+  MLMI 2019 held in conjunction with the 22nd International Conference on
+  Medical Image Computing and Computer-Assisted Intervention, MICCAI 2019 ;
+  Conference date: 13-10-2019 Through 13-10-2019.
+
+\bibitem{fed_google1}
+Andrew Hard, Chloé~M Kiddon, Daniel Ramage, Francoise Beaufays, Hubert
+  Eichner, Kanishka Rao, Rajiv Mathews, and Sean Augenstein.
+\newblock Federated learning for mobile keyboard prediction, 2018.
+
+\bibitem{fed_google2}
+Timothy Yang, Galen Andrew, Hubert Eichner, Haicheng Sun, Wei Li, Nicholas
+  Kong, Daniel Ramage, and Françoise Beaufays.
+\newblock Applied federated learning: Improving google keyboard query
+  suggestions, 2018.
+
+\bibitem{volunteer_dl_async}
+Ekasit Kijsipongse, Apivadee Piyatumrong, and Suriya U-ruekolan.
+\newblock A hybrid gpu cluster and volunteer computing platform for scalable
+  deep learning.
+\newblock {\em The Journal of Supercomputing}, 04 2018.
+
+\bibitem{learning_at_home}
+Max Ryabinin and Anton Gusev.
+\newblock Towards crowdsourced training of large neural networks using
+  decentralized mixture-of-experts.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem{proteus}
+Aaron Harlap, Alexey Tumanov, Andrew Chung, Gregory~R. Ganger, and Phillip~B.
+  Gibbons.
+\newblock Proteus: Agile ml elasticity through tiered reliability in dynamic
+  resource markets.
+\newblock In {\em Proceedings of the Twelfth European Conference on Computer
+  Systems}, EuroSys '17, page 589–604, New York, NY, USA, 2017. Association
+  for Computing Machinery.
+
+\bibitem{boyd2006randomized}
+Stephen Boyd, Arpita Ghosh, Balaji Prabhakar, and Devavrat Shah.
+\newblock Randomized gossip algorithms.
+\newblock {\em IEEE transactions on information theory}, 52(6):2508--2530,
+  2006.
+
+\bibitem{tsitsiklis1984problems}
+John~Nikolas Tsitsiklis.
+\newblock Problems in decentralized decision making and computation.
+\newblock Technical report, Massachusetts Inst of Tech Cambridge Lab for
+  Information and Decision Systems, 1984.
+
+\bibitem{scaman2017optimal}
+Kevin Scaman, Francis Bach, S{\'e}bastien Bubeck, Yin~Tat Lee, and Laurent
+  Massouli{\'e}.
+\newblock Optimal algorithms for smooth and strongly convex distributed
+  optimization in networks.
+\newblock In {\em International Conference on Machine Learning}, pages
+  3027--3036, 2017.
+
+\bibitem{scaman2018optimal}
+Kevin Scaman, Francis Bach, S{\'e}bastien Bubeck, Laurent Massouli{\'e}, and
+  Yin~Tat Lee.
+\newblock Optimal algorithms for non-smooth distributed optimization in
+  networks.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  2740--2749, 2018.
+
+\bibitem{scaman2019optimal}
+Kevin Scaman, Francis Bach, S{\'e}bastien Bubeck, Yin Lee, and Laurent
+  Massouli{\'e}.
+\newblock Optimal convergence rates for convex distributed optimization in
+  networks.
+\newblock {\em Journal of Machine Learning Research}, 20:1--31, 2019.
+
+\bibitem{assran2019stochastic}
+Mahmoud Assran, Nicolas Loizou, Nicolas Ballas, and Mike Rabbat.
+\newblock Stochastic gradient push for distributed deep learning.
+\newblock In {\em International Conference on Machine Learning}, pages
+  344--353. PMLR, 2019.
+
+\bibitem{xiao2004fast}
+Lin Xiao and Stephen Boyd.
+\newblock Fast linear iterations for distributed averaging.
+\newblock {\em Systems \& Control Letters}, 53(1):65--78, 2004.
+
+\bibitem{merris1994laplacian}
+Russell Merris.
+\newblock Laplacian matrices of graphs: a survey.
+\newblock {\em Linear algebra and its applications}, 197:143--176, 1994.
+
+\bibitem{uribe2020dual}
+C{\'e}sar~A Uribe, Soomin Lee, Alexander Gasnikov, and Angelia Nedi{\'c}.
+\newblock A dual approach for optimal algorithms in distributed optimization
+  over networks.
+\newblock {\em Optimization Methods and Software}, pages 1--40, 2020.
+
+\bibitem{nedic2014distributed}
+Angelia Nedi{\'c} and Alex Olshevsky.
+\newblock Distributed optimization over time-varying directed graphs.
+\newblock {\em IEEE Transactions on Automatic Control}, 60(3):601--615, 2014.
+
+\bibitem{nedic2016stochastic}
+Angelia Nedi{\'c} and Alex Olshevsky.
+\newblock Stochastic gradient-push for strongly convex functions on
+  time-varying directed graphs.
+\newblock {\em IEEE Transactions on Automatic Control}, 61(12):3936--3947,
+  2016.
+
+\bibitem{nedic2018network}
+Angelia Nedi{\'c}, Alex Olshevsky, and Michael~G Rabbat.
+\newblock Network topology and communication-computation tradeoffs in
+  decentralized optimization.
+\newblock {\em Proceedings of the IEEE}, 106(5):953--976, 2018.
+
+\bibitem{rogozin2019projected}
+Alexander Rogozin and Alexander Gasnikov.
+\newblock Projected gradient method for decentralized optimization over
+  time-varying networks.
+\newblock {\em arXiv preprint arXiv:1911.08527}, 2019.
+
+\bibitem{ram2009asynchronous}
+S~Sundhar Ram, A~Nedi{\'c}, and Venugopal~V Veeravalli.
+\newblock Asynchronous gossip algorithms for stochastic optimization.
+\newblock In {\em Proceedings of the 48h IEEE Conference on Decision and
+  Control (CDC) held jointly with 2009 28th Chinese Control Conference}, pages
+  3581--3586. IEEE, 2009.
+
+\bibitem{yan2012distributed}
+Feng Yan, Shreyas Sundaram, SVN Vishwanathan, and Yuan Qi.
+\newblock Distributed autonomous online learning: Regrets and intrinsic
+  privacy-preserving properties.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  25(11):2483--2493, 2012.
+
+\bibitem{yuan2016convergence}
+Kun Yuan, Qing Ling, and Wotao Yin.
+\newblock On the convergence of decentralized gradient descent.
+\newblock {\em SIAM Journal on Optimization}, 26(3):1835--1854, 2016.
+
+\bibitem{torus_allreduce}
+Paul Sack and William Gropp.
+\newblock Collective algorithms for multiported torus networks.
+\newblock {\em ACM Trans. Parallel Comput.}, 1(2), February 2015.
+
+\bibitem{kademlia}
+Petar Maymounkov and David Mazieres.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em International Workshop on Peer-to-Peer Systems}, pages
+  53--65. Springer, 2002.
+
+\bibitem{nemirovski2009robust}
+Arkadi Nemirovski, Anatoli Juditsky, Guanghui Lan, and Alexander Shapiro.
+\newblock Robust stochastic approximation approach to stochastic programming.
+\newblock {\em SIAM Journal on optimization}, 19(4):1574--1609, 2009.
+
+\bibitem{ghadimi2013stochastic}
+Saeed Ghadimi and Guanghui Lan.
+\newblock Stochastic first-and zeroth-order methods for nonconvex stochastic
+  programming.
+\newblock {\em SIAM Journal on Optimization}, 23(4):2341--2368, 2013.
+
+\bibitem{gower2019sgd}
+Robert~Mansel Gower, Nicolas Loizou, Xun Qian, Alibek Sailanbayev, Egor
+  Shulgin, and Peter Richt{\'a}rik.
+\newblock Sgd: General analysis and improved rates.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5200--5209. PMLR, 2019.
+
+\bibitem{karimireddy2020scaffold}
+Sai~Praneeth Karimireddy, Satyen Kale, Mehryar Mohri, Sashank Reddi, Sebastian
+  Stich, and Ananda~Theertha Suresh.
+\newblock Scaffold: Stochastic controlled averaging for federated learning.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5132--5143. PMLR, 2020.
+
+\bibitem{gorbunov2020local}
+Eduard Gorbunov, Filip Hanzely, and Peter Richtarik.
+\newblock Local sgd: Unified theory and new efficient methods.
+\newblock In Arindam Banerjee and Kenji Fukumizu, editors, {\em Proceedings of
+  The 24th International Conference on Artificial Intelligence and Statistics},
+  volume 130 of {\em Proceedings of Machine Learning Research}, pages
+  3556--3564. PMLR, 13--15 Apr 2021.
+
+\bibitem{khaled2020tighter}
+Ahmed Khaled, Konstantin Mishchenko, and Peter Richt{\'a}rik.
+\newblock Tighter theory for local sgd on identical and heterogeneous data.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics}, pages 4519--4529. PMLR, 2020.
+
+\bibitem{woodworth2020local}
+Blake Woodworth, Kumar~Kshitij Patel, Sebastian Stich, Zhen Dai, Brian Bullins,
+  Brendan Mcmahan, Ohad Shamir, and Nathan Srebro.
+\newblock Is local sgd better than minibatch sgd?
+\newblock In {\em International Conference on Machine Learning}, pages
+  10334--10343. PMLR, 2020.
+
+\bibitem{koloskova2020unified}
+Anastasia Koloskova, Nicolas Loizou, Sadra Boreiri, Martin Jaggi, and Sebastian
+  Stich.
+\newblock A unified theory of decentralized sgd with changing topology and
+  local updates.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5381--5393. PMLR, 2020.
+
+\bibitem{li2019communication}
+Xiang Li, Wenhao Yang, Shusen Wang, and Zhihua Zhang.
+\newblock Communication efficient decentralized training with multiple local
+  updates.
+\newblock {\em arXiv preprint arXiv:1910.09126}, 5, 2019.
+
+\bibitem{resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em 2016 IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 770--778, 2015.
+
+\bibitem{ad_psgd}
+Xiangru Lian, Wei Zhang, Ce~Zhang, and Ji~Liu.
+\newblock Asynchronous decentralized parallel stochastic gradient descent.
+\newblock In Jennifer Dy and Andreas Krause, editors, {\em Proceedings of the
+  35th International Conference on Machine Learning}, volume~80 of {\em
+  Proceedings of Machine Learning Research}, pages 3043--3052. PMLR, 10--15 Jul
+  2018.
+
+\bibitem{sukhov2016generating}
+Andrei~M Sukhov, MA~Astrakhantseva, AK~Pervitsky, SS~Boldyrev, and AA~Bukatov.
+\newblock Generating a function for network delay.
+\newblock {\em Journal of High Speed Networks}, 22(4):321--333, 2016.
+
+\bibitem{bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In {\em NAACL-HLT}, 2019.
+
+\bibitem{roberta}
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer
+  Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.
+\newblock Roberta: A robustly optimized bert pretraining approach.
+\newblock {\em ArXiv}, abs/1907.11692, 2019.
+
+\bibitem{radford2019language}
+Alec Radford, Jeff Wu, Rewon Child, David Luan, Dario Amodei, and Ilya
+  Sutskever.
+\newblock Language models are unsupervised multitask learners.
+\newblock 2019.
+
+\bibitem{albert}
+Zhen-Zhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma,
+  and Radu Soricut.
+\newblock Albert: A lite bert for self-supervised learning of language
+  representations.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{bookcorpus}
+Yukun Zhu, Ryan Kiros, Rich Zemel, Ruslan Salakhutdinov, Raquel Urtasun,
+  Antonio Torralba, and Sanja Fidler.
+\newblock Aligning books and movies: Towards story-like visual explanations by
+  watching movies and reading books.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 19--27, 2015.
+
+\bibitem{lin2020multinode}
+Jiahuang Lin, Xin Li, and Gennady Pekhimenko.
+\newblock Multi-node bert-pretraining: Cost-efficient approach, 2020.
+
+\bibitem{fedus2021switch}
+William Fedus, Barret Zoph, and Noam Shazeer.
+\newblock Switch transformers: Scaling to trillion parameter models with simple
+  and efficient sparsity, 2021.
+
+\bibitem{nvidia_perf}
+NVIDIA.
+\newblock Nvidia data center deep learning product performance.
+\newblock
+  "\url{https://developer.nvidia.com/deep-learning-performance-training-inference}",
+  accessed at 2021.02.03.
+
+\bibitem{reddi2021adaptive}
+Sashank~J. Reddi, Zachary Charles, Manzil Zaheer, Zachary Garrett, Keith Rush,
+  Jakub Kone{\v{c}}n{\'y}, Sanjiv Kumar, and Hugh~Brendan McMahan.
+\newblock Adaptive federated optimization.
+\newblock In {\em International Conference on Learning Representations}, 2021.
+
+\bibitem{chen2020toward}
+Xiangyi Chen, Xiaoyun Li, and Ping Li.
+\newblock Toward communication efficient adaptive gradient method.
+\newblock In {\em Proceedings of the 2020 ACM-IMS on Foundations of Data
+  Science Conference}, FODS '20, page 119–128, New York, NY, USA, 2020.
+  Association for Computing Machinery.
+
+\bibitem{squad}
+Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang.
+\newblock Squad: 100, 000+ questions for machine comprehension of text.
+\newblock In {\em EMNLP}, 2016.
+
+\bibitem{aldous2002reversible}
+David Aldous and James~Allen Fill.
+\newblock Reversible markov chains and random walks on graphs, 2002. unfinished
+  monograph, recompiled 2014, 2002.
+
+\bibitem{xu2020distributed}
+Jinming Xu, Ye~Tian, Ying Sun, and Gesualdo Scutari.
+\newblock Distributed algorithms for composite optimization: Unified and tight
+  convergence analysis.
+\newblock {\em arXiv preprint arXiv:2002.11534}, 2020.
+
+\bibitem{fallah2019robust}
+Alireza Fallah, Mert Gurbuzbalaban, Asu Ozdaglar, Umut Simsekli, and Lingjiong
+  Zhu.
+\newblock Robust distributed accelerated stochastic gradient methods for
+  multi-agent networks.
+\newblock {\em arXiv preprint arXiv:1910.08701}, 2019.
+
+\bibitem{kovalev2020optimal}
+Dmitry Kovalev, Adil Salim, and Peter Richt{\'a}rik.
+\newblock Optimal and practical algorithms for smooth and strongly convex
+  decentralized optimization.
+\newblock {\em Advances in Neural Information Processing Systems}, 33, 2020.
+
+\bibitem{arjevani2015communication}
+Yossi Arjevani and Ohad Shamir.
+\newblock Communication complexity of distributed convex learning and
+  optimization.
+\newblock {\em Advances in neural information processing systems},
+  28:1756--1764, 2015.
+
+\bibitem{seide20141}
+Frank Seide, Hao Fu, Jasha Droppo, Gang Li, and Dong Yu.
+\newblock 1-bit stochastic gradient descent and its application to
+  data-parallel distributed training of speech dnns.
+\newblock In {\em Fifteenth Annual Conference of the International Speech
+  Communication Association}, 2014.
+
+\bibitem{alistarh2017qsgd}
+Dan Alistarh, Demjan Grubic, Jerry~Z Li, Ryota Tomioka, and Milan Vojnovic.
+\newblock Qsgd: communication-efficient sgd via gradient quantization and
+  encoding.
+\newblock In {\em Proceedings of the 31st International Conference on Neural
+  Information Processing Systems}, pages 1707--1718, 2017.
+
+\bibitem{suresh2017distributed}
+Ananda~Theertha Suresh, X~Yu Felix, Sanjiv Kumar, and H~Brendan McMahan.
+\newblock Distributed mean estimation with limited communication.
+\newblock In {\em International Conference on Machine Learning}, pages
+  3329--3337. PMLR, 2017.
+
+\bibitem{ramezani2021nuqsgd}
+Ali Ramezani-Kebrya, Fartash Faghri, Ilya Markov, Vitalii Aksenov, Dan
+  Alistarh, and Daniel~M Roy.
+\newblock Nuqsgd: Provably communication-efficient data-parallel sgd via
+  nonuniform quantization.
+\newblock {\em Journal of Machine Learning Research}, 22(114):1--43, 2021.
+
+\bibitem{faghri2020adaptive}
+Fartash Faghri, Iman Tabrizian, Ilia Markov, Dan Alistarh, Daniel~M Roy, and
+  Ali Ramezani-Kebrya.
+\newblock Adaptive gradient quantization for data-parallel sgd.
+\newblock {\em Advances in Neural Information Processing Systems},
+  33:3174--3185, 2020.
+
+\bibitem{horvath2019natural}
+Samuel Horvath, Chen-Yu Ho, Ludovit Horvath, Atal~Narayan Sahu, Marco Canini,
+  and Peter Richtarik.
+\newblock Natural compression for distributed deep learning.
+\newblock {\em arXiv preprint arXiv:1905.10988}, 2019.
+
+\bibitem{beznosikov2020biased}
+Aleksandr Beznosikov, Samuel Horv{\'a}th, Peter Richt{\'a}rik, and Mher
+  Safaryan.
+\newblock On biased compression for distributed learning.
+\newblock {\em arXiv preprint arXiv:2002.12410}, 2020.
+
+\bibitem{wen2017terngrad}
+Wei Wen, Cong Xu, Feng Yan, Chunpeng Wu, Yandan Wang, Yiran Chen, and Hai Li.
+\newblock Terngrad: ternary gradients to reduce communication in distributed
+  deep learning.
+\newblock In {\em Proceedings of the 31st International Conference on Neural
+  Information Processing Systems}, pages 1508--1518, 2017.
+
+\bibitem{mishchenko2019distributed}
+Konstantin Mishchenko, Eduard Gorbunov, Martin Tak{\'a}{\v{c}}, and Peter
+  Richt{\'a}rik.
+\newblock Distributed learning with compressed gradient differences.
+\newblock {\em arXiv preprint arXiv:1901.09269}, 2019.
+
+\bibitem{horvath2019stochastic}
+Samuel Horv{\'a}th, Dmitry Kovalev, Konstantin Mishchenko, Sebastian Stich, and
+  Peter Richt{\'a}rik.
+\newblock Stochastic distributed learning with gradient quantization and
+  variance reduction.
+\newblock {\em arXiv preprint arXiv:1904.05115}, 2019.
+
+\bibitem{li2020acceleration}
+Zhize Li, Dmitry Kovalev, Xun Qian, and Peter Richtarik.
+\newblock Acceleration for compressed gradient descent in distributed and
+  federated optimization.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5895--5904. PMLR, 2020.
+
+\bibitem{gorbunov2020linearly}
+Eduard Gorbunov, Dmitry Kovalev, Dmitry Makarenko, and Peter Richtarik.
+\newblock Linearly converging error compensated sgd.
+\newblock In H.~Larochelle, M.~Ranzato, R.~Hadsell, M.~F. Balcan, and H.~Lin,
+  editors, {\em Advances in Neural Information Processing Systems}, volume~33,
+  pages 20889--20900. Curran Associates, Inc., 2020.
+
+\bibitem{philippenko2020artemis}
+Constantin Philippenko and Aymeric Dieuleveut.
+\newblock Artemis: tight convergence guarantees for bidirectional compression
+  in federated learning.
+\newblock {\em arXiv preprint arXiv:2006.14591}, 2020.
+
+\bibitem{li2020unified}
+Zhize Li and Peter Richt{\'a}rik.
+\newblock A unified analysis of stochastic gradient methods for nonconvex
+  federated optimization.
+\newblock {\em arXiv preprint arXiv:2006.07013}, 2020.
+
+\bibitem{haddadpour2020federated}
+Farzin Haddadpour, Mohammad~Mahdi Kamani, Aryan Mokhtari, and Mehrdad Mahdavi.
+\newblock Federated learning with compression: Unified analysis and sharp
+  guarantees.
+\newblock {\em arXiv preprint arXiv:2007.01154}, 2020.
+
+\bibitem{das2020improved}
+Rudrajit Das, Abolfazl Hashemi, Sujay Sanghavi, and Inderjit~S Dhillon.
+\newblock Improved convergence rates for non-convex federated learning with
+  compression.
+\newblock {\em arXiv preprint arXiv:2012.04061}, 2020.
+
+\bibitem{pmlr-v139-gorbunov21a}
+Eduard Gorbunov, Konstantin~P. Burlachenko, Zhize Li, and Peter Richtarik.
+\newblock Marina: Faster non-convex distributed learning with compression.
+\newblock In Marina Meila and Tong Zhang, editors, {\em Proceedings of the 38th
+  International Conference on Machine Learning}, volume 139 of {\em Proceedings
+  of Machine Learning Research}, pages 3788--3798. PMLR, 18--24 Jul 2021.
+
+\bibitem{stich2018sparsified}
+Sebastian~U Stich, Jean-Baptiste Cordonnier, and Martin Jaggi.
+\newblock Sparsified sgd with memory.
+\newblock In {\em Proceedings of the 32nd International Conference on Neural
+  Information Processing Systems}, pages 4452--4463, 2018.
+
+\bibitem{karimireddy2019error}
+Sai~Praneeth Karimireddy, Quentin Rebjock, Sebastian Stich, and Martin Jaggi.
+\newblock Error feedback fixes signsgd and other gradient compression schemes.
+\newblock In {\em International Conference on Machine Learning}, pages
+  3252--3261. PMLR, 2019.
+
+\bibitem{qian2020error}
+Xun Qian, Peter Richt{\'a}rik, and Tong Zhang.
+\newblock Error compensated distributed sgd can be accelerated.
+\newblock {\em arXiv preprint arXiv:2010.00091}, 2020.
+
+\bibitem{reisizadeh2019exact}
+Amirhossein Reisizadeh, Aryan Mokhtari, Hamed Hassani, and Ramtin Pedarsani.
+\newblock An exact quantized decentralized gradient descent algorithm.
+\newblock {\em IEEE Transactions on Signal Processing}, 67(19):4934--4947,
+  2019.
+
+\bibitem{kovalev2020linearly}
+Dmitry Kovalev, Anastasia Koloskova, Martin Jaggi, Peter Richtarik, and
+  Sebastian Stich.
+\newblock A linearly convergent algorithm for decentralized optimization:
+  Sending less bits for free!
+\newblock In Arindam Banerjee and Kenji Fukumizu, editors, {\em Proceedings of
+  The 24th International Conference on Artificial Intelligence and Statistics},
+  volume 130 of {\em Proceedings of Machine Learning Research}, pages
+  4087--4095. PMLR, 13--15 Apr 2021.
+
+\bibitem{Koloskova2020Decentralized}
+Anastasia Koloskova, Tao Lin, Sebastian~U Stich, and Martin Jaggi.
+\newblock Decentralized deep learning with arbitrary communication compression.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{konevcny2016federated}
+Jakub Kone{\v{c}}n{\`y}, H~Brendan McMahan, Felix~X Yu, Peter Richt{\'a}rik,
+  Ananda~Theertha Suresh, and Dave Bacon.
+\newblock Federated learning: Strategies for improving communication
+  efficiency.
+\newblock {\em arXiv preprint arXiv:1610.05492}, 2016.
+
+\bibitem{kairouz2019advances}
+Peter Kairouz, H~Brendan McMahan, Brendan Avent, Aur{\'e}lien Bellet, Mehdi
+  Bennis, Arjun~Nitin Bhagoji, Keith Bonawitz, Zachary Charles, Graham Cormode,
+  Rachel Cummings, et~al.
+\newblock Advances and open problems in federated learning.
+\newblock {\em arXiv preprint arXiv:1912.04977}, 2019.
+
+\bibitem{Stich18local}
+Sebastian~Urban Stich.
+\newblock Local {SGD} converges fast and communicates little.
+\newblock {\em International Conference on Learning Representations (ICLR)},
+  page arXiv:1805.09767, 2019.
+
+\bibitem{LinSPJ2018local}
+Tao Lin, Sebastian~Urban Stich, Kumar~Kshitij Patel, and Martin Jaggi.
+\newblock Don't use large mini-batches, use local {SGD}.
+\newblock {\em ICLR}, page arXiv:1808.07217, 2020.
+
+\bibitem{woodworth2020minibatch}
+Blake Woodworth, Kumar~Kshitij Patel, and Nathan Srebro.
+\newblock Minibatch vs local sgd for heterogeneous distributed learning.
+\newblock {\em arXiv preprint arXiv:2006.04735}, 2020.
+
+\bibitem{yuan2020federated}
+Honglin Yuan and Tengyu Ma.
+\newblock Federated accelerated stochastic gradient descent.
+\newblock {\em Advances in Neural Information Processing Systems}, 33, 2020.
+
+\bibitem{basu2019qsparse}
+Debraj Basu, Deepesh Data, Can Karakus, and Suhas Diggavi.
+\newblock Qsparse-local-{SGD}: Distributed {SGD} with quantization,
+  sparsification and local computations.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  14668--14679, 2019.
+
+\bibitem{yuan2020federated_comp}
+Honglin Yuan, Manzil Zaheer, and Sashank Reddi.
+\newblock Federated composite optimization.
+\newblock {\em arXiv preprint arXiv:2011.08474}, 2020.
+
+\bibitem{assran2020advances}
+Mahmoud Assran, Arda Aytekin, Hamid~Reza Feyzmahdavian, Mikael Johansson, and
+  Michael~G Rabbat.
+\newblock Advances in asynchronous parallel and distributed optimization.
+\newblock {\em Proceedings of the IEEE}, 108(11):2013--2031, 2020.
+
+\bibitem{recht2011hogwild}
+Benjamin Recht, Christopher Re, Stephen Wright, and Feng Niu.
+\newblock Hogwild: A lock-free approach to parallelizing stochastic gradient
+  descent.
+\newblock In {\em Advances in neural information processing systems}, pages
+  693--701, 2011.
+
+\bibitem{zhao2016fast}
+Shen-Yi Zhao and Wu-Jun Li.
+\newblock Fast asynchronous parallel stochastic gradient descent: A lock-free
+  approach with convergence guarantee.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~30, 2016.
+
+\bibitem{leblond2017asaga}
+R{\'e}mi Leblond, Fabian Pedregosa, and Simon Lacoste-Julien.
+\newblock Asaga: asynchronous parallel saga.
+\newblock In {\em Artificial Intelligence and Statistics}, pages 46--54. PMLR,
+  2017.
+
+\bibitem{peng2016arock}
+Zhimin Peng, Yangyang Xu, Ming Yan, and Wotao Yin.
+\newblock Arock: an algorithmic framework for asynchronous parallel coordinate
+  updates.
+\newblock {\em SIAM Journal on Scientific Computing}, 38(5):A2851--A2879, 2016.
+
+\bibitem{mishchenko2018delay}
+Konstantin Mishchenko, Franck Iutzeler, J{\'e}r{\^o}me Malick, and Massih-Reza
+  Amini.
+\newblock A delay-tolerant proximal-gradient algorithm for distributed
+  learning.
+\newblock In {\em International Conference on Machine Learning}, pages
+  3587--3595. PMLR, 2018.
+
+\bibitem{agarwal2011distributed}
+Alekh Agarwal and John~C Duchi.
+\newblock Distributed delayed stochastic optimization.
+\newblock In {\em Proceedings of the 24th International Conference on Neural
+  Information Processing Systems}, pages 873--881, 2011.
+
+\bibitem{feyzmahdavian2016asynchronous}
+Hamid~Reza Feyzmahdavian, Arda Aytekin, and Mikael Johansson.
+\newblock An asynchronous mini-batch algorithm for regularized stochastic
+  optimization.
+\newblock {\em IEEE Transactions on Automatic Control}, 61(12):3740--3754,
+  2016.
+
+\bibitem{arjevani2020tight}
+Yossi Arjevani, Ohad Shamir, and Nathan Srebro.
+\newblock A tight convergence analysis for stochastic gradient descent with
+  delayed updates.
+\newblock In {\em Algorithmic Learning Theory}, pages 111--132. PMLR, 2020.
+
+\bibitem{chord}
+Hari Balakrishnan, M~Frans Kaashoek, David Karger, Robert Morris, and Ion
+  Stoica.
+\newblock Looking up data in p2p systems.
+\newblock {\em Communications of the ACM}, 46(2):43--48, 2003.
+
+\bibitem{kaplan1974application}
+Seymour Kaplan.
+\newblock Application of programs with maximin objective functions to problems
+  of optimal resource allocation.
+\newblock {\em Operations Research}, 22(4):802--807, 1974.
+
+\bibitem{andersen}
+Erling~D. Andersen and Knud~D. Andersen.
+\newblock The mosek interior point optimizer for linear programming: An
+  implementation of the homogeneous algorithm.
+\newblock In {\em Applied Optimization}, pages 197--232. Springer {US}, 2000.
+
+\bibitem{MLSYS2019_d09bf415}
+Anand Jayarajan, Jinliang Wei, Garth Gibson, Alexandra Fedorova, and Gennady
+  Pekhimenko.
+\newblock Priority-based parameter propagation for distributed dnn training.
+\newblock In A.~Talwalkar, V.~Smith, and M.~Zaharia, editors, {\em Proceedings
+  of Machine Learning and Systems}, volume~1, pages 132--145, 2019.
+
+\end{thebibliography}

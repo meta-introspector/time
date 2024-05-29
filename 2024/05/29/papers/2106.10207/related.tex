@@ -1,0 +1,56 @@
+\section{Related work}\label{sect:related}
+
+\subsection{Distributed training}\label{sect:related_distributed}
+
+In this work, we focus on distributed data-parallel training, where each device runs forward and backward pass of the entire model on a subset of training examples. While there are many alternative techniques~\cite{huang2019gpipe,shazeer2017outrageously,zero}, data-parallel is still the most popular strategy. Even the model-parallel approaches for extremely large models rely on data parallelism at the top level~\cite{zero,megatron2,switch}.
+
+Training on multiple nodes was first implemented with parameter server (PS)~\cite{ps}. This training strategy relies on a dedicated node that stores model parameters and executes optimization steps using the gradients sent by workers. 
+In turn, worker nodes iteratively download the latest version of model parameters from the server, compute gradients and submit them back to the PS. This strategy is easy to implement and use, but it has an unavoidable bottleneck: the entire system performance is limited by the network throughput of a single server. Since then, the scientific community proposed numerous extensions to PS that alleviate the bottleneck by reducing the communication load~\cite{deepgradientcompression,localsgd_first,Stich18local,koloskova2020decentralized,li2020acceleration}, introducing asynchronous updates~\cite{recht2011hogwild,projectadam} or training with multiple servers~\cite{sharded_ps_first, byteps}.
+
+% A recent extension of this method, called BytePS~\cite{byteps}, is particularly relevant in the context of our work: its authors propose to use several CPU-only parameter servers to balance the network load across the nodes. The adaptive algorithm proposed in our work can obtain this architecture as a special case given the communication capabilities of each participant; we elaborate on this result in Section~\ref{sect:method_algorithm}. 
+
+The issue of uneven communication load has also inspired the development and widespread adoption of another group of methods that rely on All-Reduce for gradient averaging~\cite{goyal2017accurate,mikami2019massively,lamb}. All-Reduce is a family of collective operations that allow nodes to efficiently aggregate (e.g. average) their local vectors and distribute the result across all devices~\cite{ringallreduce,mpich_rabenseifner,torus_allreduce}. Unlike parameter servers, All-Reduce assigns equal roles to all devices, making it easier to scale to a large number of homogeneous workers.
+
+The popularity of AR-SGD sparked many practical applications for different scenarios. One particularly relevant application is elastic training~\cite{pytorch_elastic,elastic_horovod}, which allows the user to add or remove workers at any point without interrupting the training run.
+While this bears a lot of similarity with collaborative training, we have found that elastic training systems are designed around global state synchronization, which makes them highly dependent on the homogeneity of the workers and their network connectivity. The overall efficiency is bounded by the performance of the lowest-performing node; as a result, introducing even a single low-bandwidth participant to such systems reduces the training speed by orders of magnitude.
+
+Seeking to avoid the need for synchronization and centralized orchestration, the research community has developed decentralized training algorithms. These algorithms can be broadly divided into two categories: directly passing updates between peers~\cite{sgp,slowmo} or running All-Reduce in small alternating groups~\cite{moshpit,wagma}. Compared to PS and All-Reduce, both categories provide a greater degree of fault tolerance but often require more steps to converge due to delayed updates~\cite{dp_sgd,wagma}.
+
+Most practical use cases of the above techniques take place in HPC or cloud conditions, but there is one notable exception. In Federated Learning, multiple parties train a shared model on decentralized privacy-sensitive data that cannot be shared between devices~\cite{FedLearningOriginal}. For that reason, federated learning algorithms prioritize data privacy over training efficiency, often leaving most of the compute resources unused~\cite{FedLearningAtScale,FedLearningDecentralized}. For a more detailed overview of Federated Learning, refer to Appendix~\ref{appendix:related_federated}.
+
+
+
+\subsection{Volunteer Computing}\label{sect:related_volunteer}
+
+Volunteer computing (VC) is a paradigm of distributed computing where people donate the idle time of their desktops, smartphones, and other personal devices to solve a computationally hard problem collectively. This approach has seen successful applications in bioinformatics, physics and other scientific areas~\cite{larson_crowd, folding_covid, lhc_at_home, seti_at_home, qmc_at_home, folding_timeline,einstein_at_home}.
+
+In all these applications, volunteer computing allows researchers to access vast computational resources. In Folding@home, over 700,000 volunteers have collectively contributed 2.43 exaFLOPs of compute to COVID-19 research in April of 2020~\cite{folding_exaflop_2}. Another project named BOINC (Berkeley Open Infrastructure for Network Computing) brings together 41.548 petaFLOPs from over 790,000 active computers as of 17 March 2020~\cite{anderson2004boinc}. Volunteer computing systems were also the first ``supercomputers'' to reach 1 petaFLOP and 1 exaFLOP barriers~\cite{folding_exaflop_2, folding_petaflop}. These results became possible due to the contributions of a broad range of devices from high-end workstations to smartphones and even gaming consoles~\cite{folding_ps3}.
+
+Unfortunately, this compute diversity is also the main limitation of VC. Any volunteer computing system should be able to run on a wide range of available hardware and maintain integrity even if some participants disconnect. Furthermore, the resources available to a project can vary over time, as most volunteers are only sharing their hardware when it is unused. Finally, volunteer devices are interconnected with a shared high latency network at typical home internet connection speeds.
+
+As a result, there were only a few successful attempts to apply volunteer computing to machine learning workloads. One such project is MLC@Home~\cite{clemens2021mlds}, which relies on volunteers to train many small independent models. 
+This specific problem can be solved with no direct communication between participants. By contrast, distributed training of a single model requires significantly more communication and does not allow a natural way to ``restart'' failed jobs. When it comes to distributed training of neural networks, most volunteer computing projects rely on parameter server architectures~\cite{lc0,volunteer_dl_async,atre2021distributed}. As a result, these systems are bounded by the throughput of parameter servers and the memory available on the weakest GPU. The only notable exception is Learning@home~\cite{hivemind_dmoe}, which uses expert parallelism to train larger models spanning multiple computers; however, this approach has only been tested in simulated conditions.
+
+% ,   beating the world most powerful supercomputers achieving record breaking 2.43 exaflops in April of 2020. 
+% The main advantage of volunteer computing is 
+%  revealed the promising potential of volunteer computing systems
+% By reason of the worldwide lockdowns, due to the COVID-19, volunteer computing gaining increasing popularity, projects like Folding@Home revealed the promising potential of VC systems, beating the world most powerfull supercomputers achieving record breaking 2.43 exaflops in April of 2020. Actually, it is the first computing system ever reached exaflop speed. [With the help of 700000 volunteers donated their home PC for this research project, folding@home has become the first computing system ever crossed exaflop barrier. Moreover, some of the past research projects made with folding@home utilized not only home PC but playstation3 and android smartphones.] Another known example of VC system is Berkeley Open Infrastructure for Network Computing (BOINC) allows volunteers to donate computers while they are not using them. BOINC brings together about 137,805 active participants and 791,443 active computers (hosts) worldwide processing on average 41.548 PetaFLOPS as of 17 March 2020 [COPYPASTE LINE].
+
+
+% Speaking of a design of volunteer computing system it should be able to handle following limitations:
+% • Fault tolerance. It is expected that most of voluteers are sharing their personal computing power while not using it, hence we can not rely on any node as it may become unavailable at any time. 
+% • Hardware heterogeneity.
+% • High latency, low throughput.
+
+% \begin{itemize}
+%     \item volunteer computing offers a LOT of flops
+%     \item prior art: folding/seti@home, 3 collaborative papers on DL
+%     \item volunteer computing is principally different from other setups
+%     \item Problem 1: highly heterogeneous hardware, network availability, latency, NAT
+%     \item Problem 2: hardware failures, network failures, IP changes, 
+%     \item mention: some of the peers may be malicious, but that's another story
+%     \item Problem 3: peers join and leave all the time, but algorithms need stable conditions
+%     \item None of the strategies above can deal with volunteer computing. Explain why.
+% \end{itemize}
+% \vspace{100px}
+

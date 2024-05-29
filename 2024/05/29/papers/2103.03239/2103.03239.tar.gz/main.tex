@@ -1,0 +1,222 @@
+\documentclass[letterpaper]{article}
+
+
+\usepackage[final,nonatbib]{neurips_2021}
+
+
+
+
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{hyperref}       %
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+\usepackage{xcolor}         %
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs} %
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amssymb, amsthm, latexsym}
+\usepackage{multirow}
+\usepackage{wrapfig}
+
+
+\usepackage{algorithm,algorithmic}
+
+
+
+\usepackage{enumitem}
+\usepackage{caption}
+\setlist[itemize]{itemsep=0pt}
+
+
+\newcommand{\Exp}{\mathbf{E}}
+\newcommand{\Prob}{\mathbf{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\eqdef}{\stackrel{\text{def}}{=}}
+\newcommand{\ve}[2]{\left\langle #1 , #2 \right\rangle}
+\def\<#1,#2>{\left\langle #1,#2\right\rangle}
+
+\usepackage{thmtools}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{remark}{Remark}[section]
+
+
+
+
+
+\newcommand\tagthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand{\argmin}{\mathop{\arg\!\min}}
+
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cZ}{{\cal Z}}
+\newcommand{\Var}{\mathrm{Var}}
+
+\newcommand{\mA}{{\bf A}}
+\newcommand{\mB}{{\bf B}}
+\newcommand{\mC}{{\bf C}}
+\newcommand{\mE}{{\bf E}}
+\newcommand{\mF}{{\bf F}}
+\newcommand{\mG}{{\bf G}}
+\newcommand{\mH}{{\bf H}}
+\newcommand{\mI}{{\bf I}}
+\newcommand{\mJ}{{\bf J}}
+\newcommand{\mK}{{\bf K}}
+\newcommand{\mL}{{\bf L}}
+\newcommand{\mM}{{\bf M}}
+\newcommand{\mN}{{\bf N}}
+\newcommand{\mO}{{\bf O}}
+\newcommand{\mP}{{\bf P}}
+\newcommand{\mQ}{{\bf Q}}
+\newcommand{\mR}{{\bf R}}
+\newcommand{\mS}{{\bf S}}
+\newcommand{\mT}{{\bf T}}
+\newcommand{\mU}{{\bf U}}
+\newcommand{\mV}{{\bf V}}
+\newcommand{\mW}{{\bf W}}
+\newcommand{\mX}{{\bf X}}
+\newcommand{\mY}{{\bf Y}}
+\newcommand{\mZ}{{\bf Z}}
+
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\cnorm}{\omega}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\VV}{\mathbb{V}}
+
+\newcommand{\prox}{\mathop{\mathrm{prox}}\nolimits}
+\newcommand{\proxR}{\prox_{\gamma R}}
+\newcommand{\proxkR}{\prox_{\gamma^k R}}
+\newcommand{\mean}{\overline}
+\newcommand{\sumin}{\sum_{i=1}^n}
+
+
+\newcommand{\Mod}[1]{\ \mathrm{mod}\ #1}
+
+\title{Moshpit SGD: Communication-Efficient\\ Decentralized Training\\ on Heterogeneous Unreliable Devices}
+
+\author{%
+  Max Ryabinin\thanks{Equal contribution. Correspondence to \texttt{mryabinin0@gmail.com}.} \\
+  Yandex, Russia\\
+  HSE University, Russia\\
+  \And
+  Eduard Gorbunov\footnotemark[1]\\
+  MIPT, Russia\\
+  HSE University, Russia\\
+  Yandex, Russia\\
+  \And
+  Vsevolod Plokhotnyuk\\
+  Yandex, Russia\\
+  HSE University, Russia\\
+  \And
+  Gennady Pekhimenko\\
+  University of Toronto, Canada\\
+  Vector Institute, Canada
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Training deep neural networks on large datasets can often be accelerated by using multiple compute nodes. 
+This approach, known as distributed training, can utilize hundreds of computers via specialized message-passing protocols such as Ring All-Reduce.
+However, running these protocols at scale requires reliable high-speed networking that is only available in dedicated clusters.
+In contrast, many real-world applications, such as federated learning and cloud-based distributed training, operate on unreliable devices with unstable network bandwidth.
+As a result, these applications are restricted to using parameter servers or gossip-based averaging protocols.
+In this work, we lift that restriction by proposing Moshpit All-Reduce --- an iterative averaging protocol that exponentially converges to the global average.
+We demonstrate the efficiency of our protocol for distributed optimization with strong theoretical guarantees.
+The experiments show 1.3x speedup for ResNet-50 training on ImageNet compared to competitive gossip-based strategies and 1.5x speedup when training ALBERT-large on preemptible compute nodes.
+\end{abstract}
+
+\input{intro.tex}
+
+\input{related.tex}
+
+\input{method.tex}
+
+\input{experiments.tex}
+
+\vspace{-6pt}
+\section{Conclusion and future work}
+\vspace{-4pt}
+In this work, we propose Moshpit All-Reduce, a decentralized averaging protocol intended for distributed optimization in unstable and network-constrained environments. It has favorable theoretical properties when compared to gossip-based approaches and achieves considerable speedups in distributed training for image classification and masked language modeling.
+
+Our approach was primarily designed for cloud-based training and federated learning, as well as for distributed training on unreliable instances; future work might explore additional settings, such as collaborative training of neural networks.
+Another potential research direction is to study the interactions of Moshpit All-Reduce with other methods that improve communication efficiency of distributed optimization, such as gradient compression.
+Finally, the idea of arranging All-Reduce nodes into groups can be improved to address specific issues that may arise in practice, such as the varying number of workers and their geographical distribution. 
+
+\vspace{-6pt}
+\section*{Acknowledgements}
+\vspace{-4pt}
+We would like to thank Anastasia Koloskova, Liudmila Prokhorenkova and Anton Osokin for helpful feedback and discussions. We are also grateful to the anonymous reviewers for their suggestions on improving the paper. Finally, we would like to thank Dmitry Afanasiev, Vladimir Aliev, Anand Jayarajan and Michael Solotky for their suggestions on the technical aspects of our study. 
+This project was supported in
+part by the Canada Foundation for Innovation JELF grant,
+NSERC Discovery grant, AWS Machine Learning Research
+Award, and Facebook Faculty Research Award. The paper was also partially supported by by a grant for research centers in the field of artificial intelligence, provided by the Analytical Center for the Government of the Russian Federation in accordance with the subsidy agreement (agreement identifier 000000D730321P5Q0002) and the agreement with the Moscow Institute of Physics and Technology dated November 1, 2021 No. 70-2021-00138. The computational resources for the experiments were provided by the Amazon Research Awards program and Yandex.
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+
+
+
+
+
+
+
+
+
+\clearpage
+\part*{Supplementary Material}
+\appendix
+
+\input{cloud_costs.tex}
+
+\input{post_related.tex}
+
+\input{proofs_mixing.tex}
+
+\input{proofs_opt.tex}
+
+\input{matchmaking.tex}
+\input{load_balancing}
+
+\input{detailed_setup}
+
+\input{extra_plots}
+
+\end{document}

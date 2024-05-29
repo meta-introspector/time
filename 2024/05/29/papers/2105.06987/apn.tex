@@ -1,0 +1,115 @@
+\section{Emulating Ensembles via Autoregressive Prior Networks}
+While ensemble methods give a theoretically meaningful approach to modelling uncertainty, they can be prohibitively computationally expensive for many real applications. This is even more true for large auto-regressive models like Transformers~\cite{attentionisallyouneed,vgg-transformer}. One approach 
+
+Here we consider how to generalize distribution distillation to auto-regressive structured predictions models, yielding Sequence Ensemble Distributions Distillation (SEnD$^2$). Unlike, ensembles of classification models, which can be interpreted as samples from implicit conditional distribution over discrete output distributions, ensembles of auto-regressive models can be interpreted as samples of prefix-trees samples from a distribution over prefix-trees conditioned on the input $\bm{x}f$. Unfortunately, it is not possible to explicitly parameterize such a distribution in practice. However, it was shown in ~\cite{malinin-structured-2020}, ensemble-combination should be done at the token, not sequence level for improved prediction and uncertainty estimation. The reason being that an 'atomic' component of an auto-regressive model is an unstructured prediction of the next token $y_l$ given a context $\bm{y}_{<l}$ and input $\bm{x}$, and all further prefix-tree structure arises out of the combination of these predictions. Ensembles of auto-regressive models can therefore be interpreted a samples from a distribution over output distributions conditioned on the input and the context.
+\begin{empheq}{align}
+\big\{{\tt P}(y_l | \bm{y}_{<l}, \bm{x} ; \bm{\theta}^{(m)} )\big\}_{m=1}^M \rightarrow&\ {\tt p}(\bm{\pi}_l | \bm{y}_{<l},\bm{x};\bm{\hat \phi})
+\end{empheq}
+
+% One approach to decreasing the computational load is \emph{knowledge distillation} or \emph{ensemble distillation}~\cite{hinton2015distilling}. Here one or more models are distilled into a single, potentially smaller model. Knowledge Distillation has also been applied to structured predictions models~\cite{sequence-knowledge-distillation}, where auto-regressive models were distilled by maximizing the probability of the predicted hypotheses of a teacher model. A range of other models considered minimizing the KL-divergence between the conditional distributions of the teacher model (or mean conditional distributions) and a student model~\cite{sequence-distillation,ctc-distillation,asr-distillation1,asr-distillation2}. 
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{L}_{\tt SEnD}(\bm{\phi},\mathcal{D}_{\tt ens}) =&\  -\mathbb{E}_{{\tt \hat p}(\bm{x},\bm{y}_l)}\Big[{\tt KL}\big[\mathbb{E}_{{\tt q}(\bm{\theta})}[{\tt  p}(y_l|\bm{y}_{<l},\bm{x},\bm{\theta})]\ ||\ {\tt p}(y_l | \bm{y}_{<l}, \bm{x};\bm{\phi})\big] \Big]
+% \end{split}
+% \label{eqn:end-loss1}
+% \end{empheq}
+
+We now consider how to emulate an ensemble of auto-regressive models using a Prior Networks. Consider an \emph{autoregressive} Prior Network (APN) ${\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \theta})$ which yields a distribution over output distributions $\bm{\pi}_l =\ \left[{\tt P}(y_l=\omega_1),\cdots,{\tt P}(y_l=\omega_K) \right]^{{\tt T}}$ at every time-step. This model is defined as follows:
+Given this model, Token-level BMA, unlike sequence-level BMA, can be straightforwardly emulated as follows:
+\begin{empheq}{align}
+\begin{split}
+{\tt P}(\bm{y}|  \bm{x}, \mathcal{D}) =&\ \prod_{l=1}^L \mathbb{E}_{{\tt q}(\bm{\theta})}\Big[{\tt P}(y_l | \bm{y}_{<l},  \bm{x}, \bm{\theta})\Big] \approx \prod_{l=1}^L \mathbb{E}_{{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \phi})}[{\tt P}(y_l|\bm{\pi}_l)] =\ {\tt P}(\bm{y}| \bm{x}; \bm{\hat \phi})
+\end{split}\label{eqn:emulation}
+\end{empheq}
+
+In this work we consider a model which yields a Dirichlet distribution at each time-step:
+\begin{empheq}{align}
+\begin{split}
+{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \phi}) =&\ {\tt Dir}(\bm{\pi} | \bm{\hat \alpha}^{(l)}),\quad \bm{\hat \alpha}^{(l)} =\ \bm{f}(\bm{y}_{<l},\bm{x};\bm{\hat \phi}),\quad \hat \alpha_c^{(l)} > 0,\ \hat \alpha_0^{(l)} = \sum_{c=1}^K \hat \alpha_c^{(l)}
+\end{split}
+\label{eqn:DPN1}
+\end{empheq}
+
+
+
+Let's examine how given this model we can obtain measures of sequence-level \emph{total} and \emph{knowledge} uncertainty. \emph{Total Uncertainty} will be given by the sequence-level entropy.
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat H}\big[{\tt P}(\bm{y}| \bm{x}; \bm{\hat \phi})\big] =&\ \frac{1}{L} \mathbb{E}_{{\tt P}(\bm{y}| \bm{x}; \bm{\hat \phi})}\big[{\tt P}(\bm{y}| \bm{x}; \bm{\hat \phi})\big] =\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l}| \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat H}\big[{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \bm{\hat \phi})\big] \big]
+\end{split}\label{eqn:product-of-expectations}
+\end{empheq}
+
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{\hat I}[\bm{y},\bm{\theta}|\bm{x}]  =&\ \frac{1}{L}\sum_{l=1}^L\mathbb{E}_{{\tt q}(\bm{\theta})}\big[\mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\theta})}\big[{\tt KL}[{\tt P}(y_l| \bm{y}_{<l}, \bm{x};  \bm{\theta}\|{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \mathcal{D})]\big]\big]  \\
+% \approx&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x};  \mathcal{D})}\big[\mathbb{E}_{{\tt q}(\bm{\theta})}\big[{\tt KL}[{\tt P}(y_l| \bm{y}_{<l}, \bm{x};  \bm{\theta}\|{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \mathcal{D})]\big]\big]  \\
+% \approx&\   \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathbb{E}_{{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \theta})}\big[{\tt KL}[{\tt P}(y_l|\bm{\pi}_l)\| {\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \bm{\hat \phi}]\big]\big] \\
+% =&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat I}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat I}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+% \end{split}\label{eqn:apn-sequence-mi}
+% \end{empheq}
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{\hat K}[\bm{y},\bm{\theta}|\bm{x}]  \approx&\  \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x} \mathcal{D})}\big[\mathcal{\hat K}[y_l,\bm{\theta}|\bm{y}_{<l}, \bm{x}]\big] \\
+% \approx&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat K}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat K}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+% \end{split}\label{eqn:apn-sequence-mi}
+% \end{empheq}
+% \begin{empheq}{align}
+% \begin{split}
+% \mathcal{\hat M}[\bm{y},\bm{\theta}|\bm{x}]  =&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \mathcal{D})}\big[\mathbb{E}_{{\tt q}(\bm{\theta})}\big[{\tt KL}[{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \mathcal{D}\|{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \bm{\theta})]\big]\big]  \\
+% \approx&\   \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathbb{E}_{{\tt p}(\bm{\pi}_l | \bm{y}_{<l}, \bm{x};\bm{\hat \theta})}\big[{\tt KL}[{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \bm{\hat \phi}\|{\tt P}(y_l|\bm{\pi}_l)]\big]\big] \\
+% =&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat M}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat M}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+% \end{split}\label{eqn:apn-sequence-mkl}
+% \end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat I}[\bm{y},\bm{\theta}|\bm{x}] \approx&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat I}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat I}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+\end{split}\label{eqn:apn-sequence-mi}
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat K}[\bm{y},\bm{\theta}|\bm{x}] \approx&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat K}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat K}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+\end{split}\label{eqn:apn-sequence-mi}
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat M}[\bm{y},\bm{\theta}|\bm{x}] \approx&\ \frac{1}{L}\sum_{l=1}^L \mathbb{E}_{{\tt P}(\bm{y}_{<l} | \bm{x}; \bm{\hat \phi})}\big[\mathcal{\hat M}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}]\big] =\ \mathcal{\hat M}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]
+\end{split}\label{eqn:apn-sequence-mkl}
+\end{empheq}
+
+
+
+\subsection{Monte-Carlo Approximation}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat H}^{(S)}\big[{\tt P}(\bm{y}| \bm{x}; \bm{\hat \phi})\big] \approx&\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L \mathcal{\hat H}\big[{\tt P}(y_l| \bm{y}_{<l}, \bm{x}; \bm{\hat \phi})\big],\quad   \bm{y}_{<l}^{(s)} \in  \bm{y}^{(s)} \sim {\tt P}(\bm{y} | \bm{x}; \bm{\hat \phi})
+\\
+=&\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L\Big[-\sum_{k=1}^K \frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\ln\frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\Big]
+\end{split}\label{eqn:product-of-expectations}
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+&\mathcal{\hat I}^{(S)}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]  =\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L \mathcal{\hat I}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}],\quad   \bm{y}_{<l}^{(s)} \in  \bm{y}^{(s)} \sim {\tt P}(\bm{y} | \bm{x}; \bm{\hat \phi}) \\
+&\ = \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L\Big[-\sum_{k=1}^K \frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\ln\frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}} + \sum_{k=1}^K \frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\big(\psi(\hat \alpha_k^{(sl)}+1) - \psi(\hat \alpha_0^{(sl)}+1)\big)\Big]
+\end{split}\label{eqn:apn-sequence-mi}
+\end{empheq}
+
+\begin{empheq}{align}
+\begin{split}
+\mathcal{\hat K}^{(S)}[\bm{y},\bm{\pi}_{1:L}|\bm{x}]  \approx&\  \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L \mathcal{\hat K}[y_l,\bm{\pi}_l|\bm{y}_{<l}^{(s)}, \bm{x}],\quad   \bm{y}_{<l}^{(s)} \in  \bm{y}^{(s)} \sim {\tt P}(\bm{y} | \bm{x}; \bm{\hat \phi})\\
+=&\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L \frac{K-1}{\hat \alpha_0^{sl}}
+\end{split}\label{eqn:apn-sequence-mi}
+\end{empheq}
+
+
+
+\begin{empheq}{align}
+\begin{split}
+ \mathcal{\hat M}^{(S)}[\bm{y},\bm{\pi}_{1:L}|\bm{x}] \approx&\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L \mathcal{\hat M}[y_l,\bm{\pi}_l|\bm{y}_{<l}, \bm{x}],\quad   \bm{y}_{<l}^{(s)} \in  \bm{y}^{(s)} \sim {\tt P}(\bm{y} | \bm{x}; \bm{\hat \phi})\\
+=&\ \frac{1}{SL}\sum_{s=1}^S\sum_{l=1}^L\Big[-\sum_{k=1}^K \frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\big(\psi(\hat \alpha_k^{(sl)}) - \psi(\hat \alpha_0^{(sl)})\big) +\sum_{k=1}^K \frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\ln\frac{\hat \alpha_k^{(sl)}}{\hat \alpha_0^{(sl)}}\Big] 
+\end{split}\label{eqn:apn-sequence-mkl}
+\end{empheq}

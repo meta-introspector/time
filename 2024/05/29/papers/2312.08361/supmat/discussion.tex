@@ -1,0 +1,31 @@
+\section{Limitations and broader impact}\label{sect:discussion}
+
+\paragraph{Privacy.} A key limitation of our approach is that servers hosting the first model blocks may use their inputs to recover client data. Thus, users working with \textit{sensitive} data should limit their clients to only use trusted servers or, alternatively, set up their own isolated network using our software. For example, if multiple research labs or small companies have access to a specific private dataset and want to process it with a large language model, they may set up an isolated distributed network hosting this model to get a better inference speed, compared to running the model independently.
+
+In the future, this limitation may be addressed in future work using secure multi-party computing~\citep{evans2018pragmatic} or privacy-preserving hardware~\citep{nvidia-privacy}.
+
+\paragraph{Motivating contributors.}
+Since people using the client are not required to run a server, our system may experience an imbalance between supply (peers who dedicate GPUs to serve model layers) and demand (peers using the servers to perform inference or fine-tuning for their own needs).
+
+One way to encourage users to serve model blocks would be to introduce a system of incentives: peers running servers would earn \textit{reward points}, which can be spent on high-priority inference and fine-tuning or exchanged for other rewards. To implement this, we can run a few \textit{validator peers} that periodically traverse all available servers and issue reward points to their owners.
+
+\paragraph{Security.}
+We assume that servers in our system are run by many independent parties. In practice, some of them may turn out to be faulty and return incorrect outputs instead of the actual results of forward and backward passes. This may happen due to a malicious intent to influence other people's outputs or, when rewards are introduced (as described above), to earn a reward for serving layers without actually performing the calculations.
+
+To address this issue, we can extend the validator peers, so that they periodically test servers with random requests of different types and ban them if they respond with incorrect outputs (possibly, revoking their rewards). The validator requests should be difficult to distinguish from requests of typical users, so that malicious servers cannot pretend to be honest to the validators but send wrong outputs to other peers. While this approach still leaves a chance of receiving wrong outputs, it allows to eventually expose and penalize the faulty servers.
+
+Finally, clients may reduce the probability of getting faulty outputs by running their data through multiple disjoint chains of servers simultaneously and comparing the outputs against each other.
+
+\paragraph{Broader impact.}
+This work introduces a general-purpose algorithm for decentralized inference and fine-tuning of large models, aiming to simplify access to the latest research in deep learning and provide an alternative way to efficiently run LLMs without high-end hardware. We do not envision any direct negative impacts from our research, since models that can be hosted with our system are already widely available and may be used via APIs, offloading, or other means.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+\begin{figure*}[tb]
+\begin{minipage}{0.56\textwidth}
+
+\vspace{-10px}
+\begin{algorithm}[H]
+  \caption{Generating sequence, client-side code}
+  \label{alg:main}
+\begin{algorithmic}[1]
+  \REQUIRE prefix\_tokens, embeddings, known\_servers
+  \STATE generated\_sequence = list()
+  \STATE cache = dictionary()
+  \STATE streams = dictionary()
+  \STATE chain = find\_best\_chain(known\_servers)
+
+  \FOR{$\text{server} \in \text{chain}$}
+    
+    \STATE streams[server] = {\color{blue}rpc\_inference}(server)
+    \STATE cache[server] = list()
+  \ENDFOR
+  \STATE
+  \STATE inputs = embeddings(prefix\_tokens)
+  \WHILE{should\_continue(generated\_sequence)}
+    \STATE tail\_servers = copy(chain)
+    \WHILE{not empty(tail\_servers)}
+      \STATE server = tail\_servers.pop\_left()
+      \STATE \textbf{try:}
+      \STATE \hspace{16px} \(\triangleright\) Attempt normal inference
+      \STATE \hspace{16px} outputs = streams[server].send(inputs)
+      \STATE \hspace{16px} cache[server].append(inputs)
+      \STATE \hspace{16px} inputs = outputs
+
+      \STATE \textbf{catch} ServerFailed:
+      \STATE \hspace{16px} \(\triangleright\) Replace the failed server
+      \STATE \hspace{16px} streams.pop(server).close()
+      \STATE \hspace{16px} past\_inputs = cache.pop(server)
+      \STATE \hspace{16px} new\_servers = {\color{blue}replace\_failed\_server}(
+      \STATE \hspace{16px} \hspace{16px} server, past\_inputs, cache, 
+      \STATE \hspace{16px} \hspace{16px} streams, known\_servers)
+      \STATE \hspace{16px} chain.replace(server, new\_servers)
+      \STATE \hspace{16px} tail\_servers.push\_left(new\_servers)
+      
+    \ENDWHILE
+    \STATE
+    \STATE logits = compute\_logits(outputs, embeddings)
+    \STATE next\_token = choose\_next(logits) \COMMENT{e.g. greedy}
+    \STATE generated\_sequence.append(next\_token)
+    \STATE inputs = embeddings(next\_token)
+  \ENDWHILE
+  \STATE
+  \FOR{$\text{server} \in \text{chain}$}
+    \STATE streams[server].close()
+  \ENDFOR
+
+  \STATE \textbf{return} generated\_sequence
+
+\end{algorithmic}
+\end{algorithm}
+\vspace{-18px}
+\end{minipage}\hspace{8px}
+\begin{minipage}{0.42\textwidth}
+
+\vspace{-10px}
+\begin{algorithm}[H]
+  \caption{{\color{blue}rpc\_inference}(server)}
+  \label{alg:rpc}
+\begin{algorithmic}[1]
+  \REQUIRE local\_layers, stream
+  \STATE cache = dictionary()
+  \FOR{$\text{layer} \in \text{local\_layers}$}
+    \STATE cache[layer] = make\_empty()
+  \ENDFOR
+
+  \WHILE{not stream.closed()}
+    \STATE inputs = stream.receive()
+    \FOR{$\text{layer} \in \text{local\_layers}$}
+      \STATE past\_kv = cache[layer]
+      \STATE inputs, new\_kv = forward(
+      \STATE \hspace{16px} layer, inputs, past\_kv)
+      \STATE cache[layer].append(new\_kv)
+    \ENDFOR
+    \STATE stream.send(inputs)
+  \ENDWHILE
+  
+\end{algorithmic}
+\end{algorithm}
+\vspace{-18px}
+\begin{algorithm}[H]
+  \caption{{\color{blue}replace\_failed\_server}(...)}
+  \label{alg:replace}
+\begin{algorithmic}[1]
+  \REQUIRE server, inputs, cache, streams, known\_servers
+  \STATE known\_servers.ban(server)
+  \STATE missing\_layers = get\_layers(server)
+  \STATE chains = select\_by\_layer(
+  \STATE \hspace{8px} known\_servers, missing\_layers)
+  \STATE chain = find\_best\_chain(chains)
+  \STATE replacements = list()
+  \WHILE{not empty(chain)}
+    \STATE \hspace{-4px} s = chain.pop\_left()
+    \STATE \hspace{-4px} \textbf{try:}
+    \STATE \hspace{4px} streams[s] {=} {\color{blue}rpc\_inference}(s)
+    \STATE \hspace{4px} outputs = streams[s].send(inputs)
+    \STATE \hspace{4px} replacements.append(s)
+    \STATE \hspace{4px} cache[s] = inputs
+    \STATE \hspace{4px} missing\_layers.pop(get\_layers(s))
+    \STATE \hspace{4px} inputs = outputs
+    \STATE \hspace{-4px} \textbf{catch} FailedRPC:
+    \STATE \hspace{4px} known\_servers.ban(s)
+    \STATE \hspace{4px} chains = select\_by\_layer(
+    \STATE \hspace{12px} chains, missing\_layers)
+    \STATE \hspace{4px} chain = find\_best\_chain(chains)
+  \ENDWHILE
+  \STATE \textbf{return} chain
+\end{algorithmic}
+\end{algorithm}
+\vspace{-18px}\end{minipage}
+\vspace{-5pt}
+\end{figure*}

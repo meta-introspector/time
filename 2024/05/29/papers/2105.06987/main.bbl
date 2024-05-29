@@ -1,0 +1,191 @@
+\begin{thebibliography}{10}
+
+\bibitem{dietterich2000ensemble}
+Thomas~G. Dietterich,
+\newblock ``Ensemble methods in machine learning,''
+\newblock in {\em Proceedings of the First International Workshop on Multiple
+  Classifier Systems}, Berlin, Heidelberg, 2000, MCS '00, p. 1–15,
+  Springer-Verlag.
+
+\bibitem{ashukha2020pitfalls}
+Arsenii Ashukha, Alexander Lyzhov, Dmitry Molchanov, and Dmitry Vetrov,
+\newblock ``Pitfalls of in-domain uncertainty estimation and ensembling in deep
+  learning,''
+\newblock in {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{trust-uncertainty}
+Yaniv Ovadia, Emily Fertig, Jie Ren, Zachary Nado, D~Sculley, Sebastian
+  Nowozin, Joshua~V Dillon, Balaji Lakshminarayanan, and Jasper Snoek,
+\newblock ``Can you trust your model's uncertainty? evaluating predictive
+  uncertainty under dataset shift,''
+\newblock {\em Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem{deepensemble2017}
+B.~Lakshminarayanan, A.~Pritzel, and C.~Blundell,
+\newblock ``{Simple and Scalable Predictive Uncertainty Estimation using Deep
+  Ensembles},''
+\newblock in {\em Proc. Conference on Neural Information Processing Systems
+  (NIPS)}, 2017.
+
+\bibitem{malinin-thesis}
+Andrey Malinin,
+\newblock {\em Uncertainty Estimation in Deep Learning with application to
+  Spoken Language Assessment},
+\newblock Ph.D. thesis, University of Cambridge, 2019.
+
+\bibitem{batchbald}
+Andreas Kirsch, Joost van Amersfoort, and Yarin Gal,
+\newblock ``Batchbald: Efficient and diverse batch acquisition for deep
+  bayesian active learning,'' 2019.
+
+\bibitem{gal-adversarial}
+L.~{Smith} and Y.~{Gal},
+\newblock ``{Understanding Measures of Uncertainty for Adversarial Example
+  Detection},''
+\newblock in {\em UAI}, 2018.
+
+\bibitem{malinin-rkl-2019}
+Andrey Malinin and Mark~JF Gales,
+\newblock ``Reverse kl-divergence training of prior networks: Improved
+  uncertainty and adversarial robustness,''
+\newblock 2019.
+
+\bibitem{hinton2015distilling}
+Geoffrey Hinton, Oriol Vinyals, and Jeff Dean,
+\newblock ``Distilling the knowledge in a neural network,'' 2015,
+\newblock arXiv:1503.02531.
+
+\bibitem{malinin-endd-2019}
+Andrey Malinin, Bruno Mlodozeniec, and Mark~JF Gales,
+\newblock ``Ensemble distribution distillation,''
+\newblock in {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{hydra}
+Linh Tran, Bastiaan~S. Veeling, Kevin Roth, Jakub {\'S}wi{\k{a}}tkowski,
+  Joshua~V. Dillon, Jasper Snoek, Stephan Mandt, Tim Salimans, Sebastian
+  Nowozin, and Rodolphe Jenatton,
+\newblock ``Hydra: Preserving ensemble diversity for model distillation,''
+  2020.
+
+\bibitem{mdd}
+Xixin Wu, Kate~M Knill, Mark~JF Gales, and Andrey Malinin,
+\newblock ``Ensemble approaches for uncertainty in spoken language
+  assessment,''
+\newblock {\em Proc. Interspeech 2020}, pp. 3860--3864, 2020.
+
+\bibitem{malinin2020regression}
+Andrey Malinin, Sergey Chervontsev, Ivan Provilkov, and Mark Gales,
+\newblock ``Regression prior networks,''
+\newblock {\em arXiv preprint arXiv:2006.11590}, 2020.
+
+\bibitem{minka2000estimating}
+Thomas Minka,
+\newblock ``Estimating a dirichlet distribution,'' 2000.
+
+\bibitem{malinin-structured-2020}
+Andrey Malinin and Mark Gales,
+\newblock ``Uncertainty in structured prediction,''
+\newblock {\em arXiv preprint arXiv:2002.07650}, 2020.
+
+\bibitem{resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun,
+\newblock ``Deep residual learning for image recognition,''
+\newblock in {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, 2016, pp. 770--778.
+
+\bibitem{imagenet}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei,
+\newblock ``{ImageNet: A Large-Scale Hierarchical Image Database},''
+\newblock in {\em CVPR09}, 2009.
+
+\bibitem{touvron2019FixRes}
+Hugo Touvron, Andrea Vedaldi, Matthijs Douze, and Herv{\'e} J{\'e}gou,
+\newblock ``Fixing the train-test resolution discrepancy,''
+\newblock in {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  2019.
+
+\bibitem{goyal2018accurate}
+Priya Goyal, Piotr Dollár, Ross Girshick, Pieter Noordhuis, Lukasz Wesolowski,
+  Aapo Kyrola, Andrew Tulloch, Yangqing Jia, and Kaiming He,
+\newblock ``Accurate, large minibatch sgd: Training imagenet in 1 hour,'' 2018.
+
+\bibitem{albumentations}
+A.~Buslaev, A.~Parinov, E.~Khvedchenya, V.~I. Iglovikov, and A.~A. Kalinin,
+\newblock ``{Albumentations: fast and flexible image augmentations},''
+\newblock {\em ArXiv e-prints}, 2018.
+
+\bibitem{zhang2018residual}
+Hongyi Zhang, Yann~N. Dauphin, and Tengyu Ma,
+\newblock ``Residual learning without normalization via better
+  initialization,''
+\newblock in {\em International Conference on Learning Representations}, 2019.
+
+\bibitem{rezero}
+Thomas Bachlechner, Huanru~Henry Majumder, Bodhisattwa Prasad~Mao, Garrison~W.
+  Cottrell, and Julian McAuley,
+\newblock ``Rezero is all you need: Fast convergence at large depth,''
+\newblock in {\em arXiv}, 2020.
+
+\bibitem{hendrycks2021nae}
+Dan Hendrycks, Kevin Zhao, Steven Basart, Jacob Steinhardt, and Dawn Song,
+\newblock ``Natural adversarial examples,''
+\newblock {\em CVPR}, 2021.
+
+\bibitem{hendrycks2019robustness}
+Dan Hendrycks and Thomas Dietterich,
+\newblock ``Benchmarking neural network robustness to common corruptions and
+  perturbations,''
+\newblock {\em Proceedings of the International Conference on Learning
+  Representations}, 2019.
+
+\bibitem{hendrycks2020many}
+Dan Hendrycks, Steven Basart, Norman Mu, Saurav Kadavath, Frank Wang, Evan
+  Dorundo, Rahul Desai, Tyler Zhu, Samyak Parajuli, Mike Guo, Dawn Song, Jacob
+  Steinhardt, and Justin Gilmer,
+\newblock ``The many faces of robustness: A critical analysis of
+  out-of-distribution generalization,''
+\newblock {\em arXiv preprint arXiv:2006.16241}, 2020.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin,
+\newblock ``Attention is all you need,'' 2017.
+
+\bibitem{sennrich-etal-2016-neural}
+Rico Sennrich, Barry Haddow, and Alexandra Birch,
+\newblock ``Neural machine translation of rare words with subword units,''
+\newblock in {\em Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, Berlin, Germany, Aug.
+  2016, pp. 1715--1725, Association for Computational Linguistics.
+
+\bibitem{ott2018scaling}
+Myle Ott, Sergey Edunov, David Grangier, and Michael Auli,
+\newblock ``Scaling neural machine translation,''
+\newblock {\em arXiv preprint arXiv:1806.00187}, 2018.
+
+\bibitem{adam}
+Diederik~P. Kingma and Jimmy Ba,
+\newblock ``{Adam: A Method for Stochastic Optimization},''
+\newblock in {\em Proc. 3rd International Conference on Learning
+  Representations (ICLR)}, 2015.
+
+\bibitem{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu,
+\newblock ``Bleu: a method for automatic evaluation of machine translation,''
+\newblock in {\em Proceedings of the 40th annual meeting of the Association for
+  Computational Linguistics}, 2002, pp. 311--318.
+
+\bibitem{sacrebleu}
+Matt Post,
+\newblock ``A call for clarity in reporting {BLEU} scores,''
+\newblock in {\em Proceedings of the Third Conference on Machine Translation:
+  Research Papers}, Belgium, Brussels, Oct. 2018, pp. 186--191, Association for
+  Computational Linguistics.
+
+\bibitem{librispeech}
+Vassil Panayotov, Guoguo Chen, Daniel Povey, and Sanjeev Khudanpur,
+\newblock ``Librispeech: an asr corpus based on public domain audio books,''
+\newblock in {\em 2015 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}. IEEE, 2015, pp. 5206--5210.
+
+\end{thebibliography}
