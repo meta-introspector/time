@@ -13053,3 +13053,12 @@
 [submodule "2024/05/28/depot"]
 	path = 2024/05/28/depot
 	url = https://cl.tvl.fyi/depot
+[submodule "2024/05/28/gun"]
+	path = 2024/05/28/gun
+	url = https://github.com/amark/gun
+[submodule "2024/05/28/graph-data-science"]
+	path = 2024/05/28/graph-data-science
+	url = https://github.com/neo4j/graph-data-science
+[submodule "2024/05/28/neo4j"]
+	path = 2024/05/28/neo4j
+	url = https://github.com/neo4j/neo4j
