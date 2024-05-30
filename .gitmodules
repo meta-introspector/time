@@ -13077,3 +13077,24 @@
 [submodule "2024/05/29/guix-config"]
 	path = 2024/05/29/guix-config
 	url = https://github.com/meta-introspector/guix-config.git
+[submodule "2024/05/29/subspace"]
+	path = 2024/05/29/subspace
+	url = https://github.com/subspace/subspace
+[submodule "2024/05/29/acl2"]
+	path = 2024/05/29/acl2
+	url = https://github.com/acl2/acl2
+[submodule "2024/05/30/haskell-proofs"]
+	path = 2024/05/30/haskell-proofs
+	url = https://github.com/alexpeits/haskell-proofs
+[submodule "2024/05/30/M2-Planet"]
+	path = 2024/05/30/M2-Planet
+	url = https://github.com/oriansj/M2-Planet
+[submodule "2024/05/30/tinycc"]
+	path = 2024/05/30/tinycc
+	url = https://gitlab.com/janneke/tinycc
+[submodule "2024/05/30/mes"]
+	path = 2024/05/30/mes
+	url = https://git.savannah.gnu.org/git/mes.git
+[submodule "2024/05/30/mescc-tools"]
+	path = 2024/05/30/mescc-tools
+	url = https://git.savannah.nongnu.org/git/mescc-tools.git
