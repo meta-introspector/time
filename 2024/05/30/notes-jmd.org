@@ -1,0 +1,16 @@
+* proofs as types.
+
+We can consider the type of types, UU the universe of universes.
+The types can related in paths of type level or dependent type programming
+in haskell for example.
+We can convert unimath proofs to ocaml and haskell via metacoq extractions.
+we can train a detailed model to reverse this extraction,
+a automatic reverse extractor that is trained on the extraction.
+We can use this method to convert values from trained model weights
+using symbolic regression and program generation.
+These generated programs can be apprehended as types.
+the types can be bound into the proof engine.
+this shows the connection of a value learned by a neural network
+and a values held in the proof engine as a constructed proof in metacoq.
+That means we can also train a neural network to reverse this process.
+we can go from unimath proofs to templates to create preptrained neural networks and back.
