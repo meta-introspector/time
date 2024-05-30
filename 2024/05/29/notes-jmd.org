@@ -154,46 +154,6 @@ we can include the github docs in our bib
 Certainly! We can integrate the OODA loop (Observe, Orient, Decide, Act) into the system schema to ensure that the DAO (Decentralized Autonomous Organization), AI, and users collectively reach a consensus. Here's how we can modify the code:
 
 ```scheme
-(define (ooda-loop)
-  ;; Implement the OODA loop for consensus building
-  (define (observe)
-    ;; Observe changes and inputs from the environment
-    #;... )
-
-  (define (orient)
-    ;; Orient the system based on observations and inputs
-    #;... )
-
-  (define (decide)
-    ;; Decide on a course of action based on observations and orientation
-    #;... )
-
-  (define (act)
-    ;; Act on the decision made, updating the system accordingly
-    #;... )
-  
-  ;; Execute the OODA loop
-  (define (execute-ooda-loop)
-    (observe)
-    (orient)
-    (decide)
-    (act))
-  
-  ;; Return the OODA loop execution procedure
-  execute-ooda-loop)
-
-;; Include the OODA loop in the plan execution
-(define (execute-plan)
-  (operating-system
-    ;; Include system services and extensions
-    (services
-      (append
-        (list (implementation-driver)
-              (configuration-management)
-              (testing-and-deployment)
-              (community-engagement)
-              (ooda-loop)) ;; Include the OODA loop
-        %base-services)))) ;; Include base system services
 ```
 
 With the OODA loop integrated into the system schema, the system can continuously observe changes and inputs from the environment, orient itself based on these observations, decide on a course of action, and act accordingly. This iterative process ensures that the DAO, AI, and users collectively reach a consensus and adapt to changing conditions effectively.
