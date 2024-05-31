@@ -13101,3 +13101,18 @@
 [submodule "2024/05/30/bootstrap-seeds"]
 	path = 2024/05/30/bootstrap-seeds
 	url = https://github.com/oriansj/bootstrap-seeds
+[submodule "2024/05/31/subtensor"]
+	path = 2024/05/31/subtensor
+	url = https://github.com/opentensor/subtensor
+[submodule "2024/05/31/swarms"]
+	path = 2024/05/31/swarms
+	url = https://github.com/kyegomez/swarms
+[submodule "2024/05/31/swarms-cloud"]
+	path = 2024/05/31/swarms-cloud
+	url = https://github.com/kyegomez/swarms-cloud
+[submodule "2024/05/31/substrate-template-generator"]
+	path = 2024/05/31/substrate-template-generator
+	url = https://github.com/paritytech/substrate-template-generator
+[submodule "2024/05/31/substrate"]
+	path = 2024/05/31/substrate
+	url = https://github.com/paritytech/substrate

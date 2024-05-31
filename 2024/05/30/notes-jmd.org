@@ -14,3 +14,100 @@ this shows the connection of a value learned by a neural network
 and a values held in the proof engine as a constructed proof in metacoq.
 That means we can also train a neural network to reverse this process.
 we can go from unimath proofs to templates to create preptrained neural networks and back.
+
+* godel number.
+
+We can consider a godel number as a function that creates a UU.
+each number is a different universe. some are equivalent.
+each seed grows by following the execution path.
+We can think of the fastest growing number as one possible one.
+That would be a qualification or a critera. Which of the godel numbers
+are the fastest growing? We can analyse them. This gets into the decidability
+because we have to execute them but we can sort them by growth for each step.
+
+
+Now the tools like qemu, containers and docker, strace/ptrace, perf, criu are all related
+to linux and operating systems.
+We can create services for these to be operated via protobuf.
+
+
+We can pull in the protobufs from clarifai and hivemind for example as inspiration.
+We can look at commune and bittensor.
+
+So now we can look at the linux api for filesystems and drivers.
+it is fed function pointers.
+these function pointers are effectively godel numbers, but constrained in type.
+we can read data from them and those contain more data that we can interpret.
+
+All of this can be used by ai agents and proof engines
+to evaluate and confirm the guix bootstrap code.
+
+We can see a proof engine as a guix package we can expose.
+So any nix/guix derivation can be seen as a smart contract to execute
+or build it it using another tool as another smart contract to the compiler.
+
+Template haskell allows the user to reach into the compiler and extract out
+the compiler's rich terms for the user data.
+
+These terms can be used to meta-program or add in code to the compiler at compile time
+or extract out data for runtime, so it allows for transfer and extraction.
+
+The LLVM and gcc compilers allow for this as well via plugins and others.
+
+Now we can imagine we can extract metacoq to haskell and use template haskell
+to extract that into C++.
+We can create c++ metaprogramming templates and use them from scheme.
+
+wrapping guile internals in scheme and using them to access the internals.
+wrapping program X internals via C++ and then in scheme and
+using them to expose the internals.
+This creates new functions to extract data.
+now this data can be seen as a form or morphism determined by the code
+or godel number that created it. The function is a godel number and
+its reflection is another. There is a relationship between the function and its source code and its extraction,
+that relationship is a morphism or path in rewrite along a higher order system.
+We can see them all different forms of the same unitary object that is wobbling
+in many dimensions.
+
+The linux kernel perf user probes allows for approximation
+of the code of the user in the kernel space,
+the user probes are reflections of the process in a new viewpoint and
+can allocate memory.
+
+
+The GPU perf model probes allows for approximation
+of the code of the model in the GPU space,
+the GPU probes are reflections of the process of inference in a new viewpoint and
+can allocate memory to store the results. They are
+woven into an exsiting model by sampling results non intrusively by
+studying of the function and determining with help of the programmer
+via hints and heuristics how to augment the runtime of an existing model.
+
+We can build this in rust and use type level meta programming to derive
+the changes to the code to add in montioring.
+
+We can expose the rust via guile, we can use rust to reason about guix.
+we can use LLMs to reason about guile repl runtime.
+https://github.com/guile-rs/guile-rs
+
+We can expose guix guile via rust as a repl subnet for bittensor.
+
+We can create an LLM guile interface.
+https://packages.guix.gnu.org/packages/guile-openai/
+
+We can use perf on rust
+
+https://rustc-dev-guide.rust-lang.org/profiling/with_perf.html
+
+Here is a rust kernel
+https://github.com/Qubasa/perf_kernel
+
+Rust supports kernel perf data, needs more help, we can help.
+https://docs.rs/perf-event/latest/perf_event/
+
+Rust supports protobuf:
+https://github.com/stepancheg/rust-protobuf
+
+There is a rewriter for protobuf.
+./28/rewrite/rewrite-protobuf
+
