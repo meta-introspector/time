@@ -1041,7 +1041,7 @@
 	url = https://github.com/polywrap/PolyGPT.git
 [submodule "2023/09/24/ai-ticket"]
 	path = 2023/09/24/ai-ticket
-	url = https://github.com/gventuri/pandas-ai/
+	url = https://github.com/jmikedupont2/ai-ticket
 [submodule "2023/09/06/streamlit-example"]
 	path = 2023/09/06/streamlit-example
 	url = https://github.com/streamlit/streamlit-example
@@ -13116,3 +13116,47 @@
 [submodule "2024/05/31/substrate"]
 	path = 2024/05/31/substrate
 	url = https://github.com/paritytech/substrate
+[submodule "2024/05/31/openai-cli"]
+	path = 2024/05/31/openai-cli
+	url = https://github.com/peterdemin/openai-cli
+[submodule "2024/05/31/openapi-python-client"]
+	path = 2024/05/31/openapi-python-client
+	url = https://github.com/openapi-generators/openapi-python-client
+[submodule "2024/05/31/cellium-client"]
+	path = 2024/05/31/cellium-client
+	url = https://github.com/Agent-Artificial/cellium-client
+[submodule "2024/05/31/websocket-client"]
+	path = 2024/05/31/websocket-client
+	url = https://github.com/websocket-client/websocket-client
+[submodule "2024/06/01/solver"]
+	path = 2024/06/01/solver
+	url = https://github.com/thoth-station/solver
+[submodule "2024/06/01/guile-gi"]
+	path = 2024/06/01/guile-gi
+	url = https://github.com/spk121/guile-gi
+[submodule "2024/06/01/guix-package-description"]
+	path = 2024/06/01/guix-package-description
+	url = https://gist.github.com/56dcb44f7c3a5c60c4cdf52854712703.git
+[submodule "2024/06/01/scheme-langserver"]
+	path = 2024/06/01/scheme-langserver
+	url = https://github.com/ufo5260987423/scheme-langserver
+[submodule "2024/06/01/ChezScheme"]
+	path = 2024/06/01/ChezScheme
+	url = https://github.com/cisco/ChezScheme
+[submodule "ai-ticket"]
+	url = https://github.com/jmikedupont2/ai-ticket
+[submodule "2024/06/01/websocket-client"]
+	path = 2024/06/01/websocket-client
+	url = https://github.com/websocket-client/websocket-client.git
+[submodule "2024/06/01/websocat"]
+	path = 2024/06/01/websocat
+	url = https://github.com/vi/websocat
+[submodule "2024/06/02/FlameGraph"]
+	path = 2024/06/02/FlameGraph
+	url = https://github.com/brendangregg/FlameGraph
+[submodule "2024/06/03/jira-cli"]
+	path = 2024/06/03/jira-cli
+	url = https://github.com/ankitpokhrel/jira-cli
+[submodule "2024/06/04/neurolisp"]
+	path = 2024/06/04/neurolisp
+	url = https://github.com/vicariousgreg/neurolisp
