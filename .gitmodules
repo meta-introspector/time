@@ -13160,3 +13160,39 @@
 [submodule "2024/06/04/neurolisp"]
 	path = 2024/06/04/neurolisp
 	url = https://github.com/vicariousgreg/neurolisp
+[submodule "2024/06/04/KeyBERT"]
+	path = 2024/06/04/KeyBERT
+	url = https://github.com/MaartenGr/KeyBERT
+[submodule "2024/06/04/kserve"]
+	path = 2024/06/04/kserve
+	url = https://github.com/kserve/kserve
+[submodule "2024/06/04/pydantic"]
+	path = 2024/06/04/pydantic
+	url = https://github.com/pydantic/pydantic
+[submodule "2024/06/04/fastapi"]
+	path = 2024/06/04/fastapi
+	url = https://github.com/tiangolo/fastapi
+[submodule "2024/06/04/vllm"]
+	path = 2024/06/04/vllm
+	url = https://github.com/vllm-project/vllm
+[submodule "2024/06/04/gptrust"]
+	path = 2024/06/04/gptrust
+	url = https://github.com/gptrust/gptrust
+[submodule "2024/06/05/chainlite"]
+	path = 2024/06/05/chainlite
+	url = https://github.com/stanford-oval/chainlite
+[submodule "2024/05/26/bacalhau"]
+	path = 2024/05/26/bacalhau
+	url = https://github.com/bacalhau-project/bacalhau
+[submodule "2024/05/26/crewAI"]
+	path = 2024/05/26/crewAI
+	url = https://github.com/joaomdmoura/crewAI
+[submodule "2024/05/26/langroid"]
+	path = 2024/05/26/langroid
+	url = https://github.com/langroid/langroid
+[submodule "2024/06/05/discord-llm-chatbot"]
+	path = 2024/06/05/discord-llm-chatbot
+	url = https://github.com/jakobdylanc/discord-llm-chatbot
+[submodule "2024/06/05/pandas-ai"]
+	path = 2024/06/05/pandas-ai
+	url = https://github.com/Sinaptik-AI/pandas-ai
