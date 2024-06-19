@@ -10,4 +10,4 @@ today() {
     pushd $TODAY
 }
 
-
+today
