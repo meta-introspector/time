@@ -8088,9 +8088,6 @@
 [submodule "2024/05/22/tflint"]
 	path = 2024/05/22/tflint
 	url = https://github.com/terraform-linters/tflint
-[submodule "2024/05/22/terraform-ls"]
-	path = 2024/05/22/terraform-ls
-	url = https://github.com/hashicorp/terraform-ls
 [submodule "2024/05/22/rune"]
 	path = 2024/05/22/rune
 	url = https://github.com/CeleritasCelery/rune
@@ -13412,3 +13409,75 @@
 [submodule "2024/06/19/rover"]
 	path = 2024/06/19/rover
 	url = https://github.com/im2nguyen/rover
+[submodule "2024/06/22/langtrace"]
+	path = 2024/06/22/langtrace
+	url = https://github.com/Scale3-Labs/langtrace
+[submodule "2024/06/22/RFCs"]
+	path = 2024/06/22/RFCs
+	url = https://github.com/polkadot-fellows/RFCs
+[submodule "2024/06/23/typeshed"]
+	path = 2024/06/23/typeshed
+	url = https://github.com/python/typeshed.git
+[submodule "2024/06/24/zkLLVM"]
+	path = 2024/06/24/zkLLVM
+	url = https://github.com/NilFoundation/zkLLVM
+[submodule "2024/06/24/proof-market-toolchain"]
+	path = 2024/06/24/proof-market-toolchain
+	url = https://github.com/NilFoundation/proof-market-toolchain
+[submodule "2024/06/24/n8n"]
+	path = 2024/06/24/n8n
+	url = https://github.com/n8n-io/n8n
+[submodule "2024/06/26/tools"]
+	path = 2024/06/26/tools
+	url = https://github.com/polkadot-js/tools
+[submodule "2024/06/26/awesome-bittensor"]
+	path = 2024/06/26/awesome-bittensor
+	url = https://github.com/cetiny/awesome-bittensor
+[submodule "2024/06/27/llm-ls"]
+	path = 2024/06/27/llm-ls
+	url = https://github.com/huggingface/llm-ls
+[submodule "2024/06/27/lsp-cli"]
+	path = 2024/06/27/lsp-cli
+	url = https://github.com/valentjn/lsp-cli
+[submodule "2024/06/27/uniteai"]
+	path = 2024/06/27/uniteai
+	url = https://github.com/freckletonj/uniteai
+[submodule "2024/06/28/docker-plex"]
+	path = 2024/06/28/docker-plex
+	url = https://github.com/linuxserver/docker-plex/
+[submodule "2024/06/28/rv8"]
+	path = 2024/06/28/rv8
+	url = https://github.com/michaeljclark/rv8
+[submodule "2024/06/28/crellinor-rust"]
+	path = 2024/06/28/crellinor-rust
+	url = https://github.com/erikdoe/crellinor-rust
+[submodule "2024/06/28/tree-sitter-rust"]
+	path = 2024/06/28/tree-sitter-rust
+	url = https://github.com/tree-sitter/tree-sitter-rust
+[submodule "2024/06/28/qemu"]
+	path = 2024/06/28/qemu
+	url = https://gitlab.com/qemu-project/qemu/
+[submodule "2024/06/28/zero_ecs"]
+	path = 2024/06/28/zero_ecs
+	url = https://github.com/JohanNorberg/zero_ecs
+[submodule "2024/06/28/renode"]
+	path = 2024/06/28/renode
+	url = https://github.com/renode/renode
+[submodule "2024/06/28/qira"]
+	path = 2024/06/28/qira
+	url = https://github.com/geohot/qira
+[submodule "2024/06/28/cannoli"]
+	path = 2024/06/28/cannoli
+	url = https://github.com/MarginResearch/cannoli
+[submodule "2024/06/30/hal"]
+	path = 2024/06/30/hal
+	url = https://github.com/jramapuram/hal
+[submodule "2024/06/30/guile-rs"]
+	path = 2024/06/30/guile-rs
+	url = https://github.com/guile-rs/guile-rs
+[submodule "2024/06/30/rust-guile"]
+	path = 2024/06/30/rust-guile
+	url = https://gitlab.com/slondr/rust-guile
+[submodule "2024/06/30/cargo-binutils"]
+	path = 2024/06/30/cargo-binutils
+	url = https://github.com/rust-embedded/cargo-binutils
