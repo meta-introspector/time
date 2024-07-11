@@ -13481,3 +13481,135 @@
 [submodule "2024/06/30/cargo-binutils"]
 	path = 2024/06/30/cargo-binutils
 	url = https://github.com/rust-embedded/cargo-binutils
+[submodule "2024/06/30/libguile-llvm"]
+	path = 2024/06/30/libguile-llvm
+	url = https://github.com/bamboo/libguile-llvm
+[submodule "2024/06/30/nanopass-framework-scheme"]
+	path = 2024/06/30/nanopass-framework-scheme
+	url = https://github.com/nanopass/nanopass-framework-scheme
+[submodule "2024/06/30/scheme-to-llvm"]
+	path = 2024/06/30/scheme-to-llvm
+	url = https://github.com/akeep/scheme-to-llvm
+[submodule "2024/07/01/reflect-cpp"]
+	path = 2024/07/01/reflect-cpp
+	url = https://github.com/getml/reflect-cpp
+[submodule "2024/07/02/M2libc"]
+	path = 2024/07/02/M2libc
+	url = https://github.com/oriansj/M2libc.git
+[submodule "2024/07/02/bigloo"]
+	path = 2024/07/02/bigloo
+	url = https://github.com/manuel-serrano/bigloo
+[submodule "2024/07/02/cyclone"]
+	path = 2024/07/02/cyclone
+	url = https://github.com/justinethier/cyclone
+[submodule "2024/07/03/remake"]
+	path = 2024/07/03/remake
+	url = https://github.com/rocky/remake
+[submodule "2024/07/03/guile-docker"]
+	path = 2024/07/03/guile-docker
+	url = https://github.com/d11wtq/guile-docker
+[submodule "2024/07/03/tinygc"]
+	path = 2024/07/03/tinygc
+	url = https://github.com/ivmai/tinygc
+[submodule "2024/07/04/bdwgc"]
+	path = 2024/07/04/bdwgc
+	url = https://github.com/ivmai/bdwgc
+[submodule "2024/07/05/heaptrack"]
+	path = 2024/07/05/heaptrack
+	url = https://github.com/KDE/heaptrack
+[submodule "2024/07/05/perf-class"]
+	path = 2024/07/05/perf-class
+	url = https://github.com/tbarbette/perf-class
+[submodule "2024/07/05/qlora"]
+	path = 2024/07/05/qlora
+	url = https://github.com/artidoro/qlora
+[submodule "2024/07/05/iree-jax"]
+	path = 2024/07/05/iree-jax
+	url = https://github.com/iree-org/iree-jax
+[submodule "2024/07/05/iree-turbine"]
+	path = 2024/07/05/iree-turbine
+	url = https://github.com/iree-org/iree-turbine
+[submodule "2024/07/05/unsloth"]
+	path = 2024/07/05/unsloth
+	url = https://github.com/unslothai/unsloth
+[submodule "2024/07/05/LoftQ"]
+	path = 2024/07/05/LoftQ
+	url = https://github.com/yxli2123/LoftQ
+[submodule "2024/07/05/ninja"]
+	path = 2024/07/05/ninja
+	url = https://github.com/ninja-build/ninja.git
+[submodule "2024/07/05/langchain-with-fine-tuned-llama-2-using-qlora-and-peft"]
+	path = 2024/07/05/langchain-with-fine-tuned-llama-2-using-qlora-and-peft
+	url = https://github.com/duncanodhis/langchain-with-fine-tuned-llama-2-using-qlora-and-peft
+[submodule "2024/07/05/ipex-llm"]
+	path = 2024/07/05/ipex-llm
+	url = https://github.com/intel-analytics/ipex-llm
+[submodule "2024/07/05/genai-gemma-qlora-vertex"]
+	path = 2024/07/05/genai-gemma-qlora-vertex
+	url = https://github.com/rafaelsf80/genai-gemma-qlora-vertex
+[submodule "2024/07/05/huggingface_transformers"]
+	path = 2024/07/05/huggingface_transformers
+	url = https://github.com/waikato-llm/huggingface_transformers
+[submodule "2024/07/06/guile-bootstrap"]
+	path = 2024/07/06/guile-bootstrap
+	url = https://huggingface.co/datasets/introspector/guile-bootstrap
+[submodule "2024/07/07/bela-iree-container"]
+	path = 2024/07/07/bela-iree-container
+	url = https://github.com/ezrapierce000/bela-iree-container.git
+[submodule "2024/07/07/tracy"]
+	path = 2024/07/07/tracy
+	url = https://github.com/wolfpld/tracy
+[submodule "2024/07/08/mlc-llm"]
+	path = 2024/07/08/mlc-llm
+	url = https://github.com/mlc-ai/mlc-llm
+[submodule "2024/07/08/Llama-3-8B-Instruct-q0f16-MLC"]
+	path = 2024/07/08/Llama-3-8B-Instruct-q0f16-MLC
+	url = https://huggingface.co/mlc-ai/Llama-3-8B-Instruct-q0f16-MLC
+[submodule "2024/07/09/libflash_attn"]
+	path = 2024/07/09/libflash_attn
+	url = https://github.com/tlc-pack/libflash_attn
+[submodule "2024/07/09/flash-attention"]
+	path = 2024/07/09/flash-attention
+	url = https://github.com/Dao-AILab/flash-attention
+[submodule "2024/07/09/dist-ir"]
+	path = 2024/07/09/dist-ir
+	url = https://github.com/microsoft/dist-ir
+[submodule "2024/07/09/musquared"]
+	path = 2024/07/09/musquared
+	url = https://github.com/bollu/musquared
+[submodule "2024/07/09/torch-mlir"]
+	path = 2024/07/09/torch-mlir
+	url = https://github.com/llvm/torch-mlir
+[submodule "2024/07/09/Adam-Optimization-From-Scratch"]
+	path = 2024/07/09/Adam-Optimization-From-Scratch
+	url = https://github.com/thetechdude124/Adam-Optimization-From-Scratch
+[submodule "2024/07/09/acme"]
+	path = 2024/07/09/acme
+	url = https://github.com/google-deepmind/acme
+[submodule "2024/07/09/iree-experimental"]
+	path = 2024/07/09/iree-experimental
+	url = https://github.com/iree-org/iree-experimental
+[submodule "2024/07/10/mojo"]
+	path = 2024/07/10/mojo
+	url = https://github.com/modularml/mojo
+[submodule "2024/07/10/max"]
+	path = 2024/07/10/max
+	url = https://github.com/modularml/max
+[submodule "2024/07/10/mojo-syntax"]
+	path = 2024/07/10/mojo-syntax
+	url = https://github.com/modularml/mojo-syntax
+[submodule "2024/07/10/llambda"]
+	path = 2024/07/10/llambda
+	url = https://github.com/etaoins/llambda
+[submodule "2024/07/10/sbt"]
+	path = 2024/07/10/sbt
+	url = https://github.com/sbt/sbt
+[submodule "2024/07/10/scala3"]
+	path = 2024/07/10/scala3
+	url = https://github.com/scala/scala3
+[submodule "2024/07/08/dlpack"]
+	path = 2024/07/08/dlpack
+	url = https://github.com/dmlc/dlpack
+[submodule "2024/07/08/dmlc-core"]
+	path = 2024/07/08/dmlc-core
+	url = https://github.com/dmlc/dmlc-core
