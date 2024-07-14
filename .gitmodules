@@ -13613,3 +13613,42 @@
 [submodule "2024/07/08/dmlc-core"]
 	path = 2024/07/08/dmlc-core
 	url = https://github.com/dmlc/dmlc-core
+[submodule "2024/07/11/unilm"]
+	path = 2024/07/11/unilm
+	url = https://github.com/microsoft/unilm
+[submodule "2024/07/11/ArXivQA"]
+	path = 2024/07/11/ArXivQA
+	url = https://github.com/taesiri/ArXivQA
+[submodule "2024/07/11/NeMo"]
+	path = 2024/07/11/NeMo
+	url = https://github.com/NVIDIA/NeMo
+[submodule "2024/07/11/read_paper"]
+	path = 2024/07/11/read_paper
+	url = https://github.com/riron1206/read_paper/
+[submodule "2024/07/11/distilabel"]
+	path = 2024/07/11/distilabel
+	url = https://github.com/argilla-io/distilabel
+[submodule "2024/07/11/gritlm"]
+	path = 2024/07/11/gritlm
+	url = https://github.com/ContextualAI/gritlm
+[submodule "2024/07/11/contrastors"]
+	path = 2024/07/11/contrastors
+	url = https://github.com/nomic-ai/contrastors
+[submodule "2024/07/11/skypilot"]
+	path = 2024/07/11/skypilot
+	url = https://github.com/skypilot-org/skypilot
+[submodule "2024/07/13/scheme-lsp-server"]
+	path = 2024/07/13/scheme-lsp-server
+	url = https://codeberg.org/rgherdt/scheme-lsp-server.git
+[submodule "2024/07/14/scheme-lsp"]
+	path = 2024/07/14/scheme-lsp
+	url = https://github.com/konst-aa/scheme-lsp
+[submodule "2024/07/14/racket-langserver"]
+	path = 2024/07/14/racket-langserver
+	url = https://github.com/jeapostrophe/racket-langserver/
+[submodule "2024/07/14/zls"]
+	path = 2024/07/14/zls
+	url = https://github.com/zigtools/zls
+[submodule "2024/07/14/guile-language-server"]
+	path = 2024/07/14/guile-language-server
+	url = https://github.com/Johni0702/guile-language-server

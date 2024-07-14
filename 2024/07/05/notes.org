@@ -1,0 +1,11 @@
+Idea:
+
+Trace execution for finding attention points using perf.
+Build model on foundational functions.
+Looking at guix, what are the key functions.
+
+Create a stack of pdf files, one per block of functions in a hierarchy dependencies
+that contain all the data needed. 
+
+Lets consider starting with our divergent ideas and how we can reach
+consensus using llms.

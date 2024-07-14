@@ -1,0 +1,40 @@
+* idea
+
+Consider a closed world model where all variables are defined and know.
+
+We have an application that we can run and it does the same thing over again.
+We can trace the steps of the execution and inspect them.
+
+
+Extract a list of logical chunks, and give the count of chunks
+Extract a list of logical chunks, and list the bullet points
+Extract a list of logical chunks, and display chunk number N
+
+We can then look at each chunk of the code and ask:
+
+Explain this.
+Rewrite this into language:
+   python, json, yaml, coq, haskell, ocaml, c++,
+   prolog, scheme, owl ontology, x86 assembly, shell,
+   wasm, emojilang, math, goedel numbers
+
+Extract a list of features from this
+Extract a list of types from this
+Extract a list of propositions from this
+Extract a list of named entities from this
+Extract a list of classes
+Extract a list of functions
+Extract a list of modules
+Extract a list of questions and answers about this code
+Extract a list of dependencies
+Extract a list of prerequisites
+
+In the format : json, yaml, sexpressions, turtle/rdf, dot(graphviz), emojis, godel number, pytorch
+
+
+* implementation
+
+find a guile scheme lsp and apply it to itself.
+
+use lsp interface to traverse the program.
+construct a dag of dependendences

@@ -1,0 +1,47 @@
+* ideas of the day
+
+** starting point for people
+
+Many people ask me what are the key technologies to learn, and they are changing all the time.
+It is hard to commit to a specific thing, because of the fluid nature of the market.
+But let me tell you what I feel is important,
+
+*** Freedom
+
+The freedom to develop without restriction I feel is key,
+if we try to avoid depending on accepting licenses and restrictions
+while if we do have to accept it, we can work to remove them, isolating them into boxes.
+
+
+The things that go against this freedom are :
+
+**** GPU and CPU.
+
+This reliance on GPUS from nvidia and chips from Intel and AMD
+represent one of the biggest strangleholds on our market.
+
+***** nvidia cuda
+
+This is one of the main pain points of development with AI.
+It has all types of restrictions associated with it.
+  
+**** Cloud services.
+***** AWS
+**** Code hosting
+***** Github
+
+**** Networking services
+***** Cloudflare
+***** Verizon fios
+***** Tailscale
+***** DNS services
+
+***** libp2p
+
+
+**** AI inference
+***** Bing copilot
+This is a very good AI service but it also has all types of downsides.
+
+* Computational complexity
+
