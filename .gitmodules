@@ -13652,3 +13652,30 @@
 [submodule "2024/07/14/guile-language-server"]
 	path = 2024/07/14/guile-language-server
 	url = https://github.com/Johni0702/guile-language-server
+[submodule "2024/07/14/language-server-protocol"]
+	path = 2024/07/14/language-server-protocol
+	url = https://github.com/microsoft/language-server-protocol
+[submodule "2024/07/15/flycheck-guile"]
+	path = 2024/07/15/flycheck-guile
+	url = https://github.com/flatwhatson/flycheck-guile
+[submodule "2024/07/15/scheme-json-rpc"]
+	path = 2024/07/15/scheme-json-rpc
+	url = https://codeberg.org/rgherdt/scheme-json-rpc
+[submodule "2024/07/15/guile"]
+	path = 2024/07/15/guile
+	url = https://gitlab.com/emacs-geiser/guile
+[submodule "2024/07/15/tree-sitter-scheme"]
+	path = 2024/07/15/tree-sitter-scheme
+	url = https://github.com/6cdh/tree-sitter-scheme
+[submodule "2024/07/16/resyntax"]
+	path = 2024/07/16/resyntax
+	url = https://github.com/jackfirth/resyntax
+[submodule "2024/07/17/mit-scheme"]
+	path = 2024/07/17/mit-scheme
+	url = https://git.savannah.gnu.org/git/mit-scheme.git
+[submodule "2024/07/17/little-scheme-in-python"]
+	path = 2024/07/17/little-scheme-in-python
+	url = https://github.com/nukata/little-scheme-in-python
+[submodule "2024/07/17/srfi-common"]
+	path = 2024/07/17/srfi-common
+	url = https://github.com/scheme-requests-for-implementation/srfi-common
