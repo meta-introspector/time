@@ -1,0 +1,86 @@
+
+* p2p inference.
+
+The idea of a distributed p2p inference system with
+a model split into blocks of data, each one split potentially horizontally by shards
+where the data flows encrypted from one to the next.
+
+The data from the user is encrypted in a multi-signature transaction so the client
+will have control over which peers are allowed to even take part in the contract.
+
+There is a phase where the prices and volumes are worked out so that each
+node basically has a larger amount of work planned out for delivery in the future.
+This created a derivative futures market for power, network, GPU and CPU where the price of inference
+contains all that.
+
+Some applications be willing to accept slower inference for larger amounts of work
+, say they are processing a large data set like fine tuning on the Wikipedia data set in bulk batches.
+Others might want to pay more for faster inference.
+
+We have a future contract for the delivery of a larger amount of inference in blocks
+so that we achieve maximum utility.
+
+** Sharding
+
+split up the input vector horizontally
+so that it fits optimally into the smallest GPU.
+The size of the shard should fit
+into a network packet and flow without hiccup.
+
+** pipe-lining
+
+Each peer sends the results to the next node in the circuit.
+we don't want send each result back to a coordinator.
+each node buys the results from the previous node,
+taking ownership of the data and decryption it.
+It can then sell the data to the next.
+
+** Verification
+
+Each inference step will sample a subset of weights of inference that will prove
+that the work was done and the data is at hand. This will be requested by the buyer of the data.
+
+** Circuits
+
+Each node takes part in a circuit, a group of nodes that are close to each other in the network
+that form the ability to deliver the entire inference chain.
+This circuit will feed the results forward along the chain.
+Each node will be responsible for validating the results of the previous node.
+The Sharding means that you can have multiple parallel processes for each full inference step.
+
+** Pricing
+
+Each node buys the results from the previous nodes and sells
+them to the next at a higher value.
+each block of inference for each model has a different price and demand.
+
+** ZKP
+
+The zero knowledge proofs for each block can be mined, constructed out of
+knowledge of those blocks, that will create a formula that is calculated along side
+the inference itself, creating a checksum of sorts or interactive validation
+so that the buyer can confirm the work was done and the data is valid.
+
+** queues
+
+we construct queues to move the data efficiently between network cards and the GPU using a pipeline that
+delivers the data just in time to the GPU. This is based on network latency, caching, pipelines.
+
+** IREE/MLIR
+
+using the MLIR compiler we can compile the models into programs to run on different hardware.
+
+** Splitting by token position.
+
+We can also further specialize the network by splitting the results up by which pass.
+Currently the system sends the output of the last block to first block for the next token.
+We can imagine that a miner might specialize in the first token or the Nth token, or
+specialize in the value of a token. This can be good for function calling inferences that
+look at data after say 100 tokens . We can imagine that the caching of the data
+will be more optimal so that cache lines will be more stable for different steps of the inference.
+
+
+** Long term commitment.
+
+By creating these future contracts and paying miners for blocks of work with risk of losing a large amount
+for cheating, we can reduce the risk. 
