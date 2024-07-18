@@ -13679,3 +13679,540 @@
 [submodule "2024/07/17/srfi-common"]
 	path = 2024/07/17/srfi-common
 	url = https://github.com/scheme-requests-for-implementation/srfi-common
+[submodule "2024/07/17/maru"]
+	path = 2024/07/17/maru
+	url = https://github.com/attila-lendvai/maru
+[submodule "2024/07/17/hop"]
+	path = 2024/07/17/hop
+	url = https://github.com/manuel-serrano/hop
+[submodule "2024/07/17/tort"]
+	path = 2024/07/17/tort
+	url = https://github.com/kstephens/tort
+[submodule "2024/07/17/fuel-lang"]
+	path = 2024/07/17/fuel-lang
+	url = https://github.com/mneuroth/fuel-lang
+[submodule "2024/07/17/mes-m2"]
+	path = 2024/07/17/mes-m2
+	url = https://github.com/oriansj/mes-m2
+[submodule "2024/07/17/gambit"]
+	path = 2024/07/17/gambit
+	url = https://github.com/gambit/gambit
+[submodule "2024/07/17/wat-js"]
+	path = 2024/07/17/wat-js
+	url = https://github.com/manuel/wat-js
+[submodule "2024/07/17/Gauche"]
+	path = 2024/07/17/Gauche
+	url = https://github.com/shirok/Gauche
+[submodule "2024/07/17/steel"]
+	path = 2024/07/17/steel
+	url = https://github.com/mattwparas/steel
+[submodule "2024/07/17/mona"]
+	path = 2024/07/17/mona
+	url = https://github.com/higepon/mona
+[submodule "2024/07/17/ol"]
+	path = 2024/07/17/ol
+	url = https://github.com/yuriy-chumak/ol
+[submodule "2024/07/17/gerbv"]
+	path = 2024/07/17/gerbv
+	url = https://github.com/gerbv/gerbv
+[submodule "2024/07/17/impromptu"]
+	path = 2024/07/17/impromptu
+	url = https://github.com/jimm/impromptu
+[submodule "2024/07/17/thunderchez"]
+	path = 2024/07/17/thunderchez
+	url = https://github.com/ovenpasta/thunderchez
+[submodule "2024/07/17/newmoon"]
+	path = 2024/07/17/newmoon
+	url = https://github.com/tonyg/newmoon
+[submodule "2024/07/17/edelib"]
+	path = 2024/07/17/edelib
+	url = https://github.com/edeproject/edelib
+[submodule "2024/07/17/ypsilon"]
+	path = 2024/07/17/ypsilon
+	url = https://github.com/fujita-y/ypsilon
+[submodule "2024/07/17/elk-scheme-mirror"]
+	path = 2024/07/17/elk-scheme-mirror
+	url = https://github.com/cellularmitosis/elk-scheme-mirror
+[submodule "2024/07/17/snow2-client"]
+	path = 2024/07/17/snow2-client
+	url = https://github.com/sethalves/snow2-client
+[submodule "2024/07/17/bug"]
+	path = 2024/07/17/bug
+	url = https://github.com/billsix/bug
+[submodule "2024/07/17/klio"]
+	path = 2024/07/17/klio
+	url = https://github.com/mbenelli/klio
+[submodule "2024/07/17/scheme-macros"]
+	path = 2024/07/17/scheme-macros
+	url = https://github.com/mnieper/scheme-macros
+[submodule "2024/07/17/chj-schemelib"]
+	path = 2024/07/17/chj-schemelib
+	url = https://github.com/pflanze/chj-schemelib
+[submodule "2024/07/18/ikarus"]
+	path = 2024/07/18/ikarus
+	url = https://gitea.scheme.org/conservatory/ikarus
+[submodule "2024/07/18/hy"]
+	path = 2024/07/18/hy
+	url = https://github.com/hylang/hy
+[submodule "2024/07/18/sexp_parser"]
+	path = 2024/07/18/sexp_parser
+	url = https://github.com/realthunder/sexp_parser
+[submodule "2024/07/18/c-sexpr-parser"]
+	path = 2024/07/18/c-sexpr-parser
+	url = https://github.com/benthepoet/c-sexpr-parser
+[submodule "2024/07/18/miniKanren-with-symbolic-constraints"]
+	path = 2024/07/18/miniKanren-with-symbolic-constraints
+	url = https://github.com/webyrd/miniKanren-with-symbolic-constraints
+[submodule "2024/07/18/sfsexp"]
+	path = 2024/07/18/sfsexp
+	url = https://github.com/mjsottile/sfsexp
+[submodule "2024/07/18/clojure-py"]
+	path = 2024/07/18/clojure-py
+	url = https://github.com/drewr/clojure-py
+[submodule "2024/07/18/PyClojure"]
+	path = 2024/07/18/PyClojure
+	url = https://github.com/eigenhombre/PyClojure
+[submodule "2024/07/18/pylisp"]
+	path = 2024/07/18/pylisp
+	url = https://github.com/pavpanchekha/pylisp
+[submodule "2024/07/18/pylisp2"]
+	path = 2024/07/18/pylisp2
+	url = https://github.com/6502/pylisp
+[submodule "2024/07/18/lithp"]
+	path = 2024/07/18/lithp
+	url = https://github.com/fogus/lithp
+[submodule "2024/07/18/scheme"]
+	path = 2024/07/18/scheme
+	url = https://github.com/jordanm/scheme
+[submodule "2024/07/18/schemePy"]
+	path = 2024/07/18/schemePy
+	url = https://github.com/juliusf/schemePy
+[submodule "2024/07/18/pyScheme"]
+	path = 2024/07/18/pyScheme
+	url = https://github.com/xielingwang/pyScheme
+[submodule "2024/07/18/smallscheme"]
+	path = 2024/07/18/smallscheme
+	url = https://github.com/eigenhombre/smallscheme
+[submodule "2024/07/18/readscheme-website"]
+	path = 2024/07/18/readscheme-website
+	url = https://gitea.scheme.org/conservatory/readscheme-website
+[submodule "2024/07/18/schemers-website"]
+	path = 2024/07/18/schemers-website
+	url = https://gitea.scheme.org/conservatory/schemers-website
+[submodule "2024/07/18/conservatory-website"]
+	path = 2024/07/18/conservatory-website
+	url = https://gitea.scheme.org/conservatory/website
+[submodule "2024/07/18/picrin"]
+	path = 2024/07/18/picrin
+	url = https://gitea.scheme.org/conservatory/picrin
+[submodule "2024/07/18/picrin-website"]
+	path = 2024/07/18/picrin-website
+	url = https://gitea.scheme.org/conservatory/picrin-website
+[submodule "2024/07/18/header2scheme-website"]
+	path = 2024/07/18/header2scheme-website
+	url = https://gitea.scheme.org/conservatory/header2scheme-website
+[submodule "2024/07/18/pcs"]
+	path = 2024/07/18/pcs
+	url = https://gitea.scheme.org/conservatory/pcs
+[submodule "2024/07/18/ffigen"]
+	path = 2024/07/18/ffigen
+	url = https://gitea.scheme.org/conservatory/ffigen
+[submodule "2024/07/18/ffigen-website"]
+	path = 2024/07/18/ffigen-website
+	url = https://gitea.scheme.org/conservatory/ffigen-website
+[submodule "2024/07/18/tinyclos"]
+	path = 2024/07/18/tinyclos
+	url = https://gitea.scheme.org/conservatory/tinyclos
+[submodule "2024/07/18/stk"]
+	path = 2024/07/18/stk
+	url = https://gitea.scheme.org/conservatory/stk
+[submodule "2024/07/18/elk"]
+	path = 2024/07/18/elk
+	url = https://gitea.scheme.org/conservatory/elk
+[submodule "2024/07/18/femtolisp"]
+	path = 2024/07/18/femtolisp
+	url = https://gitea.scheme.org/conservatory/femtolisp
+[submodule "2024/07/18/pyscheme"]
+	path = 2024/07/18/pyscheme
+	url = https://github.com/dbian/pyscheme
+[submodule "2024/07/18/calysto_scheme"]
+	path = 2024/07/18/calysto_scheme
+	url = https://github.com/Calysto/calysto_scheme
+[submodule "2024/07/18/schemepy"]
+	path = 2024/07/18/schemepy
+	url = https://github.com/perkinslr/schemepy
+[submodule "2024/07/18/abjad"]
+	path = 2024/07/18/abjad
+	url = https://github.com/Abjad/abjad
+[submodule "2024/07/18/python-ly"]
+	path = 2024/07/18/python-ly
+	url = https://github.com/frescobaldi/python-ly
+[submodule "2024/07/18/metta-morph"]
+	path = 2024/07/18/metta-morph
+	url = https://github.com/trueagi-io/metta-morph
+[submodule "2024/07/18/mys"]
+	path = 2024/07/18/mys
+	url = https://github.com/mys-lang/mys
+[submodule "2024/07/18/iorgen"]
+	path = 2024/07/18/iorgen
+	url = https://github.com/prologin/iorgen
+[submodule "2024/07/18/ruler"]
+	path = 2024/07/18/ruler
+	url = https://github.com/uwplse/ruler
+[submodule "2024/07/18/botlang2"]
+	path = 2024/07/18/botlang2
+	url = https://github.com/BotCenter/botlang2
+[submodule "2024/07/18/skime"]
+	path = 2024/07/18/skime
+	url = https://github.com/pluskid/skime
+[submodule "2024/07/18/antonpriyma-Diploma"]
+	path = 2024/07/18/antonpriyma-Diploma
+	url = https://github.com/antonpriyma/Diploma
+[submodule "2024/07/18/semi-supervised-learning"]
+	path = 2024/07/18/semi-supervised-learning
+	url = https://github.com/trinhtrannp/semi-supervised-learning
+[submodule "2024/07/18/pycket"]
+	path = 2024/07/18/pycket
+	url = https://github.com/vishesh/pycket
+[submodule "2024/07/18/trick"]
+	path = 2024/07/18/trick
+	url = https://github.com/elektito/trick
+[submodule "2024/07/18/skime2"]
+	path = 2024/07/18/skime2
+	url = https://github.com/michaelklishin/skime
+[submodule "2024/07/18/dars"]
+	path = 2024/07/18/dars
+	url = https://github.com/skdamico/dars
+[submodule "2024/07/18/sagittarius-scheme"]
+	path = 2024/07/18/sagittarius-scheme
+	url = https://github.com/ktakashi/sagittarius-scheme
+[submodule "2024/07/18/k-scheme"]
+	path = 2024/07/18/k-scheme
+	url = https://github.com/pmeredit/k-scheme
+[submodule "2024/07/18/Polyglot-code-generator"]
+	path = 2024/07/18/Polyglot-code-generator
+	url = https://github.com/jarble/Polyglot-code-generator
+[submodule "2024/07/18/transpiler"]
+	path = 2024/07/18/transpiler
+	url = https://github.com/jarble/transpiler
+[submodule "2024/07/18/Salvador1223-scheme"]
+	path = 2024/07/18/Salvador1223-scheme
+	url = https://github.com/Salvador1223/scheme/
+[submodule "2024/07/18/gerbil"]
+	path = 2024/07/18/gerbil
+	url = https://github.com/mighty-gerbils/gerbil
+[submodule "2024/07/18/Kawa"]
+	path = 2024/07/18/Kawa
+	url = https://gitlab.com/kashell/Kawa
+[submodule "2024/07/18/mosh"]
+	path = 2024/07/18/mosh
+	url = https://github.com/higepon/mosh
+[submodule "2024/07/18/s7"]
+	path = 2024/07/18/s7
+	url = https://cm-gitlab.stanford.edu/bil/s7
+[submodule "2024/07/18/STklos"]
+	path = 2024/07/18/STklos
+	url = https://github.com/egallesio/STklos
+[submodule "2024/07/18/tr7"]
+	path = 2024/07/18/tr7
+	url = https://gitlab.com/jobol/tr7/
+[submodule "2024/07/18/scheme48"]
+	path = 2024/07/18/scheme48
+	url = https://github.com/tar-mirror/scheme48
+[submodule "2024/07/18/airship-scheme"]
+	path = 2024/07/18/airship-scheme
+	url = https://github.com/lisp-mirror/airship-scheme
+[submodule "2024/07/18/LispyLite"]
+	path = 2024/07/18/LispyLite
+	url = https://github.com/dfuenzalida/LispyLite
+[submodule "2024/07/18/marwood"]
+	path = 2024/07/18/marwood
+	url = https://github.com/strtok/marwood
+[submodule "2024/07/18/btLISP"]
+	path = 2024/07/18/btLISP
+	url = https://github.com/ytaki0801/btLISP
+[submodule "2024/07/18/Minerva"]
+	path = 2024/07/18/Minerva
+	url = https://github.com/surabax/Minerva
+[submodule "2024/07/18/some-scheme-compiler"]
+	path = 2024/07/18/some-scheme-compiler
+	url = https://github.com/simmsb/some-scheme-compiler
+[submodule "2024/07/18/feersum"]
+	path = 2024/07/18/feersum
+	url = https://github.com/iwillspeak/feersum
+[submodule "2024/07/18/apply"]
+	path = 2024/07/18/apply
+	url = https://github.com/the-language/apply
+[submodule "2024/07/18/JSLISP"]
+	path = 2024/07/18/JSLISP
+	url = https://github.com/the-language/JSLISP
+[submodule "2024/07/18/ska-scheme"]
+	path = 2024/07/18/ska-scheme
+	url = https://github.com/AgrYpn1a/ska-scheme
+[submodule "2024/07/18/cl-scheme"]
+	path = 2024/07/18/cl-scheme
+	url = https://github.com/gpapadok/cl-scheme
+[submodule "2024/07/18/lisp-in-small-pieces"]
+	path = 2024/07/18/lisp-in-small-pieces
+	url = https://github.com/gregcman/lisp-in-small-pieces
+[submodule "2024/07/18/inc"]
+	path = 2024/07/18/inc
+	url = https://github.com/jaseemabid/inc
+[submodule "2024/07/18/Animac"]
+	path = 2024/07/18/Animac
+	url = https://github.com/bd4sur/Animac
+[submodule "2024/07/18/compiler-tutorial"]
+	path = 2024/07/18/compiler-tutorial
+	url = https://github.com/carld/compiler-tutorial
+[submodule "2024/07/18/r7expander"]
+	path = 2024/07/18/r7expander
+	url = https://github.com/nyuichi/r7expander
+[submodule "2024/07/18/sharpF"]
+	path = 2024/07/18/sharpF
+	url = https://github.com/false-schemers/sharpF
+[submodule "2024/07/18/wcpl"]
+	path = 2024/07/18/wcpl
+	url = https://github.com/false-schemers/wcpl
+[submodule "2024/07/18/s4iof"]
+	path = 2024/07/18/s4iof
+	url = https://github.com/false-schemers/s4iof
+[submodule "2024/07/18/siof"]
+	path = 2024/07/18/siof
+	url = https://github.com/false-schemers/siof
+[submodule "2024/07/18/vscode-scheme-r7rs"]
+	path = 2024/07/18/vscode-scheme-r7rs
+	url = https://github.com/false-schemers/vscode-scheme-r7rs
+[submodule "2024/07/18/s5iof"]
+	path = 2024/07/18/s5iof
+	url = https://github.com/false-schemers/s5iof
+[submodule "2024/07/18/scp"]
+	path = 2024/07/18/scp
+	url = https://github.com/rtrusso/scp
+[submodule "2024/07/18/braces"]
+	path = 2024/07/18/braces
+	url = https://github.com/certainty/braces
+[submodule "2024/07/18/hydra"]
+	path = 2024/07/18/hydra
+	url = https://github.com/lojikil/hydra
+[submodule "2024/07/18/scheme-to-arm64"]
+	path = 2024/07/18/scheme-to-arm64
+	url = https://github.com/dannypsnl/scheme-to-arm64
+[submodule "2024/07/18/digamma"]
+	path = 2024/07/18/digamma
+	url = https://github.com/lojikil/digamma
+[submodule "2024/07/18/scheme-to-rust"]
+	path = 2024/07/18/scheme-to-rust
+	url = https://github.com/Chriscbr/scheme-to-rust
+[submodule "2024/07/18/metamorph"]
+	path = 2024/07/18/metamorph
+	url = https://github.com/metamorph-scheme/metamorph
+[submodule "2024/07/18/sponge"]
+	path = 2024/07/18/sponge
+	url = https://github.com/helvm/sponge
+[submodule "2024/07/18/jaredforth-scheme"]
+	path = 2024/07/18/jaredforth-scheme
+	url = https://github.com/jaredforth/scheme
+[submodule "2024/07/18/stalin"]
+	path = 2024/07/18/stalin
+	url = https://github.com/barak/stalin
+[submodule "2024/07/18/hawk"]
+	path = 2024/07/18/hawk
+	url = https://github.com/djwatson/hawk
+[submodule "2024/07/18/osc"]
+	path = 2024/07/18/osc
+	url = https://github.com/owainlewis/osc
+[submodule "2024/07/18/scheme_compiler"]
+	path = 2024/07/18/scheme_compiler
+	url = https://github.com/rahulrajaram/scheme_compiler
+[submodule "2024/07/18/scheme-compiler"]
+	path = 2024/07/18/scheme-compiler
+	url = https://github.com/SolomonKritz/scheme-compiler
+[submodule "2024/07/18/sceme"]
+	path = 2024/07/18/sceme
+	url = https://github.com/certainty/sceme
+[submodule "2024/07/18/SchemeStuff"]
+	path = 2024/07/18/SchemeStuff
+	url = https://github.com/CrimsonMartin/SchemeStuff
+[submodule "2024/07/18/pack-lang"]
+	path = 2024/07/18/pack-lang
+	url = https://github.com/cakemanny/pack-lang
+[submodule "2024/07/18/Mice"]
+	path = 2024/07/18/Mice
+	url = https://github.com/minized-lang/Mice
+[submodule "2024/07/18/little-scheme-in-lisp"]
+	path = 2024/07/18/little-scheme-in-lisp
+	url = https://github.com/nukata/little-scheme-in-lisp
+[submodule "2024/07/18/r6rs-lazar"]
+	path = 2024/07/18/r6rs-lazar
+	url = https://github.com/karahobny/r6rs-lazar
+[submodule "2024/07/18/biwascheme"]
+	path = 2024/07/18/biwascheme
+	url = https://github.com/biwascheme/biwascheme
+[submodule "2024/07/18/larceny"]
+	path = 2024/07/18/larceny
+	url = https://github.com/larcenists/larceny
+[submodule "2024/07/18/racket"]
+	path = 2024/07/18/racket
+	url = https://github.com/racket/racket
+[submodule "2024/07/18/vicare"]
+	path = 2024/07/18/vicare
+	url = https://github.com/marcomaggi/vicare
+[submodule "2024/07/18/racr"]
+	path = 2024/07/18/racr
+	url = https://github.com/christoff-buerger/racr
+[submodule "2024/07/18/vchez"]
+	path = 2024/07/18/vchez
+	url = https://github.com/ianatol/vchez
+[submodule "2024/07/18/IronScheme"]
+	path = 2024/07/18/IronScheme
+	url = https://github.com/IronScheme/IronScheme
+[submodule "2024/07/18/HK"]
+	path = 2024/07/18/HK
+	url = https://github.com/JaimieMurdock/HK
+[submodule "2024/07/18/micro-kanren"]
+	path = 2024/07/18/micro-kanren
+	url = https://github.com/JeffreyBenjaminBrown/micro-kanren/
+[submodule "2024/07/18/featherweight"]
+	path = 2024/07/18/featherweight
+	url = https://github.com/Oregu/featherweight
+[submodule "2024/07/18/OCanren"]
+	path = 2024/07/18/OCanren
+	url = https://github.com/PLTools/OCanren
+[submodule "2024/07/18/FicroKanSharp"]
+	path = 2024/07/18/FicroKanSharp
+	url = https://github.com/Smaug123/FicroKanSharp
+[submodule "2024/07/18/Logical"]
+	path = 2024/07/18/Logical
+	url = https://github.com/StrykerKKD/Logical
+[submodule "2024/07/18/chicken-miniKanren"]
+	path = 2024/07/18/chicken-miniKanren
+	url = https://github.com/ThatGeoGuy/chicken-miniKanren
+[submodule "2024/07/18/alphaKanren-revisited"]
+	path = 2024/07/18/alphaKanren-revisited
+	url = https://github.com/WeixiMa/alphaKanren-revisited
+[submodule "2024/07/18/Molog"]
+	path = 2024/07/18/Molog
+	url = https://github.com/acfoltzer/Molog
+[submodule "2024/07/18/racket-qkanren"]
+	path = 2024/07/18/racket-qkanren
+	url = https://github.com/anthonyquizon/racket-qkanren
+[submodule "2024/07/18/kanren"]
+	path = 2024/07/18/kanren
+	url = https://github.com/arsalan0c/kanren
+[submodule "2024/07/18/rank-Kanren"]
+	path = 2024/07/18/rank-Kanren
+	url = https://github.com/azarafrooz/rank-Kanren
+[submodule "2024/07/18/cKanren"]
+	path = 2024/07/18/cKanren
+	url = https://github.com/calvis/cKanren
+[submodule "2024/07/18/rkanren"]
+	path = 2024/07/18/rkanren
+	url = https://github.com/cgswords/rkanren
+[submodule "2024/07/18/core.logic"]
+	path = 2024/07/18/core.logic
+	url = https://github.com/clojure/core.logic
+[submodule "2024/07/18/bkanren"]
+	path = 2024/07/18/bkanren
+	url = https://github.com/donaldsonjw/bkanren
+[submodule "2024/07/18/gerbilog"]
+	path = 2024/07/18/gerbilog
+	url = https://github.com/doyougnu/gerbilog
+[submodule "2024/07/18/microKanren"]
+	path = 2024/07/18/microKanren
+	url = https://github.com/dvberkel/microKanren
+[submodule "2024/07/18/mu-kanren"]
+	path = 2024/07/18/mu-kanren
+	url = https://github.com/fsestini/mu-kanren
+[submodule "2024/07/18/dbKanren"]
+	path = 2024/07/18/dbKanren
+	url = https://github.com/gregr/dbKanren
+[submodule "2024/07/18/async-mu-kanren"]
+	path = 2024/07/18/async-mu-kanren
+	url = https://github.com/halgari/async-mu-kanren
+[submodule "2024/07/18/hKanren"]
+	path = 2024/07/18/hKanren
+	url = https://github.com/iomeone/hKanren
+[submodule "2024/07/18/microKanren-DLS-16"]
+	path = 2024/07/18/microKanren-DLS-16
+	url = https://github.com/jasonhemann/microKanren-DLS-16
+[submodule "2024/07/18/microkanren"]
+	path = 2024/07/18/microkanren
+	url = https://github.com/justinmimbs/microkanren
+[submodule "2024/07/18/MiniKanrenT"]
+	path = 2024/07/18/MiniKanrenT
+	url = https://github.com/jvranish/MiniKanrenT
+[submodule "2024/07/18/FsLogic"]
+	path = 2024/07/18/FsLogic
+	url = https://github.com/kurtschelfthout/FsLogic
+[submodule "2024/07/18/gerbilKanren"]
+	path = 2024/07/18/gerbilKanren
+	url = https://github.com/kwannoel/gerbilKanren
+[submodule "2024/07/18/uKanren"]
+	path = 2024/07/18/uKanren
+	url = https://github.com/kwannoel/uKanren
+[submodule "2024/07/18/houkanren"]
+	path = 2024/07/18/houkanren
+	url = https://github.com/kyagrd/houkanren
+[submodule "2024/07/18/staticKanren"]
+	path = 2024/07/18/staticKanren
+	url = https://github.com/lackhoa/staticKanren
+[submodule "2024/07/18/minikanren-ocaml"]
+	path = 2024/07/18/minikanren-ocaml
+	url = https://github.com/manshengyang/minikanren-ocaml
+[submodule "2024/07/18/Racket-miniKanren"]
+	path = 2024/07/18/Racket-miniKanren
+	url = https://github.com/miniKanren/Racket-miniKanren
+[submodule "2024/07/18/miniKanren"]
+	path = 2024/07/18/miniKanren
+	url = https://github.com/miniKanren/miniKanren
+[submodule "2024/07/18/clpsmt-miniKanren"]
+	path = 2024/07/18/clpsmt-miniKanren
+	url = https://github.com/namin/clpsmt-miniKanren
+[submodule "2024/07/18/staged-miniKanren"]
+	path = 2024/07/18/staged-miniKanren
+	url = https://github.com/namin/staged-miniKanren
+[submodule "2024/07/18/ftmicroKanren"]
+	path = 2024/07/18/ftmicroKanren
+	url = https://github.com/nathanielrb/ftmicroKanren
+[submodule "2024/07/18/microKanren-sagittarius"]
+	path = 2024/07/18/microKanren-sagittarius
+	url = https://github.com/orchid-hybrid/microKanren-sagittarius
+[submodule "2024/07/18/logic"]
+	path = 2024/07/18/logic
+	url = https://github.com/palladin/logic
+[submodule "2024/07/18/khanren"]
+	path = 2024/07/18/khanren
+	url = https://github.com/pbevin/khanren
+[submodule "2024/07/18/minikanren-datalog"]
+	path = 2024/07/18/minikanren-datalog
+	url = https://github.com/rntz/minikanren-datalog
+[submodule "2024/07/18/ukanren"]
+	path = 2024/07/18/ukanren
+	url = https://github.com/rntz/ukanren
+[submodule "2024/07/18/hkanren"]
+	path = 2024/07/18/hkanren
+	url = https://github.com/sergv/hkanren
+[submodule "2024/07/18/haskanren"]
+	path = 2024/07/18/haskanren
+	url = https://github.com/sndtkrh/haskanren
+[submodule "2024/07/18/elm-microkanren"]
+	path = 2024/07/18/elm-microkanren
+	url = https://github.com/tapeinosyne/elm-microkanren
+[submodule "2024/07/18/zKanren"]
+	path = 2024/07/18/zKanren
+	url = https://github.com/the-language/zKanren
+[submodule "2024/07/18/alphaKanren"]
+	path = 2024/07/18/alphaKanren
+	url = https://github.com/webyrd/alphaKanren
+[submodule "2024/07/18/probKanren"]
+	path = 2024/07/18/probKanren
+	url = https://github.com/webyrd/probKanren
+[submodule "2024/07/18/slpKanren"]
+	path = 2024/07/18/slpKanren
+	url = https://github.com/webyrd/slpKanren
+[submodule "2024/07/18/microKanren-demo"]
+	path = 2024/07/18/microKanren-demo
+	url = https://github.com/xavierpinho/microKanren-demo
+[submodule "2024/07/18/ykanren"]
+	path = 2024/07/18/ykanren
+	url = https://github.com/yousetme/ykanren
