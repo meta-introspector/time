@@ -1,0 +1,18 @@
+Idea:
+
+Take grammar of language, say the guile scheme or mes core language.
+Use only a fixed set of identifiers, say those in the core language, say mes.
+We can use the bootstrap code.
+Profile the execution of the compilation, capture the functions.
+Tokenize the language.
+Generate statements from the grammar.
+Generate invalid/valid statements.
+Look at the distribution of the encoding.
+
+Reduce the token count to only the needed ones.
+Autoencode the embedding, reduce the size.
+Autoencode the first layer, reduce the size.
+
+Finally we can then create a symbolic regression of the embedding and the first layer that will capture the core language.
+
+

@@ -84,3 +84,35 @@ will be more optimal so that cache lines will be more stable for different steps
 
 By creating these future contracts and paying miners for blocks of work with risk of losing a large amount
 for cheating, we can reduce the risk. 
+
+
+** idea 1
+
+1. Clients wants to process N requests at the best price, in a time period X.
+2. They would escrow that money to smart contract.
+3. miners would form squads to bid on that contract, submitting work samples.
+   they would bid on buying block N at price P and selling results for N+1 and price P +1.
+   if the miner is able to optimize that block and do it faster/cheaper they can bid less cost or time and win contract.
+4. client would pick the best squad based on past performance,
+   work samples, and price.
+5. each node would buy the inputs for processing, decrypt them, process them,
+   produce a smaller checksum, 1 float per layer,  and sell to next node, passing on the checksum.
+6. checksums will be aggregated, and published, with the hash of the input, inputhash + checksums
+7. if the client is not happy with the output, they can flag that transaction, and another squad can
+   re-run the process, and decrypt the input with clients permission.
+8. if there is a mismatch then you would get confirmations, and then the bad work would be flagged.
+   the confirmations would have to be done by a third party. 
+   
+** idea truebit
+
+1. Clients wants to process N requests at fixed prices, in a time period X.
+2. they deposit gas fees into escrow.
+3. blockchain assigns job to squad randomly.
+4. squad outputs good and bad values.
+5. validator checks those outputs and say pass or fail, if fail goes to arbitrage
+6. arbitrage : squad has to validate the work, secret is revealed, the loser pays legal fees
+   both challegner and solver has to commit to computation steps. challenger checks subset of steps.
+   challenger has to prove the solver is wrong, (interactive zkp).
+   narrowing down to smaller and smaller problem (bisection).
+   
+   
