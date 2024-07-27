@@ -1,0 +1,103 @@
+* Ideas of the day
+
+If I am to spend my time on a project, it needs to meet certain criteria.
+When we use a project, we give it resources, time, and space, memory and compute.
+This is an investment.
+We can think of this as activation of a meme, giving it life. 
+
+We need to hold the projects to the standards of investment, imagine we are giving
+them money or staking them by using them or depending on them.
+
+** Fitness
+
+Here are the criteria that I use for selecting software:
+
+**** Rule abiding
+
+Does the project publish, follow any rules?
+Does it have community guidelines?
+
+**** Well supported
+Is the project established, well supported?
+Does it have enough developers?
+Is the community healthy?
+Are the pull requests reviewed?
+
+*** Engagement
+
+Is there engagement with the contributors?
+
+Do the project leaders listen and understand the contributors?
+Do the contibutors stay in the project or leave?
+Are the pull requests reviewed?
+Is there any engagement on a detailed level, line by line?
+Are the patches ignored?
+Are the bug reports ignored?
+If we send in something to the project, does it respond appropriately?
+Are the contributors treated fairly?
+
+*** Free/Libre Open Source Software
+
+Is there a commitment to freedom, sharing and openess?
+I prefer to use only open source software, but do make compromises.
+
+Is this commitment long or short term?
+Can that commitment be changed?
+Is there a foundation commited to the survival of the project that is sustainable?
+
+**** Exceptions
+
+***** NVIDIA software CUDA drivers
+Currently there is no way around using CUDA for advanced machine learning.
+
+***** cloud services when needed
+
+I have used AWS,GCP,Azure as needed in projects. Kubernetes offers a way to abstract out the details
+of the cloud providers into a cloud native api that is a good step.x
+
+*** Quality systems
+
+Each person, group, company, meme, software or project needs its own "fitness" or quality function that determines how "healthy" or good it is,
+That is the quality system.
+
+If a system does not have a fitness function, it needs to create a plan to implement one.
+
+**** Are there pre-commit hooks?
+
+Can bad code be pushed to the repository?
+
+**** Are there procedures for testing?
+
+Is it clear how you can test the code?
+
+**** Are the failing tests being acted upon?
+
+Are the checks being acted upon?
+Are the errors levels trending down or up?
+
+*** Secure
+
+The system needs to implement security best practices.
+
+*** Reproducibility
+
+The system needs to be reproducible, built from secure foundations.
+
+That means that the foundation of the system needs to be of sufficient quality, and stability, or be fungible and replaceable (aws cloud via k8s),
+or we have no other alternatives (nvidia)
+
+**** Supply chain attacks
+
+***** Switching license
+
+We can consider the usage of "open source" software licence and then changing the license to one that
+is no longer granting the same freedoms as a pullback or a form of a supply chain attack.
+
+Examples : litellm, openfaas, hashicorp terraform, etc.
+
+***** Non free core
+
+We can consider the usage of non "open source" software license with the promise to open it one day 
+as a form of a supply chain attack, this effectivly captures the audience.
+
+Examples : mojo language
