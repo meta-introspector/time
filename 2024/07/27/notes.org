@@ -17,11 +17,40 @@ Here are the criteria that I use for selecting software:
 Does the project publish, follow any rules?
 Does it have community guidelines?
 
+***** Non discrimination
+
+Is the project committed to being open to all people?
+
+Does the project limit or discriminate between people of any type?
+
+Is there a concept of a good or bad user? are some users preferred over others?
+
+Is there a concept of a good or bad use of the software? Is the usage of the software limited in any way.
+
+
+**** Documentation quality
+
+Well-documented projects are often easier to maintain and contribute to.
+Is the documentation written using open standards? Can it be built from scratch?
+Are key documents hosted on non free plaforms like medium or youtube?
+Can we access them without logging in or giving up privacy?
+
+**** Industry standards
+Check the project's alignment with industry standards or best practices in its domain.
+
+
+**** Governence
+Evaluate their governance model and decision-making processes.
+
 **** Well supported
 Is the project established, well supported?
 Does it have enough developers?
 Is the community healthy?
 Are the pull requests reviewed?
+
+***** Update frequency
+
+Consider the project's update frequency and responsiveness to security vulnerabilities as additional metrics.
 
 *** Engagement
 
@@ -36,9 +65,23 @@ Are the bug reports ignored?
 If we send in something to the project, does it respond appropriately?
 Are the contributors treated fairly?
 
+*** Tracking and data collection
+
+Does the software track user behaviour by default? (opt in vs opt out)
+Does the software respect the users privacy?
+Does it require cloud services to run?
+Can we host them ourselves?
+
+For more good questions, see for example https://f-droid.org/en/docs/Inclusion_Policy/
+
 *** Free/Libre Open Source Software
 
 Is there a commitment to freedom, sharing and openess?
+
+Are there any end user license agreements needed to use the software?
+
+Is the license reviewed and accepted by a third party? for example the open source initiative?
+
 I prefer to use only open source software, but do make compromises.
 
 Is this commitment long or short term?
