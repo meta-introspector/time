@@ -1,0 +1,31 @@
+* Idea of the day
+
+Now feeding a python program into this llm, we can embed the tokens into vectors.
+The Abstract Syntax Tree (AST) of the compiler also embeds the tokens.
+
+Consider positional encoding in a large language model,
+this takes each token and apply extra information to each token that gives it some
+more information about its position.
+
+Dumping out the AST gives us a new form and new embedding which is
+equivalent, we can show with a proof path that we can go from one form to another,
+this path can also be learned.
+
+Consider a Godel numbering scheme with a code-book of prime number encoding
+for each symbol, each choice of primes giving a different form,
+and recursive functions that are called creating a tree
+of statements, that creates another embedding that we can show to be equivalent.
+
+The Turing machine is another embedding into a linear tape, each position in the tape
+containing a value that can be code or data, and the set of instructions being the code-book of sorts.
+
+Now consider our simple python program of "print(1+2+3)" we can translate this program into
+infinite different forms and show paths between them, these paths represent a higher order
+topological space of homotopy type theory. The type system becomes the topological space.
+
+So now we can use this topological space to vectorize and embed the various systems
+where each part or value of the original space is encoded with the proof path
+so that it gives it structure, we are essentially lifting the original code into the topological space of Homotopy type theory (HOTT)
+and giving it a higher order structure. This lift can carry its own proof inside of it as well, creating a self contained
+lambda or foundational system like meta-coq does. 
+
