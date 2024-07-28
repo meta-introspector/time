@@ -1,7 +1,9 @@
 * Idea of the day
 
-Now feeding a python program into this llm, we can embed the tokens into vectors.
-The Abstract Syntax Tree (AST) of the compiler also embeds the tokens.
+Consider a simple python program of "print(1+2+3)".
+
+Feeding this python program into a llm, we can embed the tokens into vectors.
+The Abstract Syntax Tree (AST) of the compiler also embeds the tokens into a different but equivalent form.
 
 Consider positional encoding in a large language model,
 this takes each token and apply extra information to each token that gives it some
