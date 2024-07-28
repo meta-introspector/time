@@ -14234,3 +14234,48 @@
 [submodule "2024/07/19/Phind-CodeLlama-34B-v2"]
 	path = 2024/07/19/Phind-CodeLlama-34B-v2
 	url = https://huggingface.co/Phind/Phind-CodeLlama-34B-v2
+[submodule "2024/07/21/chroma"]
+	path = 2024/07/21/chroma
+	url = https://github.com/chroma-core/chroma
+[submodule "2024/07/21/jina-embeddings-v2-base-code"]
+	path = 2024/07/21/jina-embeddings-v2-base-code
+	url = https://huggingface.co/jinaai/jina-embeddings-v2-base-code
+[submodule "2024/07/21/codet5p-110m-embedding"]
+	path = 2024/07/21/codet5p-110m-embedding
+	url = https://huggingface.co/Salesforce/codet5p-110m-embedding
+[submodule "2024/07/21/jina-embeddings-v2-small-en"]
+	path = 2024/07/21/jina-embeddings-v2-small-en
+	url = https://huggingface.co/jinaai/jina-embeddings-v2-small-en
+[submodule "2024/07/21/FlagEmbedding"]
+	path = 2024/07/21/FlagEmbedding
+	url = https://github.com/FlagOpen/FlagEmbedding
+[submodule "2024/07/21/bge-m3"]
+	path = 2024/07/21/bge-m3
+	url = https://huggingface.co/BAAI/bge-m3
+[submodule "2024/07/21/CodeT5"]
+	path = 2024/07/21/CodeT5
+	url = https://github.com/salesforce/CodeT5
+[submodule "2024/07/21/IdBench"]
+	path = 2024/07/21/IdBench
+	url = https://github.com/sola-st/IdBench
+[submodule "2024/07/24/pyprolog"]
+	path = 2024/07/24/pyprolog
+	url = https://github.com/robjsliwa/pyprolog
+[submodule "2024/07/25/eks-with-istio"]
+	path = 2024/07/25/eks-with-istio
+	url = https://github.com/msfidelis/eks-with-istio
+[submodule "2024/07/25/faas"]
+	path = 2024/07/25/faas
+	url = https://github.com/openfaas/faas
+[submodule "2024/07/25/faas-netes"]
+	path = 2024/07/25/faas-netes
+	url = https://github.com/meta-introspector/faas-netes
+[submodule "2024/07/25/guix-pkgs"]
+	path = 2024/07/25/guix-pkgs
+	url = https://notabug.org/jlicht/guix-pkgs.git
+[submodule "2024/07/25/halyard"]
+	path = 2024/07/25/halyard
+	url = https://github.com/spinnaker/halyard
+[submodule "2024/07/27/selfhost"]
+	path = 2024/07/27/selfhost
+	url = https://github.com/forem/selfhost.git
