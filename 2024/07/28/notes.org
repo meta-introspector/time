@@ -1,4 +1,5 @@
 * Idea of the day
+** Embedding of code
 
 Consider a simple python program of "print(1+2+3)".
 
@@ -30,4 +31,39 @@ where each part or value of the original space is encoded with the proof path
 so that it gives it structure, we are essentially lifting the original code into the topological space of Homotopy type theory (HOTT)
 and giving it a higher order structure. This lift can carry its own proof inside of it as well, creating a self contained
 lambda or foundational system like meta-coq does. 
+
+Now lets consider the type system as an additional contextual information,
+we can embed the type as a value into each part.
+If we consider the type as a space, we would basically have each node located
+in that space.
+
+Finally we can expand on the idea of the position in the string as part of  document,
+a project, a version, having an author, having security attributes,
+all of those parts would contribute to the position. We can embed all these attributes.
+
+** Limits of knowledge
+
+There are statements in this system that cannot be proven or checked in this system.
+There are statements that are very hard to check.
+The strength of a statement is related to its complexity.
+
+** Closed world model.
+
+Now lets imagine we can create a statement "this statement cannot be proven in system G".
+We embed that statement, so we create a representation of system G as its source
+code and data and embed all of that. We have a token for "this statement" as well as its embedding.
+The idea would be to have a closed world model of the system that is self contained and can reason about itself.
+We can embed information about the free memory and gpu resources available from /proc/ filesystem.
+
+This would be an interesting model to consider.
+Then we would try and interpret that statement using only itself.
+the rules to decode the system are going to be in the input vector.
+the input vector would learn from the model it is being processed in,
+say it runs on the llama model. This idea needs a better understanding of how the models work
+but the basic idea is that we would construct a large input that would learn to
+resonate with the model it runs in.
+
+We can imagine a vector V that is a sample of Model M that fits in context window C
+where V is a subset of M that resonates with M. Then we can make statements like
+"the system G represented by <insert blob> resonates with model M and cannot be proven in M"
 
