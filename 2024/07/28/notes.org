@@ -39,7 +39,7 @@ in that space.
 
 Finally we can expand on the idea of the position in the string as part of  document,
 a project, a version, having an author, having security attributes,
-all of those parts would contribute to the position. We can embed all these attributes.
+all of those parts would contribute to the position. We can embed all these attributes in each node.
 
 ** Limits of knowledge
 
@@ -66,4 +66,30 @@ resonate with the model it runs in.
 We can imagine a vector V that is a sample of Model M that fits in context window C
 where V is a subset of M that resonates with M. Then we can make statements like
 "the system G represented by <insert blob> resonates with model M and cannot be proven in M"
+
+** Emergent models.
+
+Now instead of a static model we can imagine the model itself as a vector.
+So the model is expressed as a vector that embeds the term structure of the model.
+Then instances of the model are joined with instances of the objects to make them whole.
+This also brings in the idea of the re-contextualization.
+We bring in context from the outside into the terms or vectors.
+This is like a tcpip packet with a header and body, the header would be the model and the body
+would be the content.
+
+** Model checking
+
+Now we consider the idea of checking a model,
+if we have our model as a vectorized form we should be able to reason about it
+just like a type system in a compiler or model checker, the form is different.
+
+The question then becomes how to reference that model in the instance.
+Is the model separate or unified with the object? Is it copied or referenced.
+
+From the perspective of a vector, it would be useful to contain everything needed int the vector space,
+so that the model is copied in place. If you create a model in one part and use it later, that would be transfered across.
+
+This then gets into questions of consistency. My thoughts here are not complete,
+but the idea is that we can embed the user defined types into the user defined objects
+in such a way that they are whole.
 

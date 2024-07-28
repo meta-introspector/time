@@ -144,3 +144,20 @@ We can consider the usage of non "open source" software license with the promise
 as a form of a supply chain attack, this effectivly captures the audience.
 
 Examples : mojo language
+
+** Automation
+
+To support a project's infrastructure, it needs to be automated.
+People make mistakes and any time you have people typing commands
+there will be mistakes.
+Any time you have to use a user interface no matter how friendly,
+it has the possibility of mistake.
+
+So for reproducibility we need to adopt something like terraform for creating
+infrastructure. There are tools to generate api calls from recording manual actions in AWS or even
+to reverse engineer an existing infrastructure that was manually
+created. I think that this idea logically follows from the principles mentioned above.
+
+If you are not able to automate the procedure, then documenting it
+with a written procedure is the next best thing.
+Tracking changes to the procedure is important.
