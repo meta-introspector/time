@@ -14279,3 +14279,645 @@
 [submodule "2024/07/27/selfhost"]
 	path = 2024/07/27/selfhost
 	url = https://github.com/forem/selfhost.git
+[submodule "2024/07/29/GPTeam"]
+	path = 2024/07/29/GPTeam
+	url = https://github.com/101dotxyz/GPTeam
+[submodule "2024/07/29/agent-protocol"]
+	path = 2024/07/29/agent-protocol
+	url = https://github.com/AI-Engineer-Foundation/agent-protocol
+[submodule "2024/07/29/mentat"]
+	path = 2024/07/29/mentat
+	url = https://github.com/AbanteAI/mentat
+[submodule "2024/07/29/Jaiqu"]
+	path = 2024/07/29/Jaiqu
+	url = https://github.com/AgentOps-AI/Jaiqu
+[submodule "2024/07/29/agentops"]
+	path = 2024/07/29/agentops
+	url = https://github.com/AgentOps-AI/agentops
+[submodule "2024/07/29/beebot"]
+	path = 2024/07/29/beebot
+	url = https://github.com/AutoPackAI/beebot
+[submodule "2024/07/29/litellm"]
+	path = 2024/07/29/litellm
+	url = https://github.com/BerriAI/litellm
+[submodule "2024/07/29/Claude-React-Jumpstart"]
+	path = 2024/07/29/Claude-React-Jumpstart
+	url = https://github.com/Bklieger/Claude-React-Jumpstart
+[submodule "2024/07/29/bloop"]
+	path = 2024/07/29/bloop
+	url = https://github.com/BloopAI/bloop
+[submodule "2024/07/29/Suspicion-Agent"]
+	path = 2024/07/29/Suspicion-Agent
+	url = https://github.com/CR-Gjx/Suspicion-Agent
+[submodule "2024/07/29/WrenAI"]
+	path = 2024/07/29/WrenAI
+	url = https://github.com/Canner/WrenAI
+[submodule "2024/07/29/AgentForge"]
+	path = 2024/07/29/AgentForge
+	url = https://github.com/DataBassGit/AgentForge
+[submodule "2024/07/29/Godmode-GPT"]
+	path = 2024/07/29/Godmode-GPT
+	url = https://github.com/FOLLGAD/Godmode-GPT
+[submodule "2024/07/29/chatarena"]
+	path = 2024/07/29/chatarena
+	url = https://github.com/Farama-Foundation/chatarena
+[submodule "2024/07/29/Flowise"]
+	path = 2024/07/29/Flowise
+	url = https://github.com/FlowiseAI/Flowise
+[submodule "2024/07/29/helicone"]
+	path = 2024/07/29/helicone
+	url = https://github.com/Helicone/helicone
+[submodule "2024/07/29/Adala"]
+	path = 2024/07/29/Adala
+	url = https://github.com/HumanSignal/Adala
+[submodule "2024/07/29/AGiXT"]
+	path = 2024/07/29/AGiXT
+	url = https://github.com/Josh-XT/AGiXT
+[submodule "2024/07/29/GPTDiscord"]
+	path = 2024/07/29/GPTDiscord
+	url = https://github.com/Kav-K/GPTDiscord
+[submodule "2024/07/29/LlamaGym"]
+	path = 2024/07/29/LlamaGym
+	url = https://github.com/KhoomeiK/LlamaGym
+[submodule "2024/07/29/open-interpreter"]
+	path = 2024/07/29/open-interpreter
+	url = https://github.com/KillianLucas/open-interpreter
+[submodule "2024/07/29/Agent4Rec"]
+	path = 2024/07/29/Agent4Rec
+	url = https://github.com/LehengTHU/Agent4Rec
+[submodule "2024/07/29/open-assistant-api"]
+	path = 2024/07/29/open-assistant-api
+	url = https://github.com/MLT-OSS/open-assistant-api
+[submodule "2024/07/29/web3-gpt"]
+	path = 2024/07/29/web3-gpt
+	url = https://github.com/Markeljan/web3-gpt
+[submodule "2024/07/29/PraisonAI"]
+	path = 2024/07/29/PraisonAI
+	url = https://github.com/MervinPraison/PraisonAI/
+[submodule "2024/07/29/Voyager"]
+	path = 2024/07/29/Voyager
+	url = https://github.com/MineDojo/Voyager
+[submodule "2024/07/29/NeMo-Guardrails"]
+	path = 2024/07/29/NeMo-Guardrails
+	url = https://github.com/NVIDIA/NeMo-Guardrails
+[submodule "2024/07/29/Magick"]
+	path = 2024/07/29/Magick
+	url = https://github.com/Oneirocom/Magick
+[submodule "2024/07/29/AgentVerse"]
+	path = 2024/07/29/AgentVerse
+	url = https://github.com/OpenBMB/AgentVerse
+[submodule "2024/07/29/ChatDev"]
+	path = 2024/07/29/ChatDev
+	url = https://github.com/OpenBMB/ChatDev
+[submodule "2024/07/29/XAgent"]
+	path = 2024/07/29/XAgent
+	url = https://github.com/OpenBMB/XAgent
+[submodule "2024/07/29/OpenDevin"]
+	path = 2024/07/29/OpenDevin
+	url = https://github.com/OpenDevin/OpenDevin
+[submodule "2024/07/29/aifs"]
+	path = 2024/07/29/aifs
+	url = https://github.com/OpenInterpreter/aifs
+[submodule "2024/07/29/self-operating-computer"]
+	path = 2024/07/29/self-operating-computer
+	url = https://github.com/OthersideAI/self-operating-computer
+[submodule "2024/07/29/claude-3-artifacts"]
+	path = 2024/07/29/claude-3-artifacts
+	url = https://github.com/PierrunoYT/claude-3-artifacts
+[submodule "2024/07/29/marvin"]
+	path = 2024/07/29/marvin
+	url = https://github.com/PrefectHQ/marvin/
+[submodule "2024/07/29/localGPT"]
+	path = 2024/07/29/localGPT
+	url = https://github.com/PromtEngineer/localGPT
+[submodule "2024/07/29/gpt-pilot"]
+	path = 2024/07/29/gpt-pilot
+	url = https://github.com/Pythagora-io/gpt-pilot
+[submodule "2024/07/29/ShortGPT"]
+	path = 2024/07/29/ShortGPT
+	url = https://github.com/RayVentura/ShortGPT
+[submodule "2024/07/29/maige"]
+	path = 2024/07/29/maige
+	url = https://github.com/RubricLab/maige
+[submodule "2024/07/29/evolutionary-model-merge"]
+	path = 2024/07/29/evolutionary-model-merge
+	url = https://github.com/SakanaAI/evolutionary-model-merge/
+[submodule "2024/07/29/Scrapegraph-ai"]
+	path = 2024/07/29/Scrapegraph-ai
+	url = https://github.com/ScrapeGraphAI/Scrapegraph-ai
+[submodule "2024/07/29/AutoGPT"]
+	path = 2024/07/29/AutoGPT
+	url = https://github.com/Significant-Gravitas/AutoGPT
+[submodule "2024/07/29/AgentBench"]
+	path = 2024/07/29/AgentBench
+	url = https://github.com/THUDM/AgentBench
+[submodule "2024/07/29/tabby"]
+	path = 2024/07/29/tabby
+	url = https://github.com/TabbyML/tabby
+[submodule "2024/07/29/TaskingAI"]
+	path = 2024/07/29/TaskingAI
+	url = https://github.com/TaskingAI/TaskingAI
+[submodule "2024/07/29/browser-extension"]
+	path = 2024/07/29/browser-extension
+	url = https://github.com/TaxyAI/browser-extension
+[submodule "2024/07/29/westworld"]
+	path = 2024/07/29/westworld
+	url = https://github.com/TheoLvs/westworld
+[submodule "2024/07/29/SuperAGI"]
+	path = 2024/07/29/SuperAGI
+	url = https://github.com/TransformerOptimus/SuperAGI
+[submodule "2024/07/29/agency-swarm"]
+	path = 2024/07/29/agency-swarm
+	url = https://github.com/VRSEN/agency-swarm
+[submodule "2024/07/29/LiveRecall"]
+	path = 2024/07/29/LiveRecall
+	url = https://github.com/VedankPurohit/LiveRecall
+[submodule "2024/07/29/evo.ninja"]
+	path = 2024/07/29/evo.ninja
+	url = https://github.com/agentcoinorg/evo.ninja
+[submodule "2024/07/29/enact"]
+	path = 2024/07/29/enact
+	url = https://github.com/agentic-ai/enact
+[submodule "2024/07/29/agentlabs"]
+	path = 2024/07/29/agentlabs
+	url = https://github.com/agentlabs-inc/agentlabs
+[submodule "2024/07/29/AIOS"]
+	path = 2024/07/29/AIOS
+	url = https://github.com/agiresearch/AIOS
+[submodule "2024/07/29/OpenAGI"]
+	path = 2024/07/29/OpenAGI
+	url = https://github.com/agiresearch/OpenAGI
+[submodule "2024/07/29/agent-tools-ts"]
+	path = 2024/07/29/agent-tools-ts
+	url = https://github.com/aibtcdev/agent-tools-ts
+[submodule "2024/07/29/ai-agent-crew"]
+	path = 2024/07/29/ai-agent-crew
+	url = https://github.com/aibtcdev/ai-agent-crew
+[submodule "2024/07/29/gated-402-api"]
+	path = 2024/07/29/gated-402-api
+	url = https://github.com/aibtcdev/gated-402-api
+[submodule "2024/07/29/agents"]
+	path = 2024/07/29/agents
+	url = https://github.com/aiwaves-cn/agents
+[submodule "2024/07/29/cody"]
+	path = 2024/07/29/cody
+	url = https://github.com/ajhous44/cody
+[submodule "2024/07/29/clin"]
+	path = 2024/07/29/clin
+	url = https://github.com/allenai/clin
+[submodule "2024/07/29/lumos"]
+	path = 2024/07/29/lumos
+	url = https://github.com/allenai/lumos
+[submodule "2024/07/29/friday"]
+	path = 2024/07/29/friday
+	url = https://github.com/amirrezasalimi/friday/
+[submodule "2024/07/29/priompt"]
+	path = 2024/07/29/priompt
+	url = https://github.com/anysphere/priompt
+[submodule "2024/07/29/mergekit"]
+	path = 2024/07/29/mergekit
+	url = https://github.com/arcee-ai/mergekit
+[submodule "2024/07/29/gpt-researcher"]
+	path = 2024/07/29/gpt-researcher
+	url = https://github.com/assafelovic/gpt-researcher
+[submodule "2024/07/29/axflow"]
+	path = 2024/07/29/axflow
+	url = https://github.com/axflow/axflow
+[submodule "2024/07/29/Instrukt"]
+	path = 2024/07/29/Instrukt
+	url = https://github.com/blob42/Instrukt
+[submodule "2024/07/29/camel"]
+	path = 2024/07/29/camel
+	url = https://github.com/camel-ai/camel
+[submodule "2024/07/29/codefuse-chatbot"]
+	path = 2024/07/29/codefuse-chatbot
+	url = https://github.com/codefuse-ai/codefuse-chatbot
+[submodule "2024/07/29/llm_multiagent_debate"]
+	path = 2024/07/29/llm_multiagent_debate
+	url = https://github.com/composable-models/llm_multiagent_debate
+[submodule "2024/07/29/continue"]
+	path = 2024/07/29/continue
+	url = https://github.com/continuedev/continue
+[submodule "2024/07/29/MemGPT"]
+	path = 2024/07/29/MemGPT
+	url = https://github.com/cpacker/MemGPT
+[submodule "2024/07/29/crewAI-tools"]
+	path = 2024/07/29/crewAI-tools
+	url = https://github.com/crewAIInc/crewAI-tools
+[submodule "2024/07/29/elia"]
+	path = 2024/07/29/elia
+	url = https://github.com/darrenburns/elia
+[submodule "2024/07/29/astra-assistants-api"]
+	path = 2024/07/29/astra-assistants-api
+	url = https://github.com/datastax/astra-assistants-api
+[submodule "2024/07/29/haystack"]
+	path = 2024/07/29/haystack
+	url = https://github.com/deepset-ai/haystack
+[submodule "2024/07/29/llm-answer-engine"]
+	path = 2024/07/29/llm-answer-engine
+	url = https://github.com/developersdigest/llm-answer-engine
+[submodule "2024/07/29/nextpy"]
+	path = 2024/07/29/nextpy
+	url = https://github.com/dot-agent/nextpy
+[submodule "2024/07/29/ai-artifacts"]
+	path = 2024/07/29/ai-artifacts
+	url = https://github.com/e2b-dev/ai-artifacts
+[submodule "2024/07/29/plugnplai"]
+	path = 2024/07/29/plugnplai
+	url = https://github.com/edreisMD/plugnplai
+[submodule "2024/07/29/eidolon"]
+	path = 2024/07/29/eidolon
+	url = https://github.com/eidolon-ai/eidolon
+[submodule "2024/07/29/automata"]
+	path = 2024/07/29/automata
+	url = https://github.com/emrgnt-cmplxty/automata
+[submodule "2024/07/29/clippinator"]
+	path = 2024/07/29/clippinator
+	url = https://github.com/ennucore/clippinator
+[submodule "2024/07/29/Devon"]
+	path = 2024/07/29/Devon
+	url = https://github.com/entropy-research/Devon
+[submodule "2024/07/29/DB-GPT"]
+	path = 2024/07/29/DB-GPT
+	url = https://github.com/eosphoros-ai/DB-GPT
+[submodule "2024/07/29/lmql"]
+	path = 2024/07/29/lmql
+	url = https://github.com/eth-sri/lmql
+[submodule "2024/07/29/ai-legion"]
+	path = 2024/07/29/ai-legion
+	url = https://github.com/eumemic/ai-legion
+[submodule "2024/07/29/react-agent"]
+	path = 2024/07/29/react-agent
+	url = https://github.com/eylonmiz/react-agent
+[submodule "2024/07/29/lemon-agent"]
+	path = 2024/07/29/lemon-agent
+	url = https://github.com/felixbrock/lemon-agent
+[submodule "2024/07/29/uAgents"]
+	path = 2024/07/29/uAgents
+	url = https://github.com/fetchai/uAgents
+[submodule "2024/07/29/Interface-Agent"]
+	path = 2024/07/29/Interface-Agent
+	url = https://github.com/francedot/Interface-Agent
+[submodule "2024/07/29/MetaGPT"]
+	path = 2024/07/29/MetaGPT
+	url = https://github.com/geekan/MetaGPT
+[submodule "2024/07/29/GeniA"]
+	path = 2024/07/29/GeniA
+	url = https://github.com/genia-dev/GeniA
+[submodule "2024/07/29/FuzzTypes"]
+	path = 2024/07/29/FuzzTypes
+	url = https://github.com/genomoncology/FuzzTypes
+[submodule "2024/07/29/cursor"]
+	path = 2024/07/29/cursor
+	url = https://github.com/getcursor/cursor
+[submodule "2024/07/29/zep"]
+	path = 2024/07/29/zep
+	url = https://github.com/getzep/zep/
+[submodule "2024/07/29/tddGPT"]
+	path = 2024/07/29/tddGPT
+	url = https://github.com/gimlet-ai/tddGPT
+[submodule "2024/07/29/databerry"]
+	path = 2024/07/29/databerry
+	url = https://github.com/gmpetrov/databerry
+[submodule "2024/07/29/gpt-engineer"]
+	path = 2024/07/29/gpt-engineer
+	url = https://github.com/gpt-engineer-org/gpt-engineer
+[submodule "2024/07/29/guardrails"]
+	path = 2024/07/29/guardrails
+	url = https://github.com/guardrails-ai/guardrails
+[submodule "2024/07/29/guidance"]
+	path = 2024/07/29/guidance
+	url = https://github.com/guidance-ai/guidance
+[submodule "2024/07/29/privateGPT"]
+	path = 2024/07/29/privateGPT
+	url = https://github.com/imartinez/privateGPT
+[submodule "2024/07/29/cloud"]
+	path = 2024/07/29/cloud
+	url = https://github.com/instructor-ai/cloud
+[submodule "2024/07/29/AutoPR"]
+	path = 2024/07/29/AutoPR
+	url = https://github.com/irgolic/AutoPR
+[submodule "2024/07/29/vimGPT"]
+	path = 2024/07/29/vimGPT
+	url = https://github.com/ishan0102/vimGPT
+[submodule "2024/07/29/ivycheck-python-sdk"]
+	path = 2024/07/29/ivycheck-python-sdk
+	url = https://github.com/ivycheck/ivycheck-python-sdk
+[submodule "2024/07/29/jan"]
+	path = 2024/07/29/jan
+	url = https://github.com/janhq/jan
+[submodule "2024/07/29/AgentPilot"]
+	path = 2024/07/29/AgentPilot
+	url = https://github.com/jbexta/AgentPilot
+[submodule "2024/07/29/dev-gpt"]
+	path = 2024/07/29/dev-gpt
+	url = https://github.com/jina-ai/dev-gpt
+[submodule "2024/07/29/crewai"]
+	path = 2024/07/29/crewai
+	url = https://github.com/joaomdmoura/crewai
+[submodule "2024/07/29/gpt-migrate"]
+	path = 2024/07/29/gpt-migrate
+	url = https://github.com/joshpxyne/gpt-migrate
+[submodule "2024/07/29/instructor"]
+	path = 2024/07/29/instructor
+	url = https://github.com/jxnl/instructor
+[submodule "2024/07/29/ix"]
+	path = 2024/07/29/ix
+	url = https://github.com/kreneskyp/ix
+[submodule "2024/07/29/bondai"]
+	path = 2024/07/29/bondai
+	url = https://github.com/krohling/bondai
+[submodule "2024/07/29/DevOpsGPT"]
+	path = 2024/07/29/DevOpsGPT
+	url = https://github.com/kuafuai/DevOpsGPT
+[submodule "2024/07/29/swarms"]
+	path = 2024/07/29/swarms
+	url = https://github.com/kyegomez/swarms/
+[submodule "2024/07/29/langchain"]
+	path = 2024/07/29/langchain
+	url = https://github.com/langchain-ai/langchain
+[submodule "2024/07/29/langchainjs"]
+	path = 2024/07/29/langchainjs
+	url = https://github.com/langchain-ai/langchainjs
+[submodule "2024/07/29/langgraph"]
+	path = 2024/07/29/langgraph
+	url = https://github.com/langchain-ai/langgraph
+[submodule "2024/07/29/langserve"]
+	path = 2024/07/29/langserve
+	url = https://github.com/langchain-ai/langserve
+[submodule "2024/07/29/langsmith-sdk"]
+	path = 2024/07/29/langsmith-sdk
+	url = https://github.com/langchain-ai/langsmith-sdk
+[submodule "2024/07/29/opengpts"]
+	path = 2024/07/29/opengpts
+	url = https://github.com/langchain-ai/opengpts
+[submodule "2024/07/29/streamlit-agent"]
+	path = 2024/07/29/streamlit-agent
+	url = https://github.com/langchain-ai/streamlit-agent
+[submodule "2024/07/29/langfuse"]
+	path = 2024/07/29/langfuse
+	url = https://github.com/langfuse/langfuse
+[submodule "2024/07/29/langroid"]
+	path = 2024/07/29/langroid
+	url = https://github.com/langroid/langroid
+[submodule "2024/07/29/LangChainBitcoin"]
+	path = 2024/07/29/LangChainBitcoin
+	url = https://github.com/lightninglabs/LangChainBitcoin
+[submodule "2024/07/29/FastChat"]
+	path = 2024/07/29/FastChat
+	url = https://github.com/lm-sys/FastChat
+[submodule "2024/07/29/lobe-chat"]
+	path = 2024/07/29/lobe-chat
+	url = https://github.com/lobehub/lobe-chat
+[submodule "2024/07/29/BrowserGPT"]
+	path = 2024/07/29/BrowserGPT
+	url = https://github.com/mayt/BrowserGPT
+[submodule "2024/07/29/NLSOM"]
+	path = 2024/07/29/NLSOM
+	url = https://github.com/mczhuge/NLSOM
+[submodule "2024/07/29/DemoGPT"]
+	path = 2024/07/29/DemoGPT
+	url = https://github.com/melih-unsal/DemoGPT
+[submodule "2024/07/29/GPTSwarm"]
+	path = 2024/07/29/GPTSwarm
+	url = https://github.com/metauto-ai/GPTSwarm
+[submodule "2024/07/29/JARVIS"]
+	path = 2024/07/29/JARVIS
+	url = https://github.com/microsoft/JARVIS
+[submodule "2024/07/29/TypeChat"]
+	path = 2024/07/29/TypeChat
+	url = https://github.com/microsoft/TypeChat
+[submodule "2024/07/29/UFO"]
+	path = 2024/07/29/UFO
+	url = https://github.com/microsoft/UFO
+[submodule "2024/07/29/autogen"]
+	path = 2024/07/29/autogen
+	url = https://github.com/microsoft/autogen
+[submodule "2024/07/29/AppAgent"]
+	path = 2024/07/29/AppAgent
+	url = https://github.com/mnotgod96/AppAgent
+[submodule "2024/07/29/llm_agents"]
+	path = 2024/07/29/llm_agents
+	url = https://github.com/mpaepper/llm_agents
+[submodule "2024/07/29/ai-researcher"]
+	path = 2024/07/29/ai-researcher
+	url = https://github.com/mshumer/ai-researcher
+[submodule "2024/07/29/mini-agi"]
+	path = 2024/07/29/mini-agi
+	url = https://github.com/muellerberndt/mini-agi
+[submodule "2024/07/29/AIlice"]
+	path = 2024/07/29/AIlice
+	url = https://github.com/myshell-ai/AIlice
+[submodule "2024/07/29/tortoise-tts"]
+	path = 2024/07/29/tortoise-tts
+	url = https://github.com/neonbjb/tortoise-tts
+[submodule "2024/07/29/gpt-runner"]
+	path = 2024/07/29/gpt-runner
+	url = https://github.com/nicepkg/gpt-runner
+[submodule "2024/07/29/npi"]
+	path = 2024/07/29/npi
+	url = https://github.com/npi-ai/npi
+[submodule "2024/07/29/ollama"]
+	path = 2024/07/29/ollama
+	url = https://github.com/ollama/ollama
+[submodule "2024/07/29/data-questionnaire-agent"]
+	path = 2024/07/29/data-questionnaire-agent
+	url = https://github.com/onepointconsulting/data-questionnaire-agent
+[submodule "2024/07/29/gpt-computer-assistant"]
+	path = 2024/07/29/gpt-computer-assistant
+	url = https://github.com/onuratakan/gpt-computer-assistant
+[submodule "2024/07/29/openrecall"]
+	path = 2024/07/29/openrecall
+	url = https://github.com/openrecall/openrecall
+[submodule "2024/07/29/outlines"]
+	path = 2024/07/29/outlines
+	url = https://github.com/outlines-dev/outlines
+[submodule "2024/07/29/chatgpt-artifacts"]
+	path = 2024/07/29/chatgpt-artifacts
+	url = https://github.com/ozgrozer/chatgpt-artifacts
+[submodule "2024/07/29/aider"]
+	path = 2024/07/29/aider
+	url = https://github.com/paul-gauthier/aider
+[submodule "2024/07/29/pezzo"]
+	path = 2024/07/29/pezzo
+	url = https://github.com/pezzolabs/pezzo
+[submodule "2024/07/29/BambooAI"]
+	path = 2024/07/29/BambooAI
+	url = https://github.com/pgalko/BambooAI
+[submodule "2024/07/29/streaming-assistants"]
+	path = 2024/07/29/streaming-assistants
+	url = https://github.com/phact/streaming-assistants
+[submodule "2024/07/29/pinokio"]
+	path = 2024/07/29/pinokio
+	url = https://github.com/pinokiocomputer/pinokio
+[submodule "2024/07/29/yourgoal"]
+	path = 2024/07/29/yourgoal
+	url = https://github.com/pj4533/yourgoal
+[submodule "2024/07/29/SWE-agent"]
+	path = 2024/07/29/SWE-agent
+	url = https://github.com/princeton-nlp/SWE-agent
+[submodule "2024/07/29/js"]
+	path = 2024/07/29/js
+	url = https://github.com/proficientai/js
+[submodule "2024/07/29/pydantic"]
+	path = 2024/07/29/pydantic
+	url = https://github.com/pydantic/pydantic
+[submodule "2024/07/29/SlashGPT"]
+	path = 2024/07/29/SlashGPT
+	url = https://github.com/receptron/SlashGPT
+[submodule "2024/07/29/ai-codereviewer"]
+	path = 2024/07/29/ai-codereviewer
+	url = https://github.com/wpai-inc/ai-codereviewer
+[submodule "2024/07/29/AgentGPT"]
+	path = 2024/07/29/AgentGPT
+	url = https://github.com/reworkd/AgentGPT
+[submodule "2024/07/29/bananalyzer"]
+	path = 2024/07/29/bananalyzer
+	url = https://github.com/reworkd/bananalyzer
+[submodule "2024/07/29/actions-runner-controller"]
+	path = 2024/07/29/actions-runner-controller
+	url = https://github.com/taskade/actions-runner-controller
+[submodule "2024/07/29/tarsier"]
+	path = 2024/07/29/tarsier
+	url = https://github.com/reworkd/tarsier
+[submodule "2024/07/29/claude-artifacts-react"]
+	path = 2024/07/29/claude-artifacts-react
+	url = https://github.com/risonsimon/claude-artifacts-react
+[submodule "2024/07/29/gpt-newspaper"]
+	path = 2024/07/29/gpt-newspaper
+	url = https://github.com/rotemweiss57/gpt-newspaper
+[submodule "2024/07/29/llama_index"]
+	path = 2024/07/29/llama_index
+	url = https://github.com/run-llama/llama_index
+[submodule "2024/07/29/sagentic-af"]
+	path = 2024/07/29/sagentic-af
+	url = https://github.com/sagentic-ai/sagentic-af
+[submodule "2024/07/29/l2mac"]
+	path = 2024/07/29/l2mac
+	url = https://github.com/samholt/l2mac
+[submodule "2024/07/29/BabyCommandAGI"]
+	path = 2024/07/29/BabyCommandAGI
+	url = https://github.com/saten-private/BabyCommandAGI
+[submodule "2024/07/29/Teenage-AGI"]
+	path = 2024/07/29/Teenage-AGI
+	url = https://github.com/seanpixel/Teenage-AGI
+[submodule "2024/07/29/codel"]
+	path = 2024/07/29/codel
+	url = https://github.com/semanser/codel
+[submodule "2024/07/29/Multi-GPT"]
+	path = 2024/07/29/Multi-GPT
+	url = https://github.com/sidhq/Multi-GPT
+[submodule "2024/07/29/simulatrex-engine"]
+	path = 2024/07/29/simulatrex-engine
+	url = https://github.com/simulatrex/simulatrex-engine
+[submodule "2024/07/29/agent-os"]
+	path = 2024/07/29/agent-os
+	url = https://github.com/smartcomputer-ai/agent-os
+[submodule "2024/07/29/developer"]
+	path = 2024/07/29/developer
+	url = https://github.com/smol-ai/developer
+[submodule "2024/07/29/docs"]
+	path = 2024/07/29/docs
+	url = https://github.com/sourcegraph/docs
+[submodule "2024/07/29/graphlit-client-python"]
+	path = 2024/07/29/graphlit-client-python
+	url = https://github.com/graphlit/graphlit-client-python
+[submodule "2024/07/29/sourcegraph"]
+	path = 2024/07/29/sourcegraph
+	url = https://github.com/sourcegraph/sourcegraph
+[submodule "2024/07/29/stackwise"]
+	path = 2024/07/29/stackwise
+	url = https://github.com/stackwiseai/stackwise
+[submodule "2024/07/29/dspy"]
+	path = 2024/07/29/dspy
+	url = https://github.com/stanfordnlp/dspy
+[submodule "2024/07/29/agent"]
+	path = 2024/07/29/agent
+	url = https://github.com/statelyai/agent/
+[submodule "2024/07/29/python-client"]
+	path = 2024/07/29/python-client
+	url = https://github.com/steamship-core/python-client
+[submodule "2024/07/29/autonomous-hr-chatbot"]
+	path = 2024/07/29/autonomous-hr-chatbot
+	url = https://github.com/stepanogil/autonomous-hr-chatbot
+[submodule "2024/07/29/devika"]
+	path = 2024/07/29/devika
+	url = https://github.com/stitionai/devika
+[submodule "2024/07/29/fingen"]
+	path = 2024/07/29/fingen
+	url = https://github.com/sullyo/fingen
+[submodule "2024/07/29/prompt2ui"]
+	path = 2024/07/29/prompt2ui
+	url = https://github.com/sullyo/prompt2ui
+[submodule "2024/07/29/superagent"]
+	path = 2024/07/29/superagent
+	url = https://github.com/superagent-ai/superagent
+[submodule "2024/07/29/vllm"]
+	path = 2024/07/29/vllm
+	url = https://github.com/fixie-ai/vllm
+[submodule "2024/07/29/sweep"]
+	path = 2024/07/29/sweep
+	url = https://github.com/sweepai/sweep
+[submodule "2024/07/29/tavily-python"]
+	path = 2024/07/29/tavily-python
+	url = https://github.com/tavily-ai/tavily-python
+[submodule "2024/07/29/workgpt"]
+	path = 2024/07/29/workgpt
+	url = https://github.com/team-openpm/workgpt
+[submodule "2024/07/29/trip_planner_agent"]
+	path = 2024/07/29/trip_planner_agent
+	url = https://github.com/tonykipkemboi/trip_planner_agent
+[submodule "2024/07/29/PromethAI-Backend"]
+	path = 2024/07/29/PromethAI-Backend
+	url = https://github.com/topoteretes/PromethAI-Backend
+[submodule "2024/07/29/cognee"]
+	path = 2024/07/29/cognee
+	url = https://github.com/topoteretes/cognee
+[submodule "2024/07/29/LLMStack"]
+	path = 2024/07/29/LLMStack
+	url = https://github.com/trypromptly/LLMStack
+[submodule "2024/07/29/english-compiler"]
+	path = 2024/07/29/english-compiler
+	url = https://github.com/uilicious/english-compiler
+[submodule "2024/07/29/auto-dev"]
+	path = 2024/07/29/auto-dev
+	url = https://github.com/unit-mesh/auto-dev
+[submodule "2024/07/29/chemcrow-public"]
+	path = 2024/07/29/chemcrow-public
+	url = https://github.com/ur-whitelab/chemcrow-public
+[submodule "2024/07/29/deco"]
+	path = 2024/07/29/deco
+	url = https://github.com/deco-cx/deco
+[submodule "2024/07/29/vanna"]
+	path = 2024/07/29/vanna
+	url = https://github.com/vanna-ai/vanna
+[submodule "2024/07/29/ai"]
+	path = 2024/07/29/ai
+	url = https://github.com/vercel/ai
+[submodule "2024/07/29/bumpgen"]
+	path = 2024/07/29/bumpgen
+	url = https://github.com/xeol-io/bumpgen
+[submodule "2024/07/29/code-act"]
+	path = 2024/07/29/code-act
+	url = https://github.com/xingyaoww/code-act
+[submodule "2024/07/29/OpenAgents"]
+	path = 2024/07/29/OpenAgents
+	url = https://github.com/xlang-ai/OpenAgents
+[submodule "2024/07/29/yeagerai-agent"]
+	path = 2024/07/29/yeagerai-agent
+	url = https://github.com/yeagerai/yeagerai-agent
+[submodule "2024/07/29/babyagi"]
+	path = 2024/07/29/babyagi
+	url = https://github.com/yoheinakajima/babyagi
+[submodule "2024/07/29/AutoAct"]
+	path = 2024/07/29/AutoAct
+	url = https://github.com/zjunlp/AutoAct
+[submodule "2024/07/29/private-gpt"]
+	path = 2024/07/29/private-gpt
+	url = https://github.com/zylon-ai/private-gpt/
+[submodule "2024/07/29/cal.com"]
+	path = 2024/07/29/cal.com
+	url = https://github.com/calcom/cal.com
+[submodule "2024/07/29/pr-agent"]
+	path = 2024/07/29/pr-agent
+	url = https://github.com/Codium-ai/pr-agent
