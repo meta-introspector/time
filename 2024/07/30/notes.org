@@ -1,0 +1,30 @@
+* idea
+using rich, we render the python code text into svg and then to
+png for visual model building.
+
+https://github.com/Textualize/rich
+
+#+begin_src python
+from rich.console import Console
+from rich.terminal_theme import MONOKAI
+
+console = Console(record=True)
+console.save_svg("example.svg", theme=MONOKAI)
+#+end_src
+
+* Idea of the day
+
+We can trace the ast back to the composition of c structures in memory,
+basically assembler. We can show the types of the data.
+Then we can trace the flow of instructions that modify that data.
+We can append all of this information to an audit record.
+The contents of the json ast can contain all of that, not just the value
+but the type of data and the providence or source.
+These hugging face models are essentially datatypes extracted.
+Now the work that we did to sample the N most common attributes from all rows
+is essentially sampling fields from various objects and seeing what configurations occur the most
+this provides a skeleton.
+
+Now we can sample all the data between the lines/columns of two near skeleton points,
+we can treat those as details. We can treat the common data as header and uncommon data as contents.
+
