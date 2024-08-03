@@ -14921,6 +14921,7 @@
 [submodule "2024/07/29/pr-agent"]
 	path = 2024/07/29/pr-agent
 	url = https://github.com/Codium-ai/pr-agent
+
 [submodule "2024/09/12/backend-token-wallets"]
 	path = 2024/09/12/backend-token-wallets
 	url = https://github.com/secret-tech/backend-token-wallets.git
@@ -15002,3 +15003,47 @@
 [submodule "2024/09/13/minaa"]
 	path = 2024/09/13/minaa
 	url = https://github.com/palladians/minaa.git
+
+[submodule "2024/07/29/pyre-check-docker"]
+	path = 2024/07/29/pyre-check-docker
+	url = https://github.com/GeekMasher/pyre-check-docker
+[submodule "2024/07/29/LeanDojo"]
+	path = 2024/07/29/LeanDojo
+	url = https://github.com/lean-dojo/LeanDojo
+[submodule "2024/07/29/kaggle-api"]
+	path = 2024/07/29/kaggle-api
+	url = https://github.com/Kaggle/kaggle-api
+[submodule "2024/07/29/kagglehub"]
+	path = 2024/07/29/kagglehub
+	url = https://github.com/Kaggle/kagglehub
+[submodule "2024/07/29/learntools"]
+	path = 2024/07/29/learntools
+	url = https://github.com/Kaggle/learntools
+[submodule "2024/07/29/terraform-provider-iterative"]
+	path = 2024/07/29/terraform-provider-iterative
+	url = https://github.com/iterative/terraform-provider-iterative
+[submodule "2024/07/29/huggingface-datasets-converter"]
+	path = 2024/07/29/huggingface-datasets-converter
+	url = https://github.com/nateraw/huggingface-datasets-converter.git
+[submodule "2024/07/29/croissant"]
+	path = 2024/07/29/croissant
+	url = https://github.com/mlcommons/croissant.git
+[submodule "2024/07/30/datasets"]
+	path = 2024/07/30/datasets
+	url = https://github.com/huggingface/datasets/
+[submodule "2024/07/30/dataset-viewer"]
+	path = 2024/07/30/dataset-viewer
+	url = https://github.com/huggingface/dataset-viewer
+[submodule "2024/08/01/time-grants"]
+	path = 2024/08/01/time-grants
+	url = https://github.com/meta-introspector/time-grants.git
+[submodule "2024/08/01/time-notes"]
+	path = 2024/08/01/time-notes
+	url = https://github.com/meta-introspector/time-notes
+[submodule "2024/08/01/spider"]
+	path = 2024/08/01/spider
+	url = https://github.com/spider-rs/spider.git
+[submodule "2024/08/02/mina"]
+	path = 2024/08/02/mina
+	url = https://github.com/meta-introspector/mina.git
+
