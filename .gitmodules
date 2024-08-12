@@ -1804,12 +1804,12 @@
 [submodule "2023/11/09/faiss"]
 	 path = 2023/11/09/faiss
 	 url = https://github.com/facebookresearch/faiss/
-[submodule "2023/11/09/llama.cpp"]
-	 path = 2023/11/09/llama.cpp
-	 url = https://github.com/nomic-ai/llama.cpp.git
 [submodule "2023/11/09/llama.cpp2"]
 	 path = 2023/11/09/llama.cpp2
 	 url = https://github.com/ggerganov/llama.cpp
+[submodule "2023/11/09/llama.cpp"]
+	 path = 2023/11/09/llama.cpp
+	 url = https://github.com/nomic-ai/llama.cpp.git
 [submodule "2023/11/10/cuda-gdb"]
 	 path = 2023/11/10/cuda-gdb
 	 url = https://github.com/NVIDIA/cuda-gdb
@@ -8655,12 +8655,12 @@
 [submodule "2024/05/26/borg"]
 	 path = 2024/05/26/borg
 	 url = https://github.com/emacscollective/borg
-[submodule "2024/05/26/boto3"]
-	 path = 2024/05/26/boto3
-	 url = https://github.com/boto/boto3
 [submodule "2024/05/26/boto"]
 	 path = 2024/05/26/boto
 	 url = https://github.com/boto/boto
+[submodule "2024/05/26/boto3"]
+	 path = 2024/05/26/boto3
+	 url = https://github.com/boto/boto3
 [submodule "2024/05/26/bottle"]
 	 path = 2024/05/26/bottle
 	 url = https://github.com/bottlepy/bottle
@@ -14953,7 +14953,6 @@
 [submodule "2024/08/02/mina"]
 	 path = 2024/08/02/mina
 	 url = https://github.com/meta-introspector/mina.git
-	 
 [submodule "2024/08/04/base"]
 	 path = 2024/08/04/base
 	 url = https://github.com/janestreet/base/
@@ -15116,7 +15115,6 @@
 [submodule "2024/08/06/ocaml-macros"]
 	 path = 2024/08/06/ocaml-macros
 	 url = https://github.com/modular-macros/ocaml-macros
-	 
 [submodule "2024/08/06/ocaml-mas"]
 	 path = 2024/08/06/ocaml-mas
 	 url = https://github.com/struktured/ocaml-mas
@@ -15156,6 +15154,96 @@
 [submodule "2024/08/06/utop"]
 	 path = 2024/08/06/utop
 	 url = https://github.com/ocaml-community/utop/
+[submodule "2024/08/07/ocaml-in-python"]
+	 path = 2024/08/07/ocaml-in-python
+	 url = https://github.com/thierry-martinez/ocaml-in-python
+[submodule "2024/08/07/ocaml-migrate-parsetree"]
+	 path = 2024/08/07/ocaml-migrate-parsetree
+	 url = https://github.com/chambart/ocaml-migrate-parsetree
+[submodule "2024/08/07/ocaml-typed-effects"]
+	 path = 2024/08/07/ocaml-typed-effects
+	 url = https://github.com/lpw25/ocaml-typed-effects
+[submodule "2024/08/07/ocplib-sempatch"]
+	 path = 2024/08/07/ocplib-sempatch
+	 url = https://github.com/thufschmitt/ocplib-sempatch
+[submodule "2024/08/08/book"]
+	 path = 2024/08/08/book
+	 url = https://github.com/realworldocaml/book
+[submodule "2024/08/08/bsb-native"]
+	 path = 2024/08/08/bsb-native
+	 url = https://github.com/bsansouci/bsb-native/
+[submodule "2024/08/08/grain2"]
+	 path = 2024/08/08/grain2
+	 url = https://github.com/phated/grain2
+[submodule "2024/08/08/grain"]
+	 path = 2024/08/08/grain
+	 url = https://github.com/grain-lang/grain
+[submodule "2024/08/08/JKTKops-tyro"]
+	 path = 2024/08/08/JKTKops-tyro
+	 url = https://github.com/JKTKops/tyro
+[submodule "2024/08/08/kmclib"]
+	 path = 2024/08/08/kmclib
+	 url = https://github.com/keigoi/kmclib
+[submodule "2024/08/08/mcl"]
+	 path = 2024/08/08/mcl
+	 url = https://github.com/AMSUN-Berlin/mcl
+[submodule "2024/08/08/merlin-jst"]
+	 path = 2024/08/08/merlin-jst
+	 url = https://github.com/janestreet/merlin-jst
+[submodule "2024/08/08/ocaml-book"]
+	 path = 2024/08/08/ocaml-book
+	 url = https://github.com/bobzhang/ocaml-book
+[submodule "2024/08/08/ocamlearlybird"]
+	 path = 2024/08/08/ocamlearlybird
+	 url = https://github.com/hackwaly/ocamlearlybird
+[submodule "2024/08/08/ocaml-gist"]
+	 path = 2024/08/08/ocaml-gist
+	 url = https://github.com/SanderSpies/ocaml-gist
+[submodule "2024/08/08/ocaml-jupyter"]
+	 path = 2024/08/08/ocaml-jupyter
+	 url = https://github.com/akabe/ocaml-jupyter
+[submodule "2024/08/08/ppx_fillup"]
+	 path = 2024/08/08/ppx_fillup
+	 url = https://github.com/keigoi/ppx_fillup
+[submodule "2024/08/08/ppx_toMeta"]
+	 path = 2024/08/08/ppx_toMeta
+	 url = https://github.com/ackoroa/ppx_toMeta
+[submodule "2024/08/08/ppx_ty_test"]
+	 path = 2024/08/08/ppx_ty_test
+	 url = https://github.com/keigoi/ppx_ty_test
+[submodule "2024/08/08/rows-ocaml"]
+	 path = 2024/08/08/rows-ocaml
+	 url = https://github.com/keigoi/rows-ocaml
+[submodule "2024/08/08/typedppxlib"]
+	 path = 2024/08/08/typedppxlib
+	 url = https://github.com/EduardoRFS/typedppxlib
+[submodule "2024/08/09/linkage"]
+	 path = 2024/08/09/linkage
+	 url = https://github.com/stedolan/linkage
+[submodule "2024/08/09/ocaml-hoogle"]
+	 path = 2024/08/09/ocaml-hoogle
+	 url = https://github.com/mzp/ocaml-hoogle
+[submodule "2024/08/09/ocamloscope.2"]
+	 path = 2024/08/09/ocamloscope.2
+	 url = https://github.com/camlspotter/ocamloscope.2
+[submodule "2024/08/09/ocamloscope"]
+	 path = 2024/08/09/ocamloscope
+	 url = https://github.com/camlspotter/ocamloscope
+[submodule "2024/08/09/ocaml-search"]
+	 path = 2024/08/09/ocaml-search
+	 url = https://github.com/patricoferris/ocaml-search
+[submodule "2024/08/09/sherlodoc"]
+	 path = 2024/08/09/sherlodoc
+	 url = https://github.com/art-w/sherlodoc
+[submodule "2024/08/11/dune-deps"]
+	 path = 2024/08/11/dune-deps
+	 url = https://github.com/mjambon/dune-deps
+[submodule "2024/08/11/risc0"]
+	 path = 2024/08/11/risc0
+	 url = https://github.com/risc0/risc0
+[submodule "2024/08/12/ocaml-bench-notes"]
+	 path = 2024/08/12/ocaml-bench-notes
+	 url = https://github.com/ocaml-bench/notes
 [submodule "2024/09/12/backend-token-wallets"]
 	 path = 2024/09/12/backend-token-wallets
 	 url = https://github.com/secret-tech/backend-token-wallets.git
@@ -15219,7 +15307,6 @@
 [submodule "2024/09/13/minaa"]
 	 path = 2024/09/13/minaa
 	 url = https://github.com/palladians/minaa.git
-	 
 [submodule "2024/09/13/mina-accounts-manager"]
 	 path = 2024/09/13/mina-accounts-manager
 	 url = https://github.com/shimkiv/mina-accounts-manager.git
