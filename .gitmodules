@@ -13,8 +13,8 @@
 [submodule "2023/04/27/introspector/src/torch-geometric"]
 	 path = 2023/04/27/introspector/src/torch-geometric
 	 url = https://github.com/pyg-team/pytorch_geometric
-[submodule "2023/04/28/gpt4all"]
-	 path = 2023/04/28/gpt4all
+[submodule "2023/04/28/peft"]
+	 path = 2023/04/28/peft
 	 url = https://github.com/huggingface/peft.git
 [submodule "2023/04/29/gpt4all-ui"]
 	 path = 2023/04/29/gpt4all-ui
@@ -15241,9 +15241,627 @@
 [submodule "2024/08/11/risc0"]
 	 path = 2024/08/11/risc0
 	 url = https://github.com/risc0/risc0
+[submodule "2024/08/12/nix-overlays"]
+	 path = 2024/08/12/nix-overlays
+	 url = https://github.com/nix-ocaml/nix-overlays.git
 [submodule "2024/08/12/ocaml-bench-notes"]
 	 path = 2024/08/12/ocaml-bench-notes
 	 url = https://github.com/ocaml-bench/notes
+[submodule "2024/08/13/ppx_yojson_conv_lib"]
+	 path = 2024/08/13/ppx_yojson_conv_lib
+	 url = https://github.com/janestreet/ppx_yojson_conv_lib
+[submodule "2024/08/14/ocaml-extlib"]
+	 path = 2024/08/14/ocaml-extlib
+	 url = https://github.com/ygrek/ocaml-extlib
+[submodule "2024/08/14/opam-cross-android"]
+	 path = 2024/08/14/opam-cross-android
+	 url = https://github.com/ocaml-cross/opam-cross-android.git
+[submodule "2024/08/14/ppxlib_jane"]
+	 path = 2024/08/14/ppxlib_jane
+	 url = https://github.com/janestreet/ppxlib_jane
+[submodule "2024/08/14/sexplib0"]
+	 path = 2024/08/14/sexplib0
+	 url = https://github.com/janestreet/sexplib0
+[submodule "2024/08/16/ppx_diff"]
+	 path = 2024/08/16/ppx_diff
+	 url = https://github.com/janestreet/ppx_diff
+[submodule "2024/08/16/snarky"]
+	 path = 2024/08/16/snarky
+	 url = https://github.com/meta-introspector/snarky
+[submodule "2024/08/18/flatten-tool"]
+	 path = 2024/08/18/flatten-tool
+	 url = https://github.com/OpenDataServices/flatten-tool.git
+[submodule "2024/08/18/meta-meme"]
+	 path = 2024/08/18/meta-meme
+	 url = https://gitlab.com/h4ck3rm1k3/meta-meme
+[submodule "2024/08/18/meta-meme-bridgetown"]
+	 path = 2024/08/18/meta-meme-bridgetown
+	 url = https://gitlab.com/h4ck3rm1k3/meta-meme-bridgetown
+[submodule "2024/08/18/meta-meme-hexo-netlify"]
+	 path = 2024/08/18/meta-meme-hexo-netlify
+	 url = https://gitlab.com/h4ck3rm1k3/meta-meme-hexo-netlify
+[submodule "2024/08/18/mutaml"]
+	 path = 2024/08/18/mutaml
+	 url = https://github.com/jmid/mutaml
+[submodule "2024/08/18/ocp-ppx-debug"]
+	 path = 2024/08/18/ocp-ppx-debug
+	 url = https://github.com/picdc/ocp-ppx-debug
+[submodule "2024/08/19/bff-ben"]
+	 path = 2024/08/19/bff-ben
+	 url = https://github.com/benlaurie/bff-ben
+[submodule "2024/08/19/cubff"]
+	 path = 2024/08/19/cubff
+	 url = https://github.com/paradigms-of-intelligence/cubff
+[submodule "2024/08/21/homotopy-rs"]
+	 path = 2024/08/21/homotopy-rs
+	 url = https://github.com/homotopy-io/homotopy-rs
+[submodule "2024/08/21/horned-owl"]
+	 path = 2024/08/21/horned-owl
+	 url = https://github.com/phillord/horned-owl
+[submodule "2024/08/21/json-schema-generator"]
+	 path = 2024/08/21/json-schema-generator
+	 url = https://github.com/krg7880/json-schema-generator
+[submodule "2024/08/21/json_schema_generator"]
+	 path = 2024/08/21/json_schema_generator
+	 url = https://github.com/perenecabuto/json_schema_generator.git
+[submodule "2024/08/21/jsonschema-rs"]
+	 path = 2024/08/21/jsonschema-rs
+	 url = https://github.com/Stranger6667/jsonschema-rs
+[submodule "2024/08/21/LSTS"]
+	 path = 2024/08/21/LSTS
+	 url = https://github.com/andrew-johnson-4/LSTS
+[submodule "2024/08/21/Noq"]
+	 path = 2024/08/21/Noq
+	 url = https://github.com/tsoding/Noq
+[submodule "2024/08/21/public"]
+	 path = 2024/08/21/public
+	 url = https://github.com/jsonsystems/public
+[submodule "2024/08/21/valico"]
+	 path = 2024/08/21/valico
+	 url = https://github.com/s-panferov/valico
+[submodule "2024/08/24/aderyn"]
+	 path = 2024/08/24/aderyn
+	 url = https://github.com/Cyfrin/aderyn
+[submodule "2024/08/24/any-arena"]
+	 path = 2024/08/24/any-arena
+	 url = https://github.com/pczarn/any-arena
+[submodule "2024/08/24/Arcane"]
+	 path = 2024/08/24/Arcane
+	 url = https://github.com/zerodaycode/Arcane
+[submodule "2024/08/24/asterinas"]
+	 path = 2024/08/24/asterinas
+	 url = https://github.com/asterinas/asterinas
+[submodule "2024/08/24/ast-grep"]
+	 path = 2024/08/24/ast-grep
+	 url = https://github.com/ast-grep/ast-grep
+[submodule "2024/08/24/bin_lift"]
+	 path = 2024/08/24/bin_lift
+	 url = https://github.com/r3bb1t/bin_lift
+[submodule "2024/08/24/cargo"]
+	 path = 2024/08/24/cargo
+	 url = https://github.com/rust-lang/cargo
+[submodule "2024/08/24/cargo-asm"]
+	 path = 2024/08/24/cargo-asm
+	 url = https://github.com/gnzlbg/cargo-asm
+[submodule "2024/08/24/cargo-llvm-lines"]
+	 path = 2024/08/24/cargo-llvm-lines
+	 url = https://github.com/dtolnay/cargo-llvm-lines
+[submodule "2024/08/24/cargo-show-asm"]
+	 path = 2024/08/24/cargo-show-asm
+	 url = https://github.com/pacak/cargo-show-asm
+[submodule "2024/08/24/cbpf-to-llvm-ir"]
+	 path = 2024/08/24/cbpf-to-llvm-ir
+	 url = https://github.com/mmisono/cbpf-to-llvm-ir
+[submodule "2024/08/24/cglue"]
+	 path = 2024/08/24/cglue
+	 url = https://github.com/h33p/cglue
+[submodule "2024/08/24/chilimak"]
+	 path = 2024/08/24/chilimak
+	 url = https://github.com/Dreamykass/chilimak
+[submodule "2024/08/24/codespawn"]
+	 path = 2024/08/24/codespawn
+	 url = https://github.com/kondrak/codespawn.git
+[submodule "2024/08/24/compiler"]
+	 path = 2024/08/24/compiler
+	 url = https://github.com/xarkenz/compiler
+[submodule "2024/08/24/compilisp"]
+	 path = 2024/08/24/compilisp
+	 url = https://github.com/mlafroce/compilisp
+[submodule "2024/08/24/crc-any"]
+	 path = 2024/08/24/crc-any
+	 url = https://github.com/magiclen/crc-any
+[submodule "2024/08/24/CRust"]
+	 path = 2024/08/24/CRust
+	 url = https://github.com/BK2004/CRust
+[submodule "2024/08/24/database-reflection"]
+	 path = 2024/08/24/database-reflection
+	 url = https://github.com/iganev/database-reflection
+[submodule "2024/08/24/db-gen"]
+	 path = 2024/08/24/db-gen
+	 url = https://github.com/argon-rbx/db-gen
+[submodule "2024/08/24/diffsitter"]
+	 path = 2024/08/24/diffsitter
+	 url = https://github.com/afnanenayet/diffsitter
+[submodule "2024/08/24/erised"]
+	 path = 2024/08/24/erised
+	 url = https://github.com/frondeus/erised
+[submodule "2024/08/24/fdp"]
+	 path = 2024/08/24/fdp
+	 url = https://github.com/Wenzel/fdp
+[submodule "2024/08/24/fdp-sys"]
+	 path = 2024/08/24/fdp-sys
+	 url = https://github.com/Wenzel/fdp-sys
+[submodule "2024/08/24/ffi_reflect"]
+	 path = 2024/08/24/ffi_reflect
+	 url = https://github.com/dngulin/ffi_reflect
+[submodule "2024/08/24/gir-files-rs"]
+	 path = 2024/08/24/gir-files-rs
+	 url = https://github.com/GStreamer/gir-files-rs
+[submodule "2024/08/24/goat"]
+	 path = 2024/08/24/goat
+	 url = https://github.com/YC/goat
+[submodule "2024/08/24/graalhello"]
+	 path = 2024/08/24/graalhello
+	 url = https://github.com/michardy/graalhello
+[submodule "2024/08/24/grust"]
+	 path = 2024/08/24/grust
+	 url = https://github.com/gi-rust/grust
+[submodule "2024/08/24/harfbuzz-gir"]
+	 path = 2024/08/24/harfbuzz-gir
+	 url = https://github.com/johncf/harfbuzz-gir
+[submodule "2024/08/24/haybale"]
+	 path = 2024/08/24/haybale
+	 url = https://github.com/PLSysSec/haybale
+[submodule "2024/08/24/hello_llvm2"]
+	 path = 2024/08/24/hello_llvm2
+	 url = https://github.com/JohnScience/hello_llvm2
+[submodule "2024/08/24/hgen"]
+	 path = 2024/08/24/hgen
+	 url = https://github.com/FlorianPallas/hgen
+[submodule "2024/08/24/inkwell"]
+	 path = 2024/08/24/inkwell
+	 url = https://github.com/TheDan64/inkwell
+[submodule "2024/08/24/interact"]
+	 path = 2024/08/24/interact
+	 url = https://github.com/interact-rs/interact
+[submodule "2024/08/24/introspect"]
+	 path = 2024/08/24/introspect
+	 url = https://github.com/claymcleod/introspect
+[submodule "2024/08/24/introspectable"]
+	 path = 2024/08/24/introspectable
+	 url = https://github.com/Peperworx/introspectable
+[submodule "2024/08/24/introspection"]
+	 path = 2024/08/24/introspection
+	 url = https://github.com/iddm/introspection
+[submodule "2024/08/24/irl"]
+	 path = 2024/08/24/irl
+	 url = https://github.com/hyouteki/irl
+[submodule "2024/08/24/iron-llvm"]
+	 path = 2024/08/24/iron-llvm
+	 url = https://github.com/jauhien/iron-llvm
+[submodule "2024/08/24/iter_mod"]
+	 path = 2024/08/24/iter_mod
+	 url = https://github.com/ejmount/iter_mod
+[submodule "2024/08/24/jssat"]
+	 path = 2024/08/24/jssat
+	 url = https://github.com/monoclex/jssat
+[submodule "2024/08/24/krang"]
+	 path = 2024/08/24/krang
+	 url = https://github.com/adamcin/krang
+[submodule "2024/08/24/kvmi"]
+	 path = 2024/08/24/kvmi
+	 url = https://github.com/Wenzel/kvmi
+[submodule "2024/08/24/kvmi-sys"]
+	 path = 2024/08/24/kvmi-sys
+	 url = https://github.com/Wenzel/kvmi-sys
+[submodule "2024/08/24/libmicrovmi"]
+	 path = 2024/08/24/libmicrovmi
+	 url = https://github.com/Wenzel/libmicrovmi
+[submodule "2024/08/24/libra"]
+	 path = 2024/08/24/libra
+	 url = https://github.com/watssec/libra
+[submodule "2024/08/24/lifeline"]
+	 path = 2024/08/24/lifeline
+	 url = https://github.com/icmccorm/lifeline
+[submodule "2024/08/24/lisp-llvm-ir"]
+	 path = 2024/08/24/lisp-llvm-ir
+	 url = https://github.com/hoangpq/lisp-llvm-ir
+[submodule "2024/08/24/llir"]
+	 path = 2024/08/24/llir
+	 url = https://github.com/Liby99/llir
+[submodule "2024/08/24/llisp"]
+	 path = 2024/08/24/llisp
+	 url = https://github.com/ilnaes/llisp
+[submodule "2024/08/24/llvm-bindings"]
+	 path = 2024/08/24/llvm-bindings
+	 url = https://github.com/ApsarasX/llvm-bindings
+[submodule "2024/08/24/llvm-ir"]
+	 path = 2024/08/24/llvm-ir
+	 url = https://github.com/cdisselkoen/llvm-ir.git
+[submodule "2024/08/24/llvm-ir-analysis"]
+	 path = 2024/08/24/llvm-ir-analysis
+	 url = https://github.com/cdisselkoen/llvm-ir-analysis
+[submodule "2024/08/24/llvm-ir-taint"]
+	 path = 2024/08/24/llvm-ir-taint
+	 url = https://github.com/cdisselkoen/llvm-ir-taint
+[submodule "2024/08/24/llvm-model"]
+	 path = 2024/08/24/llvm-model
+	 url = https://github.com/davnavr/llvm-model
+[submodule "2024/08/24/llvm-sys.rs"]
+	 path = 2024/08/24/llvm-sys.rs
+	 url = https://gitlab.com/taricorp/llvm-sys.rs
+[submodule "2024/08/24/looking-glass"]
+	 path = 2024/08/24/looking-glass
+	 url = https://github.com/m10io/looking-glass
+[submodule "2024/08/24/lua-data"]
+	 path = 2024/08/24/lua-data
+	 url = https://github.com/therustmonk/lua-data
+[submodule "2024/08/24/MacroRulesAutoreflector"]
+	 path = 2024/08/24/MacroRulesAutoreflector
+	 url = https://github.com/niklasrogmann/MacroRulesAutoreflector
+[submodule "2024/08/24/memflow"]
+	 path = 2024/08/24/memflow
+	 url = https://github.com/memflow/memflow
+[submodule "2024/08/24/memflow-qemu"]
+	 path = 2024/08/24/memflow-qemu
+	 url = https://github.com/memflow/memflow-qemu
+[submodule "2024/08/24/meta-rust"]
+	 path = 2024/08/24/meta-rust
+	 url = https://github.com/meta-rust/meta-rust
+[submodule "2024/08/24/meta-rust-bin"]
+	 path = 2024/08/24/meta-rust-bin
+	 url = https://github.com/rust-embedded/meta-rust-bin
+[submodule "2024/08/24/miniconf"]
+	 path = 2024/08/24/miniconf
+	 url = https://github.com/quartiq/miniconf
+[submodule "2024/08/24/mirror"]
+	 path = 2024/08/24/mirror
+	 url = https://github.com/Kurble/mirror
+[submodule "2024/08/24/mirror-mirror"]
+	 path = 2024/08/24/mirror-mirror
+	 url = https://github.com/EmbarkStudios/mirror-mirror
+[submodule "2024/08/24/mlir-rust-toy"]
+	 path = 2024/08/24/mlir-rust-toy
+	 url = https://github.com/ArtemSkrebkov/mlir-rust-toy
+[submodule "2024/08/24/nemo-rust"]
+	 path = 2024/08/24/nemo-rust
+	 url = https://github.com/ubuntucinnamon/nemo-rust
+[submodule "2024/08/24/painter"]
+	 path = 2024/08/24/painter
+	 url = https://github.com/rustfoundation/painter
+[submodule "2024/08/24/perfect-reflect"]
+	 path = 2024/08/24/perfect-reflect
+	 url = https://github.com/soqb/perfect-reflect
+[submodule "2024/08/24/perf_kernel"]
+	 path = 2024/08/24/perf_kernel
+	 url = https://github.com/Qubasa/perf_kernel
+[submodule "2024/08/24/preflect"]
+	 path = 2024/08/24/preflect
+	 url = https://github.com/chuck-flowers/preflect
+[submodule "2024/08/24/prost-reflect"]
+	 path = 2024/08/24/prost-reflect
+	 url = https://github.com/andrewhickman/prost-reflect
+[submodule "2024/08/24/rebound"]
+	 path = 2024/08/24/rebound
+	 url = https://github.com/CraftSpider/rebound
+[submodule "2024/08/24/reflect"]
+	 path = 2024/08/24/reflect
+	 url = https://github.com/tr8dr/reflect
+[submodule "2024/08/24/reflection"]
+	 path = 2024/08/24/reflection
+	 url = https://github.com/oooutlk/reflection
+[submodule "2024/08/24/reflectix"]
+	 path = 2024/08/24/reflectix
+	 url = https://github.com/abusers-inc/reflectix
+[submodule "2024/08/24/reflect-struct-macro"]
+	 path = 2024/08/24/reflect-struct-macro
+	 url = https://github.com/dgr113/reflect-struct-macro
+[submodule "2024/08/24/reflexion"]
+	 path = 2024/08/24/reflexion
+	 url = https://github.com/derklaro/reflexion
+[submodule "2024/08/24/Re-llvm_linker"]
+	 path = 2024/08/24/Re-llvm_linker
+	 url = https://github.com/whbjzzwjxq/Re-llvm_linker.git
+[submodule "2024/08/24/rockpiler"]
+	 path = 2024/08/24/rockpiler
+	 url = https://github.com/incolore-team/rockpiler
+[submodule "2024/08/24/rrc"]
+	 path = 2024/08/24/rrc
+	 url = https://github.com/saturn691/rrc
+[submodule "2024/08/24/rr-llvm-ir"]
+	 path = 2024/08/24/rr-llvm-ir
+	 url = https://github.com/rchaser53/rr-llvm-ir
+[submodule "2024/08/24/rust"]
+	 path = 2024/08/24/rust
+	 url = https://github.com/rust-lang/rust
+[submodule "2024/08/24/rust-monkey-ir"]
+	 path = 2024/08/24/rust-monkey-ir
+	 url = https://github.com/rchaser53/rust-monkey-ir
+[submodule "2024/08/24/rust-reflect"]
+	 path = 2024/08/24/rust-reflect
+	 url = https://github.com/simonask/rust-reflect
+[submodule "2024/08/24/rust_reflection"]
+	 path = 2024/08/24/rust_reflection
+	 url = https://github.com/belovdv/rust_reflection
+[submodule "2024/08/24/rust-release-introspection-tool"]
+	 path = 2024/08/24/rust-release-introspection-tool
+	 url = https://github.com/lmzuccarelli/rust-release-introspection-tool
+[submodule "2024/08/24/rust-static-reflect"]
+	 path = 2024/08/24/rust-static-reflect
+	 url = https://github.com/DuckLogic/rust-static-reflect
+[submodule "2024/08/24/Rust-Struct-Reification"]
+	 path = 2024/08/24/Rust-Struct-Reification
+	 url = https://github.com/EngineersBox/Rust-Struct-Reification
+[submodule "2024/08/24/rust-tracer"]
+	 path = 2024/08/24/rust-tracer
+	 url = https://github.com/DanielHalachev/rust-tracer
+[submodule "2024/08/24/rust-unique_id"]
+	 path = 2024/08/24/rust-unique_id
+	 url = https://github.com/johnstonskj/rust-unique_id
+[submodule "2024/08/24/serdepp"]
+	 path = 2024/08/24/serdepp
+	 url = https://github.com/injae/serdepp
+[submodule "2024/08/24/serde-reflection"]
+	 path = 2024/08/24/serde-reflection
+	 url = https://github.com/zefchain/serde-reflection
+[submodule "2024/08/24/sortrs"]
+	 path = 2024/08/24/sortrs
+	 url = https://github.com/bitshifter/sortrs
+[submodule "2024/08/24/specta"]
+	 path = 2024/08/24/specta
+	 url = https://github.com/specta-rs/specta
+[submodule "2024/08/24/spirq-rs"]
+	 path = 2024/08/24/spirq-rs
+	 url = https://github.com/PENGUINLIONG/spirq-rs
+[submodule "2024/08/24/spirv_interop"]
+	 path = 2024/08/24/spirv_interop
+	 url = https://github.com/Friz64/spirv_interop
+[submodule "2024/08/24/trait_gen"]
+	 path = 2024/08/24/trait_gen
+	 url = https://github.com/blueglyph/trait_gen
+[submodule "2024/08/24/treeflection"]
+	 path = 2024/08/24/treeflection
+	 url = https://github.com/rukai/treeflection
+[submodule "2024/08/24/trinity"]
+	 path = 2024/08/24/trinity
+	 url = https://github.com/were/trinity
+[submodule "2024/08/24/type-metadata"]
+	 path = 2024/08/24/type-metadata
+	 url = https://github.com/type-metadata/type-metadata
+[submodule "2024/08/24/utoipa_auto_discovery"]
+	 path = 2024/08/24/utoipa_auto_discovery
+	 url = https://github.com/rxdiscovery/utoipa_auto_discovery
+[submodule "2024/08/24/utoipauto"]
+	 path = 2024/08/24/utoipauto
+	 url = https://github.com/ProbablyClem/utoipauto
+[submodule "2024/08/24/vicis"]
+	 path = 2024/08/24/vicis
+	 url = https://github.com/maekawatoshiki/vicis
+[submodule "2024/08/24/vmi-rs"]
+	 path = 2024/08/24/vmi-rs
+	 url = https://github.com/mark-i-m/vmi-rs
+[submodule "2024/08/24/wcet-rs"]
+	 path = 2024/08/24/wcet-rs
+	 url = https://github.com/hudson-ayers/wcet-rs
+[submodule "2024/08/24/yeet-bf"]
+	 path = 2024/08/24/yeet-bf
+	 url = https://github.com/tomsik68/yeet-bf
+[submodule "2024/08/24/yolnir"]
+	 path = 2024/08/24/yolnir
+	 url = https://github.com/Jerald/yolnir
+[submodule "2024/08/25/erased-serde"]
+	 path = 2024/08/25/erased-serde
+	 url = https://github.com/dtolnay/erased-serde
+[submodule "2024/08/25/proc-macro2"]
+	 path = 2024/08/25/proc-macro2
+	 url = https://github.com/dtolnay/proc-macro2
+[submodule "2024/08/25/quote"]
+	 path = 2024/08/25/quote
+	 url = https://github.com/dtolnay/quote
+[submodule "2024/08/25/syn"]
+	 path = 2024/08/25/syn
+	 url = https://github.com/dtolnay/syn
+[submodule "2024/08/25/typetag"]
+	 path = 2024/08/25/typetag
+	 url = https://github.com/dtolnay/typetag
+[submodule "2024/08/26/serde-annotate"]
+	 path = 2024/08/26/serde-annotate
+	 url = https://github.com/cfrantz/serde-annotate
+[submodule "2024/08/27/arkworks-algebra"]
+	 path = 2024/08/27/arkworks-algebra
+	 url = https://github.com/NilFoundation/arkworks-algebra.git
+[submodule "2024/08/27/arkworks-curves"]
+	 path = 2024/08/27/arkworks-curves
+	 url = https://github.com/NilFoundation/arkworks-curves.git
+[submodule "2024/08/27/bellman"]
+	 path = 2024/08/27/bellman
+	 url = https://github.com/zkcrypto/bellman
+[submodule "2024/08/27/bellman-examples"]
+	 path = 2024/08/27/bellman-examples
+	 url = https://github.com/arcalinea/bellman-examples
+[submodule "2024/08/27/CIPs"]
+	 path = 2024/08/27/CIPs
+	 url = https://github.com/cardano-foundation/CIPs
+[submodule "2024/08/27/circom"]
+	 path = 2024/08/27/circom
+	 url = https://github.com/iden3/circom
+[submodule "2024/08/27/hodor"]
+	 path = 2024/08/27/hodor
+	 url = https://github.com/matter-labs/hodor.git
+[submodule "2024/08/27/introspection"]
+	 path = 2024/08/27/introspection
+	 url = https://github.com/iddm/introspection
+[submodule "2024/08/27/libsnark-tutorial"]
+	 path = 2024/08/27/libsnark-tutorial
+	 url = https://github.com/coder5876/libsnark-tutorial
+[submodule "2024/08/27/mina-indexer"]
+	 path = 2024/08/27/mina-indexer
+	 url = https://github.com/Granola-Team/mina-indexer
+[submodule "2024/08/27/mina-names"]
+	 path = 2024/08/27/mina-names
+	 url = https://github.com/Staketab/mina-names
+[submodule "2024/08/27/openmina"]
+	 path = 2024/08/27/openmina
+	 url = https://github.com/openmina/openmina.git
+[submodule "2024/08/27/OpenZKP"]
+	 path = 2024/08/27/OpenZKP
+	 url = https://github.com/0xProject/OpenZKP.git
+[submodule "2024/08/27/Snarky-ML"]
+	 path = 2024/08/27/Snarky-ML
+	 url = https://github.com/only4sim/Snarky-ML
+[submodule "2024/08/27/STARK101-rs"]
+	 path = 2024/08/27/STARK101-rs
+	 url = https://github.com/lambdaclass/STARK101-rs.git
+[submodule "2024/08/27/zkjargon.github.io"]
+	 path = 2024/08/27/zkjargon.github.io
+	 url = https://github.com/zkjargon/zkjargon.github.io
+[submodule "2024/08/27/zkLLVM"]
+	 path = 2024/08/27/zkLLVM
+	 url = https://github.com/NilFoundation/zkLLVM
+[submodule "2024/08/27/zkllvm-rust-template"]
+	 path = 2024/08/27/zkllvm-rust-template
+	 url = https://github.com/NilFoundation/zkllvm-rust-template
+[submodule "2024/08/27/zkllvm-unroll"]
+	 path = 2024/08/27/zkllvm-unroll
+	 url = https://github.com/NilFoundation/zkllvm-unroll.git
+[submodule "2024/08/27/zkp"]
+	 path = 2024/08/27/zkp
+	 url = https://github.com/dalek-cryptography/zkp
+[submodule "2024/08/27/zkp-compiler-shootout"]
+	 path = 2024/08/27/zkp-compiler-shootout
+	 url = https://github.com/anoma/zkp-compiler-shootout.git
+[submodule "2024/08/28/algebra"]
+	 path = 2024/08/28/algebra
+	 url = https://github.com/openmina/algebra
+[submodule "2024/08/28/alloc-test"]
+	 path = 2024/08/28/alloc-test
+	 url = https://github.com/openmina/alloc-test.git
+[submodule "2024/08/28/binius"]
+	 path = 2024/08/28/binius
+	 url = https://gitlab.com/UlvetannaOSS/binius
+[submodule "2024/08/28/binprot-rs"]
+	 path = 2024/08/28/binprot-rs
+	 url = https://github.com/openmina/binprot-rs
+[submodule "2024/08/28/cairo"]
+	 path = 2024/08/28/cairo
+	 url = https://github.com/starkware-libs/cairo
+[submodule "2024/08/28/cairo-vm"]
+	 path = 2024/08/28/cairo-vm
+	 url = https://github.com/lambdaclass/cairo-vm
+[submodule "2024/08/28/circom-ecdsa"]
+	 path = 2024/08/28/circom-ecdsa
+	 url = https://github.com/0xPARC/circom-ecdsa
+[submodule "2024/08/28/jellyfish"]
+	 path = 2024/08/28/jellyfish
+	 url = https://github.com/EspressoSystems/jellyfish
+[submodule "2024/08/28/jolt"]
+	 path = 2024/08/28/jolt
+	 url = https://github.com/a16z/jolt
+[submodule "2024/08/28/libsnark"]
+	 path = 2024/08/28/libsnark
+	 url = https://github.com/scipr-lab/libsnark
+[submodule "2024/08/28/mina-rs"]
+	 path = 2024/08/28/mina-rs
+	 url = https://github.com/ChainSafe/mina-rs
+[submodule "2024/08/28/o1js"]
+	 path = 2024/08/28/o1js
+	 url = https://github.com/o1-labs/o1js
+[submodule "2024/08/28/o1js-bindings"]
+	 path = 2024/08/28/o1js-bindings
+	 url = https://github.com/o1-labs/o1js-bindings.git
+[submodule "2024/08/28/o1js-jal"]
+	 path = 2024/08/28/o1js-jal
+	 url = https://github.com/zcred-org/o1js-jal
+[submodule "2024/08/28/ocaml-interop"]
+	 path = 2024/08/28/ocaml-interop
+	 url = https://github.com/sebastiencs/ocaml-interop.git
+[submodule "2024/08/28/openmina"]
+	 path = 2024/08/28/openmina
+	 url = https://github.com/openmina/openmina
+[submodule "2024/08/28/Plonky3"]
+	 path = 2024/08/28/Plonky3
+	 url = https://github.com/Plonky3/Plonky3
+[submodule "2024/08/28/proof-systems"]
+	 path = 2024/08/28/proof-systems
+	 url = https://github.com/openmina/proof-systems
+[submodule "2024/08/28/redux-rs"]
+	 path = 2024/08/28/redux-rs
+	 url = https://github.com/openmina/redux-rs.git
+[submodule "2024/08/28/rust-libp2p"]
+	 path = 2024/08/28/rust-libp2p
+	 url = https://github.com/openmina/rust-libp2p
+[submodule "2024/08/28/scarb"]
+	 path = 2024/08/28/scarb
+	 url = https://github.com/software-mansion/scarb
+[submodule "2024/08/28/sirius"]
+	 path = 2024/08/28/sirius
+	 url = https://github.com/snarkify/sirius
+[submodule "2024/08/28/snark"]
+	 path = 2024/08/28/snark
+	 url = https://github.com/arkworks-rs/snark
+[submodule "2024/08/28/snarkVM"]
+	 path = 2024/08/28/snarkVM
+	 url = https://github.com/AleoNet/snarkVM
+[submodule "2024/08/28/snow"]
+	 path = 2024/08/28/snow
+	 url = https://github.com/mcginty/snow
+[submodule "2024/08/28/wasm-timer"]
+	 path = 2024/08/28/wasm-timer
+	 url = https://github.com/fusetim/wasm-timer
+[submodule "2024/08/28/webrtc"]
+	 path = 2024/08/28/webrtc
+	 url = https://github.com/openmina/webrtc.git
+[submodule "2024/08/30/dyon"]
+	 path = 2024/08/30/dyon
+	 url = https://github.com/PistonDevelopers/dyon
+[submodule "2024/08/30/miri"]
+	 path = 2024/08/30/miri
+	 url = https://github.com/rust-lang/miri
+[submodule "2024/08/30/o1js-pack"]
+	 path = 2024/08/30/o1js-pack
+	 url = https://github.com/45930/o1js-pack
+[submodule "2024/08/31/mina-fungible-token"]
+	 path = 2024/08/31/mina-fungible-token
+	 url = https://github.com/MinaFoundation/mina-fungible-token
+[submodule "2024/09/01/anoma-blog"]
+	 path = 2024/09/01/anoma-blog
+	 url = https://github.com/anoma/anoma-blog
+[submodule "2024/09/01/cnn-nova"]
+	 path = 2024/09/01/cnn-nova
+	 url = https://github.com/rishotics/cnn-nova
+[submodule "2024/09/01/isokratia"]
+	 path = 2024/09/01/isokratia
+	 url = https://github.com/nalinbhardwaj/isokratia
+[submodule "2024/09/01/lurk-rs"]
+	 path = 2024/09/01/lurk-rs
+	 url = https://github.com/argumentcomputer/lurk-rs
+[submodule "2024/09/01/Nova"]
+	 path = 2024/09/01/Nova
+	 url = https://github.com/microsoft/Nova
+[submodule "2024/09/01/o1js-groth16"]
+	 path = 2024/09/01/o1js-groth16
+	 url = https://github.com/onurinanc/o1js-groth16
+[submodule "2024/09/01/plonky2"]
+	 path = 2024/09/01/plonky2
+	 url = https://github.com/0xPolygonZero/plonky2
+[submodule "2024/09/01/recursive-zkSNARKs-calculator"]
+	 path = 2024/09/01/recursive-zkSNARKs-calculator
+	 url = https://github.com/iluxonchik/recursive-zkSNARKs-calculator.git
+[submodule "2024/09/01/snark-challenge"]
+	 path = 2024/09/01/snark-challenge
+	 url = https://github.com/MinaProtocol/snark-challenge
+[submodule "2024/09/01/stark-snark-recursive-proofs"]
+	 path = 2024/09/01/stark-snark-recursive-proofs
+	 url = https://github.com/Orbiter-Finance/stark-snark-recursive-proofs.git
+[submodule "2024/09/01/tari-university"]
+	 path = 2024/09/01/tari-university
+	 url = https://github.com/tari-labs/tari-university
+[submodule "2024/09/01/tipofmytongue"]
+	 path = 2024/09/01/tipofmytongue
+	 url = https://github.com/LemonSec/tipofmytongue
+[submodule "2024/09/01/zijkstra"]
+	 path = 2024/09/01/zijkstra
+	 url = https://github.com/lyronctk/zijkstra
 [submodule "2024/09/12/backend-token-wallets"]
 	 path = 2024/09/12/backend-token-wallets
 	 url = https://github.com/secret-tech/backend-token-wallets.git

@@ -58,3 +58,4 @@ generate as a function that we are generating. We can imagine using llms and oth
 these dreams.  The question becomes why is this of any value at all?  lets ask the llm.
 Ok. So We can now continue.
 
+nix-shell -p ocamlPackages.ppx_yojson_conv

@@ -23,13 +23,26 @@ open Types
 type partial = Partial | Total
                            [@@deriving  yojson]
 
-type attribute = Parsetree.attribute
-                   [@@deriving  yojson]
-
-type attributes = attribute list
-[@@deriving  yojson]
-type value = Value_pattern
-[@@deriving  yojson]
+(* type attribute = attribute *)
+(*                    [@@deriving  yojson] *)
+module type TypeTree = sig
+  type arg_label
+  type attribute
+  type constructor_description
+  type label_description
+  type module_presence
+  type mutable_flag
+  type override_flag
+  type partial
+  type private_flag
+  type record_representation
+  type row_desc
+  type type_expr
+  type virtual_flag
+  type attributes = attribute list
+                      [@@deriving  yojson]
+  type value = Value_pattern
+                 [@@deriving  yojson]
 type computation = Computation_pattern
 [@@deriving  yojson]
 
@@ -106,7 +119,7 @@ and exp_extra =
   | Texp_newtype of string
 [@@deriving  yojson]
 and expression_desc =
-    Texp_ident of Path.t * Longident.t loc * Types.value_description
+    Texp_ident of Path.t * Longident.t loc * value_description
   | Texp_constant of constant
   | Texp_let of rec_flag * value_binding list * expression
   | Texp_function of { arg_label : arg_label; param : Ident.t;
@@ -119,8 +132,8 @@ and expression_desc =
       Longident.t loc * constructor_description * expression list
   | Texp_variant of label * expression option
   | Texp_record of {
-      fields : ( Types.label_description * record_label_definition ) array;
-      representation : Types.record_representation;
+      fields : ( label_description * record_label_definition ) array;
+      representation : record_representation;
       extended_expression : expression option;
     }
   | Texp_field of expression * Longident.t loc * label_description
@@ -131,15 +144,15 @@ and expression_desc =
   | Texp_sequence of expression * expression
   | Texp_while of expression * expression
   | Texp_for of
-      Ident.t * Parsetree.pattern * expression * expression * direction_flag *
+      Ident.t * pattern * expression * expression * direction_flag *
         expression
   | Texp_send of expression * meth
-  | Texp_new of Path.t * Longident.t loc * Types.class_declaration
+  | Texp_new of Path.t * Longident.t loc * class_declaration
   | Texp_instvar of Path.t * Path.t * string loc
   | Texp_setinstvar of Path.t * Path.t * string loc * expression
   | Texp_override of Path.t * (Ident.t * string loc * expression) list
   | Texp_letmodule of
-      Ident.t option * string option loc * Types.module_presence * module_expr *
+      Ident.t option * string option loc * module_presence * module_expr *
         expression
   | Texp_letexception of extension_constructor * expression
   | Texp_assert of expression
@@ -170,15 +183,15 @@ and 'k case =
     }
 [@@deriving  yojson]
 and record_label_definition =
-  | Kept of Types.type_expr
+  | Kept of type_expr
   | Overridden of Longident.t loc * expression
 [@@deriving  yojson]
 and binding_op =
   {
     bop_op_path : Path.t;
     bop_op_name : string loc;
-    bop_op_val : Types.value_description;
-    bop_op_type : Types.type_expr;
+    bop_op_val : value_description;
+    bop_op_type : type_expr;
     bop_exp : expression;
     bop_loc : Location.t;
   }
@@ -189,7 +202,7 @@ and class_expr =
     {
      cl_desc: class_expr_desc;
      cl_loc: Location.t;
-     cl_type: Types.class_type;
+     cl_type: class_type;
      cl_env: Env.t;
      cl_attributes: attribute list;
     }
@@ -212,7 +225,7 @@ and class_structure =
   {
    cstr_self: pattern;
    cstr_fields: class_field list;
-   cstr_type: Types.class_signature;
+   cstr_type: class_signature;
    cstr_meths: Ident.t Meths.t;
   }
 [@@deriving  yojson]
@@ -243,7 +256,7 @@ and class_field_desc =
 and module_expr =
   { mod_desc: module_expr_desc;
     mod_loc: Location.t;
-    mod_type: Types.module_type;
+    mod_type: module_type;
     mod_env: Env.t;
     mod_attributes: attribute list;
    }
@@ -262,12 +275,12 @@ and module_expr_desc =
   | Tmod_functor of functor_parameter * module_expr
   | Tmod_apply of module_expr * module_expr * module_coercion
   | Tmod_constraint of
-      module_expr * Types.module_type * module_type_constraint * module_coercion
-  | Tmod_unpack of expression * Types.module_type
+      module_expr * module_type * module_type_constraint * module_coercion
+  | Tmod_unpack of expression * module_type
 [@@deriving  yojson]
 and structure = {
   str_items : structure_item list;
-  str_type : Types.signature;
+  str_type : signature;
   str_final_env : Env.t;
 }
 [@@deriving  yojson]
@@ -322,7 +335,7 @@ and module_coercion =
 
 and module_type =
   { mty_desc: module_type_desc;
-    mty_type : Types.module_type;
+    mty_type : module_type;
     mty_env : Env.t;
     mty_loc: Location.t;
     mty_attributes: attribute list;
@@ -348,7 +361,7 @@ and primitive_coercion =
 [@@deriving  yojson]
 and signature = {
   sig_items : signature_item list;
-  sig_type : Types.signature;
+  sig_type : signature;
   sig_final_env : Env.t;
 }
 [@@deriving  yojson]
@@ -406,7 +419,7 @@ and module_type_declaration =
 and 'a open_infos =
     {
      open_expr: 'a;
-     open_bound_items: Types.signature;
+     open_bound_items: signature;
      open_override: override_flag;
      open_env: Env.t;
      open_loc: Location.t;
@@ -420,7 +433,7 @@ and open_declaration = module_expr open_infos
 and 'a include_infos =
     {
      incl_mod: 'a;
-     incl_type: Types.signature;
+     incl_type: signature;
      incl_loc: Location.t;
      incl_attributes: attribute list;
     }
@@ -463,7 +476,7 @@ and core_type_desc =
 and package_type = {
   pack_path : Path.t;
   pack_fields : (Longident.t loc * core_type) list;
-  pack_type : Types.module_type;
+  pack_type : module_type;
   pack_txt : Longident.t loc;
 }
 [@@deriving  yojson]
@@ -491,7 +504,7 @@ and value_description =
   { val_id: Ident.t;
     val_name: string loc;
     val_desc: core_type;
-    val_val: Types.value_description;
+    val_val: value_description;
     val_prim: string list;
     val_loc: Location.t;
     val_attributes: attribute list;
@@ -501,7 +514,7 @@ and type_declaration =
   { typ_id: Ident.t;
     typ_name: string loc;
     typ_params: (core_type * (variance * injectivity)) list;
-    typ_type: Types.type_declaration;
+    typ_type: type_declaration;
     typ_cstrs: (core_type * core_type * Location.t) list;
     typ_kind: type_kind;
     typ_private: private_flag;
@@ -563,7 +576,7 @@ and extension_constructor =
   {
     ext_id: Ident.t;
     ext_name: string loc;
-    ext_type: Types.extension_constructor;
+    ext_type: extension_constructor;
     ext_kind: extension_constructor_kind;
     ext_loc: Location.t;
     ext_attributes: attribute list;
@@ -576,7 +589,7 @@ and extension_constructor_kind =
 and class_type =
     {
      cltyp_desc: class_type_desc;
-     cltyp_type: Types.class_type;
+     cltyp_type: class_type;
      cltyp_env: Env.t;
      cltyp_loc: Location.t;
      cltyp_attributes: attribute list;
@@ -591,7 +604,7 @@ and class_type_desc =
 and class_signature = {
     csig_self: core_type;
     csig_fields: class_type_field list;
-    csig_type: Types.class_signature;
+    csig_type: class_signature;
   }
 [@@deriving  yojson]
 and class_type_field = {
@@ -625,8 +638,8 @@ and 'a class_infos =
     ci_id_object: Ident.t;
     ci_id_typehash: Ident.t;
     ci_expr: 'a;
-    ci_decl: Types.class_declaration;
-    ci_type_decl: Types.class_type_declaration;
+    ci_decl: class_declaration;
+    ci_type_decl: class_type_declaration;
     ci_loc: Location.t;
     ci_attributes: attribute list;
    }
@@ -634,228 +647,19 @@ and 'a class_infos =
 type implementation = {
   structure: structure;
   coercion: module_coercion;
-  signature: Types.signature;
+  signature: signature;
   shape: Shape.t;
 }
 
 
 (* Auxiliary functions over the a.s.t. *)
 
-let as_computation_pattern (p : pattern) : computation general_pattern =
-  {
-    pat_desc = Tpat_value p;
-    pat_loc = p.pat_loc;
-    pat_extra = [];
-    pat_type = p.pat_type;
-    pat_env = p.pat_env;
-    pat_attributes = [];
-  }
-
-let rec classify_pattern_desc : type k . k pattern_desc -> k pattern_category =
-  function
-  | Tpat_alias _ -> Value
-  | Tpat_tuple _ -> Value
-  | Tpat_construct _ -> Value
-  | Tpat_variant _ -> Value
-  | Tpat_record _ -> Value
-  | Tpat_array _ -> Value
-  | Tpat_lazy _ -> Value
-  | Tpat_any -> Value
-  | Tpat_var _ -> Value
-  | Tpat_constant _ -> Value
-
-  | Tpat_value _ -> Computation
-  | Tpat_exception _ -> Computation
-
-  | Tpat_or(p1, p2, _) ->
-     begin match classify_pattern p1, classify_pattern p2 with
-     | Value, Value -> Value
-     | Computation, Computation -> Computation
-     end
-[@@deriving  yojson]
-and classify_pattern
-  : type k . k general_pattern -> k pattern_category
-  = fun pat ->
-  classify_pattern_desc pat.pat_desc
-
 type pattern_action =
   { f : 'k . 'k general_pattern -> unit }
 [@@deriving  yojson]
-let shallow_iter_pattern_desc
-  : type k . pattern_action -> k pattern_desc -> unit
-  = fun f -> function
-  | Tpat_alias(p, _, _) -> f.f p
-  | Tpat_tuple patl -> List.iter f.f patl
-  | Tpat_construct(_, _, patl, _) -> List.iter f.f patl
-  | Tpat_variant(_, pat, _) -> Option.iter f.f pat
-  | Tpat_record (lbl_pat_list, _) ->
-      List.iter (fun (_, _, pat) -> f.f pat) lbl_pat_list
-  | Tpat_array patl -> List.iter f.f patl
-  | Tpat_lazy p -> f.f p
-  | Tpat_any
-  | Tpat_var _
-  | Tpat_constant _ -> ()
-  | Tpat_value p -> f.f p
-  | Tpat_exception p -> f.f p
-  | Tpat_or(p1, p2, _) -> f.f p1; f.f p2
 
 type pattern_transformation =
   { f : 'k . 'k general_pattern -> 'k general_pattern }
 [@@deriving  yojson]
-let shallow_map_pattern_desc
-  : type k . pattern_transformation -> k pattern_desc -> k pattern_desc
-  = fun f d -> match d with
-  | Tpat_alias (p1, id, s) ->
-      Tpat_alias (f.f p1, id, s)
-  | Tpat_tuple pats ->
-      Tpat_tuple (List.map f.f pats)
-  | Tpat_record (lpats, closed) ->
-      Tpat_record (List.map (fun (lid, l,p) -> lid, l, f.f p) lpats, closed)
-  | Tpat_construct (lid, c, pats, ty) ->
-      Tpat_construct (lid, c, List.map f.f pats, ty)
-  | Tpat_array pats ->
-      Tpat_array (List.map f.f pats)
-  | Tpat_lazy p1 -> Tpat_lazy (f.f p1)
-  | Tpat_variant (x1, Some p1, x2) ->
-      Tpat_variant (x1, Some (f.f p1), x2)
-  | Tpat_var _
-  | Tpat_constant _
-  | Tpat_any
-  | Tpat_variant (_,None,_) -> d
-  | Tpat_value p -> Tpat_value (f.f p)
-  | Tpat_exception p -> Tpat_exception (f.f p)
-  | Tpat_or (p1,p2,path) ->
-      Tpat_or (f.f p1, f.f p2, path)
 
-let rec iter_general_pattern
-  : type k . pattern_action -> k general_pattern -> unit
-  = fun f p ->
-  f.f p;
-  shallow_iter_pattern_desc
-    { f = fun p -> iter_general_pattern f p }
-    p.pat_desc
-
-let iter_pattern (f : pattern -> unit) =
-  iter_general_pattern
-    { f = fun (type k) (p : k general_pattern) ->
-          match classify_pattern p with
-          | Value -> f p
-          | Computation -> () }
-
-type pattern_predicate = { f : 'k . 'k general_pattern -> bool }
-[@@deriving  yojson]
-let exists_general_pattern (f : pattern_predicate) p =
-  let exception Found in
-  match
-    iter_general_pattern
-      { f = fun p -> if f.f p then raise Found else () }
-      p
-  with
-  | exception Found -> true
-  | () -> false
-
-let exists_pattern (f : pattern -> bool) =
-  exists_general_pattern
-    { f = fun (type k) (p : k general_pattern) ->
-          match classify_pattern p with
-          | Value -> f p
-          | Computation -> false }
-
-
-(* List the identifiers bound by a pattern or a let *)
-
-let rec iter_bound_idents
-  : type k . _ -> k general_pattern -> _
-  = fun f pat ->
-  match pat.pat_desc with
-  | Tpat_var (id,s) ->
-     f (id,s,pat.pat_type)
-  | Tpat_alias(p, id, s) ->
-      iter_bound_idents f p;
-      f (id,s,pat.pat_type)
-  | Tpat_or(p1, _, _) ->
-      (* Invariant : both arguments bind the same variables *)
-      iter_bound_idents f p1
-  | d ->
-     shallow_iter_pattern_desc
-       { f = fun p -> iter_bound_idents f p }
-       d
-
-let rev_pat_bound_idents_full pat =
-  let idents_full = ref [] in
-  let add id_full = idents_full := id_full :: !idents_full in
-  iter_bound_idents add pat;
-  !idents_full
-
-let rev_only_idents idents_full =
-  List.rev_map (fun (id,_,_) -> id) idents_full
-
-let pat_bound_idents_full pat =
-  List.rev (rev_pat_bound_idents_full pat)
-let pat_bound_idents pat =
-  rev_only_idents (rev_pat_bound_idents_full pat)
-
-let rev_let_bound_idents_full bindings =
-  let idents_full = ref [] in
-  let add id_full = idents_full := id_full :: !idents_full in
-  List.iter (fun vb -> iter_bound_idents add vb.vb_pat) bindings;
-  !idents_full
-
-let let_bound_idents_full bindings =
-  List.rev (rev_let_bound_idents_full bindings)
-let let_bound_idents pat =
-  rev_only_idents (rev_let_bound_idents_full pat)
-
-let alpha_var env id = List.assoc id env
-
-let rec alpha_pat
-  : type k . _ -> k general_pattern -> k general_pattern
-  = fun env p -> match p.pat_desc with
-  | Tpat_var (id, s) -> (* note the ``Not_found'' case *)
-      {p with pat_desc =
-       try Tpat_var (alpha_var env id, s) with
-       | Not_found -> Tpat_any}
-  | Tpat_alias (p1, id, s) ->
-      let new_p =  alpha_pat env p1 in
-      begin try
-        {p with pat_desc = Tpat_alias (new_p, alpha_var env id, s)}
-      with
-      | Not_found -> new_p
-      end
-  | d ->
-     let pat_desc =
-       shallow_map_pattern_desc { f = fun p -> alpha_pat env p } d in
-     {p with pat_desc}
-
-let mkloc = Location.mkloc
-let mknoloc = Location.mknoloc
-
-let split_pattern pat =
-  let combine_opts merge p1 p2 =
-    match p1, p2 with
-    | None, None -> None
-    | Some p, None
-    | None, Some p ->
-        Some p
-    | Some p1, Some p2 ->
-        Some (merge p1 p2)
-  in
-  let into pat p1 p2 =
-    (* The third parameter of [Tpat_or] is [Some _] only for "#typ"
-       patterns, which we do *not* expand. Hence we can put [None] here. *)
-    { pat with pat_desc = Tpat_or (p1, p2, None) } in
-  let rec split_pattern cpat =
-    match cpat.pat_desc with
-    | Tpat_value p ->
-        Some p, None
-    | Tpat_exception p ->
-        None, Some p
-    | Tpat_or (cp1, cp2, _) ->
-        let vals1, exns1 = split_pattern cp1 in
-        let vals2, exns2 = split_pattern cp2 in
-        combine_opts (into cpat) vals1 vals2,
-        (* We could change the pattern type for exception patterns to
-           [Predef.exn], but it doesn't really matter. *)
-        combine_opts (into cpat) exns1 exns2
-  in
-  split_pattern pat
+end

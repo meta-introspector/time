@@ -16,7 +16,7 @@
 (* Representation of types and declarations *)
 
 open Asttypes
-
+open Ppx_yojson_conv_lib.Yojson_conv.Primitives
 (* Type expressions for the core language *)
 
 type transient_expr =
@@ -37,54 +37,56 @@ and type_desc =
   | Tnil
   | Tlink of type_expr
   | Tsubst of type_expr * type_expr option
-  | Tvariant of row_desc
+  (* | Tvariant of row_desc *)
   | Tunivar of string option
   | Tpoly of type_expr * type_expr list
   | Tpackage of Path.t * (Longident.t * type_expr) list
 [@@deriving  yojson]
-and row_desc =
-    { row_fields: (label * row_field) list;
-      row_more: type_expr;
-      row_closed: bool;
-      row_fixed: fixed_explanation option;
-      row_name: (Path.t * type_expr list) option }
-[@@deriving  yojson]
+(* and row_desc = *)
+(*     { row_fields: (label * row_field) list; *)
+(*       row_more: type_expr; *)
+(*       row_closed: bool; *)
+(*       row_fixed: fixed_explanation option; *)
+(*       row_name: (Path.t * type_expr list) option } *)
+(* [@@deriving  yojson] *)
 and fixed_explanation =
   | Univar of type_expr | Fixed_private | Reified of Path.t | Rigid
 [@@deriving  yojson]
-and row_field = [`some] row_field_gen
-[@@deriving  yojson]
-and _ row_field_gen =
-    RFpresent : type_expr option -> [> `some] row_field_gen
-  | RFeither :
-      { no_arg: bool;
-        arg_type: type_expr list;
-        matched: bool;
-        ext: [`some | `none] row_field_gen ref} -> [> `some] row_field_gen
-  | RFabsent : [> `some] row_field_gen
-  | RFnone : [> `none] row_field_gen
-[@@deriving  yojson]
+(* and row_field = [`some] row_field_gen *)
+(* [@@deriving  yojson] *)
+(* and _ row_field_gen = *)
+(*     RFpresent : type_expr option -> [> `some] row_field_gen *)
+(*   | RFeither : *)
+(*       { no_arg: bool; *)
+(*         arg_type: type_expr list; *)
+(*         matched: bool; *)
+(*         ext: [`some | `none] row_field_gen ref} -> [> `some] row_field_gen *)
+(*   | RFabsent : [> `some] row_field_gen *)
+(*   | RFnone : [> `none] row_field_gen *)
+(* [@@deriving  yojson] *)
 and abbrev_memo =
     Mnil
   | Mcons of private_flag * Path.t * type_expr * type_expr * abbrev_memo
   | Mlink of abbrev_memo ref
 [@@deriving  yojson]
 and any = [`some | `none | `var]
+(* [@@deriving  yojson] *)
+ and field_kind = [`some|`var] field_kind_gen
 [@@deriving  yojson]
-and field_kind = [`some|`var] field_kind_gen
-[@@deriving  yojson]
-and _ field_kind_gen =
-    FKvar : {mutable field_kind: any field_kind_gen} -> [> `var] field_kind_gen
-  | FKprivate : [> `none] field_kind_gen  (* private method; only under FKvar *)
-  | FKpublic  : [> `some] field_kind_gen  (* public method *)
-  | FKabsent  : [> `some] field_kind_gen  (* hidden private method *)
-[@@deriving  yojson]
+ and _ field_kind_gen =
+   Fixme
+     (*     FKvar : {mutable field_kind: any field_kind_gen} -> [> `var] field_kind_gen *)
+     (* | FKprivate : [> `none] field_kind_gen  (\* private method; only under FKvar *\) *)
+     (*   | FKpublic  : [> `some] field_kind_gen  (\* public method *\) *)
+     (*   | FKabsent  : [> `some] field_kind_gen  (\* hidden private method *\) *)
+     [@@deriving  yojson] 
 and commutable = [`some|`var] commutable_gen
 [@@deriving  yojson]
 and _ commutable_gen =
-    Cok      : [> `some] commutable_gen
-  | Cunknown : [> `none] commutable_gen
-  | Cvar : {mutable commu: any commutable_gen} -> [> `var] commutable_gen
+  FixMecommutable_gen
+  (*   Cok      : [> `some] commutable_gen *)
+  (* | Cunknown : [> `none] commutable_gen *)
+  (* | Cvar : {mutable commu: any commutable_gen} -> [> `var] commutable_gen *)
 [@@deriving  yojson]
 module TransientTypeOps = struct
   type t = type_expr
@@ -109,11 +111,14 @@ module Vars = Misc.Stdlib.String.Map
 
 (* Value descriptions *)
 
-type value_description =
+module type ValueDescription = sig
+  type attributes
+       
+  type value_description =
   { val_type: type_expr;                (* Type of the value *)
     val_kind: value_kind;
     val_loc: Location.t;
-    val_attributes: Parsetree.attributes;
+    val_attributes: attributes;
     val_uid: Uid.t;
   }
 [@@deriving  yojson]
@@ -142,6 +147,7 @@ and method_privacy =
   | Mprivate of field_kind
 [@@deriving  yojson]
 (* Variance *)
+end
 
 module Variance = struct
   type t = int
@@ -204,7 +210,8 @@ module Separability = struct
 end
 
 (* Type definitions *)
-
+module type TypeDeclaration = sig
+  type attributes
 type type_declaration =
   { type_params: type_expr list;
     type_arity: int;
@@ -216,7 +223,7 @@ type type_declaration =
     type_is_newtype: bool;
     type_expansion_scope: int;
     type_loc: Location.t;
-    type_attributes: Parsetree.attributes;
+    type_attributes: attributes;
     type_immediate: Type_immediacy.t;
     type_unboxed_default: bool;
     type_uid: Uid.t;
@@ -247,7 +254,7 @@ and label_declaration =
     ld_mutable: mutable_flag;
     ld_type: type_expr;
     ld_loc: Location.t;
-    ld_attributes: Parsetree.attributes;
+    ld_attributes: attributes;
     ld_uid: Uid.t;
   }
 [@@deriving  yojson]
@@ -257,14 +264,18 @@ and constructor_declaration =
     cd_args: constructor_arguments;
     cd_res: type_expr option;
     cd_loc: Location.t;
-    cd_attributes: Parsetree.attributes;
+    cd_attributes: attributes;
     cd_uid: Uid.t;
   }
 [@@deriving  yojson]
 and constructor_arguments =
   | Cstr_tuple of type_expr list
   | Cstr_record of label_declaration list
+end
 
+module type ExtensionConstructor = sig
+  type attributes
+  type constructor_arguments
 type extension_constructor =
   { ext_type_path: Path.t;
     ext_type_params: type_expr list;
@@ -272,7 +283,7 @@ type extension_constructor =
     ext_ret_type: type_expr option;
     ext_private: private_flag;
     ext_loc: Location.t;
-    ext_attributes: Parsetree.attributes;
+    ext_attributes: attributes;
     ext_uid: Uid.t;
   }
 [@@deriving  yojson]
@@ -282,12 +293,25 @@ and type_transparence =
   | Type_private     (* private type *)
 [@@deriving  yojson]
 (* Type expressions for the class language *)
+end
+
+module type ClassType = sig
+  type attributes
+  type class_signature
+  type constructor_arguments
 
 type class_type =
     Cty_constr of Path.t * type_expr list * class_type
   | Cty_signature of class_signature
   | Cty_arrow of arg_label * type_expr * class_type
-[@@deriving  yojson]
+                                           [@@deriving  yojson]
+end
+
+module type ClassDecl = sig
+  type attributes
+  type class_signature
+  type constructor_arguments
+  type class_type
 type class_declaration =
   { cty_params: type_expr list;
     mutable cty_type: class_type;
@@ -295,26 +319,39 @@ type class_declaration =
     cty_new: type_expr option;
     cty_variance: Variance.t list;
     cty_loc: Location.t;
-    cty_attributes: Parsetree.attributes;
+    cty_attributes: attributes;
     cty_uid: Uid.t;
  }
+end
 
+module type ClassTypeDeclaration = sig
+  type attributes
+  type class_type
 type class_type_declaration =
   { clty_params: type_expr list;
     clty_type: class_type;
     clty_path: Path.t;
     clty_variance: Variance.t list;
     clty_loc: Location.t;
-    clty_attributes: Parsetree.attributes;
+    clty_attributes: attributes;
     clty_uid: Uid.t;
   }
 [@@deriving  yojson]
 (* Type expressions for the module language *)
+end
 
 type visibility =
   | Exported
   | Hidden
 [@@deriving  yojson]
+
+module type ModuleTypeDeclaration = sig
+  type attributes
+  type value_description
+  type type_declaration
+  type class_declaration
+  type visibility
+  type class_type_declaration 
 
 type module_type =
     Mty_ident of Path.t
@@ -345,7 +382,7 @@ and signature_item =
 and module_declaration =
   {
     md_type: module_type;
-    md_attributes: Parsetree.attributes;
+    md_attributes: attributes;
     md_loc: Location.t;
     md_uid: Uid.t;
   }
@@ -353,7 +390,7 @@ and module_declaration =
 and modtype_declaration =
   {
     mtd_type: module_type option;  (* Note: abstract *)
-    mtd_attributes: Parsetree.attributes;
+    mtd_attributes: attributes;
     mtd_loc: Location.t;
     mtd_uid: Uid.t;
   }
@@ -367,11 +404,15 @@ and ext_status =
     Text_first                     (* first constructor of an extension *)
   | Text_next                      (* not first constructor of an extension *)
   | Text_exception                 (* an exception *)
-
+[@@deriving  yojson]
+end
 
 (* Constructor and record label descriptions inserted held in typing
    environments *)
 
+module type ConstructorDescription = sig
+  type attributes
+  type type_declaration
 type constructor_description =
   { cstr_name: string;                  (* Constructor name *)
     cstr_res: type_expr;                (* Type of the result *)
@@ -384,7 +425,7 @@ type constructor_description =
     cstr_generalized: bool;             (* Constrained return type? *)
     cstr_private: private_flag;         (* Read-only constructor? *)
     cstr_loc: Location.t;
-    cstr_attributes: Parsetree.attributes;
+    cstr_attributes: attributes;
     cstr_inlined: type_declaration option;
     cstr_uid: Uid.t;
    }
@@ -394,35 +435,12 @@ and  constructor_tag =
   | Cstr_block of int                   (* Regular constructor (a block) *)
   | Cstr_unboxed                        (* Constructor of an unboxed type *)
   | Cstr_extension of Path.t * bool     (* Extension constructor
-                                           true if a constant false if a block*)
+[@@deriving  yojson]                                           true if a constant false if a block*)
+end
 
-let equal_tag t1 t2 =
-  match (t1, t2) with
-  | Cstr_constant i1, Cstr_constant i2 -> i2 = i1
-  | Cstr_block i1, Cstr_block i2 -> i2 = i1
-  | Cstr_unboxed, Cstr_unboxed -> true
-  | Cstr_extension (path1, b1), Cstr_extension (path2, b2) ->
-      Path.same path1 path2 && b1 = b2
-  | (Cstr_constant _|Cstr_block _|Cstr_unboxed|Cstr_extension _), _ -> false
-
-let may_equal_constr c1 c2 =
-  c1.cstr_arity = c2.cstr_arity
-  && (match c1.cstr_tag,c2.cstr_tag with
-     | Cstr_extension _,Cstr_extension _ ->
-         (* extension constructors may be rebindings of each other *)
-         true
-     | tag1, tag2 ->
-         equal_tag tag1 tag2)
-
-let item_visibility = function
-  | Sig_value (_, _, vis)
-  | Sig_type (_, _, _, vis)
-  | Sig_typext (_, _, _, vis)
-  | Sig_module (_, _, _, _, vis)
-  | Sig_modtype (_, _, vis)
-  | Sig_class (_, _, _, vis)
-  | Sig_class_type (_, _, _, vis) -> vis
-
+module type LabelDescription = sig
+  type attributes
+  type record_representation
 type label_description =
   { lbl_name: string;                   (* Short name *)
     lbl_res: type_expr;                 (* Type of the result *)
@@ -433,32 +451,16 @@ type label_description =
     lbl_repres: record_representation;  (* Representation for this record *)
     lbl_private: private_flag;          (* Read-only field? *)
     lbl_loc: Location.t;
-    lbl_attributes: Parsetree.attributes;
+    lbl_attributes: attributes;
     lbl_uid: Uid.t;
-   }
-
-let rec bound_value_identifiers = function
-    [] -> []
-  | Sig_value(id, {val_kind = Val_reg}, _) :: rem ->
-      id :: bound_value_identifiers rem
-  | Sig_typext(id, _, _, _) :: rem -> id :: bound_value_identifiers rem
-  | Sig_module(id, Mp_present, _, _, _) :: rem ->
-      id :: bound_value_identifiers rem
-  | Sig_class(id, _, _, _) :: rem -> id :: bound_value_identifiers rem
-  | _ :: rem -> bound_value_identifiers rem
-
-let signature_item_id = function
-  | Sig_value (id, _, _)
-  | Sig_type (id, _, _, _)
-  | Sig_typext (id, _, _, _)
-  | Sig_module (id, _, _, _, _)
-  | Sig_modtype (id, _, _)
-  | Sig_class (id, _, _, _)
-  | Sig_class_type (id, _, _, _)
-    -> id
+  }
+[@@deriving  yojson]
+end
 
 (**** Definitions for backtracking ****)
 
+module type Change = sig
+  type 'a row_field_gen
 type change =
     Ctype of type_expr * type_desc
   | Ccompress of type_expr * type_desc * type_desc
@@ -470,18 +472,17 @@ type change =
   | Ckind of [`var] field_kind_gen
   | Ccommu of [`var] commutable_gen
   | Cuniv of type_expr option ref * type_expr option
-
+                                      [@@deriving  yojson]
 type changes =
     Change of change * changes ref
   | Unchanged
   | Invalid
+[@@deriving  yojson]
+type snapshot = changes ref * int
+[@@deriving  yojson]
 
-let trail = Local_store.s_table ref Unchanged
+end
 
-let log_change ch =
-  let r' = ref Unchanged in
-  !trail := Change (ch, r');
-  trail := r'
 
 (* constructor and accessors for [field_kind] *)
 
@@ -489,125 +490,12 @@ type field_kind_view =
     Fprivate
   | Fpublic
   | Fabsent
-
-let rec field_kind_internal_repr : field_kind -> field_kind = function
-  | FKvar {field_kind = FKvar _ | FKpublic | FKabsent as fk} ->
-      field_kind_internal_repr fk
-  | kind -> kind
-
-let field_kind_repr fk =
-  match field_kind_internal_repr fk with
-  | FKvar _ -> Fprivate
-  | FKpublic -> Fpublic
-  | FKabsent -> Fabsent
-
-let field_public = FKpublic
-let field_absent = FKabsent
-let field_private () = FKvar {field_kind=FKprivate}
-
-(* Constructor and accessors for [commutable] *)
-
-let rec is_commu_ok : type a. a commutable_gen -> bool = function
-  | Cvar {commu} -> is_commu_ok commu
-  | Cunknown -> false
-  | Cok -> true
-
-let commu_ok = Cok
-let commu_var () = Cvar {commu=Cunknown}
-
-(**** Representative of a type ****)
-
-let rec repr_link (t : type_expr) d : type_expr -> type_expr =
- function
-   {desc = Tlink t' as d'} ->
-     repr_link t d' t'
- | {desc = Tfield (_, k, _, t') as d'}
-   when field_kind_internal_repr k = FKabsent ->
-     repr_link t d' t'
- | t' ->
-     log_change (Ccompress (t, t.desc, d));
-     t.desc <- d;
-     t'
-
-let repr_link1 t = function
-   {desc = Tlink t' as d'} ->
-     repr_link t d' t'
- | {desc = Tfield (_, k, _, t') as d'}
-   when field_kind_internal_repr k = FKabsent ->
-     repr_link t d' t'
- | t' -> t'
-
-let repr t =
-  match t.desc with
-   Tlink t' ->
-     repr_link1 t t'
- | Tfield (_, k, _, t') when field_kind_internal_repr k = FKabsent ->
-     repr_link1 t t'
- | _ -> t
-
-(* getters for type_expr *)
-
-let get_desc t = (repr t).desc
-let get_level t = (repr t).level
-let get_scope t = (repr t).scope
-let get_id t = (repr t).id
-
-(* transient type_expr *)
-
-module Transient_expr = struct
-  let create desc ~level ~scope ~id = {desc; level; scope; id}
-  let set_desc ty d = ty.desc <- d
-  let set_stub_desc ty d = assert (ty.desc = Tvar None); ty.desc <- d
-  let set_level ty lv = ty.level <- lv
-  let set_scope ty sc = ty.scope <- sc
-  let coerce ty = ty
-  let repr = repr
-  let type_expr ty = ty
-end
+[@@deriving  yojson]
 
 (* Comparison for [type_expr]; cannot be used for functors *)
 
-let eq_type t1 t2 = t1 == t2 || repr t1 == repr t2
-let compare_type t1 t2 = compare (get_id t1) (get_id t2)
-
-(* Constructor and accessors for [row_desc] *)
-
-let create_row ~fields ~more ~closed ~fixed ~name =
-    { row_fields=fields; row_more=more;
-      row_closed=closed; row_fixed=fixed; row_name=name }
-
-(* [row_fields] subsumes the original [row_repr] *)
-let rec row_fields row =
-  match get_desc row.row_more with
-  | Tvariant row' ->
-      row.row_fields @ row_fields row'
-  | _ ->
-      row.row_fields
-
-let rec row_repr_no_fields row =
-  match get_desc row.row_more with
-  | Tvariant row' -> row_repr_no_fields row'
-  | _ -> row
-
-let row_more row = (row_repr_no_fields row).row_more
-let row_closed row = (row_repr_no_fields row).row_closed
-let row_fixed row = (row_repr_no_fields row).row_fixed
-let row_name row = (row_repr_no_fields row).row_name
-
-let rec get_row_field tag row =
-  let rec find = function
-    | (tag',f) :: fields ->
-        if tag = tag' then f else find fields
-    | [] ->
-        match get_desc row.row_more with
-        | Tvariant row' -> get_row_field tag row'
-        | _ -> RFabsent
-  in find row.row_fields
-
-let set_row_name row row_name =
-  let row_fields = row_fields row in
-  let row = row_repr_no_fields row in
-  {row with row_fields; row_name}
+module type RowField = sig
+  type row_field
 
 type row_desc_repr =
     Row of { fields: (label * row_field) list;
@@ -615,15 +503,8 @@ type row_desc_repr =
              closed:bool;
              fixed:fixed_explanation option;
              name:(Path.t * type_expr list) option }
-
-let row_repr row =
-  let fields = row_fields row in
-  let row = row_repr_no_fields row in
-  Row { fields;
-        more = row.row_more;
-        closed = row.row_closed;
-        fixed = row.row_fixed;
-        name = row.row_name }
+[@@deriving  yojson]
+end
 
 type row_field_view =
     Rpresent of type_expr option
@@ -632,241 +513,5 @@ type row_field_view =
         (* 2nd true denotes a tag in a pattern matching, and
            is erased later *)
   | Rabsent
+[@@deriving  yojson]
 
-let rec row_field_repr_aux tl : row_field -> row_field = function
-  | RFeither ({ext = {contents = RFnone}} as r) ->
-      RFeither {r with arg_type = tl@r.arg_type}
-  | RFeither {arg_type;
-              ext = {contents = RFeither _ | RFpresent _ | RFabsent as rf}} ->
-      row_field_repr_aux (tl@arg_type) rf
-  | RFpresent (Some _) when tl <> [] ->
-      RFpresent (Some (List.hd tl))
-  | RFpresent _ as rf -> rf
-  | RFabsent -> RFabsent
-
-let row_field_repr fi =
-  match row_field_repr_aux [] fi with
-  | RFeither {no_arg; arg_type; matched} -> Reither (no_arg, arg_type, matched)
-  | RFpresent t -> Rpresent t
-  | RFabsent -> Rabsent
-
-let rec row_field_ext (fi : row_field) =
-  match fi with
-  | RFeither {ext = {contents = RFnone} as ext} -> ext
-  | RFeither {ext = {contents = RFeither _ | RFpresent _ | RFabsent as rf}} ->
-      row_field_ext rf
-  | _ -> Misc.fatal_error "Types.row_field_ext "
-
-let rf_present oty = RFpresent oty
-let rf_absent = RFabsent
-let rf_either ?use_ext_of ~no_arg arg_type ~matched =
-  let ext =
-    match use_ext_of with
-      Some rf -> row_field_ext rf
-    | None -> ref RFnone
-  in
-  RFeither {no_arg; arg_type; matched; ext}
-
-let rf_either_of = function
-  | None ->
-      RFeither {no_arg=true; arg_type=[]; matched=false; ext=ref RFnone}
-  | Some ty ->
-      RFeither {no_arg=false; arg_type=[ty]; matched=false; ext=ref RFnone}
-
-let eq_row_field_ext rf1 rf2 =
-  row_field_ext rf1 == row_field_ext rf2
-
-let changed_row_field_exts l f =
-  let exts = List.map row_field_ext l in
-  f ();
-  List.exists (fun r -> !r <> RFnone) exts
-
-let match_row_field ~present ~absent ~either (f : row_field) =
-  match f with
-  | RFabsent -> absent ()
-  | RFpresent t -> present t
-  | RFeither {no_arg; arg_type; matched; ext} ->
-      let e : row_field option =
-        match !ext with
-        | RFnone -> None
-        | RFeither _ | RFpresent _ | RFabsent as e -> Some e
-      in
-      either no_arg arg_type matched e
-
-
-(**** Some type creators ****)
-
-let new_id = Local_store.s_ref (-1)
-
-let create_expr = Transient_expr.create
-
-let newty3 ~level ~scope desc  =
-  incr new_id;
-  create_expr desc ~level ~scope ~id:!new_id
-
-let newty2 ~level desc =
-  newty3 ~level ~scope:Ident.lowest_scope desc
-
-                  (**********************************)
-                  (*  Utilities for backtracking    *)
-                  (**********************************)
-
-let undo_change = function
-    Ctype  (ty, desc) -> Transient_expr.set_desc ty desc
-  | Ccompress (ty, desc, _) -> Transient_expr.set_desc ty desc
-  | Clevel (ty, level) -> Transient_expr.set_level ty level
-  | Cscope (ty, scope) -> Transient_expr.set_scope ty scope
-  | Cname  (r, v)    -> r := v
-  | Crow   r         -> r := RFnone
-  | Ckind  (FKvar r) -> r.field_kind <- FKprivate
-  | Ccommu (Cvar r)  -> r.commu <- Cunknown
-  | Cuniv  (r, v)    -> r := v
-
-type snapshot = changes ref * int
-let last_snapshot = Local_store.s_ref 0
-
-let log_type ty =
-  if ty.id <= !last_snapshot then log_change (Ctype (ty, ty.desc))
-let link_type ty ty' =
-  let ty = repr ty in
-  let ty' = repr ty' in
-  if ty == ty' then () else begin
-  log_type ty;
-  let desc = ty.desc in
-  Transient_expr.set_desc ty (Tlink ty');
-  (* Name is a user-supplied name for this unification variable (obtained
-   * through a type annotation for instance). *)
-  match desc, ty'.desc with
-    Tvar name, Tvar name' ->
-      begin match name, name' with
-      | Some _, None -> log_type ty'; Transient_expr.set_desc ty' (Tvar name)
-      | None, Some _ -> ()
-      | Some _, Some _ ->
-          if ty.level < ty'.level then
-            (log_type ty'; Transient_expr.set_desc ty' (Tvar name))
-      | None, None   -> ()
-      end
-  | _ -> ()
-  end
-  (* ; assert (check_memorized_abbrevs ()) *)
-  (*  ; check_expans [] ty' *)
-(* TODO: consider eliminating set_type_desc, replacing it with link types *)
-let set_type_desc ty td =
-  let ty = repr ty in
-  if td != ty.desc then begin
-    log_type ty;
-    Transient_expr.set_desc ty td
-  end
-(* TODO: separate set_level into two specific functions: *)
-(*  set_lower_level and set_generic_level *)
-let set_level ty level =
-  let ty = repr ty in
-  if level <> ty.level then begin
-    if ty.id <= !last_snapshot then log_change (Clevel (ty, ty.level));
-    Transient_expr.set_level ty level
-  end
-(* TODO: introduce a guard and rename it to set_higher_scope? *)
-let set_scope ty scope =
-  let ty = repr ty in
-  if scope <> ty.scope then begin
-    if ty.id <= !last_snapshot then log_change (Cscope (ty, ty.scope));
-    Transient_expr.set_scope ty scope
-  end
-let set_univar rty ty =
-  log_change (Cuniv (rty, !rty)); rty := Some ty
-let set_name nm v =
-  log_change (Cname (nm, !nm)); nm := v
-
-let rec link_row_field_ext ~(inside : row_field) (v : row_field) =
-  match inside with
-  | RFeither {ext = {contents = RFnone} as e} ->
-      let RFeither _ | RFpresent _ | RFabsent as v = v in
-      log_change (Crow e); e := v
-  | RFeither {ext = {contents = RFeither _ | RFpresent _ | RFabsent as rf}} ->
-      link_row_field_ext ~inside:rf v
-  | _ -> invalid_arg "Types.link_row_field_ext"
-
-let rec link_kind ~(inside : field_kind) (k : field_kind) =
-  match inside with
-  | FKvar ({field_kind = FKprivate} as rk) as inside ->
-      (* prevent a loop by normalizing k and comparing it with inside *)
-      let FKvar _ | FKpublic | FKabsent as k = field_kind_internal_repr k in
-      if k != inside then begin
-        log_change (Ckind inside);
-        rk.field_kind <- k
-      end
-  | FKvar {field_kind = FKvar _ | FKpublic | FKabsent as inside} ->
-      link_kind ~inside k
-  | _ -> invalid_arg "Types.link_kind"
-
-let rec commu_repr : commutable -> commutable = function
-  | Cvar {commu = Cvar _ | Cok as commu} -> commu_repr commu
-  | c -> c
-
-let rec link_commu ~(inside : commutable) (c : commutable) =
-  match inside with
-  | Cvar ({commu = Cunknown} as rc) as inside ->
-      (* prevent a loop by normalizing c and comparing it with inside *)
-      let Cvar _ | Cok as c = commu_repr c in
-      if c != inside then begin
-        log_change (Ccommu inside);
-        rc.commu <- c
-      end
-  | Cvar {commu = Cvar _ | Cok as inside} ->
-      link_commu ~inside c
-  | _ -> invalid_arg "Types.link_commu"
-
-let set_commu_ok c = link_commu ~inside:c Cok
-
-let snapshot () =
-  let old = !last_snapshot in
-  last_snapshot := !new_id;
-  (!trail, old)
-
-let rec rev_log accu = function
-    Unchanged -> accu
-  | Invalid -> assert false
-  | Change (ch, next) ->
-      let d = !next in
-      next := Invalid;
-      rev_log (ch::accu) d
-
-let backtrack ~cleanup_abbrev (changes, old) =
-  match !changes with
-    Unchanged -> last_snapshot := old
-  | Invalid -> failwith "Types.backtrack"
-  | Change _ as change ->
-      cleanup_abbrev ();
-      let backlog = rev_log [] change in
-      List.iter undo_change backlog;
-      changes := Unchanged;
-      last_snapshot := old;
-      trail := changes
-
-let undo_first_change_after (changes, _) =
-  match !changes with
-  | Change (ch, _) ->
-      undo_change ch
-  | _ -> ()
-
-let rec rev_compress_log log r =
-  match !r with
-    Unchanged | Invalid ->
-      log
-  | Change (Ccompress _, next) ->
-      rev_compress_log (r::log) next
-  | Change (_, next) ->
-      rev_compress_log log next
-
-let undo_compress (changes, _old) =
-  match !changes with
-    Unchanged
-  | Invalid -> ()
-  | Change _ ->
-      let log = rev_compress_log [] changes in
-      List.iter
-        (fun r -> match !r with
-          Change (Ccompress (ty, desc, d), next) when ty.desc == d ->
-            Transient_expr.set_desc ty desc; r := !next
-        | _ -> ())
-        log

@@ -132,8 +132,6 @@ let print_updating_num_loc_lines ppf f arg =
   pp_print_flush ppf ();
   pp_set_formatter_out_functions ppf out_functions
 
-let setup_colors () =
-  Misc.Color.setup !Clflags.color
 
 (******************************************************************************)
 (* Printing locations, e.g. 'File "foo.ml", line 3, characters 10-12' *)
@@ -173,7 +171,6 @@ let print_filename ppf file =
    location might be invalid; in which case we do not print it.
  *)
 let print_loc ppf loc =
-  setup_colors ();
   let file_valid = function
     | "_none_" ->
         (* This is a dummy placeholder, but we print it anyway to please editors
@@ -729,7 +726,6 @@ let batch_mode_printer : report_printer =
   in
   let pp_txt ppf txt = Format.fprintf ppf "@[%t@]" txt in
   let pp self ppf report =
-    setup_colors ();
     (* Make sure we keep [num_loc_lines] updated.
        The tabulation box is here to give submessage the option
        to be aligned with the main message box
@@ -782,7 +778,6 @@ let batch_mode_printer : report_printer =
 
 let terminfo_toplevel_printer (lb: lexbuf): report_printer =
   let pp self ppf err =
-    setup_colors ();
     (* Highlight all toplevel locations of the report, instead of displaying
        the main location. Do it now instead of in [pp_main_loc], to avoid
        messing with Format boxes. *)
