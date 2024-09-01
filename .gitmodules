@@ -15832,6 +15832,9 @@
 [submodule "2024/09/01/isokratia"]
 	 path = 2024/09/01/isokratia
 	 url = https://github.com/nalinbhardwaj/isokratia
+[submodule "2024/09/01/lsp-client-rs"]
+	 path = 2024/09/01/lsp-client-rs
+	 url = https://github.com/sudarshan-reddy/lsp-client-rs
 [submodule "2024/09/01/lurk-rs"]
 	 path = 2024/09/01/lurk-rs
 	 url = https://github.com/argumentcomputer/lurk-rs
@@ -15841,6 +15844,10 @@
 [submodule "2024/09/01/o1js-groth16"]
 	 path = 2024/09/01/o1js-groth16
 	 url = https://github.com/onurinanc/o1js-groth16
+[submodule "2024/09/01/oxc"]
+	 path = 2024/09/01/oxc
+	 url = https://github.com/oxc-project/oxc
+	 
 [submodule "2024/09/01/plonky2"]
 	 path = 2024/09/01/plonky2
 	 url = https://github.com/0xPolygonZero/plonky2
