@@ -23844,6 +23844,19 @@
 [submodule "2024/09/06/zx"]
 	 path = 2024/09/06/zx
 	 url = https://github.com/google/zx
+[submodule "2024/09/08/GateKeeper"]
+	 path = 2024/09/08/GateKeeper
+	 url = https://github.com/HollowMan6/GateKeeper
+[submodule "2024/09/08/sveltia-cms-auth"]
+	 path = 2024/09/08/sveltia-cms-auth
+	 url = https://github.com/sveltia/sveltia-cms-auth
+[submodule "2024/09/09/doro"]
+	 path = 2024/09/09/doro
+	 url = https://github.com/hollow-leaf/doro.git
+	 
+[submodule "2024/09/09/platform-samples"]
+	 path = 2024/09/09/platform-samples
+	 url = https://github.com/github/platform-samples
 [submodule "2024/09/12/backend-token-wallets"]
 	 path = 2024/09/12/backend-token-wallets
 	 url = https://github.com/secret-tech/backend-token-wallets.git
