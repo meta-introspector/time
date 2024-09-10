@@ -23850,13 +23850,38 @@
 [submodule "2024/09/08/sveltia-cms-auth"]
 	 path = 2024/09/08/sveltia-cms-auth
 	 url = https://github.com/sveltia/sveltia-cms-auth
+[submodule "2024/09/09/action-setup"]
+	 path = 2024/09/09/action-setup
+	 url = https://github.com/pnpm/action-setup
 [submodule "2024/09/09/doro"]
 	 path = 2024/09/09/doro
 	 url = https://github.com/hollow-leaf/doro.git
 	 
+[submodule "2024/09/09/next-wasmer-starter"]
+	 path = 2024/09/09/next-wasmer-starter
+	 url = https://github.com/wasmer-examples/next-wasmer-starter
+[submodule "2024/09/09/next-wasm-o1js-mina-zkapp-introspector"]
+	 path = 2024/09/09/next-wasm-o1js-mina-zkapp-introspector
+	 url = https://github.com/meta-introspector/next-wasm-o1js-mina-zkapp-introspector
 [submodule "2024/09/09/platform-samples"]
 	 path = 2024/09/09/platform-samples
 	 url = https://github.com/github/platform-samples
+[submodule "2024/09/09/private-wallet"]
+	 path = 2024/09/09/private-wallet
+	 url = https://github.com/sam-goodwin/private-wallet
+	 
+[submodule "2024/09/09/setup-wasmer"]
+	 path = 2024/09/09/setup-wasmer
+	 url = https://github.com/wasmerio/setup-wasmer
+[submodule "2024/09/09/usearch"]
+	 path = 2024/09/09/usearch
+	 url = https://github.com/unum-cloud/usearch
+[submodule "2024/09/09/wasix-rust-examples"]
+	 path = 2024/09/09/wasix-rust-examples
+	 url = https://github.com/wasix-org/wasix-rust-examples.git
+[submodule "2024/09/09/wasmer"]
+	 path = 2024/09/09/wasmer
+	 url = https://github.com/wasmerio/wasmer
 [submodule "2024/09/12/backend-token-wallets"]
 	 path = 2024/09/12/backend-token-wallets
 	 url = https://github.com/secret-tech/backend-token-wallets.git
@@ -23938,4 +23963,3 @@
 [submodule "2024/09/13/zkOracle-OCO"]
 	 path = 2024/09/13/zkOracle-OCO
 	 url = https://github.com/ubinix-warun/zkOracle-OCO.git
-	 
