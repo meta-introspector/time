@@ -23857,12 +23857,24 @@
 	 path = 2024/09/09/doro
 	 url = https://github.com/hollow-leaf/doro.git
 	 
+[submodule "2024/09/09/doro"]
+	 path = 2024/09/09/doro
+	 url = https://github.com/hollow-leaf/doro.git
+[submodule "2024/09/09/next-wasmer-starter"]
+	 path = 2024/09/09/next-wasmer-starter
+	 url = https://github.com/wasmer-examples/next-wasmer-starter
 [submodule "2024/09/09/next-wasmer-starter"]
 	 path = 2024/09/09/next-wasmer-starter
 	 url = https://github.com/wasmer-examples/next-wasmer-starter
 [submodule "2024/09/09/next-wasm-o1js-mina-zkapp-introspector"]
 	 path = 2024/09/09/next-wasm-o1js-mina-zkapp-introspector
 	 url = https://github.com/meta-introspector/next-wasm-o1js-mina-zkapp-introspector
+[submodule "2024/09/09/next-wasm-o1js-mina-zkapp-introspector"]
+	 path = 2024/09/09/next-wasm-o1js-mina-zkapp-introspector
+	 url = https://github.com/meta-introspector/next-wasm-o1js-mina-zkapp-introspector
+[submodule "2024/09/09/platform-samples"]
+	 path = 2024/09/09/platform-samples
+	 url = https://github.com/github/platform-samples
 [submodule "2024/09/09/platform-samples"]
 	 path = 2024/09/09/platform-samples
 	 url = https://github.com/github/platform-samples
@@ -23870,54 +23882,411 @@
 	 path = 2024/09/09/private-wallet
 	 url = https://github.com/sam-goodwin/private-wallet
 	 
+[submodule "2024/09/09/private-wallet"]
+	 path = 2024/09/09/private-wallet
+	 url = https://github.com/sam-goodwin/private-wallet
 [submodule "2024/09/09/setup-wasmer"]
 	 path = 2024/09/09/setup-wasmer
 	 url = https://github.com/wasmerio/setup-wasmer
+[submodule "2024/09/09/setup-wasmer"]
+	 path = 2024/09/09/setup-wasmer
+	 url = https://github.com/wasmerio/setup-wasmer
+	 
+[submodule "2024/09/09/usearch"]
+	 path = 2024/09/09/usearch
+	 url = https://github.com/unum-cloud/usearch
 [submodule "2024/09/09/usearch"]
 	 path = 2024/09/09/usearch
 	 url = https://github.com/unum-cloud/usearch
 [submodule "2024/09/09/wasix-rust-examples"]
 	 path = 2024/09/09/wasix-rust-examples
 	 url = https://github.com/wasix-org/wasix-rust-examples.git
+[submodule "2024/09/09/wasix-rust-examples"]
+	 path = 2024/09/09/wasix-rust-examples
+	 url = https://github.com/wasix-org/wasix-rust-examples.git
 [submodule "2024/09/09/wasmer"]
 	 path = 2024/09/09/wasmer
 	 url = https://github.com/wasmerio/wasmer
+[submodule "2024/09/09/wasmer"]
+	 path = 2024/09/09/wasmer
+	 url = https://github.com/wasmerio/wasmer
+[submodule "2024/09/10/auth-oauth-app.js"]
+	 path = 2024/09/10/auth-oauth-app.js
+	 url = https://github.com/octokit/auth-oauth-app.js
+[submodule "2024/09/10/Auth_Template"]
+	 path = 2024/09/10/Auth_Template
+	 url = https://github.com/psykat1116/Auth_Template
+[submodule "2024/09/10/cdk-github"]
+	 path = 2024/09/10/cdk-github
+	 url = https://github.com/pepperize/cdk-github
+[submodule "2024/09/10/commits"]
+	 path = 2024/09/10/commits
+	 url = https://github.com/Moeletsi47/commits
+[submodule "2024/09/10/domain-name-contract"]
+	 path = 2024/09/10/domain-name-contract
+	 url = https://github.com/zkcloudworker/domain-name-contract
+[submodule "2024/09/10/Gissues"]
+	 path = 2024/09/10/Gissues
+	 url = https://github.com/shikhar13012001/Gissues
+[submodule "2024/09/10/github-app-slack-demo"]
+	 path = 2024/09/10/github-app-slack-demo
+	 url = https://github.com/gr2m/github-app-slack-demo.git
+[submodule "2024/09/10/github-client"]
+	 path = 2024/09/10/github-client
+	 url = https://github.com/a1b3rtz/github-client
+[submodule "2024/09/10/github-crypto-wallet-secret-generator"]
+	 path = 2024/09/10/github-crypto-wallet-secret-generator
+	 url = https://github.com/meta-introspector/github-crypto-wallet-secret-generator
+[submodule "2024/09/10/github-portfolio"]
+	 path = 2024/09/10/github-portfolio
+	 url = https://github.com/syedfawzulazim/github-portfolio
+[submodule "2024/09/10/github-user-search-app"]
+	 path = 2024/09/10/github-user-search-app
+	 url = https://github.com/Yishin-Jheng/github-user-search-app
+[submodule "2024/09/10/GitHubVisualizer"]
+	 path = 2024/09/10/GitHubVisualizer
+	 url = https://github.com/artzub/GitHubVisualizer
+[submodule "2024/09/10/jonpdev-githubapp"]
+	 path = 2024/09/10/jonpdev-githubapp
+	 url = https://github.com/jonparker/jonpdev-githubapp
+[submodule "2024/09/10/mina_bridge"]
+	 path = 2024/09/10/mina_bridge
+	 url = https://github.com/lambdaclass/mina_bridge
+[submodule "2024/09/10/nats-example-experimental"]
+	 path = 2024/09/10/nats-example-experimental
+	 url = https://github.com/zkcloudworker/nats-example-experimental.git
+[submodule "2024/09/10/next-cypress-dashboard"]
+	 path = 2024/09/10/next-cypress-dashboard
+	 url = https://github.com/avocadowastaken/next-cypress-dashboard
+[submodule "2024/09/10/octokit.js"]
+	 path = 2024/09/10/octokit.js
+	 url = https://github.com/octokit/octokit.js
+[submodule "2024/09/10/OpenUserJS.org"]
+	 path = 2024/09/10/OpenUserJS.org
+	 url = https://github.com/OpenUserJS/OpenUserJS.org
+[submodule "2024/09/10/scrum-poker"]
+	 path = 2024/09/10/scrum-poker
+	 url = https://github.com/colinwilliams91/scrum-poker
+[submodule "2024/09/10/simple-example"]
+	 path = 2024/09/10/simple-example
+	 url = https://github.com/zkcloudworker/simple-example
+[submodule "2024/09/10/ts-node"]
+	 path = 2024/09/10/ts-node
+	 url = https://github.com/TypeStrong/ts-node/
+[submodule "2024/09/10/variable-exporter"]
+	 path = 2024/09/10/variable-exporter
+	 url = https://github.com/sergioadll/variable-exporter.git
+[submodule "2024/09/10/vrite"]
+	 path = 2024/09/10/vrite
+	 url = https://github.com/vriteio/vrite.git
+[submodule "2024/09/10/web-oauth-app"]
+	 path = 2024/09/10/web-oauth-app
+	 url = https://github.com/xuexb/web-oauth-app
+[submodule "2024/09/10/worker-example"]
+	 path = 2024/09/10/worker-example
+	 url = https://github.com/zkcloudworker/worker-example
+[submodule "2024/09/10/zkcloudworker-aws"]
+	 path = 2024/09/10/zkcloudworker-aws
+	 url = https://github.com/zkcloudworker/zkcloudworker-aws
+[submodule "2024/09/10/zkcloudworker-cli"]
+	 path = 2024/09/10/zkcloudworker-cli
+	 url = https://github.com/zkcloudworker/zkcloudworker-cli
+[submodule "2024/09/10/zkcloudworker-lib"]
+	 path = 2024/09/10/zkcloudworker-lib
+	 url = https://github.com/zkcloudworker/zkcloudworker-lib.git
+[submodule "2024/09/10/zkcloudworker-ui"]
+	 path = 2024/09/10/zkcloudworker-ui
+	 url = https://github.com/zkcloudworker/zkcloudworker-ui
+[submodule "2024/09/11/auth-app.js"]
+	 path = 2024/09/11/auth-app.js
+	 url = https://github.com/octokit/auth-app.js/
+[submodule "2024/09/11/authentication-strategies.js"]
+	 path = 2024/09/11/authentication-strategies.js
+	 url = https://github.com/octokit/authentication-strategies.js/
+[submodule "2024/09/11/auth-oauth-device.js"]
+	 path = 2024/09/11/auth-oauth-device.js
+	 url = https://github.com/octokit/auth-oauth-device.js/
+[submodule "2024/09/11/botway"]
+	 path = 2024/09/11/botway
+	 url = https://github.com/petrsovadina/botway
+[submodule "2024/09/11/casdoor"]
+	 path = 2024/09/11/casdoor
+	 url = https://github.com/casdoor/casdoor.git
+[submodule "2024/09/11/code-immediate"]
+	 path = 2024/09/11/code-immediate
+	 url = https://github.com/tzuyi0817/code-immediate
+[submodule "2024/09/11/console"]
+	 path = 2024/09/11/console
+	 url = https://github.com/kubesphere/console
+[submodule "2024/09/11/filecoin-verifier-frontend"]
+	 path = 2024/09/11/filecoin-verifier-frontend
+	 url = https://github.com/keyko-io/filecoin-verifier-frontend.git
+[submodule "2024/09/11/github-actions-runner-operator"]
+	 path = 2024/09/11/github-actions-runner-operator
+	 url = https://github.com/evryfs/github-actions-runner-operator
+[submodule "2024/09/11/jonpdev-githubapp"]
+	 path = 2024/09/11/jonpdev-githubapp
+	 url = https://github.com/jonparker/jonpdev-githubapp
+[submodule "2024/09/11/jsgist"]
+	 path = 2024/09/11/jsgist
+	 url = https://github.com/greggman/jsgist
+[submodule "2024/09/11/json-crypto-wallet.org"]
+	 path = 2024/09/11/json-crypto-wallet.org
+	 url = https://github.com/meta-introspector/json-crypto-wallet.org.git
+[submodule "2024/09/11/LeAREA"]
+	 path = 2024/09/11/LeAREA
+	 url = https://github.com/christophechr/LeAREA.git
+[submodule "2024/09/11/mx-admin"]
+	 path = 2024/09/11/mx-admin
+	 url = https://github.com/mx-space/mx-admin.git
+[submodule "2024/09/11/next-auth-github-wallet"]
+	 path = 2024/09/11/next-auth-github-wallet
+	 url = https://github.com/meta-introspector/next-auth-github-wallet
+[submodule "2024/09/11/oauth-app.js"]
+	 path = 2024/09/11/oauth-app.js
+	 url = https://github.com/octokit/oauth-app.js/
+[submodule "2024/09/11/oauth-methods.js"]
+	 path = 2024/09/11/oauth-methods.js
+	 url = https://github.com/octokit/oauth-methods.js/
+[submodule "2024/09/11/octokit.js"]
+	 path = 2024/09/11/octokit.js
+	 url = https://github.com/octokit/octokit.js
+[submodule "2024/09/11/online-test-platform"]
+	 path = 2024/09/11/online-test-platform
+	 url = https://github.com/heigvd-teaching-tools/online-test-platform
+[submodule "2024/09/11/quirgo-cli"]
+	 path = 2024/09/11/quirgo-cli
+	 url = https://github.com/wilfreud/quirgo-cli
+[submodule "2024/09/11/rest.js"]
+	 path = 2024/09/11/rest.js
+	 url = https://github.com/octokit/rest.js
+[submodule "2024/09/11/sara"]
+	 path = 2024/09/11/sara
+	 url = https://github.com/polyverse-appsec/sara.git
+[submodule "2024/09/11/sveltekit-embed"]
+	 path = 2024/09/11/sveltekit-embed
+	 url = https://github.com/spences10/sveltekit-embed
+[submodule "2024/09/11/telemetry"]
+	 path = 2024/09/11/telemetry
+	 url = https://github.com/Kiyozz/telemetry
+[submodule "2024/09/11/tinacms"]
+	 path = 2024/09/11/tinacms
+	 url = https://github.com/tinacms/tinacms
+[submodule "2024/09/12/action-init"]
+	 path = 2024/09/12/action-init
+	 url = https://github.com/kaskadi/action-init
+[submodule "2024/09/12/action.js"]
+	 path = 2024/09/12/action.js
+	 url = https://github.com/octokit/action.js
+[submodule "2024/09/12/actions-set-secret"]
+	 path = 2024/09/12/actions-set-secret
+	 url = https://github.com/hmanzur/actions-set-secret.git
+[submodule "2024/09/12/airnode"]
+	 path = 2024/09/12/airnode
+	 url = https://github.com/api3dao/airnode.git
+[submodule "2024/09/12/aws-credential-rotary"]
+	 path = 2024/09/12/aws-credential-rotary
+	 url = https://github.com/softprops/aws-credential-rotary.git
+[submodule "2024/09/12/aws-toolkit-azure-devops"]
+	 path = 2024/09/12/aws-toolkit-azure-devops
+	 url = https://github.com/aws/aws-toolkit-azure-devops.git
 [submodule "2024/09/12/backend-token-wallets"]
 	 path = 2024/09/12/backend-token-wallets
 	 url = https://github.com/secret-tech/backend-token-wallets.git
 [submodule "2024/09/12/basicswap"]
 	 path = 2024/09/12/basicswap
 	 url = https://github.com/basicswap/basicswap
+[submodule "2024/09/12/blog"]
+	 path = 2024/09/12/blog
+	 url = https://github.com/jpoehnelt/blog.git
+[submodule "2024/09/12/bracesbackend"]
+	 path = 2024/09/12/bracesbackend
+	 url = https://github.com/fgtrzah/bracesbackend.git
+[submodule "2024/09/12/cdk-github"]
+	 path = 2024/09/12/cdk-github
+	 url = https://github.com/WtfJoke/cdk-github.git
+[submodule "2024/09/12/cdk-github-runners"]
+	 path = 2024/09/12/cdk-github-runners
+	 url = https://github.com/CloudSnorkel/cdk-github-runners.git
 [submodule "2024/09/12/chaucha-gha-opreturn"]
 	 path = 2024/09/12/chaucha-gha-opreturn
 	 url = https://github.com/proyecto-chaucha/chaucha-gha-opreturn
 [submodule "2024/09/12/chaucha-gha-wallet-generator"]
 	 path = 2024/09/12/chaucha-gha-wallet-generator
 	 url = https://github.com/proyecto-chaucha/chaucha-gha-wallet-generator
+[submodule "2024/09/12/cheat-sheets"]
+	 path = 2024/09/12/cheat-sheets
+	 url = https://github.com/0xn3va/cheat-sheets.git
+[submodule "2024/09/12/checkin"]
+	 path = 2024/09/12/checkin
+	 url = https://github.com/versionJun/checkin.git
+[submodule "2024/09/12/cloudformation-github-resource-providers"]
+	 path = 2024/09/12/cloudformation-github-resource-providers
+	 url = https://github.com/aws-ia/cloudformation-github-resource-providers.git
+[submodule "2024/09/12/codeofconduct"]
+	 path = 2024/09/12/codeofconduct
+	 url = https://github.com/codeforamerica/codeofconduct.git
+[submodule "2024/09/12/console"]
+	 path = 2024/09/12/console
+	 url = https://github.com/openshift/console.git
+[submodule "2024/09/12/Content-Amplify-Hub"]
+	 path = 2024/09/12/Content-Amplify-Hub
+	 url = https://github.com/siddhant-vij/Content-Amplify-Hub.git
+[submodule "2024/09/12/create-github-app-token"]
+	 path = 2024/09/12/create-github-app-token
+	 url = https://github.com/actions/create-github-app-token
+	 
+[submodule "2024/09/12/curly-chainsaw"]
+	 path = 2024/09/12/curly-chainsaw
+	 url = https://github.com/nickfloyd/curly-chainsaw.git
+[submodule "2024/09/12/dbaas-dynamic-plugin"]
+	 path = 2024/09/12/dbaas-dynamic-plugin
+	 url = https://github.com/RHEcosystemAppEng/dbaas-dynamic-plugin
+[submodule "2024/09/12/devicescript-gateway"]
+	 path = 2024/09/12/devicescript-gateway
+	 url = https://github.com/ahfong2006/devicescript-gateway.git
+[submodule "2024/09/12/ekirjasto-ci-helper"]
+	 path = 2024/09/12/ekirjasto-ci-helper
+	 url = https://github.com/NatLibFi/ekirjasto-ci-helper.git
+	 
+[submodule "2024/09/12/fern"]
+	 path = 2024/09/12/fern
+	 url = https://github.com/TeisJayaswal/fern.git
+[submodule "2024/09/12/fpg-flipkart-grid-mongo-github-api"]
+	 path = 2024/09/12/fpg-flipkart-grid-mongo-github-api
+	 url = https://github.com/coding-to-music/fpg-flipkart-grid-mongo-github-api.git
+[submodule "2024/09/12/gatekeeper"]
+	 path = 2024/09/12/gatekeeper
+	 url = https://github.com/prose/gatekeeper.git
+[submodule "2024/09/12/gh-action-bump-version"]
+	 path = 2024/09/12/gh-action-bump-version
+	 url = https://github.com/sthuck/gh-action-bump-version.git
+[submodule "2024/09/12/ghpub"]
+	 path = 2024/09/12/ghpub
+	 url = https://github.com/7mind/ghpub.git
+[submodule "2024/09/12/github-api-front"]
+	 path = 2024/09/12/github-api-front
+	 url = https://github.com/oskrecheverria1996/github-api-front.git
+[submodule "2024/09/12/github-automation"]
+	 path = 2024/09/12/github-automation
+	 url = https://github.com/Giorgiosaud/github-automation.git
+[submodule "2024/09/12/githubclient"]
+	 path = 2024/09/12/githubclient
+	 url = https://github.com/MarkusRissmann-private/githubclient.git
+[submodule "2024/09/12/github-monthly"]
+	 path = 2024/09/12/github-monthly
+	 url = https://github.com/headllines/github-monthly.git
+[submodule "2024/09/12/github-secrets-actions-api"]
+	 path = 2024/09/12/github-secrets-actions-api
+	 url = https://github.com/man20820/github-secrets-actions-api.git
+[submodule "2024/09/12/gitleaks-action"]
+	 path = 2024/09/12/gitleaks-action
+	 url = https://github.com/gitleaks/gitleaks-action.git
 [submodule "2024/09/12/Grants"]
 	 path = 2024/09/12/Grants
 	 url = https://github.com/scrtlabs/Grants.git
+[submodule "2024/09/12/home-automation"]
+	 path = 2024/09/12/home-automation
+	 url = https://github.com/andrew-codes/home-automation.git
+[submodule "2024/09/12/ibm-garage-cloud-cli"]
+	 path = 2024/09/12/ibm-garage-cloud-cli
+	 url = https://github.com/cloud-native-toolkit/ibm-garage-cloud-cli.git
+[submodule "2024/09/12/infisical"]
+	 path = 2024/09/12/infisical
+	 url = https://github.com/Infisical/infisical.git
+[submodule "2024/09/12/infrastructure"]
+	 path = 2024/09/12/infrastructure
+	 url = https://github.com/thedatasnok/infrastructure.git
+[submodule "2024/09/12/lazy_script"]
+	 path = 2024/09/12/lazy_script
+	 url = https://github.com/jinboyigu/lazy_script.git
 [submodule "2024/09/12/LibreSelery"]
 	 path = 2024/09/12/LibreSelery
 	 url = https://github.com/Ly0n/LibreSelery.git
+[submodule "2024/09/12/looker-studio-connector"]
+	 path = 2024/09/12/looker-studio-connector
+	 url = https://github.com/matomo-org/looker-studio-connector.git
+[submodule "2024/09/12/mgrs"]
+	 path = 2024/09/12/mgrs
+	 url = https://github.com/newtondotcom/mgrs.git
 [submodule "2024/09/12/mina-multisig-actions"]
 	 path = 2024/09/12/mina-multisig-actions
 	 url = https://github.com/jmikedupont2/mina-multisig-actions.git
+[submodule "2024/09/12/mock-github"]
+	 path = 2024/09/12/mock-github
+	 url = https://github.com/kiegroup/mock-github.git
+[submodule "2024/09/12/move2kube-website"]
+	 path = 2024/09/12/move2kube-website
+	 url = https://github.com/konveyor/move2kube-website.git
+[submodule "2024/09/12/NeonDB-Ultimate-Starter-Kit"]
+	 path = 2024/09/12/NeonDB-Ultimate-Starter-Kit
+	 url = https://github.com/CijeTheCreator/NeonDB-Ultimate-Starter-Kit.git
+[submodule "2024/09/12/octocrab"]
+	 path = 2024/09/12/octocrab
+	 url = https://github.com/XAMPPRocky/octocrab.git
+[submodule "2024/09/12/openapi-code-generator"]
+	 path = 2024/09/12/openapi-code-generator
+	 url = https://github.com/mnahkies/openapi-code-generator.git
+[submodule "2024/09/12/opencommit"]
+	 path = 2024/09/12/opencommit
+	 url = https://github.com/di-sukharev/opencommit
+[submodule "2024/09/12/openshift-github-connector"]
+	 path = 2024/09/12/openshift-github-connector
+	 url = https://github.com/redhat-actions/openshift-github-connector.git
+[submodule "2024/09/12/opensource-bounty"]
+	 path = 2024/09/12/opensource-bounty
+	 url = https://github.com/mihai-cherechesu/opensource-bounty.git
 [submodule "2024/09/12/open-sustainable-technology"]
 	 path = 2024/09/12/open-sustainable-technology
 	 url = https://github.com/protontypes/open-sustainable-technology
+[submodule "2024/09/12/plugin-rest-endpoint-methods.js"]
+	 path = 2024/09/12/plugin-rest-endpoint-methods.js
+	 url = https://github.com/octokit/plugin-rest-endpoint-methods.js.git
+[submodule "2024/09/12/private-mirrors"]
+	 path = 2024/09/12/private-mirrors
+	 url = https://github.com/github-community-projects/private-mirrors.git
+[submodule "2024/09/12/resume-generator"]
+	 path = 2024/09/12/resume-generator
+	 url = https://github.com/cto-ai/resume-generator.git
 [submodule "2024/09/12/rusk"]
 	 path = 2024/09/12/rusk
 	 url = https://github.com/dusk-network/rusk
+[submodule "2024/09/12/script-create-repositories-from-script-folders"]
+	 path = 2024/09/12/script-create-repositories-from-script-folders
+	 url = https://github.com/octoherd/script-create-repositories-from-script-folders.git
 [submodule "2024/09/12/SecretNetwork"]
 	 path = 2024/09/12/SecretNetwork
 	 url = https://github.com/scrtlabs/SecretNetwork.git
+[submodule "2024/09/12/secrets-sync-action"]
+	 path = 2024/09/12/secrets-sync-action
+	 url = https://github.com/mjedwabn/secrets-sync-action.git
 [submodule "2024/09/12/SeleryAction"]
 	 path = 2024/09/12/SeleryAction
 	 url = https://github.com/Ly0n/SeleryAction
+[submodule "2024/09/12/set-action-dependabot-secret"]
+	 path = 2024/09/12/set-action-dependabot-secret
+	 url = https://github.com/merchstack/set-action-dependabot-secret.git
+[submodule "2024/09/12/set-gh-env-vars"]
+	 path = 2024/09/12/set-gh-env-vars
+	 url = https://github.com/Estanz0/set-gh-env-vars.git
+[submodule "2024/09/12/setup-jfrog-cli"]
+	 path = 2024/09/12/setup-jfrog-cli
+	 url = https://github.com/jfrog/setup-jfrog-cli.git
+[submodule "2024/09/12/siwe"]
+	 path = 2024/09/12/siwe
+	 url = https://github.com/spruceid/siwe.git
+[submodule "2024/09/12/social-sports"]
+	 path = 2024/09/12/social-sports
+	 url = https://github.com/owya490/social-sports.git
 [submodule "2024/09/12/TezosHomebase.io"]
 	 path = 2024/09/12/TezosHomebase.io
 	 url = https://github.com/errahulrp/TezosHomebase.io.git
+[submodule "2024/09/12/use-app-token"]
+	 path = 2024/09/12/use-app-token
+	 url = https://github.com/wow-actions/use-app-token.git
+[submodule "2024/09/12/vault-sync"]
+	 path = 2024/09/12/vault-sync
+	 url = https://github.com/RichiCoder1/vault-sync.git
 [submodule "2024/09/12/web3.js"]
 	 path = 2024/09/12/web3.js
 	 url = https://github.com/web3/web3.js.git
@@ -23933,6 +24302,12 @@
 [submodule "2024/09/12/web3-wallets"]
 	 path = 2024/09/12/web3-wallets
 	 url = https://github.com/DePayFi/web3-wallets.git
+[submodule "2024/09/12/workbook"]
+	 path = 2024/09/12/workbook
+	 url = https://github.com/FMFI-UK-1-AIN-412/workbook.git
+[submodule "2024/09/12/zoe-bot"]
+	 path = 2024/09/12/zoe-bot
+	 url = https://github.com/bryxli/zoe-bot.git
 [submodule "2024/09/12/zonda-wallet-monitor"]
 	 path = 2024/09/12/zonda-wallet-monitor
 	 url = https://github.com/zemelkajakub/zonda-wallet-monitor.git
