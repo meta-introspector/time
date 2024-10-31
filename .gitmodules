@@ -24338,3 +24338,249 @@
 [submodule "2024/09/13/zkOracle-OCO"]
 	 path = 2024/09/13/zkOracle-OCO
 	 url = https://github.com/ubinix-warun/zkOracle-OCO.git
+[submodule "2024/09/15/likwid"]
+	path = 2024/09/15/likwid
+	url = https://github.com/RRZE-HPC/likwid.git
+[submodule "2024/09/15/telegraf"]
+	path = 2024/09/15/telegraf
+	url = https://github.com/influxdata/telegraf.git
+[submodule "2024/09/15/coroot"]
+	path = 2024/09/15/coroot
+	url = https://github.com/coroot/coroot
+[submodule "2024/09/15/cadvisor"]
+	path = 2024/09/15/cadvisor
+	url = https://github.com/google/cadvisor.git
+[submodule "2024/09/15/elastdocker"]
+	path = 2024/09/15/elastdocker
+	url = https://github.com/sherifabdlnaby/elastdocker
+[submodule "2024/09/15/strace-parser"]
+	path = 2024/09/15/strace-parser
+	url = https://github.com/chrahunt/strace-parser
+[submodule "2024/09/16/env"]
+	path = 2024/09/16/env
+	url = https://github.com/nevesnunes/env
+[submodule "2024/09/16/falcosecurity-libs"]
+	path = 2024/09/16/falcosecurity-libs
+	url = https://github.com/falcosecurity/libs
+[submodule "2024/09/16/github-action-benchmark"]
+	path = 2024/09/16/github-action-benchmark
+	url = https://github.com/benchmark-action/github-action-benchmark.git
+[submodule "2024/09/16/setup-k6-action"]
+	path = 2024/09/16/setup-k6-action
+	url = https://github.com/grafana/setup-k6-action.git
+[submodule "2024/09/16/jendeley"]
+	path = 2024/09/16/jendeley
+	url = https://github.com/akawashiro/jendeley.git
+[submodule "2024/09/16/PerfAI-Action"]
+	path = 2024/09/16/PerfAI-Action
+	url = https://github.com/meta-introspector/PerfAI-Action
+[submodule "2024/09/16/nano-node"]
+	path = 2024/09/16/nano-node
+	url = https://github.com/nanocurrency/nano-node
+[submodule "2024/09/16/rav1d"]
+	path = 2024/09/16/rav1d
+	url = https://github.com/memorysafety/rav1d.git
+[submodule "2024/09/16/perf-examples/galacticus"]
+	path = 2024/09/16/perf-examples/galacticus
+	url = https://github.com/galacticusorg/galacticus.git
+[submodule "2024/09/16/perf-examples/cryptanalysislib"]
+	path = 2024/09/16/perf-examples/cryptanalysislib
+	url = https://github.com/FloydZ/cryptanalysislib
+[submodule "2024/09/16/perf-examples/RobinSearch"]
+	path = 2024/09/16/perf-examples/RobinSearch
+	url = https://github.com/cgd8d/RobinSearch.git
+[submodule "2024/09/16/flamescope"]
+	path = 2024/09/16/flamescope
+	url = https://github.com/Netflix/flamescope.git
+[submodule "2024/09/16/interesting-frameworks/SpacetimeDB"]
+	path = 2024/09/16/interesting-frameworks/SpacetimeDB
+	url = https://github.com/clockworklabs/SpacetimeDB.git
+[submodule "2024/09/16/learning/nodejs-certification-preparation"]
+	path = 2024/09/16/learning/nodejs-certification-preparation
+	url = https://github.com/ArturJS/nodejs-certification-preparation
+[submodule "2024/09/16/clinic/node-clinic"]
+	path = 2024/09/16/clinic/node-clinic
+	url = https://github.com/clinicjs/node-clinic
+[submodule "2024/09/16/clinic/node-clinic-doctor"]
+	path = 2024/09/16/clinic/node-clinic-doctor
+	url = https://github.com/clinicjs/node-clinic-doctor
+[submodule "2024/09/16/clinic/node-clinic-bubbleprof"]
+	path = 2024/09/16/clinic/node-clinic-bubbleprof
+	url = https://github.com/clinicjs/node-clinic-bubbleprof
+[submodule "2024/09/16/MinaDeck-Frontend"]
+	path = 2024/09/16/mina-grants/MinaDeck-Frontend
+	url = https://github.com/MinaDeck/MinaDeck-Frontend.git
+[submodule "2024/09/16/clinic/node-clinic-doctor-examples"]
+	path = 2024/09/16/clinic/node-clinic-doctor-examples
+	url = https://github.com/clinicjs/node-clinic-doctor-examples.git
+[submodule "2024/09/16/clinic/node-clinic-common"]
+	path = 2024/09/16/clinic/node-clinic-common
+	url = https://github.com/clinicjs/node-clinic-common.git
+[submodule "2024/09/16/clinic/node-clinic-flame"]
+	path = 2024/09/16/clinic/node-clinic-flame
+	url = https://github.com/clinicjs/node-clinic-flame.git
+[submodule "2024/09/16/mina-grants/z2zlib-proposal"]
+	path = 2024/09/16/mina-grants/z2zlib-proposal
+	url = https://github.com/YofiY/z2zlib-proposal.git
+[submodule "2024/09/16/clinic/clinicjs-pipeline"]
+	path = 2024/09/16/clinic/clinicjs-pipeline
+	url = https://github.com/dfloresc/clinicjs-pipeline.git
+[submodule "2024/09/16/bte"]
+	path = 2024/09/16/bte
+	url = https://github.com/stevenlafl/bte.git
+[submodule "2024/09/16/jest"]
+	path = 2024/09/16/jest
+	url = https://github.com/jestjs/jest
+[submodule "2024/09/16/--depth=1"]
+	path = 2024/09/16/--depth=1
+	url = https://github.com/yarnpkg/berry
+[submodule "2024/09/16/ts-jest"]
+	path = 2024/09/16/ts-jest
+	url = https://github.com/kulshekhar/ts-jest
+[submodule "2024/09/17/ts-jest"]
+	path = 2024/09/17/ts-jest
+	url = https://github.com/meta-introspector/ts-jest.git
+[submodule "2024/09/18/nodejs.org"]
+	path = 2024/09/18/nodejs.org
+	url = https://github.com/nodejs/nodejs.org.git
+[submodule "2024/09/18/Misc"]
+	path = 2024/09/18/Misc
+	url = https://github.com/brendangregg/Misc.git
+[submodule "2024/09/18/node-perf"]
+	path = 2024/09/18/node-perf
+	url = https://github.com/hzhu/node-perf.git
+[submodule "2024/09/18/node-linux-perf"]
+	path = 2024/09/18/node-linux-perf
+	url = https://github.com/mmarchini-oss/node-linux-perf.git
+[submodule "2024/09/18/linux-tracing-workshop"]
+	path = 2024/09/18/linux-tracing-workshop
+	url = https://github.com/goldshtn/linux-tracing-workshop/
+[submodule "2024/09/18/jest-light-runner"]
+	path = 2024/09/18/jest-light-runner
+	url = https://github.com/nicolo-ribaudo/jest-light-runner
+[submodule "2024/09/20/o1js2"]
+	path = 2024/09/20/o1js2
+	url = https://github.com/meta-introspector/o1js.git
+[submodule "2024/09/20/perf-focus"]
+	path = 2024/09/20/perf-focus
+	url = https://github.com/nikomatsakis/perf-focus.git
+[submodule "2024/09/20/rustc-perf"]
+	path = 2024/09/20/rustc-perf
+	url = https://github.com/rust-lang/rustc-perf
+[submodule "2024/09/20/hotspot"]
+	path = 2024/09/20/hotspot
+	url = https://github.com/KDAB/hotspot.git
+[submodule "2024/09/20/linux-perf-data"]
+	path = 2024/09/20/linux-perf-data
+	url = https://github.com/mstange/linux-perf-data
+[submodule "2024/09/20/linux-perf-file-reader"]
+	path = 2024/09/20/linux-perf-file-reader
+	url = https://github.com/mikhail-m1/linux-perf-file-reader.git
+[submodule "2024/09/20/samply"]
+	path = 2024/09/20/samply
+	url = https://github.com/mstange/samply
+[submodule "2024/09/20/RustBenchmarkStabilityThesis"]
+	path = 2024/09/20/RustBenchmarkStabilityThesis
+	url = https://github.com/RensHijdra/RustBenchmarkStabilityThesis.git
+[submodule "2024/09/20/linux-perf-stuff"]
+	path = 2024/09/20/linux-perf-stuff
+	url = https://github.com/mstange/linux-perf-stuff.git
+[submodule "2024/09/20/fxprof-perf-convert"]
+	path = 2024/09/20/fxprof-perf-convert
+	url = https://github.com/mstange/fxprof-perf-convert.git
+[submodule "2024/09/20/profiler"]
+	path = 2024/09/20/profiler
+	url = https://github.com/firefox-devtools/profiler
+[submodule "2024/09/21/opencbdc-tctl"]
+	path = 2024/09/21/opencbdc-tctl
+	url = https://github.com/mit-dci/opencbdc-tctl.git
+[submodule "2024/09/21/pbench"]
+	path = 2024/09/21/pbench
+	url = https://github.com/distributed-system-analysis/pbench
+[submodule "2024/09/23/cpp-actions"]
+	path = 2024/09/23/cpp-actions
+	url = https://github.com/meta-introspector/cpp-actions
+[submodule "2024/09/29/docker-bpgpr"]
+	path = 2024/09/29/docker-bpgpr
+	url = https://github.com/meta-introspector/docker-bpgpr
+[submodule "2024/09/30/node-test-github-reporter"]
+	path = 2024/09/30/node-test-github-reporter
+	url = https://github.com/nearform/node-test-github-reporter
+[submodule "2024/09/30/introspector-react-app"]
+	path = 2024/09/30/introspector-react-app
+	url = https://huggingface.co/spaces/introspector/introspector-react-app
+[submodule "2024/09/30/fastapi-react-app"]
+	path = 2024/09/30/fastapi-react-app
+	url = https://huggingface.co/spaces/SpacesExamples/fastapi-react-app
+[submodule "2024/09/30/react-keyed-file-browser"]
+	path = 2024/09/30/react-keyed-file-browser
+	url = https://github.com/uptick/react-keyed-file-browser
+[submodule "2024/09/30/petercat"]
+	path = 2024/09/30/petercat
+	url = https://github.com/petercat-ai/petercat
+[submodule "2024/10/01/capvert_dish"]
+	path = 2024/10/01/capvert_dish
+	url = https://github.com/Tomdieu/capvert_dish
+[submodule "2024/10/01/explorer"]
+	path = 2024/10/01/explorer
+	url = https://github.com/D2KLab/explorer
+[submodule "2024/10/02/ttl-mode"]
+	path = 2024/10/02/ttl-mode
+	url = https://github.com/nxg/ttl-mode
+[submodule "2024/10/05/cloudmacs"]
+	path = 2024/10/05/cloudmacs
+	url = https://github.com/karlicoss/cloudmacs.git
+[submodule "2024/10/09/extract-js"]
+	path = 2024/10/09/extract-js
+	url = https://github.com/madibkz/extract-js.git
+[submodule "2024/10/12/tslab"]
+	path = 2024/10/12/tslab
+	url = https://github.com/yunabe/tslab
+[submodule "2024/10/16/next-mdx-deck-o1js-perf"]
+	path = 2024/10/16/next-mdx-deck-o1js-perf
+	url = https://github.com/meta-introspector/next-mdx-deck-o1js-perf
+[submodule "2024/10/17/zkcloudworker-tests"]
+	path = 2024/10/17/zkcloudworker-tests
+	url = https://github.com/zkcloudworker/zkcloudworker-tests
+[submodule "2024/10/17/js-tick-processor"]
+	path = 2024/10/17/js-tick-processor
+	url = https://github.com/dex4er/js-tick-processor.git
+[submodule "2024/10/21/pasta"]
+	path = 2024/10/21/pasta
+	url = https://github.com/zcash/pasta.git
+[submodule "2024/10/21/yaml-shellcheck"]
+	path = 2024/10/21/yaml-shellcheck
+	url = https://github.com/mschuett/yaml-shellcheck.git
+[submodule "2024/10/21/roku-cli"]
+	path = 2024/10/21/roku-cli
+	url = https://github.com/ncmiller/roku-cli.git
+[submodule "2024/10/21/opentelemetry-js"]
+	path = 2024/10/21/opentelemetry-js
+	url = https://github.com/open-telemetry/opentelemetry-js
+[submodule "2024/10/21/wabt"]
+	path = 2024/10/21/wabt
+	url = https://github.com/WebAssembly/wabt.git
+[submodule "2024/10/21/ic"]
+	path = 2024/10/21/ic
+	url = https://github.com/dfinity/ic
+[submodule "2024/10/24/emacs-markdown-babel"]
+	path = 2024/10/24/emacs-markdown-babel
+	url = https://github.com/whacked/emacs-markdown-babel
+[submodule "2024/10/24/node-tick"]
+	path = 2024/10/24/node-tick
+	url = https://github.com/sidorares/node-tick
+[submodule "2024/10/26/rust-react-typescript-demo"]
+	path = 2024/10/26/rust-react-typescript-demo
+	url = https://github.com/brndnmtthws/rust-react-typescript-demo
+[submodule "2024/10/26/crux"]
+	path = 2024/10/26/crux
+	url = https://github.com/redbadger/crux
+[submodule "2024/10/28/ui"]
+	path = 2024/10/28/ui
+	url = https://github.com/shadcn-ui/ui
+[submodule "2024/10/29/react-repl"]
+	path = 2024/10/29/react-repl
+	url = https://github.com/seamapi/react-repl
+[submodule "2024/10/30/termpair"]
+	path = 2024/10/30/termpair
+	url = https://github.com/cs01/termpair
