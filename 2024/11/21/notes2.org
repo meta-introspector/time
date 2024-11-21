@@ -1,3 +1,7 @@
+make a draft of the 42 steps in a list:
+We will first use org mode as our first meta-language and bable as the quotation tool.
+The shell is actually the base language.
+
 * Executive Summary
 This code aims to prove a goal by executing statements that rewrite the
 document multiple times using different LLMs, incrementing the stack each iteration. The ultimate
