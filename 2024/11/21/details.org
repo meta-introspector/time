@@ -1,0 +1,18 @@
+Statement 14: Cakeml architecture
+We want to mimic this idea of intermediate languages but extend them to 42.
+CakeML is a functional programming language with a verified compiler that targets multiple architectures.
+The compiler backend uses a series of 12 intermediate languages to incrementally compile high-level features
+into machine code, optimizing at various abstraction levels.
+The architecture includes a proof-producing synthesis tool and
+a traditional parser with type inference, both of which have been verified for correctness.
+CakeML's design emphasizes verified compilation to ensure that generated machine code
+behaves identically to the source program.
+
+Citations:
+[3] CakeML https://cakeml.org
+
+Statement 15: The guix architecture
+GNU Guix is a functional package manager and operating system management tool that emphasizes reproducibility and user control. It is based on the Nix package manager and uses a purely functional deployment model, where software is installed in unique directories identified by cryptographic hashes[3]. This approach allows multiple software versions to coexist, solving dependency issues and ensuring reproducibility[3][4].
+Guix uses the Guile Scheme language for package definitions, enabling precise control over package management through APIs[3][4]. It supports various CPU architectures and allows for package multi-versioning optimized for specific micro-architectures[5]. Guix's design includes features like atomic upgrades and rollbacks, enhancing system reliability[3].
+Citations:
+[2] GNU Guix transactional package manager and distribution — GNU ... https://guix.gnu.org

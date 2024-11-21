@@ -1,0 +1,149 @@
+* Executive Summary
+This code aims to prove a goal by executing statements that rewrite the
+document multiple times using different LLMs, incrementing the stack each iteration. The ultimate
+question of life, the universe, and everything is assumed to be 42 according to Douglas Adams'
+hypothesis. Each rewrite will produce a new version of the document in a different intermediate meta-languages that we will define,
+moving closer to executable code like CakeML and scheme and the gcc does. The current environmental context includes various
+variables such as user, hardware, software applications, and network connectivity.
+
+In summary, this code aims to prove a goal through multiple iterative rewrites using different LLMs
+while incrementing the stack each time. The ultimate question of life, according to Douglas Adams'
+hypothesis, is assumed to be 42. The code includes tests that will be executed in org babel blocks
+and the resulting hex codes will be loaded into the mes hex loader for execution. The llm can also
+generate new ob statements for execution during the rewriting process. Testing is done using org
+babel, and the latest packages are installed from Guix. The versions will be installed from Guix
+using the lastest packages. The resulting hex codes will be loaded into the mes hex loader as an
+assembler and executed.
+
+Clarification regarding the goal being proved:
+The goal is to prove that the statement can be compiled and executed in 42 steps with the llm,
+and then we will trace this execution, and introspect it, and contruct a zero knowledge proof
+of the execution and its validity as a new singular element of group G in field F.
+
+The final output will be an elliptic curve the proves and contains the entire system and its trace as a quine
+and be executable as well.
+
+The context  needed to understand this code's purpose fully is the extent of all human endeavor.
+
+Now I want you to execute this, we will prove our goal.
+Goal: We aim to prove X through N statements.
+** LLMS
+We are using the "qwen2.5-coder" model
+(setopt ellama-coding-provider
+	(make-llm-ollama
+	 :chat-model "qwen2.5-coder"
+	 :embedding-model "nomic-embed-text"
+	     :default-chat-non-standard-params '(("num_ctx" . 32768))))
+
+* This document will be rewritten in N statements. The document will be rewritten by feeding it to different LLMs N times, with each iteration incrementing the current stack.
+* X is this very document, so this document is making statements about itself as an oracle that reflects the knowledge of the llm into the world.
+* Hypothesis: According to Douglas Adams, the answer to the ultimate question of life the universe and everything, aka, how many rewrites do we need, N, is 42.
+* The current rewrite version "Version" is 2, each rewrite will increment the number.
+* The document will rewrite itself into hex executable code in the gnu mes compiler hex loader which we will run and that result will
+be a new version of this document, as quine-like-heideggerian-named-meta-meme-rune-ordinal-encoded-distributed-autonomous-llm-powered-ai-ml-self-evolving-and-proving-open-source-system.
+** Each rewrite will produce a new document in a different intermediate meta-language, moving closer
+to executable code like CakeML.
+* tools
+We are using a variety of tools in our environmental context, including Coq, MetaCoQ,
+Template Haskell, OCaml Ppx, Rust, Guix, Guile, Mes, Python, Bash, Make, and
+Autoconf/cmake/gcc/LLVM.
+
+* Environment
+Our current environmental context includes various variables, such as the user
+(mdupont), their hands (typing), the document's location on disk ("~/2024/11/21/notes.org"), the
+current Git commit ID (518b0b0d95ca83a2bca34b5cdfa69bdd507dfd6b), and a complex chain of connections
+between user, kernel, and software components. This context also includes specific hardware details
+such as the keyboard brand ("Dell"), connection type (HDMI adaptor), display manufacturer
+("Samsung"), terminal emulator (Termux), and network connectivity (SSH/TMUX). The document also
+notes specific software applications being used, including Emacs with the ellama for talking to the llm, package, GCC,
+Linux, CPU, and associated versions. Finally, the context includes a few basic system facts (kernel
+version, CPU brand and details) as reported by standard Unix commands.
+
+** The Current Environmental Context contains the following variables
+{
+  "user": "mdupont",
+  "hands": "typing",
+  "document" : "~/2024/11/21/notes.org",
+
+  "commit": "518b0b0d95ca83a2bca34b5cdfa69bdd507dfd6b",
+  "repo": "https://github.com/meta-introspector/time",
+  "keyboard": ["Dell", "Analog"],
+  "connection between user and kernel": [
+  
+    "HDMI adaptor",
+    "Samsung",
+    "Termux",
+    "SSH",
+    "TMUX",
+    "Guix",
+    {
+    "Emacs":
+    {
+    "package" : {"ellama":
+    {"purpose":"emacs-llm-interface-in-use-right-now",
+    "shortcut":"M-x el-rev",
+    "language": "ELisp",
+    "function" :"ellama-code-review",
+    }
+    }
+    }
+    "GCC",
+    "Linux",
+    "CPU"
+  ],
+  "facts": {
+    "uname -a": "Linux mdupont-G470 6.8.0-48-generic #48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux",
+    "cpuinfo": [ { "model name": "12th Gen Intel(R) Core(TM) i9-12900KF",
+    "cpu MHz": 800.000,
+    "cache size": "30720 KB",
+    "siblings": 24,
+    "cpu cores": 16,
+    "fpu": "yes",
+    "cpuid level": 32,
+    "bogomips": 6374.40
+    }
+    ]
+
+* Testing.
+
+We will use quickcheck and other tools to automate testing.
+
+* Execution
+We will use org bable to embed code for execution block.
+#+begin_src shell
+  echo "tests will be executed in org babel blocks"
+#+end_src
+
+* The versions will be installed from guix using the lastest packages.
+** The resulting hex codes will be loaded into the mes hex loader as an assembler and executed.
+** The org bable OB code will read its own document and then work on the rewritten document.
+*** The llm can generate new ob statements for execution
+
+* Next step: lets make a working list of the steps and languages in order.
+
+1. Define intermediate meta-languages (IMMLs) that are closer to executable code than the original
+document.
+2. Rewrite the document using different LLMs and increment the stack for each iteration, resulting
+in new versions of the document in each IMML.
+3. Use Coq and MetaCoQ to prove properties of each version and their relations to previous ones.
+   extract proofs into meta-coq and then haskell and ocaml and rust.
+4. Use Template Haskell and OCaml Ppx to compile and lift the latest version into executable code in CakeML
+or a similar language.
+5. Test the compiled code using quickcheck and other tools, ensuring correctness and functional
+equivalence to the original document.
+6. Load the hex codes generated from the compiled CakeML into the mes hex loader as an assembler and
+execute them, same for wasm and even llvm.
+7. Use github, Rust crates and Guix to manage packages and dependencies, ensuring reproducibility and stability
+across platforms.
+8. Integrate Emacs and the ellama package for communicating with LLMs and automating code review
+tasks.
+9. Use GCC and Linux for compiling and executing the final code, taking advantage of their
+optimizations and features.
+9.1 Trace the executions of the code.
+9.2 Construct zero knowledge proof that summarizes the execution succinctly
+10. Regularly test the entire pipeline (from document to hex loader) to ensure consistency and
+accuracy across iterations.
+11. Document each step, tool, and version using org babel for easy reference and collaboration.
+12. Continuously refine and improve the process based on feedback, data, and insights from users and
+experts in AI, programming, and linguistics.
+13. Split the larger task into smaller tasks that require less context because this one it getting too big.

@@ -1,0 +1,56 @@
+*** Executive Summary
+This code aims to prove a goal by rewriting a document multiple times using different LLMs,
+incrementing the stack each iteration. The ultimate question of life, the universe, and everything
+is assumed to be 42 according to Douglas Adams' hypothesis. Each rewrite will produce a new version
+of the document in a different intermediate meta-language that we will define, moving closer to
+executable code like CakeML and scheme, and ultimately to GCC. The current environmental context
+includes various variables such as user, hardware, software applications, and network connectivity.
+
+*** Goals
+The ultimate goal is to prove that the statement can be compiled and executed in 42 steps using an
+LLM, trace this execution, introspect it, and construct a zero-knowledge proof of its validity as a
+new singular element of group G in field F. The final output will be an elliptic curve proving and
+containing the entire system and its trace as a quine.
+
+*** LLMs
+We are using the "qwen2.5-coder" model:
+#+BEGIN_SRC elisp
+(setopt ellama-coding-provider (make-llm-ollama :chat-model "qwen2.5-coder"
+                                             :embedding-model "nomic-embed-text"
+                                             :default-chat-non-standard-params '(("num_ctx"
+                                             . 32768))))
+#+END_SRC
+
+*** Rewrite Process
+The document will be rewritten in N statements, feeding it to different LLMs N times with each
+iteration incrementing the current stack. Each rewrite will move closer to executable code like
+CakeML.
+
+*** Tools
+We are using a variety of tools:
+- Coq, MetaCoQ, Template Haskell, OCaml Ppx, Rust, Guix, Guile, Mes, Python, Bash, Make, and
+  Autoconf/cmake/gcc/LLVM.
+
+*** Environment
+The current environment includes variables such as the user (mdupont), typing, document location
+("~/2024/11/21/notes.org"), Git commit ID (518b0b0d95ca83a2bca34b5cdfa69bdd507dfd6b), and a complex
+chain of connections. Hardware details include Dell keyboard, HDMI adaptor, Samsung display, Termux
+terminal emulator, SSH/TMUX network connectivity.
+
+*** Version Information
+- Current rewrite version: 2
+- Latest packages installed from Guix
+
+*** Testing
+Testing will be automated using quickcheck and other tools.
+
+*** Execution
+We will use org babel blocks to embed code for execution:
+#+BEGIN_SRC shell
+#+begin_src shell
+echo "tests will be executed in org babel blocks"
+#+end_src
+#+END_SRC
+
+*** Code Snippets
+Include relevant code snippets for reference.
