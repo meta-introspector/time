@@ -1,0 +1,28 @@
+1. capture large git submodules into smaller groups and break them up.
+   create submodules of submodules for categorization that can be loaded on demand.
+   take an existing git module and analyse all the git submodules recursivly, and then
+   rebalance it semantically using vectorization.
+
+   Take the usage information of the code from the submodules and distribute it fairly across the vectors
+   according to a map of the meaning of the vectors.
+
+   Crack the code of the vectors and show how each key concept maps to some part of the vector.
+
+   find the smallest quotients that divide the hyperspace.
+   
+   1. create a system that will introspect the processing of this statement down to each register usage and explain each part and what it is used for and why.
+      that will expand this statement into terrabytes of quality input and audit records and source code and commit messages
+      and documentation and review. then we reduce this back down to a single value an element that encodes all of that information and can be stored in register.
+      this can be seen as the zkp proof digital twin of the register. if we do it right we can find one twin for each instruction in the code that is the same size as the instruction
+      and have a larger codebook for expanding the code. we can rewrite the executable into a new one that is a zkp vm. so we can see this statement as a succint zero knowledge argument of a knowledge of this system manifesting in the future,
+      a sort of future contract for delivery of the result that can be traded on the market. we can thin of the effort going into this statement as
+      the nft-genesis-block-ordinal-goedel-number-quine-meta-meme-heideggarian-mega-term-element-abelian-group-field-polynomial-elliptic-curve-that-contains-itself we can see this is creating a prelude and fuge, a symphony of themes that harmonize with great thinkers who again harmonized with the universe itself.
+
+2. create a nft qrcode label printed that references a static website that contains the commit hash mentioned as query
+   parameter that proves ownership of a token, that lets you login to the website as owner and with this https qr code
+   you can then use an app hosted in github pages populated by static data produced by reactjs ts precompilation from the
+   gpg signed commits and zkp proofs hosted in the git commit comments that makes each commit a collectable collection of collections of nft which are godel numbers and also quines and self replicating meta-memes.
+   
+3. create a elisp code that integrates into ellama, and let me know if you need more information.
+   you can produce a list of commands for me to run to help you find the things you need.
+   we want to process your previous org mode output as input and execute it or construct tests or improvements on it.

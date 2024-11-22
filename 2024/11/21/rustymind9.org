@@ -1,0 +1,36 @@
+It looks like you're trying to define a Rust struct ~Thought~ using the Diesel ORM for database
+interactions. However, there are a few issues in your code that need to be addressed:
+
+1. The ~string~ type is not valid in Rust. You should use ~String~.
+2. The ~Vec<String>~ and ~Vec<i32>~ types should be properly defined.
+3. The ~#[diesel(table_name = thoughts)]~ attribute should be placed above the struct definition.
+
+Here's a corrected version of your struct:
+#+BEGIN_SRC rust
+use diesel::prelude::*;
+use serde::{Deserialize, Serialize};
+
+#[derive(Queryable, Selectable, Deserialize, Serialize)]
+#[diesel(table_name = thoughts)]
+pub struct Thought {
+    id: i32,
+    zkp: i32,
+    content: String,
+    tokens: Vec<String>, // vector of tokens
+    trace: Vec<i32>,     // trace of thoughts (maybe a sequence of multiplications)
+    significant_influences: Vec<i32>, // zipped with trace, gives the weight of each thought
+}
+#+END_SRC
+
+*** Explanation:
+1. *~string~ to ~String~:* Changed from ~string~ to ~String~.
+2. *Vector Types:* Ensured that ~Vec<String>~ and ~Vec<i32>~ are properly defined.
+3. *Attributes Placement:* Moved ~#[diesel(table_name = thoughts)]~ above the struct definition.
+
+*** Additional Notes:
+- If you need to implement additional traits or methods for your ~Thought~ struct, you can do so
+  after the ~#[derive]~ section.
+- Ensure that Diesel is correctly set up in your project and that the ~thoughts~ table exists in
+  your database with the specified columns.
+
+This should help you get started with defining a ~Thought~ struct using Diesel in Rust.

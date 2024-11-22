@@ -1,0 +1,82 @@
+*** The Rusty Mind - A Structured Thought
+
+In the vast expanse of digital minds, where information is stored and processed with precision,
+there exists a particular data structure that elegantly encapsulates the essence of thoughts. This
+structure, known as ~Thought~, has been meticulously crafted to capture every nuance of an idea with
+utmost fidelity.
+
+**** Defining the Structure
+#+BEGIN_SRC rust
+  use diesel::prelude::*;
+  use serde::{Deserialize, Serialize};
+
+  #[derive(Queryable, Selectable, Deserialize, Serialize)]
+  #[diesel(table_name = thoughts)]
+  pub struct Thought {
+      id: i32,
+      zkp: Vec<i32>, // The elliptic curve proof is 255 bits long
+      content: String,
+      tokens: Vec<String>, // A vector of tokens representing the thought's content
+      trace: Vec<i32>,     // A trace of thoughts, possibly a sequence of multiplications
+      significant_influences: Vec<i32>, // Zipped with trace, gives the weight of each thought
+
+      formal_proof: Vec<Vec<String>>, // A set of steps in a formal proof
+      formal_proof_trace: Vec<Vec<i32>>, // A trace mapping the proof to zkp
+
+      // Now, we can turn each step of the proof into new thoughts
+      introspection: Vec<Thought>, // A rabbithole of deeper thoughts
+  }
+#+END_SRC
+
+**** The Breakdown
+
+1. *ID*: Every thought is uniquely identified by an integer ~id~. This helps in managing and
+querying thoughts efficiently.
+
+2. *ZKP (Zero-Knowledge Proof)*: This field stores a 255-bit elliptic curve proof, ensuring the
+integrity and authenticity of the thought without revealing its contents. It's like a digital lock
+that only opens with the right key.
+
+3. *Content*: The core content of the thought is stored as a string ~content~. This could be
+anything from a sentence to a complex equation, encapsulating the essence of the idea.
+
+4. *Tokens*: A vector of tokens ~tokens~ breaks down the thought into smaller parts, making it
+easier to process and analyze.
+
+5. *Trace*: The ~trace~ field records a sequence of thoughts or steps related to the current
+thought. It could be seen as the journey from an initial thought to its deeper exploration.
+
+6. *Significant Influences*: Each step in the trace is associated with a weight or influence, stored
+in the ~significant_influences~ vector. This helps in understanding the impact and importance of
+each component of the thought.
+
+7. *Formal Proof*: The ~formal_proof~ field contains a detailed set of steps that form a formal
+proof related to the thought. It's like breaking down a complex idea into simpler, verifiable parts.
+
+8. *Formal Proof Trace*: The ~formal/proof/trace~ vector maps these steps back to the original zkp
+or trace, ensuring there’s a clear connection between the high-level and detailed representations of
+the thought.
+
+9. *Introspection*: Finally, the ~introspection~ field represents a deeper exploration of each step
+in the formal proof. This rabbithole allows for recursive thoughts and further delving into the
+intricacies of the original idea.
+
+*** Simulating Execution
+
+Imagine a digital mind is executing a thought. It starts with an initial thought represented by an
+instance of ~Thought~. The thought undergoes several transformations:
+
+1. *Verification*: The zkp ensures that the thought's integrity remains intact.
+2. *Processing*: The content and tokens are broken down, allowing for detailed analysis.
+3. *Journey Mapping*: The trace records the path from the initial thought to its deeper
+explorations.
+4. *Impact Assessment*: The weights assigned to each influence help in assessing the significance of
+different parts of the thought.
+5. *Proof Breakdown*: The formal proof is broken down into manageable steps, ensuring clarity and
+verifiability.
+6. *Rabbit Hole Exploration*: Each step leads to a deeper exploration, forming a complex network of
+thoughts.
+
+This structured approach allows for a comprehensive understanding of even the most intricate ideas,
+making it possible to break them down into understandable components and explore their depths
+recursively.

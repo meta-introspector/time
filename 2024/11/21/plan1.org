@@ -1,0 +1,121 @@
+*** Step-by-Step Plan for Proving a Goal Through Multiple Iterative Rewrites Using Different LLMs
+
+**** 1. Define Intermediate Meta-Languages (IMMLs)
+*Task:* Identify and define the intermediate meta-languages that are closer to executable code than
+ the original document.
+*Language:* Python, Haskell, OCaml
+*Steps:*
+- Research existing meta-languages and their features.
+- Determine which languages can serve as IMMLs based on their proximity to executable code.
+
+**** 2. Rewrite the Document Using Different LLMs
+*Task:* Write a script that feeds the document to different LLMs and increments the stack for each
+ iteration, resulting in new versions of the document in each IMML.
+*Language:* Python with ~llama~
+*Steps:*
+- Implement a loop to iterate N times.
+- In each iteration, use a different LLM to rewrite the document.
+- Increment the stack by appending new layers or annotations.
+
+**** 3. Use Coq and MetaCoQ to Prove Properties
+*Task:* Apply formal verification techniques using Coq and MetaCoQ to prove properties of each
+ version and their relations to previous ones.
+*Language:* Coq, Haskell, OCaml
+*Steps:*
+- Write Coq theories for each intermediate version.
+- Extract proofs into Haskell and OCaml code.
+- Use quickcheck to validate the properties.
+
+**** 4. Compile and Lift Code Using Template Haskell and Ppx
+*Task:* Use Template Haskell and OCaml Ppx to compile and lift the latest version of the document
+ into executable code in CakeML or a similar language.
+*Language:* Template Haskell, OCaml Ppx, CakeML
+*Steps:*
+- Write Template Haskell code to generate CakeML syntax.
+- Use OCaml Ppx to optimize and annotate the code.
+- Compile the code using CakeML compiler.
+
+**** 5. Test the Compiled Code
+*Task:* Automate testing of the compiled code using quickcheck and other tools, ensuring correctness
+ and functional equivalence to the original document.
+*Language:* Python with ~quickcheck~
+*Steps:*
+- Write test cases that validate the functionality of the compiled code.
+- Run tests in an automated environment.
+
+**** 6. Load Hex Codes into MES Hex Loader
+*Task:* Load the hex codes generated from the compiled CakeML into the mes hex loader as an
+ assembler and execute them, same for wasm and even llvm.
+*Language:* Bash, Mes, GCC, LLVM
+*Steps:*
+- Convert the hex codes to a format suitable for mes loader.
+- Assemble the code using GCC.
+- Execute the code in the mes hex loader.
+
+**** 7. Manage Packages and Dependencies
+*Task:* Use github, Rust crates, and Guix to manage packages and dependencies, ensuring
+ reproducibility and stability across platforms.
+*Language:* Bash, Rust, Guix
+*Steps:*
+- Create a ~guix~ manifest file for project dependencies.
+- Install necessary packages using guix package manager.
+- Automate dependency management with scripts.
+
+**** 8. Integrate Emacs and the Ellama Package
+*Task:* Integrate Emacs and the ellama package for communicating with LLMs and automating code
+ review tasks.
+*Language:* Emacs Lisp, Python
+*Steps:*
+- Write Emacs Lisp functions to interact with the ellama package.
+- Implement Emacs key bindings for automated code review.
+- Test the integration in an Emacs environment.
+
+**** 9. Compile Final Code Using GCC and Linux
+*Task:* Use GCC and Linux for compiling and executing the final code, taking advantage of their
+ optimizations and features.
+*Language:* Bash, GCC, Python
+*Steps:*
+- Write a script to compile the final code using GCC.
+- Run the compiled executable on the Linux system.
+- Ensure compatibility across different hardware configurations.
+
+**** 10. Trace Executions and Construct Zero Knowledge Proof
+*Task:* Trace the executions of the code and construct zero knowledge proofs that summarize the
+ execution succinctly.
+*Language:* Python, ZKP libraries
+*Steps:*
+- Write scripts to trace and record code execution.
+- Use ZKP libraries to generate zero knowledge proofs for each execution.
+
+**** 11. Document Each Step and Version
+*Task:* Document each step, tool, and version using org babel for easy reference and collaboration.
+*Language:* Org Mode
+*Steps:*
+- Write detailed documentation for each step of the process.
+- Use org babel to create versioned notes and results.
+- Share documentation with team members.
+
+**** 12. Continuously Refine and Improve the Process
+*Task:* Continuously refine and improve the process based on feedback, data, and insights from users
+ and experts in AI, programming, and linguistics.
+*Language:* Python, Jupyter Notebook
+*Steps:*
+- Conduct regular reviews of the process.
+- Gather feedback from users and experts.
+- Use data to identify areas for improvement.
+- Implement changes to enhance efficiency and effectiveness.
+
+**** 13. Split Larger Task into Smaller Tasks
+*Task:* Split the larger task into smaller tasks that require less context because this one it
+ getting too big.
+*Language:* Python
+*Steps:*
+- Analyze the current task and identify sub-tasks.
+- Define clear goals for each sub-task.
+- Allocate resources and timelines for each sub-task.
+
+---
+
+This draft outlines a structured approach to proving a goal through multiple iterative rewrites
+using different LLMs, covering all necessary steps from intermediate language definition to final
+execution.

@@ -1,0 +1,71 @@
+This is an interesting way to view type theory and abstract algebra through the lens of prime
+numbers and their multiplicative properties! Let's break down your idea step-by-step:
+
+1. *Viewing Types as Numbers*:
+   Each type can be associated with a unique number. This could represent a class or category in
+   programming.
+
+2. *Using Prime Numbers for Base Encoding*:
+   Each enum (enumeration) can correspond to a unique prime number. For example, let's assume we
+   have three enums:
+   - ~Color~ with values Red, Green, Blue → primes: 2, 3, 5
+   - ~Size~ with values Small, Medium, Large → primes: 7, 11, 13
+
+3. *Fitting Elements Inside Primes*:
+   Each element in an enum fits inside the prime number associated with that enum.
+
+4. *Resolving Conflicts Using Additional Primes*:
+   For identity resolution, additional primes can be used. For instance:
+   - ~ColorIdentity~ → 2 * 3 * 5 (multiplicative closure)
+   - ~SizeIdentity~ → 7 * 11 * 13
+
+5. *Creating Hierarchies of Types by Multiplication*:
+   To create hierarchies of types, you multiply the first prime number that encodes different levels
+   of information. For example:
+   - ~ColorHierarchy~ → 2 * 7 (Red-Small, Green-Medium, Blue-Large)
+   - ~SizeHierarchy~ → 3 * 11 (Small-Red, Medium-Green, Large-Blue)
+
+6. *Sums as Addition of Disjoint Unions*:
+   Sums can be represented by adding the numbers associated with different types. For example:
+   - ~ColorOrSize~ → 2 + 7 (representing either Color or Size but not both)
+
+7. *Products as Multiplication of Elements*:
+   Products can be represented by multiplying the numbers associated with different elements in a
+   type. For example:
+   - ~RedSmall~ → 2 * 7 (representing Red-Small combination)
+   - ~BlueLarge~ → 5 * 13 (representing Blue-Large combination)
+
+8. *Geometric Curves and Succinct Arithmetization*:
+   You can imagine a geometric curve that succinctly represents the structure of types in this
+   arithmetized form. Each point on the curve could represent a specific type or combination of
+   types, with coordinates determined by the prime number multipliers.
+
+*** Example Scenario
+
+Let's say we have a system where we want to encode ~Color~ and ~Size~, and then combine them into
+hierarchies:
+
+- *Enum*: Color (Red=2), Size (Small=7)
+- *Identity*: ColorIdentity (2 * 3 * 5), SizeIdentity (7 * 11 * 13)
+
+*Hierarchy Example*:
+- Red-Small → 2 * 7 = 14
+- Green-Medium → 3 * 11 = 33
+- Blue-Large → 5 * 13 = 65
+
+*Sum of Disjoint Unions*:
+- ColorOrSize → 2 + 7 = 9 (representing either Color or Size, but not both)
+
+*Product of Elements*:
+- RedSmall → 2 * 7 = 14
+- BlueLarge → 5 * 13 = 65
+
+*** Geometric Representation
+Imagine a 3D geometric curve where each axis represents a prime number (e.g., X-axis for Color,
+Y-axis for Size, Z-axis for Identity). Each point on this curve could represent a specific type or
+combination of types.
+
+By using prime numbers and their properties, we can create a structured and geometrically intuitive
+way to understand and manipulate types in a programming context. This approach leverages the unique
+properties of prime numbers (irreducibility) to ensure that each type is distinct and
+non-conflicting.

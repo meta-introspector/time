@@ -1,0 +1,91 @@
++ Outline of Steps for Proving a Goal Through Multiple Iterative Rewrites Using Different LLMs
+
+** Executive Summary
+This code aims to prove a goal by executing statements that rewrite the document multiple times
+using different LLMs, incrementing the stack each iteration. The ultimate question of life, the
+universe, and everything is assumed to be 42 according to Douglas Adams' hypothesis. Each rewrite
+will produce a new version of the document in a different intermediate meta-language that we will
+define, moving closer to executable code like CakeML and Scheme.
+
+** Goal
+We aim to prove X through N statements using different LLMs, incrementing the stack each time. The
+ultimate question of life, according to Douglas Adams' hypothesis, is assumed to be 42.
+
+** Tools
+We are using a variety of tools in our environmental context, including Coq, MetaCoQ, Template
+Haskell, OCaml Ppx, Rust, Guix, Guile, Mes, Python, Bash, Make, and Autoconf/cmake/gcc/LLVM.
+
+** Environment
+Our current environmental context includes various variables such as the user (mdupont), their hands
+(typing), the document's location on disk ("~/2024/11/21/notes.org"), the current Git commit ID
+(518b0b0d95ca83a2bca34b5cdfa69bdd507dfd6b), and a complex chain of connections between user, kernel,
+and software components. This context also includes specific hardware details such as the keyboard
+brand ("Dell"), connection type (HDMI adaptor), display manufacturer ("Samsung"), terminal emulator
+(Termux), and network connectivity (SSH/TMUX).
+
+** Steps in Detail
+
+1. *Define Intermediate Meta-Languages (IMMLs)*
+   - Create IMMLs that are closer to executable code than the original document.
+
+2. *Rewrite the Document Using Different LLMs*
+   - Rewrite the document using different LLMs N times, incrementing the stack for each iteration.
+   - Each rewrite will result in a new version of the document in a different IMML.
+
+3. *Prove Properties of Each Version*
+   - Use Coq and MetaCoQ to prove properties of each version and their relations to previous ones.
+   - Extract proofs into MetaCoQ, Haskell, OCaml, and Rust.
+
+4. *Compile and Lift to Executable Code*
+   - Use Template Haskell and OCaml Ppx to compile and lift the latest version into executable code
+     in CakeML or a similar language.
+
+5. *Test the Compiled Code*
+   - Test the compiled code using quickcheck and other tools.
+   - Ensure correctness and functional equivalence to the original document.
+
+6. *Load Hex Codes for Execution*
+   - Load hex codes generated from the compiled CakeML into the Mes hex loader as an assembler and
+     execute them.
+   - Load hex codes for WebAssembly (wasm) and LLVM execution.
+
+7. *Manage Packages and Dependencies*
+   - Use GitHub, Rust crates, and Guix to manage packages and dependencies.
+   - Ensure reproducibility and stability across platforms.
+
+8. *Integrate Emacs and the Ellama Package*
+   - Integrate Emacs and the ellama package for communicating with LLMs and automating code review
+     tasks.
+
+9. *Compile and Execute Final Code*
+   - Use GCC and Linux to compile and execute the final code.
+   - Take advantage of optimizations and features provided by these tools.
+
+10. *Trace Executions and Construct ZKP*
+    - Trace the executions of the code.
+    - Construct a zero-knowledge proof that summarizes the execution succinctly.
+
+11. *Regular Testing*
+    - Regularly test the entire pipeline (from document to hex loader) to ensure consistency and
+      accuracy across iterations.
+
+12. *Document Each Step*
+    - Document each step, tool, and version using org babel for easy reference and collaboration.
+
+13. *Refine and Improve Process*
+    - Continuously refine and improve the process based on feedback, data, and insights from users
+      and experts in AI, programming, and linguistics.
+
+** Hypothesis
+According to Douglas Adams' hypothesis, the answer to the ultimate question of life, the universe,
+and everything is 42. We aim to prove this through multiple iterations using different LLMs.
+
+** Conclusion
+This code aims to prove a goal by rewriting the document multiple times with different LLMs, moving
+closer to executable code like CakeML. Each rewrite will produce a new version of the document in a
+different intermediate meta-language, ensuring correctness and functional equivalence at each stage.
+
+---
+
+These steps outline a comprehensive plan for proving a goal through iterative rewrites using
+different LLMs, leveraging various tools and environments to achieve the desired outcome.

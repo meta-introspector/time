@@ -1,0 +1,34 @@
+The output from ~nvidia-smi~ provides detailed information about the NVIDIA GPU on your
+system. Here's a breakdown of the information provided:
+
+- *NVIDIA-SMI Version*: 550.120, which is the driver version installed on your system.
+- *CUDA Version*: 12.4, indicating the CUDA toolkit version compatibility with your GPU.
+
+*** GPU Information
+- *GPU Name*: NVIDIA GeForce RTX 3080 Ti
+- *Persistence Mode*: Off - The GPU does not have persistence mode enabled, meaning it powers down
+   when not in use.
+- *Bus ID*: 00000000:01:00.0 - This is the PCI bus identifier for the GPU.
+- *Display Active (Disp.A)*: Off - The GPU is not actively displaying anything.
+
+*** Power and Performance Metrics
+- *Fan Speed*: 0% - The fan is currently off, indicating a low level of activity or that there is no
+   need for cooling.
+- *Temperature*: 45C - The temperature of the GPU is within a normal range.
+- *Performance State (Perf)*: P8 - The performance state indicates that the GPU is in a power-saving
+   mode.
+- *Power Usage/Capacity*: 29W / 350W - The GPU is currently using 29 watts out of its maximum
+   capacity of 350 watts.
+
+*** Memory Metrics
+- *Memory Usage*: 24MiB / 12288MiB (24 MB used out of a total of 12 GB) - The GPU has allocated only
+   a small portion of its memory, suggesting that it is not under heavy load.
+- *GPU Utilization*: 0% - The GPU is not currently performing any computations.
+
+*** MIG Mode
+- *Memory-Interleaved GPU (MIG)*: N/A - MIG mode is not enabled on this GPU.
+
+Overall, the output indicates that your NVIDIA GeForce RTX 3080 Ti GPU is idle and consuming minimal
+power. It is in a low-power state (P8) and has only a small amount of memory allocated to it,
+suggesting that it is either not being used at all or is undergoing some initial setup or
+configuration.

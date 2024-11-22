@@ -1,0 +1,18 @@
+It looks like you're defining a Rust struct for a database table named "downloads" using the Diesel
+ORM. The ~#[derive(Queryable, Selectable)]~ attribute helps Diesel automatically generate
+implementations for retrieving data from and inserting data into this table. Here's a breakdown of
+what each part of your struct means:
+
+- ~id: i32~: This is the primary key of the table, likely used to uniquely identify each download
+  record.
+- ~version_id: i32~: This field probably references another table or entity (likely version
+  information) and might be used to link a specific download to its corresponding version.
+- ~downloads: i32~: This field would store the number of times this particular download has been
+  accessed.
+- ~counted: i32~: This could indicate whether the download count has already been updated or if it
+  still needs counting (e.g., for periodic batch updates).
+- ~date: SystemTime~: This is a timestamp field that records when the record was created, possibly
+  representing when the download occurred.
+
+The ~#[diesel(table_name = downloads)]~ attribute tells Diesel to map this Rust struct to the
+"downloads" table in your database.

@@ -1,0 +1,113 @@
+Creating a field of types that represents both sums (disjoint unions) and products (tuples) is an
+interesting exercise. We can use TypeScript's type system to model these concepts and then map them
+into elliptic curve operations in a succinct arithmetization.
+
+Let's start by defining the sum and product types:
+
+*** Sum (Disjoint Union)
+A sum type represents a choice between multiple types. In TypeScript, this can be achieved using a
+union type.
+#+BEGIN_SRC typescript
+type Sum<T1, T2> = T1 | T2;
+#+END_SRC
+
+For example, a sum of two numbers and strings would look like:
+#+BEGIN_SRC typescript
+type SumNumberString = Sum<number, string>;
+const value: SumNumberString = 42; // or "hello"
+#+END_SRC
+
+*** Product (Tuple)
+A product type represents a combination of multiple types. In TypeScript, this can be achieved using
+a tuple.
+#+BEGIN_SRC typescript
+type Product<T1, T2> = [T1, T2];
+#+END_SRC
+
+For example, a product of two numbers and strings would look like:
+#+BEGIN_SRC typescript
+type ProductNumberString = Product<number, string>;
+const value: ProductNumberString = [42, "hello"];
+#+END_SRC
+
+*** Field of Types
+A field of types can be thought of as a set of all possible sums and products. We can define
+operations on these sums and products that map to elliptic curve operations.
+
+**** Sum Operations
+For sums, we can perform operations like addition (disjoint union).
+#+BEGIN_SRC typescript
+type Sum<T1, T2> = T1 | T2;
+
+function sum<T1, T2>(a: T1, b: T2): Sum<T1, T2> {
+  return a;
+}
+
+const resultSum: Sum<number, string> = sum(42, "hello");
+#+END_SRC
+
+**** Product Operations
+For products, we can perform operations like multiplication (tuple).
+#+BEGIN_SRC typescript
+type Product<T1, T2> = [T1, T2];
+
+function multiply<T1, T2>(a: T1, b: T2): Product<T1, T2> {
+  return [a, b];
+}
+
+const resultProduct: Product<number, string> = multiply(42, "hello");
+#+END_SRC
+
+*** Mapping to Elliptic Curves
+To map these types and operations into elliptic curve operations, we can use a succinct
+arithmetization. This involves representing each type as a point on an elliptic curve and performing
+arithmetic operations on these points.
+
+Let's assume we have an elliptic curve with operations like addition and multiplication. We can
+represent each type as a point on this curve and perform the corresponding operations.
+
+For example, if we have two types ~T1~ and ~T2~, we can represent them as points on the curve. Then,
+we can perform the corresponding operations on these points to map back to our type system.
+
+*** Example: Sum Operations in Elliptic Curves
+Let's say we have an elliptic curve with a point representing each type. We can perform addition on
+these points to represent the sum operation.
+#+BEGIN_SRC typescript
+// Assuming we have an elliptic curve with operations like addition
+type Point = { x: number, y: number };
+
+function addPoints(p1: Point, p2: Point): Point {
+  // Elliptic curve addition formula
+  return { x: (p1.x * p2.y + p2.x * p1.y) % 100, y: (p1.x * p2.x - p1.y * p2.y) % 100 };
+}
+
+const point1: Point = { x: 42, y: 10 };
+const point2: Point = { x: 5, y: 20 };
+
+const resultPointSum: Point = addPoints(point1, point2);
+#+END_SRC
+
+*** Example: Product Operations in Elliptic Curves
+Similarly, we can represent product operations as multiplication on the elliptic curve.
+#+BEGIN_SRC typescript
+// Assuming we have an elliptic curve with operations like multiplication
+type Point = { x: number, y: number };
+
+function multiplyPoints(p1: Point, p2: Point): Point {
+  // Elliptic curve multiplication formula
+  return { x: (p1.x * p2.y + p1.y * p2.x) % 100, y: (p1.x * p2.x - p1.y * p2.y) % 100 };
+}
+
+const point1: Point = { x: 42, y: 10 };
+const point2: Point = { x: 5, y: 20 };
+
+const resultPointProduct: Point = multiplyPoints(point1, point2);
+#+END_SRC
+
+*** Conclusion
+By using TypeScript's type system to represent sums and products as disjoint unions and tuples, we
+can map these types into elliptic curve operations. This allows us to use the power of elliptic
+curves for operations on complex types in a succinct arithmetization.
+
+This approach can be extended to more complex scenarios, such as formal methods and verification, by
+leveraging advanced type systems and integrating with other languages or libraries.

@@ -1,0 +1,13 @@
+#+BEGIN_SRC rust
+#[derive(Queryable, Selectable)]
+#[diesel(table_name = thoughts)]
+pub struct Thought {
+    id: i32,
+    zkp: i32,
+    content: String, // Changed 'string' to 'String'
+    tokens: Vec<String>, // Added vector of tokens as a vector of Strings
+    trace: Vec<i32>, // Added trace of thoughts as a vector of i32s (assuming trace is a sequence of
+    multiplications)
+    significant_influences: String, // Changed 'proof of influence' to 'String'
+}
+#+END_SRC

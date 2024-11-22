@@ -1,0 +1,48 @@
+To convert the given Rust code into a generator that dynamically looks up sounds based on animals,
+you can use a ~HashMap~ for quick lookups. Here's how you could rewrite the code:
+#+BEGIN_SRC rust
+use std::collections::HashMap;
+
+fn main() {
+    let mut lookup_sound: HashMap<&str, &str> = HashMap::new();
+    lookup_sound.insert("dog", "bark");
+    lookup_sound.insert("cat", "purr");
+    lookup_sound.insert("bear", "growl");
+
+    let input = [
+        "The dog is barking",
+        "The cat is purring",
+        "The bear is growling",
+    ];
+
+    for line in input.iter() {
+        if let Some((animal, _)) = extract_animal(line) {
+            if let Some(sound) = lookup_sound.get(animal) {
+                println!("{}: {}", animal, sound);
+            }
+        }
+    }
+}
+
+fn extract_animal(sentence: &str) -> Option<(&str, &str)> {
+    let words: Vec<&str> = sentence.split_whitespace().collect();
+    for i in 1..words.len() - 1 {
+        if words[i] == "is" && ["dog", "cat", "bear"].contains(&words[i + 2]) {
+            return Some((words[i + 2], &sentence[0..i]));
+        }
+    }
+    None
+}
+#+END_SRC
+
+*** Explanation:
+1. *HashMap Creation*: We create a ~HashMap~ called ~lookup_sound~ to store the mapping of animals
+to their respective sounds.
+2. *Input Parsing*: The input vector contains sentences where an animal is performing a sound.
+3. *Animal Extraction*: The ~extract_animal~ function parses each sentence to extract the animal
+mentioned.
+4. *Sound Lookup and Output*: For each line in the input, we attempt to extract the animal and then
+look up its corresponding sound from the ~HashMap~. If found, it prints the result.
+
+This way, you can dynamically handle any number of animals and sounds without hardcoding them into
+the list.

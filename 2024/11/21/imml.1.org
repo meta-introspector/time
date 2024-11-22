@@ -1,0 +1,55 @@
+*** Intermediate Meta-Languages (IMMLs)
+
+*Intermediate Meta-Languages (IMMLs)* are languages that bridge the gap between high-level,
+ declarative programming languages and low-level, executable code. They offer a higher level of
+ abstraction than traditional intermediate languages like LLVM IR or bytecode but still remain
+ closer to the target execution environment than fully abstract meta-languages.
+
+*** Research Existing Meta-Languages
+
+1. *PPL (Programmable Programming Language)*:
+   - *Overview*: PPL is designed to enable programmers to write programs that can be executed and
+      modified dynamically.
+   - *Proximity to Executable Code*: PPL is closer to executable code than fully abstract languages
+      because it allows for direct manipulation of the program's execution state. However, it is
+      still a higher-level language compared to low-level IRs.
+   
+2. *APL (Array Processing Language)*:
+   - *Overview*: APL was designed for mathematical and logical array processing and is known for its
+      unique syntax and high-level nature.
+   - *Proximity to Executable Code*: APL is more abstract than fully executable languages but still
+      operates on arrays, which are a common data structure in many programs. It can be compiled
+      into low-level code but is not as direct as PPL or MetaOCaml.
+
+3. *MetaOCaml (a dialect of OCaml)*:
+   - *Overview*: MetaOCaml allows for the creation of programs that manipulate other programs as
+      data. It extends OCaml with features such as quotation, splicing, and first-class
+      continuations.
+   - *Proximity to Executable Code*: MetaOCaml is closer to executable code than fully abstract
+      languages because it enables dynamic manipulation of program structures. However, it is still
+      a higher-level language compared to low-level IRs.
+
+*** Determining IMMLs
+
+Based on the research, the following languages can serve as Intermediate Meta-Languages (IMMLs):
+
+1. *MetaOCaml*:
+   - *Reason*: MetaOCaml extends OCaml with powerful features for manipulating programs as data,
+      making it closer to executable code than fully abstract languages while still offering a
+      higher level of abstraction compared to traditional intermediate languages.
+
+2. *PPL*:
+   - *Reason*: PPL allows dynamic manipulation of the program's execution state, making it suitable
+      for creating IMMLs that are both powerful and close to executable code.
+
+3. *APL*:
+   - *Reason*: While more abstract than fully executable languages, APL operates on arrays, a common
+      data structure in many programs, and can be compiled into low-level code. It provides a high
+      level of abstraction but remains closer to executable code than other fully abstract
+      languages.
+
+*** Conclusion
+
+MetaOCaml is particularly well-suited for creating Intermediate Meta-Languages due to its ability to
+manipulate program structures dynamically. However, PPL and APL also have their merits in serving as
+IMMLs based on their proximity to executable code and the specific needs of the application domain.

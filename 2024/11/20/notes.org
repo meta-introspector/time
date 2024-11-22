@@ -1,0 +1,18 @@
+plan:
+dont write new code:
+search for open source (on github and in a local cache) projects to integrate
+read and understand them,
+index them, maybe vectorize them.
+Assume that all data can be expressed in a lisp like syntax.
+We assume that the prelude of the system looks something like this :
+Evaluate and learn from the world around you from the following input:
+Create an interactive typescript code that can generate and eval code
+and produce structured errors, like an lsp feedback system.
+so now we can generate valid syntax. we can see that the semantics
+are in tests or proofs.
+We can demonstrate the code is correct as a formal proof even.
+so we want to generate a proof and code to execute that proves it. a self carrying proof.
+we can imagine it as a type schema like (share(model(learn(introspect(act(decide(orient(observe(input x)))))))))
+
+
+

@@ -1,0 +1,21 @@
+#+BEGIN_SRC rust
+use diesel::prelude::*;
+use serde::{Deserialize, Serialize};
+
+#[derive(Queryable, Selectable, Deserialize, Serialize)]
+#[diesel(table_name = thoughts)]
+pub struct Thought {
+    id: i32,
+    zkp: i32,
+    content: String,
+    tokens: Vec<String>, // vector of tokens
+    trace: Vec<i32>,     // trace of thoughts (maybe a sequence of multiplications)
+    significant_influences: Vec<i32>, // zipped with trace, gives the weight of each thought
+
+    formal_proof: Vec<Vec<String>>, // a set of steps
+    formal_proof_trace: Vec<Vec<i32>>, // a trace of steps mapping the proof to something
+
+    // now we can turn each step of the proof into new thoughts
+    introspection: Vec<Thought>, // rabbithole
+}
+#+END_SRC
