@@ -1,0 +1,5 @@
+consider we want to collect system information from the following sources like ansible facts
+nvidia-smi
+uname -a
+df -h
+cat /proc/cpuinfo 

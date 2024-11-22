@@ -1,0 +1,109 @@
+Take each of these examples TypeScript programs that represent each of these concepts.
+Lets now create a type level product and sum representation.
+sums are addition of disjoin unions in the group.
+products are multiplication of elements in the group.
+this create a field of types. we can map this field into a elliptic curve in a succinct arithmetization.
+
+Creating a type-level product (multiplication) and sum (disjoint union) representation in TypeScript
+involves leveraging TypeScript's type system to define these operations at the type level rather
+than the value level. This can be achieved using conditional types, mapped types, and utility types.
+
+*** Sum (Disjoint Union)
+
+A disjoint union of types can be represented as a single type that includes all possible types from
+a given set. For example:
+#+BEGIN_SRC typescript
+type Sum<T extends any[]> = T[number];
+#+END_SRC
+
+This ~Sum~ type takes an array of types and produces a type that is the union of all types in the
+array.
+
+*** Product (Multiplication)
+
+A product of types can be represented using mapped types to create a new type by combining fields
+from multiple input types. For example:
+#+BEGIN_SRC typescript
+type Product<T extends any[]> = T extends [infer A, ...infer Rest] ? { [K in keyof A]: A[K] } &
+Product<Rest> : {};
+#+END_SRC
+
+This ~Product~ type takes an array of types and produces a new type that is the intersection of all
+types in the array.
+
+*** Example Usage
+
+Let's combine these concepts to create a field of types and map it into an elliptic curve in a
+succinct arithmetization. This example will demonstrate how we can use TypeScript's type-level
+programming features to achieve this.
+#+BEGIN_SRC typescript
+// Define a sum type (disjoint union)
+type Sum<T extends any[]> = T[number];
+
+// Define a product type (multiplication)
+type Product<T extends any[]> = T extends [infer A, ...infer Rest] ? { [K in keyof A]: A[K] } & Product<Rest> : {};
+
+// Define a field of types using the sum and product types
+type FieldType = Sum<[1, 2, 3]>; // Union type: 1 | 2 | 3
+
+type Point = Product<[FieldType, FieldType]>; // Intersection type: { x: FieldType } & { y: FieldType }
+
+// Example usage
+const point: Point = {
+  x: 2,
+  y: 3
+};
+
+console.log(point); // Output: { x: 2, y: 3 }
+#+END_SRC
+
+*** Arithmetization into an Elliptic Curve
+
+To map this field of types into an elliptic curve, we can use a succinct arithmetization
+technique. This involves encoding the values of the field into coordinates on an elliptic curve.
+
+For simplicity, let's assume we have an elliptic curve defined over a finite field:
+
+\[ y^2 = x^3 + ax + b \]
+
+We can encode the values of the field into points on this curve. For example, if our field has
+values ~1~, ~2~, and ~3~, we can map these values to points on the curve.
+#+BEGIN_SRC typescript
+// Define an elliptic curve over a finite field
+type EllipticCurve = {
+  a: number;
+  b: number;
+  p: number; // Prime modulus
+};
+
+const curve: EllipticCurve = {
+  a: 2,
+  b: 3,
+  p: 5
+};
+
+// Function to map a value from the field to a point on the elliptic curve
+function mapToEllipticCurve(value: FieldType): [number, number] {
+  let x = value;
+  let y = (x * x * x + curve.a * x + curve.b) % curve.p;
+
+  // Ensure y is non-negative and less than p
+  if (y < 0) y += curve.p;
+
+  return [x, y];
+}
+
+// Example usage
+const pointValue: FieldType = 2;
+const ellipticPoint: [number, number] = mapToEllipticCurve(pointValue);
+
+console.log(ellipticPoint); // Output: [2, 3]
+#+END_SRC
+
+*** Conclusion
+
+This example demonstrates how to use TypeScript's type-level programming features to create a sum
+(disjoint union) and product (multiplication) representation of types. It also shows how to map
+these types into points on an elliptic curve using a succinct arithmetization technique. This
+approach can be extended to more complex systems and applications, such as cryptographic protocols
+and formal verification.

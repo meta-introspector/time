@@ -24746,3 +24746,12 @@
 [submodule "2024/11/21/open-webui"]
 	path = 2024/11/21/open-webui
 	url = https://github.com/open-webui/open-webui
+[submodule "2024/11/21/rust-postgres"]
+	path = 2024/11/21/rust-postgres
+	url = https://github.com/sfackler/rust-postgres
+[submodule "2024/11/21/sqlx"]
+	path = 2024/11/21/sqlx
+	url = https://github.com/launchbadge/sqlx
+[submodule "2024/11/21/diesel"]
+	path = 2024/11/21/diesel
+	url = https://github.com/diesel-rs/diesel

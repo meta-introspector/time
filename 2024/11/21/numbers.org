@@ -1,0 +1,25 @@
+
+We can view each type as a number,each enum as a unique prime base, the elements
+as fitting inside the prime.
+We can also say this prime number X is larger than the elements of type T.
+
+*Using Prime Numbers for Base Encoding*:
+   Each enum (enumeration) can correspond to a unique prime number. For example, let's assume we
+   have three enums:
+   - ~Color~ with values Red, Green, Blue → primes: 2, 3, 5
+   - ~Size~ with values Small, Medium, Large → primes: 7, 11, 13
+
+   Now we can say that prime bound of color is 7.
+   So color is a tuple of length 3, a triple of primes or a product.
+   Now we can assert that 7^n*2^n*3^n*5^n > 2^n*3^n*5^n.
+   
+   I want to say that any operation on the colors is bounded by the max size.
+   This record type is basically encoded into a float or register.
+
+   
+   
+We can use one prime for fitting the number of elements and to resolve conflicts, add a second or third prime for identity, so we can create hierarchies of types by multipliying the first prime number that encode different levels of information.
+sums are addition of disjoin unions in the group.
+products are multiplication of elements in the group.
+this create a field of types.
+we can imagine a geometric curve in a succinct arithmetization that summarizes the types.
