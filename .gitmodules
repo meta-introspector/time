@@ -3075,9 +3075,9 @@
 [submodule "2024/02/20/coq-llm-rl"]
 	 path = 2024/02/20/coq-llm-rl
 	 url = https://github.com/mtarunpr/coq-llm-rl
-[submodule "2024/02/20/llm-verified-with-monte-carlo-tree-search"]
-	 path = 2024/02/20/llm-verified-with-monte-carlo-tree-search
-	 url = https://github.com/namin/llm-verified-with-monte-carlo-tree-search
+#[submodule "2024/02/20/llm-verified-with-monte-carlo-tree-search"]
+#	 path = 2024/02/20/llm-verified-with-monte-carlo-tree-search
+#	 url = https://github.com/namin/llm-verified-with-monte-carlo-tree-search
 [submodule "2024/02/20/math-comp"]
 	 path = 2024/02/20/math-comp
 	 url = https://github.com/math-comp/math-comp
@@ -24755,3 +24755,84 @@
 [submodule "2024/11/21/diesel"]
 	path = 2024/11/21/diesel
 	url = https://github.com/diesel-rs/diesel
+[submodule "2024/11/23/IRust"]
+	path = 2024/11/23/IRust
+	url = https://github.com/sigmaSd/IRust
+[submodule "2024/11/23/evcxr"]
+	path = 2024/11/23/evcxr
+	url = https://github.com/evcxr/evcxr
+[submodule "2024/11/23/cargo-eval"]
+	path = 2024/11/23/cargo-eval
+	url = https://github.com/reitermarkus/cargo-eval
+[submodule "2024/11/23/ollama-rs"]
+	path = 2024/11/23/ollama-rs
+	url = https://github.com/pepperoni21/ollama-rs
+[submodule "2024/11/23/llm-mcts"]
+	path = 2024/11/23/llm-mcts
+	url = https://github.com/1989Ryan/llm-mcts
+[submodule "2024/11/24/rust-assistant"]
+	path = 2024/11/24/rust-assistant
+	url = https://github.com/gengteng/rust-assistant.git
+[submodule "2024/11/24/gpt-macro"]
+	path = 2024/11/24/gpt-macro
+	url = https://github.com/retrage/gpt-macro.git
+[submodule "2024/11/24/contextforge"]
+	path = 2024/11/24/contextforge
+	url = https://github.com/seeschweiler/contextforge.git
+[submodule "2024/11/24/fixpls"]
+	path = 2024/11/24/fixpls
+	url = https://github.com/remorses/fixpls.git
+[submodule "2024/11/24/gpt4-python-compiler"]
+	path = 2024/11/24/gpt4-python-compiler
+	url = https://github.com/uwoneko/gpt4-python-compiler.git
+[submodule "2024/11/24/macro-gpt"]
+	path = 2024/11/24/macro-gpt
+	url = https://github.com/sam0x17/macro-gpt.git
+[submodule "2024/11/24/ChatGPT-Fortran-generator"]
+	path = 2024/11/24/ChatGPT-Fortran-generator
+	url = https://github.com/Beliavsky/ChatGPT-Fortran-generator.git
+[submodule "2024/11/24/preprocess-gpt"]
+	path = 2024/11/24/preprocess-gpt
+	url = https://github.com/queercat/preprocess-gpt.git
+[submodule "2024/11/24/CHAT-GPT-Compiler"]
+	path = 2024/11/24/CHAT-GPT-Compiler
+	url = https://github.com/sammadox/CHAT-GPT-Compiler.git
+[submodule "2024/11/24/LLMCompiler"]
+	path = 2024/11/24/LLMCompiler
+	url = https://github.com/SqueezeAILab/LLMCompiler.git
+[submodule "2024/11/24/MPLSandbox"]
+	path = 2024/11/24/MPLSandbox
+	url = https://github.com/Ablustrund/MPLSandbox
+[submodule "2024/11/24/marsha"]
+	path = 2024/11/24/marsha
+	url = https://github.com/alantech/marsha.git
+[submodule "2024/11/24/rustsn"]
+	path = 2024/11/24/rustsn
+	url = https://github.com/evgenyigumnov/rustsn.git
+[submodule "2024/11/24/LLMCompiler-Pro"]
+	path = 2024/11/24/LLMCompiler-Pro
+	url = https://github.com/naem1023/LLMCompiler-Pro.git
+[submodule "2024/11/24/LLM4CBI"]
+	path = 2024/11/24/LLM4CBI
+	url = https://github.com/haoxintu/LLM4CBI.git
+[submodule "2024/11/25/Qwen-Agent"]
+	path = 2024/11/25/Qwen-Agent
+	url = https://github.com/QwenLM/Qwen-Agent.git
+[submodule "2024/11/26/dafny"]
+	path = 2024/11/26/dafny
+	url = https://github.com/dafny-lang/dafny
+[submodule "2024/11/26/nextgraph-rs"]
+	path = 2024/11/26/nextgraph-rs
+	url = https://git.nextgraph.org/NextGraph/nextgraph-rs
+[submodule "2024/11/26/DafnyBench"]
+	path = 2024/11/26/DafnyBench
+	url = https://github.com/sun-wendy/DafnyBench.git
+[submodule "2024/11/26/time-submodule/git2-rs"]
+	path = 2024/11/26/time-submodule/git2-rs
+	url = https://github.com/rust-lang/git2-rs
+[submodule "2024/11/26/org-rust"]
+	path = 2024/11/26/org-rust
+	url = https://github.com/hydrobeam/org-rust
+[submodule "2024/11/27/orgize"]
+	path = 2024/11/27/orgize
+	url = https://github.com/PoiScript/orgize

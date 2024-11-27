@@ -1,0 +1,45 @@
+Sure! Here's a concise summary of the emoji language for Paxos:
+
+*** Emoji Language Summary for Paxos
+
+**** Nodes:
+- 🤖: Generic node
+- 🤖🦾: Leader node (leader wearing hat)
+- 🤖🤖: Follower nodes (nodes with two arms)
+
+**** Leadership Election:
+- 👑 or 🎩: Symbolize leadership election
+- ✋: Start election
+- 🗳️: Request votes
+- 👍: Grant vote
+
+**** Proposal Phase:
+- 📜: Proposal message
+- 1️⃣, 2️⃣, 3️⃣: Sequence numbers
+
+**** Acceptance Phase:
+- ✅: Accept proposal
+- ❌: Reject proposal
+
+**** Consensus:
+- 👍 when agree
+- 😐 when undecided
+
+**** Majority Voting:
+- 👥👥👥: Symbolize majority of nodes
+
+**** Conflict Resolution:
+- 🤔 or 😕: Express uncertainty/conflict
+
+**** Communication:
+- 💌 or ✉️: Send messages
+
+**** Failure Handling:
+- ⚠️ or 💥: Failures
+- 🔄: Node recovery
+
+**** Acknowledgment:
+- 👍 or 🙏: Confirm message reception
+
+This emoji language provides a visual and engaging way to communicate the concepts and processes of
+Paxos in a simplified manner.

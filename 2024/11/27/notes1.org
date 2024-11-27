@@ -1,0 +1,98 @@
+The idea you're describing is a fascinating approach to organizing and analyzing GitHub repository
+data in a high-dimensional space. Let's break down the key components of this concept:
+
+*** 1. Linear Encoding: Timeline Features
+
+- *First Observation Time*: The time when the repository, object, or commit was first observed. This
+   provides a linear timeline feature that can help in understanding the sequence and timing of
+   events.
+  
+*** 2. Extracting Recursive Features
+
+Recursive features are those that capture relationships between elements at different levels of
+complexity. For example:
+
+- *Commit Relationships*: Identifying dependencies between commits (e.g., which commit introduced
+   changes to specific files).
+- *Object Relationships*: Understanding how objects like files, directories, and branches relate to
+   each other.
+- *Repository Interactions*: Analyzing who contributed to a repository, which issues were opened or
+   closed, etc.
+
+*** 3. Building Dimensions for Each Feature
+
+Each feature extracted from the data can be used to create dimensions in a high-dimensional space:
+
+- *Commit Dimensions*: Features like commit message length, number of files changed, lines
+   added/removed.
+- *Object Dimensions*: File type, size, complexity (e.g., cyclomatic complexity).
+- *Repository Dimensions*: Number of contributors, total commits, branches, issues.
+
+*** 4. Pushing and Pulling Nodes in the Hypersphere
+
+In a high-dimensional space:
+
+- *Pushing*: Adding new data points or features that can influence the position of existing nodes.
+- *Pulling*: Adjusting positions based on the constraints imposed by new data or rules.
+
+This dynamic process allows the representation to evolve over time as more data is integrated,
+ensuring that the hypersphere remains relevant and accurate.
+
+*** Implementation Considerations
+
+1. *Dimensionality Reduction*:
+   - Techniques like PCA (Principal Component Analysis) can be used to reduce the high-dimensional
+     space into a lower dimension while retaining most of the variance.
+   
+2. *Visualization*:
+   - High-dimensional data can be visualized using techniques such as t-SNE (t-distributed
+     Stochastic Neighbor Embedding) or UMAP (Uniform Manifold Approximation and Projection), which
+     map points from a high-dimensional space to a 2D or 3D space for easier visualization.
+
+3. *Clustering*:
+   - Clustering algorithms like K-means, DBSCAN, or hierarchical clustering can be used to group
+     similar repositories or objects together based on their features.
+   
+4. *Graph Representation*:
+   - Representing the data as a graph where nodes are repositories/objects/commits and edges
+     represent relationships between them can help in understanding complex interactions.
+
+5. *Machine Learning Models*:
+   - Using machine learning models to predict future trends, identify anomalies, or classify
+     repositories based on their features.
+
+*** Example Workflow
+
+1. *Data Extraction*:
+   - Extract commit logs, file contents, repository metadata (e.g., contributors, issues).
+   
+2. *Feature Extraction*:
+   - Compute features like commit message length, number of files changed, lines added/removed.
+   - Identify relationships between commits and objects.
+   
+3. *Dimensionality Reduction*:
+   - Reduce the high-dimensional space using PCA or t-SNE for visualization.
+   
+4. *Clustering*:
+   - Group repositories based on their features (e.g., similarity in commit patterns, file types).
+   
+5. *Visualization*:
+   - Use tools like Plotly, Seaborn, or specialized graph visualization software to visualize the
+     data in a 2D/3D space.
+
+6. *Dynamic Analysis*:
+   - Continuously update the model as new data is added and analyze how it affects the positions of
+     existing nodes.
+
+By following this approach, you can create a dynamic, high-dimensional representation of GitHub
+repository data that evolves over time as more information becomes available. This can provide
+valuable insights into the structure, evolution, and relationships within the repository ecosystem.
+
+Now we can extract all the keywords and then map them as new features,
+we can apply morphisms to them as new new features,
+each recursive step to split up the repo into smaller parts down to the bits
+will be seen as a hyperplane of sorts.
+
+Finally we can show that some objects dominate the form of others, data structures dominate the data.
+headers the bodies. this pattern we can show as being extracted. some repo dominates the others.
+we create a nash equilibrium.

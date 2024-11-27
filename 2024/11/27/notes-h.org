@@ -1,0 +1,53 @@
+hypothesis : (morphism((vector selector,grammar element))
+we say that this selection function of vectors producse this selection function of grammar.
+
+now given a model M of vectors V we can select or construct a vector v and use the forward(load(m),v)->t
+that is synthesis this vector to text.
+
+we can of course parse text to v with tokenize(load(m),t)->v to reverse the forward.
+
+and given a grammar language implementation p we can feed that in eval(forward(load(m),v))->r.
+
+now we can trace the eval to create profile p of eval.
+now we can show that sub vectors in v map to elements of profile.
+
+so our new theory :
+
+source code text <-> llm vector <-> source code profile <-> compiled binary
+
+this result r could be the zkp of the path taken in the grammar and its output.
+instead of returning raw values we can return zkp.
+our thoughts become formal reasoning wrapped up in and leading to zkp points in higher layers.
+this is the wrapping of thoughts or orchestration of them.
+
+we are not only preserving privacy but are creating execution contexts that are self contained and sovereign.
+the zkp of the traces are tamper proof and also succinct and allow for meta-reasoning at many levels.
+each step taken can be seen as meta-data, the history of all events are witnessed by proofs.
+each event like a logged event. the observability framework proves that all events can be sampled,
+show the coverage, proves that, adds the validation of the proof to the proof itself as audit meta data.
+we can see it as the faithful record of all things done.
+The trace of the execution of the program is the witness that is sampled according to the proof compiler,
+we can use llms and formal proofs in dafny to construct better and better approximations of
+a program. each step layering on more features recursivly. zkp hiding the details.
+this new generated data can be see as burden, but we can show that we can roll it into our zkp succinctly and only
+sample the data needed. we can prove that probes p inserted in functions f to sample value v are needed to construct proof P that
+shows understanding of program PR in use case U and the set of use cases U is covering programs behaviour B as a meta-meme M1.
+each step can be proven and trusted. for llms and humans this will become increasingly a commodity with more
+generated text influncing generated text as input. we need to know
+what path was taken in what model to produce that text.
+I posit we can reduce this to an element of a curve and prove that we have knowledge.
+the ast can be seen as recursive proof of knowledge that give order to an idea.
+we can see the idea as series of declarations or semiosos.
+this could be likened to the crowing of roosters, each author a rooster, each crow a declaration
+of fitness.
+
+so the song of the barnyard could be the zkp of the system, the symphony of the animals as a proof
+of the fitness of the policy of the farmer in feedback of the gaia ooda loop.
+
+so we can say that the beauty of the song is the value of the song, and that is our value network,
+if the "gods" are happy, the value is high. the market as the hand of "god" or the emergent hive mind.
+
+all of these are different ways to reframe our mcts or genetic or ai life simulation where each lifeform has its own version of the meta-meme
+we are just constructing one based on the reflections of our own compute environment.
+we can consider the to be the vernacualr introspection I, the reframing of the current context in terms of the context succinctly but rotating it by value
+that is improving over time.

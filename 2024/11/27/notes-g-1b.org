@@ -1,0 +1,111 @@
+Certainly, Mike! I'd be happy to assist you in proving your theory. Let's break down the steps and
+proceed systematically:
+
+*** Step 1: Vectorization of Text
+We'll use ~pgvector~ and Rust to vectorize a large body of text. This includes your notes and any
+other relevant source code.
+
+*Steps:*
+1. *Install Dependencies*: Ensure you have ~pgvector~ and Rust installed.
+2. *Prepare the Data*: Collect all your text data, including notes and source code.
+3. *Vectorization*: Use the ~pgvector~ library to convert the text into vectors.
+
+Here’s a basic example of how you might set up vectorization in Rust:
+#+BEGIN_SRC rust
+// Import necessary libraries
+use pgvector::{Config, Vector};
+use std::fs;
+
+fn main() {
+    // Load your text data
+    let text = fs::read_to_string("path/to/your/textfile.txt").expect("Unable to read file");
+
+    // Configure the vectorization model
+    let config = Config::default().model_name("all-MiniLM-L6-v2");
+
+    // Convert text to vector
+    let vector = Vector::from_text(&config, &text).expect("Failed to vectorize text");
+
+    // Print the vector
+    println!("{:?}", vector);
+}
+#+END_SRC
+
+*** Step 2: Finding Common Vectors
+Once you have vectors for your text data, we need to find common vectors and slice them out.
+
+*Steps:*
+1. *Compare Vectors*: Implement a function to compare vectors and find similarities.
+2. *Slice Out Common Elements*: Extract the largest common denominators first.
+
+Here’s a simplified example of finding similar vectors:
+#+BEGIN_SRC rust
+fn find_similar_vectors(vectors: &[Vector], threshold: f32) -> Vec<(usize, usize)> {
+    let mut similar_pairs = Vec::new();
+    for (i, v1) in vectors.iter().enumerate() {
+        for (j, v2) in vectors.iter().enumerate().skip(i + 1) {
+            if v1.cosine_similarity(v2) > threshold {
+                similar_pairs.push((i, j));
+            }
+        }
+    }
+    similar_pairs
+}
+#+END_SRC
+
+*** Step 3: Constructing the Tree of Thought
+Now that we have identified common vectors, we can construct a tree that removes duplication.
+
+*Steps:*
+1. *Tree Construction*: Implement a function to build a tree structure based on the similarity
+matrix.
+2. *Prune Common Elements*: Remove nodes with high similarity and retain only unique elements.
+
+Here’s a basic example of building a tree:
+#+BEGIN_SRC rust
+use std::collections::HashMap;
+
+fn build_tree(similar_pairs: Vec<(usize, usize)>) -> HashMap<usize, Vec<usize>> {
+    let mut graph = HashMap::new();
+    for (i, j) in similar_pairs {
+        if !graph.contains_key(&i) {
+            graph.insert(i, Vec::new());
+        }
+        if !graph.contains_key(&j) {
+            graph.insert(j, Vec::new());
+        }
+        graph.entry(i).or_insert_with(Vec::new()).push(j);
+    }
+    graph
+}
+#+END_SRC
+
+*** Step 4: Compressing Information and Converting Back to Text
+Finally, we can compress the information stored in the tree and convert it back into text.
+
+*Steps:*
+1. *Compression*: Use a compression algorithm to store the tree efficiently.
+2. *Decompression*: Convert the compressed data back into a readable format.
+
+Here’s a basic example of using compression:
+#+BEGIN_SRC rust
+use std::fs;
+use flate2::{write::GzEncoder, Compression};
+
+fn compress_data(data: &[u8]) -> Vec<u8> {
+    let mut encoder = GzEncoder::new(Vec::new(), Compression::default());
+    encoder.write_all(data).unwrap();
+    encoder.finish().unwrap()
+}
+
+fn decompress_data(compressed_data: &[u8]) -> Vec<u8> {
+    flate2::read::GzDecoder::new(compressed_data).read_to_end(&mut Vec::new()).unwrap()
+}
+#+END_SRC
+
+*** Conclusion
+This is a high-level overview of the steps involved in proving your theory. Each step can be
+expanded further based on specific requirements and available tools.
+
+Please let me know if you need more detailed implementation details or if there are any other
+aspects you'd like to explore!

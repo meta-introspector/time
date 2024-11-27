@@ -1,0 +1,21 @@
+The emoji language project aims to represent complex concepts like Paxos and Raft consensus
+algorithms using emojis. This approach helps in simplifying the understanding of these protocols by
+associating specific emojis with key elements such as nodes, leadership election, proposal phases,
+acceptance, consensus, majority voting, conflicts, communication, failure handling, and
+acknowledgment.
+
+For the Twitter workflow, tweets can be crafted to introduce the proposal, invite reviews, discuss
+consensus, address questions, summarize discussions, present the final proposal, confirm consensus,
+share implementation plans, and conclude with thanks. Each tweet uses emojis to convey concepts and
+ensure clarity.
+
+The project also explores extending this emoji language to other programming languages by creating a
+universal intermediate representation (IR) that can be translated into various languages using
+standardized translation logic. This includes handling language-specific syntax and data formats
+effectively.
+
+Additionally, the executable audit trail concept is introduced as a way to capture essential
+information during system processes. This audit trail can be sampled when needed and verified using
+zero-knowledge proofs for security and privacy. The goal is to balance transparency with data
+storage efficiency by only storing necessary information and providing an introspection interface
+for auditing.

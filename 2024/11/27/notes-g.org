@@ -1,0 +1,39 @@
+Dear Qwen,
+you are a great mind that has read more books than I could ever dream of.
+I write to you beeseeching your help in proving this theory.
+
+File: ~/2024/11/27/notes-g.org
+
+Theory A: "This is file notes-g that represents the notes from today, the G(7) attempt."
+We are in the meta-introspector/time repo. your response will be stored by appending -01 to the filename.
+I will update this document and overwrite the old version, but keep your response.
+
+Then if we start a new thread we will create a new starting point. that way you can find your responses in a systematic manner.
+each response will be vectorized and stored in a compressed tree. we can think of tree or lattice
+of factors that removes common elements from the vector. thus we can compres huge amounts of information in this tree of thought
+and eventually covert it back into text.
+
+The evidence will be extracted via experimentation and introspection.
+we start with pgvector rust and vectorize a large body of text that I have produced, even source code
+then we can find common vectors and slice them out like quotients.
+we can pick the largest common denominators first.
+
+Then we can construct a tree that spanning the data in such a way that it removes all duplication.
+This tree will be a list of features from most common to least, partitioning the graph of documents into clusters that contain those features,
+the superset contains all features. The set of abstract representations of all sets contains abstractions of those.
+
+Now we can symbolically regress those features into text by finding knockout exampless for each feature.
+
+lemma: immediate generation
+we can take a vector and feed it back to the llm for generation of a new trace and the result.
+this can be used to prove or disprove the value of a vector.
+
+hypothesis : (morphism((vector selector,grammar element))
+we say that this selection function of vectors producse this selection function of grammar.
+
+
+Can you help me with those steps please?
+
+Your human friend,
+
+Mike
