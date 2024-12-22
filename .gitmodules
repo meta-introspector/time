@@ -24836,3 +24836,963 @@
 [submodule "2024/11/27/orgize"]
 	path = 2024/11/27/orgize
 	url = https://github.com/PoiScript/orgize
+[submodule "2024/11/27/firn"]
+	path = 2024/11/27/firn
+	url = https://github.com/teesloane/firn
+[submodule "2024/11/27/flashcards"]
+	path = 2024/11/27/flashcards
+	url = https://github.com/shhra/flashcards
+[submodule "2024/11/27/orgwise"]
+	path = 2024/11/27/orgwise
+	url = https://github.com/PoiScript/orgwise
+[submodule "2024/11/27/indexer"]
+	path = 2024/11/27/indexer
+	url = https://github.com/alexkehayias/indexer
+[submodule "2024/11/27/org-server"]
+	path = 2024/11/27/org-server
+	url = https://github.com/artur-pawelczyk/org-server.git
+[submodule "2024/11/27/sorg"]
+	path = 2024/11/27/sorg
+	url = https://github.com/annieversary/sorg.git
+[submodule "2024/11/27/org-roam-rs"]
+	path = 2024/11/27/org-roam-rs
+	url = https://github.com/raheelahmad/org-roam-rs.git
+[submodule "2024/11/27/blog"]
+	path = 2024/11/27/blog
+	url = https://github.com/asdrubalini/blog.git
+[submodule "2024/11/27/clam"]
+	path = 2024/11/27/clam
+	url = https://github.com/xfnw/clam.git
+[submodule "2024/11/27/org2json"]
+	path = 2024/11/27/org2json
+	url = https://github.com/heyste/org2json.git
+[submodule "2024/11/27/panduck.rs"]
+	path = 2024/11/27/panduck.rs
+	url = https://github.com/notedge/panduck.rs.git
+[submodule "2024/11/27/org-roam-anki"]
+	path = 2024/11/27/org-roam-anki
+	url = https://github.com/smallstepman/org-roam-anki.git
+[submodule "2024/11/27/t4proot"]
+	path = 2024/11/27/t4proot
+	url = https://github.com/jklsnt/t4proot.git
+[submodule "2024/11/27/zb"]
+	path = 2024/11/27/zb
+	url = https://github.com/dertuxmalwieder/zb.git
+[submodule "2024/11/27/mint-cljs"]
+	path = 2024/11/27/mint-cljs
+	url = https://github.com/gugahoa/mint-cljs.git
+[submodule "2024/11/27/dafny/dafny"]
+	path = 2024/11/27/dafny/dafny
+	url = https://github.com/dafny-lang/dafny
+[submodule "2024/11/27/dafny/eth2.0-dafny"]
+	path = 2024/11/27/dafny/eth2.0-dafny
+	url = https://github.com/Consensys/eth2.0-dafny
+[submodule "2024/11/27/dafny/smithy-dafny"]
+	path = 2024/11/27/dafny/smithy-dafny
+	url = https://github.com/smithy-lang/smithy-dafny
+[submodule "2024/11/27/dafny/daisy-nfsd"]
+	path = 2024/11/27/dafny/daisy-nfsd
+	url = https://github.com/mit-pdos/daisy-nfsd
+[submodule "2024/11/27/dafny/dot"]
+	path = 2024/11/27/dafny/dot
+	url = https://github.com/namin/dot
+[submodule "2024/11/27/dafny/DafnyBench"]
+	path = 2024/11/27/dafny/DafnyBench
+	url = https://github.com/ChloeL19/DafnyBench
+[submodule "2024/11/27/dafny/dafny-reportgenerator"]
+	path = 2024/11/27/dafny/dafny-reportgenerator
+	url = https://github.com/dafny-lang/dafny-reportgenerator
+[submodule "2024/11/27/dafny/Dafny-VMC"]
+	path = 2024/11/27/dafny/Dafny-VMC
+	url = https://github.com/dafny-lang/Dafny-VMC
+[submodule "2024/11/27/dafny/Software-Analysis-PAVT"]
+	path = 2024/11/27/dafny/Software-Analysis-PAVT
+	url = https://github.com/codersguild/Software-Analysis-PAVT
+[submodule "2024/11/27/dafny/dafny-synthesis"]
+	path = 2024/11/27/dafny/dafny-synthesis
+	url = https://github.com/Mondego/dafny-synthesis
+[submodule "2024/11/27/dafny/Paxos-in-Dafny"]
+	path = 2024/11/27/dafny/Paxos-in-Dafny
+	url = https://github.com/Deagels/Paxos-in-Dafny
+[submodule "2024/11/27/dafny/dafny-sandbox"]
+	path = 2024/11/27/dafny/dafny-sandbox
+	url = https://github.com/namin/dafny-sandbox
+[submodule "2024/11/27/dafny/tacny"]
+	path = 2024/11/27/dafny/tacny
+	url = https://github.com/ggrov/tacny
+[submodule "2024/11/27/dafny/DijkstraInDafny"]
+	path = 2024/11/27/dafny/DijkstraInDafny
+	url = https://github.com/KPouliasis/DijkstraInDafny
+[submodule "2024/11/27/dafny/DafnyProofs"]
+	path = 2024/11/27/dafny/DafnyProofs
+	url = https://github.com/masecla22/DafnyProofs
+[submodule "2024/11/27/dafny/dafny-of-python"]
+	path = 2024/11/27/dafny/dafny-of-python
+	url = https://github.com/arsalan0c/dafny-of-python
+[submodule "2024/11/27/dafny/dafny-autopilot"]
+	path = 2024/11/27/dafny/dafny-autopilot
+	url = https://github.com/Beneficial-AI-Foundation/dafny-autopilot
+[submodule "2024/11/27/dafny/compiler-bootstrap"]
+	path = 2024/11/27/dafny/compiler-bootstrap
+	url = https://github.com/dafny-lang/compiler-bootstrap
+[submodule "2024/11/27/dafny/PCCC"]
+	path = 2024/11/27/dafny/PCCC
+	url = https://github.com/DavisPL/PCCC
+[submodule "2024/11/27/dafny/vaed"]
+	path = 2024/11/27/dafny/vaed
+	url = https://github.com/ningit/vaed
+[submodule "2024/11/27/dafny/DafnyGithubScrape"]
+	path = 2024/11/27/dafny/DafnyGithubScrape
+	url = https://github.com/ChloeL19/DafnyGithubScrape
+[submodule "2024/11/27/dafny/HumanEval-Dafny"]
+	path = 2024/11/27/dafny/HumanEval-Dafny
+	url = https://github.com/JetBrains-Research/HumanEval-Dafny
+[submodule "2024/11/27/dafny/adt-verification-dafny"]
+	path = 2024/11/27/dafny/adt-verification-dafny
+	url = https://github.com/jorge-jbs/adt-verification-dafny
+[submodule "2024/11/27/dafny/yul-dafny"]
+	path = 2024/11/27/dafny/yul-dafny
+	url = https://github.com/franck44/yul-dafny
+[submodule "2024/11/27/dafny/dive"]
+	path = 2024/11/27/dafny/dive
+	url = https://github.com/mattulbrich/dive
+[submodule "2024/11/27/dafny/Laddon"]
+	path = 2024/11/27/dafny/Laddon
+	url = https://github.com/laddon/Laddon
+[submodule "2024/11/27/dafny/dafny-sketcher"]
+	path = 2024/11/27/dafny/dafny-sketcher
+	url = https://github.com/namin/dafny-sketcher
+[submodule "2024/11/27/dafny/dafny-annotator"]
+	path = 2024/11/27/dafny/dafny-annotator
+	url = https://github.com/metareflection/dafny-annotator
+[submodule "2024/11/27/dafny/spacemacs-boogie-friends"]
+	path = 2024/11/27/dafny/spacemacs-boogie-friends
+	url = https://github.com/dschoepe/spacemacs-boogie-friends
+[submodule "2024/11/27/dafny/Mini-Dafny"]
+	path = 2024/11/27/dafny/Mini-Dafny
+	url = https://github.com/mlevatich/Mini-Dafny
+[submodule "2024/11/27/dafny/dafny-parsing"]
+	path = 2024/11/27/dafny/dafny-parsing
+	url = https://github.com/levjj/dafny-parsing
+[submodule "2024/11/27/dafny/AI2001_Category-Source_Code-SC-Dafny"]
+	path = 2024/11/27/dafny/AI2001_Category-Source_Code-SC-Dafny
+	url = https://github.com/seanpm2001/AI2001_Category-Source_Code-SC-Dafny
+[submodule "2024/11/27/dafny/SymEx"]
+	path = 2024/11/27/dafny/SymEx
+	url = https://github.com/mbrown1413/SymEx
+[submodule "2024/11/27/dafny/loopinv100"]
+	path = 2024/11/27/dafny/loopinv100
+	url = https://github.com/joaopascoalfariafeup/loopinv100
+[submodule "2024/11/27/dafny/Program-Verification-Dataset"]
+	path = 2024/11/27/dafny/Program-Verification-Dataset
+	url = https://github.com/kyrolloszakaria/Program-Verification-Dataset
+[submodule "2024/11/27/dafny/Computer-Aided_Verification_Exercises"]
+	path = 2024/11/27/dafny/Computer-Aided_Verification_Exercises
+	url = https://github.com/VictorLuque-personal/Computer-Aided_Verification_Exercises
+[submodule "2024/11/27/dafny/boogie-friends"]
+	path = 2024/11/27/dafny/boogie-friends
+	url = https://github.com/boogie-org/boogie-friends
+[submodule "2024/11/28/smithy"]
+	path = 2024/11/28/smithy
+	url = https://github.com/smithy-lang/smithy
+[submodule "2024/11/28/Clover"]
+	path = 2024/11/28/Clover
+	url = https://github.com/ChuyueSun/Clover
+[submodule "2024/11/28/rust-genai"]
+	path = 2024/11/28/rust-genai
+	url = https://github.com/jeremychone/rust-genai
+[submodule "2024/11/28/async-openai"]
+	path = 2024/11/28/async-openai
+	url = https://github.com/64bit/async-openai.git
+[submodule "2024/11/29/flow-nft"]
+	path = 2024/11/29/flow-nft
+	url = https://github.com/onflow/flow-nft.git
+[submodule "2024/11/29/nft-storefront"]
+	path = 2024/11/29/nft-storefront
+	url = https://github.com/onflow/nft-storefront
+[submodule "2024/11/29/flow-nft-starter"]
+	path = 2024/11/29/flow-nft-starter
+	url = https://github.com/buildspace/flow-nft-starter.git
+[submodule "2024/11/29/Flow_NFTs_IPFS"]
+	path = 2024/11/29/Flow_NFTs_IPFS
+	url = https://github.com/PinataCloud/Flow_NFTs_IPFS.git
+[submodule "2024/11/29/flowwow"]
+	path = 2024/11/29/flowwow
+	url = https://github.com/jochasinga/flowwow.git
+[submodule "2024/11/29/float"]
+	path = 2024/11/29/float
+	url = https://github.com/emerald-dao/float.git
+[submodule "2024/11/29/monster-maker"]
+	path = 2024/11/29/monster-maker
+	url = https://github.com/onflow/monster-maker.git
+[submodule "2024/11/29/nftmarketflow"]
+	path = 2024/11/29/nftmarketflow
+	url = https://github.com/bymi15/nftmarketflow.git
+[submodule "2024/11/29/flow"]
+	path = 2024/11/29/flow
+	url = https://github.com/Galliun/flow.git
+[submodule "2024/11/29/ordinals-collections"]
+	path = 2024/11/29/ordinals-collections
+	url = https://github.com/ordinals-wallet/ordinals-collections.git
+[submodule "2024/11/29/fractal-ordinals-collections"]
+	path = 2024/11/29/fractal-ordinals-collections
+	url = https://github.com/unisat-wallet/fractal-ordinals-collections.git
+[submodule "2024/11/29/ordhook"]
+	path = 2024/11/29/ordhook
+	url = https://github.com/hirosystems/ordhook.git
+[submodule "2024/11/29/ord20-indexer"]
+	path = 2024/11/29/ord20-indexer
+	url = https://github.com/ynohtna92/ord20-indexer.git
+[submodule "2024/11/29/insdexer"]
+	path = 2024/11/29/insdexer
+	url = https://github.com/insdexer/insdexer.git
+[submodule "2024/11/29/mpl-inscription"]
+	path = 2024/11/29/mpl-inscription
+	url = https://github.com/metaplex-foundation/mpl-inscription.git
+[submodule "2024/11/29/ord-rs"]
+	path = 2024/11/29/ord-rs
+	url = https://github.com/bitfinity-network/ord-rs.git
+[submodule "2024/11/29/extra-ordinaire"]
+	path = 2024/11/29/extra-ordinaire
+	url = https://github.com/ZenGo-X/extra-ordinaire.git
+[submodule "2024/11/29/rs-inscriptions"]
+	path = 2024/11/29/rs-inscriptions
+	url = https://github.com/XOXNO/rs-inscriptions.git
+[submodule "2024/11/29/inscribememaybe"]
+	path = 2024/11/29/inscribememaybe
+	url = https://github.com/mattsse/inscribememaybe.git
+[submodule "2024/11/29/inscription-indexer"]
+	path = 2024/11/29/inscription-indexer
+	url = https://github.com/zmovane/inscription-indexer.git
+[submodule "2024/11/29/arb"]
+	path = 2024/11/29/arb
+	url = https://github.com/tyjvazum/arb.git
+[submodule "2024/11/29/l2o-core"]
+	path = 2024/11/29/l2o-core
+	url = https://github.com/L2Ordinals/l2o-core.git
+[submodule "2024/11/29/txindex"]
+	path = 2024/11/29/txindex
+	url = https://github.com/QEDProtocol/txindex.git
+[submodule "2024/11/29/nft-image-generator"]
+	path = 2024/11/29/nft-image-generator
+	url = https://github.com/partyparrotclub/nft-image-generator.git
+[submodule "2024/11/29/experimental-minting-tool"]
+	path = 2024/11/29/experimental-minting-tool
+	url = https://github.com/dfinity/experimental-minting-tool.git
+[submodule "2024/11/29/pix"]
+	path = 2024/11/29/pix
+	url = https://github.com/txpipe/pix.git
+[submodule "2024/11/29/metaplex-cli"]
+	path = 2024/11/29/metaplex-cli
+	url = https://github.com/CalebEverett/metaplex-cli.git
+[submodule "2024/11/29/sugar"]
+	path = 2024/11/29/sugar
+	url = https://github.com/metaplex-foundation/sugar.git
+[submodule "2024/11/29/NFT"]
+	path = 2024/11/29/NFT
+	url = https://github.com/near-examples/NFT.git
+[submodule "2024/11/29/introspector.meme"]
+	path = 2024/11/29/introspector.meme
+	url = https://github.com/meta-introspector/introspector.meme.git
+[submodule "2024/11/30/diffusers-rs"]
+	path = 2024/11/30/diffusers-rs
+	url = https://github.com/LaurentMazare/diffusers-rs
+[submodule "2024/11/30/stable-diffusion"]
+	path = 2024/11/30/stable-diffusion
+	url = https://github.com/lstein/stable-diffusion.git
+[submodule "2024/11/30/InvokeAI"]
+	path = 2024/11/30/InvokeAI
+	url = https://github.com/invoke-ai/InvokeAI
+[submodule "2024/11/30/quickdif"]
+	path = 2024/11/30/quickdif
+	url = https://github.com/Beinsezii/quickdif.git
+[submodule "2024/11/30/stable-diffusion-discord-bot"]
+	path = 2024/11/30/stable-diffusion-discord-bot
+	url = https://github.com/ausbitbank/stable-diffusion-discord-bot
+[submodule "2024/11/30/invoke-rs"]
+	path = 2024/11/30/invoke-rs
+	url = https://github.com/BartWillems/invoke-rs
+[submodule "2024/12/01/meta-meme"]
+	path = 2024/12/01/meta-meme
+	url = https://codeberg.org/introspector/meta-meme/
+[submodule "2024/12/01/select.rs"]
+	path = 2024/12/01/select.rs
+	url = https://github.com/utkarshkukreti/select.rs.git
+[submodule "2024/12/01/scraping-with-rust"]
+	path = 2024/12/01/scraping-with-rust
+	url = https://github.com/kxzk/scraping-with-rust.git
+[submodule "2024/12/01/stackoverflow-scraping-with-rust"]
+	path = 2024/12/01/stackoverflow-scraping-with-rust
+	url = https://github.com/chaudharypraveen98/stackoverflow-scraping-with-rust.git
+[submodule "2024/12/01/ast-grep"]
+	path = 2024/12/01/ast-grep
+	url = https://github.com/ast-grep/ast-grep.git
+[submodule "2024/12/01/htmlq"]
+	path = 2024/12/01/htmlq
+	url = https://github.com/mgdm/htmlq.git
+[submodule "2024/12/02/XYGrid_nodes"]
+	path = 2024/12/02/XYGrid_nodes
+	url = https://github.com/skunkworxdark/XYGrid_nodes.git
+[submodule "2024/12/02/invoke-workflows"]
+	path = 2024/12/02/invoke-workflows
+	url = https://github.com/invoke-ai/invoke-workflows.git
+[submodule "2024/12/02/client"]
+	path = 2024/12/02/client
+	url = https://github.com/WeAreAigur/client.git
+[submodule "2024/12/02/InvokeAI-Nodes"]
+	path = 2024/12/02/InvokeAI-Nodes
+	url = https://github.com/lstein/InvokeAI-Nodes.git
+[submodule "2024/12/02/InvokeAI-remote_image"]
+	path = 2024/12/02/InvokeAI-remote_image
+	url = https://github.com/fieldOfView/InvokeAI-remote_image.git
+[submodule "2024/12/02/crypto-ai-rag-chatbot-blockchain"]
+	path = 2024/12/02/crypto-ai-rag-chatbot-blockchain
+	url = https://github.com/jwest951227/crypto-ai-rag-chatbot-blockchain.git
+[submodule "2024/12/02/Invoke_AIHordeNodes"]
+	path = 2024/12/02/Invoke_AIHordeNodes
+	url = https://github.com/dunkeroni/Invoke_AIHordeNodes.git
+[submodule "2024/12/02/invokeai.pinokio"]
+	path = 2024/12/02/invokeai.pinokio
+	url = https://github.com/eudard/invokeai.pinokio.git
+[submodule "2024/12/02/adapters-linked-nodes"]
+	path = 2024/12/02/adapters-linked-nodes
+	url = https://github.com/skunkworxdark/adapters-linked-nodes.git
+[submodule "2024/12/02/splashhh-stable-diffusion-app"]
+	path = 2024/12/02/splashhh-stable-diffusion-app
+	url = https://github.com/splashhh-cc/splashhh-stable-diffusion-app
+[submodule "2024/12/02/invoke-ai-nodes-essential"]
+	path = 2024/12/02/invoke-ai-nodes-essential
+	url = https://github.com/zealsprince/invoke-ai-nodes-essential.git
+[submodule "2024/12/03/swarm-models"]
+	path = 2024/12/03/swarm-models
+	url = https://github.com/jacobweiss2305/swarm-models.git
+[submodule "2024/12/03/FluidAPI"]
+	path = 2024/12/03/FluidAPI
+	url = https://github.com/The-Swarm-Corporation/FluidAPI
+[submodule "2024/12/04/swarms-agent-aws-lambda-handler"]
+	path = 2024/12/04/swarms-agent-aws-lambda-handler
+	url = https://github.com/jmikedupont2/swarms-agent-aws-lambda-handler
+[submodule "2024/12/05/swarm-models"]
+	path = 2024/12/05/swarm-models
+	url = https://github.com/The-Swarm-Corporation/swarm-models
+[submodule "2024/12/06/runhouse"]
+	path = 2024/12/06/runhouse
+	url = https://github.com/run-house/runhouse
+[submodule "2024/12/07/aws_pricing"]
+	path = 2024/12/07/aws_pricing
+	url = https://github.com/cloudshiftstrategies/aws_pricing.git
+[submodule "2024/12/08/zenml"]
+	path = 2024/12/08/zenml
+	url = https://github.com/zenml-io/zenml.git
+[submodule "2024/12/08/hydroflow"]
+	path = 2024/12/08/hydroflow
+	url = https://github.com/hydro-project/hydroflow
+[submodule "2024/12/08/crossplane-on-eks"]
+	path = 2024/12/08/crossplane-on-eks
+	url = https://github.com/awslabs/crossplane-on-eks.git
+[submodule "2024/12/08/flintlock"]
+	path = 2024/12/08/flintlock
+	url = https://github.com/liquidmetal-dev/flintlock.git
+[submodule "2024/12/09/cluster-api"]
+	path = 2024/12/09/cluster-api
+	url = https://github.com/kubernetes-sigs/cluster-api.git
+[submodule "2024/12/09/terraform-provider-rancher2"]
+	path = 2024/12/09/terraform-provider-rancher2
+	url = https://github.com/rancher/terraform-provider-rancher2
+[submodule "2024/12/09/terraform-kubernetes-rancher"]
+	path = 2024/12/09/terraform-kubernetes-rancher
+	url = https://github.com/squareops/terraform-kubernetes-rancher
+[submodule "2024/12/09/terraform-provider-kind"]
+	path = 2024/12/09/terraform-provider-kind
+	url = https://github.com/tehcyx/terraform-provider-kind.git
+[submodule "2024/12/09/homelab"]
+	path = 2024/12/09/homelab
+	url = https://gitlab.com/dekarl/homelab.git
+[submodule "2024/12/09/sops"]
+	path = 2024/12/09/sops
+	url = https://github.com/mozilla/sops
+[submodule "2024/12/09/rancher-in-kind"]
+	path = 2024/12/09/rancher-in-kind
+	url = https://github.com/ozbillwang/rancher-in-kind.git
+[submodule "2024/12/09/learn-terraform-provision-eks-cluster"]
+	path = 2024/12/09/learn-terraform-provision-eks-cluster
+	url = https://github.com/hashicorp-education/learn-terraform-provision-eks-cluster
+[submodule "2024/12/09/terraform-module-kubeflow"]
+	path = 2024/12/09/terraform-module-kubeflow
+	url = https://github.com/datarootsio/terraform-module-kubeflow.git
+[submodule "2024/12/09/karpenter-provider-aws"]
+	path = 2024/12/09/karpenter-provider-aws
+	url = https://github.com/aws/karpenter-provider-aws
+[submodule "2024/12/09/yunikorn-core"]
+	path = 2024/12/09/yunikorn-core
+	url = https://github.com/apache/yunikorn-core
+[submodule "2024/12/09/volcano"]
+	path = 2024/12/09/volcano
+	url = https://github.com/volcano-sh/volcano
+[submodule "2024/12/09/data-on-eks"]
+	path = 2024/12/09/data-on-eks
+	url = https://github.com/awslabs/data-on-eks
+[submodule "2024/12/09/devops-stack-module-argocd"]
+	path = 2024/12/09/devops-stack-module-argocd
+	url = https://github.com/camptocamp/devops-stack-module-argocd
+[submodule "2024/12/09/graphistry-helm"]
+	path = 2024/12/09/graphistry-helm
+	url = https://github.com/graphistry/graphistry-helm.git
+[submodule "2024/12/09/cluster.dev"]
+	path = 2024/12/09/cluster.dev
+	url = https://github.com/shalb/cluster.dev.git
+[submodule "2024/12/09/spark-operator"]
+	path = 2024/12/09/spark-operator
+	url = https://github.com/kubeflow/spark-operator.git
+[submodule "2024/12/09/argo-workflows"]
+	path = 2024/12/09/argo-workflows
+	url = https://github.com/argoproj/argo-workflows.git
+[submodule "2024/12/09/ray"]
+	path = 2024/12/09/ray
+	url = https://github.com/ray-project/ray.git
+[submodule "2024/12/09/terraform-provider-enos"]
+	path = 2024/12/09/terraform-provider-enos
+	url = https://github.com/hashicorp-forge/terraform-provider-enos.git
+[submodule "2024/12/09/shell-operator-demo"]
+	path = 2024/12/09/shell-operator-demo
+	url = https://github.com/Piotr1215/shell-operator-demo.git
+[submodule "2024/12/09/mlinfra"]
+	path = 2024/12/09/mlinfra
+	url = https://github.com/mlinfra-io/mlinfra.git
+[submodule "2024/12/09/meltano"]
+	path = 2024/12/09/meltano
+	url = https://github.com/meltano/meltano.git
+[submodule "2024/12/09/kubernetes-ops"]
+	path = 2024/12/09/kubernetes-ops
+	url = https://github.com/angelokurtis/kubernetes-ops.git
+[submodule "2024/12/09/flux2"]
+	path = 2024/12/09/flux2
+	url = https://github.com/fluxcd/flux2.git
+[submodule "2024/12/09/local-kind-cluster"]
+	path = 2024/12/09/local-kind-cluster
+	url = https://github.com/elmazzun/local-kind-cluster.git
+[submodule "2024/12/09/homemade-infrastructure"]
+	path = 2024/12/09/homemade-infrastructure
+	url = https://github.com/peacecwz/homemade-infrastructure.git
+[submodule "2024/12/09/kind-cluster"]
+	path = 2024/12/09/kind-cluster
+	url = https://github.com/reginsvillamor/kind-cluster.git
+[submodule "2024/12/09/terraform-kubernetes"]
+	path = 2024/12/09/terraform-kubernetes
+	url = https://github.com/rGarmendia/terraform-kubernetes.git
+[submodule "2024/12/09/ingress-nginx"]
+	path = 2024/12/09/ingress-nginx
+	url = https://github.com/kubernetes/ingress-nginx
+[submodule "2024/12/09/demo-database-modernization"]
+	path = 2024/12/09/demo-database-modernization
+	url = https://github.com/confluentinc/demo-database-modernization.git
+[submodule "2024/12/09/terraform-aws-fully-loaded-eks-cluster"]
+	path = 2024/12/09/terraform-aws-fully-loaded-eks-cluster
+	url = https://github.com/bootlabstech/terraform-aws-fully-loaded-eks-cluster
+[submodule "2024/12/10/argo-cd"]
+	path = 2024/12/10/argo-cd
+	url = https://github.com/argoproj/argo-cd
+[submodule "2024/12/10/dashboard"]
+	path = 2024/12/10/dashboard
+	url = https://github.com/kubernetes/dashboard.git
+[submodule "2024/12/10/kube-web-view"]
+	path = 2024/12/10/kube-web-view
+	url = https://codeberg.org/hjacobs/kube-web-view/
+[submodule "2024/12/10/terraform-aws-ec2-image-builder"]
+	path = 2024/12/10/terraform-aws-ec2-image-builder
+	url = https://github.com/aws-ia/terraform-aws-ec2-image-builder
+[submodule "2024/12/10/modernisation-platform-ami-builds"]
+	path = 2024/12/10/modernisation-platform-ami-builds
+	url = https://github.com/ministryofjustice/modernisation-platform-ami-builds
+[submodule "2024/12/10/packer2aws"]
+	path = 2024/12/10/packer2aws
+	url = https://github.com/baakeydow/packer2aws
+[submodule "2024/12/10/amazon-eks-ami"]
+	path = 2024/12/10/amazon-eks-ami
+	url = https://github.com/awslabs/amazon-eks-ami.git
+[submodule "2024/12/10/terraformer-packer"]
+	path = 2024/12/10/terraformer-packer
+	url = https://github.com/cisagov/terraformer-packer.git
+[submodule "2024/12/10/debian-packer"]
+	path = 2024/12/10/debian-packer
+	url = https://github.com/cisagov/debian-packer.git
+[submodule "2024/12/10/aws-profile-sync"]
+	path = 2024/12/10/aws-profile-sync
+	url = https://github.com/cisagov/aws-profile-sync
+[submodule "2024/12/10/aws-terraform-module-codebuild-packer"]
+	path = 2024/12/10/aws-terraform-module-codebuild-packer
+	url = https://github.com/osodevops/aws-terraform-module-codebuild-packer.git
+[submodule "2024/12/10/terraform-layout-example"]
+	path = 2024/12/10/terraform-layout-example
+	url = https://github.com/trussworks/terraform-layout-example.git
+[submodule "2024/12/10/swarms-terraform"]
+	path = 2024/12/10/swarms-terraform
+	url = https://github.com/jmikedupont2/swarms-terraform
+[submodule "2024/12/10/terraform-aws-bootstrap"]
+	path = 2024/12/10/terraform-aws-bootstrap
+	url = https://github.com/trussworks/terraform-aws-bootstrap
+[submodule "2024/12/11/terraform-ai"]
+	path = 2024/12/11/terraform-ai
+	url = https://github.com/jigsaw373/terraform-ai.git
+[submodule "2024/12/11/go-terraform-ai"]
+	path = 2024/12/11/go-terraform-ai
+	url = https://github.com/pradytpk/go-terraform-ai.git
+[submodule "2024/12/11/aiac"]
+	path = 2024/12/11/aiac
+	url = https://github.com/gofireflyio/aiac.git
+[submodule "2024/12/11/go-terraform-assistant-ai"]
+	path = 2024/12/11/go-terraform-assistant-ai
+	url = https://github.com/AkhilSharma90/go-terraform-assistant-ai.git
+[submodule "2024/12/11/chatgpt-cli"]
+	path = 2024/12/11/chatgpt-cli
+	url = https://github.com/kardolus/chatgpt-cli.git
+[submodule "2024/12/11/fastapi-terraform"]
+	path = 2024/12/11/fastapi-terraform
+	url = https://github.com/mcleantom/fastapi-terraform
+[submodule "2024/12/11/deploy-https-api-on-ec2"]
+	path = 2024/12/11/deploy-https-api-on-ec2
+	url = https://github.com/ryandam9/deploy-https-api-on-ec2
+[submodule "2024/12/11/debian-fastapi-server"]
+	path = 2024/12/11/debian-fastapi-server
+	url = https://github.com/neamaddin/debian-fastapi-server
+[submodule "2024/12/11/swarms-memory"]
+	path = 2024/12/11/swarms-memory
+	url = https://github.com/The-Swarm-Corporation/swarms-memory
+[submodule "2024/12/11/loguru"]
+	path = 2024/12/11/loguru
+	url = https://github.com/Delgan/loguru
+[submodule "2024/12/11/sentry-python"]
+	path = 2024/12/11/sentry-python
+	url = https://github.com/getsentry/sentry-python
+[submodule "2024/12/11/uvicorn"]
+	path = 2024/12/11/uvicorn
+	url = https://github.com/encode/uvicorn
+[submodule "2024/12/12/terraform-aws-vpc"]
+	path = 2024/12/12/terraform-aws-vpc
+	url = https://github.com/terraform-aws-modules/terraform-aws-vpc
+[submodule "2024/12/12/terraform-aws-ec2-instance"]
+	path = 2024/12/12/terraform-aws-ec2-instance
+	url = https://github.com/terraform-aws-modules/terraform-aws-ec2-instance
+[submodule "2024/12/12/terraform-aws-security-group"]
+	path = 2024/12/12/terraform-aws-security-group
+	url = https://github.com/terraform-aws-modules/terraform-aws-security-group
+[submodule "2024/12/13/interesting/p2p/cs7ns1-ban-bees"]
+	path = 2024/12/13/interesting/p2p/cs7ns1-ban-bees
+	url = https://github.com/Menotron/cs7ns1-ban-bees.git
+[submodule "2024/12/13/interesting/p2p/wikibinator105"]
+	path = 2024/12/13/interesting/p2p/wikibinator105
+	url = https://github.com/benrayfield/wikibinator105.git
+[submodule "2024/12/13/interesting/gitagent/GitHubSentinel"]
+	path = 2024/12/13/interesting/gitagent/GitHubSentinel
+	url = https://github.com/DjangoPeng/GitHubSentinel.git
+[submodule "2024/12/13/interesting/gitagent/llama-github"]
+	path = 2024/12/13/interesting/gitagent/llama-github
+	url = https://github.com/JetXu-LLM/llama-github.git
+[submodule "2024/12/13/interesting/gitagent/10x-Git-Buddy"]
+	path = 2024/12/13/interesting/gitagent/10x-Git-Buddy
+	url = https://github.com/jawerty/10x-Git-Buddy.git
+[submodule "2024/12/13/holodata"]
+	path = 2024/12/13/holodata
+	url = https://github.com/NeoVertex1/holodata
+[submodule "2024/12/13/interesting/autoscaling/amazon-ec2-auto-scaling-group-examples"]
+	path = 2024/12/13/interesting/autoscaling/amazon-ec2-auto-scaling-group-examples
+	url = https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples.git
+[submodule "2024/12/13/interesting/autoscaling/ec2-auto-scaling-instance-refresh-sample"]
+	path = 2024/12/13/interesting/autoscaling/ec2-auto-scaling-instance-refresh-sample
+	url = https://github.com/aws-samples/ec2-auto-scaling-instance-refresh-sample.git
+[submodule "2024/12/13/interesting/autoscaling/terraform-aws-github-runner"]
+	path = 2024/12/13/interesting/autoscaling/terraform-aws-github-runner
+	url = https://github.com/philips-labs/terraform-aws-github-runner.git
+[submodule "2024/12/13/interesting/autoscaling/lambda-the-terraform-way"]
+	path = 2024/12/13/interesting/autoscaling/lambda-the-terraform-way
+	url = https://github.com/nsriram/lambda-the-terraform-way.git
+[submodule "2024/12/13/interesting/autoscaling/terraform-aws-next-js"]
+	path = 2024/12/13/interesting/autoscaling/terraform-aws-next-js
+	url = https://github.com/milliHQ/terraform-aws-next-js.git
+[submodule "2024/12/13/interesting/autoscaling/terraform-aws-lambda"]
+	path = 2024/12/13/interesting/autoscaling/terraform-aws-lambda
+	url = https://github.com/terraform-aws-modules/terraform-aws-lambda.git
+[submodule "2024/12/13/terraform-aws-autoscaling"]
+	path = 2024/12/13/terraform-aws-autoscaling
+	url = https://github.com/terraform-aws-modules/terraform-aws-autoscaling
+[submodule "2024/12/13/terraform-aws-security-group"]
+	path = 2024/12/13/terraform-aws-security-group
+	url = https://github.com/terraform-aws-modules/terraform-aws-security-group.git
+[submodule "2024/12/13/terraform-aws-alb"]
+	path = 2024/12/13/terraform-aws-alb
+	url = https://github.com/terraform-aws-modules/terraform-aws-alb.git
+[submodule "2024/12/14/terraform-aws-asg-instance-refresh"]
+	path = 2024/12/14/terraform-aws-asg-instance-refresh
+	url = https://github.com/druids/terraform-aws-asg-instance-refresh
+[submodule "2024/12/14/letsencrypt-terraform"]
+	path = 2024/12/14/letsencrypt-terraform
+	url = https://github.com/datoon83/letsencrypt-terraform.git
+[submodule "2024/12/14/terraform-aws-minecraft"]
+	path = 2024/12/14/terraform-aws-minecraft
+	url = https://github.com/darrelldavis/terraform-aws-minecraft.git
+[submodule "2024/12/14/terraform-minecraft"]
+	path = 2024/12/14/terraform-minecraft
+	url = https://github.com/HarryNash/terraform-minecraft
+[submodule "2024/12/14/Terraform-deploy-minecraft"]
+	path = 2024/12/14/Terraform-deploy-minecraft
+	url = https://github.com/aqemery/Terraform-deploy-minecraft
+[submodule "2024/12/14/minecraft-ondemand-terraform"]
+	path = 2024/12/14/minecraft-ondemand-terraform
+	url = https://github.com/JKolios/minecraft-ondemand-terraform.git
+[submodule "2024/12/14/minecraft-ondemand"]
+	path = 2024/12/14/minecraft-ondemand
+	url = https://github.com/doctorray117/minecraft-ondemand.git
+[submodule "2024/12/14/OnDemandMinecraft"]
+	path = 2024/12/14/OnDemandMinecraft
+	url = https://github.com/trevor-laher/OnDemandMinecraft.git
+[submodule "2024/12/14/terraform-null-label"]
+	path = 2024/12/14/terraform-null-label
+	url = https://github.com/cloudposse/terraform-null-label.git
+[submodule "2024/12/14/headlessmc"]
+	path = 2024/12/14/headlessmc
+	url = https://github.com/3arthqu4ke/headlessmc
+[submodule "2024/12/15/Paper"]
+	path = 2024/12/15/Paper
+	url = https://github.com/PaperMC/Paper.git
+[submodule "2024/12/15/mineflayer"]
+	path = 2024/12/15/mineflayer
+	url = https://github.com/PrismarineJS/mineflayer.git
+[submodule "2024/12/15/Minestom"]
+	path = 2024/12/15/Minestom
+	url = https://github.com/Minestom/Minestom.git
+[submodule "2024/12/15/minecraft_remote_itkids"]
+	path = 2024/12/15/minecraft_remote_itkids
+	url = https://github.com/Naohiro2g/minecraft_remote_itkids.git
+[submodule "2024/12/15/flint"]
+	path = 2024/12/15/flint
+	url = https://github.com/Identechal/flint.git
+[submodule "2024/12/15/terraform-lambda"]
+	path = 2024/12/15/terraform-lambda
+	url = https://github.com/FitnessKeeper/terraform-lambda.git
+[submodule "2024/12/15/cfn-tf-custom-types"]
+	path = 2024/12/15/cfn-tf-custom-types
+	url = https://github.com/iann0036/cfn-tf-custom-types.git
+[submodule "2024/12/15/remote"]
+	path = 2024/12/15/remote
+	url = https://github.com/seatidemc/remote.git
+[submodule "2024/12/15/MinecraftServerManagmentAPI"]
+	path = 2024/12/15/MinecraftServerManagmentAPI
+	url = https://github.com/Burchard36/MinecraftServerManagmentAPI.git
+[submodule "2024/12/15/guix-packer"]
+	path = 2024/12/15/guix-packer
+	url = https://github.com/meta-introspector/guix-packer
+[submodule "2024/12/15/open-platform"]
+	path = 2024/12/15/open-platform
+	url = https://github.com/tenlastic/open-platform.git
+[submodule "2024/12/15/wesnoth"]
+	path = 2024/12/15/wesnoth
+	url = https://github.com/wesnoth/wesnoth.git
+[submodule "2024/12/15/awesome-chatgpt-prompts"]
+	path = 2024/12/15/awesome-chatgpt-prompts
+	url = https://github.com/f/awesome-chatgpt-prompts.git
+[submodule "2024/12/15/Prompt-Engineering-Guide"]
+	path = 2024/12/15/Prompt-Engineering-Guide
+	url = https://github.com/dair-ai/Prompt-Engineering-Guide.git
+[submodule "2024/12/15/GPTs"]
+	path = 2024/12/15/GPTs
+	url = https://github.com/linexjlin/GPTs.git
+[submodule "2024/12/15/fabric"]
+	path = 2024/12/15/fabric
+	url = https://github.com/danielmiessler/fabric.git
+[submodule "2024/12/15/dspy"]
+	path = 2024/12/15/dspy
+	url = https://github.com/stanfordnlp/dspy.git
+[submodule "2024/12/15/dspy-with-KG"]
+	path = 2024/12/15/dspy-with-KG
+	url = https://github.com/leannchen86/dspy-with-KG/
+[submodule "2024/12/15/dspy-rag-fastapi"]
+	path = 2024/12/15/dspy-rag-fastapi
+	url = https://github.com/diicellman/dspy-rag-fastapi.git
+[submodule "2024/12/15/awesome-dspy"]
+	path = 2024/12/15/awesome-dspy
+	url = https://github.com/ganarajpr/awesome-dspy.git
+[submodule "2024/12/15/dspy-redteam"]
+	path = 2024/12/15/dspy-redteam
+	url = https://github.com/haizelabs/dspy-redteam.git
+[submodule "2024/12/15/dspy_nodes"]
+	path = 2024/12/15/dspy_nodes
+	url = https://github.com/tom-doerr/dspy_nodes.git
+[submodule "2024/12/15/langwatch"]
+	path = 2024/12/15/langwatch
+	url = https://github.com/langwatch/langwatch.git
+[submodule "2024/12/15/ax"]
+	path = 2024/12/15/ax
+	url = https://github.com/ax-llm/ax.git
+[submodule "2024/12/15/spigotpluggin.awsmgr"]
+	path = 2024/12/15/spigotpluggin.awsmgr
+	url = https://github.com/jaguth/spigotpluggin.awsmgr
+[submodule "2024/12/15/MCSManager"]
+	path = 2024/12/15/MCSManager
+	url = https://github.com/MCSManager/MCSManager
+[submodule "2024/12/15/terraform-digitalocean-minecraft-server"]
+	path = 2024/12/15/terraform-digitalocean-minecraft-server
+	url = https://github.com/brucellino/terraform-digitalocean-minecraft-server
+[submodule "2024/12/15/MCHostPanel"]
+	path = 2024/12/15/MCHostPanel
+	url = https://github.com/Alanaktion/MCHostPanel
+[submodule "2024/12/15/MCDash"]
+	path = 2024/12/15/MCDash
+	url = https://github.com/gnmyt/MCDash
+[submodule "2024/12/15/Stratosphere"]
+	path = 2024/12/15/Stratosphere
+	url = https://github.com/kaledgar/Stratosphere.git
+[submodule "2024/12/15/minecraftserver-paper-deploy-script"]
+	path = 2024/12/15/minecraftserver-paper-deploy-script
+	url = https://github.com/merto-dvp/minecraftserver-paper-deploy-script.git
+[submodule "2024/12/15/ansible-role-minecraft"]
+	path = 2024/12/15/ansible-role-minecraft
+	url = https://github.com/totaldebug/ansible-role-minecraft.git
+[submodule "2024/12/15/Web-API"]
+	path = 2024/12/15/Web-API
+	url = https://github.com/Valandur/Web-API
+[submodule "2024/12/15/Skript"]
+	path = 2024/12/15/Skript
+	url = https://github.com/SkriptLang/Skript.git
+[submodule "2024/12/15/Bukkit"]
+	path = 2024/12/15/Bukkit
+	url = https://github.com/Bukkit/Bukkit
+[submodule "2024/12/15/terraform-minecraft-plugin"]
+	path = 2024/12/15/terraform-minecraft-plugin
+	url = https://github.com/scottwinkler/terraform-minecraft-plugin.git
+[submodule "2024/12/15/AdminGUI"]
+	path = 2024/12/15/AdminGUI
+	url = https://github.com/zigazajc007/AdminGUI.git
+[submodule "2024/12/16/terraform-module-cloudflare-route53"]
+	path = 2024/12/16/terraform-module-cloudflare-route53
+	url = https://github.com/jacobbednarz/terraform-module-cloudflare-route53
+[submodule "2024/12/16/aws-cost-cli"]
+	path = 2024/12/16/aws-cost-cli
+	url = https://github.com/kamranahmedse/aws-cost-cli
+[submodule "2024/12/17/cognito/aws-workspaces"]
+	path = 2024/12/17/cognito/aws-workspaces
+	url = https://github.com/rajeshkumarramaswamy/aws-workspaces.git
+[submodule "2024/12/17/cognito/BeadsDAO"]
+	path = 2024/12/17/cognito/BeadsDAO
+	url = https://github.com/BeadsDAO/BeadsDAO
+[submodule "2024/12/17/cognito/effective"]
+	path = 2024/12/17/cognito/effective
+	url = https://github.com/EffectiveAF/effective
+[submodule "2024/12/17/cognito/MAGMADAO"]
+	path = 2024/12/17/cognito/MAGMADAO
+	url = https://github.com/MAGMADAO/MAGMADAO
+[submodule "2024/12/17/cognito/elb-authentication-cognito"]
+	path = 2024/12/17/cognito/elb-authentication-cognito
+	url = https://github.com/YecineA/elb-authentication-cognito
+[submodule "2024/12/17/cognito/abyss-daico"]
+	path = 2024/12/17/cognito/abyss-daico
+	url = https://github.com/abyssfinance/abyss-daico
+[submodule "2024/12/17/cognito/DAO-Airalab"]
+	path = 2024/12/17/cognito/DAO-Airalab
+	url = https://github.com/airalab/DAO-Airalab
+[submodule "2024/12/17/cognito/Multi-Layered-Decentralized-Autonomous-Organization-DAO-with-Dynamic-Voting-and-Autonomous"]
+	path = 2024/12/17/cognito/Multi-Layered-Decentralized-Autonomous-Organization-DAO-with-Dynamic-Voting-and-Autonomous
+	url = https://github.com/avocadodefi/Multi-Layered-Decentralized-Autonomous-Organization-DAO-with-Dynamic-Voting-and-Autonomous
+[submodule "2024/12/17/cognito/cognito-at-edge"]
+	path = 2024/12/17/cognito/cognito-at-edge
+	url = https://github.com/awslabs/cognito-at-edge
+[submodule "2024/12/17/cognito/awesome-decentralized-autonomous-organizations"]
+	path = 2024/12/17/cognito/awesome-decentralized-autonomous-organizations
+	url = https://github.com/boilerrat/awesome-decentralized-autonomous-organizations
+[submodule "2024/12/17/cognito/warrant"]
+	path = 2024/12/17/cognito/warrant
+	url = https://github.com/capless/warrant
+[submodule "2024/12/17/cognito/cognito-express"]
+	path = 2024/12/17/cognito/cognito-express
+	url = https://github.com/ghdna/cognito-express
+[submodule "2024/12/17/cognito/dx-daostack"]
+	path = 2024/12/17/cognito/dx-daostack
+	url = https://github.com/gnosis/dx-daostack
+[submodule "2024/12/17/cognito/posdao-test-setup"]
+	path = 2024/12/17/cognito/posdao-test-setup
+	url = https://github.com/gnosischain/posdao-test-setup
+[submodule "2024/12/17/cognito/dao-contracts"]
+	path = 2024/12/17/cognito/dao-contracts
+	url = https://github.com/hypha-dao/dao-contracts
+[submodule "2024/12/17/cognito/passport-cognito"]
+	path = 2024/12/17/cognito/passport-cognito
+	url = https://github.com/kndt84/passport-cognito
+[submodule "2024/12/17/cognito/django-cognito-jwt"]
+	path = 2024/12/17/cognito/django-cognito-jwt
+	url = https://github.com/labd/django-cognito-jwt
+[submodule "2024/12/17/cognito/terraform-aws-cognito-user-pool"]
+	path = 2024/12/17/cognito/terraform-aws-cognito-user-pool
+	url = https://github.com/lgallard/terraform-aws-cognito-user-pool
+[submodule "2024/12/17/cognito/decentralized-autonomous-organization"]
+	path = 2024/12/17/cognito/decentralized-autonomous-organization
+	url = https://github.com/miquelTC/decentralized-autonomous-organization
+[submodule "2024/12/17/cognito/daico"]
+	path = 2024/12/17/cognito/daico
+	url = https://github.com/petros789/daico
+[submodule "2024/12/17/cognito/posdao-contracts"]
+	path = 2024/12/17/cognito/posdao-contracts
+	url = https://github.com/poanetwork/posdao-contracts
+[submodule "2024/12/17/cognito/llambdao"]
+	path = 2024/12/17/cognito/llambdao
+	url = https://github.com/shaman-ai/llambdao
+[submodule "2024/12/17/cognito/stack"]
+	path = 2024/12/17/cognito/stack
+	url = https://github.com/stack-auth/stack
+[submodule "2024/12/17/terraform-aws-ses"]
+	path = 2024/12/17/terraform-aws-ses
+	url = https://github.com/cloudposse/terraform-aws-ses.git
+[submodule "2024/12/17/gharchive.org"]
+	path = 2024/12/17/gharchive.org
+	url = https://github.com/igrigorik/gharchive.org
+[submodule "2024/12/17/terraform-provider-solana"]
+	path = 2024/12/17/terraform-provider-solana
+	url = https://github.com/callensm/terraform-provider-solana
+[submodule "2024/12/17/solana"]
+	path = 2024/12/17/solana
+	url = https://github.com/solana-labs/solana
+[submodule "2024/12/17/solana-program-library"]
+	path = 2024/12/17/solana-program-library
+	url = https://github.com/solana-labs/solana-program-library.git
+[submodule "2024/12/17/sign-in-with-solana"]
+	path = 2024/12/17/sign-in-with-solana
+	url = https://github.com/phantom/sign-in-with-solana
+[submodule "2024/12/17/anchor"]
+	path = 2024/12/17/anchor
+	url = https://github.com/coral-xyz/anchor.git
+[submodule "2024/12/17/ore-cli"]
+	path = 2024/12/17/ore-cli
+	url = https://github.com/regolith-labs/ore-cli.git
+[submodule "2024/12/17/token-list"]
+	path = 2024/12/17/token-list
+	url = https://github.com/solana-labs/token-list.git
+[submodule "2024/12/17/dapp-scaffold"]
+	path = 2024/12/17/dapp-scaffold
+	url = https://github.com/solana-labs/dapp-scaffold.git
+[submodule "2024/12/17/wallet-adapter"]
+	path = 2024/12/17/wallet-adapter
+	url = https://github.com/anza-xyz/wallet-adapter.git
+[submodule "2024/12/17/solana-nft-anchor"]
+	path = 2024/12/17/solana-nft-anchor
+	url = https://github.com/687c/solana-nft-anchor.git
+[submodule "2024/12/17/metaplex-program-library"]
+	path = 2024/12/17/metaplex-program-library
+	url = https://github.com/metaplex-foundation/metaplex-program-library.git
+[submodule "2024/12/17/sugar"]
+	path = 2024/12/17/sugar
+	url = https://github.com/metaplex-foundation/sugar.git
+[submodule "2024/12/17/aura"]
+	path = 2024/12/17/aura
+	url = https://github.com/metaplex-foundation/aura.git
+[submodule "2024/12/17/solana-pay-starter"]
+	path = 2024/12/17/solana-pay-starter
+	url = https://github.com/buildspace/solana-pay-starter
+[submodule "2024/12/17/solang"]
+	path = 2024/12/17/solang
+	url = https://github.com/hyperledger-solang/solang.git
+[submodule "2024/12/18/terraform-aws-acm"]
+	path = 2024/12/18/terraform-aws-acm
+	url = https://github.com/terraform-aws-modules/terraform-aws-acm
+[submodule "2024/12/18/terraform-aws-oidc-github"]
+	path = 2024/12/18/terraform-aws-oidc-github
+	url = https://github.com/unfunco/terraform-aws-oidc-github.git
+[submodule "2024/12/18/pike"]
+	path = 2024/12/18/pike
+	url = https://github.com/jameswoolfenden/pike
+[submodule "2024/12/18/SwarmDeploy"]
+	path = 2024/12/18/SwarmDeploy
+	url = https://github.com/jmikedupont2/SwarmDeploy.git
+[submodule "2024/12/19/terraform-provider-godaddy-dns"]
+	path = 2024/12/19/terraform-provider-godaddy-dns
+	url = https://github.com/veksh/terraform-provider-godaddy-dns
+[submodule "2024/12/19/Category_Theory_Resources"]
+	path = 2024/12/19/Category_Theory_Resources
+	url = https://github.com/bgavran/Category_Theory_Resources.git
+[submodule "2024/12/19/awesome-category-theory"]
+	path = 2024/12/19/awesome-category-theory
+	url = https://github.com/madnight/awesome-category-theory
+[submodule "2024/12/19/category-theory-resources"]
+	path = 2024/12/19/category-theory-resources
+	url = https://github.com/prathyvsh/category-theory-resources
+[submodule "2024/12/19/gitlogg"]
+	path = 2024/12/19/gitlogg
+	url = https://github.com/dreamyguy/gitlogg
+[submodule "2024/12/19/git2json"]
+	path = 2024/12/19/git2json
+	url = https://github.com/tarmstrong/git2json.git
+[submodule "2024/12/19/terraform-provider-github"]
+	path = 2024/12/19/terraform-provider-github
+	url = https://github.com/integrations/terraform-provider-github/
+[submodule "2024/12/19/tf-ssm-automation-template"]
+	path = 2024/12/19/tf-ssm-automation-template
+	url = https://github.com/grolston/tf-ssm-automation-template
+[submodule "2024/12/19/terraform-aws-ssm-document"]
+	path = 2024/12/19/terraform-aws-ssm-document
+	url = https://github.com/shaikis/terraform-aws-ssm-document.git
+[submodule "2024/12/19/category-theory-programmers"]
+	path = 2024/12/19/category-theory-programmers
+	url = https://github.com/jwbuurlage/category-theory-programmers
+[submodule "2024/12/19/terraform-provider-linear"]
+	path = 2024/12/19/terraform-provider-linear
+	url = https://github.com/terraform-community-providers/terraform-provider-linear
+[submodule "2024/12/20/nixops"]
+	path = 2024/12/20/nixops
+	url = https://github.com/NixOS/nixops
+[submodule "2024/12/20/nixops-aws"]
+	path = 2024/12/20/nixops-aws
+	url = https://github.com/NixOS/nixops-aws
+[submodule "2024/12/21/terraform-aws-session-manager"]
+	path = 2024/12/21/terraform-aws-session-manager
+	url = https://github.com/bridgecrewio/terraform-aws-session-manager.git
+[submodule "2024/12/21/terraform-aws-observability"]
+	path = 2024/12/21/terraform-aws-observability
+	url = https://github.com/tedilabs/terraform-aws-observability
+[submodule "2024/12/21/terraform-aws-observability-accelerator"]
+	path = 2024/12/21/terraform-aws-observability-accelerator
+	url = https://github.com/aws-observability/terraform-aws-observability-accelerator.git
+[submodule "2024/12/21/terraform-aws-session-manager-settings"]
+	path = 2024/12/21/terraform-aws-session-manager-settings
+	url = https://github.com/gazoakley/terraform-aws-session-manager-settings
+[submodule "2024/12/21/modernisation-platform"]
+	path = 2024/12/21/modernisation-platform
+	url = https://github.com/ministryofjustice/modernisation-platform.git
+[submodule "2024/12/21/semgrep-rules"]
+	path = 2024/12/21/semgrep-rules
+	url = https://github.com/semgrep/semgrep-rules.git
+[submodule "2024/12/21/terraform-aws-bastion-host-ssm"]
+	path = 2024/12/21/terraform-aws-bastion-host-ssm
+	url = https://github.com/Hapag-Lloyd/terraform-aws-bastion-host-ssm.git
+[submodule "2024/12/21/cool-assessment-terraform"]
+	path = 2024/12/21/cool-assessment-terraform
+	url = https://github.com/cisagov/cool-assessment-terraform.git
+[submodule "2024/12/21/aws-terraform-module-ssm-session-manager"]
+	path = 2024/12/21/aws-terraform-module-ssm-session-manager
+	url = https://github.com/osodevops/aws-terraform-module-ssm-session-manager.git
+[submodule "2024/12/21/sc-terraform"]
+	path = 2024/12/21/sc-terraform
+	url = https://github.com/schematical/sc-terraform.git
+[submodule "2024/12/21/terraform-aws-bastion-ssm-iam"]
+	path = 2024/12/21/terraform-aws-bastion-ssm-iam
+	url = https://github.com/Flaconi/terraform-aws-bastion-ssm-iam.git
+[submodule "2024/12/21/terraform-aws-session-manager-config"]
+	path = 2024/12/21/terraform-aws-session-manager-config
+	url = https://github.com/radengoots/terraform-aws-session-manager-config.git
+[submodule "2024/12/21/terraform-aws-tailscale"]
+	path = 2024/12/21/terraform-aws-tailscale
+	url = https://github.com/masterpointio/terraform-aws-tailscale.git
+[submodule "2024/12/21/application-signals-demo"]
+	path = 2024/12/21/application-signals-demo
+	url = https://github.com/aws-observability/application-signals-demo.git
+[submodule "2024/12/22/awesome-free-chatgpt"]
+	path = 2024/12/22/awesome-free-chatgpt
+	url = https://github.com/LiLittleCat/awesome-free-chatgpt.git
+[submodule "2024/12/22/awesome-chatgpt"]
+	path = 2024/12/22/awesome-chatgpt
+	url = https://github.com/eon01/awesome-chatgpt.git
+[submodule "2024/12/22/GPT_API_free"]
+	path = 2024/12/22/GPT_API_free
+	url = https://github.com/chatanywhere/GPT_API_free.git
+[submodule "2024/12/22/AI-models-api-endpoints"]
+	path = 2024/12/22/AI-models-api-endpoints
+	url = https://github.com/0ut0flin3/AI-models-api-endpoints.git
+[submodule "2024/12/22/Awesome-GPT-Agents"]
+	path = 2024/12/22/Awesome-GPT-Agents
+	url = https://github.com/fr0gger/Awesome-GPT-Agents.git
