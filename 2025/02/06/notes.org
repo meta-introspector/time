@@ -1,0 +1,50 @@
+* plan
+** voice of eliza
+*** NPM
+voice modules in node, from npm
+needed for eliza
+
+Use nix
+https://github.com/meta-introspector/install-nix-action
+
+** start from working example
+
+Searching the basic idea "pnpm nix"
+
+** Look for official documentation
+https://nixos.org/manual/nixpkgs/stable/#javascript-pnpm
+
+** find key phrase "pnpm.fetchDeps"
+
+** find examples that use it
+clone and search and read
+export bookmarks in browser to html,
+
+** Clone repos
+#+begin_src shell
+grep github.com ./notes.html | cut '-d"' -f2 | sort -u
+for x in `grep github.com ./notes.html | cut '-d"' -f2 | sort -u`; do grep $x /time/.gitmodules ; done
+for x in `cat repos.txt`; do git submodule add $x; done
+#+end_src
+
+** extract keyword index
+** repeat as needed.
+
+
+** Idea
+
+1. Each npm package can be extracted as a type interface based on its
+   usage.  package -> usage profile
+2. We can implement a dummy package for each package that returns mock
+   data.
+3. Replace real modules with mock modules
+4. Dont have to change core logic minimally to work with new modules,
+   fast constant return from mock system for optimization.  The
+   compiler should inline those calls and remove them. We might make
+   changes to make sure it runs faster with modules turned off.
+5. Replace files with mock files for unloading and loading and
+   replacing any module at any time.
+6. Apply ACL and permissions to any part of the system like aws api gw
+   does
+7. can apply to nodejs/wasm/python and at kernel level with
+   linux perf/ebpf kernel modules.

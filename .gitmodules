@@ -25796,3 +25796,927 @@
 [submodule "2024/12/22/Awesome-GPT-Agents"]
 	path = 2024/12/22/Awesome-GPT-Agents
 	url = https://github.com/fr0gger/Awesome-GPT-Agents.git
+[submodule "2024/12/22/aider"]
+	path = 2024/12/22/aider
+	url = https://github.com/Aider-AI/aider
+[submodule "2024/12/22/iamlive"]
+	path = 2024/12/22/iamlive
+	url = https://github.com/iann0036/iamlive.git
+[submodule "2024/12/22/chatgpt-on-a-budget"]
+	path = 2024/12/22/chatgpt-on-a-budget
+	url = https://github.com/nemwiz/chatgpt-on-a-budget.git
+[submodule "2024/12/22/cloudtrail-cli"]
+	path = 2024/12/22/cloudtrail-cli
+	url = https://github.com/guessi/cloudtrail-cli.git
+[submodule "2024/12/22/trail-digger"]
+	path = 2024/12/22/trail-digger
+	url = https://github.com/pepabo/trail-digger.git
+[submodule "2024/12/22/trailpolicy"]
+	path = 2024/12/22/trailpolicy
+	url = https://github.com/rcaught/trailpolicy.git
+[submodule "2024/12/22/aws-policy-optimizer"]
+	path = 2024/12/22/aws-policy-optimizer
+	url = https://github.com/justmiles/aws-policy-optimizer.git
+[submodule "2024/12/22/polx"]
+	path = 2024/12/22/polx
+	url = https://github.com/phoban01/polx.git
+[submodule "2024/12/23/swarm-models"]
+	path = 2024/12/23/swarm-models
+	url = https://github.com/The-Swarm-Corporation/swarm-models
+[submodule "2024/12/23/terraform-aws-ecs-web-app"]
+	path = 2024/12/23/terraform-aws-ecs-web-app
+	url = https://github.com/cloudposse/terraform-aws-ecs-web-app.git
+[submodule "2024/12/23/watchgha"]
+	path = 2024/12/23/watchgha
+	url = https://github.com/nedbat/watchgha.git
+[submodule "2024/12/24/awslogs"]
+	path = 2024/12/24/awslogs
+	url = https://github.com/jorgebastida/awslogs.git
+[submodule "2024/12/25/saw"]
+	path = 2024/12/25/saw
+	url = https://github.com/TylerBrock/saw.git
+[submodule "2024/12/25/ssm-admin"]
+	path = 2024/12/25/ssm-admin
+	url = https://github.com/HarshavardhanG7697/ssm-admin.git
+[submodule "2024/12/25/ssm/awsm"]
+	path = 2024/12/25/ssm/awsm
+	url = https://github.com/murdinc/awsm.git
+[submodule "2024/12/25/ssm/aws-ssm-tools"]
+	path = 2024/12/25/ssm/aws-ssm-tools
+	url = https://github.com/mludvig/aws-ssm-tools.git
+[submodule "2024/12/25/ssm/aws-systems-manager"]
+	path = 2024/12/25/ssm/aws-systems-manager
+	url = https://github.com/awslabs/aws-systems-manager
+[submodule "2024/12/25/ssm/aws-gate"]
+	path = 2024/12/25/ssm/aws-gate
+	url = https://github.com/xen0l/aws-gate.git
+[submodule "2024/12/25/ssm/ai-agents"]
+	path = 2024/12/25/ssm/ai-agents
+	url = https://github.com/viktoriasemaan/ai-agents
+[submodule "2024/12/25/ssm/aws-enterprise-mlops-framework"]
+	path = 2024/12/25/ssm/aws-enterprise-mlops-framework
+	url = https://github.com/aws-samples/aws-enterprise-mlops-framework
+[submodule "2024/12/25/MAMIP"]
+	path = 2024/12/25/MAMIP
+	url = https://github.com/zoph-io/MAMIP.git
+[submodule "2024/12/25/li10-governance"]
+	path = 2024/12/25/li10-governance
+	url = https://github.com/li10labs/li10-governance.git
+[submodule "2024/12/27/swarms-MedicalCoderSwarm-deployment"]
+	path = 2024/12/27/swarms-MedicalCoderSwarm-deployment
+	url = https://github.com/jmikedupont2/swarms-MedicalCoderSwarm-deployment
+[submodule "2024/12/27/mc-hetzner"]
+	path = 2024/12/27/mc-hetzner
+	url = https://github.com/dbrennand/mc-hetzner.git
+[submodule "2024/12/27/meta-meme"]
+	path = 2024/12/27/meta-meme
+	url = https://github.com/meta-introspector/meta-meme
+[submodule "2024/12/28/datamodel-code-generator"]
+	path = 2024/12/28/datamodel-code-generator
+	url = https://github.com/koxudaxi/datamodel-code-generator
+[submodule "2024/12/29/pydantic-aws-cloudtrail"]
+	path = 2024/12/29/pydantic-aws-cloudtrail
+	url = https://github.com/meta-introspector/pydantic-aws-cloudtrail.git
+[submodule "2024/12/30/json-schema-spec"]
+	path = 2024/12/30/json-schema-spec
+	url = https://github.com/json-schema-org/json-schema-spec
+[submodule "2024/12/31/cloud-deployment-eliza"]
+	path = 2024/12/31/cloud-deployment-eliza
+	url = https://github.com/meta-introspector/cloud-deployment-eliza.git
+[submodule "2024/12/31/contracts"]
+	path = 2024/12/31/contracts
+	url = https://github.com/bark-ruffalo/contracts.git
+[submodule "2024/12/31/website-trulyadog.com"]
+	path = 2024/12/31/website-trulyadog.com
+	url = https://github.com/bark-ruffalo/website-trulyadog.com.git
+[submodule "2024/12/31/distribute-income"]
+	path = 2024/12/31/distribute-income
+	url = https://github.com/bark-ruffalo/distribute-income.git
+[submodule "2024/12/31/attest-build-provenance"]
+	path = 2024/12/31/attest-build-provenance
+	url = https://github.com/actions/attest-build-provenance
+[submodule "2025/01/01/eliza-starter"]
+	path = 2025/01/01/eliza-starter
+	url = https://github.com/elizaos/eliza-starter.git
+[submodule "2025/01/01/website"]
+	path = 2025/01/01/website
+	url = https://github.com/elizaOS/website.git
+[submodule "2025/01/01/elizaos.github.io"]
+	path = 2025/01/01/elizaos.github.io
+	url = https://github.com/elizaOS/elizaos.github.io.git
+[submodule "2025/01/01/discord-summarizer"]
+	path = 2025/01/01/discord-summarizer
+	url = https://github.com/elizaOS/discord-summarizer.git
+[submodule "2025/01/01/awesome-eliza"]
+	path = 2025/01/01/awesome-eliza
+	url = https://github.com/elizaOS/awesome-eliza.git
+[submodule "2025/01/02/opentelemetry-js"]
+	path = 2025/01/02/opentelemetry-js
+	url = https://github.com/open-telemetry/opentelemetry-js
+[submodule "2025/01/03/opentelemetry-express-zipkin"]
+	path = 2025/01/03/opentelemetry-express-zipkin
+	url = https://github.com/kovid-r/opentelemetry-express-zipkin
+[submodule "2025/01/03/FTC-Skystone-Dark-Angels-Romania-2020"]
+	path = 2025/01/03/FTC-Skystone-Dark-Angels-Romania-2020
+	url = https://github.com/chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020
+[submodule "2025/01/03/openTelemetry_jaeger"]
+	path = 2025/01/03/openTelemetry_jaeger
+	url = https://github.com/SanjayS0695/openTelemetry_jaeger
+[submodule "2025/01/03/openmct-tutorial"]
+	path = 2025/01/03/openmct-tutorial
+	url = https://github.com/nasa/openmct-tutorial
+[submodule "2025/01/03/qryn"]
+	path = 2025/01/03/qryn
+	url = https://github.com/metrico/qryn
+[submodule "2025/01/03/artillery"]
+	path = 2025/01/03/artillery
+	url = https://github.com/artilleryio/artillery
+[submodule "2025/01/03/jest-opentelemetry"]
+	path = 2025/01/03/jest-opentelemetry
+	url = https://github.com/traceloop/jest-opentelemetry
+[submodule "2025/01/03/effect"]
+	path = 2025/01/03/effect
+	url = https://github.com/Effect-TS/effect
+[submodule "2025/01/03/hyperdx"]
+	path = 2025/01/03/hyperdx
+	url = https://github.com/hyperdxio/hyperdx
+[submodule "2025/01/03/xo"]
+	path = 2025/01/03/xo
+	url = https://github.com/xobserve/xo
+[submodule "2025/01/03/Nestjs-OpenTelemetry"]
+	path = 2025/01/03/Nestjs-OpenTelemetry
+	url = https://github.com/MetinSeylan/Nestjs-OpenTelemetry
+[submodule "2025/01/03/autometrics-ts"]
+	path = 2025/01/03/autometrics-ts
+	url = https://github.com/autometrics-dev/autometrics-ts
+[submodule "2025/01/03/graphql-debugger"]
+	path = 2025/01/03/graphql-debugger
+	url = https://github.com/rocket-connect/graphql-debugger
+[submodule "2025/01/03/baselime-nextjs-template"]
+	path = 2025/01/03/baselime-nextjs-template
+	url = https://github.com/baselime/baselime-nextjs-template
+[submodule "2025/01/03/workit"]
+	path = 2025/01/03/workit
+	url = https://github.com/VilledeMontreal/workit
+[submodule "2025/01/03/stalk"]
+	path = 2025/01/03/stalk
+	url = https://github.com/dgurkaynak/stalk
+[submodule "2025/01/03/opentelemetry-instrumentations-js"]
+	path = 2025/01/03/opentelemetry-instrumentations-js
+	url = https://github.com/justindsmith/opentelemetry-instrumentations-js
+[submodule "2025/01/03/qryn-view"]
+	path = 2025/01/03/qryn-view
+	url = https://github.com/metrico/qryn-view
+[submodule "2025/01/03/rian"]
+	path = 2025/01/03/rian
+	url = https://github.com/maraisr/rian
+[submodule "2025/01/03/echoed"]
+	path = 2025/01/03/echoed
+	url = https://github.com/mrasu/echoed
+[submodule "2025/01/03/crux"]
+	path = 2025/01/03/crux
+	url = https://github.com/etienne-bechara/crux
+[submodule "2025/01/03/kmore"]
+	path = 2025/01/03/kmore
+	url = https://github.com/waitingsong/kmore
+[submodule "2025/01/03/flow-telemetry"]
+	path = 2025/01/03/flow-telemetry
+	url = https://github.com/eBay/flow-telemetry
+[submodule "2025/01/03/opentelemetry"]
+	path = 2025/01/03/opentelemetry
+	url = https://github.com/grammyjs/opentelemetry
+[submodule "2025/01/03/ts-patch"]
+	path = 2025/01/03/ts-patch
+	url = https://github.com/nonara/ts-patch
+[submodule "2025/01/03/otel-cf-workers"]
+	path = 2025/01/03/otel-cf-workers
+	url = https://github.com/evanderkoogh/otel-cf-workers
+[submodule "2025/01/03/smplr"]
+	path = 2025/01/03/smplr
+	url = https://github.com/danigb/smplr
+[submodule "2025/01/03/OpenDataCapture"]
+	path = 2025/01/03/OpenDataCapture
+	url = https://github.com/DouglasNeuroInformatics/OpenDataCapture
+[submodule "2025/01/03/espower-typescript"]
+	path = 2025/01/03/espower-typescript
+	url = https://github.com/power-assert-js/espower-typescript
+[submodule "2025/01/03/soundcode"]
+	path = 2025/01/03/soundcode
+	url = https://github.com/epranka/soundcode
+[submodule "2025/01/03/puppeteer-intercept-and-modify-requests"]
+	path = 2025/01/03/puppeteer-intercept-and-modify-requests
+	url = https://github.com/niieani/puppeteer-intercept-and-modify-requests
+[submodule "2025/01/03/heresy"]
+	path = 2025/01/03/heresy
+	url = https://github.com/Pilfer/heresy
+[submodule "2025/01/03/langfuse-js"]
+	path = 2025/01/03/langfuse-js
+	url = https://github.com/langfuse/langfuse-js
+[submodule "2025/01/03/otel-grafana-demo"]
+	path = 2025/01/03/otel-grafana-demo
+	url = https://github.com/connorlindsey/otel-grafana-demo
+[submodule "2025/01/03/aws-xray-ts-decorator"]
+	path = 2025/01/03/aws-xray-ts-decorator
+	url = https://github.com/RafalWilinski/aws-xray-ts-decorator
+[submodule "2025/01/03/fastify-resty"]
+	path = 2025/01/03/fastify-resty
+	url = https://github.com/FastifyResty/fastify-resty
+[submodule "2025/01/03/auto-unsubscribe"]
+	path = 2025/01/03/auto-unsubscribe
+	url = https://github.com/Nillcon248/auto-unsubscribe
+[submodule "2025/01/03/easy-node-ioc"]
+	path = 2025/01/03/easy-node-ioc
+	url = https://github.com/chenkang084/easy-node-ioc
+[submodule "2025/01/03/autoreggol"]
+	path = 2025/01/03/autoreggol
+	url = https://github.com/rmagatti/autoreggol
+[submodule "2025/01/03/ts-simple-automapper"]
+	path = 2025/01/03/ts-simple-automapper
+	url = https://github.com/IRCraziestTaxi/ts-simple-automapper
+[submodule "2025/01/03/bound-decorator"]
+	path = 2025/01/03/bound-decorator
+	url = https://github.com/Alorel/bound-decorator
+[submodule "2025/01/03/ngx-autounsubscrb"]
+	path = 2025/01/03/ngx-autounsubscrb
+	url = https://github.com/93Alliance/ngx-autounsubscrb
+[submodule "2025/01/03/autobind-decorator"]
+	path = 2025/01/03/autobind-decorator
+	url = https://github.com/sue71/autobind-decorator
+[submodule "2025/01/03/auto-destroy-decorator"]
+	path = 2025/01/03/auto-destroy-decorator
+	url = https://github.com/AniaSniadek/auto-destroy-decorator
+[submodule "2025/01/03/forms-decor"]
+	path = 2025/01/03/forms-decor
+	url = https://github.com/Auxx/forms-decor
+[submodule "2025/01/03/log4js-autolog"]
+	path = 2025/01/03/log4js-autolog
+	url = https://github.com/samngms/log4js-autolog
+[submodule "2025/01/03/openapi-autogen"]
+	path = 2025/01/03/openapi-autogen
+	url = https://github.com/alefcastelo/openapi-autogen
+[submodule "2025/01/03/inversify-auto-decorate"]
+	path = 2025/01/03/inversify-auto-decorate
+	url = https://github.com/tonyhallett/inversify-auto-decorate
+[submodule "2025/01/03/class-validator"]
+	path = 2025/01/03/class-validator
+	url = https://github.com/typestack/class-validator
+[submodule "2025/01/03/class-transformer"]
+	path = 2025/01/03/class-transformer
+	url = https://github.com/typestack/class-transformer
+[submodule "2025/01/03/sequelize-typescript"]
+	path = 2025/01/03/sequelize-typescript
+	url = https://github.com/sequelize/sequelize-typescript
+[submodule "2025/01/03/nestia"]
+	path = 2025/01/03/nestia
+	url = https://github.com/samchon/nestia
+[submodule "2025/01/03/vuex-module-decorators"]
+	path = 2025/01/03/vuex-module-decorators
+	url = https://github.com/championswimmer/vuex-module-decorators
+[submodule "2025/01/03/alosaur"]
+	path = 2025/01/03/alosaur
+	url = https://github.com/alosaur/alosaur
+[submodule "2025/01/03/typescript-cheatsheet"]
+	path = 2025/01/03/typescript-cheatsheet
+	url = https://github.com/rmolinamir/typescript-cheatsheet
+[submodule "2025/01/03/lodash-decorators"]
+	path = 2025/01/03/lodash-decorators
+	url = https://github.com/steelsojka/lodash-decorators
+[submodule "2025/01/03/helpful-decorators"]
+	path = 2025/01/03/helpful-decorators
+	url = https://github.com/NetanelBasal/helpful-decorators
+[submodule "2025/01/03/koa-swagger-decorator"]
+	path = 2025/01/03/koa-swagger-decorator
+	url = https://github.com/Cody2333/koa-swagger-decorator
+[submodule "2025/01/03/ts-cacheable"]
+	path = 2025/01/03/ts-cacheable
+	url = https://github.com/angelnikolov/ts-cacheable
+[submodule "2025/01/03/kaop-ts"]
+	path = 2025/01/03/kaop-ts
+	url = https://github.com/k1r0s/kaop-ts
+[submodule "2025/01/03/memo-decorator"]
+	path = 2025/01/03/memo-decorator
+	url = https://github.com/mgechev/memo-decorator
+[submodule "2025/01/03/nestjs-sqs"]
+	path = 2025/01/03/nestjs-sqs
+	url = https://github.com/ssut/nestjs-sqs
+[submodule "2025/01/03/nestjs-asyncapi"]
+	path = 2025/01/03/nestjs-asyncapi
+	url = https://github.com/flamewow/nestjs-asyncapi
+[submodule "2025/01/03/storybook-addon-console"]
+	path = 2025/01/03/storybook-addon-console
+	url = https://github.com/storybookjs/storybook-addon-console
+[submodule "2025/01/03/figma-html"]
+	path = 2025/01/03/figma-html
+	url = https://github.com/BuilderIO/figma-html
+[submodule "2025/01/03/shift-refactor"]
+	path = 2025/01/03/shift-refactor
+	url = https://github.com/jsoverson/shift-refactor.git
+[submodule "2025/01/03/codemod"]
+	path = 2025/01/03/codemod
+	url = https://github.com/codemod-com/codemod.git
+[submodule "2025/01/03/tsxmod"]
+	path = 2025/01/03/tsxmod
+	url = https://github.com/souporserious/tsxmod.git
+[submodule "2025/01/03/astx"]
+	path = 2025/01/03/astx
+	url = https://github.com/codemodsquad/astx.git
+[submodule "2025/01/03/inbox"]
+	path = 2025/01/03/inbox
+	url = https://github.com/un/inbox.git
+[submodule "2025/01/03/opennextjs-netlify"]
+	path = 2025/01/03/opennextjs-netlify
+	url = https://github.com/opennextjs/opennextjs-netlify.git
+[submodule "2025/01/03/sophia"]
+	path = 2025/01/03/sophia
+	url = https://github.com/TrafficGuard/sophia.git
+[submodule "2025/01/03/next-runtime"]
+	path = 2025/01/03/next-runtime
+	url = https://github.com/Morin3/next-runtime.git
+[submodule "2025/01/03/quasi-meta-meme"]
+	path = 2025/01/03/quasi-meta-meme
+	url = https://github.com/meta-introspector/quasi-meta-meme
+[submodule "2025/01/04/discord.js"]
+	path = 2025/01/04/discord.js
+	url = https://github.com/discordjs/discord.js
+[submodule "2025/01/04/otel-node-ts-express"]
+	path = 2025/01/04/otel-node-ts-express
+	url = https://github.com/EddieEldridge/otel-node-ts-express
+[submodule "2025/01/04/bee-observe"]
+	path = 2025/01/04/bee-observe
+	url = https://github.com/i-am-bee/bee-observe.git
+[submodule "2025/01/04/bee-agent-framework"]
+	path = 2025/01/04/bee-agent-framework
+	url = https://github.com/i-am-bee/bee-agent-framework.git
+[submodule "2025/01/04/nodes"]
+	path = 2025/01/04/nodes
+	url = https://github.com/desci-labs/nodes.git
+[submodule "2025/01/04/bee-agent-framework-starter"]
+	path = 2025/01/04/bee-agent-framework-starter
+	url = https://github.com/i-am-bee/bee-agent-framework-starter
+[submodule "2025/01/04/envy"]
+	path = 2025/01/04/envy
+	url = https://github.com/FormidableLabs/envy.git
+[submodule "2025/01/04/opentelemetry-js-test-fastify"]
+	path = 2025/01/04/opentelemetry-js-test-fastify
+	url = https://github.com/paulodutra/opentelemetry-js-test-fastify.git
+[submodule "2025/01/04/fastify-graphql-ts-observ-template"]
+	path = 2025/01/04/fastify-graphql-ts-observ-template
+	url = https://github.com/nikesh-ag/fastify-graphql-ts-observ-template.git
+[submodule "2025/01/04/wundergraph"]
+	path = 2025/01/04/wundergraph
+	url = https://github.com/wundergraph/wundergraph
+[submodule "2025/01/04/fastify-typescript"]
+	path = 2025/01/04/fastify-typescript
+	url = https://github.com/hmake98/fastify-typescript.git
+[submodule "2025/01/04/fastify-typescript-starter"]
+	path = 2025/01/04/fastify-typescript-starter
+	url = https://github.com/matschik/fastify-typescript-starter.git
+[submodule "2025/01/04/workers-graphql-server"]
+	path = 2025/01/04/workers-graphql-server
+	url = https://github.com/cloudflare/workers-graphql-server.git
+[submodule "2025/01/05/fastify-opentelemetry"]
+	path = 2025/01/05/fastify-opentelemetry
+	url = https://github.com/autotelic/fastify-opentelemetry
+[submodule "2025/01/05/otel-sentry-fastify"]
+	path = 2025/01/05/otel-sentry-fastify
+	url = https://github.com/nathanscully/otel-sentry-fastify.git
+[submodule "2025/01/05/nestjs-fastify-prisma-otel-boilerplate"]
+	path = 2025/01/05/nestjs-fastify-prisma-otel-boilerplate
+	url = https://github.com/NedcloarBR/nestjs-fastify-prisma-otel-boilerplate.git
+[submodule "2025/01/05/Konecty"]
+	path = 2025/01/05/Konecty
+	url = https://github.com/konecty/Konecty.git
+[submodule "2025/01/05/search.emu.sh"]
+	path = 2025/01/05/search.emu.sh
+	url = https://github.com/AskAlice/search.emu.sh.git
+[submodule "2025/01/05/f0"]
+	path = 2025/01/05/f0
+	url = https://github.com/big-kahuna-burger/f0.git
+[submodule "2025/01/05/falkordb-dbaas"]
+	path = 2025/01/05/falkordb-dbaas
+	url = https://github.com/FalkorDB/falkordb-dbaas.git
+[submodule "2025/01/05/opentelemetry-js-contrib"]
+	path = 2025/01/05/opentelemetry-js-contrib
+	url = https://github.com/open-telemetry/opentelemetry-js-contrib.git
+[submodule "2025/01/06/Node-PerformanceTracing_OpenTelemetry_Fastify-Knex-Server"]
+	path = 2025/01/06/Node-PerformanceTracing_OpenTelemetry_Fastify-Knex-Server
+	url = https://github.com/Guilherme-G-Cadilhe/Node-PerformanceTracing_OpenTelemetry_Fastify-Knex-Server.git
+[submodule "2025/01/06/fastify-otel"]
+	path = 2025/01/06/fastify-otel
+	url = https://github.com/varmeh/fastify-otel.git
+[submodule "2025/01/06/elastic-otel-node"]
+	path = 2025/01/06/elastic-otel-node
+	url = https://github.com/elastic/elastic-otel-node.git
+[submodule "2025/01/06/opentelemetry-sandbox-web-js"]
+	path = 2025/01/06/opentelemetry-sandbox-web-js
+	url = https://github.com/open-telemetry/opentelemetry-sandbox-web-js
+[submodule "2025/01/06/sophia"]
+	path = 2025/01/06/sophia
+	url = https://github.com/TrafficGuard/sophia.git
+[submodule "2025/01/06/frontend"]
+	path = 2025/01/06/frontend
+	url = https://github.com/cardbox/frontend.git
+[submodule "2025/01/06/mondrian-framework"]
+	path = 2025/01/06/mondrian-framework
+	url = https://github.com/mondrian-framework/mondrian-framework.git
+[submodule "2025/01/06/fastify-template"]
+	path = 2025/01/06/fastify-template
+	url = https://github.com/stijnklomp/fastify-template.git
+[submodule "2025/01/06/eliza-fastify"]
+	path = 2025/01/06/eliza-fastify
+	url = https://github.com/meta-introspector/eliza-fastify.git
+[submodule "2025/01/06/shared-ts-libs"]
+	path = 2025/01/06/shared-ts-libs
+	url = https://github.com/lokalise/shared-ts-libs.git
+[submodule "2025/01/06/storage"]
+	path = 2025/01/06/storage
+	url = https://github.com/supabase/storage.git
+[submodule "2025/01/06/ai-jsx"]
+	path = 2025/01/06/ai-jsx
+	url = https://github.com/fixie-ai/ai-jsx.git
+[submodule "2025/01/06/dubbo-js"]
+	path = 2025/01/06/dubbo-js
+	url = https://github.com/apache/dubbo-js.git
+[submodule "2025/01/06/url-shortener"]
+	path = 2025/01/06/url-shortener
+	url = https://github.com/swan-io/url-shortener.git
+[submodule "2025/01/06/dittofeed"]
+	path = 2025/01/06/dittofeed
+	url = https://github.com/RajaPoseidon/dittofeed.git
+[submodule "2025/01/06/vouch"]
+	path = 2025/01/06/vouch
+	url = https://github.com/socialbaking/vouch.git
+[submodule "2025/01/06/graphweaver"]
+	path = 2025/01/06/graphweaver
+	url = https://github.com/exogee-technology/graphweaver.git
+[submodule "2025/01/06/deimos-api"]
+	path = 2025/01/06/deimos-api
+	url = https://github.com/yehezkieldio/deimos-api.git
+[submodule "2025/01/06/typescript-runtime-type-benchmarks"]
+	path = 2025/01/06/typescript-runtime-type-benchmarks
+	url = https://github.com/moltar/typescript-runtime-type-benchmarks.git
+[submodule "2025/01/06/rescript-schema"]
+	path = 2025/01/06/rescript-schema
+	url = https://github.com/DZakh/rescript-schema.git
+[submodule "2025/01/06/validation-comparison"]
+	path = 2025/01/06/validation-comparison
+	url = https://github.com/akaday/validation-comparison.git
+[submodule "2025/01/06/XR-Publisher-API"]
+	path = 2025/01/06/XR-Publisher-API
+	url = https://github.com/antpb/XR-Publisher-API.git
+[submodule "2025/01/08/node_exporter"]
+	path = 2025/01/08/node_exporter
+	url = https://github.com/prometheus/node_exporter.git
+[submodule "2025/01/08/oteps"]
+	path = 2025/01/08/oteps
+	url = https://github.com/open-telemetry/oteps
+[submodule "2025/01/08/alloy"]
+	path = 2025/01/08/alloy
+	url = https://github.com/grafana/alloy
+[submodule "2025/01/08/opentelemetry-ebpf-profiler"]
+	path = 2025/01/08/opentelemetry-ebpf-profiler
+	url = https://github.com/open-telemetry/opentelemetry-ebpf-profiler.git
+[submodule "2025/01/08/node-ebnf"]
+	path = 2025/01/08/node-ebnf
+	url = https://github.com/lys-lang/node-ebnf
+[submodule "2025/01/08/opentelemetry-collector-contrib"]
+	path = 2025/01/08/opentelemetry-collector-contrib
+	url = https://github.com/open-telemetry/opentelemetry-collector-contrib.git
+[submodule "2025/01/08/fastify-plugin"]
+	path = 2025/01/08/fastify-plugin
+	url = https://github.com/fastify/fastify-plugin
+[submodule "2025/01/08/fastify-gpt"]
+	path = 2025/01/08/fastify-gpt
+	url = https://github.com/tuliocll/fastify-gpt.git
+[submodule "2025/01/08/NodeJS-OpenAI-Function-Calling-Example"]
+	path = 2025/01/08/NodeJS-OpenAI-Function-Calling-Example
+	url = https://github.com/YAV-AI/NodeJS-OpenAI-Function-Calling-Example.git
+[submodule "2025/01/08/ai"]
+	path = 2025/01/08/ai
+	url = https://github.com/vercel/ai
+[submodule "2025/01/08/ord"]
+	path = 2025/01/08/ord
+	url = https://github.com/ordinals/ord
+[submodule "2025/01/09/txtx"]
+	path = 2025/01/09/txtx
+	url = https://github.com/txtx/txtx
+[submodule "2025/01/09/amazon-ecr-login"]
+	path = 2025/01/09/amazon-ecr-login
+	url = https://github.com/aws-actions/amazon-ecr-login
+[submodule "2025/01/10/docs"]
+	path = 2025/01/10/docs
+	url = https://github.com/akash-network/docs.git
+[submodule "2025/01/10/provider"]
+	path = 2025/01/10/provider
+	url = https://github.com/akash-network/provider
+[submodule "2025/01/10/node"]
+	path = 2025/01/10/node
+	url = https://github.com/akash-network/node
+[submodule "2025/01/10/community"]
+	path = 2025/01/10/community
+	url = https://github.com/akash-network/community
+[submodule "2025/01/10/mastra"]
+	path = 2025/01/10/mastra
+	url = https://github.com/mastra-ai/mastra.git
+[submodule "2025/01/10/dj"]
+	path = 2025/01/10/dj
+	url = https://github.com/bartanderson/dj.git
+[submodule "2025/01/10/ApplicationRecord"]
+	path = 2025/01/10/ApplicationRecord
+	url = https://github.com/shaaddev/ApplicationRecord.git
+[submodule "2025/01/10/windai"]
+	path = 2025/01/10/windai
+	url = https://github.com/nalaso/windai.git
+[submodule "2025/01/10/reppy"]
+	path = 2025/01/10/reppy
+	url = https://github.com/mazshakibaii/reppy.git
+[submodule "2025/01/11/eliza-on-akash"]
+	path = 2025/01/11/eliza-on-akash
+	url = https://github.com/meta-introspector/eliza-on-akash
+[submodule "2025/01/11/akash-ghaction-updatedeploy"]
+	path = 2025/01/11/akash-ghaction-updatedeploy
+	url = https://github.com/ovrclk/akash-ghaction-updatedeploy.git
+[submodule "2025/01/11/akasha-id-wallet"]
+	path = 2025/01/11/akasha-id-wallet
+	url = https://github.com/AKASHAorg/akasha-id-wallet.git
+[submodule "2025/01/11/akash-deploy-action"]
+	path = 2025/01/11/akash-deploy-action
+	url = https://github.com/TedcryptoOrg/akash-deploy-action.git
+[submodule "2025/01/11/akash-ghaction-setup"]
+	path = 2025/01/11/akash-ghaction-setup
+	url = https://github.com/ovrclk/akash-ghaction-setup.git
+[submodule "2025/01/11/akash-action"]
+	path = 2025/01/11/akash-action
+	url = https://github.com/LumeWeb/akash-action.git
+[submodule "2025/01/11/Ecosystem-Crypto"]
+	path = 2025/01/11/Ecosystem-Crypto
+	url = https://github.com/WinterBoy-Galois/Ecosystem-Crypto.git
+[submodule "2025/01/11/crypto-ecosystems"]
+	path = 2025/01/11/crypto-ecosystems
+	url = https://github.com/electric-capital/crypto-ecosystems.git
+[submodule "2025/01/11/gjermund.tech"]
+	path = 2025/01/11/gjermund.tech
+	url = https://github.com/gjermundgaraba/gjermund.tech.git
+[submodule "2025/01/11/cosmos-best-rpc-action"]
+	path = 2025/01/11/cosmos-best-rpc-action
+	url = https://github.com/lumeweb/cosmos-best-rpc-action
+[submodule "2025/01/11/internetarchive"]
+	path = 2025/01/11/internetarchive
+	url = https://github.com/jjjake/internetarchive.git
+[submodule "2025/01/10/akashos"]
+	path = 2025/01/10/akashos
+	url = https://github.com/cryptoandcoffee/akashos.git
+[submodule "2025/01/11/akash-api"]
+	path = 2025/01/11/akash-api
+	url = https://github.com/akash-network/akash-api/
+[submodule "2025/01/11/terraform-provider-akash"]
+	path = 2025/01/11/terraform-provider-akash
+	url = https://github.com/akash-network/terraform-provider-akash.git
+[submodule "2025/01/11/faas-akash"]
+	path = 2025/01/11/faas-akash
+	url = https://github.com/vitwit/faas-akash.git
+[submodule "2025/01/11/akash-provider-tools"]
+	path = 2025/01/11/akash-provider-tools
+	url = https://github.com/88plug/akash-provider-tools.git
+[submodule "2025/01/11/praetor-backend"]
+	path = 2025/01/11/praetor-backend
+	url = https://github.com/akash-network/praetor-backend.git
+[submodule "2025/01/11/terraform-modules-akash"]
+	path = 2025/01/11/terraform-modules-akash
+	url = https://github.com/quasarch/terraform-modules-akash.git
+[submodule "2025/01/11/praetor-security"]
+	path = 2025/01/11/praetor-security
+	url = https://github.com/akash-network/praetor-security.git
+[submodule "2025/01/11/praetor-frontend"]
+	path = 2025/01/11/praetor-frontend
+	url = https://github.com/akash-network/praetor-frontend.git
+[submodule "2025/01/11/provider-akash"]
+	path = 2025/01/11/provider-akash
+	url = https://github.com/web-seven/provider-akash.git
+[submodule "2025/01/11/akash-provider-one"]
+	path = 2025/01/11/akash-provider-one
+	url = https://github.com/Cypherpunk-Labs/akash-provider-one.git
+[submodule "2025/01/11/akash-cloud-provider"]
+	path = 2025/01/11/akash-cloud-provider
+	url = https://github.com/gokul656/akash-cloud-provider.git
+[submodule "2025/01/11/f571fc462efe32dddf5a7b862e633134"]
+	path = 2025/01/11/f571fc462efe32dddf5a7b862e633134
+	url = https://gist.github.com/f571fc462efe32dddf5a7b862e633134.git
+[submodule "2025/01/11/akash-sdls"]
+	path = 2025/01/11/akash-sdls
+	url = https://github.com/envy-cosmos/akash-sdls.git
+[submodule "2025/01/11/libra-os"]
+	path = 2025/01/11/libra-os
+	url = https://github.com/FogMeta/libra-os.git
+[submodule "2025/01/13/guix-packer"]
+	path = 2025/01/13/guix-packer
+	url = https://github.com/greghogan/guix-packer.git
+[submodule "2025/01/13/CDK"]
+	path = 2025/01/13/CDK
+	url = https://github.com/KA0x0/CDK.git
+[submodule "2025/01/13/gollama"]
+	path = 2025/01/13/gollama
+	url = https://github.com/mbcladwell/gollama.git
+[submodule "2025/01/13/metal"]
+	path = 2025/01/13/metal
+	url = https://github.com/fstab50/metal.git
+[submodule "2025/01/13/mastodon"]
+	path = 2025/01/13/mastodon
+	url = https://github.com/mastodon/mastodon
+[submodule "2025/01/13/microstatus"]
+	path = 2025/01/13/microstatus
+	url = https://github.com/Arkanosis/microstatus
+[submodule "2025/01/13/jadwiga"]
+	path = 2025/01/13/jadwiga
+	url = https://github.com/ahihi/jadwiga.git
+[submodule "2025/01/13/commune-server"]
+	path = 2025/01/13/commune-server
+	url = https://github.com/commune-project/commune-server.git
+[submodule "2025/01/13/Rusty-Activity-Pub"]
+	path = 2025/01/13/Rusty-Activity-Pub
+	url = https://github.com/SushritPasupuleti/Rusty-Activity-Pub.git
+[submodule "2025/01/13/activer"]
+	path = 2025/01/13/activer
+	url = https://github.com/JPMoresmau/activer.git
+[submodule "2025/01/13/antisocial"]
+	path = 2025/01/13/antisocial
+	url = https://github.com/sampsyo/antisocial.git
+[submodule "2025/01/13/singleuser-activitypub-server"]
+	path = 2025/01/13/singleuser-activitypub-server
+	url = https://github.com/mattjbones/singleuser-activitypub-server.git
+[submodule "2025/01/13/relay"]
+	path = 2025/01/13/relay
+	url = https://github.com/AoiKagase/relay.git
+[submodule "2025/01/13/picopik-server"]
+	path = 2025/01/13/picopik-server
+	url = https://github.com/picopik/picopik-server.git
+[submodule "2025/01/13/archivedon"]
+	path = 2025/01/13/archivedon
+	url = https://github.com/mizunashi-mana/archivedon.git
+[submodule "2025/01/13/tafarn"]
+	path = 2025/01/13/tafarn
+	url = https://github.com/TheEnbyperor/tafarn.git
+[submodule "2025/01/13/kibou"]
+	path = 2025/01/13/kibou
+	url = https://github.com/Toromino/kibou.git
+[submodule "2025/01/13/basic-activitypub-server"]
+	path = 2025/01/13/basic-activitypub-server
+	url = https://github.com/mgeist/basic-activitypub-server.git
+[submodule "2025/01/13/pi-activitypub-server"]
+	path = 2025/01/13/pi-activitypub-server
+	url = https://github.com/Podcastindex-org/pi-activitypub-server.git
+[submodule "2025/01/13/rustodon"]
+	path = 2025/01/13/rustodon
+	url = https://github.com/rustodon/rustodon.git
+[submodule "2025/01/13/smilodon"]
+	path = 2025/01/13/smilodon
+	url = https://github.com/intarga/smilodon.git
+[submodule "2025/01/13/former2"]
+	path = 2025/01/13/former2
+	url = https://github.com/iann0036/former2.git
+[submodule "2025/01/13/terraform-aws-cloudformation-stack"]
+	path = 2025/01/13/terraform-aws-cloudformation-stack
+	url = https://github.com/cloudposse/terraform-aws-cloudformation-stack.git
+[submodule "2025/01/13/cfn-tf-custom-types"]
+	path = 2025/01/13/cfn-tf-custom-types
+	url = https://github.com/iann0036/cfn-tf-custom-types.git
+[submodule "2025/01/13/cfnctl"]
+	path = 2025/01/13/cfnctl
+	url = https://github.com/rogerwelin/cfnctl.git
+[submodule "2025/01/13/cello"]
+	path = 2025/01/13/cello
+	url = https://github.com/cello-proj/cello
+[submodule "2025/01/13/gemini-openai-proxy"]
+	path = 2025/01/13/gemini-openai-proxy
+	url = https://github.com/zhu327/gemini-openai-proxy.git
+[submodule "2025/01/13/proxy-to-gemini"]
+	path = 2025/01/13/proxy-to-gemini
+	url = https://github.com/google-gemini/proxy-to-gemini.git
+[submodule "2025/01/13/bedrock-proxy-api-for-azure-openai"]
+	path = 2025/01/13/bedrock-proxy-api-for-azure-openai
+	url = https://github.com/hustshawn/bedrock-proxy-api-for-azure-openai
+[submodule "2025/01/13/openai-proxy"]
+	path = 2025/01/13/openai-proxy
+	url = https://github.com/BerriAI/openai-proxy.git
+[submodule "2025/01/13/bedrock-access-gateway"]
+	path = 2025/01/13/bedrock-access-gateway
+	url = https://github.com/aws-samples/bedrock-access-gateway.git
+[submodule "2025/01/13/litellm-copy"]
+	path = 2025/01/13/litellm-copy
+	url = https://github.com/epfl-dlab/litellm-copy
+[submodule "2025/01/13/ai-ml-zk-ops"]
+	path = 2025/01/13/ai-ml-zk-ops
+	url = https://github.com/meta-introspector/ai-ml-zk-ops.git
+[submodule "2025/01/13/cloud-deployment-eliza"]
+	path = 2025/01/13/cloud-deployment-eliza
+	url = https://github.com/meta-introspector/cloud-deployment-eliza
+[submodule "2025/01/13/terraform-aws-server"]
+	path = 2025/01/13/terraform-aws-server
+	url = https://github.com/rancher/terraform-aws-server
+[submodule "2025/01/14/fastembed-js"]
+	path = 2025/01/14/fastembed-js
+	url = https://github.com/meta-introspector/fastembed-js
+[submodule "2025/01/14/create-ecr-repository-action"]
+	path = 2025/01/14/create-ecr-repository-action
+	url = https://github.com/meta-introspector/create-ecr-repository-action
+[submodule "2025/01/14/hypertensor-v2"]
+	path = 2025/01/14/hypertensor-v2
+	url = https://github.com/hypertensor-blockchain/hypertensor-v2
+[submodule "2025/01/14/arm64-tokenizers"]
+	path = 2025/01/14/arm64-tokenizers
+	url = https://github.com/meta-introspector/arm64-tokenizers.git
+[submodule "2025/01/14/setup-zig"]
+	path = 2025/01/14/setup-zig
+	url = https://github.com/meta-introspector/setup-zig
+[submodule "2025/01/14/terraform-aws-github-runners"]
+	path = 2025/01/14/terraform-aws-github-runners
+	url = https://github.com/cloudandthings/terraform-aws-github-runners.git
+[submodule "2025/01/14/terraform-aws-codebuild"]
+	path = 2025/01/14/terraform-aws-codebuild
+	url = https://github.com/cloudposse/terraform-aws-codebuild
+[submodule "2025/01/14/terraform-aws-cicd"]
+	path = 2025/01/14/terraform-aws-cicd
+	url = https://github.com/cloudposse/terraform-aws-cicd
+[submodule "2025/01/16/phantom-sandboxes"]
+	path = 2025/01/16/phantom-sandboxes
+	url = https://github.com/meta-introspector/phantom-sandboxes
+[submodule "2025/01/18/solfunmeme"]
+	path = 2025/01/18/solfunmeme
+	url = https://github.com/jmikedupont2/solfunmeme
+[submodule "2025/01/18/SOLFUNMEME"]
+	path = 2025/01/18/SOLFUNMEME
+	url = https://codeberg.org/introspector/SOLFUNMEME.git
+[submodule "2025/01/21/sqlite-vec"]
+	path = 2025/01/21/sqlite-vec
+	url = https://github.com/meta-introspector/sqlite-vec
+[submodule "2025/01/22/yt-dlp-cli"]
+	path = 2025/01/22/yt-dlp-cli
+	url = https://github.com/denniskamp/yt-dlp-cli.git
+[submodule "2025/01/24/FREE-openai-api-keys"]
+	path = 2025/01/24/FREE-openai-api-keys
+	url = https://github.com/dan1471/FREE-openai-api-keys
+[submodule "2025/01/24/free-openai-chatgpt-api-key"]
+	path = 2025/01/24/free-openai-chatgpt-api-key
+	url = https://github.com/Zeshanabdullah/free-openai-chatgpt-api-key
+[submodule "2025/01/28/aws-cf-devops-tools"]
+	path = 2025/01/28/aws-cf-devops-tools
+	url = https://github.com/meta-introspector/aws-cf-devops-tools.git
+[submodule "2025/02/01/sam-cfn-publish"]
+	path = 2025/02/01/sam-cfn-publish
+	url = https://github.com/peterjdavis/sam-cfn-publish.git
+[submodule "2025/02/01/code-artifact-sample"]
+	path = 2025/02/01/code-artifact-sample
+	url = https://github.com/tongari07/code-artifact-sample.git
+[submodule "2025/02/01/lambda-deploy-publish"]
+	path = 2025/02/01/lambda-deploy-publish
+	url = https://github.com/amlana21/lambda-deploy-publish
+[submodule "2025/02/01/aws-cloudformation-publisher"]
+	path = 2025/02/01/aws-cloudformation-publisher
+	url = https://github.com/aws-samples/aws-cloudformation-publisher.git
+[submodule "2025/02/01/terraform-aws-sam-integration-example"]
+	path = 2025/02/01/terraform-aws-sam-integration-example
+	url = https://github.com/rpstreef/terraform-aws-sam-integration-example.git
+[submodule "2025/02/03/rust-rss-reader"]
+	path = 2025/02/03/rust-rss-reader
+	url = https://github.com/meta-introspector/rust-rss-reader.git
+[submodule "2025/02/04/parse-package-lock"]
+	path = 2025/02/04/parse-package-lock
+	url = https://github.com/milahu/parse-package-lock.git
+[submodule "2025/02/04/node2nix"]
+	path = 2025/02/04/node2nix
+	url = https://github.com/svanderburg/node2nix
+[submodule "2025/02/04/node-nix"]
+	path = 2025/02/04/node-nix
+	url = https://github.com/cjdell/node-nix.git
+[submodule "2025/02/05/pnpm2nix"]
+	path = 2025/02/05/pnpm2nix
+	url = https://github.com/nix-community/pnpm2nix
+[submodule "2025/02/06/install-nix-action"]
+	path = 2025/02/06/install-nix-action
+	url = https://github.com/meta-introspector/install-nix-action
+[submodule "2025/02/06/nix-quick-install-action"]
+	path = 2025/02/06/nix-quick-install-action
+	url = https://github.com/meta-introspector/nix-quick-install-action
+[submodule "2025/02/06/zero-to-nix"]
+	path = 2025/02/06/zero-to-nix
+	url = https://github.com/DeterminateSystems/zero-to-nix.git
+[submodule "2025/02/06/nix-npm-buildpackage"]
+	path = 2025/02/06/nix-npm-buildpackage
+	url = https://github.com/serokell/nix-npm-buildpackage
+[submodule "2025/02/06/nixpkgs"]
+	path = 2025/02/06/nixpkgs
+	url = https://github.com/AJChapman/nixpkgs
+[submodule "2025/02/06/workload-discovery-on-aws"]
+	path = 2025/02/06/workload-discovery-on-aws
+	url = https://github.com/aws-solutions/workload-discovery-on-aws/
+[submodule "2025/02/06/3up7up-bot"]
+	path = 2025/02/06/3up7up-bot
+	url = https://github.com/BlackDemonFire/3up7up-bot
+[submodule "2025/02/06/lukas"]
+	path = 2025/02/06/lukas
+	url = https://github.com/BlackDemonFire/lukas
+[submodule "2025/02/06/holochain-playground"]
+	path = 2025/02/06/holochain-playground
+	url = https://github.com/c12i/holochain-playground
+[submodule "2025/02/06/living-power"]
+	path = 2025/02/06/living-power
+	url = https://github.com/darksoil-studio/living-power
+[submodule "2025/02/06/diagonal-b6"]
+	path = 2025/02/06/diagonal-b6
+	url = https://github.com/diagonalworks/diagonal-b6
+[submodule "2025/02/06/webKeyFinder"]
+	path = 2025/02/06/webKeyFinder
+	url = https://github.com/dogayuksel/webKeyFinder
+[submodule "2025/02/06/Flake-Templates"]
+	path = 2025/02/06/Flake-Templates
+	url = https://github.com/Eveeifyeve/Flake-Templates
+[submodule "2025/02/06/GoNova"]
+	path = 2025/02/06/GoNova
+	url = https://github.com/gungun974/GoNova
+[submodule "2025/02/06/dots"]
+	path = 2025/02/06/dots
+	url = https://github.com/imNel/dots
+[submodule "2025/02/06/universe"]
+	path = 2025/02/06/universe
+	url = https://github.com/Infinidoge/universe
+[submodule "2025/02/06/nix-parcels"]
+	path = 2025/02/06/nix-parcels
+	url = https://github.com/iogrt/nix-parcels
+[submodule "2025/02/06/server-bench"]
+	path = 2025/02/06/server-bench
+	url = https://github.com/jnsgruk/server-bench
+[submodule "2025/02/06/kasten"]
+	path = 2025/02/06/kasten
+	url = https://github.com/jpcenteno/kasten
+[submodule "2025/02/06/nixpkgs-reviewing-workspace"]
+	path = 2025/02/06/nixpkgs-reviewing-workspace
+	url = https://github.com/kachick/nixpkgs-reviewing-workspace
+[submodule "2025/02/06/nixfiles"]
+	path = 2025/02/06/nixfiles
+	url = https://github.com/kloenk/nixfiles
+[submodule "2025/02/06/teruko-legacy"]
+	path = 2025/02/06/teruko-legacy
+	url = https://github.com/Lichthagel/teruko-legacy
+[submodule "2025/02/06/mslxl.github.io"]
+	path = 2025/02/06/mslxl.github.io
+	url = https://github.com/mslxl/mslxl.github.io
+[submodule "2025/02/06/sticker-bucket"]
+	path = 2025/02/06/sticker-bucket
+	url = https://github.com/mslxl/sticker-bucket
+[submodule "2025/02/06/nix-home"]
+	path = 2025/02/06/nix-home
+	url = https://github.com/natsukagami/nix-home
+[submodule "2025/02/06/nocodb"]
+	path = 2025/02/06/nocodb
+	url = https://github.com/nocodb/nocodb
+[submodule "2025/02/06/nix-config"]
+	path = 2025/02/06/nix-config
+	url = https://github.com/notthebee/nix-config
+[submodule "2025/02/06/obreitwi"]
+	path = 2025/02/06/obreitwi
+	url = https://github.com/obreitwi/obreitwi
+[submodule "2025/02/06/nixpkgs-tracker"]
+	path = 2025/02/06/nixpkgs-tracker
+	url = https://github.com/ocfox/nixpkgs-tracker
+[submodule "2025/02/06/sentouki"]
+	path = 2025/02/06/sentouki
+	url = https://github.com/odilf/sentouki
+[submodule "2025/02/06/hyprdisplay"]
+	path = 2025/02/06/hyprdisplay
+	url = https://github.com/pakky94/hyprdisplay
+[submodule "2025/02/06/nix-cloud"]
+	path = 2025/02/06/nix-cloud
+	url = https://github.com/petertjmills/nix-cloud
+[submodule "2025/02/06/keycloak-rust"]
+	path = 2025/02/06/keycloak-rust
+	url = https://github.com/relaxdays/keycloak-rust
+[submodule "2025/02/06/murex"]
+	path = 2025/02/06/murex
+	url = https://github.com/rfaulhaber/murex
+[submodule "2025/02/06/flux"]
+	path = 2025/02/06/flux
+	url = https://github.com/sandydoo/flux
+[submodule "2025/02/06/better-ilias"]
+	path = 2025/02/06/better-ilias
+	url = https://github.com/Septias/better-ilias
+[submodule "2025/02/06/reddit-wallpapers"]
+	path = 2025/02/06/reddit-wallpapers
+	url = https://github.com/Septias/reddit-wallpapers
+[submodule "2025/02/06/piped-flake"]
+	path = 2025/02/06/piped-flake
+	url = https://github.com/squalus/piped-flake
+[submodule "2025/02/06/website"]
+	path = 2025/02/06/website
+	url = https://github.com/tanneberger/website
+[submodule "2025/02/06/kindergarten"]
+	path = 2025/02/06/kindergarten
+	url = https://github.com/tlm-solutions/kindergarten
+[submodule "2025/02/06/Jovian-NixOS"]
+	path = 2025/02/06/Jovian-NixOS
+	url = https://github.com/Voidlighter/Jovian-NixOS
+[submodule "2025/02/06/dotfiles"]
+	path = 2025/02/06/dotfiles
+	url = https://github.com/yoofus/dotfiles
+[submodule "2025/02/06/jankboard"]
+	path = 2025/02/06/jankboard
+	url = https://github.com/youwen5/jankboard
