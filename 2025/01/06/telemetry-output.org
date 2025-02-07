@@ -1,0 +1,82 @@
+Telemetry is a method used to measure and monitor various parameters and events in real-time for
+analysis or control purposes. It has applications across various industries such as
+telecommunications, healthcare, industrial automation, and more. The different types of telemetry
+can be categorized based on the nature of data they collect, how it is transmitted, and the methods
+used for processing and analysis.
+
+Here’s a structured list of terms related to telemetry:
+
+** 1. *Data Types**
+   - *Analog Telemetry:* Involves continuous measurement and transmission of variables like
+      temperature, pressure, or voltage.
+   - *Digital Telemetry:* Utilizes digital signals to represent measurements; can be either discrete
+      (binary) or pulse-code-modulated (PCM).
+
+** 2. *Transmission Methods**
+   - *Wireless Telemetry:* Data is transmitted without physical wires using radio, satellite, or
+      wireless mesh networks.
+     - *Radio Frequency (RF) Telemetry:* Uses radio waves for transmission.
+       - *Satellite Telemetry:* Relies on satellites for long-range communication.
+       - *Shortwave/Longwave Radio Telemetry:* Utilizes various frequency bands for data transfer.
+   - *Cable Telemetry:* Data is transmitted through physical cables, either wired or optical fibers.
+
+** 3. *Application Domains**
+   - *Telecommunications Telemetry:* Used in networks to monitor the performance of communication
+      links and equipment.
+   - *Industrial Automation Telemetry:* Monitors equipment status and processes in industrial
+      settings.
+   - *Healthcare Telemetry:* Monitors patients' vital signs remotely for real-time healthcare
+      management.
+
+** 4. *Methods**
+   - *Real-Time Telemetry:* Data is collected, transmitted, and analyzed as it occurs without delay.
+   - *Historical/Archive Telemetry:* Records data over time for analysis at a later point.
+
+** 5. *Processing**
+   - *Pre-Processing Telemetry:* Data is filtered and prepared before being transmitted or stored.
+   - *Post-Processing Telemetry:* Analysis of data after it has been collected and stored.
+
+** 6. *Protocol and Standards**
+   - *Modbus Telemetry:* Uses the Modbus protocol for communication in industrial environments.
+   - *IEC 60870 Telemetry:* Defines standards for power systems communications.
+   - *NMEA Telemetry:* Standard for navigation and marine data communication.
+
+** 7. *Security**
+   - *Encrypted Telemetry:* Ensures secure transmission of data using encryption protocols.
+   - *Access Control Telemetry:* Limits access to telemetry data based on user roles and
+      permissions.
+
+** 8. *Data Analytics Tools**
+   - *Telemetry Analysis Software:* Uses tools like Splunk, InfluxDB, or Grafana for analyzing and
+      visualizing telemetry data.
+   - *Predictive Maintenance Telemetry:* Utilizes algorithms to predict equipment failures based on
+      collected data.
+
+** 9. *Deployment Models**
+   - *On-Premises Telemetry:* Data is processed and stored in a local environment.
+   - *Cloud-Based Telemetry:* Data is transmitted to cloud platforms for processing, analytics, and
+      storage.
+     - *Edge Computing Telemetry:* Process data locally to reduce latency and improve performance.
+
+** 10. *Standards and Regulations**
+   - *FCC Compliance Telemetry:* Ensures compliance with Federal Communications Commission
+      regulations in the US.
+   - *IEEE Standards Telemetry:* Adheres to industry standards for interoperability and reliability.
+   - *HIPAA Compliance Telemetry:* Adapts telemetry systems to comply with Healthcare Insurance
+      Portability and Accountability Act in healthcare settings.
+
+** 11. *Use Cases**
+   - *Environmental Monitoring Telemetry:* Tracks environmental parameters such as temperature,
+      humidity, and air quality.
+   - *Traffic Management Telemetry:* Monitors traffic flow for real-time congestion management.
+   - *Renewable Energy Telemetry:* Monitors the performance of solar panels, wind turbines, or other
+      renewable energy sources.
+
+** 12. *Challenges**
+   - *Latency Telemetry:* Minimizing the delay in data collection and transmission.
+   - *Data Volume Telemetry:* Handling large volumes of data efficiently without compromising
+      performance.
+   - *Scalability Telemetry:* Ensuring systems can scale to accommodate growing data needs.
+
+This structured list should provide a comprehensive overview of various aspects related to
+telemetry, from the types of data collected to the methods of analysis and deployment.

@@ -1,0 +1,8 @@
+* idea
+
+1. cloud development, deploy and monitoring agent that uses terraform
+   and git to communicate with others.
+   all communication is over git pulls and p2p gossip with other servers.
+
+   develop a one click install minimal free tier cloud ai cloud service based on gnu social mastodon that has ai agent running. it will subscribe to feeds from other agents selectively, using git, can consume twitter via some translation. Will issue tokens for valuable inputs.
+   create one click cloud formation template.

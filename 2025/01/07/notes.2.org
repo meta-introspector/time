@@ -1,0 +1,65 @@
+Creating a TypeScript JSON Schema for an enum that represents all possible enums can be a bit
+complex because enums in TypeScript can have various properties and behaviors depending on their
+structure and usage.
+
+However, we can create a basic representation of such a schema. Here's an example:
+#+BEGIN_SRC typescript
+interface EnumSchema {
+  [enumName: string]: {
+    type: 'string' | 'number' | 'boolean';
+    enum: Array<string | number | boolean>;
+    description?: string;
+    // You can add more properties here as needed
+  };
+}
+#+END_SRC
+
+In this schema:
+- ~EnumSchema~ is an object where the keys are the names of the enums.
+- Each enum is represented by an object with a ~type~, an array of possible values (~enum~), and
+  optionally a ~description~.
+
+Here's an example of how you might use this schema:
+#+BEGIN_SRC typescript
+const enumSchema: EnumSchema = {
+  Color: {
+    type: 'string',
+    enum: ['red', 'green', 'blue'],
+    description: 'A color from the RGB spectrum'
+  },
+  Size: {
+    type: 'number',
+    enum: [S, M, L],
+    description: 'Available shirt sizes'
+  },
+  IsActive: {
+    type: 'boolean',
+    enum: [true, false],
+    description: 'Indicates if something is active'
+  }
+};
+
+// Example usage
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+
+enum Size {
+  S = 1,
+  M,
+  L
+}
+
+console.log(enumSchema.Color.enum); // Output: ['red', 'green', 'blue']
+console.log(enumSchema.Size.enum); // Output: [1, 2, 3]
+#+END_SRC
+
+In this example:
+- ~Color~ is an enum with string values.
+- ~Size~ is an enum with numeric values.
+- ~IsActive~ is an enum with boolean values.
+
+This schema provides a basic structure for representing enums in JSON Schema. You can extend it
+further based on the specific requirements and behaviors of your enums.

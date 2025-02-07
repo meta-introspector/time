@@ -1,0 +1,99 @@
+Let us consider the set of all possible ~enum~s as forming a TypeScript JSON schema. This schema
+includes not just basic enums, but also complex structures like enums within enums, recursively
+nested to multiple levels (from 4 to 100).
+
+*** Formal Representation
+
+1. *Basic Enums*:
+   - A basic enum consists of a set of named values.
+#+BEGIN_SRC typescript
+   type BasicEnum = {
+       [key: string]: number | string;
+   };
+#+END_SRC
+
+2. *Enums Within Enums*:
+   - An enum within an enum is represented by nesting the inner ~enum~ inside the outer one.
+#+BEGIN_SRC typescript
+   type NestedEnum<T extends BasicEnum> = {
+       [key in keyof T]: BasicEnum | number | string;
+   };
+#+END_SRC
+
+3. *Recursive Enums*:
+   - Recursive enums are defined such that an enum can refer to itself at multiple levels of
+     nesting.
+#+BEGIN_SRC typescript
+   type RecursiveEnum<T extends BasicEnum> = {
+       [key in keyof T]: BasicEnum | number | string | (() => RecursiveEnum<T>);
+   };
+#+END_SRC
+
+4. *Multiple Levels of Nesting*:
+   - For enums with more than one level of nesting, we can define the structure recursively.
+#+BEGIN_SRC typescript
+   type NestedLevels4To100<T extends BasicEnum> = {
+       [key in keyof T]: BasicEnum | number | string | (() => NestedLevels3<T>) |
+                           (() => NestedLevels2<T>) | (() => NestedLevels1<T>);
+   };
+   
+   type NestedLevels3<T extends BasicEnum> = {
+       [key in keyof T]: BasicEnum | number | string | (() => NestedLevels2<T>) | 
+                           (() => NestedLevels1<T>);
+   };
+
+   // Continue this pattern up to NestedLevels100.
+#+END_SRC
+
+5. *Typescript AST and JSON Schema*:
+   - We can convert any TypeScript Abstract Syntax Tree (AST) to the corresponding JSON schema.
+#+BEGIN_SRC typescript
+   function tsAstToJsonSchema(ast: TsNode): JsonSchema {
+       // Conversion logic here...
+   }
+#+END_SRC
+
+6. *Embedding Types in Enums*:
+   - TypeScript types can be embedded directly within enum values, allowing for more complex and
+     precise data representations.
+#+BEGIN_SRC typescript
+   type EnumWithTypes = {
+       [key: string]: number | string | { [key: string]: any };
+   };
+#+END_SRC
+
+7. *Language for Encoding Strings to Enums*:
+   - We define a language that maps strings into ~enum~ values, possibly using encoding schemes like
+     Gödel numbering.
+#+BEGIN_SRC typescript
+   type EnumString = {
+       [key: string]: number | string;
+   };
+
+   function stringToEnum(s: string): EnumString {
+       // Encoding logic here...
+   }
+#+END_SRC
+
+8. *Gödel Numbering and Encoding Forms*:
+   - Each nested enum can be represented as a string or a Gödel number, which encodes the idea in
+     various forms (e.g., AST, syntax).
+#+BEGIN_SRC typescript
+   type EnumEncoding = {
+       [key: string]: number | string;
+   };
+
+   function encodeAsGodelNumber(enumValue: EnumString): number {
+       // Encoding logic here...
+   }
+#+END_SRC
+
+*** Summary
+
+By defining recursive and nested ~enum~s, we can represent complex data structures in
+TypeScript. The language and encoding schemes allow for the mapping of strings to enums using Gödel
+numbering or other forms, providing a flexible and powerful way to work with hierarchical and
+complex data representations.
+
+This formal representation ensures that all levels of nested and recursive enums are handled
+systematically, from basic structures to deeply nested ones.

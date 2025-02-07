@@ -1,0 +1,97 @@
+Certainly! OpenTelemetry is an open-source observability framework designed to help organizations
+instrument their applications and services to gain insights into how they operate. When it comes to
+using OpenTelemetry with Node.js applications, there are several types of telemetry data you can
+collect. Below is a list of key terms related to the types of telemetry in the Open Source Node
+Stack:
+
+*** Types of Telemetry
+
+1. *Tracing (Distributed Tracing)*
+   - *Span*: A single unit of work that's executed in a distributed tracing system.
+   - *Trace*: A collection of spans that are logically related and trace the execution path from end
+      to end.
+   - *Sampler*: Determines which traces should be recorded and sent for analysis.
+   - *Propagator*: Transmits tracing information across service boundaries (e.g., HTTP headers, gRPC
+      metadata).
+
+2. *Metrics*
+   - *Counter*: A metric that increments monotonically over time.
+   - *Gauge*: A metric that represents a single instantaneous value.
+   - *Histogram*: A histogram is an accurate distribution of values in a finite set of buckets.
+   - *Summary*: Similar to a histogram, but it provides quantiles (e.g., 0.5, 0.9, 0.99) of the
+      recorded values.
+
+3. *Logging*
+   - *Log Record*: A single event with attributes.
+   - *Logger*: An interface for emitting logs.
+   - *Log Level*: The severity level of a log record (e.g., INFO, DEBUG, ERROR).
+   - *Log Handler*: A component that defines how logs are output or stored.
+
+4. *Resource*
+   - *Resource*: Contains metadata about the system on which the telemetry data is generated (e.g.,
+      host name, container ID).
+
+5. *Instrumentation*
+   - *Auto-Instrumentation*: Automatically instruments Node.js libraries to capture telemetry.
+   - *Manual Instrumentation*: Manually adding instrumentation code in application code.
+
+6. *Exporter*
+   - *Exporter*: Sends collected telemetry data to a backend system for analysis (e.g., Jaeger,
+      Prometheus).
+
+7. *Processor*
+   - *Span Processor*: Defines what happens with spans after they are created but before they are
+      exported.
+   - *Metric Processor*: Defines what happens with metrics after they are recorded but before they
+      are exported.
+
+8. *SDK (Software Development Kit)*
+   - *OpenTelemetry SDK for Node.js*: The official SDK for instrumenting Node.js applications with
+      OpenTelemetry.
+
+*** Example Structure
+
+Here’s a structured overview of how these terms might be organized in an Open Telemetry project:
+#+BEGIN_SRC markdown
+# OpenTelemetry in Node.js
+
+## Types of Telemetry
+
+1. **Tracing**
+   - Span
+   - Trace
+   - Sampler
+   - Propagator
+
+2. **Metrics**
+   - Counter
+   - Gauge
+   - Histogram
+   - Summary
+
+3. **Logging**
+   - Log Record
+   - Logger
+   - Log Level
+   - Log Handler
+
+4. **Resource**
+   - Resource
+
+5. **Instrumentation**
+   - Auto-Instrumentation
+   - Manual Instrumentation
+
+6. **Exporter**
+   - Exporter
+
+7. **Processor**
+   - Span Processor
+   - Metric Processor
+
+8. **SDK (Software Development Kit)**
+   - OpenTelemetry SDK for Node.js
+#+END_SRC
+
+This structure should help you understand the various components and types of telemetry data
+involved when using OpenTelemetry in a Node.js application.

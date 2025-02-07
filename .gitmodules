@@ -26720,3 +26720,30 @@
 [submodule "2025/02/06/jankboard"]
 	path = 2025/02/06/jankboard
 	url = https://github.com/youwen5/jankboard
+[submodule "2025/02/06/argo-workflows"]
+	path = 2025/02/06/argo-workflows
+	url = https://github.com/argoproj/argo-workflows.git
+[submodule "2025/02/06/cereb"]
+	path = 2025/02/06/cereb
+	url = https://github.com/tacogips/cereb.git
+[submodule "2025/02/06/supafana"]
+	path = 2025/02/06/supafana
+	url = https://github.com/fogbender/supafana
+[submodule "2025/02/06/cruxoflife"]
+	path = 2025/02/06/cruxoflife
+	url = https://github.com/GlennWSo/cruxoflife/
+[submodule "2025/02/06/astraios"]
+	path = 2025/02/06/astraios
+	url = https://github.com/lmondada/astraios
+[submodule "2025/02/06/pnpmtest"]
+	path = 2025/02/06/pnpmtest
+	url = https://github.com/simonvandel/pnpmtest/
+[submodule "2025/02/06/pnpm2nix-nzbr"]
+	path = 2025/02/06/pnpm2nix-nzbr
+	url = https://github.com/wrvsrx/pnpm2nix-nzbr.git
+[submodule "2025/02/06/chess-erdos"]
+	path = 2025/02/06/chess-erdos
+	url = https://github.com/freopen/chess-erdos.git
+[submodule "2025/02/07/terraform-wireguard"]
+	path = 2025/02/07/terraform-wireguard
+	url = https://github.com/meta-introspector/terraform-wireguard

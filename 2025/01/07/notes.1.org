@@ -1,0 +1,126 @@
+Creating a TypeScript JSON Schema that represents an enumeration of all enums (including recursively
+nested enums up to level 100) is a complex and nested structure. Each enum can contain multiple
+choices, and each choice can be another enum or a basic value.
+
+Below is a simplified example of what this might look like for a few levels of enums:
+#+BEGIN_SRC json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "choice": {
+      "oneOf": [
+        { "enum": ["basicOption1", "basicOption2"] },
+        {
+          "type": "object",
+          "properties": {
+            "nestedEnum": {
+              "$ref": "#"
+            }
+          },
+          "required": ["nestedEnum"]
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
+#+END_SRC
+
+*** Explanation:
+1. *Basic Enums*: The ~choice~ property can be one of the basic options (~"enum": ["basicOption1",
+"basicOption2"]~). These are simple values like strings or numbers.
+   
+2. *Enums of Enums*: If ~choice~ is not a basic option, it could be an object that contains another
+enum (~"nestedEnum"~). The type of this nested enum is the same as the root schema itself (~"$ref":
+"#"~, which references the current schema).
+
+*** Extending to Levels:
+To extend this structure to multiple levels (up to 100), you can use recursion within the ~oneOf~
+array. Here’s an example for three levels:
+#+BEGIN_SRC json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "choice": {
+      "oneOf": [
+        { "enum": ["basicOption1", "basicOption2"] },
+        {
+          "type": "object",
+          "properties": {
+            "nestedEnum": {
+              "$ref": "#"
+            }
+          },
+          "required": ["nestedEnum"]
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
+#+END_SRC
+
+For four levels:
+#+BEGIN_SRC json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "choice": {
+      "oneOf": [
+        { "enum": ["basicOption1", "basicOption2"] },
+        {
+          "type": "object",
+          "properties": {
+            "nestedEnum1": {
+              "$ref": "#"
+            }
+          },
+          "required": ["nestedEnum1"]
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
+#+END_SRC
+
+*** Generalizing to N Levels:
+To generalize this for any number of levels, you can use a schema generator or a recursive function
+in your TypeScript code. Here’s an example using a recursive function:
+#+BEGIN_SRC typescript
+function createEnumSchema(levels: number): object {
+  if (levels <= 0) {
+    return { "enum": ["basicOption1", "basicOption2"] };
+  } else {
+    return {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "choice": {
+          "oneOf": [
+            { "enum": ["basicOption1", "basicOption2"] },
+            {
+              "type": "object",
+              "properties": {
+                `nestedEnum${levels}`: createEnumSchema(levels - 1)
+              },
+              "required": [`nestedEnum${levels}`]
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    };
+  }
+}
+
+const enumSchema = createEnumSchema(3); // Replace with the desired number of levels
+console.log(JSON.stringify(enumSchema, null, 2));
+#+END_SRC
+
+This TypeScript function ~createEnumSchema~ generates a JSON schema for enums up to the specified
+number of levels. The output can be used as your JSON schema, ensuring that it supports any number
+of recursive enum levels up to 100 (or any other limit you specify).

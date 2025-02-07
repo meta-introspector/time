@@ -1,0 +1,186 @@
+Sure, let's break down the structure and create a comprehensive list of terms and enums that capture
+the essence of open introspection and data modeling within an Open Source Node Stack. We'll also
+outline how these components can be integrated into a GraphQL schema with PostgreSQL metadata.
+
+*** 1. Basic Data Types
+
+**** JSON Schema Terms
+- ~JSON_SCHEMATA~
+- ~LITERAL_SCHEMA~
+- ~LIST_SCHEMA~
+- ~DICT_SCHEMA~
+
+*** 2. Schema Documents with Own Vernacular Ontologies
+- ~SCHEMA_DOCUMENT~
+- ~VERNACULAR_ONTOLOGY~
+- ~VERBOSITY_LEVEL~
+
+*** 3. Relationships Between Schemas
+- ~RELATIONSHIP~
+- ~AGGREGATION~
+- ~COMPOSITION~
+- ~DEPENDENCY~
+
+*** 4. Embeddings of Schemas
+- ~EMBEDDED_SCHEMA~
+- ~INTEGRATION_POINT~
+
+*** 5. Partitioning of Embedded Schemas
+- ~PARTITION~
+- ~SUB_SCHEMA~
+- ~DOMAIN_SCHEMA~
+
+*** 6. Functional Relationships Between Partitions of Embedded Schemas
+- ~FUNCTIONAL_RELATIONSHIP~
+- ~TRANSFORMATION~
+- ~MAPPING~
+
+*** 7. PostgreSQL as One Functional Embedded Schema
+- ~POSTGRESQL_SCHEMA~
+- ~TABLE_SCHEMA~
+- ~VIEW_SCHEMA~
+
+*** 8. Query Planner as Compiler Equivalent
+- ~QUERY_PLANNER~
+- ~COMPILER_ENGINE~
+- ~EXECUTION_PLAN~
+
+*** TypeScript Enums
+#+BEGIN_SRC typescript
+import { ObjectTypeDefinitionNode } from 'graphql';
+import { AttributeDefinition, RelationshipDefinition } from './data-models';
+
+export enum ATTR_SERVICE_NAME {
+    SERVICE_NAME = 'service_name',
+    VERBOSITY_LEVEL = 'verbosity_level',
+}
+
+export enum ATTR_SCHEMA_DOCUMENT {
+    DOCUMENT_ID = 'document_id',
+    ONTOLOGY_VERSION = 'ontology_version',
+}
+
+export enum RELATIONSHIP_TYPE {
+    AGGREGATION = 'aggregation',
+    COMPOSITION = 'composition',
+    DEPENDENCY = 'dependency',
+}
+
+// Example usage in a GraphQL schema
+const exampleSchema: ObjectTypeDefinitionNode = {
+    kind: 'ObjectTypeDefinition',
+    name: {
+        kind: 'Name',
+        value: 'Service',
+    },
+    fields: [
+        {
+            kind: 'FieldDefinition',
+            name: {
+                kind: 'Name',
+                value: ATTR_SERVICE_NAME.SERVICE_NAME,
+            },
+            type: {
+                kind: 'NonNullType',
+                type: {
+                    kind: 'NamedType',
+                    name: {
+                        kind: 'Name',
+                        value: 'String',
+                    },
+                },
+            },
+        },
+        {
+            kind: 'FieldDefinition',
+            name: {
+                kind: 'Name',
+                value: ATTR_SCHEMA_DOCUMENT.DOCUMENT_ID,
+            },
+            type: {
+                kind: 'NonNullType',
+                type: {
+                    kind: 'NamedType',
+                    name: {
+                        kind: 'Name',
+                        value: 'ID',
+                    },
+                },
+            },
+        },
+    ],
+};
+#+END_SRC
+
+*** GraphQL Schema Definition
+#+BEGIN_SRC graphql
+type Service {
+  serviceName: String!
+  documentId: ID!
+}
+
+enum AttributeDefinition {
+  SERVICE_NAME
+  VERBOSITY_LEVEL
+  DOCUMENT_ID
+  ONTOLOGY_VERSION
+}
+
+enum RelationshipType {
+  AGGREGATION
+  COMPOSITION
+  DEPENDENCY
+}
+
+type SchemaDocument {
+  id: ID!
+  version: String!
+  relationships: [Relationship]
+}
+
+type Relationship {
+  type: RelationshipType!
+  target: SchemaDocument!
+}
+#+END_SRC
+
+*** PostgreSQL Integration
+
+**** Table Metadata Example
+#+BEGIN_SRC sql
+CREATE TABLE services (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    document_id UUID REFERENCES schema_documents(id)
+);
+
+CREATE TABLE schema_documents (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    version VARCHAR(255) NOT NULL,
+    relationships JSONB
+);
+#+END_SRC
+
+*** Query Planner as Compiler Equivalent
+#+BEGIN_SRC typescript
+class QueryPlanner {
+    private schema: ObjectTypeDefinitionNode[];
+
+    constructor(schema: ObjectTypeDefinitionNode[]) {
+        this.schema = schema;
+    }
+
+    public plan(query: string): ExecutionPlan {
+        // Implement query parsing and planning logic here
+        return new ExecutionPlan();
+    }
+}
+
+class ExecutionPlan {
+    // Define the execution plan properties and methods
+}
+#+END_SRC
+
+This structure provides a comprehensive foundation for open introspection, data modeling, and
+integration within an Open Source Node Stack. Each layer builds upon the previous one, creating a
+robust system that can handle complex relationships and functional decompositions.

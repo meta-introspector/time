@@ -30,7 +30,6 @@ for x in `cat repos.txt`; do git submodule add $x; done
 ** extract keyword index
 ** repeat as needed.
 
-
 ** Idea
 
 1. Each npm package can be extracted as a type interface based on its

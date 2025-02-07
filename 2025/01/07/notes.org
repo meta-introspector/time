@@ -1,0 +1,15 @@
+lets consider the enum of all enums as a typescript json schema.
+we have layers of enums.
+basic enums, enums of enums, enums of enums of enums, recursive enums of levels 4 to 100.
+so now we have typescript code that generates json schema to be instanciated.
+now we can take any typescript ast and convert it to the json schema.
+we can embed typescript types in enums.
+now we can define a language to go from strings to enums and embed the definitions in the values.
+each nested enum can be  a string or even godel number integer that represents the idea encoded in various
+forms. each form can be enumerated even the ast and syntax.
+rewrite in formal language.
+now we can define the layers of the language to be expressive powers.
+we can say directed acyclic graphs can represent a simple regex language that can be
+evaluated in linear time, anything else is too complex.
+now given this dfa any intelligent system can follow it exactly and any system can check the results.
+once we go into the polynomial or exponential space we get into betting and prediction and tsp like np hard problems.

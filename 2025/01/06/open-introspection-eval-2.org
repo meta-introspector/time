@@ -1,0 +1,193 @@
+Creating a comprehensive system with the described layers and evaluators is an ambitious goal that
+spans multiple domains, including semantic data modeling, decentralized databases, graph theory,
+machine learning, and quantum computing. Let's break down the concept into more manageable parts and
+explore how each layer could be structured.
+
+*** Layer 1: JSON Schema for Basic Data
+This layer will define the fundamental data structures using JSON Schema. We can create a set of
+TypeScript string constants and an enum to represent these schema attributes.
+#+BEGIN_SRC typescript
+export const ATTR_SCHEMA_ID = "schema_id";
+export const ATTR_SCHEMA_TYPE = "schema_type";
+export const ATTR_SCHEMA_VERSION = "schema_version";
+// Add other common attributes as needed
+
+export enum SchemaType {
+  OBJECT,
+  ARRAY,
+  STRING,
+  NUMBER,
+  BOOLEAN,
+  NULL,
+}
+#+END_SRC
+
+*** Layer 2: Layers of Schema Documents with Own Vernacular Ontologies
+This layer will define custom schemas for specific domains. Each domain can have its own set of
+terms and attributes.
+#+BEGIN_SRC typescript
+export const ATTR_USER_ID = "user_id";
+export const ATTR_USERNAME = "username";
+export const ATTR_EMAIL = "email";
+
+export enum UserSchemaType {
+  USER,
+  ADMIN,
+}
+#+END_SRC
+
+*** Layer 3: Relationships Between Schemas
+This layer will define how different schemas relate to each other. We can use a schema to describe
+relationships between entities.
+#+BEGIN_SRC typescript
+export const REL_USER_HAS_PROFILE = "user_has_profile";
+export const REL_POST_AUTHOR = "post_author";
+
+// Define relationship types
+export enum RelationshipType {
+  ONE_TO_ONE,
+  ONE_TO_MANY,
+  MANY_TO_ONE,
+  MANY_TO_MANY,
+}
+#+END_SRC
+
+*** Layer 4: Embeddings of Schemas
+This layer will allow embedding one schema within another, creating composite schemas.
+#+BEGIN_SRC typescript
+export const ATTR_USER_PROFILE = "user_profile";
+export const REL_USER_POSTS = "user_posts";
+
+// Define a complex schema using embeddings
+export interface UserProfileSchema {
+  id: string;
+  username: string;
+  email: string;
+  posts: Post[];
+}
+
+export interface Post {
+  id: string;
+  title: string;
+  content: string;
+  authorId: string;
+}
+#+END_SRC
+
+*** Layer 5: Partitioning of Embedded Schemas
+This layer will partition composite schemas into smaller, manageable parts.
+#+BEGIN_SRC typescript
+export const PART_USER_INFO = "user_info";
+export const PART_POST_DETAILS = "post_details";
+
+// Define partitions of the UserProfileSchema
+export interface UserInfoPartition {
+  id: string;
+  username: string;
+  email: string;
+}
+
+export interface PostDetailsPartition {
+  id: string;
+  title: string;
+}
+#+END_SRC
+
+*** Layer 6: Functional Relationships Between Partitions of Embedded Schemas
+This layer will define how partitions relate to each other.
+#+BEGIN_SRC typescript
+export const FUNC_GET_USER_POSTS = "get_user_posts";
+
+// Define a function that relates user_info and post_details
+export interface GetUserPostsFunction {
+  (userInfo: UserInfoPartition, postId: string): PostDetailsPartition;
+}
+#+END_SRC
+
+*** Layer 7: PostgreSQL as One Functional Embedded Schema
+This layer will integrate PostgreSQL into our system as a functional embedded schema.
+#+BEGIN_SRC typescript
+// Define how to query PostgreSQL using GraphQL
+import { gql } from 'apollo-server';
+
+const typeDefs = gql`
+  type User {
+    id: ID!
+    username: String!
+    email: String!
+    posts: [Post]
+  }
+
+  type Post {
+    id: ID!
+    title: String!
+    content: String!
+    authorId: ID!
+  }
+`;
+
+// Define resolvers to interact with PostgreSQL
+const resolvers = {
+  User: {
+    posts: async (user, _, { db }) => await db.Post.find({ authorId: user.id }),
+  },
+};
+
+export const postgresSchema = { typeDefs, resolvers };
+#+END_SRC
+
+*** Layer 8: Query Planner as Compiler Equivalent
+This layer will use a query planner to optimize and compile queries.
+#+BEGIN_SRC typescript
+// Define a simple query planner function
+function planQuery(query) {
+  // Implement query optimization logic here
+  return `Optimized Query: ${query}`;
+}
+
+export const queryPlanner = (query) => planQuery(query);
+#+END_SRC
+
+*** Evaluator Layers and Self-Reflection
+This layer will allow evaluators to evaluate the network and emit orders.
+#+BEGIN_SRC typescript
+// Define a set of evaluators
+function evaluator1(network) {
+  // Implement evaluation logic here
+  return "Better than itself";
+}
+
+function evaluator2(network) {
+  // Implement evaluation logic here
+  return "Worse than itself";
+}
+
+// Allow evaluators to evaluate the entire network
+function selfReflectiveEvaluator(network) {
+  const results = [evaluator1(network), evaluator2(network)];
+  if (results.includes("Better than itself")) {
+    // Emit orders to update or add new evaluators
+    console.log("Updating evaluators based on feedback");
+  } else {
+    console.log("No changes needed");
+  }
+}
+
+export { selfReflectiveEvaluator };
+#+END_SRC
+
+*** Conclusion
+This breakdown provides a structured approach to building a system with multiple layers, each
+addressing specific aspects of data modeling and computation. By combining JSON Schema, TypeScript,
+GraphQL, and PostgreSQL, we can create a flexible and extensible system that can be evaluated and
+updated in a self-reflective manner.
+
+The concept of using zkML (Zero-Knowledge Merkle Lattice) and SZKSNARKs (Self-Verifiable
+Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) adds an additional layer of
+complexity, enabling trustless interactions and verifiable computations. However, this is a highly
+advanced topic and requires specialized knowledge in quantum computing and cryptography.
+
+By iterating through multiple evaluations and contexts, we can create a system that dynamically
+adapts to changing requirements and learns from feedback, making it well-suited for complex and
+evolving applications.
+

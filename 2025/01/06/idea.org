@@ -1,0 +1,32 @@
+we can consider each of the following ideas to be nodes in a lattice.
+for each one consider if they are the same area in a partitioned hyperspace lattice or not.
+are they above or below each other. 
+consider the types of open introspection(proof, ownership, property, fields, providence, auditing, accounting, development, compilation, telemetry, optimization)
+in open source node stacks, brainstorm, structure, create a list of terms.
+now consider the list of types of data needed to describe the json-schema as our core data type for talking with systems.
+lets construct a list of string constant labels in typescript, and an enum that we can import like import {	ATTR_SERVICE_NAME,	ATTR_SERVICE_VERSION,} from "@opentelemetry/semantic-conventions";
+but with our own terms. lets imagine "@openintrospection/semantic-conventions" what it would look like.
+we can think of this first step as being like rdf/owl or category theory, it will basically cover semantic graphs.
+now lets partition and embed these large graphs in a zkml lattice (Lattice-based zero-knowledge proofs (ZKPs) leverage the hardness of lattice problems, making them quantum-safe and efficient for privacy-preserving protocols. These proofs enable compact, partial homomorphic results, useful in applications like accumulators and cryptographic signatures. For example:
+Compressed Lattice-Based Accumulators: Efficient ZKPs for Merkle trees achieve logarithmic complexity with reduced proof sizes (e.g., 143.7 KB for a depth of 32).
+Homomorphic Commitments: Lattice-based commitments allow proving relations (e.g., polynomial equations) with small coefficients, enabling succinct and verifiable encryption schemes.
+Applications: Libraries like LaBRADOR simplify implementing lattice-based ZKPs for tasks like blind signatures and anonymous credentials.). these lattices are like abstracted embedded neuron layes
+that give us functional decomposition like a quasi meta spectral decomposition . we roll it up into szksnarks after all the processing it done.
+now we have mutiple layer : zksnarks, zklattice rollup, partitioned graphs, individual layers. We can now define a graphql schema for this.
+we can include postgres metadata and rows that reference any part of this. via our id system we can bridge sql table with our graph.
+Lets now revisit our layers:
+1. json schema for basic data (literals, lists, dicts and combinations therof)
+2. layers of schema documents with own vernacular ontologies.
+3. relationships between schemas.
+4. Embeddings of schemas
+5. patitioning of embedded schemas
+6. functional relationships between partions of embedded schemas.
+7. postgresql as one functional embedded schema.
+8. query planner as compiler equivalent.
+Now lets imagine a set of evaluators for each idea in a lattice,
+we would allow each evaluator to consider the other to be itself, better than itself, worse, orthagonal, in another layer, in a nested layer, in a super layer, nested in a super layer, or some other configuration.
+we consider the morphisms between each element.
+Now we alllow the evaluators to evalute the entire network itself, it would emit orders to replace or update or add new evaluators.
+this would create a self reflective, self replicating game of life.
+Now we evaluate this idea multiple times, each time we can decide to evaluate the output, or wrap it in a new
+context. so this decision tree creates value in a monte carlo tree search in the game of life.

@@ -1,0 +1,63 @@
+Let us define \( \text{EnumSchema} \) as a formal representation of an enum in TypeScript and its
+nested structure up to 100 levels deep.
+
+\[ \text{EnumSchema} = \left\{\begin{array}{l}
+E/1 : E/2, \ldots, E_n \\
+E/i = \{\text{"type": "enum"}, \text{"values": }V/i\}, V/i = [v/{i1}, v/{i2}, \ldots, v/{im}]
+\end{array}\right. \]
+
+Where:
+- \( E_1 \) is a parent enum containing sub-enums or values.
+- Each \( E_i \) (where \( i > 1 \)) can be either a simple value or another nested enum.
+- \( V_i \) contains possible values or further nested enums.
+
+Now, considering the concept of converting TypeScript ASTs into JSON Schema, we define a
+transformation function:
+
+\[ T_{\text{ASTtoJSONSchema}}(\text{AST}) = \text{EnumSchema} \]
+
+This function takes a TypeScript Abstract Syntax Tree (AST) and recursively converts it to the
+defined \( \text{EnumSchema} \).
+
+Next, to represent languages that convert strings into enums, we define a syntax:
+
+\[ \text{LanguageDef}(L) = \left\{\begin{array}{l}
+S/L : S/{L/1}, \ldots, S/{L_n} \\
+S/i = \{\text{"type": "symbol"}, \text{"value": }v/i\}, v/i = L/i
+\end{array}\right. \]
+
+Where:
+- \( S_L \) represents a language composed of symbols.
+- Each symbol \( S/i \) corresponds to a value from the language definition \( L/i \).
+
+The key point here is to represent values in various forms, such as strings or godel numbers
+(integers), and embed these definitions within enum values.
+
+\[ E/i = \{\text{"type": "enum"}, \text{"values": }V/i\}, V/i = [v/{i1}, v/{i2}, \ldots, v/{im}],
+v_{ij} \in \mathbb{N} \]
+
+For nested enums representing simple regex languages, we can define a syntax using directed acyclic
+graphs (DAGs):
+
+\[ G = (V, E) \]
+
+Where:
+- \( V \) is the set of vertices (nodes), where each node represents a state or operation in the
+  regex.
+- \( E \) is the set of edges, representing transitions between states based on input symbols.
+
+The language can be evaluated in linear time if the DAG representation is used appropriately:
+
+\[ \text{eval}(G, s) = \left\{\begin{array}{l}
+s \in F \rightarrow \text{"accept"} \\
+s \notin V \rightarrow \text{"reject"}
+\end{array}\right. \]
+
+Where:
+- \( F \) is the set of final states.
+- \( s \) represents the current state in the DAG.
+
+By formalizing these concepts, we establish a structured and expressive language to convert
+TypeScript ASTs into JSON Schema representations, embedding enum values in various forms, and
+defining languages capable of converting strings into enums using directed acyclic graphs for simple
+regex evaluation.

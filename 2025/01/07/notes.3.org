@@ -1,0 +1,190 @@
+This sounds like an interesting approach! Let's break down the concept and explore how we might
+implement such a system.
+
+*** 1. Basic Enum Representation
+
+First, let’s consider the basic representation of an enum in TypeScript:
+#+BEGIN_SRC typescript
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+#+END_SRC
+In JSON Schema, this would be represented as:
+#+BEGIN_SRC json
+{
+    "oneOf": [
+        "Red",
+        "Green",
+        "Blue"
+    ]
+}
+#+END_SRC
+
+*** 2. Enums of Enums
+
+Let's move to enums of enums:
+#+BEGIN_SRC typescript
+enum Size {
+    Small,
+    Medium,
+    Large
+}
+
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+
+enum Shape {
+    Circle = Size.Small,
+    Square = Size.Medium,
+    Triangle = Size.Large,
+}
+#+END_SRC
+In JSON Schema, this would be more complex, as ~Shape~ depends on the ~Size~ enum:
+#+BEGIN_SRC json
+{
+    "oneOf": [
+        {
+            "$ref": "#/definitions/Color"
+        },
+        {
+            "$ref": "#/definitions/Size"
+        }
+    ],
+    "definitions": {
+        "Color": {
+            "oneOf": ["Red", "Green", "Blue"]
+        },
+        "Size": {
+            "oneOf": ["Small", "Medium", "Large"]
+        }
+    }
+}
+#+END_SRC
+
+*** 3. Recursive Enums
+
+Let's extend this to a recursive enum:
+#+BEGIN_SRC typescript
+enum Shape {
+    Circle,
+    Square,
+    Triangle,
+    NestedShape = 4, // Recursive reference
+}
+
+const shapeSchema: JSONSchema7 = {
+    oneOf: [
+        "Circle",
+        "Square",
+        "Triangle",
+        {
+            "$ref": "#/definitions/Shape"
+        }
+    ],
+    definitions: {
+        Shape: shapeSchema
+    }
+};
+#+END_SRC
+This is a circular reference, which needs to be handled in JSON Schema generation. We can use an
+ID-based reference (~$id~ and ~$ref~) to break the recursion.
+
+*** 4. Handling Levels of Recursion (Up to 100)
+
+Extending this to levels of recursion up to 100 is challenging because it involves a significant
+number of nested references. However, we can manage this by ensuring that each level is properly
+scoped and referenced.
+
+Here’s a simplified example for levels of recursion:
+#+BEGIN_SRC typescript
+enum Level1 {
+    Level1Value,
+    Level2Ref = 4
+}
+
+enum Level2 {
+    Level2Value,
+    Level3Ref = 4
+}
+
+enum Level3 {
+    // Repeat the pattern up to Level100
+}
+#+END_SRC
+In JSON Schema, each level would be defined and referenced recursively:
+#+BEGIN_SRC json
+{
+    "$id": "#/definitions/Level1",
+    "oneOf": [
+        "Level1Value",
+        {
+            "$ref": "#/definitions/Level2"
+        }
+    ]
+},
+"definitions": {
+    "Level2": {
+        "$id": "#/definitions/Level2",
+        "oneOf": [
+            "Level2Value",
+            {
+                "$ref": "#/definitions/Level3"
+            }
+        ]
+    },
+    "Level3": {
+        // Repeat the pattern up to Level100
+    }
+}
+#+END_SRC
+This approach ensures that each level is properly referenced and can handle a large number of nested
+levels.
+
+*** 5. Embedding TypeScript Types in Enums
+
+TypeScript types like ~number~, ~string~, or custom types can be embedded within enums. For example:
+#+BEGIN_SRC typescript
+enum Color {
+    Red = "Red",
+    Green = "Green",
+    Blue = "Blue"
+}
+#+END_SRC
+In JSON Schema, this would be:
+#+BEGIN_SRC json
+{
+    "oneOf": [
+        "Red",
+        "Green",
+        "Blue"
+    ]
+}
+#+END_SRC
+
+*** 6. Converting TypeScript AST to JSON Schema
+
+To convert a TypeScript AST to JSON Schema, we need a parser that can traverse the AST and generate
+the corresponding JSON Schema. This involves understanding the TypeScript syntax and translating it
+into the appropriate JSON Schema structures.
+
+Here’s a high-level approach:
+1. *Parse the TypeScript AST*: Use a TypeScript compiler API (e.g., ~ts-morph~ or ~typescript~) to
+parse the AST.
+2. *Traverse the AST*: Recursively traverse the AST to identify enum definitions and other relevant
+types.
+3. *Generate JSON Schema*: Map each node in the AST to its corresponding JSON Schema representation.
+
+*** Conclusion
+
+By extending TypeScript enums to include recursive levels up to 100 and embedding TypeScript types,
+we can create a robust system for generating JSON Schemas from TypeScript code. This approach
+requires handling circular references, managing nested structures, and ensuring type safety
+throughout the process.
+
+With careful design and implementation, this system can be extended to support complex scenarios
+while maintaining clarity and performance.
