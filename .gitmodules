@@ -1,0 +1,6 @@
+[submodule "mirc"]
+	path = mirc
+	url = https://github.com/andir/mirc.git
+[submodule "nixos"]
+	path = nixos
+	url = https://github.com/X01A/nixos.git
