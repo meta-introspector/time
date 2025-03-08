@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "meta-introspector",
+  "repo": "time",
+  "name": "meta-introspector",
+  "email": "jmikedupont2@gmail.com",
+}
