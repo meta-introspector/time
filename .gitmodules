@@ -19,6 +19,9 @@
 [submodule "2023/04/29/gpt4all-ui"]
 	 path = 2023/04/29/gpt4all-ui
 	 url = https://github.com/nomic-ai/gpt4all-ui.git
+[submodule "2023/04/29/gpt4all-ui"]
+	 path = 2023/04/29/gpt4all-ui
+	 url = https://github.com/nomic-ai/gpt4all-ui.git
 [submodule "2023/04/29/local-llm/alpaca.cpp"]
 	 path = 2023/04/29/local-llm/alpaca.cpp
 	 url = https://github.com/ggerganov/llama.cpp.git
@@ -1045,6 +1048,10 @@
 [submodule "2023/08/02/lollms-webui"]
 	 path = 2023/08/02/lollms-webui
 	 url = https://github.com/ParisNeo/lollms-webui
+[submodule "2024/05/26/cookiecutter-flask"]
+	 path = 2023/08/12/cookiecutter-flask
+	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.git
+		 
 [submodule "2023/08/12/cookiecutter-pypackage"]
 	 path = 2023/08/12/cookiecutter-pypackage
 	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.git
