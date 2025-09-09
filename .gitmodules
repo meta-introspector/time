@@ -1055,7 +1055,9 @@
 [submodule "2024/05/26/pypdf"]
 	 path = "2024/05/26/pypdf"
 	 url = https://github.com/py-pdf/pypdf
-	 
+
+[submodule "2024/07/13/monitors4codegen"]
+	   url =  https://github.com/microsoft/monitors4codegen
 [submodule "2024/07/13/OLSP"]
 	 path = "2024/07/13/OLSP"
 	 url = https://github.com/OLPS/OLPS
