@@ -1050,7 +1050,14 @@
 	 url = https://github.com/ParisNeo/lollms-webui
 [submodule "2024/05/26/cookiecutter-flask"]
 	 path = 2023/08/12/cookiecutter-flask
-	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.git
+	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.ggit
+
+[submodule "2024/05/26/pypdf"]
+	 path = "2024/05/26/pypdf"
+	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.ggit
+[submodule "2024/07/13/OLSP"]
+	 path = "2024/07/13/OLSP"
+	 url = https://github.com/audreyfeldroy/cookiecutter-pypackage.ggit
 		 
 [submodule "2023/08/12/cookiecutter-pypackage"]
 	 path = 2023/08/12/cookiecutter-pypackage
