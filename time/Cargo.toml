@@ -51,10 +51,10 @@ wasm-bindgen = ["dep:js-sys"]
 # If adding an optional dependency, be sure to use the `dep:` prefix above to avoid an implicit
 # feature gate.
 [dependencies]
-deranged.workspace = true
+deranged = { workspace = true, features = ["powerfmt"] }
 itoa = { workspace = true, optional = true }
 num-conv.workspace = true
-powerfmt.workspace = true
+powerfmt = { workspace = true, features = ["macros"] }
 quickcheck = { workspace = true, optional = true }
 rand = { workspace = true, optional = true }
 #rand09 = { workspace = true, optional = true }
